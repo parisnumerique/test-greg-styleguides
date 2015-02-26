@@ -1,0 +1,20 @@
+.bouton-que-faire {
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  margin: 10px;
+  max-width: 350px;
+  white-space: normal;
+  width: 100%;
+
+	&:hover .bouton-que-faire-texte {color: #FB4F4F;}
+}
+
+.bouton-que-faire-texte {
+  color:#333;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 23px 80px 23px 20px;
+  text-align: left;
+}

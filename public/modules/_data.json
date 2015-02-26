@@ -1,0 +1,13 @@
+{
+  "modules": [
+    "a-la-une",
+    "bloc-actu",
+    "bouton",
+    "bouton-que-faire",
+    "bouton-rubrique",
+    "fil-ariane",
+    "intertitre",
+    "liste-rubriques",
+    "maire-adjoints"
+  ]
+}
