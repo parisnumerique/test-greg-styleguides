@@ -1,0 +1,11 @@
+{
+    "ecmaFeatures": {
+    },
+    "rules": {
+        "quotes": [0]
+    },
+    "env": {
+        "node": true,
+        "browser": true
+    }
+}
