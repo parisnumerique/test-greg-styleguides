@@ -1,3 +1,9 @@
+## Getting started
+
+Just install [Harp](http://harpjs.com):
+
+    npm install -g harp
+
 ## Development mode
 
     harp server
