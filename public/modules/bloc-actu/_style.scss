@@ -1,0 +1,32 @@
+.bloc-actu {
+  color: #000;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+
+  & + .bloc-actu {
+    margin-left: 25px;
+  }
+}
+
+.bloc-actu-image {
+  background-color: #eee;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  width: 350px;
+}
+
+.bloc-actu-categorie {
+  color: $couleur-secondaire;
+  margin: 15px auto 5px;
+  max-width: 310px;
+}
+
+.bloc-actu-titre {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 290px;
+}

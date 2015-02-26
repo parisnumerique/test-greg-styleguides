@@ -1,0 +1,9 @@
+mixin bloc-actu(opts)
+  a.bloc-actu(href='#')
+    if opts.image
+      .bloc-actu-image(style='background-image: url(#{opts.image});')
+      .bloc-actu-categorie= opts.categorie
+      .bloc-actu-titre= opts.titre
+    else
+      .bloc-actu-categorie= opts.categorie
+      .bloc-actu-titre= opts.titre
