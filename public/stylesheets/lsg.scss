@@ -56,7 +56,7 @@ $lsg-nav-width: 250px;
 
 .lsg-nav-content {
   font-size: 14px;
-  height: 100%;
+  height: calc(100% - #{$lsg-nav-toggle-height});
   line-height: 1.6em;
   opacity: 0;
   overflow: auto;
