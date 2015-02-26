@@ -33,6 +33,12 @@ html
             li
               a(href="composants/#{composant}")
                 = composant
+        h2 Layouts
+        ul
+          - for layout in public.layouts._data.layouts
+            li
+              a(href="layouts/#{layout}")
+                = layout
     header.sg-header(role='banner')
       #sg-controls.sg-controls
         .sg-control-content

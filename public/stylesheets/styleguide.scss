@@ -3,6 +3,7 @@
 @import "../base/_normalize";
 @import "../base/_couleurs";
 @import "../base/_typographies";
+@import "../base/_defaults";
 
 // Modules
 @import "../modules/a-la-une/_style";
@@ -20,3 +21,7 @@
 @import "../composants/accordeon/_style";
 @import "../composants/image/_style";
 @import "../composants/liens/_style";
+
+// Layouts
+@import "../layouts/stack/_style";
+@import "../layouts/left-col/_style";

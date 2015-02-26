@@ -1,0 +1,39 @@
+.layout-left-col {
+  background-color: #fff;
+  width: 100%;
+
+  .layout-wrapper {
+    margin: 0 auto;
+    width: 1100px;
+  }
+
+  .layout-aside {
+    background-color: $gris242;
+    float: left;
+    padding: 40px 20px 40px 0;
+    position: relative;
+    text-align: right;
+    width: 280px;
+
+    &:before {
+      background-color: $gris242;
+      bottom: 0;
+      content: "";
+      display: block;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 1000px;
+    }
+  }
+
+  .layout-content {
+    float: left;
+    padding: 40px 50px;
+  }
+
+  .layout-clear {
+    clear: both;
+  }
+
+}
