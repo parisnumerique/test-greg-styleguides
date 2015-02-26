@@ -1,0 +1,9 @@
+{
+  "index": {
+    "defaults": {
+      "src": "image.jpg",
+      "alt": "Texte alternatif",
+      "titre": "Titre"
+    }
+  }
+}

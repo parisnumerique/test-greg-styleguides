@@ -1,4 +1,8 @@
 {
   "composants": [
+    "accordeon",
+    "image",
+    "liens",
+    "texte"
   ]
 }
