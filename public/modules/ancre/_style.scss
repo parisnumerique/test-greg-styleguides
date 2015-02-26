@@ -1,0 +1,37 @@
+.ancre {
+  width: 260px;
+
+  .ancre-bar{
+    background-color: #fff;
+    border-radius: 5px;
+    display: block;
+    height: 47px;
+    position: relative;
+    margin-bottom: 13px;
+    width: 100%;
+  }
+
+  a.ancre-link {
+    color: $gris51;
+    font-family: 'Avenir';
+    font-weight: normal;
+    line-height: 47px;
+    padding: 0 20px 0 20px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  span.ancre-progress {
+    background-color: $couleur-tertiaire;
+    display: block;
+    height: 47px;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    z-index: 0;
+  }
+}
+
+  
+  
