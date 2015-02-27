@@ -3,5 +3,5 @@ mixin links(opts)
     h2= opts.title
     ul.links-items
       - each item in opts.items
-        li.links-item.icon-(class=item.modifiers)
+        li.links-item(class=item.modifiers)
           a(href=item.href)= item.text

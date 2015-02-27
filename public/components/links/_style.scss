@@ -8,6 +8,7 @@
   }
 
   .links-item {
+    @extend %icon-font;
 
     & + .links-item {
       border-top: 1px solid $gray204;
@@ -24,20 +25,16 @@
       &:hover {text-decoration: underline;}
     }
 
-    &::before {
-      content: "\e603";
+    &:before {
+      @extend %icon-link;
       float: left;
       font-size: 1.5em;
       padding: 10px 20px 0 0;
       pointer-events: none;
     }
 
-  }
-
-  .links-item-file {
-
-    &::before {
-      content: "\e602";
+    &.links-item-pdf:before {
+      @extend %icon-pdf;
     }
 
   }
