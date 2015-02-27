@@ -1,0 +1,9 @@
+{
+  "index": {
+    "defaults": {
+      "modifiers": null,
+      "title": "Titre",
+      "text": "Texte"
+    }
+  }
+}

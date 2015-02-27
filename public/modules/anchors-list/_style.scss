@@ -1,0 +1,36 @@
+.anchors-list {
+  max-width: 260px;
+
+  .anchor-bar {
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 13px;
+    width: 100%;
+  }
+
+  a.anchor-link {
+    color: $gray51;
+    display: block;
+    font-family: 'Avenir';
+    font-weight: normal;
+    line-height: 25px;
+    padding: 18px 20px;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  span.anchor-progress {
+    background-color: $color-tertiary;
+    display: block;
+    height: 47px;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    z-index: 0;
+  }
+}
+
+
+

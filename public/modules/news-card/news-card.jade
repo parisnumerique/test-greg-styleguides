@@ -1,0 +1,9 @@
+mixin news-card(opts)
+  a.news-card(href='#')
+    if opts.image
+      .news-card-image(style='background-image: url(#{opts.image});')
+      .news-card-category= opts.category
+      .news-card-title= opts.title
+    else
+      .news-card-category= opts.category
+      .news-card-title= opts.title

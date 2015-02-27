@@ -9,7 +9,7 @@
   }
 
   .layout-aside {
-    background-color: $gris242;
+    background-color: $gray242;
     display: table-cell;
     padding: 40px 20px 40px 0;
     position: relative;
@@ -17,7 +17,7 @@
     width: 280px;
 
     &:before {
-      background-color: $gris242;
+      background-color: $gray242;
       bottom: 0;
       content: "";
       display: block;

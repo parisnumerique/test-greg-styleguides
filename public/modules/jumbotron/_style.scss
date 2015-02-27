@@ -1,0 +1,30 @@
+.jumbotron {
+  background-repeat:no-repeat;
+  background-position:50% 50%;
+  background-size: cover;
+  display: inline-block;
+  height: 320px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.jumbotron-content {
+  border-left: 6px solid $color-tertiary;
+  color: #fff;
+  padding: 5px 10px 3px 35px;
+  margin-left:10%;
+  margin-top: 80px;
+}
+
+.jumbotron-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.jumbotron-text {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 14px;
+  max-width: 347px;
+}

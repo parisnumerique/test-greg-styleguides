@@ -1,0 +1,44 @@
+include text
+include ../../modules/button/button
+include ../../helpers/code
+
++text
+  h1 Titre h1 exemple
+  h2 Titre h2 exemple
+  h3 Titre h3 exemple
+  h4 Titre h4 exemple
+  ul
+    li liste ul du composant text
+    li liste ul du composant text
+    li liste ul du composant text
+  p
+    | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent
+    a(href='#') exemple link
+    |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
+  ol
+    li A : liste ol du composant text
+    li B : liste ol du composant text
+    li C : liste ol du composant text
+  +button({text: "Bouton"})
++code({language: "jade"}).
+  include text
+  include ../../modules/button/button
+
+  +text
+    h1 Titre h1 exemple
+    h2 Titre h2 exemple
+    h3 Titre h3 exemple
+    h4 Titre h4 exemple
+    ul
+      li liste ul du composant text
+      li liste ul du composant text
+      li liste ul du composant text
+    p
+      | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent
+      a(href='#') exemple link
+      |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
+    ol
+      li A : liste ol du composant text
+      li B : liste ol du composant text
+      li C : liste ol du composant text
+    +button({text: "Bouton"})

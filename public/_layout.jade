@@ -27,10 +27,10 @@ html
                 = module
         h2 Composants rédactionnels
         ul
-          - for composant in public.composants._data.composants
+          - for component in public.components._data.components
             li
-              a(href="composants/#{composant}")
-                = composant
+              a(href="components/#{component}")
+                = component
         h2 Layouts
         ul
           - for layout in public.layouts._data.layouts

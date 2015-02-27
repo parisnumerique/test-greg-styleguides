@@ -1,0 +1,14 @@
+{
+  "index": {
+    "defaults": {
+      "sections": [
+        {"title": "Titre", "text": "Texte"},
+        {"title": "Titre", "text": "Texte"},
+        {"title": "Titre", "text": "Texte"},
+        {"title": "Titre", "text": "Texte"},
+        {"title": "Titre", "text": "Texte"},
+        {"modifiers": "section-button-other", "text": "Vous cherchez autre chose ?"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.news-card {
+  color: #000;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+
+  & + .news-card {
+    margin-left: 25px;
+  }
+}
+
+.news-card-image {
+  background-color: #eee;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  width: 350px;
+}
+
+.news-card-category {
+  color: $color-secondary;
+  margin: 15px auto 5px;
+  max-width: 310px;
+}
+
+.news-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 290px;
+}

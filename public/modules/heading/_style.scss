@@ -1,0 +1,30 @@
+.heading {
+  border-left: 6px solid $color-tertiary;
+  overflow: auto;
+  padding: 10px 10px 10px 30px;
+}
+
+.heading-title {
+  color: #333333;
+  font-family: "Avenir";
+  font-size: 28px;
+  font-weight: 700;
+  float: left;
+  margin-right: 20px;
+}
+
+.heading-links {
+  line-height: 80px;
+
+  > a {
+    border-bottom: 1px solid #000;
+    color: #000;
+    display: inline-block;
+    line-height: 20px;
+    text-decoration: none;
+
+    &:hover {
+      border: 0
+    }
+  }
+}

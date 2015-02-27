@@ -1,0 +1,40 @@
+.municipal-team {
+  background-color: $color-primary;
+	padding: 40px 0 50px;
+}
+
+.municipal-team-img {
+	background-repeat:no-repeat;
+  display: block;
+	height: auto;
+	max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.municipal-team-content {
+  padding: 40px 35px 0;
+}
+
+.municipal-team-subtitle,
+.municipal-team-text {
+  color: #fff;
+  display: inline-block;
+  font-family:'Avenir Next Pro';
+  margin: 0;
+}
+
+.municipal-team-subtitle {
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-right: 35px;
+  max-width: 320px;
+  vertical-align: top;
+}
+
+.municipal-team-text {
+  border-left: 1px solid #ccc;
+  font-size: 18px;
+  max-width: 430px;
+  padding-left: 35px;
+}

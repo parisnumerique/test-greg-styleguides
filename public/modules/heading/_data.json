@@ -1,0 +1,11 @@
+{
+  "index": {
+    "defaults": {
+      "title": "Intertitle"
+    },
+    "with_link": {
+      "title": "Intertitle",
+      "link": "Lien"
+    }
+  }
+}
