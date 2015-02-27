@@ -1,6 +1,6 @@
 extends ../../layouts/left-col/left-col
 
-include ../../modules/bouton/bouton
+include ../../modules/button/button
 include ../../modules/liste-ancres/liste-ancres
 include ../../components/text/text
 include ../../components/links/links
@@ -45,7 +45,7 @@ block content
 
     p Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.
 
-    +bouton({label: 'Estimer mes droits'})
+    +button({label: 'Estimer mes droits'})
 
   +links({
     "titre": "Liens et téléchargements",
@@ -62,7 +62,7 @@ block content
 
     p Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.
 
-    +bouton({label: 'Télécharger le formulaire de demande de logement social'})
+    +button({label: 'Télécharger le formulaire de demande de logement social'})
 
     h3 Les documents à fournir
 
@@ -107,4 +107,4 @@ block content
 
   +text
     h3 Envoyer ou déposer un dossier
-    +bouton({label: 'Le numéro unique régional : explication et coordonnées du service'})
+    +button({label: 'Le numéro unique régional : explication et coordonnées du service'})

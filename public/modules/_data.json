@@ -2,7 +2,7 @@
   "modules": [
     "jumbotron",
     "news-card",
-    "bouton",
+    "button",
     "bouton-que-faire",
     "bouton-rubrique",
     "fil-ariane",
