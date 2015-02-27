@@ -3,9 +3,9 @@
     "defaults": {
       "title": "Intertitle"
     },
-    "avec_lien": {
+    "with_link": {
       "title": "Intertitle",
-      "lien": "Lien"
+      "link": "Lien"
     }
   }
 }

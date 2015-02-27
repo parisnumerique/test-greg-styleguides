@@ -3,7 +3,7 @@
     "defaults": {
       "title": "Liens et téléchargements",
       "items": [
-        {"href": "#", "text": "Lien vers un fichier PDF", "modifiers": "links-item-fichier"},
+        {"href": "#", "text": "Lien vers un fichier PDF", "modifiers": "links-item-file"},
         {"href": "#", "text": "Lien externe"},
         {"href": "#", "text": "Autre lien externe"}
       ]

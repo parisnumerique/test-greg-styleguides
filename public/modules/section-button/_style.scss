@@ -41,7 +41,7 @@
     color: $gray77;
   }
 
-  .background{
+  .background {
     z-index: -1;
     display: block;
     width: 0%;
@@ -56,7 +56,7 @@
     border-radius: 5px;
   }
 
-  &.hover .background{
+  &.hover .background {
     width: 100%;
   }
 }

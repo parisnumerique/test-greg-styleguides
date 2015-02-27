@@ -2,7 +2,7 @@
   "index": {
     "defaults": {
       "image": "image.jpg",
-      "categorie": "Catégorie",
+      "category": "Catégorie",
       "title": "Titre"
     }
   }

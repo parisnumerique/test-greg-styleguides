@@ -2,5 +2,5 @@ include ../section-button/section-button
 
 mixin sections-list(opts)
   .sections-list
-    each rubrique in opts.rubriques
-      +section-button(rubrique)
+    each section in opts.sections
+      +section-button(section)

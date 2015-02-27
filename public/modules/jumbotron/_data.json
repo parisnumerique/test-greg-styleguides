@@ -3,7 +3,7 @@
     "defaults": {
       "image": "image.jpg",
       "title": "Titre",
-      "text": "texte"
+      "text": "Texte"
     }
   }
 }

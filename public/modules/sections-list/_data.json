@@ -1,7 +1,7 @@
 {
   "index": {
     "defaults": {
-      "rubriques": [
+      "sections": [
         {"title": "Titre", "text": "Texte"},
         {"title": "Titre", "text": "Texte"},
         {"title": "Titre", "text": "Texte"},
