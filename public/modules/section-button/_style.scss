@@ -1,7 +1,7 @@
 .section-button {
   border: none;
   border-radius: 5px;
-  background-color: $gris242;
+  background-color: $gray242;
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
@@ -25,7 +25,7 @@
 
   &:hover, &.hover {
     b, p {
-      color: $gris242;
+      color: $gray242;
     }
     .background {
       width: 100%;
@@ -34,11 +34,11 @@
 
   b {
     display: block;
-    color: $bleu3;
+    color: $blue3;
   }
 
   p {
-    color: $gris77;
+    color: $gray77;
   }
 
   .background{
@@ -51,7 +51,7 @@
     left: 0px;
     bottom: 0px;
     top: 0px;
-    background: $rouge2;
+    background: $red2;
     transition: 0.3s ease width;
     border-radius: 5px;
   }
@@ -63,7 +63,7 @@
 
 
 .section-button-other {
-  background: $jaune;
+  background: $yellow;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: bold;

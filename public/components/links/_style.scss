@@ -10,11 +10,11 @@
   .links-item {
 
     & + .links-item {
-      border-top: 1px solid $gris204;
+      border-top: 1px solid $gray204;
     }
 
     > a {
-      color: $gris51;
+      color: $gray51;
       font-family: 'Avenir', sans-serif;
       display: block;
       font-size: 16px;
