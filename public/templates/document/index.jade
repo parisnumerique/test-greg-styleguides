@@ -1,13 +1,18 @@
 extends ../../layouts/left-col/left-col
 
 include ../../modules/bouton/bouton
-include ../../modules/ancre/ancre
+include ../../modules/liste-ancres/liste-ancres
 include ../../composants/texte/texte
 include ../../composants/liens/liens
 include ../../composants/accordeon/accordeon
 
 block aside
-  +ancre({label: "Label"})
+  +liste-ancres({
+    "items": [
+      {"href": "#", "texte": "Est-ce que j’y ai droit ?"},
+      {"href": "#", "texte": "Constituer un dossier"}
+    ]
+  })
 
 block content
   +texte
