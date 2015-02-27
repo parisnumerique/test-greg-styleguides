@@ -1,0 +1,13 @@
+{
+  "index": {
+    "defaults": {
+      "image": "que-faire-back-img.jpg",
+      "logo": "que-faire-img.png",
+      "items": [
+        {"texte": "Que faire à Paris ce week-end ?"},
+        {"texte": "Autour de la FIAC du 23 au 26 octobre"},
+        {"texte": "Capitaine Futur et le voyage extraordinaire"}
+      ]
+    }
+  }
+}
