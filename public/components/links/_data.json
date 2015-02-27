@@ -1,7 +1,7 @@
 {
   "index": {
     "defaults": {
-      "titre": "Liens et téléchargements",
+      "title": "Liens et téléchargements",
       "items": [
         {"href": "#", "text": "Lien vers un fichier PDF", "modifiers": "links-item-fichier"},
         {"href": "#", "text": "Lien externe"},

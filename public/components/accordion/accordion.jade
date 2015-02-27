@@ -3,7 +3,7 @@ mixin accordion(opts)
     each item in opts.items
       .accordion-item.panel
         div(role='tab' id='#{item.headingId}')
-          a.accordion-item-title(data-toggle='collapse' data-parent='#accordion' href='##{item.slug}' aria-expanded='true' aria-controls='collapseOne')= item.titre
+          a.accordion-item-title(data-toggle='collapse' data-parent='#accordion' href='##{item.slug}' aria-expanded='true' aria-controls='collapseOne')= item.title
         .collapse.accordion-item-content(role='tabpanel' aria-labelledby='#{item.headingId}' id="#{item.slug}")
           = item.contenu
 

@@ -2,7 +2,7 @@
   "index": {
     "defaults": {
       "modifiers": null,
-      "titre": "Titre",
+      "title": "Titre",
       "text": "Texte"
     }
   }
