@@ -1,13 +1,13 @@
 extends ../../layouts/left-col/left-col
 
 include ../../modules/button/button
-include ../../modules/liste-ancres/liste-ancres
+include ../../modules/anchors-list/anchors-list
 include ../../components/text/text
 include ../../components/links/links
 include ../../components/accordion/accordion
 
 block aside
-  +liste-ancres({
+  +anchors-list({
     "items": [
       {"href": "#", "text": "Est-ce que j’y ai droit ?"},
       {"href": "#", "text": "Constituer un dossier"}
