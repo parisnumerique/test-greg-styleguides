@@ -1,10 +1,10 @@
-.intertitre {
+.heading {
   border-left: 6px solid $color-tertiary;
   overflow: auto;
   padding: 10px 10px 10px 30px;
 }
 
-.intertitre-titre {
+.heading-titre {
   color: #333333;
   font-family: "Avenir";
   font-size: 28px;
@@ -13,7 +13,7 @@
   margin-right: 20px;
 }
 
-.intertitre-links {
+.heading-links {
   line-height: 80px;
 
   > a {
