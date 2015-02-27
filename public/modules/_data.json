@@ -1,6 +1,6 @@
 {
   "modules": [
-    "a-la-une",
+    "jumbotron",
     "bloc-actu",
     "bouton",
     "bouton-que-faire",
