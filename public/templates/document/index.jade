@@ -1,67 +1,79 @@
 extends ../../layouts/left-col/left-col
 
 include ../../modules/bouton/bouton
+include ../../modules/ancre/ancre
+include ../../composants/texte/texte
 include ../../composants/liens/liens
 include ../../composants/accordeon/accordeon
 
 block aside
-  h1 aside
+  +ancre({label: "Label"})
 
 block content
-  h2 Est-ce que j’y ai droit ?
+  +texte
+    h2 Est-ce que j’y ai droit ?
 
-  h3 Critères d’attribution
+    h3 Critères d’attribution
 
-  h4 Deux conditions :
+    h4 Deux conditions :
 
-  ul
-    li Être de nationalité française, ou étranger avec un titre de séjour valable.
-    li Respecter les plafonds de ressources.
+    ul
+      li Être de nationalité française, ou étranger avec un titre de séjour valable.
+      li Respecter les plafonds de ressources.
 
-  h4 Comment savoir si vous y avez droit ?
+    h4 Comment savoir si vous y avez droit ?
 
-  p 80% de Parisiens sont éligibles à un logement social. Il existe 4 types de logements, différents selon les ressources de chaque foyer.
+    p 80% de Parisiens sont éligibles à un logement social. Il existe 4 types de logements, différents selon les ressources de chaque foyer.
 
+  +texte
+    ul
+      li A : Logement financé à l’aide d’un prêt locatif aidé d’intégration (PLAI)
+      li B : Logement financé à l’aide d’un prêt locatif à usage social (PLUS)
+      li C : Logement financé à l’aide d’un prêt locatif social (PLS)
+      li D : Logement financé à l’aide d’un prêt locatif intermédiaire (PLI)
 
-  ul
-    li A : Logement financé à l’aide d’un prêt locatif aidé d’intégration (PLAI)
-    li B : Logement financé à l’aide d’un prêt locatif à usage social (PLUS)
-    li C : Logement financé à l’aide d’un prêt locatif social (PLS)
-    li D : Logement financé à l’aide d’un prêt locatif intermédiaire (PLI)
+    p Ces sigles correspondent aux différents modes de financement de chaque logement social. Car pour favoriser la mixité sociale dans les immeubles ou quartiers, les financeurs des logements, dont la Ville de Paris, choisissent de varier les types de logements.
 
-  p Ces sigles correspondent aux différents modes de financement de chaque logement social. Car pour favoriser la mixité sociale dans les immeubles ou quartiers, les financeurs des logements, dont la Ville de Paris, choisissent de varier les types de logements.
+    h3 Les plafonds de ressources
 
-  h3 Les plafonds de ressources
+    p En prenant en compte le nombre de personnes dans votre famille à loger et vos ressources, vous pourrez solliciter l’attribution d’un logement social adapté à vos moyens. Le tableau ci-dessous vous indique les plafonds de ressources qui vous donnent droit à tel ou tel type de logement social. Attention : les ressources à prendre en compte sont celles de votre revenu fiscal de l’année de référence “n-2” (indiquée sur votre avis d’impôt sur le revenu).
 
-  p En prenant en compte le nombre de personnes dans votre famille à loger et vos ressources, vous pourrez solliciter l’attribution d’un logement social adapté à vos moyens. Le tableau ci-dessous vous indique les plafonds de ressources qui vous donnent droit à tel ou tel type de logement social. Attention : les ressources à prendre en compte sont celles de votre revenu fiscal de l’année de référence “n-2” (indiquée sur votre avis d’impôt sur le revenu).
+    p Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.
 
-  p Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.
+    +bouton({label: 'Estimer mes droits'})
 
-  +bouton({label: 'Estimer mes droits'})
+  +liens({
+    "titre": "Liens et téléchargements",
+    "items": [
+      {"href": "#", "texte": "Logement social à Paris : mode d'emploi", "modifiers": "liens-item-fichier"},
+      {"href": "#", "texte": "Accès au logement social : bilan annuel"},
+      {"href": "#", "texte": "Plan départemental d'action pour le logement des personnes défavorisées"},
+      {"href": "#", "texte": "Étudiants : logement universitaire"}
+    ]
+  })
 
-  +liens()
+  +texte
+    h2 Constituer un dossier
 
-  h2 Constituer un dossier
+    p Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.
 
-  p Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.
+    +bouton({label: 'Télécharger le formulaire de demande de logement social'})
 
-  +bouton({label: 'Télécharger le formulaire de demande de logement social'})
+    h3 Les documents à fournir
 
-  h3 Les documents à fournir
+    h4 Pour tous :
 
-  h4 Pour tous :
+    p Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.
 
-  p Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.
+    ul
+      li Le formulaire de demande de logement rempli
+      li Votre carte d’identité, votre passeport ou votre titre de séjour en cours de validité.  Si vous êtes ressortissant d'un pays membre de l'Union Européenne, d'Islande, de Norvège, du Liechtenstein ou de Suisse, vous pouvez déposer une demande de logement uniquement avec la carte d'identité de votre pays d'origine ou votre passeport.
+      li Carte d’identité ou passeport ou titre de séjour en cours de validité pour toutes les personnes majeures à loger
+      li Les deux derniers avis d’imposition ou de non-imposition de toutes les personnes qui vivront dans le logement (seulement le dernier avis dans le cadre d'un renouvellement)
+      li Justificatifs des ressources du dernier mois de toutes les personnes qui vivront dans le logement (fiche de paye, attestation d’allocation…)
+      li Justificatif du domicile actuel (bail et quittances de loyer ou reçus d’hôtel ou attestation d’hébergement…)
 
-  ul
-    li Le formulaire de demande de logement rempli
-    li Votre carte d’identité, votre passeport ou votre titre de séjour en cours de validité.  Si vous êtes ressortissant d'un pays membre de l'Union Européenne, d'Islande, de Norvège, du Liechtenstein ou de Suisse, vous pouvez déposer une demande de logement uniquement avec la carte d'identité de votre pays d'origine ou votre passeport.
-    li Carte d’identité ou passeport ou titre de séjour en cours de validité pour toutes les personnes majeures à loger
-    li Les deux derniers avis d’imposition ou de non-imposition de toutes les personnes qui vivront dans le logement (seulement le dernier avis dans le cadre d'un renouvellement)
-    li Justificatifs des ressources du dernier mois de toutes les personnes qui vivront dans le logement (fiche de paye, attestation d’allocation…)
-    li Justificatif du domicile actuel (bail et quittances de loyer ou reçus d’hôtel ou attestation d’hébergement…)
-
-  h4 Attention : dans certains cas, vous devez fournir des pièces complémentaires.
+    h4 Attention : dans certains cas, vous devez fournir des pièces complémentaires.
 
   +accordeon({items: [
     {titre: 'Vous êtes en situation de handicap', headingId: 'h-handicap', slug: 'handicap', contenu: 'Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.'},
@@ -73,11 +85,12 @@ block content
     {titre: 'Vous êtes assistante maternelle', headingId: 'h-assistante-maternelle', slug: 'assistante-maternelle', contenu: 'Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.'}
   ]})
 
-  p Ces documents justificatifs sont indispensables pour la « cotation » de votre dossier : un nombre de points attribué à votre dossier de demande de logement à Paris, afin de l’évaluer en toute transparence, dans le souci de l’équité et de la justice sociale. En fournissant  ces documents, vous bénéficiez de points supplémentaires.
+  +texte
+    p Ces documents justificatifs sont indispensables pour la « cotation » de votre dossier : un nombre de points attribué à votre dossier de demande de logement à Paris, afin de l’évaluer en toute transparence, dans le souci de l’équité et de la justice sociale. En fournissant  ces documents, vous bénéficiez de points supplémentaires.
 
-  h3 Cas particuliers : démarches complémentaires auprès d’autres organismes
+    h3 Cas particuliers : démarches complémentaires auprès d’autres organismes
 
-  p La Ville de Paris n’est pas seule à financer le logement social à Paris, elle n’est donc pas seule à proposer des candidats aux bailleurs sociaux. Si vous êtes dans une des situations suivantes, vous pouvez contacter d’autres organismes.
+    p La Ville de Paris n’est pas seule à financer le logement social à Paris, elle n’est donc pas seule à proposer des candidats aux bailleurs sociaux. Si vous êtes dans une des situations suivantes, vous pouvez contacter d’autres organismes.
 
   +accordeon({items: [
     {titre: "Vous êtes fonctionnaire d'Etat ou fonctionnaire hospitalier", headingId: 'h-fonctionnaire-etat', slug: 'fonctionnaire-etat', contenu: 'Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.'},
@@ -87,6 +100,6 @@ block content
     {titre: "Vous êtes en très grande difficulté économique et sociale", headingId: 'h-diffultes-eco', slug: 'diffultes-eco', contenu: 'Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.'}
   ]})
 
-  h3 Envoyer ou déposer un dossier
-
-  +bouton({label: 'Le numéro unique régional : explication et coordonnées du service'})
+  +texte
+    h3 Envoyer ou déposer un dossier
+    +bouton({label: 'Le numéro unique régional : explication et coordonnées du service'})
