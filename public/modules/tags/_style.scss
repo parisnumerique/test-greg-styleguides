@@ -1,0 +1,18 @@
+.tags-list {
+
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    float: left;
+  }
+
+  .separator {
+    margin: 0 .2em;
+  }
+
+  a {
+    color: inherit;
+  }
+
+}

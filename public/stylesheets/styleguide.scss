@@ -1,22 +1,22 @@
-
 // Base
-@import "../base/_normalize";
 @import "../base/_colors";
+@import "../base/_defaults";
 @import "../base/_fonts";
 @import "../base/_icons";
-@import "../base/_defaults";
+@import "../base/_normalize";
 
 // Modules
-@import "../modules/jumbotron/_style";
-@import "../modules/news-card/_style";
-@import "../modules/button/_style";
-@import '../modules/bouton-que-faire/_style';
-@import "../modules/section-button/_style";
-@import "../modules/breadcrumbs/_style";
-@import "../modules/heading/_style";
-@import "../modules/sections-list/_style";
-@import "../modules/municipal-team/_style";
 @import "../modules/anchors-list/_style";
+@import "../modules/bouton-que-faire/_style";
+@import "../modules/breadcrumbs/_style";
+@import "../modules/button/_style";
+@import "../modules/heading/_style";
+@import "../modules/jumbotron/_style";
+@import "../modules/municipal-team/_style";
+@import "../modules/news-card/_style";
+@import "../modules/section-button/_style";
+@import "../modules/sections-list/_style";
+@import "../modules/tags/_style";
 
 
 // Components
@@ -27,5 +27,5 @@
 @import "../components/text/_style";
 
 // Layouts
-@import "../layouts/stack/_style";
 @import "../layouts/left-col/_style";
+@import "../layouts/stack/_style";
