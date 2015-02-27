@@ -1,0 +1,41 @@
+.layout-left-col {
+  background-color: #fff;
+  width: 100%;
+
+  .layout-wrapper {
+    display: table;
+    margin: 0 auto;
+    width: 1100px;
+  }
+
+  .layout-aside {
+    background-color: $gris242;
+    display: table-cell;
+    padding: 40px 20px 40px 0;
+    position: relative;
+    text-align: right;
+    width: 280px;
+
+    &:before {
+      background-color: $gris242;
+      bottom: 0;
+      content: "";
+      display: block;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      width: 1000px;
+    }
+  }
+
+  .layout-content {
+    display: table-cell;
+    padding: 40px 50px;
+    width: 820px;
+  }
+
+  .layout-clear {
+    clear: both;
+  }
+
+}
