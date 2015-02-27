@@ -3,6 +3,7 @@
 @import "../base/normalize";
 @import "../base/couleurs";
 @import "../base/typographies";
+@import "highlight";
 
 $lsg-nav-toggle-height: 35px;
 $lsg-nav-width: 250px;
@@ -112,4 +113,5 @@ $lsg-nav-width: 250px;
 
 .lsg-pre {
   clear: both;
+  margin: 20px;
 }
