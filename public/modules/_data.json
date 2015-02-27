@@ -1,7 +1,7 @@
 {
   "modules": [
     "jumbotron",
-    "bloc-actu",
+    "news-card",
     "bouton",
     "bouton-que-faire",
     "bouton-rubrique",

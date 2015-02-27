@@ -1,15 +1,15 @@
-.bloc-actu {
+.news-card {
   color: #000;
   display: inline-block;
   text-align: center;
   text-decoration: none;
 
-  & + .bloc-actu {
+  & + .news-card {
     margin-left: 25px;
   }
 }
 
-.bloc-actu-image {
+.news-card-image {
   background-color: #eee;
   background-position: center center;
   background-repeat: no-repeat;
@@ -18,13 +18,13 @@
   width: 350px;
 }
 
-.bloc-actu-categorie {
+.news-card-categorie {
   color: $color-secondaire;
   margin: 15px auto 5px;
   max-width: 310px;
 }
 
-.bloc-actu-titre {
+.news-card-titre {
   font-size: 18px;
   font-weight: bold;
   margin: 0 auto;
