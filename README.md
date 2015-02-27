@@ -21,7 +21,7 @@ And browser-sync (*)
     npm start
 
 This launches a local server at http://localhost:9000
-The server is proxied on http://localhost:3000 by browser-sync with the auto relaod on code changes.
+The server is proxied on http://localhost:3000 by browser-sync with the auto reload on code changes.
 
 ## Build a static version
 
