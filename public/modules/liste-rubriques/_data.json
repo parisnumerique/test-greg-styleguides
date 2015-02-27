@@ -7,7 +7,7 @@
         {"titre": "Titre", "text": "Texte"},
         {"titre": "Titre", "text": "Texte"},
         {"titre": "Titre", "text": "Texte"},
-        {"modifiers": "bouton-rubrique-autre", "text": "Vous cherchez autre chose ?"}
+        {"modifiers": "section-button-other", "text": "Vous cherchez autre chose ?"}
       ]
     }
   }

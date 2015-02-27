@@ -1,6 +1,6 @@
-include ../bouton-rubrique/bouton-rubrique
+include ../section-button/section-button
 
 mixin liste-rubriques(opts)
   .liste-rubriques
     each rubrique in opts.rubriques
-      +bouton-rubrique(rubrique)
+      +section-button(rubrique)
