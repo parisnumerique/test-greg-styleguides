@@ -1,15 +1,15 @@
-.composant-liens {
+.component-links {
 
-  .liens-items,
-  .liens-item {
+  .links-items,
+  .links-item {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  .liens-item {
+  .links-item {
 
-    & + .liens-item {
+    & + .links-item {
       border-top: 1px solid $gris204;
     }
 
@@ -34,7 +34,7 @@
 
   }
 
-  .liens-item-fichier {
+  .links-item-fichier {
 
     &::before {
       content: "\e602";

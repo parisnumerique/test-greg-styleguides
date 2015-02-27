@@ -1,23 +1,23 @@
-.composant-accordeon {
+.component-accordion {
 
-  .accordeon-item {
+  .accordion-item {
     background-color: $gris242;
     border-radius: 4px;
     padding: 20px 12px;
 
-    & + .accordeon-item {
+    & + .accordion-item {
       margin-top: 7px;
     }
   }
 
 
-  .accordeon-item-title {
+  .accordion-item-title {
     color: $color-secondaire;
     font-size: 17px;
     font-weight: 500;
   }
 
-  .accordeon-item-content {
+  .accordion-item-content {
   }
 }
 

@@ -287,7 +287,7 @@ Paris.accordion = (function(){
       initOptions();
       $el.find('[data-parent]').attr('data-toggle', 'collapse').collapse({
           toggle: false,
-          parent: '.composant-accordeon'
+          parent: '.component-accordion'
         });
     }
 
@@ -311,6 +311,6 @@ Paris.accordion = (function(){
 })();
 
 $(document).ready(function(){
-  Paris.accordion('.composant-accordeon');
+  Paris.accordion('.component-accordion');
 });
 

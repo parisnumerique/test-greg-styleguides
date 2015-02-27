@@ -2,12 +2,12 @@
   "index": {
     "defaults": {
       "rubriques": [
-        {"titre": "Titre", "texte": "Texte"},
-        {"titre": "Titre", "texte": "Texte"},
-        {"titre": "Titre", "texte": "Texte"},
-        {"titre": "Titre", "texte": "Texte"},
-        {"titre": "Titre", "texte": "Texte"},
-        {"modifiers": "bouton-rubrique-autre", "texte": "Vous cherchez autre chose ?"}
+        {"titre": "Titre", "text": "Texte"},
+        {"titre": "Titre", "text": "Texte"},
+        {"titre": "Titre", "text": "Texte"},
+        {"titre": "Titre", "text": "Texte"},
+        {"titre": "Titre", "text": "Texte"},
+        {"modifiers": "bouton-rubrique-autre", "text": "Vous cherchez autre chose ?"}
       ]
     }
   }

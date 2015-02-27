@@ -1,0 +1,7 @@
+mixin links(opts)
+  .component.component-links
+    h2= opts.titre
+    ul.links-items
+      - each item in opts.items
+        li.links-item.icon-(class=item.modifiers)
+          a(href=item.href)= item.text

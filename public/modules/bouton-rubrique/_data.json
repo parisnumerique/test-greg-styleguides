@@ -3,7 +3,7 @@
     "defaults": {
       "modifiers": null,
       "titre": "Titre",
-      "texte": "Texte"
+      "text": "Texte"
     }
   }
 }
