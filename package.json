@@ -1,0 +1,23 @@
+{
+  "name"        : "paris-styleguide",
+  "version"     : "1.0.0",
+  "description" : "Paris.fr styleguide",
+  "main"        : "index.js",
+  "dependencies": {
+    "bootstrap" : "^3.3.2",
+    "jquery"    : "^2.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test"        : "echo \"Error: no test specified\" && exit 1",
+    "start"       : " harp server & watchify public/javascript/main.js -o public/javascript/paris.js",
+    "compile"     : " harp compile",
+    "postcompile" : " rm -r www/javascript/* && browserify public/javascript/main.js -o www/javascript/paris.js"
+  },
+  "repository": {
+    "type" : "git",
+    "url"  : "git@git.etaminstudio.com : paris/livingstyleguide-harp.git"
+  },
+  "author"  : "",
+  "license" : "ISC"
+}

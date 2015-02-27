@@ -1,7 +1,6 @@
 'use strict';
 
 var $ = require('jquery');
-require('../../javascript/externals/bootstrap');
 
 var Paris = window.Paris || {};
 

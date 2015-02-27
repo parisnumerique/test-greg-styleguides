@@ -8,15 +8,15 @@ Just install [Harp](http://harpjs.com):
 
 And Browserify
 
-    npm install -g browserify
+    npm install -g browserify watchify
 
 ## Development mode
 
-    harp server
+    npm start
 
 This launches a local server at http://localhost:9000 with auto reload of the files.
 
 
 ## Build a static version
 
-    harp compile
+    npm run compile
