@@ -1,5 +1,6 @@
 include texte
 include ../../modules/bouton/bouton
+include ../../helpers/code
 
 +texte
   h1 Titre h1 exemple
@@ -19,3 +20,25 @@ include ../../modules/bouton/bouton
     li B : liste ol du composant texte
     li C : liste ol du composant texte
   +bouton({label: "Bouton"})
++code({language: "jade"}).
+  include texte
+  include ../../modules/bouton/bouton
+
+  +texte
+    h1 Titre h1 exemple
+    h2 Titre h2 exemple
+    h3 Titre h3 exemple
+    h4 Titre h4 exemple
+    ul
+      li liste ul du composant texte
+      li liste ul du composant texte
+      li liste ul du composant texte
+    p
+      | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent
+      a(href='#') exemple lien
+      |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
+    ol
+      li A : liste ol du composant texte
+      li B : liste ol du composant texte
+      li C : liste ol du composant texte
+    +bouton({label: "Bouton"})
