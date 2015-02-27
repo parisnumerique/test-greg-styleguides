@@ -1,14 +1,14 @@
 {
   "modules": [
-    "jumbotron",
-    "news-card",
+    "anchors-list",
+    "breadcrumbs",
     "button",
     "bouton-que-faire",
-    "section-button",
-    "breadcrumbs",
     "heading",
-    "sections-list",
+    "jumbotron",
+    "news-card",
     "municipal-team",
-    "anchors-list"
+    "section-button",
+    "sections-list"
   ]
 }
