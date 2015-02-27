@@ -1,3 +1,5 @@
+# Paris Living Style Guide
+
 ## Getting started
 
 Just install [Harp](http://harpjs.com):
