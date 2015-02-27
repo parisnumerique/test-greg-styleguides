@@ -6,6 +6,10 @@ Just install [Harp](http://harpjs.com):
 
     npm install -g harp
 
+And Browserify
+
+    npm install -g browserify
+
 ## Development mode
 
     harp server
