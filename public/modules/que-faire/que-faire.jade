@@ -1,7 +1,7 @@
 mixin que-faire(opts)
   .que-faire(style='background-image: url(#{opts.image});')
-    a.logo(href='#' style='background-image: url(#{opts.logo});')
+    a.logo(href=opts.logo.href style='background-image: url(#{opts.logo.image});')
     .que-faire-content  
       - each item in opts.items
-        button.bouton.bouton-que-faire
-          p.bouton-que-faire-texte= item.texte
+        button.button.button-que-faire
+          a.button-que-faire-text(href=item.href)= item.text

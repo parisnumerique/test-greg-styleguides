@@ -19,8 +19,7 @@
   .que-faire-content {
     float: left;
 
-    .bouton-que-faire {
-      box-sizing: border-box;
+    .button-que-faire {
       background: url(../modules/que-faire/hachure.svg) #fff repeat top left;
       border: none;
       padding: 0;
@@ -29,23 +28,21 @@
       white-space: normal;
       width: 100%;
 
-      &:last-child{
-        margin-right: 0;
-      }
-
-    	&:hover .bouton-que-faire-texte {color: #FB4F4F;}
+      &:last-child {margin-right: 0;}
     }
 
-    .bouton-que-faire-texte {
+    .button-que-faire-text {
       color:#333;
+      display: block;
       font-family: Avenir;
       font-size: 16px;
       font-weight: 700;
-      line-height: 23px;
-      padding: 0 50px 5px 20px;
+      line-height: 20px;
+      padding: 18px 50px 24px 20px;
       text-align: left;
+      text-decoration: none;
 
-
+      &:hover {color: #FB4F4F;}
     }
   }
 }
