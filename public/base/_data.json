@@ -9,6 +9,34 @@
     "title": "Typographie"
   },
   "icons": {
-    "title": "Icônes"
+    "title": "Icônes",
+    "icons": [
+      "arrow-acordeon-bottom",
+      "arrow-acordeon-left",
+      "arrow-acordeon-right",
+      "arrow-acordeon-top",
+      "facebook",
+      "mail",
+      "twitter",
+      "favoris",
+      "pdf",
+      "link",
+      "instagram",
+      "profil",
+      "pointer",
+      "recherche",
+      "arrow-small-bottom",
+      "arrow-small-left",
+      "arrow-small-right",
+      "arrow-small-top",
+      "velib",
+      "close",
+      "close-arrondi",
+      "bus",
+      "metro",
+      "lecteur-video",
+      "alert",
+      "avatar"
+    ]
   }
 }
