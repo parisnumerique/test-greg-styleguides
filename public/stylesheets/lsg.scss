@@ -115,3 +115,18 @@ $lsg-nav-width: 250px;
   clear: both;
   margin: 20px;
 }
+
+.lsg-toc {
+  h3 {
+    b {
+      color: #999;
+      font-weight: 300;
+      margin-left: 10px;
+    }
+  }
+  a {
+    color: #333;
+    text-decoration: none;
+    &:hover {text-decoration: underline}
+  }
+}
