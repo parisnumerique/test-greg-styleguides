@@ -3,8 +3,6 @@
   border-radius: 5px;
   background-color: $gray242;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 16px;
   line-height: 1.42857143;
   padding: 12px;
   text-align: left;
@@ -33,12 +31,15 @@
   }
 
   .title {
+    font-weight: 700;
     display: block;
     color: $blue3;
   }
 
   .text {
     color: $gray77;
+    font-size: 14px;
+    font-weight: 300;
   }
 
   .background {
@@ -65,7 +66,8 @@
 .section-button-other {
   background: $yellow;
   text-transform: uppercase;
-  font-size: 13px;
-  font-weight: bold;
-
+  .text {
+    font-size: 13px;
+    font-weight: 500;
+  }
 }

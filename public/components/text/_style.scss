@@ -12,22 +12,22 @@
 
   h2 {
     color: $gray26;
-  	font-size: 36px;
+  	font-size: 34px;
   	font-weight: 700;
   	padding: 58px 0 48px;
   }
 
   h3 {
   	color: $gray26;
-  	font-size: 26px;
+  	font-size: 24px;
   	font-weight: 500;
     padding: 6px 0 20px;
   }
 
   h4 {
     color: $color-secondary;
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
     padding: 10px 0 20px;
   }
 
@@ -39,10 +39,7 @@
     color: $gray51;
   }
 
-  ul {
-    padding: 0;
-    margin: 0 0 20px;
-    list-style: none;
+  ul, ol {
 
     li {
       font-size: 16px;
@@ -50,8 +47,17 @@
       & + li {
         margin-top: 20px;
       }
+    }
 
-      &::before {
+  }
+
+  ul {
+    padding: 0;
+    margin: 0 0 20px;
+    list-style: none;
+
+    li {
+      &:before {
         content: "•";
         font-size: 1.5em;
         padding-right: 13px;
@@ -61,7 +67,8 @@
   }
 
   p {
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: 300;
     line-height: 1.5;
     padding: 0 0 24px;
   }
