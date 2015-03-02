@@ -21,23 +21,23 @@
       "arrow-small-right",
       "arrow-small-top",
       "avatar",
+      "bicycle",
       "bus",
       "close",
-      "close-rounding",
+      "close-rounded",
       "facebook",
       "favorites",
       "file",
       "instagram",
       "link",
       "mail",
-      "pointer",
+      "marker",
       "pdf",
+      "play",
       "profile",
       "search",
       "subway",
-      "twitter",
-      "velib",
-      "video-player"
+      "twitter"
     ]
   }
 }
