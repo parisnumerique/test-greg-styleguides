@@ -1,4 +1,4 @@
-.layout-left-col {
+.layout-right-col {
   background-color: #fff;
   width: 100%;
 
@@ -11,26 +11,32 @@
   .layout-aside {
     background-color: $gray242;
     display: table-cell;
-    padding: 40px 20px 40px 0;
+    padding: 40px 0 40px 20px;
     position: relative;
-    text-align: right;
+    text-align: left;
     width: 280px;
 
-    &:before {
+    &:after {
       background-color: $gray242;
       bottom: 0;
       content: "";
       display: block;
       position: absolute;
-      right: 100%;
+      left: 100%;
       top: 0;
       width: 1000px;
+    }
+
+    /* modifiers */
+    &.color-secondary-background,
+    &.color-secondary-background:after {
+      background-color: $color-secondary;
     }
   }
 
   .layout-content {
     display: table-cell;
-    padding: 40px 50px;
+    padding: 40px 50px 40px 0;
     width: 820px;
   }
 
