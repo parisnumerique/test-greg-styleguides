@@ -1,6 +1,7 @@
-include ../section-button/section-button
-
 mixin sections-list(opts)
   .sections-list
-    each section in opts.sections
-      +section-button(section)
+    each item in opts.items
+      a.sections-list-button(class= item.modifiers ? "#{item.modifiers}" : "")
+        - if (item.title)
+          strong.sections-list-button-title=item.title
+        div.sections-list-button-text=item.text
