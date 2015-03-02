@@ -5,7 +5,11 @@
 
   li {
     float: left;
+    a.tag:hover {
+      color: $pink;
+    }
   }
+
 
   .separator {
     margin: 0 .2em;
