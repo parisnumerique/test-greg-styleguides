@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?ubmqg5');
-  src:url('../fonts/paris-icons.eot?#iefixubmqg5') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?ubmqg5') format('woff'),
-    url('../fonts/paris-icons.ttf?ubmqg5') format('truetype'),
-    url('../fonts/paris-icons.svg?ubmqg5#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?3bknx4');
+  src:url('../fonts/paris-icons.eot?#iefix3bknx4') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?3bknx4') format('woff'),
+    url('../fonts/paris-icons.ttf?3bknx4') format('truetype'),
+    url('../fonts/paris-icons.svg?3bknx4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -104,6 +104,10 @@
 %icon-favorites,
 .icon-favorites:before {
   content: "\e600";
+}
+
+.icon-file:before {
+  content: "\e61b";
 }
 
 %icon-instagram,
