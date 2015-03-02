@@ -1,0 +1,91 @@
+.notice {
+  background-color: black;
+  min-height: 60px;
+  margin-bottom: 10px; 
+  overflow: auto;
+  width: 100%;
+
+  > p,
+  > a {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0; 
+  }
+
+  > p {
+    padding: 21px 3.58% 21px 9.88%;
+  }
+
+  > a {
+    display: inherit;
+    padding: 21px 3.58% 21px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  > [class^="icon-"],
+  > [class*=" icon-"] {
+    font-size: 1.8em;
+    padding: 0 15px 0 0;
+    vertical-align: sub;
+  }
+
+}
+
+.notice-white > p,
+.notice-white-transparent > p {
+  color: $black;
+}
+
+//notice image
+.notice-img{
+  background: url(../modules/notice/notice-back-image.png) no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+}
+
+// notice-color
+.notice-blue {background-color: $blue-notice;}
+.notice-orange {background-color: $orange-notice;}
+.notice-yellow {background-color: $color-tertiary;}
+.notice-white {background-color: white; color: black;}
+
+//notice transparent
+.notice-black-transparent {background-color: rgba(black, 0.8);}
+.notice-blue-transparent {background-color: rgba($blue-notice, 0.8);}
+.notice-orange-transparent {background-color: rgba($orange-notice, 0.8);}
+.notice-yellow-transparent {background-color: rgba($color-tertiary, 0.8);}
+.notice-white-transparent {background-color: rgba(white, 0.8);}
+
+//notice closabe
+.notice-closable:after,
+.notice-closable-black:after {
+  @extend %icon-font;
+  @extend %icon-close-rounded;
+  border: 2px solid;
+  border-radius: 25px;
+  cursor: pointer;
+  float: right;
+  font-size: 1.8em;
+  padding: 0 1px 2px 1px;
+  position: relative;
+  top: -6px;
+}
+
+.notice-closable-black:after {
+  color: black;
+}
+
+// notice Alert & icons
+.notice-alert:before,
+.notice-alert-black:before {
+  @extend %icon-font;
+  @extend %icon-alert;
+  font-size: 1.8em;
+  padding: 0 15px 0 0;
+  vertical-align: sub;
+}
+
+

@@ -1,0 +1,57 @@
+include notice
+
+h2 notice defaults :
++notice(defaults)
+  p Donec ullamcorper nulla non metus auctor fringilla.
+
+h2 notice icon closable:
++notice(defaults)
+  p.notice-closable Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-white"})
+  p.notice-closable-black Donec ullamcorper nulla non metus auctor fringilla.
+
+h2 notice link :
++notice({"modifiers": "notice-blue"})
+  a(href='#') Donec ullamcorper nulla non metus auctor fringilla.
+
+h2 notice link + icon closable:
++notice({"modifiers": "notice-blue"})
+  a(href='#').notice-closable Donec ullamcorper nulla non metus auctor fringilla.
+
+h2 notice icon :
++notice(defaults)
+  p.notice-alert Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-white"})
+  p.notice-alert-black Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-white"})
+  p
+    i.notice-icon.icon-bus
+    | Donec ullamcorper nulla non metus auctor fringilla.
+    
+h2 notice color :
++notice({"modifiers": "notice-blue"})
+  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-blue"})
+  p Donec ullamcorper nulla non metus auctor fringilla.  
++notice({"modifiers": "notice-orange", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.  
++notice({"modifiers": "notice-yellow", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-white", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.
+
+h2 notice transparent :
++notice({"modifiers": "notice-black-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-blue-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-orange-transparent", "text": "Donec ullamcorper nulla non oranges auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-yellow-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "notice-white-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.
+
+h2 notice image :
++notice({"modifiers": "notice-orange notice-img", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
+  p Donec ullamcorper nulla non metus auctor fringilla.

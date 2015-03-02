@@ -1,0 +1,7 @@
+mixin notice(opts)
+  .notice(class= "#{opts.modifiers}")
+    if block
+      block
+    //- p.notice-text= opts.text
+    //- if (opts.link)
+    //-   a.notice-link(href="#")=opts.link
