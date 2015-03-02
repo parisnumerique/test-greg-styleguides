@@ -1,0 +1,17 @@
+mixin pagination(opts)
+  nav
+    ul.pagination
+      if opts.current !== 1
+        li.previous
+          a(href='#', aria-label='Previous')
+            span(aria-hidden='true') &lt;
+
+      each page in opts.pages
+        - var klass = (page.number === opts.current ? 'active' : '')
+        li(class="#{klass}")
+          a(href='#{page.url}')= page.number
+
+      if opts.totalPages !== opts.pages[opts.pages.length -1].number
+        li.next
+          a(href='#', aria-label='Next')
+            span(aria-hidden='true') &gt;
