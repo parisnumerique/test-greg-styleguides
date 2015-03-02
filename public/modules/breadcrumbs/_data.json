@@ -1,6 +1,25 @@
 {
   "index": {
     "defaults": {
+      "items": [
+        {
+          "href": "#",
+          "text": "Accueil"
+        },
+        {
+          "href": "#",
+          "text": "Services et infos pratiques"
+        },
+        {
+          "href": "#",
+          "text": "Culture et patrimoine"
+        },
+        {
+          "href": "#",
+          "text": "Bibliothèques",
+          "current": true
+        }
+      ]
     }
   }
 }

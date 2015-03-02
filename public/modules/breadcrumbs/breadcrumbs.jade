@@ -1,9 +1,8 @@
 mixin breadcrumbs(opts)
   ol.breadcrumbs
-    li.breadcrumbs-item
-      a(href='#') Accueil
-    li.breadcrumbs-item
-      a(href='#') Services et infos pratiques
-    li.breadcrumbs-item
-      a(href='#') Culture et patrimoine
-    li.breadcrumbs-item.breadcrumbs-item-current Biblioth&egrave;ques
+    - each item in opts.items
+      if item.current
+        li.breadcrumbs-item.breadcrumbs-item-current= item.text
+      else
+        li.breadcrumbs-item
+          a(href=item.href)= item.text
