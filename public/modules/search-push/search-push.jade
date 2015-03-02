@@ -1,5 +1,7 @@
+include ../button/button
+
 mixin search-push(opts)
   .search-push
-      p.search-push-text= opts.text
-      p.search-push-wrapper-link
-        button.button.button-primary.search-push-link= opts.label
+      .search-push-text= opts.text
+      .search-push-wrapper-link
+        +button(opts.button)
