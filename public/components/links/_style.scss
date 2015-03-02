@@ -8,7 +8,6 @@
   }
 
   .links-item {
-    @extend %icon-font;
 
     & + .links-item {
       border-top: 1px solid $gray204;
@@ -25,6 +24,7 @@
     }
 
     &:before {
+      @extend %icon-font;
       @extend %icon-link;
       float: left;
       font-size: 1.5em;

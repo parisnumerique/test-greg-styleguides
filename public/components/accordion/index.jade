@@ -1,7 +1,7 @@
 include accordion
 include ../../helpers/code
 
-h1 Textes courts
+h2 Textes courts
 +accordion(defaults)
 +code({language: "jade"}).
   include accordion
@@ -9,7 +9,7 @@ h1 Textes courts
   +accordion(#{JSON.stringify(defaults, null, 2)})
 
 
-h1 Textes longs
+h2 Textes longs
 +accordion(large_text)
 +code({language: "jade"}).
   include accordion

@@ -1,21 +1,21 @@
 include image
 include ../../helpers/code
 
-h1 Petite image
+h2 Petite image
 +image(defaults)
 +code({language: "jade"}).
   include image
 
   +image(#{JSON.stringify(defaults)})
 
-h1 Grande image
+h2 Grande image
 +image(large_image)
 +code({language: "jade"}).
   include image
 
   +image(#{JSON.stringify(large_image)})
 
-h1 Image verticale
+h2 Image verticale
 +image(vertical_image)
 +code({language: "jade"}).
   include image
