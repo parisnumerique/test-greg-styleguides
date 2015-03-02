@@ -4,6 +4,7 @@ include ../../modules/footer/footer
 include ../../modules/heading/heading
 include ../../modules/jumbotron/jumbotron
 include ../../modules/municipal-team/municipal-team
+include ../../modules/news-card/news-card
 include ../../modules/que-faire/que-faire
 include ../../modules/sections-list/sections-list
 
@@ -90,6 +91,21 @@ append content
         "title": "En ce moment",
         "link": "Voir toutes les actualités"
       })
+      +news-card({
+        "image": "../../modules/news-card/image.jpg",
+        "category": "Mobilité",
+        "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+      })
+      +news-card({
+        "image": "../../modules/news-card/image.jpg",
+        "category": "Tourisme",
+        "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+      })
+      +news-card({
+        "image": "../../modules/news-card/image.jpg",
+        "category": "Environnements",
+        "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+      })
 
 append content
   .layout-content
@@ -127,7 +143,22 @@ append content
 
 append content
   .layout-content
-    +municipal-team
+    +municipal-team({
+      "heading": {
+        "title": "La Maire et ses adjoints",
+        "link": {
+          "href": "#",
+          "text": "L’Hôtel de ville"
+        },
+        "modifiers": "white"
+      },
+      "img": {
+        "src": "../../modules/municipal-team/image.jpg",
+        "alt": "La Maire et ses adjoints"
+      },
+      "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+      "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
+    })
 
 append content
   .layout-content.layout-content-adjacent
