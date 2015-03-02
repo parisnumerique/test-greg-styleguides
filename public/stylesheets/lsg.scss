@@ -137,3 +137,17 @@ $lsg-nav-width: 250px;
     &:hover {text-decoration: underline}
   }
 }
+
+.lsg-colors {
+  thead th,
+  td {
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .lsg-color-dot:before {
+    content: "●";
+    font-size: 30px;
+    display: block;
+  }
+}
