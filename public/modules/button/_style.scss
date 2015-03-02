@@ -1,19 +1,43 @@
 .button {
+  background-color: $color-primary;
   border: 1px solid transparent;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-weight: 500;
   font-size: 15px;
+  font-weight: 500;
   line-height: 20px;
+  overflow: hidden;
   padding: 15px 20px;
+  position: relative;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   white-space: nowrap;
+  z-index: 1;
+
+  &:after {
+    background-color: darken($color-primary, 10%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    transition: top 0.15s ease-in-out;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:after {
+      top: 0;
+    }
+  }
 }
 
-.button-primary {
-  background-color: $color-primary;
+.button-action {
+  font-size: 13px;
+  text-transform: uppercase;
 }

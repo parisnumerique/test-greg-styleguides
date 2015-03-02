@@ -1,3 +1,5 @@
 mixin button(opts)
-  p
-    button.button.button-primary= opts.text
+  if opts.href
+    a.button(href=opts.href class=opts.modifiers)= opts.text
+  else
+    button.button(class=opts.modifiers)= opts.text
