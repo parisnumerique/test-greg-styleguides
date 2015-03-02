@@ -3,6 +3,12 @@
     {
       "type": "text",
       "data": {
+        "block": "<p class=\"intro\">Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p>"
+      }
+    },
+    {
+      "type": "text",
+      "data": {
         "block": "<h2>Est-ce que j’y ai droit ?</h2><h3>Critères d’attribution</h3><h4>Deux conditions :</h4><ul><li>Être de nationalité française, ou étranger avec un titre de séjour valable.</li><li>Respecter les plafonds de ressources.</li></ul><h4>Comment savoir si vous y avez droit ?</h4><p>80% de Parisiens sont éligibles à un logement social. Il existe 4 types de logements, différents selon les ressources de chaque foyer.</p>"
       }
     },
