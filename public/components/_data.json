@@ -1,6 +1,7 @@
 {
   "components": [
     "accordion",
+    "buttons",
     "image",
     "links",
     "text"
