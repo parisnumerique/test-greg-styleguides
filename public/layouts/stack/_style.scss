@@ -2,6 +2,22 @@
   background-color: #fff;
   width: 100%;
 
+  .layout-content {
+    & + .layout-content {
+      margin-top: 40px;
+    }
+
+    & + .layout-content-adjacent {
+      margin-top: 0;
+    }
+
+    /* modifiers */
+    &.gray-background {
+      background-color: $gray242;
+      padding: 40px 0;
+    }
+  }
+
   .layout-wrapper {
     margin: 0 auto;
     width: 1100px;

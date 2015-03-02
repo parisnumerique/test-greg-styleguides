@@ -7,112 +7,139 @@ include ../../modules/municipal-team/municipal-team
 include ../../modules/que-faire/que-faire
 include ../../modules/sections-list/sections-list
 
-block content
-  +heading({
-    "title": "Services et infos pratiques"
-  })
+append content
+  .layout-content
+    .layout-wrapper
+      +heading({
+        "title": "Services et infos pratiques"
+      })
 
-  +sections-list({
-    "items": [
-      {
-        "title": "Aides & démarches",
-        "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-      },
-      {
-        "title": "Culture & patrimoine",
-        "text": "Sed posuere consectetur est at lobortis."
-      },
-      {
-        "title": "Déplacements & stationnement",
-        "text": "Donec id elit non mi porta gravida at eget metus."
-      },
-      {
-        "title": "Emploi & formations",
-        "text": "Sed posuere consectetur est at lobortis."
-      },
-      {
-        "title": "Environnement & espaces verts",
-        "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-      },
-      {
-        "title": "Famille & éducation",
-        "text": "Donec ullamcorper nulla non metus auctor fringilla."
-      },
-      {
-        "title": "Innovation",
-        "text": "Cras mattis consectetur purus sit amet fermentum."
-      },
-      {
-        "title": "Logement",
-        "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-      },
-      {
-        "title": "Santé",
-        "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-      },
-      {
-        "title": "Social & solidarités",
-        "text": "Maecenas sed diam eget risus varius blandit sit amet."
-      },
-      {
-        "title": "Sports & loisirs",
-        "text": "Cras mattis consectetur purus sit amet fermentum."
-      },
-      {
-        "title": "Urbanisme",
-        "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-      },
-      {
-        "title": "Associations",
-        "text": "Sed posuere consectetur est at lobortis."
-      },
-      {
-        "text": "Vous cherchez autre chose ?",
-        "modifiers": "more"
-      }
-    ]
-  })
+      +sections-list({
+      "items": [
+        {
+          "title": "Aides & démarches",
+          "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+        },
+        {
+          "title": "Culture & patrimoine",
+          "text": "Sed posuere consectetur est at lobortis."
+        },
+        {
+          "title": "Déplacements & stationnement",
+          "text": "Donec id elit non mi porta gravida at eget metus."
+        },
+        {
+          "title": "Emploi & formations",
+          "text": "Sed posuere consectetur est at lobortis."
+        },
+        {
+          "title": "Environnement & espaces verts",
+          "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+        },
+        {
+          "title": "Famille & éducation",
+          "text": "Donec ullamcorper nulla non metus auctor fringilla."
+        },
+        {
+          "title": "Innovation",
+          "text": "Cras mattis consectetur purus sit amet fermentum."
+        },
+        {
+          "title": "Logement",
+          "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+        },
+        {
+          "title": "Santé",
+          "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        },
+        {
+          "title": "Social & solidarités",
+          "text": "Maecenas sed diam eget risus varius blandit sit amet."
+        },
+        {
+          "title": "Sports & loisirs",
+          "text": "Cras mattis consectetur purus sit amet fermentum."
+        },
+        {
+          "title": "Urbanisme",
+          "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+        },
+        {
+          "title": "Associations",
+          "text": "Sed posuere consectetur est at lobortis."
+        },
+        {
+          "text": "Vous cherchez autre chose ?",
+          "modifiers": "more"
+        }
+      ]
+    })
 
-  +jumbotron({
-    "image": "../../modules/jumbotron/image.jpg",
-    "title": "À la une",
-    "text": "Revivez Nuit Blanche en photos et vidéo"
-  })
+append content
+  .layout-content
+    +jumbotron({
+      "image": "../../modules/jumbotron/image.jpg",
+      "title": "À la une",
+      "text": "Revivez Nuit Blanche en photos et vidéo"
+    })
 
-  +heading({
-    "title": "En ce moment",
-    "link": "Voir toutes les actualités"
-  })
+append content
+  .layout-content
+    .layout-wrapper
+      +heading({
+        "title": "En ce moment",
+        "link": "Voir toutes les actualités"
+      })
 
-  +que-faire({
-    "image": "../../modules/que-faire/que-faire-back-img.jpg",
-    "logo": {
-      "href": "#",
-      "image": "../../modules/que-faire/que-faire-img.png"
-    },
-    "items": [
-      {"href": "#", "text": "Que faire à Paris ce week-end ?"},
-      {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
-      {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-    ]
-  })
+append content
+  .layout-content
+    .layout-wrapper
+      +que-faire({
+        "image": "../../modules/que-faire/que-faire-back-img.jpg",
+        "logo": {
+          "href": "#",
+          "image": "../../modules/que-faire/que-faire-img.png"
+        },
+        "items": [
+          {"href": "#", "text": "Que faire à Paris ce week-end ?"},
+          {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
+          {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
+        ]
+      })
 
-  +heading({
-    "title": "Participez !",
-    "link": "Accéder à l’espace participatif"
-  })
+append content
+  .layout-content.gray-background
+    .layout-wrapper
+      +heading({
+        "title": "Participez !",
+        "link": "Accéder à l’espace participatif"
+      })
 
-  +municipal-team
+append content
+  .layout-right-col
+    .layout-wrapper
+      .layout-content
+        +heading({
+          "title": "Vu par les Parisiens"
+        })
+      aside.layout-aside.color-secondary-background
+        h1 aside
 
-  +footer({
-    "items": [
-      {"href": "#", "text": "Visit Paris", "modifiers": "footer-link-em"},
-      {"href": "#", "text": "FAQ"},
-      {"href": "#", "text": "Newsletter"},
-      {"href": "#", "text": "Contact"},
-      {"href": "#", "text": "Presse"},
-      {"href": "#", "text": "Mentions légales"},
-      {"href": "#", "text": "Crédits"},
-      {"href": "#", "text": "Accessibilité"}
-    ]
-  })
+append content
+  .layout-content
+    +municipal-team
+
+append content
+  .layout-content.layout-content-adjacent
+    +footer({
+      "items": [
+        {"href": "#", "text": "Visit Paris", "modifiers": "footer-link-em"},
+        {"href": "#", "text": "FAQ"},
+        {"href": "#", "text": "Newsletter"},
+        {"href": "#", "text": "Contact"},
+        {"href": "#", "text": "Presse"},
+        {"href": "#", "text": "Mentions légales"},
+        {"href": "#", "text": "Crédits"},
+        {"href": "#", "text": "Accessibilité"}
+      ]
+    })
