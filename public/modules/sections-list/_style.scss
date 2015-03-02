@@ -1,16 +1,17 @@
 .sections-list {
-
+  @include container;
 }
 
 .sections-list-button {
+  @include gallery(4 of 16);
   background-color: $gray242;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: block;
   float: left;
   height: 120px;
-  margin: 0 20px 20px 0;
-  max-width: 260px;
+  margin-bottom: 20px;
   padding: 5px 12px 12px 12px;
   position: relative;
   text-align: left;
