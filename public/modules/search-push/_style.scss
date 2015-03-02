@@ -4,27 +4,26 @@
   min-height: 160px;
   overflow: auto;
   width: 100%;
+}
 
-  .search-push-text {
-    color: #333;
-    font-family: "Avenir";
-    font-size: 24px;
-    font-weight: normal;
-    padding: 40px 30px 12px; 
-    margin: 0;
-    text-align: center;
-  }
+.search-push-text {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 40px 30px 12px; 
+  margin: 0;
+  text-align: center;
+}
 
-  .search-push-wrapper-link{
-    margin: 0;
-    padding: 0 0 30px;
-    text-align: center;
-  }
+.search-push-wrapper-link{
+  margin: 0;
+  padding: 0 0 34px;
+  text-align: center;
+}
 
-  .search-push-link{
-    font-size: 13px;
-    font-weight: normal;
-    padding: 14px 30px;
-    text-transform: uppercase;
-  }
+.search-push-link{
+  color: $pink2;
+  font-size: 13px;
+  padding: 16px 20px;
+  text-transform: uppercase;
 }
