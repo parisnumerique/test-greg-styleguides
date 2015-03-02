@@ -1,0 +1,54 @@
+{
+  "components": [
+    {
+      "type": "text",
+      "data": {
+        "block": "<p class=\"intro\">Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p>"
+      }
+    },
+    {
+      "type": "text",
+      "data": {
+        "block": "<h2>Est-ce que j’y ai droit ?</h2><h3>Critères d’attribution</h3><h4>Deux conditions :</h4><ul><li>Être de nationalité française, ou étranger avec un titre de séjour valable.</li><li>Respecter les plafonds de ressources.</li></ul><h4>Comment savoir si vous y avez droit ?</h4><p>80% de Parisiens sont éligibles à un logement social. Il existe 4 types de logements, différents selon les ressources de chaque foyer.</p>"
+      }
+    },
+    {
+      "type": "text",
+      "data": {
+        "block": "<ul><li>A : Logement financé à l’aide d’un prêt locatif aidé d’intégration (PLAI)</li><li>B : Logement financé à l’aide d’un prêt locatif à usage social (PLUS)</li><li>C : Logement financé à l’aide d’un prêt locatif social (PLS)</li><li>D : Logement financé à l’aide d’un prêt locatif intermédiaire (PLI)</li></ul><p>Ces sigles correspondent aux différents modes de financement de chaque logement social. Car pour favoriser la mixité sociale dans les immeubles ou quartiers, les financeurs des logements, dont la Ville de Paris, choisissent de varier les types de logements.</p><h3>Les plafonds de ressources</h3><p>En prenant en compte le nombre de personnes dans votre famille à loger et vos ressources, vous pourrez solliciter l’attribution d’un logement social adapté à vos moyens. Le tableau ci-dessous vous indique les plafonds de ressources qui vous donnent droit à tel ou tel type de logement social. Attention : les ressources à prendre en compte sont celles de votre revenu fiscal de l’année de référence “n-2” (indiquée sur votre avis d’impôt sur le revenu).</p><p>Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.</p><p><button class=\"button button-primary\">Estimer mes droits</button></p>"
+      }
+    },
+    {
+      "type": "links",
+      "data": {
+        "title": "Liens et téléchargements",
+        "items": [
+          {"href": "#", "text": "Logement social à Paris : mode d'emploi", "modifiers": "links-item-pdf"},
+          {"href": "#", "text": "Accès au logement social : bilan annuel"},
+          {"href": "#", "text": "Plan départemental d'action pour le logement des personnes défavorisées"},
+          {"href": "#", "text": "Étudiants : logement universitaire"}
+        ]
+      }
+    },
+    {
+      "type": "text",
+      "data": {
+        "block": "<h2>Constituer un dossier</h2><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><p><button class=\"button button-primary\">Télécharger le formulaire de demande de logement social</button></p><h3>Les documents à fournir</h3><h4>Pour tous :</h4><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><ul><li>Le formulaire de demande de logement rempli</li><li>Votre carte d’identité, votre passeport ou votre title de séjour en cours de validité.  Si vous êtes ressortissant d'un pays membre de l'Union Européenne, d'Islande, de Norvège, du Liechtenstein ou de Suisse, vous pouvez déposer une demande de logement uniquement avec la carte d'identité de votre pays d'origine ou votre passeport.</li><li>Carte d’identité ou passeport ou titre de séjour en cours de validité pour toutes les personnes majeures à loger</li><li>Les deux derniers avis d’imposition ou de non-imposition de toutes les personnes qui vivront dans le logement (seulement le dernier avis dans le cadre d'un renouvellement)</li><li>Justificatifs des ressources du dernier mois de toutes les personnes qui vivront dans le logement (fiche de paye, attestation d’allocation…)</li><li>Justificatif du domicile actuel (bail et quittances de loyer ou reçus d’hôtel ou attestation d’hébergement…)</li></ul><h4>Attention : dans certains cas, vous devez fournir des pièces complémentaires.</h4>"
+      }
+    },
+    {
+      "type": "accordion",
+      "data": {
+        "items": [
+          {"title": "Vous êtes en situation de handicap", "headingId": "h-handicap", "slug": "handicap", "content": "Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est."},
+          {"title": "Vous avez des enfants", "headingId": "h-enfants", "slug": "enfants", "content": "Ideoque fertur neminem aliquando ob haec vel similia poenae addictum oblato de more elogio revocari iussisse, quod inexorabiles quoque principes factitarunt. et exitiale hoc vitium, quod in aliis non numquam intepescit, in illo aetatis progressu effervescebat, obstinatum eius propositum accendente adulatorum cohorte."},
+          {"title": "Vous êtes menacé d'expulsion", "headingId": "h-expulsion", "slug": "expulsion", "content": "Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum."},
+          {"title": "Vous êtes sans abri", "headingId": "h-sans-abri", "slug": "sans-abri", "content": "Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum."},
+          {"title": "Vous êtes dans une structure d’hébergement depuis plus de 18 mois", "headingId": "h-structure-hebergement", "slug": "structure-hebergement", "content": "Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum."},
+          {"title": "Vous êtes victime de violences familiales", "headingId": "h-violences-familiales", "slug": "violences-familiales", "content": "Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum."},
+          {"title": "Vous êtes assistante maternelle", "headingId": "h-assistante-maternelle", "slug": "assistante-maternelle", "content": "Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum."}
+        ]
+      }
+    }
+  ]
+}
