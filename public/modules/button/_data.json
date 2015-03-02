@@ -1,7 +1,13 @@
 {
   "index": {
     "defaults": {
+      "href": "#",
       "text": "Texte"
+    },
+    "action": {
+      "href": "#",
+      "text": "Texte",
+      "modifiers": "button-action"
     }
   }
 }
