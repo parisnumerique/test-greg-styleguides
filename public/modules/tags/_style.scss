@@ -6,7 +6,11 @@
 
   li {
     float: left;
+    .tag:hover {
+      color: $color-primary;
+    }
   }
+
 
   .separator {
     margin: 0 .2em;
