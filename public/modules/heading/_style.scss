@@ -2,10 +2,19 @@
   border-left: 6px solid $color-tertiary;
   overflow: auto;
   padding: 20px 10px 20px 30px;
+
+  /* modifiers */
+  &.white {
+    .heading-title {color: $white;}
+    .heading-links > a {
+      border-bottom-color: $white;
+      color: $white;
+    }
+  }
 }
 
 .heading-title {
-  color: #333333;
+  color: $gray51;
   font-size: 34px;
   font-weight: 700;
   float: left;
@@ -18,8 +27,8 @@
   font-size: 15px;
 
   > a {
-    border-bottom: 1px solid #000;
-    color: #000;
+    border-bottom: 1px solid $gray153;
+    color: $gray77;
     display: inline-block;
     line-height: 20px;
     text-decoration: none;

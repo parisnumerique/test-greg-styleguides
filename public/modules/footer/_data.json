@@ -3,13 +3,13 @@
     "defaults": {
       "items": [
         {"href": "#", "text": "Visit Paris", "modifiers": "footer-link-em"},
-        {"href": "#", "text": "FAQ", "modifiers": ""},
-        {"href": "#", "text": "Newsletter", "modifiers": ""},
-        {"href": "#", "text": "Contact", "modifiers": ""},
-        {"href": "#", "text": "Presse", "modifiers": ""},
-        {"href": "#", "text": "Mentions légales", "modifiers": ""},
-        {"href": "#", "text": "Crédits", "modifiers": ""},
-        {"href": "#", "text": "Accessibilité", "modifiers": ""}
+        {"href": "#", "text": "FAQ"},
+        {"href": "#", "text": "Newsletter"},
+        {"href": "#", "text": "Contact"},
+        {"href": "#", "text": "Presse"},
+        {"href": "#", "text": "Mentions légales"},
+        {"href": "#", "text": "Crédits"},
+        {"href": "#", "text": "Accessibilité"}
       ]
     }
   }
