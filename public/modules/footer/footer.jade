@@ -1,0 +1,9 @@
+mixin footer(opts)
+  .footer
+    .footer-wrapper
+      a.footer-logo(href="#")
+        img(src="mairie-de-paris.png")
+      ul.footer-links
+        - each item in opts.items
+          li
+            a(href=item.href class=item.modifiers)= item.text
