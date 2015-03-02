@@ -5,7 +5,18 @@
     },
     "with_link": {
       "title": "Intertitre",
-      "link": "Lien"
+      "link": {
+        "href": "#",
+        "text": "Lien"
+      }
+    },
+    "white": {
+      "title": "Intertitre",
+      "link": {
+        "href": "#",
+        "text": "Lien"
+      },
+      "modifiers": "white"
     }
   }
 }

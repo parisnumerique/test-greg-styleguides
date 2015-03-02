@@ -2,13 +2,8 @@ include ../heading/heading
 
 mixin municipal-team(opts)
   .municipal-team
-    +heading({title: 'La Maire et ses adjoints', link: 'L’Hôtel de ville'})
+    +heading(opts.heading)
     .municipal-team-content
-      img.municipal-team-img(src='image.jpg', alt='maire et adjoints')
-      p.municipal-team-subtitle.
-        Maecenas sed diam eget risus varius blandit sit amet non magna.
-      p.municipal-team-text.
-        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-        Donec id elit non mi porta gravida at eget metus.
-        Nullam id dolor id nibh ultricies vehicula ut id elit.
-        Maecenas sed diam eget risus varius blandit sit amet non magna.
+      img.municipal-team-img(src=opts.img.src alt=opts.img.alt)
+      p.municipal-team-intro= opts.intro
+      p.municipal-team-text= opts.text
