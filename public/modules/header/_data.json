@@ -1,0 +1,29 @@
+{
+  "index": {
+    "defaults": {
+      "title": "Paris",
+      "languages": [
+        {"abbr": "fr", "href": "/fr"},
+        {"abbr": "en", "href": "/en"},
+        {"abbr": "es", "href": "/es"}
+      ],
+      "active_language": "fr",
+      "search": {"visible": true},
+      "marker": {"visible": true},
+      "items": [
+        {"href": "#", "text": "Services et infos pratiques"},
+        {"href": "#", "text": "L'Hôtel de ville"},
+        {"href": "#", "text": "Actualités"}
+      ],
+      "participate" : {
+        "visible": true,
+        "front": "Participez !",
+        "back": "C'est à vous !"
+      },
+      "account" : {
+        "visible": true,
+        "text": "Mon compte"
+      }
+    }
+  }
+}

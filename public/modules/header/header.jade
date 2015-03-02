@@ -1,0 +1,28 @@
+mixin header(opts)
+  header
+    .inner
+      a#logo(href='/')
+      .entry
+        h1= opts.title
+        nav.languages
+          ul
+            each lang in opts.languages
+              li(class=" #{(lang.abbr === opts.active_language) ? 'active' : ''} ")
+                a(href="#{lang.href}")= lang.abbr
+    .right
+      .icons.item
+        if opts.search.visible
+          span.fixed_display_searchbox.icon-search
+        if opts.marker.visible
+          span.fixed_display_around_me.icon-marker
+      nav.item
+        each item in opts.items
+          a(href='#{item.href}')= item.text
+      .menu.item
+        if opts.participate.visible
+          a.participate(href='#')
+            span.front= opts.participate.front
+            span.back= opts.participate.back
+        span.display_account
+          span.icon.icon-avatar
+          span.label= opts.account.text
