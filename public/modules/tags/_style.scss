@@ -5,8 +5,8 @@
 
   li {
     float: left;
-    a.tag:hover {
-      color: $pink;
+    .tag:hover {
+      color: $color-primary;
     }
   }
 
