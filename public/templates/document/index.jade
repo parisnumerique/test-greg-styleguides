@@ -2,6 +2,7 @@ extends ../../layouts/left-col/left-col
 
 include ../../modules/button/button
 include ../../modules/anchors-list/anchors-list
+include ../../components/buttons/buttons
 include ../../components/text/text
 include ../../components/links/links
 include ../../components/accordion/accordion
@@ -17,6 +18,28 @@ block aside
 block content
   +text
     p.intro Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
+
+  +buttons({
+    "title": "Les démarches",
+    "items": [
+      {
+      "href": "#",
+      "text": "Estimer mes droits"
+      },
+      {
+      "href": "#",
+      "text": "Documents à fournir"
+      },
+      {
+      "href": "#",
+      "text": "Transmettre mon dossier"
+      },
+      {
+      "href": "#",
+      "text": "Renouveler ma demande"
+      }
+    ]
+  })
 
   +text
     h2 Est-ce que j’y ai droit ?
