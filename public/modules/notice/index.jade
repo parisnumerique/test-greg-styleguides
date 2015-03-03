@@ -2,62 +2,59 @@ include notice
 
 h2 Standard
 +notice(defaults)
-  p Donec ullamcorper nulla non metus auctor fringilla.
+
+// You can also pass the block as a parameter, named "block"
+//+notice({"block": "Texte de la notice"})
 
 h2 Fermable
-+notice(defaults)
-  p.notice-closable Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-white"})
-  p.notice-closable-black Donec ullamcorper nulla non metus auctor fringilla.
++notice(closable)
++notice({"modifiers": "blue", "closable": true})
+  | Texte de la notice
++notice({"modifiers": "white", "closable": true})
+  | Texte de la notice
 
 h2 Contenant un lien
-+notice({"modifiers": "notice-blue"})
-  a(href='#') Donec ullamcorper nulla non metus auctor fringilla.
-
-h2 Contenant un lien + fermable
-+notice({"modifiers": "notice-blue"})
-  a(href='#').notice-closable Donec ullamcorper nulla non metus auctor fringilla.
++notice({})
+  a(href='#') Texte de la notice
 
 h2 Avec une icône alert
-+notice(defaults)
-  p.notice-alert Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-white"})
-  p.notice-alert-black Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "alert"})
+  | Texte de la notice
++notice({"modifiers": "alert white"})
+  | Texte de la notice
 
 h2 Avec une icône au choix
-+notice({"modifiers": "notice-white"})
-  p
-    i.icon-bus
-    | Donec ullamcorper nulla non metus auctor fringilla.
++notice({})
+  i.icon-bus
+  | Texte de la notice
++notice({"modifiers": "white"})
+  i.icon-bus
+  | Texte de la notice
 
 h2 Couleurs de fond
-+notice({"modifiers": "notice-blue"})
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-blue"})
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-orange", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-yellow", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-white", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "blue"})
+  | Texte de la notice
++notice({"modifiers": "orange"})
+  | Texte de la notice
++notice({"modifiers": "yellow"})
+  | Texte de la notice
++notice({"modifiers": "white"})
+  | Texte de la notice
 
 h2 Couleurs de fond + transparence
-+notice({"modifiers": "notice-black-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-blue-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-orange-transparent", "text": "Donec ullamcorper nulla non oranges auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-yellow-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-white-transparent", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "transparent"})
+  | Texte de la notice
++notice({"modifiers": "blue transparent"})
+  | Texte de la notice
++notice({"modifiers": "orange transparent"})
+  | Texte de la notice
++notice({"modifiers": "yellow transparent"})
+  | Texte de la notice
++notice({"modifiers": "white transparent"})
+  | Texte de la notice
 
 h2 Couleurs + image de fond
-+notice({"modifiers": "notice-orange notice-img", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-blue notice-img", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
-+notice({"modifiers": "notice-orange notice-img", "text": "Donec ullamcorper nulla non metus auctor fringilla." })
-  p Donec ullamcorper nulla non metus auctor fringilla.
++notice({"modifiers": "orange buildings"})
+  | Texte de la notice
++notice({"modifiers": "blue buildings"})
+  | Texte de la notice

@@ -1,7 +1,11 @@
 mixin notice(opts)
   .notice(class= "#{opts.modifiers}")
+    if opts.closable
+      .close
     if block
-      block
-    //- p.notice-text= opts.text
-    //- if (opts.link)
-    //-   a.notice-link(href="#")=opts.link
+      p.notice-content
+        block
+    else if opts.block
+      p.notice-content= opts.block
+    else
+      p.notice-content notice
