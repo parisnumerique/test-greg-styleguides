@@ -1,0 +1,9 @@
+mixin newsletter(opts)
+  .newsletter
+    .inner
+      h2= opts.titre
+      p= opts.text
+      form(action="#")
+        input(type="text" placeholder="#{opts.placeholder}")
+        button.button(type="submit")= opts.submit
+      a(href="#{opts.otherNewsletters.url}")= opts.otherNewsletters.text
