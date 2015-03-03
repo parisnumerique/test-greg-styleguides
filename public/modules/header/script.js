@@ -16,21 +16,22 @@ Paris.header = (function(){
 
     function init(){
       initOptions();
+      PubSub.subscribe('scoll:floatingLine:down', fixHeader);
+      PubSub.subscribe('scoll:floatingLine:up', unfixHeader);
 
-      PubSub.subscribe('scroll:fixed', fixHeader);
-      displaySearchIcons();
-    }
-
-    function displaySearchIcons() {
       if($('.search').length) { return ;}
       fixHeader();
     }
 
-    function fixHeader(){
+    function fixHeader() {
       $('body').addClass('fixed_nav');
     }
 
-    function initOptions(){
+    function unfixHeader() {
+      $('body').removeClass('fixed_nav');
+    }
+
+    function initOptions() {
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
