@@ -1,0 +1,12 @@
+mixin pictures-gallery-ugc(opts)
+  .pictures-gallery
+    .header-cell
+      .pictures-gallery-title= opts.title
+      a(href='#').pictures-gallery-hashtag= opts.hashtag
+      a(href='#').pictures-gallery-hashtag= opts.hashtag
+    .pictures-gallery-content
+      each item in opts.items
+        a.pictures-gallery-image(style='background-image: url(#{item.image});')
+          .overlay
+            .pictures-gallery-text(href='#')=item.text
+
