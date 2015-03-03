@@ -1,0 +1,36 @@
+.newsletter {
+  max-width: 360px;
+  padding-left: 30px;
+  background-color: $color-secondary;
+  color: #FFF;
+
+  h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .inner {
+    padding: 10px 0;
+  }
+
+  & .inner > p,
+  & .inner > a {
+    font-size: 14px;
+  }
+
+  .button {
+    height: 45px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    line-height: 43px;
+    border: none;
+    text-transform: uppercase;
+  }
+
+  input {
+    color: $color-secondary;
+  }
+
+  a {
+    color: #FFF;
+  }
+}
