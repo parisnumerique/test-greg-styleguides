@@ -1,5 +1,13 @@
 include header
 include ../../helpers/code
 
-h2 Header
 +header(defaults)
+
+p(style="margin-top: 120px").
+  The header behaves depending on the scroll position <br>
+  It is fixed to the top if there's no `.notice.top` <br>
+  and then the nav changes when the scroll pass the
+  floating line
+
+// add space to test scroll behavior
+.space(style="min-height: 1000px")

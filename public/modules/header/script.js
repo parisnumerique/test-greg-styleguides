@@ -16,19 +16,36 @@ Paris.header = (function(){
 
     function init(){
       initOptions();
-      PubSub.subscribe('scoll:floatingLine:down', fixHeader);
-      PubSub.subscribe('scoll:floatingLine:up', unfixHeader);
+      PubSub.subscribe('scoll:floatingLine:down', fixNav);
+      PubSub.subscribe('scoll:floatingLine:up', unfixNav);
 
-      if($('.search').length) { return ;}
-      fixHeader();
+      PubSub.subscribe('scoll:notice:down', fixHeader);
+      PubSub.subscribe('scoll:notice:up', unfixHeader);
+
+      if(!$('.notice.top').length) {
+        fixHeader();
+      }
+
+      if(!$('.search').length) {
+        fixNav();
+      }
+
     }
 
-    function fixHeader() {
+    function fixNav() {
       $('body').addClass('fixed_nav');
     }
 
-    function unfixHeader() {
+    function unfixNav() {
       $('body').removeClass('fixed_nav');
+    }
+
+    function fixHeader() {
+      $el.addClass('fixed');
+    }
+
+    function unfixHeader() {
+      $el.removeClass('fixed');
     }
 
     function initOptions() {
