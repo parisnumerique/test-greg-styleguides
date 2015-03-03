@@ -3,7 +3,7 @@ header {
   width: 100%;
   height: 80px;
   background: $color-primary;
-  position: fixed;
+  position: relative;
   z-index: 200;
   left: 0px;
   transition: 0.2s ease height, 0.5s ease left;
@@ -304,4 +304,10 @@ header {
   -moz-transition: 0.1s ease opacity 0s;
   -o-transition: 0.1s ease opacity 0s;
   -ms-transition: 0.1s ease opacity 0s;
+}
+
+
+
+header.fixed + .layout-content {
+  margin-top: 80px;
 }
