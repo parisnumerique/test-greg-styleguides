@@ -4,9 +4,10 @@ include ../notice/notice
 mixin quick-access(opts)
   .quick-access(style='background-image: url(#{opts.background});')
     .quick-access-wrapper
-      input(type="text")
-      button(type="submit")
-        i.icon.icon-search
+      .quick-access-search
+        input.quick-access-search-field(type="text" placeholder=opts.search.input.placeholder)
+        button.quick-access-search-submit(type="submit")
+          i.icon.icon-search
       a.button.around-me(href="#")
         i.icon.icon-marker
         | Autour de moi

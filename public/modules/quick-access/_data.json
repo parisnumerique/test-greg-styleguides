@@ -2,6 +2,11 @@
   "index": {
     "defaults": {
       "background": "background.jpg",
+      "search": {
+        "input": {
+          "placeholder": "Rechercher un service, une information..."
+        }
+      },
       "items": [
         {
           "href": "#",
