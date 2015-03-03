@@ -1,11 +1,36 @@
 .news-card {
-  color: #000;
-  display: inline-block;
+  border-radius: 5px;
+  color: $black;
+  display: block;
+  float: left;
+  overflow: hidden;
   text-align: center;
   text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+  transform: translateY(0);
 
   & + .news-card {
     margin-left: 25px;
+  }
+
+  &:hover {
+    color: $white;
+    transform: translateY(-20px);
+
+    .news-card-image {
+      border-radius: 5px 5px 0 0;
+    }
+
+    .news-card-content {
+      &:before {
+        background-color: $color-secondary;
+        height: 100%;
+      }
+    }
+
+    .news-card-category {
+      color: $white;
+    }
   }
 }
 
@@ -14,16 +39,34 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 5px;
   height: 180px;
   width: 350px;
+}
+
+.news-card-content {
+  padding-bottom: 20px;
+  position: relative;
+
+  &:before {
+    background-color: $white;
+    content: "";
+    height: 0;
+    display: block;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+  }
 }
 
 .news-card-category {
   color: $color-secondary;
   font-size: 14px;
   font-weight: 500;
-  margin: 15px auto 5px;
+  margin: 0 auto 5px;
   max-width: 310px;
+  padding-top: 15px;
+  position: relative;
 }
 
 .news-card-title {
@@ -31,4 +74,5 @@
   font-weight: 700;
   margin: 0 auto;
   max-width: 290px;
+  position: relative;
 }
