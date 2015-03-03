@@ -1,0 +1,11 @@
+mixin notice(opts)
+  .notice(class= "#{opts.modifiers}")
+    if opts.closable
+      .close
+    if block
+      p.notice-content
+        block
+    else if opts.block
+      p.notice-content= opts.block
+    else
+      p.notice-content notice

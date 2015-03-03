@@ -16,7 +16,7 @@
     "server"      : "harp server",
     "start"       : "npm run server & npm run watchify & npm run browsersync",
     "compile"     : "harp compile",
-    "postcompile" : "rm -r www/javascript/* && browserify public/javascript/main.js -o www/javascript/paris.js"
+    "postcompile" : "browserify public/javascript/main.js -o www/javascript/paris.js"
   },
   "repository": {
     "type" : "git",

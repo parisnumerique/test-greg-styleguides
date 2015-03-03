@@ -1,9 +1,12 @@
+// Grid variables
+$grid-width: 1100px;
+
 // Libraries
 @import "../../node_modules/susy/sass/susy";
 $susy: (
   columns: 16,
   column-width: 50,
-  container: 1100px,
+  container: $grid-width,
   gutters: .4,
   gutter-position: after
 );
@@ -26,6 +29,7 @@ $susy: (
 @import "../modules/jumbotron/_style";
 @import "../modules/municipal-team/_style";
 @import "../modules/news-card/_style";
+@import "../modules/notice/_style";
 @import "../modules/que-faire/_style";
 @import "../modules/sections-list/_style";
 @import "../modules/tags/_style";
