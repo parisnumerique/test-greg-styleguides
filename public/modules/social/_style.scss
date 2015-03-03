@@ -1,0 +1,36 @@
+.social {
+  max-width: 360px;
+  padding-left: 30px;
+  background-color: $color-secondary;
+  color: #FFF;
+  overflow: hidden;
+
+  .item {
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .icon,
+  .count {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .subscribe{
+    display: block;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .inner {
+    padding: 10px 0;
+  }
+
+
+}
