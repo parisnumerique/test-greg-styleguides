@@ -1,0 +1,21 @@
+mixin jecoute(opts)
+  .jecoute
+    .inner
+      h2= opts.text
+
+      div.items
+        each item in opts.items
+          div.item
+            div.timer
+              span.start= item.question.time
+              span.end= item.answer.time
+              div.bar
+                div.avancement
+            div.question-answer
+              div.question
+                div.user= item.question.user
+                div.text= item.question.text
+              div.answer
+                div.user= item.answer.user
+                div.text= item.answer.text
+      button.button Posez votre question !
