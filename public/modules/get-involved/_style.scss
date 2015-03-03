@@ -1,28 +1,21 @@
 .get-involved {
-  background-color: $gray242;
-  min-height: 420px;
-  overflow: auto;
-  padding: 40px 0 55px;
-  width: 100%; 
 }
 
 .get-involved-content {
-  padding:0 34px;
+  @include container;
 }
 
 .get-involved-card {
+  @include span(8);
   background-position: 50% 50%;
   background-size: cover;
   border-radius: 5px;
   display: inline-block;
   height: 200px;
-  margin :45px 20px 0 0; 
-  max-width: 540px;
   text-decoration: none;
-  width: 100%;
 
   &:last-child {
-    margin-right: 0;
+    @include last;
   }
 }
 

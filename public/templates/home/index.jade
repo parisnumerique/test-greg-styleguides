@@ -1,6 +1,7 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/footer/footer
+include ../../modules/get-involved/get-involved
 include ../../modules/heading/heading
 include ../../modules/jumbotron/jumbotron
 include ../../modules/municipal-team/municipal-team
@@ -125,11 +126,19 @@ append content
 
 append content
   .layout-content.gray-background
-    .layout-wrapper
-      +heading({
+    +get-involved({
+      "heading": {
         "title": "Participez !",
-        "link": "Accéder à l’espace participatif"
-      })
+        "link": {
+          "href": "#",
+          "text": "Accéder à l’espace participatif"
+        }
+      },
+      "items": [
+        {"href": "#", "image": "../../modules/get-involved/get-involved-img1.png", "text": "Votez pour le budget participatif"},
+        {"href": "#", "image": "../../modules/get-involved/get-involved-img2.png", "text": "E-pétition, prenez la main"}
+      ]
+    })
 
 append content
   .layout-right-col

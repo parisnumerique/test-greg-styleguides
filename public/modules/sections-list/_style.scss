@@ -3,7 +3,7 @@
 }
 
 .sections-list-button {
-  @include gallery(4 of 16);
+  @include gallery(4);
   background-color: $gray242;
   border: none;
   border-radius: 5px;
