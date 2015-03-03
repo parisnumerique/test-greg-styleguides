@@ -8,7 +8,7 @@ $susy: (
   column-width: 50,
   container: $grid-width,
   gutters: .4,
-  gutter-position: before
+  gutter-position: after
 );
 
 // Base
@@ -30,6 +30,7 @@ $susy: (
 @import "../modules/jumbotron/_style";
 @import "../modules/municipal-team/_style";
 @import "../modules/news-card/_style";
+@import "../modules/news-list/_style";
 @import "../modules/notice/_style";
 @import "../modules/que-faire/_style";
 @import "../modules/sections-list/_style";
