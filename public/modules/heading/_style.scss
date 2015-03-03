@@ -1,7 +1,8 @@
 .heading {
   border-left: 6px solid $color-tertiary;
   overflow: auto;
-  padding: 20px 10px 20px 30px;
+  margin-bottom: 40px;
+  padding: 20px 10px 20px 26px;
 
   /* modifiers */
   &.white {

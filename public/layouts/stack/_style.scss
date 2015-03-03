@@ -21,6 +21,11 @@
   .layout-wrapper {
     margin: 0 auto;
     width: 1100px;
+
+    .heading {
+      left: -32px;
+      position: relative;
+    }
   }
 
 }
