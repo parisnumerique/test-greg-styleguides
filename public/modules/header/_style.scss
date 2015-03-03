@@ -14,9 +14,10 @@ header {
     top: 0px;
   }
 
-  .inner {
-    display: block;
-    @include container;
+  .header-wrapper {
+    height: 80px;
+    left: -126.5px;
+    position: relative;
   }
 
   .item {
