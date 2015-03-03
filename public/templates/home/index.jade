@@ -6,7 +6,7 @@ include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/jumbotron/jumbotron
 include ../../modules/municipal-team/municipal-team
-include ../../modules/news-card/news-card
+include ../../modules/news-list/news-list
 include ../../modules/notice/notice
 include ../../modules/que-faire/que-faire
 include ../../modules/sections-list/sections-list
@@ -101,20 +101,27 @@ append content
         "title": "En ce moment",
         "link": "Voir toutes les actualités"
       })
-      +news-card({
-        "image": "../../modules/news-card/image.jpg",
-        "category": "Mobilité",
-        "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
-      })
-      +news-card({
-        "image": "../../modules/news-card/image.jpg",
-        "category": "Tourisme",
-        "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
-      })
-      +news-card({
-        "image": "../../modules/news-card/image.jpg",
-        "category": "Environnements",
-        "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+      +news-list({
+        "items": [
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Culture et patrimoine",
+            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Environnement",
+            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+          }
+        ]
       })
 
 append content
