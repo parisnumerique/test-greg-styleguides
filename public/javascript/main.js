@@ -9,3 +9,4 @@ require('../components/accordion/script');
 
 // load our modules
 require('../modules/header/script');
+require('../modules/jecoute/script');
