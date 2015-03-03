@@ -1,0 +1,22 @@
+include ../button/button
+include ../notice/notice
+
+mixin quick-access(opts)
+  .quick-access(style='background-image: url(#{opts.background});')
+    .quick-access-wrapper
+      input(type="text")
+      button(type="submit")
+        i.icon.icon-search
+      a.button.around-me(href="#")
+        i.icon.icon-marker
+        | Autour de moi
+      ul.quick-access-buttons
+        each item in opts.items
+          li
+            +button({
+              "href": item.href,
+              "text": item.text,
+              "modifiers": "secondary"
+            })
+    if opts.notice
+      +notice(opts.notice)
