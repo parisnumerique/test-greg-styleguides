@@ -16,6 +16,7 @@ header {
 
   .inner {
     display: block;
+    @include container;
   }
 
   .item {
