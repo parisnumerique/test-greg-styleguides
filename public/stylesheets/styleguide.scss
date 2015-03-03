@@ -1,3 +1,13 @@
+// Libraries
+@import "../../node_modules/susy/sass/susy";
+$susy: (
+  columns: 16,
+  column-width: 50,
+  container: 1100px,
+  gutters: .4,
+  gutter-position: before
+);
+
 // Base
 @import "../base/_colors";
 @import "../base/_defaults";
@@ -28,6 +38,7 @@
 @import "../components/buttons/_style";
 @import "../components/image/_style";
 @import "../components/links/_style";
+@import "../components/pagination/_style";
 @import "../components/text/_style";
 
 // Layouts

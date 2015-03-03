@@ -54,15 +54,15 @@ lsg.highlight = function () {
 lsg.location = function() {
   var $sgViewport = $('#sg-viewport');
   if(document.location.hash){
-    $sgViewport.attr('src', document.location.hash);
+    $sgViewport.attr('src', document.location.hash.slice(1));
   }
   else {
     $sgViewport.attr('src', 'base/index.html');
   }
 
   $sgViewport.on('load', function () {
-    var src = $sgViewport.attr('src');
-    if(src === 'base/index.html') { return ;}
+    var src = this.contentDocument.location.pathname;
+    if(src === '/base/index.html') { return ;}
     document.location.hash = src;
   });
 };
