@@ -2,12 +2,21 @@ extends ../../layouts/stack/stack
 
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
+include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/jumbotron/jumbotron
 include ../../modules/municipal-team/municipal-team
 include ../../modules/news-card/news-card
+include ../../modules/notice/notice
 include ../../modules/que-faire/que-faire
 include ../../modules/sections-list/sections-list
+
+append content
+  +notice({"modifiers": "top blue buildings", "closable": true})
+    a(href="#") Visiting Paris ? Plan your trip
+
+append content
+  +header(public.modules.header._data.index.defaults)
 
 append content
   .layout-content
