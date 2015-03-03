@@ -5,12 +5,16 @@ include ../../modules/get-involved/get-involved
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/jumbotron/jumbotron
+include ../../modules/jecoute/jecoute
 include ../../modules/municipal-team/municipal-team
 include ../../modules/news-list/news-list
 include ../../modules/notice/notice
+include ../../modules/newsletter/newsletter
 include ../../modules/que-faire/que-faire
 include ../../modules/quick-access/quick-access
+include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
 include ../../modules/sections-list/sections-list
+include ../../modules/social/social
 
 append content
   +notice({"modifiers": "top blue buildings", "closable": true})
@@ -214,8 +218,40 @@ append content
         +heading({
           "title": "Vu par les Parisiens"
         })
+        +pictures-gallery-ugc({
+          "title": "Hashtags de la semaine :",
+          "hashtag": "#hashtag",
+          "items": [
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
+              "text": "@texte"
+            }
+          ]
+        })
       aside.layout-aside.color-secondary-background
-        h1 aside
+        +newsletter(public.modules.newsletter._data.index.defaults)
+        +jecoute(public.modules.jecoute._data.index.defaults)
+        +social(public.modules.social._data.index.defaults)
 
 append content
   .layout-content

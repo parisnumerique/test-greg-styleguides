@@ -15,7 +15,8 @@
     padding: 40px 0 40px 20px;
     position: relative;
     text-align: left;
-    width: 280px;
+    vertical-align: top;
+    width: 350px;
 
     &:after {
       background-color: $gray242;
@@ -37,8 +38,8 @@
 
   .layout-content {
     display: table-cell;
-    padding: 40px 50px 40px 0;
-    width: 820px;
+    padding: 40px 30px 40px 0;
+    width: 750px;
   }
 
 }
