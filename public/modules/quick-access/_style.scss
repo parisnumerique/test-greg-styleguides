@@ -14,26 +14,33 @@
 
 .quick-access-search {
   display: inline-block;
-  margin-right: 10px;
+
+  > input,
+  > button {
+    display: block;
+    float: left;
+    height: 80px;
+    line-height: 80px;
+  }
 }
 
 input.quick-access-search-field {
+  @include input-color-placeholder($gray77);
   border-radius: 5px 0 0 5px;
-  display: inline-block;
-  height: 80px;
-  line-height: 80px;
+  font-size: 18px;
+  font-weight: 300;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   width: 530px;
 }
 
 button.quick-access-search-submit {
   background-color: $gray242;
+  color: $gray77;
   border: 0;
   border-radius: 0 5px 5px 0;
-  display: inline-block;
-  height: 80px;
-  line-height: 80px;
+  font-size: 24px;
+  margin-right: 10px;
   padding: 0;
   width: 78px;
 }
