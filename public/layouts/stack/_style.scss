@@ -22,7 +22,8 @@
     margin: 0 auto;
     width: 1100px;
 
-    .heading {
+    .heading,
+    &.layout-outside {
       left: -32px;
       position: relative;
     }
