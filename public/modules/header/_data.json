@@ -17,11 +17,13 @@
       ],
       "participate" : {
         "visible": true,
+        "url": "#",
         "front": "Participez !",
         "back": "C'est à vous !"
       },
       "account" : {
         "visible": true,
+        "url": "#",
         "text": "Mon compte"
       }
     }
