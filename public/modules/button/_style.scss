@@ -24,15 +24,15 @@
     height: 100%;
     left: 0;
     position: absolute;
-    top: 100%;
-    transition: top 0.15s ease-in-out;
-    width: 100%;
+    top: 0;
+    transition: width 0.35s ease;
+    width: 0;
     z-index: -1;
   }
 
   &:hover {
     &:after {
-      top: 0;
+      width: 100%;
     }
   }
 
@@ -40,6 +40,7 @@
   &.secondary {
     background-color: $color-secondary;
     &:after {background-color: darken($color-secondary, 10%);}
+    padding: 15px;
   }
 
   &.around-me {

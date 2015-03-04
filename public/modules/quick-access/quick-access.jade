@@ -5,12 +5,13 @@ mixin quick-access(opts)
   .quick-access(style='background-image: url(#{opts.background});')
     .quick-access-wrapper
       .quick-access-search
-        input.quick-access-search-field(type="text" placeholder=opts.search.input.placeholder)
+        input#quick-search.quick-access-search-field(type="text" placeholder=opts.search.input.placeholder title=opts.search.input.placeholder)
         button.quick-access-search-submit(type="submit")
+          span= opts.search.submit.text
           i.icon.icon-search
         a.button.around-me(href="#")
           i.icon.icon-marker
-          | Autour de moi
+          = opts.search.around.text
       ul.quick-access-buttons
         each item in opts.items
           li

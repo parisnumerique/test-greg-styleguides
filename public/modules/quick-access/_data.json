@@ -5,6 +5,12 @@
       "search": {
         "input": {
           "placeholder": "Rechercher un service, une information..."
+        },
+        "submit": {
+          "text": "Rechercher"
+        },
+        "around": {
+          "text": "Autour de moi"
         }
       },
       "items": [

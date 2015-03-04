@@ -4,6 +4,6 @@ mixin newsletter(opts)
       h2= opts.titre
       p= opts.text
       form(action="#")
-        input(type="text" placeholder="#{opts.placeholder}")
-        button.button(type="submit")= opts.submit
+        input(type="text" placeholder=opts.placeholder title=opts.placeholder id=opts.inputId)
+        button.button.button-action(type="submit")= opts.submit
       a(href="#{opts.otherNewsletters.url}")= opts.otherNewsletters.text

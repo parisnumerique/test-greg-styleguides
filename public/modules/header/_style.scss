@@ -34,6 +34,10 @@ header {
     background: url('../modules/header/nef.svg') no-repeat center center;
     position: relative;
     text-align: center;
+
+    > span {
+      @include hidden-accessibly;
+    }
   }
 
   .entry{
@@ -47,7 +51,7 @@ header {
     h1 {
       position: relative;
       top: 5px;
-      text-indent: -800px;
+      text-indent: -9999px;
       background: url('../modules/header/paris.svg') no-repeat center center;
     }
 
