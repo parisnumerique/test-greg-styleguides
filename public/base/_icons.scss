@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?jmamtc');
-  src:url('../fonts/paris-icons.eot?#iefixjmamtc') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?jmamtc') format('woff'),
-    url('../fonts/paris-icons.ttf?jmamtc') format('truetype'),
-    url('../fonts/paris-icons.svg?jmamtc#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?-6hs0c8');
+  src:url('../fonts/paris-icons.eot?#iefix-6hs0c8') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?-6hs0c8') format('woff'),
+    url('../fonts/paris-icons.ttf?-6hs0c8') format('truetype'),
+    url('../fonts/paris-icons.svg?-6hs0c8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -79,6 +79,11 @@
 %icon-avatar,
 .icon-avatar:before {
   content: "\e61a";
+}
+
+%icon-bell,
+.icon-bell:before {
+  content: "\e61c";
 }
 
 
