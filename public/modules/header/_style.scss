@@ -191,6 +191,10 @@ header {
     bottom: 35px;
     background: #FFF;
     transition: 0.3s ease width;
+
+    .fixed_nav & {
+      bottom: 25px;
+    }
   }
 
   .right nav a:hover:after {
