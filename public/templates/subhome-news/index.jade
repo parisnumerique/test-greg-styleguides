@@ -50,13 +50,13 @@ append content
         "title": "Aujourd'hui"
       })
       +news-list({
-        "mode": "large-first-child",
+        "modifiers": "large-first-child",
         "items": [
           {
             "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+            "image": "large-news-1.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
           },
           {
             "href": "#",
@@ -93,13 +93,13 @@ append content
         "title": "Hier"
       })
       +news-list({
-        "mode": "large-first-child",
+        "modifiers": "large-first-child secondary",
         "items": [
           {
             "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+            "image": "large-news-2.jpg",
+            "category": "International",
+            "title": "Visite de John Kerry à l'Hôtel de Ville de Paris"
           },
           {
             "href": "#",
@@ -235,17 +235,19 @@ append content
 
 append content
   .layout-content
-    //+pagination({
-    //  "pages": [
-    //    {"number": 1, "url": "/1"},
-    //    {"number": 2, "url": "/2"},
-    //    {"number": 3, "url": "/3"},
-    //    {"number": 4, "url": "/4"},
-    //    {"number": 5, "url": "/5"}
-    //  ],
-    //  "current": 1,
-    //  "totalPages": 10
-    //})
+    .layout-wrapper
+      | pagination
+      //+pagination({
+      //  "pages": [
+      //    {"number": 1, "url": "/1"},
+      //    {"number": 2, "url": "/2"},
+      //    {"number": 3, "url": "/3"},
+      //    {"number": 4, "url": "/4"},
+      //    {"number": 5, "url": "/5"}
+      //  ],
+      //  "current": 1,
+      //  "totalPages": 10
+      //})
 
 append content
   .layout-content
