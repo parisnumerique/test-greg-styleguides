@@ -10,7 +10,7 @@ include ../../modules/jumbotron/jumbotron
 include ../../modules/news-list/news-list
 include ../../modules/newsletter/newsletter
 include ../../modules/que-faire/que-faire
-//include ../../modules/pagination/pagination
+include ../../modules/pagination/pagination
 include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
 include ../../modules/search-push/search-push
 include ../../modules/social/social
@@ -236,18 +236,17 @@ append content
 append content
   .layout-content
     .layout-wrapper
-      | pagination
-      //+pagination({
-      //  "pages": [
-      //    {"number": 1, "url": "/1"},
-      //    {"number": 2, "url": "/2"},
-      //    {"number": 3, "url": "/3"},
-      //    {"number": 4, "url": "/4"},
-      //    {"number": 5, "url": "/5"}
-      //  ],
-      //  "current": 1,
-      //  "totalPages": 10
-      //})
+      +pagination({
+        "pages": [
+          {"number": 1, "url": "/1"},
+          {"number": 2, "url": "/2"},
+          {"number": 3, "url": "/3"},
+          {"number": 4, "url": "/4"},
+          {"number": 5, "url": "/5"}
+        ],
+        "current": 1,
+        "totalPages": 10
+      })
 
 append content
   .layout-content
