@@ -1,0 +1,139 @@
+.get-involved-list {
+  @include container;
+
+  .get-involved-column:first-child {
+    .get-involved-item:first-child {
+      @extend .get-involved-item.yellow;
+    }
+    .get-involved-item:nth-child(2) {
+      @extend .get-involved-item.red;
+    }
+    .get-involved-item:nth-child(3) {
+      @extend .get-involved-item.green;
+    }
+  }
+  .get-involved-column:nth-child(2) {
+    .get-involved-item:first-child {
+      @extend .get-involved-item.half-size;
+      @extend .get-involved-item.red;
+    }
+    .get-involved-item:nth-child(2) {
+      @extend .get-involved-item.light-blue;
+    }
+    .get-involved-item:nth-child(3) {
+      @extend .get-involved-item.blue;
+    }
+    .get-involved-item:nth-child(4) {
+      @extend .get-involved-item.yellow;
+    }
+  }
+  .get-involved-column:last-child {
+    .get-involved-item:first-child {
+      @extend .get-involved-item.green;
+    }
+    .get-involved-item:nth-child(2) {
+      @extend .get-involved-item.yellow;
+    }
+    .get-involved-item:nth-child(3) {
+      @extend .get-involved-item.light-blue;
+    }
+  }
+}
+
+.get-involved-column {
+  @include span(5);
+}
+
+.get-involved-item {
+  border-radius: 5px;
+  color: $blue3;
+  display: block;
+  min-height: 360px;
+  overflow: hidden;
+  padding: 20px 25px;
+  position: relative;
+
+  & + .get-involved-item {
+    margin-top: 25px;
+  }
+
+  &:after {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 305px;
+    position: absolute;
+    right: 15px;
+    width: 120px;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  // modifiers
+  &.half-size {
+    min-height: 200px;
+    &:after {
+      background-position: top;
+      bottom: inherit;
+      height: 200px;
+      top: 30px;
+    }
+  }
+  &.red {
+    background-color: $get-involved-red;
+    color: $white;
+    &:after {
+      background-image: url('../../modules/get-involved-list/yellow-hand.svg');
+    }
+  }
+  &.yellow {
+    background-color: $get-involved-yellow;
+    &:after {
+      background-image: url('../../modules/get-involved-list/blue-hand.svg');
+    }
+  }
+  &.green {
+    background-color: $get-involved-green;
+    color: $white;
+    &:after {
+      background-image: url('../../modules/get-involved-list/yellow-hand.svg');
+    }
+  }
+  &.blue {
+    background-color: $get-involved-blue1;
+    color: $white;
+    &:after {
+      background-image: url('../../modules/get-involved-list/red-hand.svg');
+    }
+  }
+  &.light-blue {
+    background-color: $get-involved-blue2;
+    &:after {
+      background-image: url('../../modules/get-involved-list/green-hand.svg');
+    }
+  }
+
+  .get-involved-item-category {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  .get-involved-item-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  .get-involved-item-button {
+    position: absolute;
+    bottom: 20px;
+  }
+}
