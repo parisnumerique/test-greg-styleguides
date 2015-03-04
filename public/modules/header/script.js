@@ -16,8 +16,8 @@ Paris.header = (function(){
 
     function init(){
       initOptions();
-      PubSub.subscribe('scoll:floatingLine:down', fixNav);
-      PubSub.subscribe('scoll:floatingLine:up', unfixNav);
+      PubSub.subscribe('scoll:search:down', fixNav);
+      PubSub.subscribe('scoll:search:up', unfixNav);
 
       PubSub.subscribe('scoll:notice:down', fixHeader);
       PubSub.subscribe('scoll:notice:up', unfixHeader);
@@ -26,7 +26,7 @@ Paris.header = (function(){
         fixHeader();
       }
 
-      if(!$('.search').length) {
+      if(!$('#quick-search').length) {
         fixNav();
       }
 

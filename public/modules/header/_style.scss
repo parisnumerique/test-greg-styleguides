@@ -1,13 +1,20 @@
 header {
   display: block;
   width: 100%;
-  height: 80px;
+  height: 100px;
+  padding: 10px 0;
   background: $color-primary;
   position: relative;
   z-index: 200;
   left: 0px;
-  transition: 0.2s ease height, 0.5s ease left;
+  transition: 0.2s ease height, 0.2s ease padding, 0.5s ease left;
   overflow: hidden;
+
+  .fixed_nav & {
+    height: 80px;
+    padding: 0;
+  }
+
 
   &.fixed {
     position: fixed;
@@ -15,10 +22,16 @@ header {
   }
 
   .header-wrapper {
-    height: 80px;
+    height: 100px;
     left: -126.5px;
     position: relative;
+    transition: 0.2s ease height;
+    .fixed_nav & {
+      height: 80px;
+    }
   }
+
+
 
   .item {
     float: left;
@@ -39,6 +52,8 @@ header {
       @include hidden-accessibly;
     }
   }
+
+
 
   .entry{
     display: block;
@@ -70,12 +85,16 @@ header {
 
       li {
         float: left;
-        padding-right: 10px;
+        padding-right: 8px;
       }
 
       a {
         color: transparentize(#FFF, 0.4);
         text-decoration: none;
+
+        &:hover{
+          color: #FFF;
+        }
       }
 
       li.active a{
@@ -101,13 +120,17 @@ header {
 
     nav a {
       display: inline-block;
-      line-height: 80px;
+      line-height: 100px;
       font-size: 13px;
       color: #FFF;
       text-transform: uppercase;
       text-decoration: none;
       margin-left: 18px;
       position: relative;
+
+      .fixed_nav & {
+        line-height: 80px;
+      }
     }
   }
 
@@ -116,7 +139,7 @@ header {
     float: left;
     vertical-align: top;
     width: 130px;
-    height: 80px;
+    height: 100px;
     background: #BF2257;
     padding: 0 26px;
     box-sizing: border-box;
@@ -129,27 +152,32 @@ header {
     text-transform: uppercase;
     font-size: 13px;
     position: relative;
-    transition: 0.5s ease background, 0.2s ease padding-top;
-    -webkit-perspective: 1000;
+    transition: 0.5s ease background, 0.2s ease padding-top, 0.2s ease height;
     perspective: 1000;
+
+    .fixed_nav & {
+      height: 80px;
+    }
   }
+
+
 
   .right .participate:hover {
     background: #fae46a;
   }
   .participate:hover .front {
-    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .participate .front {
-    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
 
   .right .participate:hover .back {
-    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
   .right .participate .back {
-    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
     color: #de275d;
   }
 
@@ -160,13 +188,9 @@ header {
     width: 0%;
     position: absolute;
     left: 0px;
-    bottom: 25px;
+    bottom: 35px;
     background: #FFF;
     transition: 0.3s ease width;
-    -webkit-transition: 0.3s ease width;
-    -moz-transition: 0.3s ease width;
-    -o-transition: 0.3s ease width;
-    -ms-transition: 0.3s ease width;
   }
 
   .right nav a:hover:after {
@@ -175,15 +199,18 @@ header {
 
   .right .participate .front,
   .right .participate .back {
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
-    line-height: 80px;
+    line-height: 100px;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
     transition: 0.5s ease all;
+
+    .fixed_nav & {
+      line-height: 80px;
+    }
   }
 
 
@@ -191,8 +218,8 @@ header {
     display: block;
     float: left;
     vertical-align: top;
-    height: 80px;
-    line-height: 80px;
+    height: 100px;
+    line-height: 100px;
     background: $color-secondary;
     padding: 0 26px;
     box-sizing: border-box;
@@ -203,13 +230,19 @@ header {
     text-transform: uppercase;
     font-size: 13px;
     position: relative;
-    -webkit-transition: 0.3s ease background, 0.2s ease width, 0.2s ease padding-top;
-    transition: 0.3s ease background, 0.2s ease width, 0.2s ease padding-top;
+    transition: 0.3s ease background, 0.2s ease width, 0.2s ease padding-top, 0.2s ease height, 0.2s ease line-height;
+
+    .fixed_nav & {
+      height: 80px;
+      line-height: 80px;
+    }
 
     .label {
       display: inline-block;
       position: relative;
       left: 18px;
+      width: 100px;
+      transition: .4s ease width;
     }
 
     &:hover {
@@ -218,26 +251,17 @@ header {
   }
 
 
-
   .right .fixed_display_searchbox,
   .right .fixed_display_around_me {
     display: inline-block;
     vertical-align: top;
     position: relative;
     width: 75px;
-    height: 80px;
+    height: 100px;
     border-left: solid 1px $color-primary-variant;
     border-right: solid 1px $color-primary-variant;
     transform: translate3D(0, 100%, 0);
-    -webkit-transform: translate3D(0, 100%, 0);
-    -moz-transform: translate3D(0, 100%, 0);
-    -o-transform: translate3D(0, 100%, 0);
-    -ms-transform: translate3D(0, 100%, 0);
     transition: 0.4s ease all;
-    -webkit-transition: 0.4s ease all;
-    -moz-transition: 0.4s ease all;
-    -o-transition: 0.4s ease all;
-    -ms-transition: 0.4s ease all;
     cursor: pointer;
 
     &:before{
@@ -265,23 +289,24 @@ header {
     vertical-align: middle;
     font-size: 30px;
     transition: 0.2s ease top;
-    -webkit-transition: 0.2s ease top;
-    -moz-transition: 0.2s ease top;
-    -o-transition: 0.2s ease top;
-    -ms-transition: 0.2s ease top;
 
     position: absolute;
     display: block;
     left: 13px;
 
     &:before{
-      line-height: 80px;
+      line-height: 100px;
       position: absolute;
       left: 0;
       width: 100%;
       text-align: center;
       font-size: 30px;
       color: white;
+      transition: 0.2s ease line-height;
+    }
+
+    .fixed_nav &:before{
+      line-height: 80px;
     }
   }
 }
@@ -289,10 +314,6 @@ header {
 .fixed_nav header .right .fixed_display_around_me,
 .fixed_nav header .right .fixed_display_searchbox{
   transform: none;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
 }
 
 
@@ -304,15 +325,16 @@ header {
 
 .fixed_nav header .right .display-account .label, body.page header .right .display-account .label {
   opacity: 0;
-  transition: 0.1s ease opacity 0s;
-  -webkit-transition: 0.1s ease opacity 0s;
-  -moz-transition: 0.1s ease opacity 0s;
-  -o-transition: 0.1s ease opacity 0s;
-  -ms-transition: 0.1s ease opacity 0s;
+  transition: 0.1s ease opacity, .4s ease width ;
 }
 
+header + .layout-content {
+  margin-top: -80px;
+}
 
 
 header.fixed + .layout-content {
-  margin-top: 80px;
+  margin-top: 0px;
 }
+
+
