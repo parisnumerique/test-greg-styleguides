@@ -2,6 +2,7 @@
   "index": {
     "defaults": {
       "title": "Paris",
+      "h1": true,
       "languages": [
         {"abbr": "fr", "href": "/fr"},
         {"abbr": "en", "href": "/en"},
