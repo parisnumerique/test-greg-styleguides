@@ -2,6 +2,7 @@
   "templates": [
     "home",
     "subhome-news",
+    "subhome-get-involved",
     "document"
   ]
 }
