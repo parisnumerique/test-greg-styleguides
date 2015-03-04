@@ -17,7 +17,7 @@ include ../../modules/sections-list/sections-list
 include ../../modules/social/social
 
 append content
-  +notice({"modifiers": "top blue buildings", "closable": true})
+  +notice(data.notice)
     a(href="#") Visiting Paris ? Plan your trip
 
 append content
@@ -25,236 +25,39 @@ append content
 
 append content
   .layout-content
-    +quick-access({
-    "background": "../../modules/quick-access/background.jpg",
-    "search": {
-      "input": {
-        "placeholder": "Rechercher un service, une information..."
-      },
-      "submit": {
-        "text": "Rechercher"
-      },
-      "around": {
-        "text": "Autour de moi"
-      }
-    },
-    "items": [
-      {
-        "href": "#",
-        "text": "Inscription à la crèche"
-      },
-      {
-        "href": "#",
-        "text": "Cours municipaux pour adultes"
-      },
-      {
-        "href": "#",
-        "text": "État civil"
-      },
-      {
-        "href": "#",
-        "text": "Encombrants"
-      },
-      {
-        "href": "#",
-        "text": "Tennis"
-      },
-      {
-        "href": "#",
-        "text": "Signalement"
-      },
-      {
-        "href": "#",
-        "text": "Facil’familles"
-      },
-      {
-        "href": "#",
-        "text": "Gardes d’enfants"
-      }
-    ],
-    "notice": {
-      "modifiers": "bottom transparent",
-      "closable": true,
-      "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
-    }
-  })
+    +quick-access(data.quick_access)
 
 append content
   .layout-content
     .layout-wrapper
-      +heading({
-        "title": "Services et infos pratiques"
-      })
-
-      +sections-list({
-      "items": [
-        {
-          "title": "Aides & démarches",
-          "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-        },
-        {
-          "title": "Culture & patrimoine",
-          "text": "Sed posuere consectetur est at lobortis."
-        },
-        {
-          "title": "Déplacements & stationnement",
-          "text": "Donec id elit non mi porta gravida at eget metus."
-        },
-        {
-          "title": "Emploi & formations",
-          "text": "Sed posuere consectetur est at lobortis."
-        },
-        {
-          "title": "Environnement & espaces verts",
-          "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-        },
-        {
-          "title": "Famille & éducation",
-          "text": "Donec ullamcorper nulla non metus auctor fringilla."
-        },
-        {
-          "title": "Innovation",
-          "text": "Cras mattis consectetur purus sit amet fermentum."
-        },
-        {
-          "title": "Logement",
-          "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-        },
-        {
-          "title": "Santé",
-          "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-        },
-        {
-          "title": "Social & solidarités",
-          "text": "Maecenas sed diam eget risus varius blandit sit amet."
-        },
-        {
-          "title": "Sports & loisirs",
-          "text": "Cras mattis consectetur purus sit amet fermentum."
-        },
-        {
-          "title": "Urbanisme",
-          "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-        },
-        {
-          "title": "Associations",
-          "text": "Sed posuere consectetur est at lobortis."
-        },
-        {
-          "text": "Vous cherchez autre chose ?",
-          "modifiers": "more"
-        }
-      ]
-    })
+      +heading(data.sections.heading)
+      +sections-list(data.sections.list)
 
 append content
   .layout-content
-    +jumbotron({
-      "image": "../../modules/jumbotron/image.jpg",
-      "title": "À la une",
-      "text": "Revivez Nuit Blanche en photos et vidéo"
-    })
+    +jumbotron(data.jumbotron)
 
 append content
   .layout-content
     .layout-wrapper
-      +heading({
-        "title": "En ce moment",
-        "link": "Voir toutes les actualités"
-      })
-      +news-list({
-        "modifiers": "news-cards",
-        "items": [
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Mobilité",
-            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
-          },
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
-          },
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
-          }
-        ]
-      })
+      +heading(data.news.heading)
+      +news-list(data.news.list)
 
 append content
   .layout-content
     .layout-wrapper
-      +que-faire({
-        "image": "../../modules/que-faire/que-faire-back-img.jpg",
-        "logo": {
-          "href": "#",
-          "image": "../../modules/que-faire/que-faire-img.png"
-        },
-        "items": [
-          {"href": "#", "text": "Que faire à Paris ce week-end ?"},
-          {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
-          {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-        ]
-      })
+      +que-faire(data.que_faire)
 
 append content
   .layout-content.gray-background
-    +get-involved({
-      "heading": {
-        "title": "Participez !",
-        "link": {
-          "href": "#",
-          "text": "Accéder à l’espace participatif"
-        }
-      },
-      "items": [
-        {"href": "#", "image": "../../modules/get-involved/get-involved-img1.png", "text": "Votez pour le budget participatif"},
-        {"href": "#", "image": "../../modules/get-involved/get-involved-img2.png", "text": "E-pétition, prenez la main"}
-      ]
-    })
+    +get-involved(data.get_involved)
 
 append content
   .layout-right-col
     .layout-wrapper
       .layout-content
-        +heading({
-          "title": "Vu par les Parisiens"
-        })
-        +pictures-gallery-ugc({
-          "title": "Hashtags de la semaine :",
-          "hashtag": "#hashtag",
-          "items": [
-            {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
-              "text": "@texte"
-            },
-            {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
-              "text": "@texte"
-            },
-            {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
-              "text": "@texte"
-            },
-            {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
-              "text": "@texte"
-            },
-            {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
-              "text": "@texte"
-            },
-            {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
-              "text": "@texte"
-            }
-          ]
-        })
+        +heading(data.gallery.heading)
+        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
         +newsletter(public.modules.newsletter._data.index.defaults)
         +jecoute(public.modules.jecoute._data.index.defaults)
@@ -262,22 +65,7 @@ append content
 
 append content
   .layout-content
-    +municipal-team({
-      "heading": {
-        "title": "La Maire et ses adjoints",
-        "link": {
-          "href": "#",
-          "text": "L’Hôtel de ville"
-        },
-        "modifiers": "white"
-      },
-      "img": {
-        "src": "../../modules/municipal-team/image.jpg",
-        "alt": "La Maire et ses adjoints"
-      },
-      "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
-    })
+    +municipal-team(data.municipal_team)
 
 append content
   .layout-content.layout-content-adjacent
