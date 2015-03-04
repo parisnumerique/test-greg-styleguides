@@ -240,7 +240,7 @@ header {
     height: 100px;
     line-height: 100px;
     background: $color-secondary;
-    padding: 0 26px;
+    padding: 0 20px;
     box-sizing: border-box;
     font-weight: bold;
     color: $white;
@@ -256,14 +256,24 @@ header {
       line-height: 80px;
     }
 
+
+
     .label {
       display: inline-block;
       position: relative;
-      left: 18px;
+      float: left;
       width: 100px;
       transition: .4s ease width;
       white-space: nowrap;
+      font-size: 13px;
+      margin-left: 5px;
+
+      .fixed_nav & {
+        margin-left: 0;
+      }
     }
+
+
 
     &:hover {
       background-color: #0a4677;
@@ -310,17 +320,21 @@ header {
     font-size: 30px;
     transition: 0.2s ease top;
 
-    position: absolute;
+    position: relative;
     display: block;
-    left: 13px;
-
+    height: 100%;
+    width: 20px;
+    float: left;
+    overflow: hidden;
     &:before{
+      font-size: 14px;
       line-height: 100px;
       position: absolute;
       left: 0;
+      top: -2px;
       width: 100%;
       text-align: center;
-      font-size: 30px;
+      font-size: 20px;
       color: white;
       transition: 0.2s ease line-height;
     }
