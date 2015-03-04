@@ -243,6 +243,7 @@ header {
       left: 18px;
       width: 100px;
       transition: .4s ease width;
+      white-space: nowrap;
     }
 
     &:hover {
