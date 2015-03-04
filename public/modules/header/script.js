@@ -26,7 +26,7 @@ Paris.header = (function(){
         fixHeader();
       }
 
-      if(!$('.search').length) {
+      if(!$('#quick-search').length) {
         fixNav();
       }
 
