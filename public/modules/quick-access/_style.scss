@@ -3,8 +3,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 600px;
-  padding-top: 225px;
+  padding-top: 145px;
   position: relative;
+}
+
+// Keep space for the header, when the jumbotron is the first element after it
+header + .layout-content .quick-access {
+  padding-top: 225px;
 }
 
 .quick-access-wrapper {

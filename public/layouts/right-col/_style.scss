@@ -3,6 +3,14 @@
   overflow: hidden;
   width: 100%;
 
+  /* modifiers */
+  &.color-secondary-background,
+  &.color-secondary-background:after,
+  &.color-secondary-background .layout-aside,
+  &.color-secondary-background .layout-aside:after {
+    background-color: $color-secondary;
+  }
+
   .layout-wrapper {
     display: table;
     margin: 0 auto;

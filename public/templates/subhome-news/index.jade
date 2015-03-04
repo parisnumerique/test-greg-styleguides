@@ -14,6 +14,7 @@ include ../../modules/pagination/pagination
 include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
 include ../../modules/search-push/search-push
 include ../../modules/social/social
+include ../../modules/video/video
 
 append content
   +header(public.modules.header._data.index.defaults)
@@ -129,11 +130,20 @@ append content
       })
 
 append content
-  .layout-right-col
-    .layout-wrapper
-      .layout-content.color-secondary-background
-      aside.layout-aside.color-secondary-background
-        +newsletter(public.modules.newsletter._data.index.defaults)
+  .layout-content.layout-content-adjacent
+    .layout-half-col.color-secondary-background
+      .layout-wrapper
+        .layout-content
+          +video({
+            "title": "Paris en vidéo",
+            "cover": "../../modules/video/cover.jpg",
+            "video": {
+              "text": "Voir sur Dailymotion",
+              "url": "#"
+            }
+          })
+        .layout-content
+          +newsletter(public.modules.newsletter._data.index.defaults)
 
 append content
   .layout-content
