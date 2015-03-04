@@ -1,7 +1,7 @@
 {
   "index": {
     "defaults": {
-      "background": "links-group-image-red.jpg",
+      "background": "links-group-image.jpg",
       "title": "Titre du groupe de lien",
       "subtitle": "subtitle du groupe de lien",
       "imgmodifiers":"links-group-header-red",
