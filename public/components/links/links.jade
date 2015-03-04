@@ -2,6 +2,6 @@ mixin links(opts)
   .component.component-links
     h2= opts.title
     ul.links-items
-      - each item in opts.items
+      each item in opts.items
         li.links-item(class=item.modifiers)
           a(href=item.href)= item.text

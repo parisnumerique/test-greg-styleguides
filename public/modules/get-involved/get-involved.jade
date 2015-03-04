@@ -5,6 +5,6 @@ mixin get-involved(opts)
     .layout-wrapper
       +heading(opts.heading)
       .get-involved-content
-        - each item in opts.items
+        each item in opts.items
           a.get-involved-card(href=item.href style='background-image: url(#{item.image});')
             div.get-involved-text= item.text

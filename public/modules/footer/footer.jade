@@ -4,6 +4,6 @@ mixin footer(opts)
       a.footer-logo(href=opts.logo.href)
         img(src=opts.logo.src alt=opts.logo.alt)
       ul.footer-links
-        - each item in opts.items
+        each item in opts.items
           li
             a(href=item.href class=item.modifiers)= item.text
