@@ -5,7 +5,10 @@ mixin header(opts)
         span Logo
       .entry
         a(href='/')
-          h1= opts.title
+          if(opts.h1)
+            h1.title= opts.title
+          else
+            div.title= opts.title
         nav.languages
           ul
             each lang in opts.languages
