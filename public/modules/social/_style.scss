@@ -1,7 +1,7 @@
 .social {
   max-width: 360px;
   background-color: $color-secondary;
-  color: #FFF;
+  color: $white;
   overflow: hidden;
 
   .item {
@@ -18,7 +18,7 @@
 
   .subscribe{
     display: block;
-    color: #FFF;
+    color: $white;
     font-size: 13px;
     font-weight: 300;
   }

@@ -1,7 +1,7 @@
 .newsletter {
   max-width: 360px;
   background-color: $color-secondary;
-  color: #FFF;
+  color: $white;
 
   h2 {
     border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -36,7 +36,7 @@
   }
 
   a {
-    color: #FFF;
+    color: $white;
   }
 }
 

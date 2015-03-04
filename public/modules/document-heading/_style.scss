@@ -16,13 +16,13 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #FFF;
+    background: $white;
     border-bottom: 1px solid $gray204;
     height: 90px;
 
     &:before {
       content: ' ';
-      background: #FFF;
+      background: $white;
       width: 1000px;
       height: 90px;
       position: absolute;
