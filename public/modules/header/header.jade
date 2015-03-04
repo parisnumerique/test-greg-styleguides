@@ -22,8 +22,10 @@ mixin header(opts)
       .menu.item
         if opts.participate.visible
           a.participate(href='#{opts.account.url}')
-            span.front= opts.participate.front
-            span.back= opts.participate.back
+            span.front
+              span= opts.participate.front
+            span.back
+              span= opts.participate.back
         if opts.participate.visible
           a.display-account(href='#{opts.account.url}')
             span.icon.icon-profile
