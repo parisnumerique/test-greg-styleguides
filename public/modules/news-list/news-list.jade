@@ -1,0 +1,21 @@
+include ../news-card/news-card
+
+mixin news-list(opts)
+  case opts.mode
+    when "large-first-child"
+      .news-list(class=opts.mode)
+        each item, index in opts.items.slice(0, 5)
+          if index === 0
+            +news-card({
+              "modifiers": "large",
+              "href": item.href,
+              "image": item.image,
+              "category": item.category,
+              "title": item.title
+            })
+          else
+            +news-card(item)
+    default
+      .news-list(class="gallery")
+        each item in opts.items
+          +news-card(item)

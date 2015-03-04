@@ -1,5 +1,6 @@
-.layout-left-col {
+.layout-right-col {
   background-color: #fff;
+  overflow: hidden;
   width: 100%;
 
   .layout-wrapper {
@@ -11,27 +12,34 @@
   .layout-aside {
     background-color: $gray242;
     display: table-cell;
-    padding: 40px 20px 40px 0;
+    padding: 40px 0 40px 20px;
     position: relative;
-    text-align: right;
-    width: 280px;
+    text-align: left;
+    vertical-align: top;
+    width: 350px;
 
-    &:before {
+    &:after {
       background-color: $gray242;
       bottom: 0;
       content: "";
       display: block;
       position: absolute;
-      right: 100%;
+      left: 100%;
       top: 0;
       width: 1000px;
+    }
+
+    /* modifiers */
+    &.color-secondary-background,
+    &.color-secondary-background:after {
+      background-color: $color-secondary;
     }
   }
 
   .layout-content {
     display: table-cell;
-    padding: 40px 50px;
-    width: 820px;
+    padding: 40px 30px 40px 0;
+    width: 750px;
   }
 
 }

@@ -17,14 +17,14 @@
     "watchify": "watchify public/javascript/main.js -o public/javascript/paris.js",
     "browsersync": "browser-sync start --proxy 'localhost:9000' --files 'public/**/*.scss' --files 'public/**/*.jade' --files 'public/javascript/paris.js'",
     "server": "harp server",
-    "start": "npm run server & npm run watchify & npm run browsersync",
+    "start": "npm run server & npm run watchify",
     "compile": "harp compile",
     "postcompile": "browserify public/javascript/main.js -o www/javascript/paris.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git@git.etaminstudio.com : paris/livingstyleguide-harp.git"
+    "type" : "git",
+    "url"  : "git@git.etaminstudio.com : paris/livingstyleguide-harp.git"
   },
-  "author": "",
-  "license": "ISC"
+  "author"  : "",
+  "license" : "ISC"
 }

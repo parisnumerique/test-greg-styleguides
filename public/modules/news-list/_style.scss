@@ -1,0 +1,26 @@
+.news-list {
+  @include container;
+
+  .news-card {
+    @include span(4 of 12);
+  }
+
+  // mode gallery
+  &.gallery {
+    .news-card {
+      &:nth-child(3n) {
+        @include last;
+      }
+    }
+  }
+
+  // mode large-first-child
+  &.large-first-child {
+    .news-card {
+      &:nth-child(3),
+      &:nth-child(5) {
+        @include last;
+      }
+    }
+  }
+}

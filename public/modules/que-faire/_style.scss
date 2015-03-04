@@ -1,4 +1,4 @@
-.que-faire{
+.que-faire {
   background-repeat:no-repeat;
   background-position:50% 50%;
   background-size: cover;
@@ -14,21 +14,27 @@
     height: 96px;
     margin-right: 25px;
     width: 150px;
+
+    > span {
+      @include hidden-accessibly;
+    }
   }
 
   .que-faire-content {
-    float: left;
+    @include container;
+    float: right;
+    width: 820px;
 
     .button-que-faire {
-      background: url(../modules/que-faire/hachure.svg) #fff repeat top left;
+      @include span(4 of 12);
+      background: url(../modules/que-faire/hachure.svg) $white repeat top left;
       border: none;
       padding: 0;
-      margin:0 20px 0 0;
-      max-width: 260px;
       white-space: normal;
-      width: 100%;
 
-      &:last-child {margin-right: 0;}
+      &:last-child {@include last;}
+
+      &:after {background-color: $gray242;}
       &:hover .button-que-faire-text {color: $red-que-faire;}
     }
 

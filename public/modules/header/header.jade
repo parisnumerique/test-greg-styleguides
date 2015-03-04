@@ -1,7 +1,8 @@
 mixin header(opts)
   header
-    .inner
+    .layout-wrapper.header-wrapper
       a#logo(href='/')
+        span Logo
       .entry
         h1= opts.title
         nav.languages

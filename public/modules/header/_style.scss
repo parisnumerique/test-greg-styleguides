@@ -3,7 +3,7 @@ header {
   width: 100%;
   height: 80px;
   background: $color-primary;
-  position: fixed;
+  position: relative;
   z-index: 200;
   left: 0px;
   transition: 0.2s ease height, 0.5s ease left;
@@ -14,9 +14,10 @@ header {
     top: 0px;
   }
 
-  .inner {
-    display: block;
-    @include container;
+  .header-wrapper {
+    height: 80px;
+    left: -126.5px;
+    position: relative;
   }
 
   .item {
@@ -30,9 +31,13 @@ header {
     width: 100px;
     height: 80px;
     border-right: 6px solid $color-tertiary;
-    background: url('/modules/header/nef.svg') no-repeat center center;
+    background: url('../modules/header/nef.svg') no-repeat center center;
     position: relative;
     text-align: center;
+
+    > span {
+      @include hidden-accessibly;
+    }
   }
 
   .entry{
@@ -46,8 +51,8 @@ header {
     h1 {
       position: relative;
       top: 5px;
-      text-indent: -800px;
-      background: url('/modules/header/paris.svg') no-repeat center center;
+      text-indent: -9999px;
+      background: url('../modules/header/paris.svg') no-repeat center center;
     }
 
     nav {
@@ -304,4 +309,10 @@ header {
   -moz-transition: 0.1s ease opacity 0s;
   -o-transition: 0.1s ease opacity 0s;
   -ms-transition: 0.1s ease opacity 0s;
+}
+
+
+
+header.fixed + .layout-content {
+  margin-top: 80px;
 }

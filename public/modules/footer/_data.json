@@ -1,6 +1,11 @@
 {
   "index": {
     "defaults": {
+      "logo": {
+        "href": "#",
+        "src": "mairie-de-paris.png",
+        "alt": "Logo de la Mairie de Paris"
+      },
       "items": [
         {"href": "#", "text": "Visit Paris", "modifiers": "footer-link-em"},
         {"href": "#", "text": "FAQ"},

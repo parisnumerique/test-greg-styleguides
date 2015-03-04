@@ -73,9 +73,8 @@
 
   // modifier position
   &.top {
-    position: absolute;
-    top: 0;
     z-index: 10;
+    margin-bottom: 0;
   }
   &.bottom {
     bottom: 0;
