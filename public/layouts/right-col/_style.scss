@@ -11,6 +11,10 @@
     background-color: $color-secondary;
   }
 
+  &.gray-background {
+    background-color: $gray242;
+  }
+
   .layout-wrapper {
     display: table;
     margin: 0 auto;

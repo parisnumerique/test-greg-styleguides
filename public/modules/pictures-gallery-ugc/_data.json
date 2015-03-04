@@ -2,30 +2,36 @@
   "index": {
     "defaults": {
       "title": "Hashtags de la semaine :",
-      "hashtag": "#hashtag",
+      "hashtags": [{
+        "url": "#",
+        "text": "automneàparis"
+      },{
+        "url": "#",
+        "text": "nuit_blanche"
+      }],
       "items": [
          {
-          "image": "pictures-gallery-img1.jpg", 
+          "image": "pictures-gallery-img1.jpg",
           "text": "@texte"
           },
          {
-          "image": "pictures-gallery-img2.jpg", 
+          "image": "pictures-gallery-img2.jpg",
           "text": "@texte"
           },
          {
-          "image": "pictures-gallery-img3.jpg", 
+          "image": "pictures-gallery-img3.jpg",
           "text": "@texte"
           },
          {
-          "image": "pictures-gallery-img4.jpg", 
+          "image": "pictures-gallery-img4.jpg",
           "text": "@texte"
           },
          {
-          "image": "pictures-gallery-img5.jpg", 
+          "image": "pictures-gallery-img5.jpg",
           "text": "@texte"
           },
          {
-          "image": "pictures-gallery-img6.jpg", 
+          "image": "pictures-gallery-img6.jpg",
           "text": "@texte"
         }
       ]

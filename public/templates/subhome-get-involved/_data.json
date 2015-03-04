@@ -1,6 +1,163 @@
 {
   "index": {
     "data": {
+      "heading": {
+        "text": "Participez !",
+        "image": "./participate.png"
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Participez !",
+            "current": true
+          }
+        ]
+      },
+      "advice" : {
+        "heading" : {
+          "title": "Donnez votre avis"
+        }
+      },
+      "act" : {
+        "heading" : {
+          "title": "Agissez"
+        },
+        "links_group": {
+          "background": "../../modules/links-group/links-group-image.jpg",
+          "title": "Impliquez-vous",
+          "imgmodifiers":"links-group-header-red",
+          "items": [
+            {
+              "href": "#",
+              "text": "Les conseils de quartiers",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Rendez-vous à la mission participation citoyenne",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Université populaire de la citoyenneté active",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Citoyenneté étudiante",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Egalité Femmes/Hommes",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Bénévolat",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Lutte contre les discriminations",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Pour un Paris plus juste et plus solidaire",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Concertations et enquêtes publiques",
+              "modifiers": "links-group-button-red"
+            },
+            {
+              "href": "#",
+              "text": "Service civique",
+              "modifiers": "links-group-button-red"
+            }
+          ]
+        }
+      },
+      "now" : {
+        "heading" : {
+          "title": "En ce moment",
+          "link": {
+            "href": "#",
+            "text": "Voir toutes les actualités Participez"
+          }
+        },
+        "news_list": {
+          "modifiers": "news-cards",
+          "items": [
+            {
+              "href": "#",
+              "image": "./car.jpg",
+              "category": "Participez",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+            },
+            {
+              "href": "#",
+              "image": "./eiffel.jpg",
+              "category": "Culture et patrimoine",
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+            },
+            {
+              "href": "#",
+              "image": "./cart.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+            }
+          ]
+        }
+      },
+      "gallery": {
+        "heading": {
+          "title": "Vu par les Parisiens"
+        },
+        "pictures_gallery_ugc": {
+          "title": "Hashtags de la semaine :",
+          "hashtags": [{
+              "url": "#",
+              "text": "automneàparis"
+            },{
+              "url": "#",
+              "text": "nuit_blanche"
+            }],
+          "items": [
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
+              "text": "@texte"
+            }
+          ]
+        }
+      }
     }
   }
 }

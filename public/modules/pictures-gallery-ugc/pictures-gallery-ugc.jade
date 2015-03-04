@@ -1,8 +1,8 @@
 mixin pictures-gallery-ugc(opts)
   .pictures-gallery
     .pictures-gallery-title= opts.title
-    a(href='#').pictures-gallery-hashtag= opts.hashtag
-    a(href='#').pictures-gallery-hashtag= opts.hashtag
+    each hashtag in opts.hashtags
+      a(href='#{hashtag.url}').pictures-gallery-hashtag= '#'+hashtag.text
     .pictures-gallery-content
       each item in opts.items
         a.pictures-gallery-image(style='background-image: url(#{item.image});')

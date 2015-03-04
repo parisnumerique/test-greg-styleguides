@@ -36,5 +36,10 @@
 
 
 header + .layout-content .hub-heading{
-  margin-top: -80px;
+  margin-top: 0px;
 }
+
+header.fixed + .layout-content .hub-heading{
+  margin-top: 80px;
+}
+
