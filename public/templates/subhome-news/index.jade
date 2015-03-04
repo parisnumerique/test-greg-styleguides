@@ -51,7 +51,7 @@ append content
         "title": "Aujourd'hui"
       })
       +news-list({
-        "modifiers": "large-first-child",
+        "modifiers": "news-cards large-first-child",
         "items": [
           {
             "href": "#",
@@ -94,7 +94,7 @@ append content
         "title": "Hier"
       })
       +news-list({
-        "modifiers": "large-first-child secondary",
+        "modifiers": "news-cards large-first-child secondary",
         "items": [
           {
             "href": "#",
@@ -149,96 +149,69 @@ append content
   .layout-content
     .layout-wrapper
       +heading({
-        "title": "Dimanche 25 janvier 2015"
+        "title": "Les autres actus"
       })
       +news-list({
         "items": [
           {
             "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+            "date": "10 janvier 2015",
+            "category": "Logement",
+            "title": "Expulsions : début de la trêve hivernale"
           },
           {
             "href": "#",
-            "image": "../../modules/news-card/image.jpg",
+            "date": "10 janvier 2015",
+            "category": "Logement",
+            "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Logement",
+            "title": "Le point sur les nouveaux logements à Paris"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Culture et patrimoine",
+            "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Environnement",
+            "title": "Donec sed odio dui"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Culture et patrimoine",
+            "title": "Maecenas sed diam eget risus varius blandit sit amet non magna"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
             "category": "Mobilité",
-            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+            "title": "Sed posuere consectetur est at lobortis"
           },
           {
             "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+            "date": "10 janvier 2015",
+            "category": "International",
+            "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam"
           },
           {
             "href": "#",
-            "image": "../../modules/news-card/image.jpg",
+            "date": "10 janvier 2015",
             "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+            "title": "Aenean lacinia bibendum nulla sed consectetur"
           },
           {
             "href": "#",
-            "image": "../../modules/news-card/image.jpg",
+            "date": "10 janvier 2015",
             "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
-          }
-        ]
-      })
-
-append content
-  .layout-content
-    .layout-wrapper
-      +que-faire({
-        "image": "../../modules/que-faire/que-faire-back-img.jpg",
-        "logo": {
-          "href": "#",
-          "image": "../../modules/que-faire/que-faire-img.png"
-        },
-        "items": [
-          {"href": "#", "text": "Que faire à Paris ce week-end ?"},
-          {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
-          {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-        ]
-      })
-
-append content
-  .layout-content
-    .layout-wrapper
-      +heading({
-        "title": "Lundi 24 janvier 2015"
-      })
-      +news-list({
-        "items": [
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
-          },
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Mobilité",
-            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
-          },
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
-          },
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Culture et patrimoine",
-            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
-          },
-          {
-            "href": "#",
-            "image": "../../modules/news-card/image.jpg",
-            "category": "Environnement",
-            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+            "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor"
           }
         ]
       })
@@ -256,6 +229,22 @@ append content
         ],
         "current": 1,
         "totalPages": 10
+      })
+
+append content
+  .layout-content
+    .layout-wrapper
+      +que-faire({
+        "image": "../../modules/que-faire/que-faire-back-img.jpg",
+        "logo": {
+          "href": "#",
+          "image": "../../modules/que-faire/que-faire-img.png"
+        },
+        "items": [
+          {"href": "#", "text": "Que faire à Paris ce week-end ?"},
+          {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
+          {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
+        ]
       })
 
 append content

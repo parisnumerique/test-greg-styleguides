@@ -40,7 +40,7 @@
       transform: none;
 
       .news-card-image {
-        transition: transform 10s ease;
+        transition: transform 10s linear;
         transform: translateX(20%);
 
         &:after {

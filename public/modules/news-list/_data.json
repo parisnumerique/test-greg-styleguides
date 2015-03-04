@@ -6,6 +6,7 @@
       ]
     },
     "three_news": {
+      "modifiers": "news-cards",
       "items": [
         {
           "href": "#",
@@ -28,7 +29,7 @@
       ]
     },
     "five_news": {
-      "modifiers": "large-first-child",
+      "modifiers": "news-cards large-first-child",
       "items": [
         {
           "href": "#",
@@ -63,7 +64,7 @@
       ]
     },
     "five_news_secondary": {
-      "modifiers": "large-first-child secondary",
+      "modifiers": "news-cards large-first-child secondary",
       "items": [
         {
           "href": "#",
@@ -94,6 +95,70 @@
           "image": "../../modules/news-card/image.jpg",
           "category": "Environnement",
           "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+        }
+      ]
+    },
+    "ten_news": {
+      "items": [
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Logement",
+          "title": "Expulsions : début de la trêve hivernale"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Logement",
+          "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Logement",
+          "title": "Le point sur les nouveaux logements à Paris"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Culture et patrimoine",
+          "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Environnement",
+          "title": "Donec sed odio dui"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Culture et patrimoine",
+          "title": "Maecenas sed diam eget risus varius blandit sit amet non magna"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Mobilité",
+          "title": "Sed posuere consectetur est at lobortis"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "International",
+          "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Culture et patrimoine",
+          "title": "Aenean lacinia bibendum nulla sed consectetur"
+        },
+        {
+          "href": "#",
+          "date": "10 janvier 2015",
+          "category": "Environnement",
+          "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor"
         }
       ]
     }

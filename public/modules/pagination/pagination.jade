@@ -1,11 +1,10 @@
 mixin pagination(opts)
-  nav
-    ul.pagination
+  nav.pagination
+    ul
       if opts.current !== 1
         li.previous
           a(href='#', aria-label='Previous')
             span(aria-hidden='true') &lt;
-
       each page in opts.pages
         - var klass = (page.number === opts.current ? 'active' : '')
         li(class="#{klass}")
