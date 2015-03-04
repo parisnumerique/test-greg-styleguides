@@ -130,7 +130,6 @@ header {
     font-size: 13px;
     position: relative;
     transition: 0.5s ease background, 0.2s ease padding-top;
-    -webkit-perspective: 1000;
     perspective: 1000;
   }
 
@@ -138,18 +137,18 @@ header {
     background: #fae46a;
   }
   .participate:hover .front {
-    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
   }
 
   .participate .front {
-    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
 
   .right .participate:hover .back {
-    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
   }
   .right .participate .back {
-    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
     color: #de275d;
   }
 
@@ -163,10 +162,6 @@ header {
     bottom: 25px;
     background: #FFF;
     transition: 0.3s ease width;
-    -webkit-transition: 0.3s ease width;
-    -moz-transition: 0.3s ease width;
-    -o-transition: 0.3s ease width;
-    -ms-transition: 0.3s ease width;
   }
 
   .right nav a:hover:after {
@@ -175,7 +170,6 @@ header {
 
   .right .participate .front,
   .right .participate .back {
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     line-height: 80px;
@@ -203,7 +197,6 @@ header {
     text-transform: uppercase;
     font-size: 13px;
     position: relative;
-    -webkit-transition: 0.3s ease background, 0.2s ease width, 0.2s ease padding-top;
     transition: 0.3s ease background, 0.2s ease width, 0.2s ease padding-top;
 
     .label {
@@ -229,15 +222,7 @@ header {
     border-left: solid 1px $color-primary-variant;
     border-right: solid 1px $color-primary-variant;
     transform: translate3D(0, 100%, 0);
-    -webkit-transform: translate3D(0, 100%, 0);
-    -moz-transform: translate3D(0, 100%, 0);
-    -o-transform: translate3D(0, 100%, 0);
-    -ms-transform: translate3D(0, 100%, 0);
     transition: 0.4s ease all;
-    -webkit-transition: 0.4s ease all;
-    -moz-transition: 0.4s ease all;
-    -o-transition: 0.4s ease all;
-    -ms-transition: 0.4s ease all;
     cursor: pointer;
 
     &:before{
@@ -305,10 +290,6 @@ header {
 .fixed_nav header .right .display-account .label, body.page header .right .display-account .label {
   opacity: 0;
   transition: 0.1s ease opacity 0s;
-  -webkit-transition: 0.1s ease opacity 0s;
-  -moz-transition: 0.1s ease opacity 0s;
-  -o-transition: 0.1s ease opacity 0s;
-  -ms-transition: 0.1s ease opacity 0s;
 }
 
 
