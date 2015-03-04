@@ -6,6 +6,9 @@
   h2 {
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
+  &:first-child h2 {
+    margin-top: 0;
+  }
 
   &.vertical h2 {
     border-bottom: none;

@@ -2,7 +2,7 @@
   background-color: #fff;
   width: 100%;
 
-  .layout-content {
+  > .layout-content {
     & + .layout-content {
       margin-top: 40px;
     }

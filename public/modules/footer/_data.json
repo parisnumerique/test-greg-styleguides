@@ -3,7 +3,7 @@
     "defaults": {
       "logo": {
         "href": "#",
-        "src": "mairie-de-paris.png",
+        "src": "../../modules/footer/mairie-de-paris.png",
         "alt": "Logo de la Mairie de Paris"
       },
       "items": [

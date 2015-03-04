@@ -27,3 +27,9 @@
   margin: 0 0 14px;
   max-width: 470px;
 }
+
+// Keep space for the header, when the jumbotron is the first element after it
+header + .layout-content .jumbotron {
+  height: 400px;
+  padding-top: 80px;
+}

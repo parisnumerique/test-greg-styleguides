@@ -1,6 +1,7 @@
 {
   "templates": [
     "home",
+    "subhome-news",
     "document"
   ]
 }

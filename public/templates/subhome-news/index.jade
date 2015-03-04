@@ -1,0 +1,324 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/footer/footer
+include ../../modules/get-involved/get-involved
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jecoute/jecoute
+include ../../modules/jumbotron/jumbotron
+include ../../modules/news-list/news-list
+include ../../modules/newsletter/newsletter
+include ../../modules/que-faire/que-faire
+include ../../modules/pagination/pagination
+include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/search-push/search-push
+include ../../modules/social/social
+include ../../modules/video/video
+
+append content
+  +header(public.modules.header._data.index.defaults)
+
+append content
+  .layout-content
+    +jumbotron({
+      "image": "../../modules/jumbotron/image.jpg",
+      "title": "À la une",
+      "text": "Revivez Nuit Blanche en photos et vidéo"
+    })
+
+append content
+  .layout-content
+    .layout-wrapper
+      +breadcrumbs({
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Actualité",
+            "current": true
+          }
+        ]
+      })
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading({
+        "title": "Aujourd'hui"
+      })
+      +news-list({
+        "modifiers": "news-cards large-first-child",
+        "items": [
+          {
+            "href": "#",
+            "image": "large-news-1.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Environnement",
+            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Culture et patrimoine",
+            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Environnement",
+            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+          }
+        ]
+      })
+
+
+append content
+  .layout-content.gray-background
+    .layout-wrapper
+      +heading({
+        "title": "Hier"
+      })
+      +news-list({
+        "modifiers": "news-cards large-first-child secondary",
+        "items": [
+          {
+            "href": "#",
+            "image": "large-news-2.jpg",
+            "category": "International",
+            "title": "Visite de John Kerry à l'Hôtel de Ville de Paris"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Mobilité",
+            "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Environnement",
+            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Culture et patrimoine",
+            "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+          },
+          {
+            "href": "#",
+            "image": "../../modules/news-card/image.jpg",
+            "category": "Environnement",
+            "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+          }
+        ]
+      })
+
+append content
+  .layout-content.layout-content-adjacent
+    .layout-half-col.color-secondary-background
+      .layout-wrapper
+        .layout-content
+          +video({
+            "title": "Paris en vidéo",
+            "cover": "../../modules/video/cover.jpg",
+            "video": {
+              "text": "Voir sur Dailymotion",
+              "url": "#"
+            }
+          })
+        .layout-content
+          +newsletter(public.modules.newsletter._data.index.defaults)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading({
+        "title": "Les autres actus"
+      })
+      +news-list({
+        "items": [
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Logement",
+            "title": "Expulsions : début de la trêve hivernale"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Logement",
+            "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Logement",
+            "title": "Le point sur les nouveaux logements à Paris"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Culture et patrimoine",
+            "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Environnement",
+            "title": "Donec sed odio dui"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Culture et patrimoine",
+            "title": "Maecenas sed diam eget risus varius blandit sit amet non magna"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Mobilité",
+            "title": "Sed posuere consectetur est at lobortis"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "International",
+            "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Culture et patrimoine",
+            "title": "Aenean lacinia bibendum nulla sed consectetur"
+          },
+          {
+            "href": "#",
+            "date": "10 janvier 2015",
+            "category": "Environnement",
+            "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor"
+          }
+        ]
+      })
+
+append content
+  .layout-content
+    .layout-wrapper
+      +pagination({
+        "pages": [
+          {"number": 1, "url": "/1"},
+          {"number": 2, "url": "/2"},
+          {"number": 3, "url": "/3"},
+          {"number": 4, "url": "/4"},
+          {"number": 5, "url": "/5"}
+        ],
+        "current": 1,
+        "totalPages": 10
+      })
+
+append content
+  .layout-content
+    .layout-wrapper
+      +que-faire({
+        "image": "../../modules/que-faire/que-faire-back-img.jpg",
+        "logo": {
+          "href": "#",
+          "image": "../../modules/que-faire/que-faire-img.png"
+        },
+        "items": [
+          {"href": "#", "text": "Que faire à Paris ce week-end ?"},
+          {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
+          {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
+        ]
+      })
+
+append content
+  .layout-content
+    +search-push({
+      "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+      "button": {
+        "text": "Rechercher",
+        "modifiers": "button-action"
+      }
+    })
+
+append content
+  .layout-content.gray-background.layout-content-adjacent
+    +get-involved({
+      "heading": {
+        "title": "Participez !",
+        "link": {
+          "href": "#",
+          "text": "Accéder à l’espace participatif"
+        }
+      },
+      "items": [
+        {
+          "href": "#",
+          "image": "../../modules/get-involved/get-involved-img1.png",
+          "text": "Votez pour le budget participatif"
+        },
+        {"href": "#", "image": "../../modules/get-involved/get-involved-img2.png", "text": "E-pétition, prenez la main"}
+      ]
+    })
+
+append content
+  .layout-right-col
+    .layout-wrapper
+      .layout-content
+        +heading({
+          "title": "Vu par les Parisiens"
+        })
+        +pictures-gallery-ugc({
+          "title": "Hashtags de la semaine :",
+          "hashtag": "#hashtag",
+          "items": [
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
+              "text": "@texte"
+            },
+            {
+              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
+              "text": "@texte"
+            }
+          ]
+        })
+      aside.layout-aside.color-secondary-background
+        +newsletter(public.modules.newsletter._data.index.defaults)
+        +jecoute(public.modules.jecoute._data.index.defaults)
+        +social(public.modules.social._data.index.defaults)
+
+append content
+  .layout-content.layout-content-adjacent
+    +footer(public.modules.footer._data.index.defaults)
