@@ -1,5 +1,12 @@
 {
   "index": {
-    "defaults": {}
+    "defaults": {
+      "title": "Paris en vidéo",
+      "cover": "./cover.jpg",
+      "video": {
+        "text": "Voir sur Dailymotion",
+        "url": "#"
+      }
+    }
   }
 }
