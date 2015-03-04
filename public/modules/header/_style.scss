@@ -70,12 +70,16 @@ header {
 
       li {
         float: left;
-        padding-right: 10px;
+        padding-right: 8px;
       }
 
       a {
         color: transparentize(#FFF, 0.4);
         text-decoration: none;
+
+        &:hover{
+          color: #FFF;
+        }
       }
 
       li.active a{
