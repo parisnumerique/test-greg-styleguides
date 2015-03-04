@@ -21,6 +21,82 @@
       "advice" : {
         "heading" : {
           "title": "Donnez votre avis"
+        },
+        "get_involved_list": {
+          "items": [
+            {
+              "category": "Madame la Maire, j’ai une idée",
+              "title": "Création d’un jardin partagé",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "E-pétition",
+              "title": "Des bibliothèques plus attrayantes, ouvertes le dimanche",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "Budget participatif",
+              "title": "Rendre la rue aux enfants",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "Madame la Maire, j’ai une idée",
+              "title": "Rendre la rue aux enfants",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "Madame la Maire, j’ai une idée",
+              "title": "S’assurer que le métro circule toute la nuit en continu",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "Madame la Maire, j’ai une idée",
+              "title": "Rendre la rue aux enfants",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "E-pétition",
+              "title": "Restauration du Pont des Arts",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "Budget participatif",
+              "title": "Restauration du Pont des Arts",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "Budget participatif",
+              "title": "Restauration du Pont des Arts",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            }
+          ]
         }
       },
       "act" : {

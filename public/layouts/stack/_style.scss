@@ -16,6 +16,15 @@
       background-color: $gray242;
       padding: 40px 0;
     }
+
+    &.layout-separate-after {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $gray204;
+    }
+
+    &.layout-small-top-margin {
+      margin-top: 30px;
+    }
   }
 
   .layout-wrapper {

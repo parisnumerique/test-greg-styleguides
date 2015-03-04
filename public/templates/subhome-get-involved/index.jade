@@ -9,6 +9,7 @@ append content
   include ../../modules/hub-heading/hub-heading
   include ../../modules/breadcrumbs/breadcrumbs
   include ../../modules/heading/heading
+  include ../../modules/get-involved-list/get-involved-list
   include ../../modules/links-group/links-group
   include ../../modules/news-list/news-list
   include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
@@ -21,7 +22,7 @@ append content
     +hub-heading(data.heading)
 
 append content
-  .layout-content
+  .layout-content.layout-separate-after.layout-small-top-margin
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
@@ -29,6 +30,7 @@ append content
   .layout-content
     .layout-wrapper
       +heading(data.advice.heading)
+      +get-involved-list(data.advice.get_involved_list)
 
 append content
   .layout-content.gray-background
