@@ -4,7 +4,8 @@ mixin header(opts)
       a#logo(href='/')
         span Logo
       .entry
-        h1= opts.title
+        a(href='/')
+          h1= opts.title
         nav.languages
           ul
             each lang in opts.languages
