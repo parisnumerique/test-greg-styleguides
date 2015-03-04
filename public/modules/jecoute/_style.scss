@@ -73,8 +73,13 @@
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
+  &.vertical h2 {
+    border-bottom: none;
+  }
+
   .inner {
-    padding: 10px 0;
+    padding: 10px 0 20px 0;
+    overflow: hidden;
   }
 
   .user{
@@ -84,4 +89,8 @@
   .button {
     margin-top: 10px;
   }
+}
+
+.vertical + .jecoute.vertical {
+  border-top: 1px solid rgba(255,255,255,0.2);
 }

@@ -1,5 +1,5 @@
 mixin newsletter(opts)
-  .newsletter
+  .newsletter(class="#{opts.modifiers}")
     .inner
       h2= opts.titre
       p= opts.text
