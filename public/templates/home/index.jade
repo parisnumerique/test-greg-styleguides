@@ -8,8 +8,8 @@ include ../../modules/jumbotron/jumbotron
 include ../../modules/jecoute/jecoute
 include ../../modules/municipal-team/municipal-team
 include ../../modules/news-list/news-list
-include ../../modules/notice/notice
 include ../../modules/newsletter/newsletter
+include ../../modules/notice/notice
 include ../../modules/que-faire/que-faire
 include ../../modules/quick-access/quick-access
 include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
@@ -280,20 +280,4 @@ append content
 
 append content
   .layout-content.layout-content-adjacent
-    +footer({
-      "logo": {
-        "href": "#",
-        "src": "../../modules/footer/mairie-de-paris.png",
-        "alt": "Logo de la Mairie de Paris"
-      },
-      "items": [
-        {"href": "#", "text": "Visit Paris", "modifiers": "footer-link-em"},
-        {"href": "#", "text": "FAQ"},
-        {"href": "#", "text": "Newsletter"},
-        {"href": "#", "text": "Contact"},
-        {"href": "#", "text": "Presse"},
-        {"href": "#", "text": "Mentions légales"},
-        {"href": "#", "text": "Crédits"},
-        {"href": "#", "text": "Accessibilité"}
-      ]
-    })
+    +footer(public.modules.footer._data.index.defaults)
