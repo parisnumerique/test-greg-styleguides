@@ -2,7 +2,7 @@ include ../news-card/news-card
 
 mixin news-list(opts)
   if opts.modifiers && opts.modifiers.indexOf("news-cards") != -1
-    if opts.modifiers && opts.modifiers.indexOf("large-first-child") != -1
+    if opts.modifiers.indexOf("large-first-child") != -1
       .news-list(class=opts.modifiers)
         each item, index in opts.items.slice(0, 5)
           if index === 0
