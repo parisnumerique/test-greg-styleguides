@@ -1,11 +1,15 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/cross-content/cross-content
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
+include ../../modules/jecoute/jecoute
+include ../../modules/newsletter/newsletter
 include ../../modules/news-list/news-list
+include ../../modules/social/social
 
 append content
   +header(public.modules.header._data.index.defaults)
@@ -29,3 +33,18 @@ append content
     .layout-wrapper
       +heading(data.news.heading)
       +news-list(data.news.news)
+
+append content
+  .layout-content
+    +cross-content(data.cross_content)
+
+append content
+  .layout-content.blue-background
+    .layout-wrapper
+      +heading(data.connected.heading)
+      +newsletter(public.modules.newsletter._data.index.defaults)
+      +jecoute(public.modules.jecoute._data.index.defaults)
+      +social(public.modules.social._data.index.defaults)
+append content
+  .layout-content.layout-content-adjacent
+    +footer(public.modules.footer._data.index.defaults)
