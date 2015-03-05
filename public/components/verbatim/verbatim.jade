@@ -1,0 +1,10 @@
+mixin verbatim(opts)
+  .verbatim
+    blockquote.verbatim-text(cite=opts.cite)= opts.quote
+    .verbatim-separate
+    .verbatim-author= opts.author
+    .verbatim-function= opts.function
+    a.verbatim-social(href=opts.social)
+
+ 
+

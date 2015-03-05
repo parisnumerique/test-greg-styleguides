@@ -1,0 +1,11 @@
+{
+  "index": {
+    "defaults": {
+      "cite": "source de la citation",
+      "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+      "author": "Bruno Julliard,",
+      "function": "premier adjoint à la Maire de Paris",
+      "social": "#"
+    }
+  }
+}
