@@ -48,7 +48,8 @@ lsg.highlight = function () {
     var $module = $(module);
     var node = tpl.clone();
     var code = $.trim($module.html());
-    node.find('code').text(code);
+    node.find('code').text(html_beautify(code, {
+    }));
     $module.next('.language-jade').after(node);
   });
 

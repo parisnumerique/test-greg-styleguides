@@ -165,3 +165,7 @@ pre.prism[class*="language-"] {
     display: block;
   }
 }
+
+pre.language-markup > code[data-language]::before {
+  content: "html";
+}
