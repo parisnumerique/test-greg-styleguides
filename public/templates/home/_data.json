@@ -158,7 +158,7 @@
         }
       },
       "que_faire": {
-        "image": "../../modules/que-faire/que-faire-back-img.jpg",
+        "background": "../../modules/que-faire/que-faire-back-img.jpg",
         "logo": {
           "href": "#",
           "image": "../../modules/que-faire/que-faire-img.png"
@@ -200,27 +200,27 @@
           "items": [
             {
               "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
-              "text": "@texte"
+              "text": "@user"
             },
             {
               "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
-              "text": "@texte"
+              "text": "@user"
             },
             {
               "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
-              "text": "@texte"
+              "text": "@user"
             },
             {
               "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
-              "text": "@texte"
+              "text": "@user"
             },
             {
               "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
-              "text": "@texte"
+              "text": "@user"
             },
             {
               "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
-              "text": "@texte"
+              "text": "@user"
             }
           ]
         }
