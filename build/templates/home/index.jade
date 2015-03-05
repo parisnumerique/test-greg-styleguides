@@ -1,0 +1,44 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/footer/footer
+include ../../modules/get-involved/get-involved
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jumbotron/jumbotron
+include ../../modules/jecoute/jecoute
+include ../../modules/municipal-team/municipal-team
+include ../../modules/news-list/news-list
+include ../../modules/newsletter/newsletter
+include ../../modules/notice/notice
+include ../../modules/que-faire/que-faire
+include ../../modules/quick-access/quick-access
+include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/sections-list/sections-list
+include ../../modules/social/social
+
+append content
+  +notice(data.notice)
+    a(href="#") Visiting Paris ? Plan your trip
+
+append content
+  +header(public.modules.header._data.index.defaults)
+
+append content
+  .layout-content
+    +quick-access(data.quick_access)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.sections.heading)
+      +sections-list(data.sections.list)
+
+append content
+  .layout-content
+    +jumbotron(data.jumbotron)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.news.heading)
+      +news-list(data.news.list)
