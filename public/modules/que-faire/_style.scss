@@ -29,24 +29,32 @@
       @include span(4 of 12);
       background: url(../modules/que-faire/hachure.svg) $white repeat top left;
       border: none;
+      display: table;
+      height: 80px;
+      overflow: hidden;
       padding: 0;
       white-space: normal;
 
       &:last-child {@include last;}
 
-      &:after {background-color: $gray242;}
-      &:hover .button-que-faire-text {color: $red-que-faire;}
-    }
+      &:after {
+        border-radius: 5px;
+        background-color: $gray242;
+      }
 
-    .button-que-faire-text {
-      color:#333;
-      display: block;
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 20px;
-      padding: 18px 50px 24px 20px;
-      text-align: left;
-      text-decoration: none;
+      > span {
+        color: $gray51;
+        display: table-cell;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 10px 50px 10px 20px;
+        text-align: left;
+        text-decoration: none;
+        transition: color 0.35s ease;
+        vertical-align: middle;
+      }
+      &:hover > span {color: $red-que-faire;}
     }
   }
 }
