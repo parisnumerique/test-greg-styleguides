@@ -68,7 +68,7 @@
   }
 }
 
-
-header + .layout-content .hub-heading{
+// Keep space for the header, when the jumbotron is the first element after it
+header + .layout-content .hub-heading {
   margin-top: -80px;
 }
