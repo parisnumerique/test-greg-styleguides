@@ -48,7 +48,6 @@
   border: 1px solid $gray204;
   border-radius: 50%;
   color: $gray204;
-  cursor: pointer;
   display: inline-block;
   margin-top: 10px;
   padding: 8px 10px;
@@ -58,5 +57,11 @@
     @extend %icon-font;
     @extend %icon-twitter;
     font-size: 1.4em;
+  }
+
+  &:hover {
+    background-color: $blue3;
+    color: white;
+    transition: all 0.1s ease;
   }
 }
