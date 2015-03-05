@@ -42,31 +42,3 @@ append content
     .layout-wrapper
       +heading(data.news.heading)
       +news-list(data.news.list)
-
-append content
-  .layout-content
-    .layout-wrapper
-      +que-faire(data.que_faire)
-
-append content
-  .layout-content.gray-background
-    +get-involved(data.get_involved)
-
-append content
-  .layout-right-col
-    .layout-wrapper
-      .layout-content
-        +heading(data.gallery.heading)
-        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
-      aside.layout-aside.color-secondary-background
-        +newsletter(public.modules.newsletter._data.index.defaults)
-        +jecoute(public.modules.jecoute._data.index.defaults)
-        +social(public.modules.social._data.index.defaults)
-
-append content
-  .layout-content
-    +municipal-team(data.municipal_team)
-
-append content
-  .layout-content.layout-content-adjacent
-    +footer(public.modules.footer._data.index.defaults)
