@@ -1,0 +1,9 @@
+include sharelines
+include ../../helpers/code
+
++sharelines(defaults)
+
++code({language: "jade"}).
+  include sharelines
+
+  +sharelines(#{JSON.stringify(defaults, null, 2)})
