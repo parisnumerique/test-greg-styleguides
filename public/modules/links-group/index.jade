@@ -2,14 +2,18 @@ include links-group
 include ../../helpers/code
 
 h2 Standard (rose)
-+links-group(defaults)
+
+.lsg-module
+  +links-group(defaults)
 +code({language: "jade"}).
   include links-group
 
   +links-group(#{JSON.stringify(defaults, null, 2)})
 
 h2 Bleu
-+links-group(blue)
+
+.lsg-module
+  +links-group(blue)
 +code({language: "jade"}).
   include links-group
 
