@@ -10,6 +10,8 @@
     .heading-links > a {
       border-bottom-color: $white;
       color: $white;
+      &:after {background-color: $color-tertiary;}
+      &:hover {color: $color-tertiary;}
     }
   }
 }
@@ -28,14 +30,30 @@
   font-size: 15px;
 
   > a {
-    border-bottom: 1px solid $gray153;
+    border-bottom: 1px solid $gray77;
     color: $gray77;
     display: inline-block;
     line-height: 20px;
+    padding-bottom: 2px;
+    position: relative;
     text-decoration: none;
+    transition: all 0.35s ease;
+
+    &:after {
+      background-color: $color-primary;
+      bottom: -1px;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transition: width 0.35s ease;
+      width: 0;
+    }
 
     &:hover {
-      border: 0
+      color: $color-primary;
+      &:after {width: 100%;}
     }
   }
 }
