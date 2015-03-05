@@ -36,7 +36,7 @@ lsg.nav = function(){
 };
 
 lsg.highlight = function () {
-  var modules = $(".lsg-module");
+  var modules = $(".lsg-module, .lsg-component");
   var tpl = $('<pre class="prism language-markup"><code></code></pre>');
 
   modules.each(function(i, module) {
@@ -74,9 +74,12 @@ lsg.location = function() {
  */
 
 lsg.init = function () {
-  lsg.nav();
+
+  if ($('body').hasClass('lsg')) {
+    lsg.nav();
+    lsg.location();
+  }
   lsg.highlight();
-  lsg.location();
 };
 
 document.addEventListener("DOMContentLoaded", lsg.init);
