@@ -7,11 +7,12 @@ var throttle = require('lodash.throttle');
 var throttledUpdate = throttle(updatePosition, 100);
 var previousPosition = 0;
 
-function updatePosition () {
+function updatePosition(e) {
   var $document = $document || $(document);
   var $searchEl = $('#quick-search');
 
   var $topNotice = $topNotice || $('.notice.top');
+  PubSub.publish('scroll', e);
 
   if($searchEl.length) {
     if($document.scrollTop() > $searchEl.offset().top && previousPosition < $searchEl.offset().top){
