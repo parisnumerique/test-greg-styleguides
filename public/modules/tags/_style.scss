@@ -6,9 +6,6 @@
 
   li {
     float: left;
-    .tag:hover {
-      color: $color-primary;
-    }
   }
 
 
@@ -18,6 +15,9 @@
 
   a {
     color: inherit;
+    &:hover {
+      color: $color-primary;
+    }
   }
 
 }

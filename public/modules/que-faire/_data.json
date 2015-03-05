@@ -1,7 +1,7 @@
 {
   "index": {
     "defaults": {
-      "image": "que-faire-back-img.jpg",
+      "background": "que-faire-back-img.jpg",
       "logo": {
         "href": "#",
         "image": "que-faire-img.png"

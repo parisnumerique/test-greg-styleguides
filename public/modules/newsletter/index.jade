@@ -2,3 +2,7 @@ include newsletter
 include ../../helpers/code
 
 +newsletter(defaults)
++code({language: "jade"}).
+  include newsletter
+
+  +newsletter(#{JSON.stringify(defaults, null, 2)})

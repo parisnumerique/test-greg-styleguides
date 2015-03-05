@@ -1,38 +1,16 @@
 include links-group
+include ../../helpers/code
 
+h2 Standard (rose)
 +links-group(defaults)
++code({language: "jade"}).
+  include links-group
 
-+links-group({
-    "background": "links-group-image.jpg",
-    "title": "Titre du groupe de lien bleu",
-    "imgmodifiers":"links-group-header-blue",
-    "items": [
-      {
-        "href": "#",
-        "text": "Bouton white blue",
-        "modifiers": "links-group-button-blue"
-      },
-      {
-        "href": "#",
-        "text": "Bouton white blue",
-        "modifiers": "links-group-button-blue"
-      },
-      {
-        "href": "#",
-        "text": "Bouton white blue",
-        "modifiers": "links-group-button-blue"
-      },
-      {
-        "href": "#",
-        "text": "Bouton gray blue",
-        "modifiers": "backgray links-group-button-blue"
-      },
-      {
-        "href": "#",
-        "text": "Bouton gray blue",
-        "modifiers": "backgray links-group-button-blue"
-     } 
-    ]
-  })
+  +links-group(#{JSON.stringify(defaults, null, 2)})
 
+h2 Bleu
++links-group(blue)
++code({language: "jade"}).
+  include links-group
 
+  +links-group(#{JSON.stringify(blue, null, 2)})

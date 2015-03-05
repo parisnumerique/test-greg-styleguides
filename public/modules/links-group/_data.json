@@ -37,6 +37,38 @@
           "modifiers": "backgray links-group-button-red"
         }
       ]
+    },
+    "blue": {
+      "background": "links-group-image.jpg",
+      "title": "Titre du groupe de lien bleu",
+      "imgmodifiers":"links-group-header-blue",
+      "items": [
+        {
+          "href": "#",
+          "text": "Bouton white blue",
+          "modifiers": "links-group-button-blue"
+        },
+        {
+          "href": "#",
+          "text": "Bouton white blue",
+          "modifiers": "links-group-button-blue"
+        },
+        {
+          "href": "#",
+          "text": "Bouton white blue",
+          "modifiers": "links-group-button-blue"
+        },
+        {
+          "href": "#",
+          "text": "Bouton gray blue",
+          "modifiers": "backgray links-group-button-blue"
+        },
+        {
+          "href": "#",
+          "text": "Bouton gray blue",
+          "modifiers": "backgray links-group-button-blue"
+        }
+      ]
     }
   }
 }

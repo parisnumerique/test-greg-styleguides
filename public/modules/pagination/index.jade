@@ -1,12 +1,23 @@
 include pagination
 include ../../helpers/code
 
+h2 Standard
 +pagination(defaults)
++code({language: "jade"}).
+  include pagination
 
-br
+  +pagination(#{JSON.stringify(defaults, null, 2)})
 
+h2 Première page
 +pagination(first)
++code({language: "jade"}).
+  include pagination
 
-br
+  +pagination(#{JSON.stringify(first, null, 2)})
 
+h2 Dernière page
 +pagination(last)
++code({language: "jade"}).
+  include pagination
+
+  +pagination(#{JSON.stringify(last, null, 2)})

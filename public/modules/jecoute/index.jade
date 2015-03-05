@@ -2,3 +2,7 @@ include jecoute
 include ../../helpers/code
 
 +jecoute(defaults)
++code({language: "jade"}).
+  include jecoute
+
+  +jecoute(#{JSON.stringify(defaults, null, 2)})
