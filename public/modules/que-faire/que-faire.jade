@@ -4,5 +4,5 @@ mixin que-faire(opts)
       span Que faire à Paris
     .que-faire-content
       each item in opts.items
-        a.button.button-que-faire
-          .button-que-faire-text(href=item.href)= item.text
+        a.button.button-que-faire(href=item.href)
+          span= item.text
