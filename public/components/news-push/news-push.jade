@@ -1,0 +1,18 @@
+mixin news-push(opts)
+  .news-push
+    .actu
+      .after
+      img(src="#{opts.img.url}", alt="#{opts.img.alt}" width="260px" height="160px")
+      .content
+        h3: span= opts.title
+        p
+          a(href="#{opts.url}")= opts.text
+          a.next(href="#{opts.url}")= opts.follow
+    .link
+      a(href="#{opts.link.url}")
+        = opts.link.text
+        span.icon.icon-arrow-light-right
+
+
+
+
