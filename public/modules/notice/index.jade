@@ -8,9 +8,9 @@ h2 Standard
 
 h2 Fermable
 +notice(closable)
-+notice({"modifiers": "blue", "closable": true})
++notice({"modifiers": ["blue"], "closable": true})
   | Texte de la notice
-+notice({"modifiers": "white", "closable": true})
++notice({"modifiers": ["white"], "closable": true})
   | Texte de la notice
 
 h2 Contenant un lien
@@ -18,43 +18,43 @@ h2 Contenant un lien
   a(href='#') Texte de la notice
 
 h2 Avec une icône alert
-+notice({"modifiers": "alert"})
++notice({"modifiers": ["alert"]})
   | Texte de la notice
-+notice({"modifiers": "alert white"})
++notice({"modifiers": ["alert", "white"]})
   | Texte de la notice
 
 h2 Avec une icône au choix
 +notice({})
   i.icon-bus
   | Texte de la notice
-+notice({"modifiers": "white"})
++notice({"modifiers": ["white"]})
   i.icon-bus
   | Texte de la notice
 
 h2 Couleurs de fond
-+notice({"modifiers": "blue"})
++notice({"modifiers": ["blue"]})
   | Texte de la notice
-+notice({"modifiers": "orange"})
++notice({"modifiers": ["orange"]})
   | Texte de la notice
-+notice({"modifiers": "yellow"})
++notice({"modifiers": ["yellow"]})
   | Texte de la notice
-+notice({"modifiers": "white"})
++notice({"modifiers": ["white"]})
   | Texte de la notice
 
 h2 Couleurs de fond + transparence
-+notice({"modifiers": "transparent"})
++notice({"modifiers": ["transparent"]})
   | Texte de la notice
-+notice({"modifiers": "blue transparent"})
++notice({"modifiers": ["blue", "transparent"]})
   | Texte de la notice
-+notice({"modifiers": "orange transparent"})
++notice({"modifiers": ["orange", "transparent"]})
   | Texte de la notice
-+notice({"modifiers": "yellow transparent"})
++notice({"modifiers": ["yellow", "transparent"]})
   | Texte de la notice
-+notice({"modifiers": "white transparent"})
++notice({"modifiers": ["white", "transparent"]})
   | Texte de la notice
 
 h2 Couleurs + image de fond
-+notice({"modifiers": "orange buildings"})
++notice({"modifiers": ["orange", "buildings"]})
   | Texte de la notice
-+notice({"modifiers": "blue buildings"})
++notice({"modifiers": ["blue", "buildings"]})
   | Texte de la notice

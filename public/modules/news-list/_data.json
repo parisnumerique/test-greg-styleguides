@@ -6,7 +6,7 @@
       ]
     },
     "three_news": {
-      "modifiers": "news-cards",
+      "modifiers": ["news-cards"],
       "items": [
         {
           "href": "#",
@@ -29,7 +29,7 @@
       ]
     },
     "five_news": {
-      "modifiers": "news-cards large-first-child",
+      "modifiers": ["news-cards", "large-first-child"],
       "items": [
         {
           "href": "#",
@@ -64,7 +64,7 @@
       ]
     },
     "five_news_secondary": {
-      "modifiers": "news-cards large-first-child secondary",
+      "modifiers": ["news-cards", "large-first-child secondary"],
       "items": [
         {
           "href": "#",

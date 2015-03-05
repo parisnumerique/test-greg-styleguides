@@ -8,7 +8,7 @@
           "button": {
             "href": "#",
             "text": "Voir la fiche du projet",
-            "modifiers": "marker"
+            "modifiers": ["marker"]
           }
         },
         {

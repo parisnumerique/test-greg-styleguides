@@ -4,69 +4,69 @@
       "background": "links-group-image.jpg",
       "title": "Titre du groupe de lien",
       "subtitle": "subtitle du groupe de lien",
-      "imgmodifiers":"links-group-header-red",
+      "imgmodifiers": ["links-group-header-red"],
       "items": [
         {
           "href": "#",
           "text": "Bouton white red",
-          "modifiers": "links-group-button-red"
+          "modifiers": ["links-group-button-red"]
         },
         {
           "href": "#",
           "text": "Bouton white red",
-          "modifiers": "links-group-button-red"
+          "modifiers": ["links-group-button-red"]
         },
         {
           "href": "#",
           "text": "Bouton white red",
-          "modifiers": "links-group-button-red"
+          "modifiers": ["links-group-button-red"]
         },
         {
           "href": "#",
           "text": "Bouton gray red",
-          "modifiers": "backgray links-group-button-red"
+          "modifiers": ["backgray", "links-group-button-red"]
         },
         {
           "href": "#",
           "text": "Bouton gray red",
-          "modifiers": "backgray links-group-button-red"
+          "modifiers": ["backgray", "links-group-button-red"]
         },
         {
           "href": "#",
           "text": "Bouton gray red",
-          "modifiers": "backgray links-group-button-red"
+          "modifiers": ["backgray", "links-group-button-red"]
         }
       ]
     },
     "blue": {
       "background": "links-group-image.jpg",
       "title": "Titre du groupe de lien bleu",
-      "imgmodifiers":"links-group-header-blue",
+      "imgmodifiers": ["links-group-header-blue"],
       "items": [
         {
           "href": "#",
           "text": "Bouton white blue",
-          "modifiers": "links-group-button-blue"
+          "modifiers": ["links-group-button-blue"]
         },
         {
           "href": "#",
           "text": "Bouton white blue",
-          "modifiers": "links-group-button-blue"
+          "modifiers": ["links-group-button-blue"]
         },
         {
           "href": "#",
           "text": "Bouton white blue",
-          "modifiers": "links-group-button-blue"
+          "modifiers": ["links-group-button-blue"]
         },
         {
           "href": "#",
           "text": "Bouton gray blue",
-          "modifiers": "backgray links-group-button-blue"
+          "modifiers": ["backgray links-group-button-blue"]
         },
         {
           "href": "#",
           "text": "Bouton gray blue",
-          "modifiers": "backgray links-group-button-blue"
+          "modifiers": ["backgray links-group-button-blue"]
         }
       ]
     }

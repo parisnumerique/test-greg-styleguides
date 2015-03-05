@@ -16,7 +16,7 @@
         "href": "#",
         "text": "Lien"
       },
-      "modifiers": "white"
+      "modifiers": ["white"]
     }
   }
 }
