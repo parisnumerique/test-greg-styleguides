@@ -1,0 +1,9 @@
+include breadcrumbs
+include ../../helpers/code
+
+.lsg-module
+  +breadcrumbs(defaults)
++code({language: "jade"}).
+  include breadcrumbs
+
+  +breadcrumbs(#{JSON.stringify(defaults, null, 2)})

@@ -1,9 +1,0 @@
-mixin accordeon(opts)
-  #accordion.composant.composant-accordeon(role='tablist', aria-multiselectable='true')
-    each item in opts.items
-      .accordeon-item.panel
-        div(role='tab' id='#{item.headingId}')
-          a.accordeon-item-title(data-toggle='collapse' data-parent='#accordion' href='##{item.slug}' aria-expanded='true' aria-controls='collapseOne')= item.titre
-        .collapse.accordeon-item-content(role='tabpanel' aria-labelledby='#{item.headingId}' id="#{item.slug}")
-          = item.contenu
-

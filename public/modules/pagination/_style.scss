@@ -1,0 +1,92 @@
+// heavily inspired by bootstrap pagination CSS
+// https://github.com/twbs/bootstrap/blob/master/less/pagination.less
+
+.pagination {
+
+  > ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    > li {
+      display: inline-block;
+      > a,
+      > span {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        margin-left: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 18px;
+        text-align: center;
+        background: $gray242;
+        line-height: 40px;
+        color: $black;
+      }
+      &:first-child {
+        > a,
+        > span {
+          margin-left: 0;
+        }
+      }
+
+      &.previous, &.next {
+        > a,
+        > span {
+          background: $color-primary;
+          color: $white;
+        }
+      }
+
+      &.previous {
+        > a,
+        > span {
+          margin-right: 25px;
+        }
+      }
+
+      &.next {
+        > a,
+        > span {
+          margin-left: 25px;
+        }
+      }
+    }
+
+    > li > a,
+    > li > span {
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $color-secondary;
+      }
+    }
+
+    > .active > a,
+    > .active > span {
+      &,
+      &:hover,
+      &:focus {
+        z-index: 2;
+        background: $color-secondary;
+        color: $white;
+        cursor: default;
+      }
+    }
+
+    > .disabled {
+      > span,
+      > span:hover,
+      > span:focus,
+      > a,
+      > a:hover,
+      > a:focus {
+        background-color: transparentize($gray242, 0.8);
+        color: $gray128;
+        cursor: default;
+      }
+    }
+  }
+}

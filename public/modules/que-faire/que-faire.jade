@@ -1,0 +1,8 @@
+mixin que-faire(opts)
+  .que-faire(style='background-image: url(#{opts.background});')
+    a.logo(href=opts.logo.href style='background-image: url(#{opts.logo.image});')
+      span Que faire à Paris
+    .que-faire-content
+      each item in opts.items
+        a.button.button-que-faire
+          .button-que-faire-text(href=item.href)= item.text

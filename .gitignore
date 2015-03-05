@@ -22,3 +22,5 @@ Thumbs.db
 
 
 www
+node_modules
+public/javascript/paris.js

@@ -1,0 +1,9 @@
+include que-faire
+include ../../helpers/code
+
+.lsg-module
+  +que-faire(defaults)
++code({language: "jade"}).
+  include que-faire
+
+  +que-faire(#{JSON.stringify(defaults, null, 2)})

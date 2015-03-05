@@ -1,0 +1,22 @@
+{
+  "index": {
+    "defaults": {
+      "title": "Intertitre"
+    },
+    "with_link": {
+      "title": "Intertitre",
+      "link": {
+        "href": "#",
+        "text": "Lien"
+      }
+    },
+    "white": {
+      "title": "Intertitre",
+      "link": {
+        "href": "#",
+        "text": "Lien"
+      },
+      "modifiers": ["white"]
+    }
+  }
+}

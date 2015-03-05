@@ -1,9 +1,0 @@
-{
-  "index": {
-    "defaults": {
-      "image": "image.jpg",
-      "titre": "Titre",
-      "texte": "texte"
-    }
-  }
-}

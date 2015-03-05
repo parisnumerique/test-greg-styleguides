@@ -1,0 +1,176 @@
+include notice
+include ../../helpers/code
+
+h2 Standard
+.lsg-module
+  +notice(defaults)
++code.
+  include notice
+  +notice(#{JSON.stringify(defaults, null, 2)})
+
+
+// You can also pass the block as a parameter, named "block"
+
+h2 Fermable
+.lsg-module
+  +notice(closable)
++code.
+  include notice
+  +notice(#{JSON.stringify(closable, null, 2)})
+
+
+.lsg-module
+  +notice({"modifiers": ["blue"], "closable": true})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["blue"], "closable": true})
+
+
+.lsg-module
+  +notice({"modifiers": ["white"], "closable": true})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["white"], "closable": true})
+
+h2 Contenant un lien
+.lsg-module
+  +notice({})
+    a(href='#') Texte de la notice
++code.
+  include notice
+  +notice({})
+    a(href='#') Texte de la notice
+
+
+h2 Avec une icône alert
+.lsg-module
+  +notice({"modifiers": ["alert"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["alert"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["alert", "white"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["alert", "white"]})
+    | Texte de la notice
+
+
+h2 Avec une icône au choix
+.lsg-module
+  +notice({})
+    i.icon-bus
+    | Texte de la notice
++code.
+  include notice
+  +notice({})
+    i.icon-bus
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["white"]})
+    i.icon-bus
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["white"]})
+    i.icon-bus
+    | Texte de la notice
+
+
+h2 Couleurs de fond
+.lsg-module
+  +notice({"modifiers": ["blue"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["blue"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["orange"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["orange"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["yellow"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["yellow"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["white"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["white"]})
+    | Texte de la notice
+
+h2 Couleurs de fond + transparence
+.lsg-module
+  +notice({"modifiers": ["transparent"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["transparent"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["blue", "transparent"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["blue", "transparent"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["orange", "transparent"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["orange", "transparent"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["yellow", "transparent"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["yellow", "transparent"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["white", "transparent"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["white", "transparent"]})
+    | Texte de la notice
+
+h2 Couleurs + image de fond
+.lsg-module
+  +notice({"modifiers": ["orange", "buildings"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["orange", "buildings"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["blue", "buildings"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["blue", "buildings"]})
+    | Texte de la notice

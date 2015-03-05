@@ -1,0 +1,17 @@
+include header
+include ../../helpers/code
+
+.lsg-module(style="margin-top: 100px")
+  +header(defaults)
+
++code().
+  include header
+
+  +header(#{JSON.stringify(defaults, null, 2)})
+
+p.
+  The header behaves depending on the scroll position <br>
+  It is fixed to the top if there's no `.notice.top` <br>
+  and then the nav changes when the scroll pass the
+  floating line
+

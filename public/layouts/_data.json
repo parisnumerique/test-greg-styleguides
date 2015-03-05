@@ -1,6 +1,8 @@
 {
   "layouts": [
     "stack",
-    "left-col"
+    "half-col",
+    "left-col",
+    "right-col"
   ]
 }

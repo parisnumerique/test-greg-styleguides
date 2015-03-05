@@ -1,0 +1,45 @@
+.newsletter {
+  max-width: 360px;
+  background-color: $color-secondary;
+  color: $white;
+
+  h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  &:first-child h2 {
+    margin-top: 0;
+  }
+
+  &.vertical h2 {
+    border-bottom: none;
+  }
+
+  .inner {
+    padding: 10px 0 20px 0;
+    overflow: hidden;
+  }
+
+  & .inner > p,
+  & .inner > a {
+    font-size: 14px;
+  }
+
+  .button {
+    height: 45px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    line-height: 43px;
+  }
+
+  input {
+    color: $color-secondary;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.vertical + .newsletter.vertical {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}

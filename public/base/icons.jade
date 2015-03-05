@@ -1,0 +1,16 @@
+h1= title
+
+p Les icônes suivantes sont disponibles sous la forme d'une webfont. Elles sont ainsi vectorielles et peuvent être stylées en CSS (couleur, taille...)
+
+p
+  | Elles peuvent être intégrées en ajoutant une simple classe&nbsp;
+  code .icon-*
+  |  à un élément.
+
+table.lsg-icons
+  each icon in icons
+    tr
+      th
+        i(class="icon-#{icon}")
+      td
+        code .icon-#{icon}

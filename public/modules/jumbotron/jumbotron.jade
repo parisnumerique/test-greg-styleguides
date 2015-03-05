@@ -1,0 +1,5 @@
+mixin jumbotron(opts)
+  a.jumbotron(href='#', style='background-image: url(#{opts.image});')
+    .layout-wrapper.jumbotron-content.layout-outside
+        h2.jumbotron-title= opts.title
+        .jumbotron-text= opts.text

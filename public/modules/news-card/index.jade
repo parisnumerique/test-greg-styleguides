@@ -1,0 +1,10 @@
+include news-card
+include ../../helpers/code
+
+div(style="margin-top: 50px; max-width: 400px")
+  .lsg-module
+    +news-card(defaults)
+  +code({language: "jade"}).
+    include news-card
+
+    +news-card(#{JSON.stringify(defaults, null, 2)})

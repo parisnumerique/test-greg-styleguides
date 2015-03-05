@@ -1,30 +1,71 @@
+// Grid variables
+$grid-width: 1100px;
+
+// Libraries
+@import "../../node_modules/susy/sass/susy";
+$susy: (
+  columns: 16,
+  column-width: 50,
+  container: $grid-width,
+  gutters: .4,
+  gutter-position: after
+);
 
 // Base
-@import "../base/_normalize";
-@import "../base/_couleurs";
-@import "../base/_typographies";
+@import "../base/_colors";
 @import "../base/_defaults";
+@import "../base/_fonts";
+@import "../base/_forms";
+@import "../base/_icons";
+@import "../base/_mixins";
+@import "../base/_normalize";
+@import "../base/_normalize-opentype";
 
 // Modules
-@import "../modules/a-la-une/_style";
-@import "../modules/bloc-actu/_style";
-@import "../modules/bouton/_style";
-@import '../modules/bouton-que-faire/_style';
-@import "../modules/bouton-rubrique/_style";
-@import "../modules/fil-ariane/_style";
-@import "../modules/intertitre/_style";
-@import "../modules/liste-rubriques/_style";
-@import "../modules/maire-adjoints/_style";
-@import "../modules/liste-ancres/_style";
+@import "../modules/anchors-list/_style";
+@import "../modules/breadcrumbs/_style";
+@import "../modules/button/_style";
+@import "../modules/document-heading/_style";
+@import "../modules/footer/_style";
+@import "../modules/get-involved/_style";
+@import "../modules/get-involved-list/_style";
+@import "../modules/header/_style";
+@import "../modules/heading/_style";
+@import "../modules/hub-heading/_style";
+@import "../modules/jecoute/_style";
+@import "../modules/jumbotron/_style";
+@import "../modules/links-group/_style";
+@import "../modules/municipal-team/_style";
+@import "../modules/news-card/_style";
+@import "../modules/news-list/_style";
+@import "../modules/notice/_style";
+@import "../modules/newsletter/_style";
+@import "../modules/pagination/_style";
+@import "../modules/pictures-gallery-ugc/_style";
+@import "../modules/que-faire/_style";
+@import "../modules/quick-access/_style";
+@import "../modules/sections-list/_style";
+@import "../modules/social/_style";
+@import "../modules/tags/_style";
+@import "../modules/search-push/_style";
+@import "../modules/video/_style";
 
-
-// Composants
-@import "../composants/_style";
-@import "../composants/accordeon/_style";
-@import "../composants/image/_style";
-@import "../composants/liens/_style";
-@import "../composants/texte/_style";
+// Components
+@import "../components/_style";
+@import "../components/accordion/_style";
+@import "../components/buttons/_style";
+@import "../components/faq/_style";
+@import "../components/image/_style";
+@import "../components/links/_style";
+@import "../components/news-push/_style";
+@import "../components/sharelines/_style";
+@import "../components/table/_style";
+@import "../components/text/_style";
+@import "../components/transportation/_style";
+@import "../components/verbatim/_style";
 
 // Layouts
 @import "../layouts/stack/_style";
+@import "../layouts/half-col/_style";
 @import "../layouts/left-col/_style";
+@import "../layouts/right-col/_style";

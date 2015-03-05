@@ -1,0 +1,40 @@
+.municipal-team {
+  background-color: $color-primary;
+	padding: 40px 0 50px;
+}
+
+.municipal-team-img {
+	background-repeat:no-repeat;
+  display: block;
+	height: auto;
+	max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.municipal-team-content {
+  padding-left: 2px;
+}
+
+.municipal-team-intro,
+.municipal-team-text {
+  color: $white;
+  display: inline-block;
+  margin: 0;
+}
+
+.municipal-team-intro {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-right: 50px;
+  max-width: 320px;
+  vertical-align: top;
+}
+
+.municipal-team-text {
+  border-left: 1px solid transparentize($white, 0.8);
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 430px;
+  padding-left: 20px;
+}

@@ -1,0 +1,9 @@
+include quick-access
+include ../../helpers/code
+
+.lsg-module
+  +quick-access(defaults)
++code({language: "jade"}).
+  include quick-access
+
+  +quick-access(#{JSON.stringify(defaults, null, 2)})

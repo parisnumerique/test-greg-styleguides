@@ -1,0 +1,22 @@
+.search-push {
+  background: url(../modules/search-push/search-push-img-back.svg) $yellow no-repeat ;
+  background-position: 92% 100%;
+  min-height: 160px;
+  overflow: auto;
+  width: 100%;
+}
+
+.search-push-text {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 40px 30px 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.search-push-wrapper-link{
+  margin: 0;
+  padding: 0 0 34px;
+  text-align: center;
+}

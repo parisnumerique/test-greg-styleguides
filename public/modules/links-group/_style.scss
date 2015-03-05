@@ -1,0 +1,107 @@
+.links-group{
+  @include container();
+}
+
+// links group header
+.links-group-header {
+  color: white;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 320px;
+  position: relative;
+  text-align: center;
+
+  .links-group-title,
+  .links-group-subtitle {
+    position: relative;
+    z-index: 2;
+  }
+
+  .links-group-title {  
+    font-size: 36px;
+    font-weight: 700;
+    padding: 110px 0 14px;
+  } 
+
+  .link-group-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+// filtre couleur de l'image
+
+.links-group-header-red:after {background-color: rgba($red2, 0.7);}
+.links-group-header-blue:after {background-color: rgba($blue3, 0.7);}
+
+// links group button
+.links-group-button-red,
+.links-group-button-blue {
+  @include gallery(4 of 12);
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: $gray51;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-top: 20px;
+  padding: 0 80px 0 22px;
+  position: relative;
+  text-decoration: none;
+
+  .links-group-text {
+    display: table-cell;
+    height: 60px;
+    vertical-align: middle;
+  }
+
+  .links-group-icon {
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    top: 20px;
+
+    &:after {
+      @extend %icon-font;
+      @extend %icon-arrow-right;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      color: white;
+      float: right;
+      font-size: 1em;
+      padding: 4px 4px 5px 5px;
+    }
+  }
+}
+
+// fond gris des buttons
+.backgray {
+  background-color:$gray242;
+}
+
+//rollover
+.links-group-button-red:hover {
+  background-color: $red2;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.links-group-button-blue:hover {
+  background-color: $blue3;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+

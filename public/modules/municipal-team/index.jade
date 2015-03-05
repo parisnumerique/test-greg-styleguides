@@ -1,0 +1,9 @@
+include municipal-team
+include ../../helpers/code
+
+.lsg-module
+  +municipal-team(defaults)
++code({language: "jade"}).
+  include municipal-team
+
+  +municipal-team(#{JSON.stringify(defaults, null, 2)})

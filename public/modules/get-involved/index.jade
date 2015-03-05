@@ -1,0 +1,9 @@
+include get-involved
+include ../../helpers/code
+
+.lsg-module
+  +get-involved(defaults)
++code({language: "jade"}).
+  include get-involved
+
+  +get-involved(#{JSON.stringify(defaults, null, 2)})

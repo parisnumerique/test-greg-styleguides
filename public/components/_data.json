@@ -1,0 +1,15 @@
+{
+  "components": [
+    "accordion",
+    "buttons",
+    "faq",
+    "image",
+    "links",
+    "news-push",
+    "sharelines",
+    "table",
+    "text",
+    "transportation",
+    "verbatim"
+  ]
+}

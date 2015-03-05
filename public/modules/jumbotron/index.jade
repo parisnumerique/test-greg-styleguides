@@ -1,0 +1,9 @@
+include jumbotron
+include ../../helpers/code
+
+.lsg-module
+  +jumbotron(defaults)
++code({language: "jade"}).
+  include jumbotron
+
+  +jumbotron(#{JSON.stringify(defaults, null, 2)})

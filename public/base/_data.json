@@ -1,0 +1,44 @@
+{
+  "index": {
+    "title": "Sommaire"
+  },
+  "colors": {
+    "title": "Couleurs"
+  },
+  "fonts": {
+    "title": "Typographie"
+  },
+  "icons": {
+    "title": "Icônes",
+    "icons": [
+      "alert",
+      "arrow-bottom",
+      "arrow-left",
+      "arrow-right",
+      "arrow-top",
+      "arrow-small-bottom",
+      "arrow-small-left",
+      "arrow-small-right",
+      "arrow-small-top",
+      "avatar",
+      "bell",
+      "bicycle",
+      "bus",
+      "close",
+      "close-rounded",
+      "facebook",
+      "favorites",
+      "file",
+      "instagram",
+      "link",
+      "mail",
+      "marker",
+      "pdf",
+      "play",
+      "profile",
+      "search",
+      "subway",
+      "twitter"
+    ]
+  }
+}

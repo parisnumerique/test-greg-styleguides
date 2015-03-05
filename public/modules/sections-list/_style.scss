@@ -1,0 +1,86 @@
+.sections-list {
+  @include container;
+}
+
+.sections-list-button {
+  @include gallery(4);
+  background-color: $gray242;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 5px 20px 12px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: normal;
+  z-index: 1;
+
+  /* modifier "more" */
+  &.more {
+    background: $yellow;
+    color: $black;
+    text-transform: uppercase;
+
+    .sections-list-button-text {
+      display: table-cell;
+      font-size: 13px;
+      font-weight: 500;
+      vertical-align: middle;
+    }
+  }
+
+  &:before {
+    background: $red2;
+    border-radius: 5px;
+    bottom: 0px;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: 0.2s ease-in-out width;
+    width: 0%;
+    z-index: -1;
+  }
+
+  &:hover {
+    .sections-list-button-title,
+    .sections-list-button-text {
+      color: $gray242;
+    }
+    &:before {
+      width: 100%;
+    }
+  }
+
+}
+
+.sections-list-button-title,
+.sections-list-button-text {
+  transition: 0.2s ease-in-out color;
+  z-index: 2;
+}
+
+.sections-list-button-title {
+  color: $blue3;
+  display: table-cell;
+  font-size: 15px;
+  font-weight: 700;
+  height: 50px;
+  line-height: 17px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.sections-list-button-text {
+  color: $gray77;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+}
