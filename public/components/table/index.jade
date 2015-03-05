@@ -1,3 +1,81 @@
 include table
+include ../../helpers/code
 
-+table(defaults)
+.lsg-component
+  +table(defaults)
+    tr
+      th Combien de personnes à loger ?
+      th en-tête 2
+      th en-tête 3
+      th en-tête 4
+      th en-tête 5
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
++code({language: "jade"}).
+  include table
+
+  +table(#{JSON.stringify(defaults, null, 2)})
+    tr
+      th Combien de personnes à loger ?
+      th en-tête 2
+      th en-tête 3
+      th en-tête 4
+      th en-tête 5
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+    tr
+      td 1 personne
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €
+      td 12 662 €

@@ -1,41 +1,10 @@
 mixin table(opts)
-  table.components-table
-    tr
-      th Combien de personnes à loger ?
-      th en-tête 2
-      th en-tête 3
-      th en-tête 4
-      th en-tête 5
-    tr
-      td 1 personne
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-    tr
-      td 1 personne
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-    tr
-      td 1 personne
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-    tr
-      td 1 personne
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-    tr
-      td 1 personne
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-      td 12 662 €
-    caption    
-      | * jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.
+  .component.component-table
+    table
+      if block
+        block
+      else if opts.block
+        != opts.block
+      if opts.caption
+        caption= opts.caption
 

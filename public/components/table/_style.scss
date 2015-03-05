@@ -1,4 +1,4 @@
-.components-table {
+.component-table {
   max-width: 750px;
 
   tr > th {
@@ -37,9 +37,9 @@
     }
   }
 
-  & tr:nth-child(2n+2) {background-color: $gray242;}
-  & tr:nth-child(2n+3) {background-color: $gray230;}
-  & tr:last-child {background-color: $blue4;}
+  tr:nth-child(2n+2) {background-color: $gray242;}
+  tr:nth-child(2n+3) {background-color: $gray230;}
+  tr:last-child {background-color: $blue4;}
 
   caption {
     caption-side: bottom;
