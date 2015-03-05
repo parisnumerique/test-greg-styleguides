@@ -17,6 +17,10 @@ lsg.nav = function(){
     $nav.toggleClass('lsg-nav-open');
   };
 
+  var openeMenu = function () {
+    $nav.addClass('lsg-nav-open');
+  };
+
   var closeMenu = function () {
     $nav.removeClass('lsg-nav-open');
   };
@@ -26,13 +30,14 @@ lsg.nav = function(){
     closeMenu();
   };
 
-  $toggle.on('click', toggleNav);
   $navLinks.on('click', function(e){
     e.preventDefault();
     $navLinks.removeClass('is-current');
     $(this).addClass('is-current');
     openLink($(this).attr('href'));
   });
+  $toggle.on("mouseenter", openeMenu);
+  $nav.on("mouseleave", closeMenu);
 };
 
 lsg.highlight = function () {
