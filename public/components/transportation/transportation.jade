@@ -1,0 +1,16 @@
+mixin transportation(opts)
+  .component.component-transportation
+    if opts.title
+      .transportation-title= opts.title
+    if opts.address
+      .transportation-address!= opts.address
+    if opts.items
+      ul.transportation-items
+        each item in opts.items
+          li.transportation-item
+            i.icon(class="icon-#{item.icon}")
+            = item.text
+    if opts.button
+      a.transportation-button.button.marker(href=opts.button.href)
+        i.icon.icon-marker
+        = opts.button.text
