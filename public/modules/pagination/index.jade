@@ -2,21 +2,24 @@ include pagination
 include ../../helpers/code
 
 h2 Standard
-+pagination(defaults)
+.lsg-module
+  +pagination(defaults)
 +code({language: "jade"}).
   include pagination
 
   +pagination(#{JSON.stringify(defaults, null, 2)})
 
 h2 Première page
-+pagination(first)
+.lsg-module
+  +pagination(first)
 +code({language: "jade"}).
   include pagination
 
   +pagination(#{JSON.stringify(first, null, 2)})
 
 h2 Dernière page
-+pagination(last)
+.lsg-module
+  +pagination(last)
 +code({language: "jade"}).
   include pagination
 

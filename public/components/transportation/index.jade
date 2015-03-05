@@ -2,28 +2,32 @@ include transportation
 include ../../helpers/code
 
 h2 Standard
-+transportation(defaults)
+.lsg-component
+  +transportation(defaults)
 +code({language: "jade"}).
   include transportation
 
   +transportation(#{JSON.stringify(defaults, null, 2)})
 
 h2 Avec plusieurs items
-+transportation(multiple_items)
+.lsg-component
+  +transportation(multiple_items)
 +code({language: "jade"}).
   include transportation
 
   +transportation(#{JSON.stringify(multiple_items, null, 2)})
 
 h2 Sans bouton
-+transportation(without_button)
+.lsg-component
+  +transportation(without_button)
 +code({language: "jade"}).
   include transportation
 
   +transportation(#{JSON.stringify(without_button, null, 2)})
 
 h2 Adresse sur plusieurs lignes
-+transportation(long_address)
+.lsg-component
+  +transportation(long_address)
 +code({language: "jade"}).
   include transportation
 

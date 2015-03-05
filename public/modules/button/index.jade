@@ -2,34 +2,39 @@ include button
 include ../../helpers/code
 
 h2 Standard
-+button(defaults)
+.lsg-module
+  +button(defaults)
 +code({language: "jade"}).
   include button
 
   +button(#{JSON.stringify(defaults, null, 2)})
 
 h2 Bouton d'action
-+button(action)
+.lsg-module
+  +button(action)
 +code({language: "jade"}).
   include button
 
   +button(#{JSON.stringify(action, null, 2)})
 
 h2 Bouton secondaire
-+button(secondary)
+.lsg-module
+  +button(secondary)
 +code({language: "jade"}).
   include button
 
   +button(#{JSON.stringify(secondary, null, 2)})
 
 h2 Bouton avec icône
-+button(icon)
+.lsg-module
+  +button(icon)
 +code({language: "jade"}).
   include button
   +button(#{JSON.stringify(icon, null, 2)})
 
 h2 Bouton avec marqueur
-+button(marker)
+.lsg-module
+  +button(marker)
 +code({language: "jade"}).
   include button
 

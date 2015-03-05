@@ -17,6 +17,10 @@ lsg.nav = function(){
     $nav.toggleClass('lsg-nav-open');
   };
 
+  var openeMenu = function () {
+    $nav.addClass('lsg-nav-open');
+  };
+
   var closeMenu = function () {
     $nav.removeClass('lsg-nav-open');
   };
@@ -26,28 +30,30 @@ lsg.nav = function(){
     closeMenu();
   };
 
-  $toggle.on('click', toggleNav);
   $navLinks.on('click', function(e){
     e.preventDefault();
     $navLinks.removeClass('is-current');
     $(this).addClass('is-current');
     openLink($(this).attr('href'));
   });
+  $toggle.on("mouseenter", openeMenu);
+  $nav.on("mouseleave", closeMenu);
 };
 
 lsg.highlight = function () {
-  var modules = $(".lsg-module");
-  var tpl = $('<pre class="lsg-pre"><code></code></pre>');
+  var modules = $(".lsg-module, .lsg-component");
+  var tpl = $('<pre class="prism language-markup"><code></code></pre>');
 
   modules.each(function(i, module) {
     var $module = $(module);
     var node = tpl.clone();
     var code = $.trim($module.html());
-    node.find('code').text(code);
-    $module.append(node);
+    node.find('code').text(html_beautify(code));
+    $module.next('.language-jade').after(node);
   });
-  if(window.hljs) {
-    hljs.initHighlightingOnLoad();
+
+  if(window.Prism) {
+    Prism.highlightAll();
   }
 };
 
@@ -73,9 +79,12 @@ lsg.location = function() {
  */
 
 lsg.init = function () {
-  lsg.nav();
+
+  if ($('body').hasClass('lsg')) {
+    lsg.nav();
+    lsg.location();
+  }
   lsg.highlight();
-  lsg.location();
 };
 
 document.addEventListener("DOMContentLoaded", lsg.init);
