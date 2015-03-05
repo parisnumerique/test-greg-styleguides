@@ -1,7 +1,7 @@
 {
   "index": {
     "defaults": {
-      "text": "Restez connecté",
+      "title": "Restez connecté",
       "items": [{
         "icon": "twitter",
         "count": "219 000",

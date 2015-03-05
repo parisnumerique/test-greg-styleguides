@@ -1,3 +1,8 @@
 include buttons
+include ../../helpers/code
 
 +buttons(defaults)
++code({language: "jade"}).
+  include buttons
+
+  +buttons(#{JSON.stringify(defaults, null, 2)})

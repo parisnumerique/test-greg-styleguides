@@ -9,9 +9,11 @@ mixin quick-access(opts)
         button.quick-access-search-submit(type="submit")
           span= opts.search.submit.text
           i.icon.icon-search
-        a.button.marker(href="#")
-          i.icon.icon-marker
-          = opts.search.around.text
+        +button({
+          "href": "#",
+          "text": opts.search.around.text,
+          "modifiers": "marker"
+        })
       ul.quick-access-buttons
         each item in opts.items
           li

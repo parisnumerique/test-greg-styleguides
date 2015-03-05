@@ -1,7 +1,36 @@
 include button
+include ../../helpers/code
 
 h2 Standard
 +button(defaults)
++code({language: "jade"}).
+  include button
+
+  +button(#{JSON.stringify(defaults, null, 2)})
 
 h2 Bouton d'action
 +button(action)
++code({language: "jade"}).
+  include button
+
+  +button(#{JSON.stringify(action, null, 2)})
+
+h2 Bouton secondaire
++button(secondary)
++code({language: "jade"}).
+  include button
+
+  +button(#{JSON.stringify(secondary, null, 2)})
+
+h2 Bouton avec icône
++button(icon)
++code({language: "jade"}).
+  include button
+  +button(#{JSON.stringify(icon, null, 2)})
+
+h2 Bouton avec marqueur
++button(marker)
++code({language: "jade"}).
+  include button
+
+  +button(#{JSON.stringify(marker, null, 2)})

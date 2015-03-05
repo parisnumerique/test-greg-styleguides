@@ -1,7 +1,9 @@
+include ../../modules/button/button
+
 mixin jecoute(opts)
   .jecoute(class="#{opts.modifiers}")
     .inner
-      h2= opts.text
+      h2= opts.title
 
       div.items
         each item in opts.items
@@ -18,4 +20,4 @@ mixin jecoute(opts)
               div.answer
                 div.user= item.answer.user
                 div.text= item.answer.text
-      button.button Posez votre question !
+      +button(opts.button)

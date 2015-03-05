@@ -20,7 +20,10 @@
       line-height: 20px;
       padding: 16px 0 16px 45px;
       text-decoration: none;
-      &:hover {text-decoration: underline;}
+      &:hover {
+        text-decoration: underline;
+        .links-item-filesize {text-decoration: none;}
+      }
     }
 
     &:before {
@@ -32,10 +35,22 @@
       pointer-events: none;
     }
 
+    // modifiers
     &.links-item-pdf:before {
       @extend %icon-pdf;
     }
+    &.links-item-file:before {
+      @extend %icon-file;
+    }
 
+  }
+
+  .links-item-filesize {
+    color: $gray128;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
   }
 
 }

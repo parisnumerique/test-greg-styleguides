@@ -7,7 +7,22 @@
     "action": {
       "href": "#",
       "text": "Texte",
-      "modifiers": "button-action"
+      "modifiers": "action"
+    },
+    "secondary": {
+      "href": "#",
+      "text": "Texte",
+      "modifiers": "secondary"
+    },
+    "marker": {
+      "href": "#",
+      "text": "Texte",
+      "modifiers": "marker"
+    },
+    "icon": {
+      "href": "#",
+      "icon": "play",
+      "text": "Texte"
     }
   }
 }

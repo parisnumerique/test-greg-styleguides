@@ -1,3 +1,5 @@
+include ../../modules/button/button
+
 mixin transportation(opts)
   .component.component-transportation
     if opts.title
@@ -11,6 +13,5 @@ mixin transportation(opts)
             i.icon(class="icon-#{item.icon}")
             = item.text
     if opts.button
-      a.transportation-button.button.marker(href=opts.button.href)
-        i.icon.icon-marker
-        = opts.button.text
+      - opts.button.modifiers = "marker"
+      +button(opts.button)

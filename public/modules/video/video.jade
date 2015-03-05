@@ -1,9 +1,9 @@
+include ../../modules/button/button
+
 mixin video(opts)
   .video
     h2= opts.title
 
     div.cover(style="background-image: url(#{opts.cover})")
-      a.button.icon(href="#{opts.video.href}")
-        i.icon.icon-play
-        span= opts.video.text
-
+      - opts.button.modifiers = "action"
+      +button(opts.button)

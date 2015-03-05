@@ -75,6 +75,8 @@
 
   a {
     color: $red2;
+    text-decoration: underline;
+    &:hover {text-decoration: none;}
   }
 
   .intro {

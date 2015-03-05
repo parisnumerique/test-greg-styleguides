@@ -1,3 +1,8 @@
 include faq
+include ../../helpers/code
 
 +faq(defaults)
++code({language: "jade"}).
+  include faq
+
+  +faq(#{JSON.stringify(defaults, null, 2)})

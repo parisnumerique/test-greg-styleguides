@@ -1,7 +1,7 @@
 mixin social(opts)
   .social(class="#{opts.modifiers}")
     .inner
-      h2= opts.text
+      h2= opts.title
       each item in opts.items
         .item
           span.icon(class="icon-#{item.icon}")

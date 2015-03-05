@@ -1,19 +1,34 @@
+include ../../modules/button/button
+
 mixin get-involved-item(opts)
   .get-involved-item
     .get-involved-item-category= opts.category
     .get-involved-item-title= opts.title
-    a.button.button-action.get-involved-item-button(href=opts.button.href)= opts.button.text
+    - opts.button.modifiers = "action get-involved-item-button"
+    +button(opts.button)
 
 mixin get-involved-list(opts)
   .get-involved-list
     .get-involved-column
       .get-involved-item
         .get-involved-item-title Madame la Maire, j’ai une idée
-        a.button.button-action.secondary(href="#") Voir le site
+        +button({
+          "href": "#",
+          "text": "Voir le site",
+          "modifiers": "action secondary"
+        })
         .get-involved-item-title Votez pour le budget participatif
-        a.button.button-action.secondary(href="#") Voir le site
+        +button({
+          "href": "#",
+          "text": "Voir le site",
+          "modifiers": "action secondary"
+        })
         .get-involved-item-title E-pétition, prenez la main
-        a.button.button-action.secondary(href="#") Voir le site
+        +button({
+          "href": "#",
+          "text": "Voir le site",
+          "modifiers": "action secondary"
+        })
       each item in opts.items.slice(0, 2)
         +get-involved-item(item)
     .get-involved-column

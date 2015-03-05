@@ -1,3 +1,5 @@
+include ../../modules/button/button
+
 mixin buttons(opts)
   .component.component-buttons
     if opts.title
@@ -5,4 +7,4 @@ mixin buttons(opts)
     ul.component-buttons-items
       each item in opts.items
         li
-          a.button.button-primary(href=item.href)= item.text
+          +button(item)

@@ -4,7 +4,7 @@
       "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
       "button": {
         "text": "Rechercher",
-        "modifiers": "button-action"
+        "modifiers": "action"
       }
     }
   }

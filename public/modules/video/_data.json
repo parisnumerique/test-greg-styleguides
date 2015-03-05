@@ -3,9 +3,10 @@
     "defaults": {
       "title": "Paris en vidéo",
       "cover": "./cover.jpg",
-      "video": {
-        "text": "Voir sur Dailymotion",
-        "url": "#"
+      "button": {
+        "href": "#",
+        "icon": "play",
+        "text": "Voir sur Dailymotion"
       }
     }
   }
