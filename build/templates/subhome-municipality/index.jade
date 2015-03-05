@@ -1,0 +1,56 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/footer/footer
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jecoute/jecoute
+include ../../modules/jumbotron/jumbotron
+include ../../modules/links-group/links-group
+include ../../modules/newsletter/newsletter
+include ../../modules/search-push/search-push
+include ../../modules/social/social
+
+append content
+  +header(public.modules.header._data.index.defaults)
+
+append content
+  .layout-content
+    +jumbotron(data.jumbotron)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +breadcrumbs(data.breadcrumbs)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +links-group(data.team)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +links-group(data.conseil)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +links-group(data.hotel_ville)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +links-group(data.histoire_paris)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.connected.heading)
+      +newsletter(public.modules.newsletter._data.index.defaults)
+      +jecoute(public.modules.jecoute._data.index.defaults)
+      +social(public.modules.social._data.index.defaults)
+
+append content
+  .layout-content.layout-content-adjacent
+    +footer(public.modules.footer._data.index.defaults)

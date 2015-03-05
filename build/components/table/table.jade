@@ -1,0 +1,10 @@
+mixin table(opts)
+  .component.component-table
+    table
+      if block
+        block
+      else if opts.block
+        != opts.block
+      if opts.caption
+        caption= opts.caption
+
