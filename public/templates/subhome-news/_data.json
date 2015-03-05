@@ -230,7 +230,15 @@
         },
         "pictures_gallery_ugc": {
           "title": "Hashtags de la semaine :",
-          "hashtag": "#hashtag",
+          "hashtags": [
+            {
+              "url": "#",
+              "text": "automneàparis"
+            },{
+              "url": "#",
+              "text": "nuit_blanche"
+            }
+          ],
           "items": [
             {
               "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",

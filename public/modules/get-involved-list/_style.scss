@@ -89,33 +89,33 @@
     background-color: $get-involved-red;
     color: $white;
     &:after {
-      background-image: url('../../modules/get-involved-list/yellow-hand.svg');
+      background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
   }
   &.yellow {
     background-color: $get-involved-yellow;
     &:after {
-      background-image: url('../../modules/get-involved-list/blue-hand.svg');
+      background-image: url('../modules/get-involved-list/blue-hand.svg');
     }
   }
   &.green {
     background-color: $get-involved-green;
     color: $white;
     &:after {
-      background-image: url('../../modules/get-involved-list/yellow-hand.svg');
+      background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
   }
   &.blue {
     background-color: $get-involved-blue1;
     color: $white;
     &:after {
-      background-image: url('../../modules/get-involved-list/red-hand.svg');
+      background-image: url('../modules/get-involved-list/red-hand.svg');
     }
   }
   &.light-blue {
     background-color: $get-involved-blue2;
     &:after {
-      background-image: url('../../modules/get-involved-list/green-hand.svg');
+      background-image: url('../modules/get-involved-list/green-hand.svg');
     }
   }
 

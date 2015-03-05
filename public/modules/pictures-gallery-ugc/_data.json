@@ -2,13 +2,15 @@
   "index": {
     "defaults": {
       "title": "Hashtags de la semaine :",
-      "hashtags": [{
-        "url": "#",
-        "text": "automneàparis"
-      },{
-        "url": "#",
-        "text": "nuit_blanche"
-      }],
+      "hashtags": [
+        {
+          "url": "#",
+          "text": "automneàparis"
+        },{
+          "url": "#",
+          "text": "nuit_blanche"
+        }
+      ],
       "items": [
          {
           "image": "pictures-gallery-img1.jpg",
