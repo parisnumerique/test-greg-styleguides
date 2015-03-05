@@ -1,37 +1,6 @@
 {
   "index": {
     "defaults": {
-      "items": [
-        {
-          "items_header": [
-            {"text_header": "en-tête 1"},
-            {"text_header": "en-tête 2"},
-            {"text_header": "en-tête 3"}
-          ]
-        },
-        {
-          "items_column": [
-            {"text_cell":"donnée ligne 1 colonne 1"},
-            {"text_cell":"donnée ligne 1 colonne 2"},
-            {"text_cell":"donnée ligne 1 colonne 3"}
-          ]
-        },
-        {
-          "items_column": [
-            {"text_cell":"donnée ligne 2 colonne 1"},
-            {"text_cell":"donnée ligne 2 colonne 2"},
-            {"text_cell":"donnée ligne 2 colonne 3"}
-          ]
-        },
-        {
-          "items_column": [
-            {"text_cell":"donnée ligne 3 colonne 1"},
-            {"text_cell":"donnée ligne 3 colonne 2"},
-            {"text_cell":"donnée ligne 3 colonne 3"}
-          ]
-        }
-      ],
-      "legend": "i am legend ! Will Smith"
     }
   }
 }
