@@ -37,7 +37,7 @@ lsg.nav = function(){
 
 lsg.highlight = function () {
   var modules = $(".lsg-module");
-  var tpl = $('<pre class="lsg-pre"><code></code></pre>');
+  var tpl = $('<pre class="prism language-markup"><code></code></pre>');
 
   modules.each(function(i, module) {
     var $module = $(module);
@@ -46,8 +46,9 @@ lsg.highlight = function () {
     node.find('code').text(code);
     $module.append(node);
   });
-  if(window.hljs) {
-    hljs.initHighlightingOnLoad();
+
+  if(window.Prism) {
+    Prism.highlightAll();
   }
 };
 
