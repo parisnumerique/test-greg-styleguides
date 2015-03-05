@@ -1,7 +1,7 @@
 mixin button(opts)
+  - modifiers = opts.modifiers || []
   if opts.href
     if opts.icon
-      - modifiers = opts.modifiers || []
       - modifiers.push("icon")
     a.button(href=opts.href class=modifiers)
       if modifiers && modifiers.indexOf("marker") != -1
