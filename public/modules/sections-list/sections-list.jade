@@ -1,7 +1,7 @@
 mixin sections-list(opts)
   .sections-list
     each item in opts.items
-      a.sections-list-button(class= item.modifiers ? "#{item.modifiers}" : "")
+      a.sections-list-button(href=item.href class=(item.modifiers ? "#{item.modifiers}" : ""))
         if (item.title)
           strong.sections-list-button-title=item.title
         div.sections-list-button-text=item.text

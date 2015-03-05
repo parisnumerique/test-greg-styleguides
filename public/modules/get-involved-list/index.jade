@@ -1,3 +1,8 @@
 include get-involved-list
+include ../../helpers/code
 
 +get-involved-list(defaults)
++code({language: "jade"}).
+  include get-involved-list
+
+  +get-involved-list(#{JSON.stringify(defaults, null, 2)})

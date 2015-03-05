@@ -1,24 +1,9 @@
 include news-card
+include ../../helpers/code
 
-br
-br
-br
+div(style="margin-top: 50px; max-width: 400px")
+  +news-card(defaults)
+  +code({language: "jade"}).
+    include news-card
 
-+news-card(defaults)
-+news-card({
-  "image": "image.jpg",
-  "category": "Mobilité",
-  "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
-})
-
-+news-card({
-  "image": "image.jpg",
-  "category": "Culture et patrimoine",
-  "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
-})
-
-+news-card({
-  "image": "image.jpg",
-  "category": "Environnement",
-  "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
-})
+    +news-card(#{JSON.stringify(defaults, null, 2)})
