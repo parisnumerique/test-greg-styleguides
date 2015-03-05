@@ -7,7 +7,7 @@
           "href": "#",
           "text": "L’Hôtel de ville"
         },
-        "modifiers": "white"
+        "modifiers": ["white"]
       },
       "img": {
         "src": "image.jpg",

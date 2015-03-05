@@ -7,13 +7,13 @@
           "href": "#",
           "text": "Lien vers un fichier PDF",
           "filesize": "2,4 Mo",
-          "modifiers": "links-item-pdf"
+          "modifiers": ["links-item-pdf"]
         },
         {
           "href": "#",
           "text": "Lien vers un fichier",
           "filesize": "300 Ko",
-          "modifiers": "links-item-file"
+          "modifiers": ["links-item-file"]
         },
         {
           "href": "#",

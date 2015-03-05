@@ -4,7 +4,7 @@ mixin get-involved-item(opts)
   .get-involved-item
     .get-involved-item-category= opts.category
     .get-involved-item-title= opts.title
-    - opts.button.modifiers = "action get-involved-item-button"
+    - opts.button.modifiers = ["action", "get-involved-item-button"]
     +button(opts.button)
 
 mixin get-involved-list(opts)
@@ -15,19 +15,19 @@ mixin get-involved-list(opts)
         +button({
           "href": "#",
           "text": "Voir le site",
-          "modifiers": "action secondary"
+          "modifiers": ["action", "secondary"]
         })
         .get-involved-item-title Votez pour le budget participatif
         +button({
           "href": "#",
           "text": "Voir le site",
-          "modifiers": "action secondary"
+          "modifiers": ["action", "secondary"]
         })
         .get-involved-item-title E-pétition, prenez la main
         +button({
           "href": "#",
           "text": "Voir le site",
-          "modifiers": "action secondary"
+          "modifiers": ["action", "secondary"]
         })
       each item in opts.items.slice(0, 2)
         +get-involved-item(item)

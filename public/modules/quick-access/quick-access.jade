@@ -12,7 +12,7 @@ mixin quick-access(opts)
         +button({
           "href": "#",
           "text": opts.search.around.text,
-          "modifiers": "marker"
+          "modifiers": ["marker"]
         })
       ul.quick-access-buttons
         each item in opts.items
@@ -20,7 +20,7 @@ mixin quick-access(opts)
             +button({
               "href": item.href,
               "text": item.text,
-              "modifiers": "secondary"
+              "modifiers": ["secondary"]
             })
     if opts.notice
       +notice(opts.notice)

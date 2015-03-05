@@ -13,5 +13,5 @@ mixin transportation(opts)
             i.icon(class="icon-#{item.icon}")
             = item.text
     if opts.button
-      - opts.button.modifiers = "marker"
+      - opts.button.modifiers = ["marker"]
       +button(opts.button)

@@ -7,17 +7,17 @@
     "action": {
       "href": "#",
       "text": "Texte",
-      "modifiers": "action"
+      "modifiers": ["action"]
     },
     "secondary": {
       "href": "#",
       "text": "Texte",
-      "modifiers": "secondary"
+      "modifiers": ["secondary"]
     },
     "marker": {
       "href": "#",
       "text": "Texte",
-      "modifiers": "marker"
+      "modifiers": ["marker"]
     },
     "icon": {
       "href": "#",

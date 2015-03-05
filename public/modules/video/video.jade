@@ -5,5 +5,5 @@ mixin video(opts)
     h2= opts.title
 
     div.cover(style="background-image: url(#{opts.cover})")
-      - opts.button.modifiers = "action"
+      - opts.button.modifiers = ["action"]
       +button(opts.button)

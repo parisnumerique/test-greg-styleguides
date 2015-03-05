@@ -1,5 +1,5 @@
 mixin notice(opts)
-  .notice(class= "#{opts.modifiers}")
+  .notice(class=opts.modifiers)
     if opts.closable
       .close
     if block

@@ -106,57 +106,57 @@
         "links_group": {
           "background": "../../modules/links-group/links-group-image.jpg",
           "title": "Impliquez-vous",
-          "imgmodifiers":"links-group-header-red",
+          "imgmodifiers":["links-group-header-red"],
           "items": [
             {
               "href": "#",
               "text": "Les conseils de quartiers",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Rendez-vous à la mission participation citoyenne",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Université populaire de la citoyenneté active",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Citoyenneté étudiante",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Egalité Femmes/Hommes",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Bénévolat",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Lutte contre les discriminations",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Pour un Paris plus juste et plus solidaire",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Concertations et enquêtes publiques",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             },
             {
               "href": "#",
               "text": "Service civique",
-              "modifiers": "links-group-button-red"
+              "modifiers": ["links-group-button-red"]
             }
           ]
         }
@@ -170,7 +170,7 @@
           }
         },
         "news_list": {
-          "modifiers": "news-cards",
+          "modifiers": ["news-cards"],
           "items": [
             {
               "href": "#",

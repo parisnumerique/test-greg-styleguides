@@ -24,7 +24,7 @@
           "title": "Aujourd'hui"
         },
         "news": {
-          "modifiers": "news-cards large-first-child",
+          "modifiers": ["news-cards", "large-first-child"],
           "items": [
             {
               "href": "#",
@@ -64,7 +64,7 @@
           "title": "Hier"
         },
         "news": {
-          "modifiers": "news-cards large-first-child secondary",
+          "modifiers": ["news-cards", "large-first-child secondary"],
           "items": [
             {
               "href": "#",
@@ -204,7 +204,7 @@
         "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
         "button": {
           "text": "Rechercher",
-          "modifiers": "action"
+          "modifiers": ["action"]
         }
       },
       "get_involved": {
