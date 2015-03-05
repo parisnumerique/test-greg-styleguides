@@ -44,7 +44,7 @@ lsg.highlight = function () {
     var node = tpl.clone();
     var code = $.trim($module.html());
     node.find('code').text(code);
-    $module.append(node);
+    $module.next('.language-jade').after(node);
   });
 
   if(window.Prism) {

@@ -2,21 +2,24 @@ include heading
 include ../../helpers/code
 
 h2 Standard
-+heading(defaults)
+.lsg-module
+  +heading(defaults)
 +code({language: "jade"}).
   include heading
 
   +heading(#{JSON.stringify(defaults, null, 2)})
 
 h2 Avec un lien
-+heading(with_link)
+.lsg-module
+  +heading(with_link)
 +code({language: "jade"}).
   include heading
 
   +heading(#{JSON.stringify(with_link, null, 2)})
 
 h2 Texte blanc
-+heading(white)
+.lsg-module
+  +heading(white)
 +code({language: "jade"}).
   include heading
 

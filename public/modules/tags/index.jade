@@ -2,14 +2,16 @@ include tags
 include ../../helpers/code
 
 h2 Sans liens
-+tags(defaults)
+.lsg-module
+  +tags(defaults)
 +code({language: "jade"}).
   include tags
 
   +tags(#{JSON.stringify(defaults, null, 2)})
 
 h2 Avec liens
-+tags(links)
+.lsg-module
+  +tags(links)
 +code({language: "jade"}).
   include tags
 

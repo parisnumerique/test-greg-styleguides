@@ -2,7 +2,8 @@ include news-card
 include ../../helpers/code
 
 div(style="margin-top: 50px; max-width: 400px")
-  +news-card(defaults)
+  .lsg-module
+    +news-card(defaults)
   +code({language: "jade"}).
     include news-card
 
