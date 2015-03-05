@@ -15,7 +15,7 @@ Paris.accordion = (function(){
 
     function init(){
       initOptions();
-      $el.find('[data-parent]').attr('data-toggle', 'collapse').collapse({
+      $el.find('.accordion-item-title').attr('data-toggle', 'collapse').collapse({
           toggle: false,
           parent: '.component-accordion'
         });
