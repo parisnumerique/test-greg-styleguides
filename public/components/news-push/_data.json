@@ -1,16 +1,16 @@
 {
   "index": {
     "defaults": {
-      "img": {
-        "url": "../../components/news-push/news-push.jpg",
+      "image": {
+        "src": "../../components/news-push/news-push.jpg",
         "alt": "Conférence priorité logement"
       },
       "title": "Actu",
-      "text": "Le pacte « Logement pour tous »Amplifier la construction de logements à Paris et favoriser l’émergence de formes d’habitat innovantes : tel est l’objectif de ce page… ",
+      "text": "Le pacte « Logement pour tous » Amplifier la construction de logements à Paris et favoriser l’émergence de formes d’habitat innovantes : tel est l’objectif de ce page… ",
       "follow": " Lire la suite",
-      "url": "#",
+      "href": "#",
       "link": {
-        "url": "#",
+        "href": "#",
         "text": "Retrouvez l’Essentiel de Paris"
       }
     }
