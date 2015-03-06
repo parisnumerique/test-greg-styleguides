@@ -1,5 +1,6 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/blue-block/blue-block
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
 include ../../modules/header/header
@@ -59,9 +60,12 @@ append content
         +heading(data.gallery.heading)
         +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
-        +newsletter(public.modules.newsletter._data.index.defaults)
-        +jecoute(public.modules.jecoute._data.index.defaults)
-        +social(public.modules.social._data.index.defaults)
+        +blue-block({title: data.connected.newsletter.title, modifiers: ["vertical"]})
+          +newsletter(data.connected.newsletter)
+        +blue-block({title: data.connected.jecoute.title, modifiers: ["vertical"]})
+          +jecoute(data.connected.jecoute)
+        +blue-block({title: data.connected.social.title, modifiers: ["vertical"]})
+          +social(data.connected.social)
 
 append content
   .layout-content

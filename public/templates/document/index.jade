@@ -3,6 +3,7 @@ extends ../../layouts/stack/stack
 include ../../modules/anchors-list/anchors-list
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
+include ../../modules/blue-block/blue-block
 include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
@@ -51,11 +52,14 @@ append content
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
-          +newsletter(data.connected.newsletter)
+          +blue-block({title: data.connected.newsletter.title})
+            +newsletter(data.connected.newsletter)
         .layout-content
-          +jecoute(data.connected.jecoute)
+          +blue-block({title: data.connected.jecoute.title})
+            +jecoute(data.connected.jecoute)
         .layout-content
-          +social(data.connected.social)
+          +blue-block({title: data.connected.social.title})
+            +social(data.connected.social)
 
 
 
