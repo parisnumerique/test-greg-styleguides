@@ -1,6 +1,9 @@
-
 .cross-content {
-  background-position: 50% 50%; 
+  overflow: hidden;
+}
+
+.cross-content-item {
+  background-position: 50% 50%;
   background-size: cover;
   color: $gray51;
   display: block;
@@ -45,32 +48,32 @@
   .cross-content-title,
   .cross-content-text,
   .cross-content-icon {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
   }
 
   .cross-content-title {
-  border-bottom: 6px solid $gray51;
-  display: inline-block;
-  font-size: 13px;
-  padding: 0 0 9px 0;
-  text-transform: uppercase;
-  font-weight: 700;
+    border-bottom: 6px solid $gray51;
+    display: inline-block;
+    font-size: 13px;
+    padding: 0 0 9px 0;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 
   .title-black {
-  border-color: $gray51;
+    border-color: $gray51;
   }
 
   .cross-content-text {
-  font-size: 30px;
-  font-weight: 700;
-  position: relative;
-  top: 20%;
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    top: 20%;
   }
 
   .cross-content-icon {
-  float: right;
+    float: right;
 
     &:after{
       @extend %icon-font;

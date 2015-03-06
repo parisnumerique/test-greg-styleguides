@@ -1,0 +1,85 @@
+{
+  "index": {
+    "data": {
+      "heading": {
+        "text": "Services <br>et infos pratiques",
+        "image": "./hub-heading.png"
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Services et infos pratiques"
+          },
+          {
+            "text": "Culture et patrimoine"
+          }
+        ]
+      },
+      "news": {
+        "heading": {
+          "title": "En ce moment",
+          "link": {
+            "href": "#",
+            "text": "Voir les actualités"
+          }
+        },
+        "news": {
+          "modifiers": ["news-cards"],
+          "items": [
+            {
+              "href": "#",
+              "image": "large-news-1.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+            },
+            {
+              "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+            },
+            {
+              "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+            }
+          ]
+        }
+      },
+      "cross_content": {
+        "items": [
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img1.jpg",
+            "title": "participez !",
+            "icon": "instagram",
+            "text": "#MonHLM : photographiez la façade de votre logement social !"
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img2.jpg",
+            "title": "dossier",
+            "text": "Se loger à Paris, le guide."
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img3.jpg",
+            "title": "actualités",
+            "text": "Locataires HLM : votez pour vos représentants"
+          }
+        ]
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté"
+        }
+      }
+    }
+  }
+}
