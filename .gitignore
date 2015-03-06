@@ -19,6 +19,8 @@
 nbproject
 Thumbs.db
 .idea
+*.sublime-project
+*.sublime-workspace
 
 
 www

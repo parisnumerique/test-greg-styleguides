@@ -1,0 +1,17 @@
+{
+  "index": {
+    "defaults": {
+      "heading": {
+        "title": "Participez !",
+        "link": {
+          "href": "#",
+          "text": "Accéder à l’espace participatif"
+          }
+      },
+      "items": [
+        {"href": "#", "image": "get-involved-img1.png", "text": "Votez pour le budget participatif"},
+        {"href": "#", "image": "get-involved-img2.png", "text": "E-pétition, prenez la main"}
+      ]
+    }
+  }
+}

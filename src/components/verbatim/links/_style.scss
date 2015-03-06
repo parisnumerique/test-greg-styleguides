@@ -1,0 +1,56 @@
+.component-links {
+
+  .links-items,
+  .links-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .links-item {
+
+    & + .links-item {
+      border-top: 1px solid $gray204;
+    }
+
+    > a {
+      color: $gray51;
+      display: block;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 16px 0 16px 45px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        .links-item-filesize {text-decoration: none;}
+      }
+    }
+
+    &:before {
+      @extend %icon-font;
+      @extend %icon-link;
+      float: left;
+      font-size: 1.5em;
+      padding: 10px 20px 0 0;
+      pointer-events: none;
+    }
+
+    // modifiers
+    &.links-item-pdf:before {
+      @extend %icon-pdf;
+    }
+    &.links-item-file:before {
+      @extend %icon-file;
+    }
+
+  }
+
+  .links-item-filesize {
+    color: $gray128;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+
+}
