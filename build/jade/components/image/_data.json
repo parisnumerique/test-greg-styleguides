@@ -1,0 +1,19 @@
+{
+  "index": {
+    "defaults": {
+      "src": "small_image.jpg",
+      "alt": "Texte alternatif",
+      "title": "Titre"
+    },
+    "large_image": {
+      "src": "large_image.jpg",
+      "alt": "Texte alternatif",
+      "title": "Titre"
+    },
+    "vertical_image": {
+      "src": "vertical_image.jpg",
+      "alt": "Texte alternatif",
+      "title": "Titre"
+    }
+  }
+}
