@@ -1,7 +1,7 @@
 {
   "index": {
     "defaults": {
-      "titre": "L’essentiel de Paris",
+      "title": "L’essentiel de Paris",
       "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
       "placeholder": "Entrez votre courriel",
       "inputId": "newsletter-input",

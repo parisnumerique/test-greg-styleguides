@@ -1,5 +1,4 @@
-.layout-half-col {
-  background-color: $white;
+.layout-three-col {
   overflow: hidden;
   width: 100%;
 
@@ -10,9 +9,8 @@
   }
 
   .layout-content {
-    @include span(8 of 16);
+    @include span(4 of 12);
     display: table-cell;
-    padding: 40px 0;
     vertical-align: top;
   }
 

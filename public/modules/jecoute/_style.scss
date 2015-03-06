@@ -1,7 +1,5 @@
 .jecoute {
   max-width: 360px;
-  background-color: $color-secondary;
-  color: $white;
 
   .item {
     display: none;
@@ -26,16 +24,6 @@
     &.visible {
       display: block;
     }
-
-    // &.answered {
-    //   .question {
-    //     transform: translateY(-130px);
-    //   }
-
-    //   .answer {
-    //     transform: translateY(-130px);
-    //   }
-    // }
 
     .timer {
       position: relative;
@@ -68,20 +56,6 @@
     }
   }
 
-  h2 {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-  &:first-child h2 {margin-top: 0;}
-
-  &.vertical h2 {
-    border-bottom: none;
-  }
-
-  .inner {
-    padding: 10px 0 20px 0;
-    overflow: hidden;
-  }
-
   .user{
     font-weight: bold;
   }
@@ -89,8 +63,4 @@
   .button {
     margin-top: 10px;
   }
-}
-
-.vertical + .jecoute.vertical {
-  border-top: 1px solid rgba(255,255,255,0.2);
 }

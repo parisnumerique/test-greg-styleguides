@@ -4,11 +4,11 @@
 
   > .layout-content {
     & + .layout-content {
-      margin-top: 40px;
+      padding-top: 40px;
     }
 
     & + .layout-content-adjacent {
-      margin-top: 0;
+      padding-top: 0;
     }
 
     /* modifiers */

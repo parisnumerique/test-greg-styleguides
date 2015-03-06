@@ -5,10 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^3.3.2",
+    "harp": "git://github.com/jblanche/harp.git",
+    "jade": "^1.9.2",
     "jquery": "^2.1.3",
-    "susy": "~2.2.2",
     "lodash.throttle": "^3.0.1",
     "pubsub-js": "^1.5.0",
+    "susy": "~2.2.2",
     "velocity-animate": "~1.2.2"
   },
   "devDependencies": {},
@@ -16,15 +18,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watchify": "watchify public/javascript/main.js -o public/javascript/paris.js",
     "browsersync": "browser-sync start --proxy 'localhost:9000' --files 'public/**/*.scss' --files 'public/**/*.jade' --files 'public/javascript/paris.js'",
-    "server": "harp server",
+    "server": "./node_modules/harp/bin/harp server",
     "start": "npm run server | npm run watchify",
-    "compile": "harp compile",
+    "compile": "./node_modules/harp/bin/harp compile",
     "postcompile": "browserify public/javascript/main.js -o www/javascript/paris.js"
   },
   "repository": {
-    "type" : "git",
-    "url"  : "git@git.etaminstudio.com : paris/livingstyleguide-harp.git"
+    "type": "git",
+    "url": "git@git.etaminstudio.com : paris/livingstyleguide-harp.git"
   },
-  "author"  : "",
-  "license" : "ISC"
+  "author": "",
+  "license": "ISC"
 }
