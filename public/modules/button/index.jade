@@ -17,6 +17,14 @@ h2 Bouton d'action
 
   +button(#{JSON.stringify(action, null, 2)})
 
+h2 Bouton large
+.lsg-module
+  +button(wide)
++code({language: "jade"}).
+  include button
+
+  +button(#{JSON.stringify(wide, null, 2)})
+
 h2 Bouton secondaire
 .lsg-module
   +button(secondary)
