@@ -1,9 +1,9 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/anchors-list/anchors-list
+include ../../modules/blue-block/blue-block
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
-include ../../modules/blue-block/blue-block
 include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
@@ -61,8 +61,6 @@ append content
         .layout-content
           +blue-block({title: data.connected.social.title})
             +social(data.connected.social)
-
-
 
 append content
   .layout-content.layout-content-adjacent

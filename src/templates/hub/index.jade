@@ -1,5 +1,6 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/blue-block/blue-block
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/cross-content/cross-content
 include ../../modules/footer/footer
@@ -19,12 +20,12 @@ append content
     +hub-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-top-margin
+  .layout-content.layout-separate-after.layout-small-top-padding
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content
+  .layout-content.gray-background
     .layout-wrapper
       h2 sections-tree-panel
 
@@ -39,12 +40,20 @@ append content
     +cross-content(data.cross_content)
 
 append content
-  .layout-content.blue-background
-    .layout-wrapper
-      +heading(data.connected.heading)
-      +newsletter(public.modules.newsletter._data.index.defaults)
-      +jecoute(public.modules.jecoute._data.index.defaults)
-      +social(public.modules.social._data.index.defaults)
+  .layout-content.color-secondary-background
+    .layout-three-col
+      .layout-wrapper
+        +heading(data.connected.heading)
+        .layout-content
+          +blue-block({title: data.connected.newsletter.title})
+            +newsletter(data.connected.newsletter)
+        .layout-content
+          +blue-block({title: data.connected.jecoute.title})
+            +jecoute(data.connected.jecoute)
+        .layout-content
+          +blue-block({title: data.connected.social.title})
+            +social(data.connected.social)
+
 append content
   .layout-content.layout-content-adjacent
     +footer(public.modules.footer._data.index.defaults)
