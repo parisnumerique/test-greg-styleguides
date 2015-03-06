@@ -112,6 +112,9 @@ $lsg-nav-width: 250px;
 
 .lsg-wrapper {
   padding: 20px 50px;
+
+  > h2 {color: #888;}
+  > * + h2 {margin-top: 50px;}
 }
 
 pre.prism[class*="language-"] {

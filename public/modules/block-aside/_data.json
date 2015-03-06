@@ -1,0 +1,10 @@
+{
+  "index": {
+    "defaults": {
+      "title": "Title"
+    },
+    "with_button": {
+      "title": "Permanences"
+    }
+  }
+}

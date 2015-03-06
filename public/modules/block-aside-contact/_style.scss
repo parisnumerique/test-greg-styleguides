@@ -1,0 +1,33 @@
+.block-aside-contact {
+
+  dl {
+    color: $gray77;
+    font-size: 16px;
+    line-height: 22px;
+    overflow: hidden;
+  }
+
+  .block-aside-item {
+    > a {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  .postal-code {
+    float: left;
+    margin-right: 5px;
+  }
+
+  .icon {
+    color: $color-secondary;
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+
+  .icon + a {
+    font-weight: 500;
+  }
+
+}

@@ -1,6 +1,10 @@
 {
   "modules": [
     "anchors-list",
+    "block-aside",
+    "block-aside-checkboxes",
+    "block-aside-contact",
+    "block-aside-links",
     "breadcrumbs",
     "button",
     "blue-block",
