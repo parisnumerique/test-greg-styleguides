@@ -9,6 +9,10 @@ $color-primary-variant: #AF2258;
 .color-secondary {color: $color-secondary;}
 .color-tertiary  {color: $color-tertiary;}
 
+.color-primary-background   {background-color: $color-primary;}
+.color-secondary-background {background-color: $color-secondary;}
+.color-tertiary-background  {background-color: $color-tertiary;}
+
 // Gray nuances
 $black   : rgb(000, 000, 000);
 $gray26  : rgb(026, 026, 026);

@@ -3,11 +3,6 @@
   overflow: hidden;
   width: 100%;
 
-  /* modifiers */
-  &.color-secondary-background {
-    background-color: $color-secondary;
-  }
-
   .layout-wrapper {
     @include container;
     display: table;

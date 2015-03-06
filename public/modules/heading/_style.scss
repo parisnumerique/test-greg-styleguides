@@ -14,6 +14,10 @@
       &:hover {color: $color-tertiary;}
     }
   }
+
+  &.with-top-margin {
+    margin-top: 40px;
+  }
 }
 
 .heading-title {

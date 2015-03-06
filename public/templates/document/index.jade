@@ -43,12 +43,13 @@ append content
             +#{component.type}(component.data)
 
 append content
-  .layout-content
-    +cross-content(data.cross_content)
+  .layout-content.layout-content-adjacent
+    div
+      +cross-content(data.cross_content)
 
 append content
-  .layout-content
-    .layout-three-col.color-secondary-background
+  .layout-content.color-secondary-background
+    .layout-three-col
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
