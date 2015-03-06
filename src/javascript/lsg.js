@@ -5,7 +5,6 @@
 var lsg = window.lsg = {};
 
 
-
 lsg.nav = function(){
 
   // DOM
@@ -43,19 +42,18 @@ lsg.nav = function(){
 
 lsg.highlight = function () {
   var modules = $(".lsg-module, .lsg-component");
-  var tpl = $('<pre class="prism language-markup"><code class=""></code></pre>');
+  var tpl = $('<pre class="prism language-markup"><code></code></pre>');
+
   modules.each(function(i, module) {
     var $module = $(module);
     var node = tpl.clone();
     var code = $.trim($module.html());
     node.find('code').text(html_beautify(code));
-    console.log($module.next('.language-jade').length);
     $module.next('.language-jade').after(node);
-    console.log(node);
   });
 
   if(window.Prism) {
-    console.log('Prism');
+    Prism.highlightAll();
   }
 };
 
