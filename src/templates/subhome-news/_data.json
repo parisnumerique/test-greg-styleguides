@@ -64,7 +64,7 @@
           "title": "Hier"
         },
         "news": {
-          "modifiers": ["news-cards", "large-first-child secondary"],
+          "modifiers": ["news-cards", "large-first-child", "secondary"],
           "items": [
             {
               "href": "#",
@@ -190,7 +190,7 @@
         "total": 10
       },
       "que_faire": {
-        "image": "../../modules/que-faire/que-faire-back-img.jpg",
+        "background": "../../modules/que-faire/que-faire-back-img.jpg",
         "logo": {
           "href": "#",
           "image": "../../modules/que-faire/que-faire-img.png"
