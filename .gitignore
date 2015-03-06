@@ -22,7 +22,8 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-
+# Specific to the project
 www
 node_modules
-public/javascript/paris.js
+src/javascript/paris.js
+src/javascript/paris.js.map
