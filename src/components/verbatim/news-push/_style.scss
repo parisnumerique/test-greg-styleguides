@@ -1,0 +1,155 @@
+.news-push {
+  position: relative;
+  margin-bottom: 90px; // absolute link = 50px + classic 40px
+
+  transform: translateX(1600px);
+  transition: 1s ease transform;
+
+  &.visible {
+    transform: none;
+  }
+
+  .actu {
+    background: $color-primary;
+    padding: 20px;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+  }
+
+  .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &:after {
+      content: " ";
+      top: 0;
+      right: -1000px;
+      bottom: 0;
+      background: $color-primary;
+      width: 1000px;
+      height: 100%;
+      position: absolute;
+    }
+  }
+
+  .actu > img {
+    width: 260px;
+    height: 160px;
+    position: relative;
+    left: -40px;
+  }
+
+  .actu .content {
+    position: relative;
+    left: -20px;
+    max-width: 780px;
+    color: $white;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      position: relative;
+      &.next:after {
+        content: " ";
+        width: 0%;
+        height: 1px;
+        background: $white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: .3s ease width ;
+      }
+      &.next:hover:after {
+        width: 100%;
+      }
+    }
+
+    & p:hover a.next:after {
+      width: 100%;
+    }
+
+  }
+
+  .actu > img, .actu > .content {
+    float: left;
+  }
+
+  h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    span {
+      position: relative;
+      &:after {
+        content: " ";
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+        left: 0;
+        height: 5px;
+        background: #FFF;
+      }
+    }
+  }
+
+  .link {
+    clear: both;
+    background: $gray242;
+    width: 300px;
+    position: absolute;
+    right: 0;
+    width: 410px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    font-weight: 300;
+    font-size: 14px;
+
+    &:after {
+      content: " ";
+      top: 0;
+      right: -1000px;
+      bottom: 0;
+      background: $gray242;
+      width: 1000px;
+      height: 100%;
+      position: absolute;
+    }
+
+    a {
+      color: $gray77;
+      text-decoration: none;
+      position: relative;
+
+      &:after {
+        content: " ";
+        width: 0%;
+        height: 1px;
+        background: $gray77;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: .3s ease width ;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    .icon {
+      padding-left: 10px;
+    }
+  }
+}
+

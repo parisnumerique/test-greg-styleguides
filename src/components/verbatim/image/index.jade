@@ -1,0 +1,26 @@
+include image
+include ../../helpers/code
+
+h2 Petite image
+.lsg-component
+  +image(defaults)
++code({language: "jade"}).
+  include image
+
+  +image(#{JSON.stringify(defaults)})
+
+h2 Grande image
+.lsg-component
+  +image(large_image)
++code({language: "jade"}).
+  include image
+
+  +image(#{JSON.stringify(large_image)})
+
+h2 Image verticale
+.lsg-component
+  +image(vertical_image)
++code({language: "jade"}).
+  include image
+
+  +image(#{JSON.stringify(vertical_image)})

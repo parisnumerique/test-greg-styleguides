@@ -1,0 +1,34 @@
+include block-aside
+include ../button/button
+include ../../helpers/code
+
+h2 Standard
+.lsg-module
+  +block-aside(defaults)
+    | Content
++code({language: "jade"}).
+  include block-aside
+
+  +block-aside(#{JSON.stringify(defaults)})
+    | Content
+
+h2 Texte + bouton
+.lsg-module
+  +block-aside(with_button)
+    p Sur rendez-vous à la Mairie du XIIIè arrondissement.
+    +button({
+      "href": "#",
+      "text": "Demander un rendez-vous",
+      "modifiers": ["action"]
+    })
++code({language: "jade"}).
+  include block-aside
+  include button
+
+  +block-aside(#{JSON.stringify(defaults)})
+    p Sur rendez-vous à la Mairie du XIIIè arrondissement.
+    +button({
+      "href": "#",
+      "text": "Demander un rendez-vous",
+      "modifiers": ["action"]
+    })

@@ -1,6 +1,5 @@
 // Grid variables
 $grid-width: 1100px;
-
 // Libraries
 @import "../../node_modules/susy/sass/susy";
 $susy: (
@@ -10,7 +9,6 @@ $susy: (
   gutters: .4,
   gutter-position: after
 );
-
 // Base
 @import "../base/_colors";
 @import "../base/_defaults";
@@ -20,7 +18,6 @@ $susy: (
 @import "../base/_mixins";
 @import "../base/_normalize";
 @import "../base/_normalize-opentype";
-
 // Modules
 @import "../modules/anchors-list/_style";
 @import "../modules/block-aside/_style";
@@ -56,7 +53,6 @@ $susy: (
 @import "../modules/search-push/_style";
 @import "../modules/search-result/_style";
 @import "../modules/video/_style";
-
 // Components
 @import "../components/_style";
 @import "../components/accordion/_style";
@@ -71,7 +67,6 @@ $susy: (
 @import "../components/transportation/_style";
 @import "../components/verbatim/_style";
 @import "../components/video/_style";
-
 // Layouts
 @import "../layouts/stack/_style";
 @import "../layouts/half-col/_style";

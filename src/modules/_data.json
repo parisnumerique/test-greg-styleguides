@@ -1,8 +1,13 @@
 {
   "modules": [
     "anchors-list",
+    "block-aside",
+    "block-aside-checkboxes",
+    "block-aside-contact",
+    "block-aside-links",
     "breadcrumbs",
     "button",
+    "blue-block",
     "cross-content",
     "document-heading",
     "footer",
@@ -24,6 +29,7 @@
     "que-faire",
     "quick-access",
     "search-push",
+    "search-result",
     "sections-list",
     "social",
     "tags",

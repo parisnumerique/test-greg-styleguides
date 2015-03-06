@@ -1,0 +1,40 @@
+.component-video {
+
+  .video-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    &:after {
+      padding-top: 56.25%; // 16:9 ratio
+      display: block;
+      content: "";
+    }
+
+    iframe {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+
+      &:after {
+        display: block;
+        content: "";
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  a {
+    color: $red2;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
