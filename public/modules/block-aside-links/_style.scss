@@ -1,0 +1,59 @@
+.block-aside-links {
+  .block-aside-title {
+    margin-bottom: 18px; // because the links in items have 2px padding
+  }
+
+  // modifiers
+  &.emphasis-links {
+    .block-aside-item {
+      a {
+        border-bottom: 1px solid $gray77;
+      }
+      &.current a {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .block-aside-item {
+    a {
+      color: $gray26;
+      display: inline-block;
+      line-height: 20px;
+      padding: 2px 0;
+      position: relative;
+      text-decoration: none;
+      transition: all 0.35s ease;
+
+      &:after {
+        background-color: $color-primary;
+        bottom: -1px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: width 0.35s ease;
+        width: 0;
+      }
+
+      &:hover {
+        color: $color-primary;
+        &:after {width: 100%;}
+      }
+    }
+
+    &.current {
+      a {
+        color: $blue3;
+        font-weight: 700;
+        pointer-events: none;
+        &:hover {
+          color: $blue3;
+          cursor: default;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
