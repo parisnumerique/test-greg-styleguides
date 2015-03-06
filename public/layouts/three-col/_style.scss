@@ -1,0 +1,29 @@
+.layout-three-col {
+  background-color: $white;
+  overflow: hidden;
+  width: 100%;
+
+  /* modifiers */
+  &.color-secondary-background {
+    background-color: $color-secondary;
+  }
+
+
+  .layout-wrapper {
+    @include container;
+    display: table;
+    width: $grid-width;
+  }
+
+  .layout-content {
+    @include span(4 of 12);
+    display: table-cell;
+    padding: 40px 0;
+    vertical-align: top;
+  }
+
+  .layout-content:last-child {
+    @include last;
+  }
+
+}

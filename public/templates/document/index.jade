@@ -46,12 +46,17 @@ append content
     +cross-content(data.cross_content)
 
 append content
-  .layout-content.blue-background
-    .layout-wrapper
-      +heading(data.connected.heading)
-      +newsletter(public.modules.newsletter._data.index.defaults)
-      +jecoute(public.modules.jecoute._data.index.defaults)
-      +social(public.modules.social._data.index.defaults)
+  .layout-content
+    .layout-three-col.color-secondary-background
+      .layout-wrapper
+        +heading(data.connected.heading)
+        .layout-content
+          +newsletter(data.connected.newsletter)
+        .layout-content
+          +jecoute(data.connected.jecoute)
+        .layout-content
+          +social(data.connected.social)
+
 
 
 append content

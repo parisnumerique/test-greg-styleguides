@@ -1,7 +1,7 @@
 include ../../modules/button/button
 
 mixin jecoute(opts)
-  .jecoute
+  .jecoute(class=opts.modifiers)
     .inner
       h2= opts.title
 
