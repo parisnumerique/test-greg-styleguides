@@ -1,23 +1,20 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/header/header
+include ../../modules/hub-heading/hub-heading
+include ../../modules/heading/heading
+include ../../modules/get-involved-list/get-involved-list
+include ../../modules/jecoute/jecoute
+include ../../modules/links-group/links-group
+include ../../modules/newsletter/newsletter
+include ../../modules/news-list/news-list
+include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/social/social
 
 append content
   +header(public.modules.header._data.index.defaults)
-
-  include ../../modules/hub-heading/hub-heading
-  include ../../modules/breadcrumbs/breadcrumbs
-  include ../../modules/heading/heading
-  include ../../modules/get-involved-list/get-involved-list
-  include ../../modules/links-group/links-group
-  include ../../modules/news-list/news-list
-  include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
-  include ../../modules/newsletter/newsletter
-  include ../../modules/jecoute/jecoute
-  include ../../modules/social/social
-
-  include ../../components/news-push/news-push
 
 append content
   .layout-content
