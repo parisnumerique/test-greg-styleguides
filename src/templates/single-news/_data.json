@@ -138,6 +138,71 @@
           }
         }
       ],
+      "related": {
+        "heading": {
+          "title": "À lire aussi",
+          "link": {
+            "href": "#",
+            "text": "Voir toutes les actualités"
+          }
+        },
+        "news": {
+          "modifiers": ["news-cards"],
+          "items": [
+            {
+              "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+            },
+            {
+              "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Culture et patrimoine",
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+            },
+            {
+              "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+            }
+          ]
+        }
+      },
+      "most_shared": {
+        "heading": {
+          "title": "Les plus partagés"
+        },
+        "news": {
+          "items": [
+            {
+              "href": "#",
+              "date": "10 janvier 2015",
+              "category": "Logement",
+              "title": "Expulsions : début de la trêve hivernale"
+            },
+            {
+              "href": "#",
+              "date": "10 janvier 2015",
+              "category": "Logement",
+              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
+            },
+            {
+              "href": "#",
+              "date": "10 janvier 2015",
+              "category": "Logement",
+              "title": "Le point sur les nouveaux logements à Paris"
+            },
+            {
+              "href": "#",
+              "date": "10 janvier 2015",
+              "category": "Culture et patrimoine",
+              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+            }
+          ]
+        }
+      },
       "connected": {
         "heading": {
           "title": "Restez connecté",

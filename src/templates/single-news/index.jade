@@ -10,6 +10,7 @@ include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/jecoute/jecoute
+include ../../modules/news-list/news-list
 include ../../modules/newsletter/newsletter
 include ../../modules/social/social
 
@@ -28,7 +29,7 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-separate-after.layout-content-adjacent
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
@@ -42,6 +43,18 @@ append content
         .layout-content
           each component in data.components
             +#{component.type}(component.data)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.related.heading)
+      +news-list(data.related.news)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.most_shared.heading)
+      +news-list(data.most_shared.news)
 
 append content
   .layout-content.color-secondary-background
