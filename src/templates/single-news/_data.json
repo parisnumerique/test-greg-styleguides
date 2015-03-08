@@ -1,0 +1,247 @@
+{
+  "index": {
+    "data": {
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "L'Hôtel de ville"},
+          {"href": "#", "text": "Actualités"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        }
+      },
+      "heading": {
+        "image": "heading.jpg",
+        "text": "Ça glisse sur la patinoire de l’hôtel de ville",
+        "tags" : [
+          {
+            "text": "Mercredi 10 décembre 2014"
+          },
+          {
+            "text": "Sport et loisirs",
+            "href": "#"
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Actualités"
+          },
+          {
+            "href": "#",
+            "text": "Ça glisse sur la patinoire de l’hotel de ville"
+          }
+        ]
+      },
+      "components": [
+        {
+          "type": "text",
+          "data": {
+            "block": "<p class=\"intro\">Jusqu'en mars 2015, patineurs en tous genres, débutants ou avertis peuvent s'adonner aux plaisirs de la glace sur la célèbre patinoire de l'Hôtel de Ville.</p>"
+          }
+        },
+        {
+          "type": "sharelines",
+          "data": {
+            "title": "Partager l'article",
+            "items": [
+              {
+                "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire."
+              },
+              {
+                "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics."
+              },
+              {
+                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins."
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h2>Deux pistes sont proposées</h2><p>Une grande et une petite réservée aux enfants de moins de 6 ans. Il n’ y a pas d’âge minimal pour l’accès à la patinoire. Les mineurs restent sous la responsabilité de leurs parents mêmes s’ils se présentent à la patinoire non accompagnés de leurs parents.</p><p>Des moniteurs diplômés sont là pour s’adapter aux différents publics (grand public débutant ou habitué, groupes scolaires, centres de loisirs…). Ils assurent ainsi une mission de conseiller technique et de médiateur pour sécuriser l’espace de glisse.</p>"
+          }
+        },
+        {
+          "type": "video",
+          "data": {
+            "block": "<iframe frameborder=\"0\" width=\"480\" height=\"270\" src=\"//www.dailymotion.com/embed/video/xn4p8l\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/xn4p8l_venez-patiner-devant-l-hotel-de-ville_people\" target=\"_blank\">Venez patiner devant l&#039;H&ocirc;tel de Ville!</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
+          }
+        },
+        {
+          "type": "sharelines",
+          "data": {
+            "title": "Partager l'article",
+            "items": [
+              {
+                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins."
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h2>Patinoire mode d'emploi</h2><p>L’accès de la patinoire est gratuit pour les personnes équipées de leurs patins. Pour les autres, la location de patins est de 6€.<br />Les pointures disponibles : de la taille 25 à 49 ainsi que des patins double-lame (pointure 27 et inférieure) pour les enfants.<br />Une pièce d’identité est obligatoire pour la location des patins.<br />Pour des raisons de sécurité, le port des gants est obligatoire.<br />Les écoles parisiennes doivent contacter la circonscription des affaires scolaires de leur arrondissement.<br />Les écoles en dehors de Paris ne peuvent bénéficier de ces créneaux.</p>"
+          }
+        },
+        {
+          "type": "verbatim",
+          "data": {
+            "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+            "author": "Bruno Julliard",
+            "function": "premier adjoint à la Maire de Paris",
+            "social": "#"
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<p>Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>"
+          }
+        },
+        {
+          "type": "transportation",
+          "data": {
+            "title": "Patinoire de l'Hôtel de Ville",
+            "address": "Parvis de l'Hôtel de Ville",
+            "items": [
+              {"icon": "subway", "text": "Métro Hôtel de Ville"}
+            ],
+            "button": {"href": "#", "text": "Voir la fiche"}
+          }
+        }
+      ],
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "placeholder": "Entrez votre courriel",
+          "inputId": "newsletter-input",
+          "submit": "Valider",
+          "otherNewsletters": {
+            "text": "Autres newsletters et alertes",
+            "url": "#"
+          }
+        },
+        "jecoute": {
+          "title": "@Parisjecoute",
+          "items": [
+            {
+              "question": {
+                "user": "@juliechanal",
+                "time": "9h30",
+                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h11",
+                "text": "Oui, la piscine reste ouverte cet été."
+              }
+            },
+            {
+              "question": {
+                "user": "@JuliePetrucci",
+                "time": "10h20",
+                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h50",
+                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
+              }
+            },
+            {
+              "question": {
+                "user": "@billy141512",
+                "time": "11h02",
+                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "11h14",
+                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+              }
+            }
+          ],
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "items": [{
+            "icon": "twitter",
+            "count": "219 000",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner à @paris"
+            }
+          },{
+            "icon": "facebook",
+            "count": "2 508 576",
+            "subscribe": {
+              "url": "#",
+              "text": "Suivre la page Facebook"
+            }
+          },{
+            "icon": "instagram",
+            "count": "16 449",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner sur Instagram"
+            }
+          }]
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}
