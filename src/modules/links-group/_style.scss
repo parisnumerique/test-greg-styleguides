@@ -7,26 +7,11 @@
   color: white;
   background-position: 50% 50%;
   background-size: cover;
+  display: table;
   height: 320px;
+  width: 100%;
   position: relative;
   text-align: center;
-
-  .links-group-title,
-  .links-group-subtitle {
-    position: relative;
-    z-index: 2;
-  }
-
-  .links-group-title {  
-    font-size: 36px;
-    font-weight: 700;
-    padding: 110px 0 14px;
-  } 
-
-  .link-group-subtitle {
-    font-size: 18px;
-    font-weight: 300;
-  }
 
   &:after {
     content: '';
@@ -37,6 +22,28 @@
     width: 100%;
     z-index: 1;
   }
+}
+
+.links-group-wrapper-title {
+  display: table-cell; 
+  vertical-align: middle;
+}
+
+.links-group-title,
+.links-group-subtitle {
+  position: relative;
+  z-index: 2;
+}
+
+.links-group-title { 
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 13px;
+} 
+
+.link-group-subtitle {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 // filtre couleur de l'image
