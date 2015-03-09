@@ -1,7 +1,7 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/anchors-list/anchors-list
-include ../../modules/blue-block/blue-block
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
 include ../../modules/cross-content/cross-content
@@ -55,13 +55,13 @@ append content
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
-          +blue-block({title: data.connected.newsletter.title})
+          +block-content({title: data.connected.newsletter.title})
             +newsletter(data.connected.newsletter)
         .layout-content
-          +blue-block({title: data.connected.jecoute.title})
+          +block-content({title: data.connected.jecoute.title})
             +jecoute(data.connected.jecoute)
         .layout-content
-          +blue-block({title: data.connected.social.title})
+          +block-content({title: data.connected.social.title})
             +social(data.connected.social)
 
 append content

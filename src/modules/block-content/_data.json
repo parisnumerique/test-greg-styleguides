@@ -1,0 +1,8 @@
+{
+  "index": {
+    "defaults": {
+      "title": "Title",
+      "modifiers": ["color-secondary-background"]
+    }
+  }
+}
