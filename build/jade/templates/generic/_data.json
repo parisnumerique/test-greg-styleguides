@@ -1,0 +1,191 @@
+{
+  "index": {
+    "data": {
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "L'Hôtel de ville"},
+          {"href": "#", "text": "Actualités"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        }
+      },
+      "heading": {
+        "image": "../../modules/document-heading/document-heading.png",
+        "text": "Titre de la page type",
+        "icons": [
+          {
+            "name": "favorites",
+            "url": "#"
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Titre de la page type"
+          }
+        ]
+      },
+      "components": [
+        {
+          "type": "text",
+          "data": {
+            "block": "<p class=\"intro\">Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</p><h2>Titre de la première partie</h2><p>Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui.</p><p>Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue.</p><h2>Titre de la deuxième partie</h2><p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p><p>Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.</p><h2>Titre de la troisième partie</h2><p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.</p><p>Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.</p>"
+          }
+        }
+      ],
+      "cross_content": {
+        "items": [
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img1.jpg",
+            "title": "participez !",
+            "icon": "instagram",
+            "text": "#MonHLM : photographiez la façade de votre logement social !"
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img2.jpg",
+            "title": "dossier",
+            "text": "Se loger à Paris, le guide."
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img3.jpg",
+            "title": "actualités",
+            "text": "Locataires HLM : votez pour vos représentants"
+          }
+        ]
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "placeholder": "Entrez votre courriel",
+          "inputId": "newsletter-input",
+          "submit": "Valider",
+          "otherNewsletters": {
+            "text": "Autres newsletters et alertes",
+            "url": "#"
+          }
+        },
+        "jecoute": {
+          "title": "@Parisjecoute",
+          "items": [
+            {
+              "question": {
+                "user": "@juliechanal",
+                "time": "9h30",
+                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h11",
+                "text": "Oui, la piscine reste ouverte cet été."
+              }
+            },
+            {
+              "question": {
+                "user": "@JuliePetrucci",
+                "time": "10h20",
+                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h50",
+                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
+              }
+            },
+            {
+              "question": {
+                "user": "@billy141512",
+                "time": "11h02",
+                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "11h14",
+                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+              }
+            }
+          ],
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "items": [{
+            "icon": "twitter",
+            "count": "219 000",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner à @paris"
+            }
+          },{
+            "icon": "facebook",
+            "count": "2 508 576",
+            "subscribe": {
+              "url": "#",
+              "text": "Suivre la page Facebook"
+            }
+          },{
+            "icon": "instagram",
+            "count": "16 449",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner sur Instagram"
+            }
+          }]
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}
