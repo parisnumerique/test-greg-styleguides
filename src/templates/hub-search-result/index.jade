@@ -1,0 +1,52 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/block-aside-checkboxes/block-aside-checkboxes
+include ../../modules/block-aside-links/block-aside-links
+include ../../modules/blue-block/blue-block
+include ../../modules/footer/footer
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/hub-heading/hub-heading
+include ../../modules/jecoute/jecoute
+include ../../modules/newsletter/newsletter
+include ../../modules/search-result/search-result
+include ../../modules/social/social
+
+append content
+  +header(public.modules.header._data.index.defaults)
+
+append content
+  .layout-content
+    +hub-heading(data.heading)
+
+append content
+  .layout-left-col
+    .layout-wrapper
+      aside.layout-aside
+        +block-aside-links(data.block_aside_links)
+        +block-aside-checkboxes(data.block_aside_checkboxes)
+
+      .layout-content
+        +search-result(data.search_result.first_list_result)
+
+append content
+  .layout-content
+
+append content
+    .layout-content.color-secondary-background
+      .layout-three-col
+        .layout-wrapper
+          +heading(data.connected.heading)
+          .layout-content
+            +blue-block({title: data.connected.newsletter.title})
+              +newsletter(data.connected.newsletter)
+          .layout-content
+            +blue-block({title: data.connected.jecoute.title})
+              +jecoute(data.connected.jecoute)
+          .layout-content
+            +blue-block({title: data.connected.social.title})
+              +social(data.connected.social)
+
+append content
+  .layout-content.layout-content-adjacent
+    +footer(public.modules.footer._data.index.defaults)

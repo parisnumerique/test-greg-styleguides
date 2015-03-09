@@ -1,0 +1,191 @@
+{
+  "index": {
+    "data": {
+      "heading": {
+        "text": "Services <br>et infos pratiques",
+        "image": "./hub-heading.jpg"
+      },
+      "block_aside_links": {
+        "title": "Suggestions",
+        "items": [
+          {
+            "href": "#", "text": "Logement social"
+          },
+          {
+            "href": "#", "text": "Logement de la ville"
+          },
+          {
+            "href": "#", "text": "Aide au logement"
+          },
+          {
+            "href": "#", "text": "Logement privatif"
+          }
+        ]
+      },
+      "block_aside_checkboxes": {
+        "title": "Rubriques",
+        "name": "rubriques",
+        "items": [
+          {
+            "value": 0,
+            "text": "Services et infos pratiques",
+            "number": 95
+          },
+          {
+            "value": 1,
+            "text": "Actualités",
+            "number": 15,
+            "checked": true
+          },
+          {
+            "value": 2,
+            "text": "Municipalité",
+            "number": 3
+          },
+          {
+            "value": 3,
+            "text": "Participez",
+            "number": 4
+          }
+        ]
+      },
+      "search_result": {
+        "first_list_result": {
+          "result": "365 résultats",
+           "items": [
+            {
+              "href": "#",
+              "modifiers": ["strong"],
+              "title": "Logement",
+              "text": "Services et infos pratiques"
+            },
+            {
+              "href": "#",
+              "modifiers": ["strong"],
+              "title": "Logement social",
+              "text": "Services et infos pratiques — Logement"
+            },
+            {
+              "href": "#",
+              "modifiers": ["strong"],
+              "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
+              "text": "Services et infos pratiques — Démarches"
+            },
+            {
+              "href": "#",
+              "title": "Aide au logement",
+              "text": "Services et infos pratiques— Logement"
+            },
+            {
+              "href": "#",
+              "title": "Impôts locaux",
+              "text": "Services et infos pratiques — Logement"
+            },
+             {
+              "href": "#",
+              "title": "Un nouveau cadre pour le logement social",
+              "text": "Actualités — Logement"
+            },
+             {
+              "href": "#",
+              "title": "Ian Brossat",
+              "text": "Municipalité — La Maire et ses adjoints"
+            },
+             {
+              "href": "#",
+              "title": "La maison du logement",
+              "text": "Services et infos pratiques — Logement"
+            }
+          ]
+        }
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "placeholder": "Entrez votre courriel",
+          "inputId": "newsletter-input",
+          "submit": "Valider",
+          "otherNewsletters": {
+            "text": "Autres newsletters et alertes",
+            "url": "#"
+          }
+        },
+        "jecoute": {
+          "title": "@Parisjecoute",
+          "items": [
+            {
+              "question": {
+                "user": "@juliechanal",
+                "time": "9h30",
+                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h11",
+                "text": "Oui, la piscine reste ouverte cet été."
+              }
+            },
+            {
+              "question": {
+                "user": "@JuliePetrucci",
+                "time": "10h20",
+                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h50",
+                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
+              }
+            },
+            {
+              "question": {
+                "user": "@billy141512",
+                "time": "11h02",
+                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "11h14",
+                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+              }
+            }
+          ],
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "items": [{
+            "icon": "twitter",
+            "count": "219 000",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner à @paris"
+            }
+          },{
+            "icon": "facebook",
+            "count": "2 508 576",
+            "subscribe": {
+              "url": "#",
+              "text": "Suivre la page Facebook"
+            }
+          },{
+            "icon": "instagram",
+            "count": "16 449",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner sur Instagram"
+            }
+          }]
+        }
+      }
+    }
+  }
+}
