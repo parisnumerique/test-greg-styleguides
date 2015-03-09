@@ -1,0 +1,76 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/blue-block/blue-block
+include ../../modules/footer/footer
+include ../../modules/get-involved/get-involved
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jumbotron/jumbotron
+include ../../modules/jecoute/jecoute
+include ../../modules/municipal-team/municipal-team
+include ../../modules/news-list/news-list
+include ../../modules/newsletter/newsletter
+include ../../modules/notice/notice
+include ../../modules/que-faire/que-faire
+include ../../modules/quick-access/quick-access
+include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/sections-list/sections-list
+include ../../modules/social/social
+
+append content
+  +notice(data.notice)
+    a(href="#") Visiting Paris ? Plan your trip
+
+append content
+  +header(data.header)
+
+append content
+  .layout-content
+    +quick-access(data.quick_access)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.sections.heading)
+      +sections-list(data.sections.list)
+
+append content
+  .layout-content
+    +jumbotron(data.jumbotron)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.news.heading)
+      +news-list(data.news.list)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +que-faire(data.que_faire)
+
+append content
+  .layout-content.gray-background
+    +get-involved(data.get_involved)
+
+append content
+  .layout-right-col
+    .layout-wrapper
+      .layout-content
+        +heading(data.gallery.heading)
+        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
+      aside.layout-aside.color-secondary-background
+        +blue-block({title: data.connected.newsletter.title, modifiers: ["vertical"]})
+          +newsletter(data.connected.newsletter)
+        +blue-block({title: data.connected.jecoute.title, modifiers: ["vertical"]})
+          +jecoute(data.connected.jecoute)
+        +blue-block({title: data.connected.social.title, modifiers: ["vertical"]})
+          +social(data.connected.social)
+
+append content
+  .layout-content
+    +municipal-team(data.municipal_team)
+
+append content
+  .layout-content.layout-content-adjacent
+    +footer(data.footer)

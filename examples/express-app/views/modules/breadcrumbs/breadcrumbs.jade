@@ -1,0 +1,8 @@
+mixin breadcrumbs(opts)
+  ol.breadcrumbs
+    each item, index in opts.items
+      if index === opts.items.length - 1
+        li.breadcrumbs-item.breadcrumbs-item-current= item.text
+      else
+        li.breadcrumbs-item
+          a(href=item.href)= item.text

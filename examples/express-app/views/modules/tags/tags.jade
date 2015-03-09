@@ -1,0 +1,10 @@
+mixin tags(opts)
+  ul.tags-list
+    each tag, index in opts
+      li
+        if tag.href
+          a.tag(href="#{tag.href}")= tag.text
+        else
+          span.tag= tag.text
+        if index < opts.length-1
+          span.separator —
