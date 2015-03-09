@@ -14,7 +14,7 @@ include ../../modules/pagination/pagination
 include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
 include ../../modules/search-push/search-push
 include ../../modules/social/social
-include ../../modules/video/video
+include ../../modules/video-cover/video-cover
 
 append content
   +header(public.modules.header._data.index.defaults)
@@ -45,7 +45,7 @@ append content
     .layout-half-col.color-secondary-background
       .layout-wrapper
         .layout-content
-          +video(data.video)
+          +video-cover(data.video)
         .layout-content
           +newsletter(public.modules.newsletter._data.index.defaults)
 
