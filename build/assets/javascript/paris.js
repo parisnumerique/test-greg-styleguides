@@ -13,8 +13,9 @@ require('../components/news-push/script');
 require('../modules/header/script');
 require('../modules/jecoute/script');
 require('../modules/notice/script');
+require('../modules/quick-access/script');
 
-},{"../components/accordion/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\accordion\\script.js","../components/news-push/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\news-push\\script.js","../modules/header/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\header\\script.js","../modules/jecoute/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\jecoute\\script.js","../modules/notice/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\notice\\script.js","./externals/bootstrap":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\bootstrap.js","./lib/scroll":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\lib\\scroll.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js":[function(require,module,exports){
+},{"../components/accordion/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\accordion\\script.js","../components/news-push/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\news-push\\script.js","../modules/header/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\header\\script.js","../modules/jecoute/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\jecoute\\script.js","../modules/notice/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\notice\\script.js","../modules/quick-access/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\quick-access\\script.js","./externals/bootstrap":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\bootstrap.js","./lib/scroll":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\lib\\scroll.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js":[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.3
  * http://jquery.com/
@@ -14456,4 +14457,94 @@ $(document).ready(function(){
   Paris.notice('.notice');
 });
 
-},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js","pubsub-js":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\pubsub-js\\src\\pubsub.js","velocity-animate":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\velocity-animate\\velocity.js"}]},{},["./src/javascript/main.js"]);
+},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js","pubsub-js":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\pubsub-js\\src\\pubsub.js","velocity-animate":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\velocity-animate\\velocity.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\quick-access\\script.js":[function(require,module,exports){
+'use strict';
+require('velocity-animate');
+
+var $ = require('jquery');
+
+var Paris = window.Paris || {};
+
+Paris.quickAccess = (function(){
+
+  var defaultOptions = {
+  };
+
+  function quickAccess(selector, userOptions){
+    var $el     = $(selector),
+      options = $.extend({}, defaultOptions, userOptions),
+      $searchField,
+      $buttons,
+      $close,
+      isSearching = false;
+
+    function init(){
+      initOptions();
+
+      $searchField = $el.find('.quick-access-search-field');
+      $buttons = $el.find('.quick-access-buttons');
+      $close = $el.find('.quick-access-close-search');
+
+      $searchField.on('input', onStartSearching);
+      $searchField.on('focus', function(){
+        if ($searchField.val() !== '') {
+          onStartSearching();
+        }
+      });
+      $close.on('click', onStopSearching);
+
+      if ($el.hasClass('searching')) {
+        onStartSearching();
+      }
+    }
+
+    function initOptions() {
+      $.each($el.data(), function(key, value){
+        options[key] = value;
+      });
+    }
+
+    function onStartSearching(){
+      if (isSearching) {return false;}
+      isSearching = true;
+      $el.addClass('searching');
+      $buttons.velocity({
+        opacity: 0
+      }, {
+        display: "none",
+        duration: 350,
+        ease: "ease"
+      });
+    }
+
+    function onStopSearching(){
+      if (!isSearching) {return false;}
+      isSearching = false;
+      $el.removeClass('searching');
+      $buttons.velocity({
+        opacity: 1
+      }, {
+        display: "block",
+        duration: 350,
+        ease: "ease"
+      });
+    }
+
+    init();
+
+    return $el;
+  }
+
+  return function(selector, userOptions){
+    return $(selector).each(function(){
+      quickAccess(this, userOptions);
+    });
+  };
+
+})();
+
+$(document).ready(function(){
+  Paris.quickAccess('.quick-access');
+});
+
+},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js","velocity-animate":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\velocity-animate\\velocity.js"}]},{},["./src/javascript/main.js"]);
