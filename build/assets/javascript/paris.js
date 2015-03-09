@@ -12,13 +12,9 @@ require('../components/news-push/script');
 // load our modules
 require('../modules/header/script');
 require('../modules/jecoute/script');
+require('../modules/notice/script');
 
-
-
-
-
-
-},{"../components/accordion/script":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/components/accordion/script.js","../components/news-push/script":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/components/news-push/script.js","../modules/header/script":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/modules/header/script.js","../modules/jecoute/script":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/modules/jecoute/script.js","./externals/bootstrap":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/externals/bootstrap.js","./lib/scroll":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/lib/scroll.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/jquery/dist/jquery.js":[function(require,module,exports){
+},{"../components/accordion/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\accordion\\script.js","../components/news-push/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\news-push\\script.js","../modules/header/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\header\\script.js","../modules/jecoute/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\jecoute\\script.js","../modules/notice/script":"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\notice\\script.js","./externals/bootstrap":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\bootstrap.js","./lib/scroll":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\lib\\scroll.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js":[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.3
  * http://jquery.com/
@@ -9225,7 +9221,7 @@ return jQuery;
 
 }));
 
-},{}],"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/lodash.throttle/index.js":[function(require,module,exports){
+},{}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\lodash.throttle\\index.js":[function(require,module,exports){
 /**
  * lodash 3.0.1 (Custom Build) <https://lodash.com/>
  * Build: `lodash modern modularize exports="npm" -o ./`
@@ -9334,7 +9330,7 @@ function isObject(value) {
 
 module.exports = throttle;
 
-},{"lodash.debounce":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/lodash.throttle/node_modules/lodash.debounce/index.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/lodash.throttle/node_modules/lodash.debounce/index.js":[function(require,module,exports){
+},{"lodash.debounce":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\lodash.throttle\\node_modules\\lodash.debounce\\index.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\lodash.throttle\\node_modules\\lodash.debounce\\index.js":[function(require,module,exports){
 /**
  * lodash 3.0.2 (Custom Build) <https://lodash.com/>
  * Build: `lodash modern modularize exports="npm" -o ./`
@@ -9577,7 +9573,7 @@ function isObject(value) {
 
 module.exports = debounce;
 
-},{"lodash.isnative":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/lodash.throttle/node_modules/lodash.debounce/node_modules/lodash.isnative/index.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/lodash.throttle/node_modules/lodash.debounce/node_modules/lodash.isnative/index.js":[function(require,module,exports){
+},{"lodash.isnative":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\lodash.throttle\\node_modules\\lodash.debounce\\node_modules\\lodash.isnative\\index.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\lodash.throttle\\node_modules\\lodash.debounce\\node_modules\\lodash.isnative\\index.js":[function(require,module,exports){
 /**
  * lodash 3.0.0 (Custom Build) <https://lodash.com/>
  * Build: `lodash modern modularize exports="npm" -o ./`
@@ -9695,7 +9691,7 @@ function escapeRegExp(string) {
 
 module.exports = isNative;
 
-},{}],"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/pubsub-js/src/pubsub.js":[function(require,module,exports){
+},{}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\pubsub-js\\src\\pubsub.js":[function(require,module,exports){
 /*
 Copyright (c) 2010,2011,2012,2013,2014 Morgan Roderick http://roderick.dk
 License: MIT - http://mrgnrdrck.mit-license.org
@@ -9941,7 +9937,7 @@ https://github.com/mroderick/PubSubJS
 	};
 }));
 
-},{}],"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/velocity-animate/velocity.js":[function(require,module,exports){
+},{}],"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\velocity-animate\\velocity.js":[function(require,module,exports){
 /*! VelocityJS.org (1.2.2). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */
 
 /*************************
@@ -13810,7 +13806,7 @@ return function (global, window, document, undefined) {
 /* The CSS spec mandates that the translateX/Y/Z transforms are %-relative to the element itself -- not its parent.
 Velocity, however, doesn't make this distinction. Thus, converting to or from the % unit with these subproperties
 will produce an inaccurate conversion value. The same issue exists with the cx/cy attributes of SVG circles and ellipses. */
-},{}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/components/accordion/script.js":[function(require,module,exports){
+},{}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\accordion\\script.js":[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -13858,7 +13854,7 @@ $(document).ready(function(){
 });
 
 
-},{"jquery":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/jquery/dist/jquery.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/components/news-push/script.js":[function(require,module,exports){
+},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\components\\news-push\\script.js":[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -13919,7 +13915,7 @@ $(document).ready(function(){
   Paris.newsPush('.news-push');
 });
 
-},{"jquery":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/jquery/dist/jquery.js","pubsub-js":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/pubsub-js/src/pubsub.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/externals/bootstrap.js":[function(require,module,exports){
+},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js","pubsub-js":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\pubsub-js\\src\\pubsub.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\bootstrap.js":[function(require,module,exports){
 // Chargement custom de Bootstrap 3
 // ================================
 
@@ -13930,7 +13926,7 @@ window.jQuery = window.$ = require('jquery');
 require('./collapse');
 require('./transition');
 
-},{"./collapse":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/externals/collapse.js","./transition":"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/externals/transition.js","jquery":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/jquery/dist/jquery.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/externals/collapse.js":[function(require,module,exports){
+},{"./collapse":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\collapse.js","./transition":"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\transition.js","jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\collapse.js":[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: collapse.js v3.0.0
  * http://twbs.github.com/bootstrap/javascript.html#collapse
@@ -14111,7 +14107,7 @@ require('./transition');
 
 }(window.jQuery);
 
-},{}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/externals/transition.js":[function(require,module,exports){
+},{}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\externals\\transition.js":[function(require,module,exports){
 /* ========================================================================
  * Bootstrap: transition.js v3.0.0
  * http://twbs.github.com/bootstrap/javascript.html#transitions
@@ -14169,7 +14165,7 @@ require('./transition');
 
 }(window.jQuery);
 
-},{}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/javascript/lib/scroll.js":[function(require,module,exports){
+},{}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\javascript\\lib\\scroll.js":[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -14188,21 +14184,21 @@ function updatePosition(e) {
 
   if($searchEl.length) {
     if($document.scrollTop() > $searchEl.offset().top && previousPosition < $searchEl.offset().top){
-      PubSub.publish('scoll:search:down');
+      PubSub.publish('scroll:search:down');
     }
 
     if($document.scrollTop() < $searchEl.offset().top && previousPosition > $searchEl.offset().top){
-      PubSub.publish('scoll:search:up');
+      PubSub.publish('scroll:search:up');
     }
   }
 
   if($topNotice.length) {
     if($document.scrollTop() > $topNotice.height() && previousPosition < $topNotice.height()) {
-      PubSub.publish('scoll:notice:down');
+      PubSub.publish('scroll:notice:down');
     }
 
     if($document.scrollTop() < $topNotice.height() && previousPosition > $topNotice.height()) {
-      PubSub.publish('scoll:notice:up');
+      PubSub.publish('scroll:notice:up');
     }
   }
 
@@ -14213,7 +14209,7 @@ $(function () {
   $(window).on('scroll', throttledUpdate);
 });
 
-},{"jquery":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/jquery/dist/jquery.js","lodash.throttle":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/lodash.throttle/index.js","pubsub-js":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/pubsub-js/src/pubsub.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/modules/header/script.js":[function(require,module,exports){
+},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js","lodash.throttle":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\lodash.throttle\\index.js","pubsub-js":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\pubsub-js\\src\\pubsub.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\header\\script.js":[function(require,module,exports){
 'use strict';
 
 var $ = require('jquery');
@@ -14232,11 +14228,17 @@ Paris.header = (function(){
 
     function init(){
       initOptions();
-      PubSub.subscribe('scoll:search:down', fixNav);
-      PubSub.subscribe('scoll:search:up', unfixNav);
+      PubSub.subscribe('scroll:search:down', fixNav);
+      PubSub.subscribe('scroll:search:up', unfixNav);
 
-      PubSub.subscribe('scoll:notice:down', fixHeader);
-      PubSub.subscribe('scoll:notice:up', unfixHeader);
+      PubSub.subscribe('scroll:notice:down', fixHeader);
+      PubSub.subscribe('scroll:notice:up', unfixHeader);
+
+      PubSub.subscribe('notice:close', function(e, data){
+        if (data && data.id === "notice_home_top") {
+          fixHeader();
+        }
+      });
 
       if(!$('.notice.top').length) {
         fixHeader();
@@ -14287,7 +14289,7 @@ $(document).ready(function(){
   Paris.header('header');
 });
 
-},{"jquery":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/jquery/dist/jquery.js","pubsub-js":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/pubsub-js/src/pubsub.js"}],"/Users/jblanche/dev/paris/livingstyleguide-harp/src/modules/jecoute/script.js":[function(require,module,exports){
+},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js","pubsub-js":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\pubsub-js\\src\\pubsub.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\jecoute\\script.js":[function(require,module,exports){
 'use strict';
 require('velocity-animate');
 
@@ -14378,4 +14380,80 @@ $(document).ready(function(){
   Paris.jecoute('.jecoute');
 });
 
-},{"velocity-animate":"/Users/jblanche/dev/paris/livingstyleguide-harp/node_modules/velocity-animate/velocity.js"}]},{},["./src/javascript/main.js"]);
+},{"velocity-animate":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\velocity-animate\\velocity.js"}],"D:\\projects\\paris\\livingstyleguide-harp\\src\\modules\\notice\\script.js":[function(require,module,exports){
+'use strict';
+require('velocity-animate');
+
+var $ = require('jquery');
+var PubSub = require('pubsub-js');
+
+var Paris = window.Paris || {};
+
+Paris.notice = (function(){
+
+  var defaultOptions = {
+  };
+
+  function notice(selector, userOptions){
+    var $el     = $(selector),
+        options = $.extend({}, defaultOptions, userOptions),
+        api = {},
+        $close;
+
+    function init(){
+      initOptions();
+
+      $close = $el.find('.close');
+
+      $close.on('click', onClickClose);
+
+      $el.data('api', api);
+    }
+
+    function initOptions() {
+      $.each($el.data(), function(key, value){
+        options[key] = value;
+      });
+    }
+
+    function onClickClose(e){
+      e.preventDefault();
+      api.close();
+    }
+
+    // The API for external interaction
+
+    api.close = function(){
+      $el.velocity({
+        height: 0,
+        opacity: 0
+      }, {
+        duration: 350,
+        easing: "ease",
+        complete: function(){
+          var data = {};
+          if ($el.attr('id')) {data.id = $el.attr('id');}
+          PubSub.publish('notice:close', data);
+          $el.remove();
+        }
+      });
+    };
+
+    init();
+
+    return $el;
+  }
+
+  return function(selector, userOptions){
+    return $(selector).each(function(){
+      notice(this, userOptions);
+    });
+  };
+
+})();
+
+$(document).ready(function(){
+  Paris.notice('.notice');
+});
+
+},{"jquery":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\jquery\\dist\\jquery.js","pubsub-js":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\pubsub-js\\src\\pubsub.js","velocity-animate":"D:\\projects\\paris\\livingstyleguide-harp\\node_modules\\velocity-animate\\velocity.js"}]},{},["./src/javascript/main.js"]);

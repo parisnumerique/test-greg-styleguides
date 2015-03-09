@@ -7,6 +7,7 @@ mixin news-push(opts)
         h3: span= opts.title
         p
           a(href="#{opts.href}")= opts.text
+          = " "
           a.next(href="#{opts.href}")= opts.follow
     .link
       a(href="#{opts.link.href}")
