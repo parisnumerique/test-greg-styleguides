@@ -1,5 +1,6 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/blue-block/blue-block
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
@@ -45,9 +46,11 @@ append content
     .layout-half-col.color-secondary-background
       .layout-wrapper
         .layout-content
-          +video-cover(data.video)
+          +blue-block(data.video.block)
+            +video-cover(data.video.cover)
         .layout-content
-          +newsletter(public.modules.newsletter._data.index.defaults)
+          +blue-block(data.newsletter.block)
+            +newsletter(data.newsletter.newsletter)
 
 append content
   .layout-content
