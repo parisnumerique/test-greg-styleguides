@@ -1,0 +1,10 @@
+mixin blue-block(opts)
+  .blue-block(class=opts.modifiers)
+    h2.title= opts.title
+    .inner
+      if block
+        block
+      else if opts.block
+        != opts.block
+      else
+        = opts.text

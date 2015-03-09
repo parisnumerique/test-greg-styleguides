@@ -7,7 +7,7 @@ mixin news-list(opts)
         each item, index in opts.items.slice(0, 5)
           if index === 0
             +news-card({
-              "modifiers": "large",
+              "modifiers": ["large"],
               "href": item.href,
               "image": item.image,
               "category": item.category,

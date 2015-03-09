@@ -1,0 +1,229 @@
+{
+  "index": {
+    "data": {
+      "heading": {
+        "text": "FAQ",
+        "image": "./hub-heading.png"
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Services et infos pratiques"
+          },
+          {
+            "text": "FAQ"
+          }
+        ]
+      },
+      "aside": {
+        "profile": {
+          "title": "Profil",
+          "items": [
+            {
+              "href": "#",
+              "text": "S’installer à Paris"
+            },
+            {
+              "href": "#",
+              "text": "Seniors"
+            },
+            {
+              "href": "#",
+              "text": "Handicap"
+            },
+            {
+              "href": "#",
+              "text": "Que faire avec ses enfants à Paris ?"
+            },
+            {
+              "href": "#",
+              "text": "Demandeurs d’emploi"
+            }
+          ]
+        },
+        "topics": {
+          "title": "Thématique",
+          "items": [
+            {
+              "href": "#",
+              "text": "Périphérique"
+            },
+            {
+              "href": "#",
+              "text": "Pollution sonore"
+            },
+            {
+              "href": "#",
+              "text": "Mairies d’arrondissement"
+            },
+            {
+              "href": "#",
+              "text": "Lorem ullamcorper"
+            },
+            {
+              "href": "#",
+              "text": "Adipiscing"
+            },
+            {
+              "href": "#",
+              "text": "Ullamcorper"
+            },
+            {
+              "href": "#",
+              "text": "Egestas sollicitudin"
+            },
+            {
+              "href": "#",
+              "text": "Porta cursus"
+            },
+            {
+              "href": "#",
+              "text": "Vulputate"
+            },
+            {
+              "href": "#",
+              "text": "Euismod cursus"
+            },
+            {
+              "href": "#",
+              "text": "Dapibus porta"
+            },
+            {
+              "href": "#",
+              "text": "Cursus"
+            }
+          ]
+        }
+      },
+      "content": {
+        "intro": {
+          "block": "<p class=\"intro\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>"
+        },
+        "faq": {
+          "title": "Questions les plus fréquentes",
+          "accordion": {
+            "items": [
+              {
+                "title": "Aenean lacinia bibendum nulla sed consectetur ?",
+                "slug": "titre1",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Curabitur blandit tempus porttitor ?",
+                "slug": "titre2",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam ?",
+                "slug": "titre3",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Pellentesque ornare sem lacinia quam venenatis vestibulum ?",
+                "slug": "titre4",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros ?",
+                "slug": "titre5",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              }
+            ]
+          }
+        }
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "placeholder": "Entrez votre courriel",
+          "inputId": "newsletter-input",
+          "submit": "Valider",
+          "otherNewsletters": {
+            "text": "Autres newsletters et alertes",
+            "url": "#"
+          }
+        },
+        "jecoute": {
+          "title": "@Parisjecoute",
+          "items": [
+            {
+              "question": {
+                "user": "@juliechanal",
+                "time": "9h30",
+                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h11",
+                "text": "Oui, la piscine reste ouverte cet été."
+              }
+            },
+            {
+              "question": {
+                "user": "@JuliePetrucci",
+                "time": "10h20",
+                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h50",
+                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
+              }
+            },
+            {
+              "question": {
+                "user": "@billy141512",
+                "time": "11h02",
+                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "11h14",
+                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+              }
+            }
+          ],
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "items": [{
+            "icon": "twitter",
+            "count": "219 000",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner à @paris"
+            }
+          },{
+            "icon": "facebook",
+            "count": "2 508 576",
+            "subscribe": {
+              "url": "#",
+              "text": "Suivre la page Facebook"
+            }
+          },{
+            "icon": "instagram",
+            "count": "16 449",
+            "subscribe": {
+              "url": "#",
+              "text": "S’abonner sur Instagram"
+            }
+          }]
+        }
+      }
+    }
+  }
+}

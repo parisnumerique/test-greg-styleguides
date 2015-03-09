@@ -6,6 +6,11 @@
     "closable": {
       "closable": true,
       "block": "Texte de la notice"
+    },
+    "closable_with_id": {
+      "id": "mynotice",
+      "closable": true,
+      "block": "Texte de la notice"
     }
   }
 }
