@@ -13,8 +13,12 @@
   margin-right: 10px;
 
   & + .breadcrumbs-item:before {
-    content: "→";
+    @extend %icon-font;
+    @extend %icon-arrow-light-right;
+    font-size: 17px;
     margin-right: 10px;
+    position: relative;
+    top: 2px;
   }
 
   > a {
