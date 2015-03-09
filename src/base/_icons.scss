@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?-eww6mb');
-  src:url('../fonts/paris-icons.eot?#iefix-eww6mb') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?-eww6mb') format('woff'),
-    url('../fonts/paris-icons.ttf?-eww6mb') format('truetype'),
-    url('../fonts/paris-icons.svg?-eww6mb#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?7lur4h');
+  src:url('../fonts/paris-icons.eot?#iefix7lur4h') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?7lur4h') format('woff'),
+    url('../fonts/paris-icons.ttf?7lur4h') format('truetype'),
+    url('../fonts/paris-icons.svg?7lur4h#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -51,15 +51,26 @@
   content: "\e606";
 }
 
-%icon-arrow-breadcrumbs,
-.icon-arrow-breadcrumbs:before {
-  content: "\e61d";
+%icon-arrow-light-bottom,
+.icon-arrow-light-bottom:before {
+  content: "\e607";
+}
+
+%icon-arrow-light-left,
+.icon-arrow-light-left:before {
+  content: "\e61e";
 }
 
 %icon-arrow-light-right,
 .icon-arrow-light-right:before {
-  content: "\e607";
+  content: "\e61d";
 }
+
+%icon-arrow-light-top,
+.icon-arrow-light-top:before {
+  content: "\e61f";
+}
+
 
 %icon-arrow-small-bottom,
 .icon-arrow-small-bottom:before {
