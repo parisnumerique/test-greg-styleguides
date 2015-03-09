@@ -16,21 +16,21 @@ function updatePosition(e) {
 
   if($searchEl.length) {
     if($document.scrollTop() > $searchEl.offset().top && previousPosition < $searchEl.offset().top){
-      PubSub.publish('scoll:search:down');
+      PubSub.publish('scroll:search:down');
     }
 
     if($document.scrollTop() < $searchEl.offset().top && previousPosition > $searchEl.offset().top){
-      PubSub.publish('scoll:search:up');
+      PubSub.publish('scroll:search:up');
     }
   }
 
   if($topNotice.length) {
     if($document.scrollTop() > $topNotice.height() && previousPosition < $topNotice.height()) {
-      PubSub.publish('scoll:notice:down');
+      PubSub.publish('scroll:notice:down');
     }
 
     if($document.scrollTop() < $topNotice.height() && previousPosition > $topNotice.height()) {
-      PubSub.publish('scoll:notice:up');
+      PubSub.publish('scroll:notice:up');
     }
   }
 

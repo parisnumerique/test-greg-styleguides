@@ -7,7 +7,7 @@
   position: relative;
 }
 
-// Keep space for the header, when the jumbotron is the first element after it
+// Keep space for the header, when the quick-access is the first element after it
 header + .layout-content .quick-access {
   padding-top: 225px;
 }
