@@ -1,0 +1,23 @@
+{
+  "index": {
+    "defaults": {
+      "items": [
+        {
+          "image": "../../modules/person-block/person-block-img.jpg",
+          "title": "Bruno Julliard",
+          "text": "Premier adjoint, Groupe socialiste et apparentés"
+        },
+        {
+          "image": "../../modules/person-block/person-block-img.jpg",
+          "title": "Julien Bargeton",
+          "text": "Adjoint, Groupe socialiste et apparentés"
+        },
+        {
+          "image": "../../modules/person-block/person-block-img.jpg",
+          "title": "Célia Blauel",
+          "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)"
+        }
+      ]
+    }
+  }
+}

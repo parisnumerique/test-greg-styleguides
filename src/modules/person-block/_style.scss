@@ -1,0 +1,52 @@
+.person-block {
+  background-color: $gray242;
+  border-radius: 5px;
+  display: table; 
+  height: 200px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 770px;
+  width: 100%;
+
+  .person-block-img {
+    background-position: 50% 50%;
+    background-size: cover;
+    display: table-cell;
+    height: 160px;
+    width: 120px;
+  }
+
+  .person-block-content,
+  .person-block-button {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .person-block-content {
+    padding: 0 35px;
+    text-align: left;
+
+    .person-block-title,
+    .person-block-text {
+      display: block;
+    }
+
+    .person-block-title {
+      color: $color-primary;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 20px;
+    }
+
+    .person-block-text {
+      color: $gray51;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .person-block-button {
+    text-align: center;
+  }
+
+}

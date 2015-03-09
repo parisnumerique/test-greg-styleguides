@@ -1,0 +1,12 @@
+include ../../components/buttons/buttons
+
+mixin person-block(opts)
+  each item in opts.items
+    .person-block 
+      .person-block-img(style='background-image: url(#{item.image});')
+      .person-block-content
+        .person-block-title= item.title
+        .person-block-text= item.text
+      p.person-block-button
+        +button({text: "Voir la fiche", modifiers: "action"})
+
