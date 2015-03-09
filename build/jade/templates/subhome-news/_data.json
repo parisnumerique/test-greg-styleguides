@@ -100,15 +100,33 @@
         }
       },
       "video": {
-        "title": "Paris en vidéo",
-        "cover": "../../modules/video/cover.jpg",
-        "button": {
-          "href": "#",
-          "icon": "play",
-          "text": "Voir sur Dailymotion"
+        "block": {
+          "title": "Paris en vidéo"
+        },
+        "cover": {
+          "background": "../../modules/video-cover/background.jpg",
+          "button": {
+            "href": "#",
+            "icon": "play",
+            "text": "Voir sur Dailymotion"
+          }
         }
       },
-      "newsletter": {},
+      "newsletter": {
+        "block": {
+          "title": "L’essentiel de Paris"
+        },
+        "newsletter": {
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "placeholder": "Entrez votre courriel",
+          "inputId": "newsletter-input",
+          "submit": "Valider",
+          "otherNewsletters": {
+            "text": "Autres newsletters et alertes",
+            "url": "#"
+          }
+        }
+      },
       "archive": {
         "heading": {
           "title": "Les autres actus"

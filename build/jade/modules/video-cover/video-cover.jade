@@ -1,9 +1,6 @@
 include ../../modules/button/button
 
 mixin video-cover(opts)
-  .video-cover
-    h2= opts.title
-
-    div.cover(style="background-image: url(#{opts.cover})")
-      - opts.button.modifiers = ["action"]
-      +button(opts.button)
+  .video-cover(style="background-image: url(#{opts.background})")
+    - opts.button.modifiers = ["action"]
+    +button(opts.button)
