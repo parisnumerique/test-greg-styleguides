@@ -1,9 +1,20 @@
 .search-push {
-  background: url(../modules/search-push/search-push-img-back.svg) $yellow no-repeat ;
+  background-color: $yellow;
   background-position: 92% 100%;
   min-height: 160px;
-  overflow: auto;
+  overflow: hidden;
+  position: relative;
   width: 100%;
+
+  &:after {
+    @extend %icon-font;
+    @extend %icon-search;
+    bottom: -38px;
+    font-size: 13em;
+    opacity: 0.16;
+    position: absolute;
+    right: 6%;
+  }
 }
 
 .search-push-text {
