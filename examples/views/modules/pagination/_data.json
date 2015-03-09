@@ -1,0 +1,37 @@
+{
+  "index": {
+    "defaults": {
+      "items": [
+        {"number": 1, "href": "/1"},
+        {"number": 2, "href": "/2"},
+        {"number": 3, "href": "/3"},
+        {"number": 4, "href": "/4"},
+        {"number": 5, "href": "/5"}
+      ],
+      "current": 3,
+      "total": 10
+    },
+    "first": {
+      "items": [
+        {"number": 1, "href": "/1"},
+        {"number": 2, "href": "/2"},
+        {"number": 3, "href": "/3"},
+        {"number": 4, "href": "/4"},
+        {"number": 5, "href": "/5"}
+      ],
+      "current": 1,
+      "total": 10
+    },
+    "last": {
+      "items": [
+        {"number": 1, "href": "/1"},
+        {"number": 2, "href": "/2"},
+        {"number": 3, "href": "/3"},
+        {"number": 4, "href": "/4"},
+        {"number": 5, "href": "/5"}
+      ],
+      "current": 5,
+      "total": 5
+    }
+  }
+}

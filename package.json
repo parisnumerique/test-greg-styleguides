@@ -30,6 +30,7 @@
     "prestart": "npm install",
     "start": "gulp default",
     "compile": "gulp compile",
+    "express": "/usr/bin/env node ./examples/bin/www",
     "build": "gulp build"
   },
   "repository": {

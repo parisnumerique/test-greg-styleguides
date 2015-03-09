@@ -1,0 +1,11 @@
+{
+  "index": {
+    "defaults": {
+      "block": "Texte de la notice"
+    },
+    "closable": {
+      "closable": true,
+      "block": "Texte de la notice"
+    }
+  }
+}
