@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?-6hs0c8');
-  src:url('../fonts/paris-icons.eot?#iefix-6hs0c8') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?-6hs0c8') format('woff'),
-    url('../fonts/paris-icons.ttf?-6hs0c8') format('truetype'),
-    url('../fonts/paris-icons.svg?-6hs0c8#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?-eww6mb');
+  src:url('../fonts/paris-icons.eot?#iefix-eww6mb') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?-eww6mb') format('woff'),
+    url('../fonts/paris-icons.ttf?-eww6mb') format('truetype'),
+    url('../fonts/paris-icons.svg?-eww6mb#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -49,6 +49,11 @@
 %icon-arrow-top,
 .icon-arrow-top:before {
   content: "\e606";
+}
+
+%icon-arrow-breadcrumbs,
+.icon-arrow-breadcrumbs:before {
+  content: "\e61d";
 }
 
 %icon-arrow-light-right,
@@ -176,6 +181,7 @@
 .icon-play:before {
   content: "\e611";
 }
+
 
 
 
