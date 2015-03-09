@@ -1,9 +1,18 @@
 include quick-access
 include ../../helpers/code
 
+h2 Standard
 .lsg-module
   +quick-access(defaults)
 +code({language: "jade"}).
   include quick-access
 
   +quick-access(#{JSON.stringify(defaults, null, 2)})
+
+h2 Recherche en cours
+.lsg-module
+  +quick-access(searching)
++code({language: "jade"}).
+  include quick-access
+
+  +quick-access(#{JSON.stringify(searching, null, 2)})
