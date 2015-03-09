@@ -218,18 +218,27 @@ header {
     }
   }
 
-  .right .participate .front > span{
+  .right .participate .front > span,
+  .right .participate .back > span{
     position: relative;
   }
 
-  .right .participate .front > span:after{
+  .right .participate .front > span:after,
+  .right .participate .back > span:after{
     content: ' ';
     position: absolute;
     width: 100%;
     height: 5px;
-    background: $color-tertiary;
     bottom: -8px;
     left: 0;
+  }
+
+  .right .participate .front > span:after{
+    background: $color-tertiary;
+  }
+
+  .right .participate .back > span:after{
+    background: $color-primary;
   }
 
   .display-account {
