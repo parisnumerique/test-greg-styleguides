@@ -11,3 +11,4 @@ require('../components/news-push/script');
 // load our modules
 require('../modules/header/script');
 require('../modules/jecoute/script');
+require('../modules/quick-access/script');
