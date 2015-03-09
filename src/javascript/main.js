@@ -12,3 +12,4 @@ require('../components/news-push/script');
 require('../modules/header/script');
 require('../modules/jecoute/script');
 require('../modules/notice/script');
+require('../modules/quick-access/script');
