@@ -1,0 +1,88 @@
+.cross-content {
+  overflow: hidden;
+}
+
+.cross-content-item {
+  background-position: 50% 50%;
+  background-size: cover;
+  color: $gray51;
+  display: block;
+  float: left;
+  height: 300px;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  text-decoration: none;
+  width: 33.3333%;
+
+  &:first-child,
+  &:last-child {
+    color: white;
+  }
+
+  &:after {
+    background-color: rgba($yellow, 0.9);
+    content: '';
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:first-child:after {
+    background-color: rgba($red2, 0.9);
+  }
+
+  &:last-child:after {
+    background-color: rgba($blue3, 0.9);
+  }
+
+  &:first-child .cross-content-title,
+  &:last-child .cross-content-title {
+    border-color: white;
+  }
+
+  // contenu cross content
+  .cross-content-title,
+  .cross-content-text,
+  .cross-content-icon {
+    position: relative;
+    z-index: 2;
+  }
+
+  .cross-content-title {
+    border-bottom: 6px solid $gray51;
+    display: inline-block;
+    font-size: 13px;
+    padding: 0 0 9px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .title-black {
+    border-color: $gray51;
+  }
+
+  .cross-content-text {
+    font-size: 30px;
+    font-weight: 700;
+    position: relative;
+    top: 20%;
+  }
+
+  .cross-content-icon {
+    float: right;
+
+    &:after{
+      @extend %icon-font;
+      @extend %icon-instagram;
+      color: white;
+      font-size: 1.7em;
+      position: relative;
+      top: 6px;
+    }
+  }
+}
+

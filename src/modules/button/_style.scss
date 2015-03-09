@@ -1,0 +1,74 @@
+.button {
+  background-color: $color-primary;
+  border: none;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 15px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  z-index: 1;
+
+  &:after {
+    background-color: darken($color-primary, 10%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width 0.35s ease;
+    width: 0;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  // modifiers
+  &.secondary {
+    background-color: $color-secondary;
+    &:after {background-color: darken($color-secondary, 10%);}
+    padding: 15px;
+  }
+
+  &.action {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  &.icon {
+    .icon {
+      font-weight: 12px;
+      margin-right: 10px;
+    }
+  }
+
+  &.marker {
+    background-color: $green2;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 50px;
+    &:after {background-color: darken($green2, 10%);}
+    .icon {
+      font-size: 30px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+
+  &.wide {
+    padding: 15px 60px;
+  }
+}

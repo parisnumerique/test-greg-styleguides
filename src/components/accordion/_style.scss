@@ -1,0 +1,77 @@
+.component-accordion {
+  clear: both;
+
+  .accordion-item {
+    background-color: $gray242;
+    border-radius: 4px;
+    padding: 20px 12px;
+    position: relative;
+
+    & + .accordion-item {
+      margin-top: 7px;
+    }
+  }
+
+  .icon-arrow-top {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: .3s ease transform;
+    &:before{
+      color: $color-secondary;
+      font-size: 20px;
+    }
+  }
+
+  .collapsed + .icon-arrow-top {
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+
+  .accordion-item-title {
+    color: $color-secondary;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  .accordion-item-content {
+  }
+
+  .collapse {
+    display: none;
+    visibility: hidden;
+  }
+
+  .collapse.in {
+    display: block;
+    visibility: visible;
+  }
+
+  tr.collapse.in {
+    display: table-row;
+  }
+
+  tbody.collapse.in {
+    display: table-row-group;
+  }
+
+  .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-duration: .35s;
+         -o-transition-duration: .35s;
+            transition-duration: .35s;
+    -webkit-transition-property: height, visibility;
+         -o-transition-property: height, visibility;
+            transition-property: height, visibility;
+  }
+}
+
+

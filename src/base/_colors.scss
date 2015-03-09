@@ -1,0 +1,56 @@
+
+$color-primary:   #df225a;
+$color-secondary: #0c518a;
+$color-tertiary:  #f8e273;
+
+$color-primary-variant: #AF2258;
+
+.color-primary   {color: $color-primary;}
+.color-secondary {color: $color-secondary;}
+.color-tertiary  {color: $color-tertiary;}
+
+.color-primary-background   {background-color: $color-primary;}
+.color-secondary-background {background-color: $color-secondary;}
+.color-tertiary-background  {background-color: $color-tertiary;}
+
+// Gray nuances
+$black   : rgb(000, 000, 000);
+$gray26  : rgb(026, 026, 026);
+$gray51  : rgb(051, 051, 051);
+$gray77  : rgb(077, 077, 077);
+$gray102 : rgb(102, 102, 102);
+$gray128 : rgb(128, 128, 128);
+$gray153 : rgb(153, 153, 153);
+$gray179 : rgb(179, 179, 179);
+$gray204 : rgb(204, 204, 204);
+$gray230 : rgb(230, 230, 230);
+$gray242 : rgb(242, 242, 242);
+$gray250 : rgb(250, 250, 250);
+$white   : rgb(255, 255, 255);
+
+// Colors
+$blue1   : rgb(063, 169, 245);
+$green1  : rgb(122, 201, 067);
+$orange  : rgb(255, 147, 030);
+$red1    : rgb(255, 029, 037);
+$pink    : rgb(255, 123, 172);
+$blue2   : rgb(189, 204, 212);
+$red2    : rgb(221, 039, 092);
+$yellow  : rgb(250, 228, 106);
+$blue3   : rgb(010, 071, 112);
+$green2  : rgb(067, 181, 126);
+$blue4   : rgb(209, 224, 229);
+$blue5   : rgb(011, 081, 137);
+
+$red-que-faire: rgb(249, 080, 083);
+
+// Notice
+$blue-notice   : rgb(166, 204, 221);
+$orange-notice : rgb(247, 127, 104);
+
+// Get involved
+$get-involved-yellow : rgb(248, 194, 068);
+$get-involved-red    : rgb(233, 087, 087);
+$get-involved-green  : rgb(066, 167, 105);
+$get-involved-blue1  : rgb(062, 194, 222);
+$get-involved-blue2  : rgb(215, 237, 242);

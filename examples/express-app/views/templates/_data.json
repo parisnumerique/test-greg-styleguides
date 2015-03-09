@@ -1,0 +1,10 @@
+{
+  "templates": [
+    "home",
+    "subhome-news",
+    "subhome-get-involved",
+    "subhome-municipality",
+    "hub",
+    "document"
+  ]
+}

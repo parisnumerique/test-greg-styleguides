@@ -1,0 +1,21 @@
+.layout-three-col {
+  overflow: hidden;
+  width: 100%;
+
+  .layout-wrapper {
+    @include container;
+    display: table;
+    width: $grid-width;
+  }
+
+  .layout-content {
+    @include span(4 of 12);
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .layout-content:last-child {
+    @include last;
+  }
+
+}

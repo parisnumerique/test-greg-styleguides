@@ -1,0 +1,66 @@
+.jecoute {
+  max-width: 360px;
+
+  .item {
+    display: none;
+
+    .question-answer{
+      height: 130px;
+      overflow: hidden;
+    }
+
+    .question,
+    .answer {
+      height: 130px;
+      transform: none;
+      transform-origin: 50% 50%;
+      transition: transform 1s ;
+    }
+
+    .answer {
+      transform: scale(0.5);
+    }
+
+    &.visible {
+      display: block;
+    }
+
+    .timer {
+      position: relative;
+      width: 80%;
+      height: 30px;
+      .start, .end{
+        position: absolute;
+      }
+      .start{
+        left: 0;
+      }
+      .end {
+        right: 0;
+      }
+      .bar {
+        border-radius: 2px;
+        width: 100%;
+        height: 3px;
+        background-color: rgba(255,255,255,0.2);
+        position: absolute;
+        bottom: 5px;
+
+        .avancement {
+          width: 0%;
+          height: 3px;
+          background-color: $color-tertiary;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  .user{
+    font-weight: bold;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+}

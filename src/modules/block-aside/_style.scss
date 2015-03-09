@@ -1,0 +1,35 @@
+.block-aside {
+  color: $gray26;
+  text-align: left;
+
+  + .block-aside {
+    margin-top: 40px;
+  }
+}
+
+.block-aside-title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.block-aside-content {
+  p {
+    color: $gray77;
+  }
+}
+
+.block-aside-items {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block-aside-item {
+  & + .block-aside-item {
+    margin-top: 10px;
+  }
+}

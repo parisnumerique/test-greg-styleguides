@@ -1,0 +1,10 @@
+mixin accordion(opts)
+  .component.component-accordion(role='tablist', aria-multiselectable='true')
+    each item in opts.items
+      .accordion-item.panel
+        div(role='tab' id='h-#{item.slug}')
+          a.accordion-item-title.collapsed(href='##{item.slug}' aria-controls='##{item.slug}')= item.title
+          span.icon.icon-arrow-top
+        .collapse.accordion-item-content(role='tabpanel' aria-labelledby='h-#{item.slug}' id="#{item.slug}")
+          = item.content
+

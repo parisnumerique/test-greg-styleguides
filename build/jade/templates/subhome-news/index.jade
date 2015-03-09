@@ -1,0 +1,89 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/footer/footer
+include ../../modules/get-involved/get-involved
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jecoute/jecoute
+include ../../modules/jumbotron/jumbotron
+include ../../modules/news-list/news-list
+include ../../modules/newsletter/newsletter
+include ../../modules/que-faire/que-faire
+include ../../modules/pagination/pagination
+include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/search-push/search-push
+include ../../modules/social/social
+include ../../modules/video-cover/video-cover
+
+append content
+  +header(public.modules.header._data.index.defaults)
+
+append content
+  .layout-content
+    +jumbotron(data.jumbotron)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +breadcrumbs(data.breadcrumbs)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.today.heading)
+      +news-list(data.today.news)
+
+append content
+  .layout-content.gray-background
+    .layout-wrapper
+      +heading(data.yesterday.heading)
+      +news-list(data.yesterday.news)
+
+append content
+  .layout-content.layout-content-adjacent
+    .layout-half-col.color-secondary-background
+      .layout-wrapper
+        .layout-content
+          +video-cover(data.video)
+        .layout-content
+          +newsletter(public.modules.newsletter._data.index.defaults)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.archive.heading)
+      +news-list(data.archive.news)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +pagination(data.pagination)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +que-faire(data.que_faire)
+
+append content
+  .layout-content
+    +search-push(data.search_push)
+
+append content
+  .layout-content.gray-background.layout-content-adjacent
+    +get-involved(data.get_involved)
+
+append content
+  .layout-right-col
+    .layout-wrapper
+      .layout-content
+        +heading(data.gallery.heading)
+        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
+      aside.layout-aside.color-secondary-background
+        +newsletter(public.modules.newsletter._data.index.defaults)
+        +jecoute(public.modules.jecoute._data.index.defaults)
+        +social(public.modules.social._data.index.defaults)
+
+append content
+  .layout-content.layout-content-adjacent
+    +footer(public.modules.footer._data.index.defaults)

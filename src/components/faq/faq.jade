@@ -1,0 +1,8 @@
+include ../accordion/accordion
+
+mixin faq(opts)
+  .faq
+    h2= opts.title
+    if opts.text
+      p= opts.text
+    +accordion(opts.accordion)

@@ -1,0 +1,48 @@
+.hub-heading {
+  height: 310px;
+  width: 100%;
+  z-index: 0;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .inner {
+    position: relative;
+    display: table;
+    width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  h1 {
+    color: $white;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 84px;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &:before {
+    content: " ";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+  }
+}
+
+// Keep space for the header, when the jumbotron is the first element after it
+header + .layout-content .hub-heading {
+  margin-top: 0px;
+}
+
+header.fixed + .layout-content .hub-heading {
+  margin-top: 80px;
+}
+

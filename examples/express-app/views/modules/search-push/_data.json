@@ -1,0 +1,11 @@
+{
+  "index": {
+    "defaults": {
+      "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+      "button": {
+        "text": "Rechercher",
+        "modifiers": ["action"]
+      }
+    }
+  }
+}

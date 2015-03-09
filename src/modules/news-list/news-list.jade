@@ -1,0 +1,29 @@
+include ../news-card/news-card
+
+mixin news-list(opts)
+  if opts.modifiers && opts.modifiers.indexOf("news-cards") != -1
+    if opts.modifiers.indexOf("large-first-child") != -1
+      .news-list(class=opts.modifiers)
+        each item, index in opts.items.slice(0, 5)
+          if index === 0
+            +news-card({
+              "modifiers": ["large"],
+              "href": item.href,
+              "image": item.image,
+              "category": item.category,
+              "title": item.title
+            })
+          else
+            +news-card(item)
+    else
+      .news-list.gallery(class=opts.modifiers)
+        each item in opts.items
+          +news-card(item)
+  else
+    .news-list.gallery(class=opts.modifiers)
+      each item in opts.items
+        a.news-item(href=item.href)
+          .news-item-meta
+            .news-item-date= item.date
+            .news-item-category= item.category
+          .news-item-title= item.title

@@ -1,0 +1,30 @@
+include ../block-aside/block-aside
+
+mixin block-aside-contact(opts)
+  - modifiers = opts.modifiers || []
+  - modifiers.push("block-aside-contact")
+  +block-aside({"title": opts.title, "modifiers": modifiers})
+    ul.block-aside-items
+      each item in opts.items
+        - var modifiers = item.modifiers || []
+        - if (item.icon) {modifiers.push("has-icon")}
+        if item.title
+          li.block-aside-item(class=modifiers)
+            if item.icon
+              i.icon(class="icon-#{item.icon}" title=item.title)
+            else
+              = item.title + " "
+            if item.href
+              a(href=item.href class=item.microformats)= item.text
+            else
+              span(class=item.microformats)
+                = item.text
+        else
+          li.block-aside-item(class=modifiers class=item.microformats)
+            if item.icon
+              i.icon(class="icon-#{item.icon}")
+            else
+              if item.href
+                a(href=item.href)= item.text
+              else
+                = item.text

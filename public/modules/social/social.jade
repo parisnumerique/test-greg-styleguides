@@ -1,9 +1,0 @@
-mixin social(opts)
-  .social
-    .inner
-      h2= opts.title
-      each item in opts.items
-        .item
-          span.icon(class="icon-#{item.icon}")
-          span.count= item.count
-          a.subscribe(href="#{item.subscribe.url}")= item.subscribe.text

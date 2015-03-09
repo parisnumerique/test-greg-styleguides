@@ -1,0 +1,60 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/footer/footer
+include ../../modules/header/header
+include ../../modules/hub-heading/hub-heading
+include ../../modules/heading/heading
+include ../../modules/get-involved-list/get-involved-list
+include ../../modules/jecoute/jecoute
+include ../../modules/links-group/links-group
+include ../../modules/newsletter/newsletter
+include ../../modules/news-list/news-list
+include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/social/social
+
+append content
+  +header(public.modules.header._data.index.defaults)
+
+append content
+  .layout-content
+    +hub-heading(data.heading)
+
+append content
+  .layout-content.layout-separate-after.layout-small-top-padding
+    .layout-wrapper
+      +breadcrumbs(data.breadcrumbs)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.advice.heading)
+      +get-involved-list(data.advice.get_involved_list)
+
+append content
+  .layout-content.gray-background
+    .layout-wrapper
+      +heading(data.act.heading)
+      +links-group(data.act.links_group)
+
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.now.heading)
+      +news-list(data.now.news_list)
+
+append content
+  .layout-right-col.gray-background
+    .layout-wrapper
+      .layout-content
+        +heading(data.gallery.heading)
+        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
+      aside.layout-aside.color-secondary-background
+        +newsletter(public.modules.newsletter._data.index.defaults)
+        +jecoute(public.modules.jecoute._data.index.defaults)
+        +social(public.modules.social._data.index.defaults)
+
+append content
+  .layout-content.layout-content-adjacent
+    +footer(public.modules.footer._data.index.defaults)
