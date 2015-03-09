@@ -1,8 +1,7 @@
 {
   "index": {
     "defaults": {
-      "title": "Paris en vidéo",
-      "cover": "./cover.jpg",
+      "background": "./background.jpg",
       "button": {
         "href": "#",
         "icon": "play",

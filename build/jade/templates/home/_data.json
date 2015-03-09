@@ -6,6 +6,48 @@
         "modifiers": ["top", "blue", "buildings"],
         "closable": true
       },
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [{
+          "abbr": "fr",
+          "href": "/fr"
+        }, {
+          "abbr": "en",
+          "href": "/en"
+        }, {
+          "abbr": "es",
+          "href": "/es"
+        }],
+        "active_language": "fr",
+        "search": {
+          "visible": true
+        },
+        "marker": {
+          "visible": true
+        },
+        "items": [{
+          "href": "#",
+          "text": "Services et infos pratiques"
+        }, {
+          "href": "#",
+          "text": "L'Hôtel de ville"
+        }, {
+          "href": "#",
+          "text": "Actualités"
+        }],
+        "participate": {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account": {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        }
+      },
       "quick_access": {
         "background": "../../modules/quick-access/background.jpg",
         "search": {
@@ -329,6 +371,39 @@
         },
         "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
         "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [{
+          "href": "#",
+          "text": "Visit Paris",
+          "modifiers": ["footer-link-em"]
+        }, {
+          "href": "#",
+          "text": "FAQ"
+        }, {
+          "href": "#",
+          "text": "Newsletter"
+        }, {
+          "href": "#",
+          "text": "Contact"
+        }, {
+          "href": "#",
+          "text": "Presse"
+        }, {
+          "href": "#",
+          "text": "Mentions légales"
+        }, {
+          "href": "#",
+          "text": "Crédits"
+        }, {
+          "href": "#",
+          "text": "Accessibilité"
+        }]
       }
     }
   }
