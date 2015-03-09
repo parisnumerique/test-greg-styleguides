@@ -19,15 +19,16 @@ append content
   +header(data.header)
 
 append content
-  +document-heading(data.heading)
+  .layout-content
+    +document-heading(data.heading)
 
 append content
-  .layout-content
+  .layout-content.layout-separate-after.layout-small-top-padding
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content
+  .layout-content.layout-content-adjacent
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
@@ -64,4 +65,4 @@ append content
 
 append content
   .layout-content.layout-content-adjacent
-    +footer(public.modules.footer._data.index.defaults)
+    +footer(data.footer)

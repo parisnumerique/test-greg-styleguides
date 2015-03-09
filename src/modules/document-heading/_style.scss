@@ -1,9 +1,11 @@
 .document-heading {
-  height: 310px;
+  height: 320px;
   width: 100%;
   z-index: 0;
   position: relative;
-  background-position: center center;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .inner {
     position: relative;
@@ -69,6 +71,6 @@
 }
 
 // Keep space for the header, when the jumbotron is the first element after it
-header + .layout-content .hub-heading {
-  margin-top: -80px;
+header + .layout-content .document-heading {
+  height: 400px;
 }

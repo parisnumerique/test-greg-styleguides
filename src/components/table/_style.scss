@@ -1,6 +1,10 @@
 .component-table {
   max-width: 750px;
 
+  table {
+    width: 100%;
+  }
+
   tr > th {
     background-color: $blue5;
     border-left: 1px solid $gray204;
@@ -26,8 +30,6 @@
     font-weight: 500;
     padding: 30px;
     text-align: center;
-    white-space: pre;
-
 
     &:first-child {
       border: none;
