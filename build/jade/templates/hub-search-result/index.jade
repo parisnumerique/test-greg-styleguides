@@ -1,15 +1,15 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/block-aside-checkboxes/block-aside-checkboxes
+include ../../modules/block-aside-links/block-aside-links
 include ../../modules/block-content/block-content
-include ../../modules/breadcrumbs/breadcrumbs
-include ../../modules/cross-content/cross-content
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/jecoute/jecoute
 include ../../modules/newsletter/newsletter
-include ../../modules/news-list/news-list
+include ../../modules/search-result/search-result
 include ../../modules/social/social
 
 append content
@@ -20,24 +20,17 @@ append content
     +hub-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-padding
+  .layout-left-col
     .layout-wrapper
-      +breadcrumbs(data.breadcrumbs)
+      aside.layout-aside
+        +block-aside-links(data.block_aside_links)
+        +block-aside-checkboxes(data.block_aside_checkboxes)
 
-append content
-  .layout-content.gray-background
-    .layout-wrapper
-      h2 sections-tree-panel
-
-append content
-  .layout-content
-    .layout-wrapper
-      +heading(data.news.heading)
-      +news-list(data.news.news)
+      .layout-content
+        +search-result(data.search_result.first_list_result)
 
 append content
   .layout-content
-    +cross-content(data.cross_content)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
@@ -55,5 +48,5 @@ append content
             +social(data.connected.social.content)
 
 append content
-  .layout-content.layout-adjacent-before
+  .layout-content.layout-content-adjacent
     +footer(data.footer)
