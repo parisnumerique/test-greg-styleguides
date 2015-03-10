@@ -33,9 +33,9 @@ append content
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
-          +anchors-list(data.aside.anchors)
-          +share(data.aside.share)
-
+          .aside-wrapper
+            +anchors-list
+            +share(data.aside.share)
         .layout-content
           each component in data.components
             +#{component.type}(component.data)
