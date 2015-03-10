@@ -1,6 +1,9 @@
 {
   "index": {
     "defaults": {
+    },
+    "with_block": {
+      "block": "<iframe frameborder=\"0\" width=\"560\" height=\"315\" src=\"//www.dailymotion.com/embed/video/x2h4ajc\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/x2h4ajc_tintin-pose-sa-valise-au-musee-en-herbe_creation\" target=\"_blank\">Tintin pose sa valise au Mus&eacute;e en Herbe</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
     }
   }
 }

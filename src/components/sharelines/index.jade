@@ -1,10 +1,6 @@
 include sharelines
 include ../../helpers/code
 
-p Pour plus d'information sur les URL de partage, voir le module
-  a(href="../../modules/share") share
-  | .
-
 h2 Standard
 .lsg-component
   +sharelines(defaults)
@@ -12,3 +8,7 @@ h2 Standard
   include sharelines
 
   +sharelines(#{JSON.stringify(defaults, null, 2)})
+
+p Pour plus d'information sur les URL de partage, voir le module&nbsp;
+  a(href="../../modules/share") share
+  | .

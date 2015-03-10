@@ -130,39 +130,36 @@
       },
       "content": {
         "intro": {
-          "block": "<p class=\"intro\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>"
+          "block": "<p class=\"intro\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p><h2>Questions les plus fréquentes</h2>"
         },
-        "faq": {
-          "title": "Questions les plus fréquentes",
-          "accordion": {
-            "items": [
-              {
-                "title": "Aenean lacinia bibendum nulla sed consectetur ?",
-                "slug": "titre1",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              },
-              {
-                "title": "Curabitur blandit tempus porttitor ?",
-                "slug": "titre2",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              },
-              {
-                "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam ?",
-                "slug": "titre3",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              },
-              {
-                "title": "Pellentesque ornare sem lacinia quam venenatis vestibulum ?",
-                "slug": "titre4",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              },
-              {
-                "title": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros ?",
-                "slug": "titre5",
-                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-              }
-            ]
-          }
+        "accordion": {
+          "items": [
+            {
+              "title": "Aenean lacinia bibendum nulla sed consectetur ?",
+              "slug": "titre1",
+              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+            },
+            {
+              "title": "Curabitur blandit tempus porttitor ?",
+              "slug": "titre2",
+              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+            },
+            {
+              "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam ?",
+              "slug": "titre3",
+              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+            },
+            {
+              "title": "Pellentesque ornare sem lacinia quam venenatis vestibulum ?",
+              "slug": "titre4",
+              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+            },
+            {
+              "title": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros ?",
+              "slug": "titre5",
+              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+            }
+          ]
         }
       },
       "connected": {
