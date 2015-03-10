@@ -1,10 +1,9 @@
 {
   "index": {
     "data": {
-      "jumbotron": {
-        "image": "../../modules/jumbotron/image.jpg",
-        "title": "À la une",
-        "text": "Revivez Nuit Blanche en photos et vidéo"
+      "heading": {
+        "text": "Municipalité",
+        "image": "./municipality.png"
       },
       "breadcrumbs": {
         "items": [
@@ -13,9 +12,7 @@
             "text": "Accueil"
           },
           {
-            "href": "#",
-            "text": "Actualité",
-            "current": true
+            "text": "Municipalité"
           }
         ]
       },
@@ -149,77 +146,71 @@
       },
       "connected": {
         "heading": {
-          "title": "Restez connecté"
-        }
-      },
-      "newsletter": {},
-      "archive": {
-        "heading": {
-          "title": "Les autres actus"
+          "title": "Restez connecté",
+          "modifiers": ["white"]
         },
-        "news": {
-          "items": [
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Logement",
-              "title": "Expulsions : début de la trêve hivernale"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Logement",
-              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Logement",
-              "title": "Le point sur les nouveaux logements à Paris"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Culture et patrimoine",
-              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Environnement",
-              "title": "Donec sed odio dui"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Culture et patrimoine",
-              "title": "Maecenas sed diam eget risus varius blandit sit amet non magna"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Mobilité",
-              "title": "Sed posuere consectetur est at lobortis"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "International",
-              "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Culture et patrimoine",
-              "title": "Aenean lacinia bibendum nulla sed consectetur"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Environnement",
-              "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor"
+        "newsletter" : {
+          "block": {
+            "title": "L’essentiel de Paris",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+            "placeholder": "Entrez votre courriel",
+            "inputId": "newsletter-input",
+            "submit": "Valider",
+            "otherNewsletters": {
+              "text": "Autres newsletters et alertes",
+              "url": "#"
             }
-          ]
+          }
+        },
+        "jecoute": {
+          "block": {
+            "title": "@Parisjecoute",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+            "button": {
+              "href": "#",
+              "text": "Posez votre question !"
+            }
+          }
+        },
+        "social": {
+          "block": {
+            "title": "Restez connecté",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "items": [
+              {
+                "icon": "twitter",
+                "count": "219 000",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner à @paris"
+                }
+              },
+              {
+                "icon": "facebook",
+                "count": "2 508 576",
+                "subscribe": {
+                  "url": "#",
+                  "text": "Suivre la page Facebook"
+                }
+              },
+              {
+                "icon": "instagram",
+                "count": "16 449",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner sur Instagram"
+                }
+              }
+            ]
+          }
         }
       }
     }

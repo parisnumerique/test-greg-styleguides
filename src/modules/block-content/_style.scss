@@ -24,27 +24,31 @@
     padding-bottom: 8px;
   }
 
-  &.vertical {
+  .block-content-content {
+    padding: 0;
+    overflow: hidden;
+  }
+
+}
+
+.blocks-content-vertical {
+
+  .block-content {
     padding-bottom: 30px;
 
     &:first-child .block-content-title {
       margin-top: 0;
     }
 
-    .block-content-title {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    & + .block-content.vertical {
+    & + .block-content {
       border-top: 1px solid transparentize($white, 0.8);
       padding-top: 30px;
     }
   }
 
-  .block-content-content {
-    padding: 0;
-    overflow: hidden;
+  .block-content-title {
+    border-bottom: 0;
+    padding-bottom: 0;
   }
 
 }

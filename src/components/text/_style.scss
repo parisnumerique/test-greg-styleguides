@@ -73,7 +73,7 @@
     padding: 0 0 24px;
   }
 
-  a {
+  a:not(.button) {
     color: $red2;
     text-decoration: underline;
     &:hover {text-decoration: none;}

@@ -1,5 +1,6 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/header/header
@@ -21,7 +22,7 @@ append content
     +hub-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-top-padding
+  .layout-content.layout-separate-after.layout-small-padding
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
@@ -45,16 +46,20 @@ append content
       +news-list(data.now.news_list)
 
 append content
-  .layout-right-col.gray-background
+  .layout-right-col
     .layout-wrapper
       .layout-content
         +heading(data.gallery.heading)
         +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
-        +newsletter(public.modules.newsletter._data.index.defaults)
-        +jecoute(public.modules.jecoute._data.index.defaults)
-        +social(public.modules.social._data.index.defaults)
+        .blocks-content-vertical
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     +footer(public.modules.footer._data.index.defaults)
