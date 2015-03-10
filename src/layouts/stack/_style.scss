@@ -1,6 +1,7 @@
 .layout-stack {
   background-color: $white;
   width: 100%;
+  overflow: hidden;
 
   > .layout-content {
     & + .layout-content {
