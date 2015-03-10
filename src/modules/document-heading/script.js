@@ -25,7 +25,7 @@ Paris.documentHeading = (function(){
       var title = $el.find('.document-heading-title').text();
       var $leftWrapper = $('.aside-wrapper');
 
-      var $asideTitle = $('<h3>').text(title).addClass('asideTitle');
+      var $asideTitle = $('<h3>').text(title).addClass('aside-title');
       $leftWrapper.prepend($asideTitle);
     }
 
