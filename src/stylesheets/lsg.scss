@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "../../node_modules/susy/sass/susy";
+
 @import "../base/normalize";
 @import "../base/colors";
 @import "../base/fonts";
@@ -108,7 +110,11 @@ $lsg-nav-width: 250px;
 
 .lsg-base {
   padding: 35px 50px;
+
+  h1:first-child {margin: 0 0 10px;}
+  h1 + h2 {margin-top: 0;}
 }
+
 
 .lsg-wrapper {
   padding: 20px 50px;
@@ -141,6 +147,16 @@ pre.prism[class*="language-"] {
 }
 
 .lsg-toc {
+  @include container;
+
+  .lsg-col {
+    @include span(1 of 2);
+  }
+
+  .lsg-col:last-child {
+    @include last;
+  }
+
   h3 {
     b {
       color: #999;
