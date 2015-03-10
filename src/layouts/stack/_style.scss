@@ -7,10 +7,6 @@
       padding-top: 40px;
     }
 
-    & + .layout-content-adjacent {
-      padding-top: 0;
-    }
-
     /* modifiers */
     &.gray-background {
       background-color: $gray242;
@@ -18,12 +14,21 @@
     }
 
     &.layout-separate-after {
-      padding-bottom: 30px;
+      padding-bottom: 40px;
       border-bottom: 1px solid $gray204;
     }
 
-    &.layout-small-top-padding {
+    & + .layout-adjacent-before {
+      padding-top: 0;
+    }
+
+    &.layout-adjacent-after {
+      padding-bottom: 0;
+    }
+
+    &.layout-small-padding {
       padding-top: 30px;
+      &.layout-separate-after {padding-bottom: 30px;}
     }
   }
 

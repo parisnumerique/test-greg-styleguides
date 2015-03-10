@@ -60,17 +60,18 @@ append content
         +heading(data.gallery.heading)
         +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
-        +block-content(data.connected.newsletter.block)
-          +newsletter(data.connected.newsletter.content)
-        +block-content(data.connected.jecoute.block)
-          +jecoute(data.connected.jecoute.content)
-        +block-content(data.connected.social.block)
-          +social(data.connected.social.content)
+        .blocks-content-vertical
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
 
 append content
   .layout-content
     +municipal-team(data.municipal_team)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     +footer(data.footer)

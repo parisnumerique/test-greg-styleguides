@@ -25,7 +25,7 @@ append content
     +jumbotron(data.jumbotron)
 
 append content
-  .layout-content
+  .layout-content.layout-separate-after.layout-small-padding
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
@@ -42,7 +42,7 @@ append content
       +news-list(data.yesterday.news)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     .layout-half-col.color-secondary-background
       .layout-wrapper
         .layout-content
@@ -73,7 +73,7 @@ append content
     +search-push(data.search_push)
 
 append content
-  .layout-content.gray-background.layout-content-adjacent
+  .layout-content.gray-background.layout-adjacent-before
     +get-involved(data.get_involved)
 
 append content
@@ -83,13 +83,14 @@ append content
         +heading(data.gallery.heading)
         +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
-        +block-content(data.newsletter.block)
-          +newsletter(data.newsletter.newsletter)
-        +block-content(data.jecoute.block)
-          +jecoute(data.jecoute.jecoute)
-        +block-content(data.social.block)
-          +social(data.social.social)
+        .blocks-content-vertical
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     +footer(public.modules.footer._data.index.defaults)

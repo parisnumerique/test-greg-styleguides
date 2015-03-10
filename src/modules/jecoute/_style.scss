@@ -1,5 +1,11 @@
 .jecoute {
+  font-size: 14px;
   max-width: 360px;
+
+  .jecoute-text {
+    margin-bottom: 15px;
+    max-width: 360px;
+  }
 
   .jecoute-item {
     display: none;

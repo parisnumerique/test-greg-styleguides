@@ -273,7 +273,7 @@
         "newsletter" : {
           "block": {
             "title": "L’essentiel de Paris",
-            "modifiers": ["color-secondary-background", "vertical"]
+            "modifiers": ["color-secondary-background"]
           },
           "content": {
             "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
@@ -289,7 +289,7 @@
         "jecoute": {
           "block": {
             "title": "@Parisjecoute",
-            "modifiers": ["color-secondary-background", "vertical"]
+            "modifiers": ["color-secondary-background"]
           },
           "content": {
             "items": [
@@ -339,7 +339,7 @@
         "social": {
           "block": {
             "title": "Restez connecté",
-            "modifiers": ["color-secondary-background", "vertical"]
+            "modifiers": ["color-secondary-background"]
           },
           "content": {
             "items": [
