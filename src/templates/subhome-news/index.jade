@@ -1,6 +1,6 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/blue-block/blue-block
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
@@ -46,10 +46,10 @@ append content
     .layout-half-col.color-secondary-background
       .layout-wrapper
         .layout-content
-          +blue-block(data.video.block)
+          +block-content(data.video.block)
             +video-cover(data.video.cover)
         .layout-content
-          +blue-block(data.newsletter.block)
+          +block-content(data.newsletter.block)
             +newsletter(data.newsletter.newsletter)
 
 append content
@@ -83,9 +83,12 @@ append content
         +heading(data.gallery.heading)
         +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
-        +newsletter(public.modules.newsletter._data.index.defaults)
-        +jecoute(public.modules.jecoute._data.index.defaults)
-        +social(public.modules.social._data.index.defaults)
+        +block-content(data.newsletter.block)
+          +newsletter(data.newsletter.newsletter)
+        +block-content(data.jecoute.block)
+          +jecoute(data.jecoute.jecoute)
+        +block-content(data.social.block)
+          +social(data.social.social)
 
 append content
   .layout-content.layout-content-adjacent
