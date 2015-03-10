@@ -1,3 +1,10 @@
 include cross-content
+include ../../helpers/code
 
-+cross-content(defaults)
+h2 Standard
+.lsg-module
+  +cross-content(defaults)
++code({language: "jade"}).
+  include cross-content
+
+  +cross-content(#{JSON.stringify(defaults, null, 2)})
