@@ -26,3 +26,17 @@ The server is proxied on http://localhost:3000 by browser-sync with the auto rel
 ## Build a static version
 
     npm run compile
+
+## Use the build in another project
+
+Run `npm link` in this folder
+Run `npm link paris-styleguide` in the other project
+
+You'll get the paris-styleguide project symbolicaly linked in the other project node_modules
+If it's an express one you can do something like
+
+    app.set('views', [app.get('views'), path.join(__dirname, 'node_modules', 'paris-styleguide', 'build', 'jade') ]);
+
+to be able to render jade templates coming from the styleguide. \o/
+
+
