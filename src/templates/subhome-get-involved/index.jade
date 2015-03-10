@@ -11,7 +11,7 @@ include ../../modules/jecoute/jecoute
 include ../../modules/links-group/links-group
 include ../../modules/newsletter/newsletter
 include ../../modules/news-list/news-list
-include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/gallery-ugc/gallery-ugc
 include ../../modules/social/social
 
 append content
@@ -50,7 +50,7 @@ append content
     .layout-wrapper
       .layout-content
         +heading(data.gallery.heading)
-        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
+        +gallery-ugc(data.gallery.gallery_ugc)
       aside.layout-aside.color-secondary-background
         .blocks-content-vertical
           +block-content(data.connected.newsletter.block)

@@ -277,7 +277,7 @@
         "heading": {
           "title": "Vu par les Parisiens"
         },
-        "pictures_gallery_ugc": {
+        "gallery_ugc": {
           "title": "Hashtags de la semaine :",
           "hashtags": [
             {
@@ -290,27 +290,27 @@
           ],
           "items": [
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
+              "image": "../../modules/gallery-ugc/picture1.jpg",
               "text": "@texte"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
+              "image": "../../modules/gallery-ugc/picture2.jpg",
               "text": "@texte"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
+              "image": "../../modules/gallery-ugc/picture3.jpg",
               "text": "@texte"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
+              "image": "../../modules/gallery-ugc/picture4.jpg",
               "text": "@texte"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
+              "image": "../../modules/gallery-ugc/picture5.jpg",
               "text": "@texte"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
+              "image": "../../modules/gallery-ugc/picture6.jpg",
               "text": "@texte"
             }
           ]

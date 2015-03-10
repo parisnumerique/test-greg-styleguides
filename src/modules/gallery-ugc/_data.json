@@ -13,27 +13,27 @@
       ],
       "items": [
          {
-          "image": "pictures-gallery-img1.jpg",
+          "image": "picture1.jpg",
           "text": "@user"
           },
          {
-          "image": "pictures-gallery-img2.jpg",
+          "image": "picture2.jpg",
           "text": "@user"
           },
          {
-          "image": "pictures-gallery-img3.jpg",
+          "image": "picture3.jpg",
           "text": "@user"
           },
          {
-          "image": "pictures-gallery-img4.jpg",
+          "image": "picture4.jpg",
           "text": "@user"
           },
          {
-          "image": "pictures-gallery-img5.jpg",
+          "image": "picture5.jpg",
           "text": "@user"
           },
          {
-          "image": "pictures-gallery-img6.jpg",
+          "image": "picture6.jpg",
           "text": "@user"
         }
       ]
