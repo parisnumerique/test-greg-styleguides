@@ -30,78 +30,102 @@
         }
       },
       "heading": {
-        "text": "Services <br>et infos pratiques",
-        "image": "./hub-heading.png"
+        "text": "search-field",
+        "image": "./hub-heading.jpg"
       },
-      "breadcrumbs": {
+      "block_aside_links": {
+        "title": "Suggestions",
+        "modifiers": ["emphasis-links"],
         "items": [
           {
-            "href": "#",
-            "text": "Accueil"
+            "href": "#", "text": "Logement social"
           },
           {
-            "href": "#",
-            "text": "Services et infos pratiques"
+            "href": "#", "text": "Logement de la ville"
           },
           {
-            "text": "Culture et patrimoine"
+            "href": "#", "text": "Aide au logement"
+          },
+          {
+            "href": "#", "text": "Logement privatif"
           }
         ]
       },
-      "news": {
-        "heading": {
-          "title": "En ce moment",
-          "link": {
-            "href": "#",
-            "text": "Voir les actualités"
+      "block_aside_checkboxes": {
+        "title": "Rubriques",
+        "name": "rubriques",
+        "items": [
+          {
+            "value": 0,
+            "text": "Services et infos pratiques",
+            "number": 95
+          },
+          {
+            "value": 1,
+            "text": "Actualités",
+            "number": 15
+          },
+          {
+            "value": 2,
+            "text": "Municipalité",
+            "number": 3
+          },
+          {
+            "value": 3,
+            "text": "Participez",
+            "number": 4
           }
-        },
-        "news": {
-          "modifiers": ["news-cards"],
-          "items": [
+        ]
+      },
+      "search_result": {
+        "first_list_result": {
+          "result": "365 résultats",
+           "items": [
             {
               "href": "#",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "modifiers": ["strong"],
+              "title": "Logement",
+              "text": "Services et infos pratiques"
             },
             {
               "href": "#",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "modifiers": ["strong"],
+              "title": "Logement social",
+              "text": "Services et infos pratiques — Logement"
             },
             {
               "href": "#",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "modifiers": ["strong"],
+              "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
+              "text": "Services et infos pratiques — Démarches"
+            },
+            {
+              "href": "#",
+              "title": "Aide au logement",
+              "text": "Services et infos pratiques— Logement"
+            },
+            {
+              "href": "#",
+              "title": "Impôts locaux",
+              "text": "Services et infos pratiques — Logement"
+            },
+             {
+              "href": "#",
+              "title": "Un nouveau cadre pour le logement social",
+              "text": "Actualités — Logement"
+            },
+             {
+              "href": "#",
+              "title": "Ian Brossat",
+              "text": "Municipalité — La Maire et ses adjoints"
+            },
+             {
+              "href": "#",
+              "title": "La maison du logement",
+              "text": "Services et infos pratiques — Logement"
             }
           ]
         }
-      },
-      "cross_content": {
-        "items": [
-          {
-            "href": "#",
-            "background": "../../modules/cross-content/cross-content-img1.jpg",
-            "title": "participez !",
-            "icon": "instagram",
-            "text": "#MonHLM : photographiez la façade de votre logement social !"
-          },
-          {
-            "href": "#",
-            "background": "../../modules/cross-content/cross-content-img2.jpg",
-            "title": "dossier",
-            "text": "Se loger à Paris, le guide."
-          },
-          {
-            "href": "#",
-            "background": "../../modules/cross-content/cross-content-img3.jpg",
-            "title": "actualités",
-            "text": "Locataires HLM : votez pour vos représentants"
-          }
-        ]
       },
       "connected": {
         "heading": {

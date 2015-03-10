@@ -1,3 +1,5 @@
+include ../../modules/share/share
+
 mixin sharelines(opts)
   .component.component-sharelines
     .sharelines-title= opts.title
@@ -5,5 +7,6 @@ mixin sharelines(opts)
       each item in opts.items
         li.sharelines-item
           = item.text
-          a(href="#").sharelines-icon
-            i.icon-twitter
+          - share = Object.create(item.share) // clone the data object
+          - share.modifiers = ["circles"] // overwrite the modifiers
+          +share(share)

@@ -1,7 +1,7 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/anchors-list/anchors-list
-include ../../modules/blue-block/blue-block
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
 include ../../modules/cross-content/cross-content
@@ -11,6 +11,7 @@ include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/jecoute/jecoute
 include ../../modules/newsletter/newsletter
+include ../../modules/share/share
 include ../../modules/social/social
 
 include ../../components/components
@@ -23,46 +24,42 @@ append content
     +document-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-top-padding
+  .layout-content.layout-separate-after.layout-small-padding
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
-          +anchors-list({
-            "items": [
-              {"href": "#", "text": "Est-ce que j’y ai droit ?"},
-              {"href": "#", "text": "Constituer un dossier"}
-            ]
-          })
-
+          .aside-wrapper
+            +anchors-list
+            +share(data.aside.share)
         .layout-content
           each component in data.components
             +#{component.type}(component.data)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     div
       +cross-content(data.cross_content)
 
 append content
-  .layout-content.color-secondary-background
+  .layout-content.color-secondary-background.layout-separate-after
     .layout-three-col
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
-          +blue-block({title: data.connected.newsletter.title})
-            +newsletter(data.connected.newsletter)
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
         .layout-content
-          +blue-block({title: data.connected.jecoute.title})
-            +jecoute(data.connected.jecoute)
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
         .layout-content
-          +blue-block({title: data.connected.social.title})
-            +social(data.connected.social)
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     +footer(data.footer)

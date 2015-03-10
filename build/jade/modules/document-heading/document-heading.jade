@@ -2,11 +2,13 @@ include ../../modules/tags/tags
 
 mixin document-heading(opts)
   .document-heading(style="background-image:url('#{opts.image}')")
-    .inner
-      div
-        h1!= opts.text
-        if opts.icons
-          each icon in opts.icons
-            a.icon(class="icon-#{icon.name}" href="#{icon.url}")
-        if opts.tags
-          +tags(opts.tags)
+    .document-heading-wrapper
+      .document-heading-content
+        .document-heading-content-wrapper
+          h1.document-heading-title!= opts.text
+          if opts.icons
+            .document-heading-icons
+              each icon in opts.icons
+                a.icon(class="icon-#{icon.name}" href="#{icon.url}")
+          if opts.tags
+            +tags(opts.tags)
