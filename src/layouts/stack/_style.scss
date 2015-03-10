@@ -16,6 +16,7 @@
     &.layout-separate-after {
       padding-bottom: 40px;
       border-bottom: 1px solid $gray204;
+      position: relative;
     }
 
     & + .layout-adjacent-before {

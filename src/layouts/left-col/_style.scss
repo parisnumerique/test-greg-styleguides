@@ -26,6 +26,9 @@
         position: fixed;
         top: 80px;
       }
+      &.affix-bottom {
+        position: absolute;
+      }
     }
 
     .asideTitle {

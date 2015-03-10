@@ -17,18 +17,30 @@ Paris.anchors = (function(){
     var $el     = $(selector),
         anchorsSelector = (userOptions && userOptions.anchorsSelector) || 'h2',
         $anchors,
+        items,
         template = require('./client.jade'),
         options = $.extend({}, defaultOptions, userOptions);
 
     function init(){
       initOptions();
 
+      renderAnchors();
+      fillBars();
+    }
+
+    function renderAnchors() {
       $anchors = $('.layout-left-col').find(anchorsSelector);
-      var items = $anchors.map(function(i, anchor) {
+      items = _.map($anchors, function(anchor) {
+        var $anchor = $(anchor);
         return {
-          text: $(anchor).text(),
-          href: '#'
+          text: $anchor.text(),
+          href: '#',
+          top: Math.round(+$anchor.position().top)
         };
+      });
+
+      _.each(items, function (item, index, list) {
+        item.bottom = (list[index+1]) ? list[index+1].top : $('body').height();
       });
 
       var content = template({opts: {items: items  }});
@@ -36,7 +48,24 @@ Paris.anchors = (function(){
       _.defer(function () {
         PubSub.publish('anchors:ready');
       });
+    }
 
+    function fillBars(){
+      PubSub.subscribe('scroll', function(__, e) {
+        _.each(items, function(item) {
+          if($(document).scrollTop() < item.top ) {
+            $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '0%');
+            return;
+          }
+          else if($(document).scrollTop() > item.bottom ) {
+            $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '100%');
+            return;
+          }
+          var progress = ($(document).scrollTop() - item.top) / (item.bottom - item.top);
+          progress = progress*100;
+          $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', ''+progress+'%');
+        })
+      });
     }
 
     function initOptions() {
@@ -59,5 +88,5 @@ Paris.anchors = (function(){
 })();
 
 $(document).ready(function(){
-  Paris.anchors('.anchors-list');
+  Paris.anchors('.layout-aside .anchors-list');
 });
