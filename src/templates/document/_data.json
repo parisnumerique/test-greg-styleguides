@@ -65,6 +65,34 @@
           }
         ]
       },
+      "aside": {
+        "anchors": {
+          "items": [
+            {"href": "#", "text": "Est-ce que j’y ai droit ?"},
+            {"href": "#", "text": "Constituer un dossier"}
+          ]
+        },
+        "share": {
+          "modifiers": ["circles"],
+          "items": [
+            {
+              "href": "#",
+              "icon": "facebook",
+              "title": "Partager sur Facebook"
+            },
+            {
+              "href": "#",
+              "icon": "twitter",
+              "title": "Partager sur Twitter"
+            },
+            {
+              "href": "#",
+              "icon": "mail",
+              "title": "Partager par courriel"
+            }
+          ]
+        }
+      },
       "components": [
         {
           "type": "text",

@@ -5,11 +5,12 @@
   max-width: 270px;
 
   &:hover {
-    .verbatim-social {border-color: $gray179;}
+    .share a {
+      border-color: $gray179;
+      &:hover {border-color: $blue3;}
+    }
   }
 
-
-  // quote
   .verbatim-text {
     color: $color-primary;
     font-size: 24px;
@@ -39,7 +40,6 @@
     width: 70px;
   }
 
-  // auteur & function
   .verbatim-author,
   .verbatim-function {
     color: $gray77;
@@ -48,29 +48,8 @@
     font-weight: 700;
   }
 
-
-  // lien twitter
-  .verbatim-social {
-    border: 1px solid $gray204;
-    border-radius: 50%;
-    color: $gray204;
-    display: inline-block;
+  .share {
     margin-top: 10px;
-    padding: 8px 10px;
-    text-decoration: none;
-    transition: all 0.1s ease;
-
-    &:before {
-      @extend %icon-font;
-      @extend %icon-twitter;
-      font-size: 1.4em;
-    }
-
-    &:hover {
-      background-color: $blue3;
-      border-color: $blue3;
-      color: white;
-    }
   }
-}
 
+}

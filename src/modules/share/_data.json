@@ -1,0 +1,43 @@
+{
+  "index": {
+    "defaults": {
+      "items": [
+        {
+          "href": "#",
+          "icon": "facebook",
+          "title": "Partager sur Facebook"
+        },
+        {
+          "href": "#",
+          "icon": "twitter",
+          "title": "Partager sur Twitter"
+        },
+        {
+          "href": "#",
+          "icon": "mail",
+          "title": "Partager par courriel"
+        }
+      ]
+    },
+    "circles": {
+      "modifiers": ["circles"],
+      "items": [
+        {
+          "href": "#",
+          "icon": "facebook",
+          "title": "Partager sur Facebook"
+        },
+        {
+          "href": "#",
+          "icon": "twitter",
+          "title": "Partager sur Twitter"
+        },
+        {
+          "href": "#",
+          "icon": "mail",
+          "title": "Partager par courriel"
+        }
+      ]
+    }
+  }
+}
