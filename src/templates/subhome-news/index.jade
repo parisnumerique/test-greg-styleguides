@@ -18,7 +18,7 @@ include ../../modules/social/social
 include ../../modules/video-cover/video-cover
 
 append content
-  +header(public.modules.header._data.index.defaults)
+  +header(data.header)
 
 append content
   .layout-content
@@ -73,7 +73,7 @@ append content
     +search-push(data.search_push)
 
 append content
-  .layout-content.gray-background.layout-adjacent-before
+  .layout-content.gray-background
     +get-involved(data.get_involved)
 
 append content
@@ -93,4 +93,4 @@ append content
 
 append content
   .layout-content.layout-adjacent-before
-    +footer(public.modules.footer._data.index.defaults)
+    +footer(data.footer)

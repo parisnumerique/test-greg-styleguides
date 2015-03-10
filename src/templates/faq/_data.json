@@ -1,6 +1,34 @@
 {
   "index": {
     "data": {
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "L'Hôtel de ville"},
+          {"href": "#", "text": "Actualités"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        }
+      },
       "heading": {
         "text": "FAQ",
         "image": "./hub-heading.png"
@@ -205,6 +233,23 @@
             ]
           }
         }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
       }
     }
   }

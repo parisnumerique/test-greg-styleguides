@@ -2,7 +2,7 @@ extends ../../layouts/stack/stack
 
 include ../../modules/block-aside-checkboxes/block-aside-checkboxes
 include ../../modules/block-aside-links/block-aside-links
-include ../../modules/blue-block/blue-block
+include ../../modules/block-content/block-content
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
@@ -13,7 +13,7 @@ include ../../modules/search-result/search-result
 include ../../modules/social/social
 
 append content
-  +header(public.modules.header._data.index.defaults)
+  +header(data.header)
 
 append content
   .layout-content
@@ -33,20 +33,20 @@ append content
   .layout-content
 
 append content
-    .layout-content.color-secondary-background
-      .layout-three-col
-        .layout-wrapper
-          +heading(data.connected.heading)
-          .layout-content
-            +blue-block({title: data.connected.newsletter.title})
-              +newsletter(data.connected.newsletter)
-          .layout-content
-            +blue-block({title: data.connected.jecoute.title})
-              +jecoute(data.connected.jecoute)
-          .layout-content
-            +blue-block({title: data.connected.social.title})
-              +social(data.connected.social)
+  .layout-content.color-secondary-background.layout-separate-after
+    .layout-three-col
+      .layout-wrapper
+        +heading(data.connected.heading)
+        .layout-content
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+        .layout-content
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+        .layout-content
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
 
 append content
   .layout-content.layout-content-adjacent
-    +footer(public.modules.footer._data.index.defaults)
+    +footer(data.footer)
