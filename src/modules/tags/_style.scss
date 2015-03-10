@@ -1,15 +1,14 @@
-.tags-list {
+.tags {
   font-size: 15px;
   font-weight: 500;
   list-style-type: none;
   padding-left: 0;
 
   li {
-    float: left;
+    display: inline-block;
   }
 
-
-  .separator {
+  .tags-separator {
     margin: 0 .2em;
   }
 
