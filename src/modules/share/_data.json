@@ -3,17 +3,17 @@
     "defaults": {
       "items": [
         {
-          "href": "#",
+          "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
           "icon": "facebook",
           "title": "Partager sur Facebook"
         },
         {
-          "href": "#",
+          "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
           "icon": "twitter",
           "title": "Partager sur Twitter"
         },
         {
-          "href": "#",
+          "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
           "icon": "mail",
           "title": "Partager par courriel"
         }
@@ -23,17 +23,17 @@
       "modifiers": ["circles"],
       "items": [
         {
-          "href": "#",
+          "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
           "icon": "facebook",
           "title": "Partager sur Facebook"
         },
         {
-          "href": "#",
+          "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
           "icon": "twitter",
           "title": "Partager sur Twitter"
         },
         {
-          "href": "#",
+          "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
           "icon": "mail",
           "title": "Partager par courriel"
         }

@@ -13,3 +13,4 @@ require('../modules/header/script');
 require('../modules/jecoute/script');
 require('../modules/notice/script');
 require('../modules/quick-access/script');
+require('../modules/share/script');

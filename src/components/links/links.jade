@@ -4,7 +4,7 @@ mixin links(opts)
     ul.links-items
       each item in opts.items
         li.links-item(class=item.modifiers)
-          a(href=item.href)
+          a(href=item.href target=item.target)
             = item.text
             if item.filesize
               span.links-item-filesize

@@ -21,7 +21,8 @@
         },
         {
           "href": "#",
-          "text": "Autre lien externe"
+          "target": "_blank",
+          "text": "Lien externe dans une nouvelle fenêtre"
         }
       ]
     }

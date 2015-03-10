@@ -7,4 +7,6 @@ mixin sharelines(opts)
       each item in opts.items
         li.sharelines-item
           = item.text
-          +share(item.share)
+          - share = Object.create(item.share) // clone the data object
+          - share.modifiers = ["circles"] // overwrite the modifiers
+          +share(share)
