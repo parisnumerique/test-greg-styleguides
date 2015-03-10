@@ -12,9 +12,7 @@ var browserifyBundler = browserify('./src/javascript/main.js', watchify.args);
 var watchifyBundler = watchify(browserify('./src/javascript/main.js', watchify.args));
 
 browserifyBundler.transform('jadeify');
-browserifyBundler.transform('brfs');
 watchifyBundler.transform('jadeify');
-watchifyBundler.transform('brfs');
 
 gulp.task('watch:js', watch); // so you can run `watch:js` to build the file
 gulp.task('compile:js', compile); // so you can run `compile:js` to build the file

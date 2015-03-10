@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^3.3.2",
-    "brfs": "^1.4.0",
     "harp": "git://github.com/jblanche/harp.git",
     "jade": "^1.9.2",
     "jadeify": "^4.1.0",
