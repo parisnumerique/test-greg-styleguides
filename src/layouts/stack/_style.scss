@@ -31,6 +31,10 @@
       padding-top: 30px;
       &.layout-separate-after {padding-bottom: 30px;}
     }
+
+    &.layout-padding-after {
+      padding-bottom: 40px;
+    }
   }
 
   .layout-wrapper {
