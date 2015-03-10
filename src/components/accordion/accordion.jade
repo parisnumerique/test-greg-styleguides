@@ -1,10 +1,12 @@
 mixin accordion(opts)
-  .component.component-accordion(role='tablist', aria-multiselectable='true')
-    each item in opts.items
+  - uuid = Math.random().toString(36).substr(2, 5)
+  .component.component-accordion(role='tablist' aria-multiselectable='true')
+    each item, index in opts.items
+      - slug = item.slug || uuid + "-" + index
       .accordion-item.panel
-        div(role='tab' id='h-#{item.slug}')
-          a.accordion-item-title.collapsed(href='##{item.slug}' aria-controls='##{item.slug}')= item.title
+        div(role='tab' id='h-#{slug}')
+          a.accordion-item-title.collapsed(href='##{slug}' aria-controls='##{slug}')= item.title
           span.icon.icon-arrow-top
-        .collapse.accordion-item-content(role='tabpanel' aria-labelledby='h-#{item.slug}' id="#{item.slug}")
+        .collapse.accordion-item-content(role='tabpanel' aria-labelledby='h-#{slug}' id="#{slug}")
           = item.content
 

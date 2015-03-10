@@ -10,4 +10,6 @@ mixin verbatim(opts)
           = opts.author
           | ,
         .verbatim-function= opts.function
-      +share(opts.share)
+      - share = Object.create(opts.share) // clone the data object
+      - share.modifiers = ["circles"] // overwrite the modifiers
+      +share(share)

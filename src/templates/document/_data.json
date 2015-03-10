@@ -76,17 +76,17 @@
           "modifiers": ["circles"],
           "items": [
             {
-              "href": "#",
+              "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
               "icon": "facebook",
               "title": "Partager sur Facebook"
             },
             {
-              "href": "#",
+              "href": "https://twitter.com/intent/tweet?text=Demander un logement http://www.paris.fr",
               "icon": "twitter",
               "title": "Partager sur Twitter"
             },
             {
-              "href": "#",
+              "href": "mailto:?subject=Demander un logement&body=http://www.paris.fr",
               "icon": "mail",
               "title": "Partager par courriel"
             }
@@ -133,6 +133,10 @@
         {
           "type": "image",
           "data": {
+            "src": "./logement-social.png",
+            "alt": "4 catégories de logements sociaux, des ressources faibles aux ressources moyennes",
+            "title": "Catégories de logements sociaux",
+            "credit": "Mairie de Paris / DICOM"
           }
         },
         {
@@ -309,29 +313,31 @@
           }
         },
         {
-          "type": "faq",
+          "type": "text",
           "data": {
-            "title": "Questions fréquentes",
-            "text": "Regardez dans les questions suivantes si la vôtre n’y figure pas déjà :",
-            "accordion": {
-              "items": [
-                {
-                  "title": "Combien de temps vais-je attendre un logement ?",
-                  "slug": "titre1",
-                  "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-                },
-                {
-                  "title": "Comment renouveler ma demande de logement social ?",
-                  "slug": "titre2",
-                  "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-                },
-                {
-                  "title": "Déjà titulaire d’un logement, comment puis je en changer ?",
-                  "slug": "titre3",
-                  "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-                }
-              ]
-            }
+            "block": "<h2>Questions fréquentes</h2><p>Regardez dans les questions suivantes si la vôtre n’y figure pas déjà :</p>"
+          }
+        },
+        {
+          "type": "accordion",
+          "data": {
+            "items": [
+              {
+                "title": "Combien de temps vais-je attendre un logement ?",
+                "slug": "titre1",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Comment renouveler ma demande de logement social ?",
+                "slug": "titre2",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Déjà titulaire d’un logement, comment puis je en changer ?",
+                "slug": "titre3",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              }
+            ]
           }
         }
       ],

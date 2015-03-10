@@ -6,10 +6,9 @@
         {
           "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire.",
           "share": {
-            "modifiers": ["circles"],
             "items": [
               {
-                "href": "#",
+                "href": "https://twitter.com/home?status=Il n’y a pas d’âge minimal pour l’accès à la patinoire. http://www.paris.fr/",
                 "icon": "twitter",
                 "title": "Partager sur Twitter"
               }
@@ -19,10 +18,9 @@
         {
           "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics.",
           "share": {
-            "modifiers": ["circles"],
             "items": [
               {
-                "href": "#",
+                "href": "https://twitter.com/home?status=Des moniteurs diplômés sont là pour s’adapter aux différents publics. http://www.paris.fr/",
                 "icon": "twitter",
                 "title": "Partager sur Twitter"
               }
@@ -32,10 +30,9 @@
         {
           "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins.",
           "share": {
-            "modifiers": ["circles"],
             "items": [
               {
-                "href": "#",
+                "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
                 "icon": "twitter",
                 "title": "Partager sur Twitter"
               }

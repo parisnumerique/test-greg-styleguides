@@ -12,8 +12,8 @@ include ../../modules/jecoute/jecoute
 include ../../modules/newsletter/newsletter
 include ../../modules/news-list/news-list
 include ../../modules/social/social
+include ../../components/accordion/accordion
 include ../../components/text/text
-include ../../components/faq/faq
 
 append content
   +header(data.header)
@@ -36,7 +36,7 @@ append content
           +block-aside-links(data.aside.topics)
         .layout-content
           +text(data.content.intro)
-          +faq(data.content.faq)
+          +accordion(data.content.accordion)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
