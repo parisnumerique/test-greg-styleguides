@@ -15,7 +15,7 @@
     border-top: 1px solid $gray204;
     color: $gray51;
     font-size: 15px;
-    font-width: 300;
+    font-weight: 300;
     line-height: 20px;
     list-style: none;
     margin: 0;
@@ -27,30 +27,17 @@
     padding: 20px 80px 20px 0;
     position: relative;
     &:hover {
-      .sharelines-icon {border-color: $gray179;}
-    }
-
-    .sharelines-icon {
-      border: 1px solid $gray204;
-      border-radius: 50%;
-      color: $gray204;
-      font-size: 20px;
-      line-height: 40px;
-      height: 40px;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      text-decoration: none;
-      top: 50%;
-      transform: translateY(-20px);
-      transition: all 0.1s ease;
-      width: 40px;
-
-      &:hover {
-        background-color: $blue3;
-        border-color: $blue3;
-        color: $white;
+      .share a {
+        border-color: $gray179;
+        &:hover {border-color: $blue3;}
       }
     }
+  }
+
+  .share {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-20px);
   }
 }

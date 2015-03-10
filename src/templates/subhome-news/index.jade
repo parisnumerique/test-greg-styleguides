@@ -1,6 +1,6 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/blue-block/blue-block
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
@@ -18,14 +18,14 @@ include ../../modules/social/social
 include ../../modules/video-cover/video-cover
 
 append content
-  +header(public.modules.header._data.index.defaults)
+  +header(data.header)
 
 append content
   .layout-content
     +jumbotron(data.jumbotron)
 
 append content
-  .layout-content
+  .layout-content.layout-separate-after.layout-small-padding
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
@@ -42,14 +42,14 @@ append content
       +news-list(data.yesterday.news)
 
 append content
-  .layout-content.layout-content-adjacent
+  .layout-content.layout-adjacent-before
     .layout-half-col.color-secondary-background
       .layout-wrapper
         .layout-content
-          +blue-block(data.video.block)
+          +block-content(data.video.block)
             +video-cover(data.video.cover)
         .layout-content
-          +blue-block(data.newsletter.block)
+          +block-content(data.newsletter.block)
             +newsletter(data.newsletter.newsletter)
 
 append content
@@ -73,7 +73,7 @@ append content
     +search-push(data.search_push)
 
 append content
-  .layout-content.gray-background.layout-content-adjacent
+  .layout-content.gray-background
     +get-involved(data.get_involved)
 
 append content
@@ -83,10 +83,14 @@ append content
         +heading(data.gallery.heading)
         +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
-        +newsletter(public.modules.newsletter._data.index.defaults)
-        +jecoute(public.modules.jecoute._data.index.defaults)
-        +social(public.modules.social._data.index.defaults)
+        .blocks-content-vertical
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
 
 append content
-  .layout-content.layout-content-adjacent
-    +footer(public.modules.footer._data.index.defaults)
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

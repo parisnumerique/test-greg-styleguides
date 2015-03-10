@@ -7,7 +7,7 @@ h2 Petite image
 +code({language: "jade"}).
   include image
 
-  +image(#{JSON.stringify(defaults)})
+  +image(#{JSON.stringify(defaults, null, 2)})
 
 h2 Grande image
 .lsg-component
@@ -15,7 +15,7 @@ h2 Grande image
 +code({language: "jade"}).
   include image
 
-  +image(#{JSON.stringify(large_image)})
+  +image(#{JSON.stringify(large_image, null, 2)})
 
 h2 Image verticale
 .lsg-component
@@ -23,4 +23,22 @@ h2 Image verticale
 +code({language: "jade"}).
   include image
 
-  +image(#{JSON.stringify(vertical_image)})
+  +image(#{JSON.stringify(vertical_image, null, 2)})
+
+h2 Image flottant à gauche
+.lsg-component
+  +image(left)
+  p Ceci est un paragraphe de remplissage. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
++code({language: "jade"}).
+  include image
+
+  +image(#{JSON.stringify(left, null, 2)})
+
+h2 Image flottant à droite
+.lsg-component
+  +image(right)
+  p Ceci est un paragraphe de remplissage. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
++code({language: "jade"}).
+  include image
+
+  +image(#{JSON.stringify(right, null, 2)})

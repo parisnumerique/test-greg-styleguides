@@ -20,8 +20,10 @@
           "text": "Lien externe"
         },
         {
-          "href": "#",
-          "text": "Autre lien externe"
+          "href": "http://www.paris.fr",
+          "text": "Lien externe",
+          "target": "_blank",
+          "target_text": "nouvelle fenêtre"
         }
       ]
     }

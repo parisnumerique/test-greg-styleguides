@@ -1,0 +1,54 @@
+.block-content {
+  max-width: 600px;
+
+  &.color-secondary-background {
+    color: $white;
+
+    a:not(.button) {
+      color: $white;
+      border-color: $white;
+      text-decoration: none;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .block-content-title {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+  }
+
+  .block-content-content {
+    padding: 0;
+    overflow: hidden;
+  }
+
+}
+
+.blocks-content-vertical {
+
+  .block-content {
+    padding-bottom: 30px;
+
+    &:first-child .block-content-title {
+      margin-top: 0;
+    }
+
+    & + .block-content {
+      border-top: 1px solid transparentize($white, 0.8);
+      padding-top: 30px;
+    }
+  }
+
+  .block-content-title {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+}

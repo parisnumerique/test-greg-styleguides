@@ -2,49 +2,45 @@ include text
 include ../../modules/button/button
 include ../../helpers/code
 
-.lsg-component
+p!= "Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant du code HTML."
+
+h2 Standard
+.lsg-component(style="max-width: 700px")
+  +text(with_block)
++code({language: "jade"}).
+  include text
+
+  +text(#{JSON.stringify(with_block, null, 2)})
+
+h2 En passant sous forme de bloc
+.lsg-component(style="max-width: 700px")
   +text
-    p.intro Ceci est un paragraphe d'introduction. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
-    h2 Titre h2 exemple
-    h3 Titre h3 exemple
-    h4 Titre h4 exemple
-    ul
-      li liste ul du composant text
-      li liste ul du composant text
-      li liste ul du composant text
+    h2 Titre de niveau 2
     p
       | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
-      a(href='#') exemple link
+      a(href='#') lien d'exemple
       |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
-    ol
-      li A : liste ol du composant text
-      li B : liste ol du composant text
-      li C : liste ol du composant text
-    p
-      +button({text: "Bouton"})
+    ul
+      li Élément de liste
+      li Élément de liste
+      li
+        | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+        a(href='#') lien d'exemple
+        |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
 +code({language: "jade"}).
   include text
   include ../../modules/button/button
 
   +text
-    p.intro Ceci est un paragraphe d'introduction. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
-    h2 Titre h2 exemple
-    h3 Titre h3 exemple
-    h4 Titre h4 exemple
-    ul
-      li liste ul du composant text
-      li liste ul du composant text
-      li liste ul du composant text
+    h2 Titre de niveau 2
     p
-      | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent
-      a(href='#') exemple link
+      | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
+      a(href='#') lien d'exemple
       |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
-    ol
-      li A : liste ol du composant text
-      li B : liste ol du composant text
-      li C : liste ol du composant text
-    p
-      +button({text: "Bouton"})
-
-// You can also pass the block as a parameter, named "block"
-//+text({"block": "Lorem ipsum"})
+    ul
+      li Élément de liste
+      li Élément de liste
+      li
+        | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+        a(href='#') lien d'exemple
+        |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.

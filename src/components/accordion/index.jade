@@ -18,3 +18,11 @@ h2 Textes longs
 
   +accordion(#{JSON.stringify(large_text, null, 2)})
 
+h2 Définir les slugs manuellement
+p Par défaut, le composant génère des slugs uniques pour chaque item de chaque instance. Il est en revanche possible de définir manuellement ces slugs si besoin.
+.lsg-component
+  +accordion(with_slugs)
++code({language: "jade"}).
+  include accordion
+
+  +accordion(#{JSON.stringify(with_slugs, null, 2)})

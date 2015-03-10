@@ -1,27 +1,9 @@
 .newsletter {
-  max-width: 360px;
-  background-color: $color-secondary;
-  color: $white;
+  font-size: 14px;
 
-  h2 {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-  &:first-child h2 {
-    margin-top: 0;
-  }
-
-  &.vertical h2 {
-    border-bottom: none;
-  }
-
-  .inner {
-    padding: 10px 0 20px 0;
-    overflow: hidden;
-  }
-
-  & .inner > p,
-  & .inner > a {
-    font-size: 14px;
+  .newsletter-text {
+    margin-bottom: 15px;
+    max-width: 360px;
   }
 
   .button {
@@ -31,15 +13,18 @@
     line-height: 43px;
   }
 
-  input {
-    color: $color-secondary;
+  > form {
+    margin-bottom: 5px;
+
+    input {
+      color: $color-secondary;
+      padding: 0 10px;
+    }
   }
 
-  a {
-    color: $white;
+  a:not(.button) {
+    display: inline-block;
+    border-bottom: 1px solid;
+    text-decoration: none;
   }
-}
-
-.vertical + .newsletter.vertical {
-  border-top: 1px solid rgba(255,255,255,0.2);
 }

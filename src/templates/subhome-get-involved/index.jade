@@ -1,5 +1,6 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/header/header
@@ -14,19 +15,19 @@ include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
 include ../../modules/social/social
 
 append content
-  +header(public.modules.header._data.index.defaults)
+  +header(data.header)
 
 append content
   .layout-content
     +hub-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-top-padding
+  .layout-content.layout-separate-after.layout-small-padding
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content
+  .layout-content.layout-padding-after
     .layout-wrapper
       +heading(data.advice.heading)
       +get-involved-list(data.advice.get_involved_list)
@@ -36,7 +37,6 @@ append content
     .layout-wrapper
       +heading(data.act.heading)
       +links-group(data.act.links_group)
-
 
 append content
   .layout-content
@@ -51,10 +51,14 @@ append content
         +heading(data.gallery.heading)
         +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
       aside.layout-aside.color-secondary-background
-        +newsletter(public.modules.newsletter._data.index.defaults)
-        +jecoute(public.modules.jecoute._data.index.defaults)
-        +social(public.modules.social._data.index.defaults)
+        .blocks-content-vertical
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
 
 append content
-  .layout-content.layout-content-adjacent
-    +footer(public.modules.footer._data.index.defaults)
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

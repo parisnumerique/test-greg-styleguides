@@ -1,0 +1,13 @@
+include block-content
+include ../../helpers/code
+
+h2 Default
+.lsg-module
+  +block-content(defaults)
+    p text
+
++code({language: "jade"}).
+  include block-content
+
+  +block-content(#{JSON.stringify(defaults, null, 2)})
+    p text

@@ -1,23 +1,29 @@
 .jecoute {
+  font-size: 14px;
   max-width: 360px;
 
-  .item {
+  .jecoute-text {
+    margin-bottom: 15px;
+    max-width: 360px;
+  }
+
+  .jecoute-item {
     display: none;
 
-    .question-answer{
+    .jecoute-question-answer{
       height: 130px;
       overflow: hidden;
     }
 
-    .question,
-    .answer {
+    .jecoute-question,
+    .jecoute-answer {
       height: 130px;
       transform: none;
       transform-origin: 50% 50%;
       transition: transform 1s ;
     }
 
-    .answer {
+    .jecoute-answer {
       transform: scale(0.5);
     }
 
@@ -25,7 +31,7 @@
       display: block;
     }
 
-    .timer {
+    .jecoute-timer {
       position: relative;
       width: 80%;
       height: 30px;
@@ -38,7 +44,7 @@
       .end {
         right: 0;
       }
-      .bar {
+      .jecoute-bar {
         border-radius: 2px;
         width: 100%;
         height: 3px;
@@ -46,7 +52,7 @@
         position: absolute;
         bottom: 5px;
 
-        .avancement {
+        .progress {
           width: 0%;
           height: 3px;
           background-color: $color-tertiary;
@@ -56,7 +62,7 @@
     }
   }
 
-  .user{
+  .user {
     font-weight: bold;
   }
 

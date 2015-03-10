@@ -71,13 +71,40 @@
             "title": "Partager l'article",
             "items": [
               {
-                "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire."
+                "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire.",
+                "share": {
+                  "items": [
+                    {
+                      "href": "https://twitter.com/home?status=Il n’y a pas d’âge minimal pour l’accès à la patinoire. http://www.paris.fr/",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               },
               {
-                "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics."
+                "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics.",
+                "share": {
+                  "items": [
+                    {
+                      "href": "https://twitter.com/home?status=Des moniteurs diplômés sont là pour s’adapter aux différents publics. http://www.paris.fr/",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               },
               {
-                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins."
+                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins.",
+                "share": {
+                  "items": [
+                    {
+                      "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -100,7 +127,16 @@
             "title": "Partager l'article",
             "items": [
               {
-                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins."
+                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins.",
+                "share": {
+                  "items": [
+                    {
+                      "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -117,7 +153,15 @@
             "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
             "author": "Bruno Julliard",
             "function": "premier adjoint à la Maire de Paris",
-            "social": "#"
+            "share": {
+              "items": [
+                {
+                  "href": "https://twitter.com/intent/tweet?text=Maecenas sed diam eget risus varius blandit sit amet non magna. http://www.paris.fr",
+                  "icon": "twitter",
+                  "title": "Partager sur Twitter"
+                }
+              ]
+            }
           }
         },
         {
@@ -209,85 +253,67 @@
           "modifiers": ["white"]
         },
         "newsletter" : {
-          "title": "L’essentiel de Paris",
-          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
-          "placeholder": "Entrez votre courriel",
-          "inputId": "newsletter-input",
-          "submit": "Valider",
-          "otherNewsletters": {
-            "text": "Autres newsletters et alertes",
-            "url": "#"
+          "block": {
+            "title": "L’essentiel de Paris",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+            "placeholder": "Entrez votre courriel",
+            "inputId": "newsletter-input",
+            "submit": "Valider",
+            "otherNewsletters": {
+              "text": "Autres newsletters et alertes",
+              "url": "#"
+            }
           }
         },
         "jecoute": {
-          "title": "@Parisjecoute",
-          "items": [
-            {
-              "question": {
-                "user": "@juliechanal",
-                "time": "9h30",
-                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
-              },
-              "answer": {
-                "user": "@Parisjecoute",
-                "time": "10h11",
-                "text": "Oui, la piscine reste ouverte cet été."
-              }
-            },
-            {
-              "question": {
-                "user": "@JuliePetrucci",
-                "time": "10h20",
-                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
-              },
-              "answer": {
-                "user": "@Parisjecoute",
-                "time": "10h50",
-                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
-              }
-            },
-            {
-              "question": {
-                "user": "@billy141512",
-                "time": "11h02",
-                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
-              },
-              "answer": {
-                "user": "@Parisjecoute",
-                "time": "11h14",
-                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
-              }
+          "block": {
+            "title": "@Parisjecoute",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+            "button": {
+              "href": "#",
+              "text": "Posez votre question !"
             }
-          ],
-          "button": {
-            "href": "#",
-            "text": "Posez votre question !"
           }
         },
         "social": {
-          "title": "Restez connecté",
-          "items": [{
-            "icon": "twitter",
-            "count": "219 000",
-            "subscribe": {
-              "url": "#",
-              "text": "S’abonner à @paris"
-            }
-          },{
-            "icon": "facebook",
-            "count": "2 508 576",
-            "subscribe": {
-              "url": "#",
-              "text": "Suivre la page Facebook"
-            }
-          },{
-            "icon": "instagram",
-            "count": "16 449",
-            "subscribe": {
-              "url": "#",
-              "text": "S’abonner sur Instagram"
-            }
-          }]
+          "block": {
+            "title": "Restez connecté",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "items": [
+              {
+                "icon": "twitter",
+                "count": "219 000",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner à @paris"
+                }
+              },
+              {
+                "icon": "facebook",
+                "count": "2 508 576",
+                "subscribe": {
+                  "url": "#",
+                  "text": "Suivre la page Facebook"
+                }
+              },
+              {
+                "icon": "instagram",
+                "count": "16 449",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner sur Instagram"
+                }
+              }
+            ]
+          }
         }
       },
       "footer": {

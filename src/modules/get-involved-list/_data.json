@@ -1,6 +1,31 @@
 {
   "index": {
     "defaults": {
+      "intro": {
+        "items": [
+          {
+            "title": "Madame la Maire, j’ai une idée",
+            "button": {
+              "href": "#",
+              "text": "Voir le site"
+            }
+          },
+          {
+            "title": "Votez pour le budget participatif",
+            "button": {
+              "href": "#",
+              "text": "Voir le site"
+            }
+          },
+          {
+            "title": "E-pétition, prenez la main",
+            "button": {
+              "href": "#",
+              "text": "Voir le site"
+            }
+          }
+        ]
+      },
       "items": [
         {
           "category": "Madame la Maire, j’ai une idée",

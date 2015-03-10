@@ -10,25 +10,13 @@ mixin get-involved-item(opts)
 mixin get-involved-list(opts)
   .get-involved-list
     .get-involved-column
-      .get-involved-item
-        .get-involved-item-title Madame la Maire, j’ai une idée
-        +button({
-          "href": "#",
-          "text": "Voir le site",
-          "modifiers": ["action", "secondary"]
-        })
-        .get-involved-item-title Votez pour le budget participatif
-        +button({
-          "href": "#",
-          "text": "Voir le site",
-          "modifiers": ["action", "secondary"]
-        })
-        .get-involved-item-title E-pétition, prenez la main
-        +button({
-          "href": "#",
-          "text": "Voir le site",
-          "modifiers": ["action", "secondary"]
-        })
+      if opts.intro
+        .get-involved-item.intro
+          each item in opts.intro.items
+            .get-involved-item-title= item.title
+            - button = Object.create(item.button) // clone the data object
+            - button.modifiers = ["action", "secondary"] // overwrite the modifiers
+            +button(button)
       each item in opts.items.slice(0, 2)
         +get-involved-item(item)
     .get-involved-column

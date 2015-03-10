@@ -27,13 +27,15 @@ The server is proxied on http://localhost:3000 by browser-sync with the auto rel
 
     npm run compile
 
+## Use the build in another project
 
-## Include the styleguide files in your project
+Run `npm link` in this folder
 
-For now, you have to copy manually the files from `build`.
+Run `npm link paris-styleguide` in the other project
 
-Don't forget to add the fonts and compiled css and js files to your page.
+You'll get the paris-styleguide project symbolicaly linked in the other project node_modules
+If it's an express one you can do something like
 
-    build/fonts/*
-    build/stylesheets/styleguide.css
-    build/javascript/styleguide.js
+    app.set('views', [app.get('views'), path.join(__dirname, 'node_modules', 'paris-styleguide', 'build', 'jade') ]);
+
+to be able to render jade templates coming from the styleguide. \o/

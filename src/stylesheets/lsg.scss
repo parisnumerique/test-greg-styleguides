@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import "../../node_modules/susy/sass/susy";
+
 @import "../base/normalize";
 @import "../base/colors";
 @import "../base/fonts";
@@ -15,9 +17,10 @@ $lsg-nav-width: 250px;
   height: $lsg-nav-toggle-height;
   line-height: $lsg-nav-toggle-height;
   position: absolute;
-  right: 0;
+  right: -$lsg-nav-toggle-height;
   text-align: center;
   top: 0;
+  transition: 0.2s ease-in-out;
   width: $lsg-nav-toggle-height;
 
   &:hover,
@@ -30,10 +33,9 @@ $lsg-nav-width: 250px;
   background-color: transparent;
   height: 100%;
   left: 0;
-  overflow: hidden;
   position: fixed;
   top: 0;
-  transform: translateX(-$lsg-nav-width + $lsg-nav-toggle-height);
+  transform: translateX(-$lsg-nav-width);
   transition: 0.2s ease-in-out;
   transition-property: transform, background-color;
   width: $lsg-nav-width;
@@ -42,6 +44,10 @@ $lsg-nav-width: 250px;
   &.lsg-nav-open {
     background-color: #eee;
     transform: translateX(0);
+
+    .lsg-nav-toggle {
+      transform: translateX(-$lsg-nav-toggle-height);
+    }
   }
 }
 
@@ -108,7 +114,11 @@ $lsg-nav-width: 250px;
 
 .lsg-base {
   padding: 35px 50px;
+
+  h1:first-child {margin: 0 0 10px;}
+  h1 + h2 {margin-top: 0;}
 }
+
 
 .lsg-wrapper {
   padding: 20px 50px;
@@ -141,6 +151,16 @@ pre.prism[class*="language-"] {
 }
 
 .lsg-toc {
+  @include container;
+
+  .lsg-col {
+    @include span(1 of 2);
+  }
+
+  .lsg-col:last-child {
+    @include last;
+  }
+
   h3 {
     b {
       color: #999;

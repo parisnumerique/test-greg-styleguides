@@ -1,6 +1,7 @@
 .layout-left-col {
   background-color: $white;
   width: 100%;
+  overflow: hidden;
 
   .layout-wrapper {
     display: table;
@@ -11,10 +12,41 @@
   .layout-aside {
     background-color: $gray242;
     display: table-cell;
-    padding: 40px 20px 40px 0;
+    padding: 0 20px 40px 0;
     position: relative;
-    text-align: right;
     width: 280px;
+
+    .aside-wrapper{
+      overflow-y: hidden;
+      padding-top: 100px;
+
+      &.affix {
+        overflow: visible;
+        position: fixed;
+        top: 80px;
+      }
+      &.affix-bottom {
+        position: absolute;
+      }
+    }
+
+    .aside-title {
+      text-align: left;
+      transform: translateY(-200px);
+      height: 80px;
+      line-height: 80px;
+      margin-top: 0;
+      transition: .3s ease transform;
+      position: absolute;
+      left: -32px;
+      padding-left: 10px;
+      border-left: 6px solid $color-tertiary;
+    }
+
+    .aside-wrapper.affix .aside-title {
+      top: 0;
+      transform: none;
+    }
 
     &:before {
       background-color: $gray242;
@@ -32,6 +64,10 @@
     display: table-cell;
     padding: 40px 50px;
     width: 820px;
+
+    .component {
+      max-width: 820px;
+    }
   }
 
 }

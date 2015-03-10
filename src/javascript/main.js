@@ -9,7 +9,11 @@ require('../components/accordion/script');
 require('../components/news-push/script');
 
 // load our modules
+require('../layouts/left-col/script');
+require('../modules/anchors-list/script');
+require('../modules/document-heading/script');
 require('../modules/header/script');
 require('../modules/jecoute/script');
 require('../modules/notice/script');
 require('../modules/quick-access/script');
+require('../modules/share/script');

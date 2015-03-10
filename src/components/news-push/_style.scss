@@ -51,7 +51,6 @@
 
   .actu .content {
     position: relative;
-    left: -20px;
     max-width: 400px;
     color: $white;
 
@@ -87,32 +86,27 @@
   h3 {
     font-weight: 300;
     text-transform: uppercase;
-    span {
+    margin: 8px 0 32px;
+    > span {
+      border-bottom: 6px solid $white;
+      padding-bottom: 8px;
       position: relative;
-      &:after {
-        content: " ";
-        position: absolute;
-        bottom: -5px;
-        width: 100%;
-        left: 0;
-        height: 5px;
-        background: #FFF;
-      }
     }
   }
 
-  .link {
-    clear: both;
+  .news-push-link {
     background: $gray242;
-    width: 300px;
+    clear: both;
+    color: $gray77;
+    font-size: 14px;
+    font-weight: 300;
     position: absolute;
     right: 0;
-    width: 410px;
     height: 50px;
     line-height: 50px;
-    padding: 0 10px;
-    font-weight: 300;
-    font-size: 14px;
+    padding: 0 15px;
+    text-decoration: none;
+    width: 410px;
 
     &:after {
       content: " ";
@@ -125,31 +119,25 @@
       position: absolute;
     }
 
-    a {
-      color: $gray77;
-      text-decoration: none;
+    > span {
+      left: 0;
       position: relative;
+      transition: left 0.35s ease;
 
       &:after {
-        content: " ";
-        width: 0%;
-        height: 1px;
-        background: $gray77;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        transition: .3s ease width ;
-      }
-
-      &:hover {
-        &:after {
-          width: 100%;
-        }
+        @extend %icon-font;
+        @extend %icon-arrow-light-right;
+        font-size: 17px;
+        padding-left: 8px;
+        vertical-align: middle;
       }
     }
 
-    .icon {
-      padding-left: 10px;
+    &:hover {
+      color: $color-primary;
+      > span {
+        left: 5px;
+      }
     }
   }
 }

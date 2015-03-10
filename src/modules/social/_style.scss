@@ -1,45 +1,31 @@
 .social {
   max-width: 360px;
-  background-color: $color-secondary;
-  color: $white;
-  overflow: hidden;
 
-  .item {
+  .social-items {
+    overflow: hidden;
+  }
+
+  .social-item {
     float: left;
     width: 50%;
     margin-bottom: 20px;
+
+    &:hover .social-link {
+      border-color: transparent;
+    }
   }
 
-  .icon,
-  .count {
+  .social-count,
+  .social-icon {
     font-size: 24px;
     margin-right: 10px;
   }
 
-  .subscribe{
-    display: block;
-    color: $white;
+  .social-link {
+    border-bottom: 1px solid $white;
+    display: inline-block;
     font-size: 13px;
     font-weight: 300;
   }
 
-  h2 {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-  &:first-child h2 {
-    margin-top: 0;
-  }
-
-  &.vertical h2 {
-    border-bottom: none;
-  }
-
-  .inner {
-    padding: 10px 0 20px 0;
-    overflow: hidden;
-  }
-}
-
-.vertical + .social.vertical {
-  border-top: 1px solid rgba(255,255,255,0.2);
 }

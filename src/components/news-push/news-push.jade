@@ -2,14 +2,16 @@ mixin news-push(opts)
   .news-push
     .actu
       .after
-      img(src="#{opts.image.src}", alt="#{opts.image.alt}" width="260px" height="160px")
+      - title = [opts.title]
+      if opts.image.credit
+        - title.push("(" + opts.credit + ")")
+      - title = title.join(" ")
+      img(src=opts.image.src alt=opts.image.alt title=title)
       .content
         h3: span= opts.title
         p
-          a(href="#{opts.href}")= opts.text
+          a(href=opts.href)= opts.text
           = " "
-          a.next(href="#{opts.href}")= opts.follow
-    .link
-      a(href="#{opts.link.href}")
-        = opts.link.text
-        span.icon.icon-arrow-light-right
+          a.next(href=opts.href)= opts.follow
+    a.news-push-link(href=opts.link.href)
+      span= opts.link.text

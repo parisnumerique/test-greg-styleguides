@@ -46,12 +46,15 @@
 
   }
 
-  .links-item-filesize {
+  .links-item-filesize,
+  .links-item-target {
     color: $gray128;
     display: inline-block;
     font-size: 14px;
     margin-left: 10px;
     text-decoration: none;
+    &:before {content: "(";}
+    &:after {content: ")";}
   }
 
 }

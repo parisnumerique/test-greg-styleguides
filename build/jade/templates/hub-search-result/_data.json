@@ -1,0 +1,218 @@
+{
+  "index": {
+    "data": {
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "L'Hôtel de ville"},
+          {"href": "#", "text": "Actualités"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        }
+      },
+      "heading": {
+        "text": "search-field",
+        "image": "./hub-heading.jpg"
+      },
+      "block_aside_links": {
+        "title": "Suggestions",
+        "modifiers": ["emphasis-links"],
+        "items": [
+          {
+            "href": "#", "text": "Logement social"
+          },
+          {
+            "href": "#", "text": "Logement de la ville"
+          },
+          {
+            "href": "#", "text": "Aide au logement"
+          },
+          {
+            "href": "#", "text": "Logement privatif"
+          }
+        ]
+      },
+      "block_aside_checkboxes": {
+        "title": "Rubriques",
+        "name": "rubriques",
+        "items": [
+          {
+            "value": 0,
+            "text": "Services et infos pratiques",
+            "number": 95
+          },
+          {
+            "value": 1,
+            "text": "Actualités",
+            "number": 15
+          },
+          {
+            "value": 2,
+            "text": "Municipalité",
+            "number": 3
+          },
+          {
+            "value": 3,
+            "text": "Participez",
+            "number": 4
+          }
+        ]
+      },
+      "search_result": {
+        "first_list_result": {
+          "result": "365 résultats",
+           "items": [
+            {
+              "href": "#",
+              "modifiers": ["strong"],
+              "title": "Logement",
+              "text": "Services et infos pratiques"
+            },
+            {
+              "href": "#",
+              "modifiers": ["strong"],
+              "title": "Logement social",
+              "text": "Services et infos pratiques — Logement"
+            },
+            {
+              "href": "#",
+              "modifiers": ["strong"],
+              "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
+              "text": "Services et infos pratiques — Démarches"
+            },
+            {
+              "href": "#",
+              "title": "Aide au logement",
+              "text": "Services et infos pratiques— Logement"
+            },
+            {
+              "href": "#",
+              "title": "Impôts locaux",
+              "text": "Services et infos pratiques — Logement"
+            },
+             {
+              "href": "#",
+              "title": "Un nouveau cadre pour le logement social",
+              "text": "Actualités — Logement"
+            },
+             {
+              "href": "#",
+              "title": "Ian Brossat",
+              "text": "Municipalité — La Maire et ses adjoints"
+            },
+             {
+              "href": "#",
+              "title": "La maison du logement",
+              "text": "Services et infos pratiques — Logement"
+            }
+          ]
+        }
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "block": {
+            "title": "L’essentiel de Paris",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+            "placeholder": "Entrez votre courriel",
+            "inputId": "newsletter-input",
+            "submit": "Valider",
+            "otherNewsletters": {
+              "text": "Autres newsletters et alertes",
+              "url": "#"
+            }
+          }
+        },
+        "jecoute": {
+          "block": {
+            "title": "@Parisjecoute",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+            "button": {
+              "href": "#",
+              "text": "Posez votre question !"
+            }
+          }
+        },
+        "social": {
+          "block": {
+            "title": "Restez connecté",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "items": [
+              {
+                "icon": "twitter",
+                "count": "219 000",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner à @paris"
+                }
+              },
+              {
+                "icon": "facebook",
+                "count": "2 508 576",
+                "subscribe": {
+                  "url": "#",
+                  "text": "Suivre la page Facebook"
+                }
+              },
+              {
+                "icon": "instagram",
+                "count": "16 449",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner sur Instagram"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}

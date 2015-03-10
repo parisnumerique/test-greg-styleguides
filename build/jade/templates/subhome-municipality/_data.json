@@ -1,10 +1,37 @@
 {
   "index": {
     "data": {
-      "jumbotron": {
-        "image": "../../modules/jumbotron/image.jpg",
-        "title": "À la une",
-        "text": "Revivez Nuit Blanche en photos et vidéo"
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "L'Hôtel de ville"},
+          {"href": "#", "text": "Actualités"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        }
+      },
+      "heading": {
+        "text": "Municipalité",
+        "image": "./municipality.png"
       },
       "breadcrumbs": {
         "items": [
@@ -13,9 +40,7 @@
             "text": "Accueil"
           },
           {
-            "href": "#",
-            "text": "Actualité",
-            "current": true
+            "text": "Municipalité"
           }
         ]
       },
@@ -149,78 +174,89 @@
       },
       "connected": {
         "heading": {
-          "title": "Restez connecté"
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "block": {
+            "title": "L’essentiel de Paris",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+            "placeholder": "Entrez votre courriel",
+            "inputId": "newsletter-input",
+            "submit": "Valider",
+            "otherNewsletters": {
+              "text": "Autres newsletters et alertes",
+              "url": "#"
+            }
+          }
+        },
+        "jecoute": {
+          "block": {
+            "title": "@Parisjecoute",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+            "button": {
+              "href": "#",
+              "text": "Posez votre question !"
+            }
+          }
+        },
+        "social": {
+          "block": {
+            "title": "Restez connecté",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "items": [
+              {
+                "icon": "twitter",
+                "count": "219 000",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner à @paris"
+                }
+              },
+              {
+                "icon": "facebook",
+                "count": "2 508 576",
+                "subscribe": {
+                  "url": "#",
+                  "text": "Suivre la page Facebook"
+                }
+              },
+              {
+                "icon": "instagram",
+                "count": "16 449",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner sur Instagram"
+                }
+              }
+            ]
+          }
         }
       },
-      "newsletter": {},
-      "archive": {
-        "heading": {
-          "title": "Les autres actus"
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
         },
-        "news": {
-          "items": [
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Logement",
-              "title": "Expulsions : début de la trêve hivernale"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Logement",
-              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Logement",
-              "title": "Le point sur les nouveaux logements à Paris"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Culture et patrimoine",
-              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Environnement",
-              "title": "Donec sed odio dui"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Culture et patrimoine",
-              "title": "Maecenas sed diam eget risus varius blandit sit amet non magna"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Mobilité",
-              "title": "Sed posuere consectetur est at lobortis"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "International",
-              "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Culture et patrimoine",
-              "title": "Aenean lacinia bibendum nulla sed consectetur"
-            },
-            {
-              "href": "#",
-              "date": "10 janvier 2015",
-              "category": "Environnement",
-              "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor"
-            }
-          ]
-        }
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
       }
     }
   }

@@ -11,6 +11,9 @@ var path = require('path');
 var browserifyBundler = browserify('./src/javascript/main.js', watchify.args);
 var watchifyBundler = watchify(browserify('./src/javascript/main.js', watchify.args));
 
+browserifyBundler.transform('jadeify');
+watchifyBundler.transform('jadeify');
+
 gulp.task('watch:js', watch); // so you can run `watch:js` to build the file
 gulp.task('compile:js', compile); // so you can run `compile:js` to build the file
 gulp.task('build:js', build); // so you can run `gulp build:js` to build the file
