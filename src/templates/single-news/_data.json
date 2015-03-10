@@ -71,13 +71,43 @@
             "title": "Partager l'article",
             "items": [
               {
-                "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire."
+                "text": "Il n’y a pas d’âge minimal pour l’accès à la patinoire.",
+                "share": {
+                  "modifiers": ["circles"],
+                  "items": [
+                    {
+                      "href": "#",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               },
               {
-                "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics."
+                "text": "Des moniteurs diplômés sont là pour s’adapter aux différents publics.",
+                "share": {
+                  "modifiers": ["circles"],
+                  "items": [
+                    {
+                      "href": "#",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               },
               {
-                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins."
+                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins.",
+                "share": {
+                  "modifiers": ["circles"],
+                  "items": [
+                    {
+                      "href": "#",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -100,7 +130,17 @@
             "title": "Partager l'article",
             "items": [
               {
-                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins."
+                "text": "L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins.",
+                "share": {
+                  "modifiers": ["circles"],
+                  "items": [
+                    {
+                      "href": "#",
+                      "icon": "twitter",
+                      "title": "Partager sur Twitter"
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -117,7 +157,16 @@
             "quote": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
             "author": "Bruno Julliard",
             "function": "premier adjoint à la Maire de Paris",
-            "social": "#"
+            "share": {
+              "modifiers": ["circles"],
+              "items": [
+                {
+                  "href": "#",
+                  "icon": "twitter",
+                  "title": "Partager sur Twitter"
+                }
+              ]
+            }
           }
         },
         {
