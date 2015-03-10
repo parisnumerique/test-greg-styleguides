@@ -133,6 +133,10 @@
         {
           "type": "image",
           "data": {
+            "src": "./logement-social.png",
+            "alt": "4 catégories de logements sociaux, des ressources faibles aux ressources moyennes",
+            "title": "Catégories de logements sociaux",
+            "credit": "Mairie de Paris / DICOM"
           }
         },
         {
