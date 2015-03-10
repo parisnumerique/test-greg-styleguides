@@ -6,6 +6,9 @@ mixin links(opts)
         li.links-item(class=item.modifiers)
           a(href=item.href target=item.target)
             = item.text
+            if item.target && item.target === '_blank'
+              span.links-item-target
+                = item.target_text || "nouvelle fenêtre"
             if item.filesize
               span.links-item-filesize
                 = item.filesize
