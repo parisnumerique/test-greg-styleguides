@@ -11,11 +11,11 @@ var Paris = window.Paris || {};
 Paris.anchors = (function(){
 
   var defaultOptions = {
+    anchorsSelector: 'h2'
   };
 
   function anchors(selector, userOptions){
     var $el     = $(selector),
-        anchorsSelector = (userOptions && userOptions.anchorsSelector) || 'h2',
         $anchors,
         items,
         template = require('./client.jade'),
@@ -29,7 +29,7 @@ Paris.anchors = (function(){
     }
 
     function renderAnchors() {
-      $anchors = $('.layout-left-col').find(anchorsSelector);
+      $anchors = $('.layout-left-col').find(options.anchorsSelector);
       items = _.map($anchors, function(anchor) {
         var $anchor = $(anchor);
         return {

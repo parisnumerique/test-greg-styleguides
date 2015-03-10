@@ -6,15 +6,13 @@ var fs = require('fs');
 
 var Paris = window.Paris || {};
 
-Paris.anchors = (function(){
+Paris.leftCol = (function(){
 
   var defaultOptions = {
   };
 
-  function anchors(selector, userOptions){
+  function leftCol(selector, userOptions){
     var $el = $(selector),
-        anchorsSelector = (userOptions && userOptions.anchorsSelector) || 'h2',
-        $anchors,
         options = $.extend({}, defaultOptions, userOptions);
 
     function init(){
@@ -51,12 +49,12 @@ Paris.anchors = (function(){
 
   return function(selector, userOptions){
     return $(selector).each(function(){
-      anchors(this, userOptions);
+      leftCol(this, userOptions);
     });
   };
 
 })();
 
 $(document).ready(function(){
-  Paris.anchors('.layout-aside .aside-wrapper');
+  Paris.leftCol('.layout-aside .aside-wrapper');
 });
