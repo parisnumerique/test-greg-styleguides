@@ -1,11 +1,11 @@
 mixin gallery-ugc(opts)
-  .pictures-gallery
-    .pictures-gallery-title= opts.title
+  .gallery-ugc
+    .gallery-title= opts.title + " :"
     each hashtag in opts.hashtags
-      a(href='#{hashtag.url}').pictures-gallery-hashtag= '#'+hashtag.text
-    .pictures-gallery-content
+      a.gallery-hashtag(href="#{hashtag.url}" class=hashtag.current ? "current" : "")= hashtag.text
+    .gallery-content
       each item in opts.items
-        a.pictures-gallery-image(style='background-image: url(#{item.image});')
+        a(href="#" target="_blank" style="background-image: url(#{item.image});").gallery-image
           .overlay
-            .pictures-gallery-text(href='#')=item.text
+            .gallery-text=item.text
 
