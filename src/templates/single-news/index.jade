@@ -33,12 +33,8 @@ append content
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
-          +anchors-list({
-            "items": [
-              {"href": "#", "text": "Est-ce que j’y ai droit ?"},
-              {"href": "#", "text": "Constituer un dossier"}
-            ]
-          })
+          .aside-wrapper
+            +anchors-list
 
         .layout-content
           each component in data.components
