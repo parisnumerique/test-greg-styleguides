@@ -20,6 +20,10 @@
       overflow-y: hidden;
       padding-top: 100px;
 
+      > *:last-child {
+        padding-bottom: 50px;
+      }
+
       &.affix {
         overflow: visible;
         position: fixed;
@@ -43,7 +47,8 @@
       border-left: 6px solid $color-tertiary;
     }
 
-    .aside-wrapper.affix .aside-title {
+    .aside-wrapper.affix .aside-title,
+    .aside-wrapper.affix-bottom .aside-title {
       top: 0;
       transform: none;
     }
