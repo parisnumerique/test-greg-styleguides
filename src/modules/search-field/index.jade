@@ -1,0 +1,10 @@
+include search-field
+include ../../helpers/code
+
+h2 Standard
+.lsg-module
+  +search-field(defaults)
++code({language: "jade"}).
+  include search-field
+
+  +search-field(#{JSON.stringify(defaults, null, 2)})

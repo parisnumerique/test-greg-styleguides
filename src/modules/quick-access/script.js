@@ -19,7 +19,7 @@ Paris.quickAccess = (function(){
     function init(){
       initOptions();
 
-      $searchField = $el.find('.quick-access-search-field');
+      $searchField = $el.find('.search-field-input');
       $buttons = $el.find('.quick-access-buttons');
       $close = $el.find('.quick-access-close-search');
 

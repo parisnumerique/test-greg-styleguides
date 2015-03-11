@@ -1,20 +1,12 @@
 include ../button/button
 include ../notice/notice
+include ../search-field/search-field
 
 mixin quick-access(opts)
   .quick-access(class=opts.modifiers style='background-image: url(#{opts.background});')
     .quick-access-wrapper
       .quick-access-search
-        input#quick-search.quick-access-search-field(type="text" placeholder=opts.search.input.placeholder title=opts.search.input.placeholder)
-        button.quick-access-search-submit(type="submit")
-          span= opts.search.submit.text
-          i.icon.icon-search
-        if opts.search.around
-          +button({
-            "href": "#",
-            "text": opts.search.around.text,
-            "modifiers": ["marker"]
-          })
+        +search-field(opts.search)
       ul.quick-access-buttons
         each item in opts.items
           li

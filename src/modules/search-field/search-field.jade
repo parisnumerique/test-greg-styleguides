@@ -1,0 +1,14 @@
+include ../button/button
+
+mixin search-field(opts)
+  .search-field
+    input.search-field-input(type="text" placeholder=opts.input.placeholder title=opts.input.placeholder)
+    button.search-field-submit(type="submit")
+      span= opts.submit.text
+      i.icon.icon-search
+    if opts.around
+      +button({
+        "href": "#",
+        "text": opts.around.text,
+        "modifiers": ["marker"]
+      })
