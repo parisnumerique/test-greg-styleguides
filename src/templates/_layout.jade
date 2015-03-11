@@ -4,6 +4,8 @@ html(lang="fr")
     meta(charset='utf-8')
     title Template
     link(href="../../stylesheets/paris.css" type="text/css" rel="stylesheet")
+    script(src="../../javascript/jquery-2.1.3.min.js")
+    script(src="../../javascript/algoliasearch.min.js")
   - data.bodyModifiers = data.bodyModifiers || []
   body(class="#{data.bodyModifiers}")
     != yield

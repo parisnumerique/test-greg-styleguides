@@ -13,17 +13,24 @@ Paris.quickAccess = (function(){
       options = $.extend({}, defaultOptions, userOptions),
       $searchField,
       $buttons,
+      $results,
       $close,
-      isSearching = false;
+      isSearching = false,
+      algolia,
+      index;
 
     function init(){
       initOptions();
 
+      algolia = new AlgoliaSearch('QGS0I5WCQR', '9e4241f56405e46afd6c0bd52fb02a5b');
+      index = algolia.initIndex('QueFaire');
+
       $searchField = $el.find('.search-field-input');
       $buttons = $el.find('.quick-access-buttons');
+      $results = $el.find('.quick-access-results ul');
       $close = $el.find('.quick-access-close-search');
 
-      $searchField.on('input', onStartSearching);
+      $searchField.on('input', onInput);
       $searchField.on('focus', function(){
         if ($searchField.val() !== '') {
           onStartSearching();
@@ -51,7 +58,8 @@ Paris.quickAccess = (function(){
       }, {
         display: "none",
         duration: 350,
-        ease: "ease"
+        ease: "ease",
+        complete: onInput
       });
     }
 
@@ -65,6 +73,31 @@ Paris.quickAccess = (function(){
         display: "block",
         duration: 350,
         ease: "ease"
+      });
+      $results.empty();
+    }
+
+    function onInput() {
+      if (!isSearching) {onStartSearching(); return false;}
+      var val = $searchField.val();
+      if (val !== "") {
+        index.search(val, onSearchResults, {
+          hitsPerPage: 6
+        });
+      } else {
+        $results.empty();
+      }
+    }
+
+    function onSearchResults(success, results) {
+      $results.empty();
+      $.each(results.hits, function(index, hit){
+        $results.append('<li>' +
+          '<a href="' + hit.url + '">' +
+            '<span class="title">' + hit._highlightResult.nom.value + '</span>' +
+            '<span class="section">' + hit.rubriques[0] + '</span>' +
+          '</a>' +
+        '</li>');
       });
     }
 

@@ -1,6 +1,7 @@
 {
   "index": {
     "defaults": {
+      "action": "#",
       "input": {
         "placeholder": "Rechercher un service, une information..."
       },
@@ -13,6 +14,7 @@
       }
     },
     "without_around": {
+      "action": "#",
       "input": {
         "placeholder": "Rechercher un service, une information..."
       },
@@ -22,6 +24,7 @@
       }
     },
     "small": {
+      "action": "#",
       "modifiers": ["small"],
       "input": {
         "placeholder": "Rechercher un nom..."

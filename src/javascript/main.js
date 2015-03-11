@@ -1,7 +1,7 @@
 // BS3 et Velocity attendent un `jQuery` global sur `window`
 window.jQuery = window.$ = require('jquery');
 
-// load Bootstrap
+// load externals
 require('./externals/bootstrap');
 
 // load our librairies

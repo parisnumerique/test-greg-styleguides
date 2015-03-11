@@ -73,6 +73,65 @@ header + .layout-content .quick-access {
   }
 }
 
+.quick-access-results {
+  > ul {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+
+    > li {
+      border-bottom: 1px solid transparentize($color-secondary, 0.8);
+
+      a {
+        color: $gray51;
+        display: block;
+        padding: 15px;
+        position: relative;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $color-tertiary;
+        }
+
+        > .title,
+        > .section {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        > .title {
+          width: 70%;
+        }
+
+        > .section {
+          font-size: 15px;
+          line-height: 20px;
+          position: absolute;
+          right: 15px;
+          text-align: right;
+          top: 15px;
+          width: 25%;
+        }
+      }
+
+      em {
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+  }
+
+  > .button {
+    display: none;
+  }
+}
+
+
 .quick-access-close-search {
   border: 1px solid $gray153;
   border-radius: 50%;

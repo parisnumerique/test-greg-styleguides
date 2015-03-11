@@ -48,6 +48,12 @@
           "text": "Gardes d’enfants"
         }
       ],
+      "results": {
+        "button": {
+          "href": "#",
+          "text": "Voir tous les résultats"
+        }
+      },
       "notice": {
         "modifiers": ["bottom", "transparent"],
         "closable": true,
@@ -103,6 +109,12 @@
           "text": "Gardes d’enfants"
         }
       ],
+      "results": {
+        "button": {
+          "href": "#",
+          "text": "Voir tous les résultats"
+        }
+      },
       "notice": {
         "modifiers": ["bottom", "transparent"],
         "closable": true,

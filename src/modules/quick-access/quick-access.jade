@@ -15,6 +15,11 @@ mixin quick-access(opts)
               "text": item.text,
               "modifiers": ["secondary"]
             })
+      .quick-access-results
+        ul
+        - button = Object.create(opts.results.button)
+        - button.modifiers = ["action", "tertiary"]
+        +button(button)
     .quick-access-close-search: i.icon-close
     if opts.notice
       +notice(opts.notice)
