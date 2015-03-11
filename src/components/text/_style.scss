@@ -73,4 +73,19 @@
     line-height: 30px;
   }
 
+  .anchor {
+    position: relative;
+  }
+
+  .icon-anchor {
+    color: $gray204;
+    font-size: 20px;
+    line-height: 1;
+    padding-left: 10px;
+
+    &:hover {
+      color: $color-tertiary;
+      cursor: pointer;
+    }
+  }
 }

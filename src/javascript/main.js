@@ -7,6 +7,7 @@ require('./lib/scroll');
 // load our components
 require('../components/accordion/script');
 require('../components/news-push/script');
+require('../components/text/script');
 
 // load our modules
 require('../layouts/left-col/script');

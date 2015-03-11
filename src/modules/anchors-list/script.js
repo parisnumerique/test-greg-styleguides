@@ -3,7 +3,6 @@
 var $ = require('jquery');
 var jade = require('jade');
 var PubSub = require('pubsub-js');
-var fs = require('fs');
 var _ = require('underscore');
 
 var Paris = window.Paris || {};
