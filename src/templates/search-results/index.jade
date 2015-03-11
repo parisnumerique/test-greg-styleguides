@@ -9,6 +9,7 @@ include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/jecoute/jecoute
 include ../../modules/newsletter/newsletter
+include ../../modules/search-field/search-field
 include ../../modules/search-result/search-result
 include ../../modules/social/social
 
@@ -18,6 +19,7 @@ append content
 append content
   .layout-content
     +hub-heading(data.heading)
+      +search-field(data.search)
 
 append content
   .layout-left-col

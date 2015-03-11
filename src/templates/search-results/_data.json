@@ -31,8 +31,17 @@
         }
       },
       "heading": {
-        "text": "search-field",
         "image": "./hub-heading.jpg"
+      },
+      "search": {
+        "input": {
+          "placeholder": "Rechercher un service, une information...",
+          "value": "logement"
+        },
+        "submit": {
+          "text": "Rechercher",
+          "icon": true
+        }
       },
       "block_aside_links": {
         "title": "Suggestions",
