@@ -203,6 +203,10 @@
         },
         "social": {
           "title": "Restez connecté",
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          },
           "items": [{
             "icon": "twitter",
             "count": "219 000",

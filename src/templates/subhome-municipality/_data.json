@@ -208,6 +208,10 @@
           }
         },
         "social": {
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          },
           "block": {
             "title": "Restez connecté",
             "modifiers": ["color-secondary-background"]

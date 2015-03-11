@@ -402,6 +402,10 @@
         "social": {
           "block": {
             "title": "Restez connecté",
+            "link": {
+              "href": "#",
+              "text": "Voir tous les réseaux sociaux"
+            },
             "modifiers": ["color-secondary-background"]
           },
           "content": {
