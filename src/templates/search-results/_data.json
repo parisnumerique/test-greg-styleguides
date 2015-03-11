@@ -28,6 +28,26 @@
           "visible": true,
           "url": "#",
           "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
         }
       },
       "heading": {
@@ -160,7 +180,7 @@
         },
         "jecoute": {
           "block": {
-            "title": "@Parisjecoute",
+            "title": "Parisjecoute",
             "modifiers": ["color-secondary-background"]
           },
           "content": {

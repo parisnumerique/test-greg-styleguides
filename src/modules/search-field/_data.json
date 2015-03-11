@@ -3,6 +3,7 @@
     "defaults": {
       "action": "#",
       "input": {
+        "id": "main-search",
         "placeholder": "Rechercher un service, une information..."
       },
       "submit": {

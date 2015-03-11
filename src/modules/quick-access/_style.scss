@@ -30,6 +30,10 @@
     }
   }
 
+  .header-quick-access &:after {
+    background-color: rgb(226, 233, 237);
+  }
+
   .notice {
     z-index: 1;
   }

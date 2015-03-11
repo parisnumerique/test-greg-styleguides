@@ -11,12 +11,14 @@ Paris.quickAccess = (function(){
   function quickAccess(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
+      api = {},
       $searchField,
       $searchFieldInput,
       $buttons,
       $results,
       $more,
       $close,
+      forceSearching = false,
       isSearching = false,
       algolia,
       index;
@@ -34,6 +36,11 @@ Paris.quickAccess = (function(){
       $more = $el.find('.quick-access-results-more');
       $close = $el.find('.quick-access-close-search');
 
+      forceSearching = $el.hasClass('force-searching');
+      if (forceSearching) {
+        $buttons.hide();
+      }
+
       $searchFieldInput.on('input', onInput);
       $searchFieldInput.on('focus', function(){
         if ($searchFieldInput.val() !== '') {
@@ -46,6 +53,8 @@ Paris.quickAccess = (function(){
       if ($el.hasClass('searching')) {
         onStartSearching();
       }
+
+      $el.data('api', api);
     }
 
     function initOptions() {
@@ -57,6 +66,7 @@ Paris.quickAccess = (function(){
     function onStartSearching(){
       if (isSearching) {return false;}
       isSearching = true;
+      if (forceSearching) {return false;}
       $el.addClass('searching');
       $buttons.velocity({
         opacity: 0
@@ -70,6 +80,8 @@ Paris.quickAccess = (function(){
 
     function onStopSearching(){
       if (!isSearching) {return false;}
+      $el.trigger('close');
+      if (forceSearching) {return false;}
       isSearching = false;
       $el.removeClass('searching');
       $buttons.velocity({
@@ -113,6 +125,13 @@ Paris.quickAccess = (function(){
       e.preventDefault();
       $searchField.submit();
     }
+
+
+    // The API for external interaction
+
+    api.focusSearchField = function(){
+      $searchFieldInput.trigger('focus');
+    };
 
     init();
 

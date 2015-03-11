@@ -11,10 +11,20 @@ Paris.header = (function(){
 
   function header(selector, userOptions){
     var $el     = $(selector),
-        options = $.extend({}, defaultOptions, userOptions);
+        options = $.extend({}, defaultOptions, userOptions),
+        $buttonSearch,
+        $quickAccess;
 
     function init(){
       initOptions();
+
+      $buttonSearch = $el.find('.icon-search');
+      $quickAccess = $('.header-quick-access');
+
+      $buttonSearch.on('click', onClickSearch);
+      $quickAccess.find('.quick-access').on('close', onCloseQuickAccess);
+      positionQuickAccess();
+
       PubSub.subscribe('scroll:search:down', fixNav);
       PubSub.subscribe('scroll:search:up', unfixNav);
 
@@ -31,32 +41,60 @@ Paris.header = (function(){
         fixHeader();
       }
 
-      if(!$('#quick-search').length) {
+      if(!$('#main-search').length) {
         fixNav();
       }
 
-    }
-
-    function fixNav() {
-      $('body').addClass('fixed-nav');
-    }
-
-    function unfixNav() {
-      $('body').removeClass('fixed-nav');
-    }
-
-    function fixHeader() {
-      $el.addClass('fixed');
-    }
-
-    function unfixHeader() {
-      $el.removeClass('fixed');
     }
 
     function initOptions() {
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
+    }
+
+    function positionQuickAccess() {
+      if ($el.hasClass('fixed')) {
+        var top = $el.outerHeight();
+      } else {
+        var top = $el.offset().top + $el.outerHeight();
+      }
+      $quickAccess.css('top', top);
+    }
+
+    function fixNav() {
+      $('body').addClass('fixed-nav');
+      positionQuickAccess();
+    }
+
+    function unfixNav() {
+      $('body').removeClass('fixed-nav');
+      positionQuickAccess();
+    }
+
+    function fixHeader() {
+      $el.addClass('fixed');
+      positionQuickAccess();
+    }
+
+    function unfixHeader() {
+      $el.removeClass('fixed');
+      positionQuickAccess();
+    }
+
+    function onClickSearch(e){
+      e.preventDefault();
+      $quickAccess.toggleClass('visible');
+      var visible = $quickAccess.hasClass('visible');
+      if (visible) {
+        $quickAccess.find('.quick-access').data('api').focusSearchField();
+      }
+      $buttonSearch.toggleClass('active', visible);
+    }
+
+    function onCloseQuickAccess() {
+      $quickAccess.removeClass('visible');
+      $buttonSearch.removeClass('active');
     }
 
     init();

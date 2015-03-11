@@ -46,16 +46,38 @@
           "visible": true,
           "url": "#",
           "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
         }
       },
       "quick_access": {
         "background": "../../modules/quick-access/background.jpg",
         "search": {
           "input": {
+            "id": "main-search",
             "placeholder": "Rechercher un service, une information..."
           },
           "submit": {
-            "text": "Rechercher"
+            "text": "Rechercher",
+            "icon": true
           },
           "around": {
             "text": "Autour de moi"
@@ -95,9 +117,14 @@
             "text": "Gardes d’enfants"
           }
         ],
+        "results": {
+          "button": {
+            "href": "#",
+            "text": "Voir tous les résultats"
+          }
+        },
         "notice": {
-          "id": "notice_cookies",
-          "modifiers": ["bottom transparent"],
+          "modifiers": ["bottom", "transparent"],
           "closable": true,
           "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
         }
@@ -307,7 +334,7 @@
         },
         "jecoute": {
           "block": {
-            "title": "@Parisjecoute",
+            "title": "Parisjecoute",
             "modifiers": ["color-secondary-background"]
           },
           "content": {
