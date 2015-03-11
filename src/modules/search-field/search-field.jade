@@ -1,11 +1,14 @@
 include ../button/button
 
 mixin search-field(opts)
-  .search-field
+  .search-field(class=opts.modifiers)
     input.search-field-input(type="text" placeholder=opts.input.placeholder title=opts.input.placeholder)
     button.search-field-submit(type="submit")
-      span= opts.submit.text
-      i.icon.icon-search
+      if opts.submit.icon
+        span= opts.submit.text
+        i.icon.icon-search
+      else
+        = opts.submit.text
     if opts.around
       +button({
         "href": "#",
