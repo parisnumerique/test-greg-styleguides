@@ -11,7 +11,7 @@ var Paris = window.Paris || {};
 Paris.anchors = (function(){
 
   var defaultOptions = {
-    anchorsSelector: 'h2'
+    anchorsSelector: '.anchor'
   };
 
   function anchors(selector, userOptions){
@@ -40,7 +40,7 @@ Paris.anchors = (function(){
       });
 
       _.each(items, function (item, index, list) {
-        item.bottom = (list[index+1]) ? list[index+1].top : $('body').height();
+        item.bottom = (list[index+1]) ? list[index+1].top : $('.layout-left-col').position().top + $('.layout-left-col').height();
       });
 
       var content = template({opts: {items: items  }});

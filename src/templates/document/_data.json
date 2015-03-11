@@ -128,7 +128,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Est-ce que j’y ai droit ?</h2><h3>Critères d’attribution</h3><h4>Deux conditions :</h4><ul><li>Être de nationalité française, ou étranger avec un titre de séjour valable.</li><li>Respecter les <a href=\"#\">plafonds de ressources</a>.</li></ul><h4>Comment savoir si vous y avez droit ?</h4><p>80% de Parisiens sont éligibles à un logement social. Il existe 4 types de logements, différents selon les ressources de chaque foyer.</p>"
+            "block": "<h2 class='anchor'>Est-ce que j’y ai droit ?</h2><h3>Critères d’attribution</h3><h4>Deux conditions :</h4><ul><li>Être de nationalité française, ou étranger avec un titre de séjour valable.</li><li>Respecter les <a href=\"#\">plafonds de ressources</a>.</li></ul><h4>Comment savoir si vous y avez droit ?</h4><p>80% de Parisiens sont éligibles à un logement social. Il existe 4 types de logements, différents selon les ressources de chaque foyer.</p>"
           }
         },
         {
@@ -206,7 +206,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Constituer un dossier</h2><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><p><a href=\"#\" class=\"button\">Télécharger le formulaire de demande de logement social</a></p><h3>Les documents à fournir</h3><h4>Pour tous :</h4><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><ul><li>Le <a href=\"#\">formulaire de demande de logement</a> rempli</li><li>Votre carte d’identité, votre passeport ou votre title de séjour en cours de validité.  Si vous êtes ressortissant d'un pays membre de l'Union Européenne, d'Islande, de Norvège, du Liechtenstein ou de Suisse, vous pouvez déposer une demande de logement uniquement avec la carte d'identité de votre pays d'origine ou votre passeport.</li><li>Carte d’identité ou passeport ou titre de séjour en cours de validité pour toutes les personnes majeures à loger</li><li>Les deux derniers avis d’imposition ou de non-imposition de toutes les personnes qui vivront dans le logement (seulement le dernier avis dans le cadre d'un renouvellement)</li><li>Justificatifs des ressources du dernier mois de toutes les personnes qui vivront dans le logement (fiche de paye, attestation d’allocation…)</li><li>Justificatif du domicile actuel (bail et quittances de loyer ou reçus d’hôtel ou attestation d’hébergement…)</li></ul><h4>Attention : dans certains cas, vous devez fournir des pièces complémentaires.</h4>"
+            "block": "<h2 class='anchor'>Constituer un dossier</h2><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><p><a href=\"#\" class=\"button\">Télécharger le formulaire de demande de logement social</a></p><h3>Les documents à fournir</h3><h4>Pour tous :</h4><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><ul><li>Le <a href=\"#\">formulaire de demande de logement</a> rempli</li><li>Votre carte d’identité, votre passeport ou votre title de séjour en cours de validité.  Si vous êtes ressortissant d'un pays membre de l'Union Européenne, d'Islande, de Norvège, du Liechtenstein ou de Suisse, vous pouvez déposer une demande de logement uniquement avec la carte d'identité de votre pays d'origine ou votre passeport.</li><li>Carte d’identité ou passeport ou titre de séjour en cours de validité pour toutes les personnes majeures à loger</li><li>Les deux derniers avis d’imposition ou de non-imposition de toutes les personnes qui vivront dans le logement (seulement le dernier avis dans le cadre d'un renouvellement)</li><li>Justificatifs des ressources du dernier mois de toutes les personnes qui vivront dans le logement (fiche de paye, attestation d’allocation…)</li><li>Justificatif du domicile actuel (bail et quittances de loyer ou reçus d’hôtel ou attestation d’hébergement…)</li></ul><h4>Attention : dans certains cas, vous devez fournir des pièces complémentaires.</h4>"
           }
         },
         {
@@ -267,7 +267,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Complément : l’aide au logement</h2><p>Le logement social n’est pas la seule aide possible pour les Parisiens et Parisiennes qui en ont besoin. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p><h3>Les aides au logement de la Ville de Paris</h3><p>A Paris, de nombreux dispositifs existent pour vous aider à assumer vos dépenses de logement – et les coûts afférents - ou à améliorer votre habitat. Les aides au logement de la Ville de Paris sont accordées sous condition de ressources.</p>"
+            "block": "<h2 class='anchor'>Complément : l’aide au logement</h2><p>Le logement social n’est pas la seule aide possible pour les Parisiens et Parisiennes qui en ont besoin. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p><h3>Les aides au logement de la Ville de Paris</h3><p>A Paris, de nombreux dispositifs existent pour vous aider à assumer vos dépenses de logement – et les coûts afférents - ou à améliorer votre habitat. Les aides au logement de la Ville de Paris sont accordées sous condition de ressources.</p>"
           }
         },
         {
@@ -316,7 +316,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Questions fréquentes</h2><p>Regardez dans les questions suivantes si la vôtre n’y figure pas déjà :</p>"
+            "block": "<h2 class='anchor'>Questions fréquentes</h2><p>Regardez dans les questions suivantes si la vôtre n’y figure pas déjà :</p>"
           }
         },
         {

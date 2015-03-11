@@ -32,13 +32,8 @@ append content
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
-          +anchors-list({
-            "items": [
-              {"href": "#", "text": "Titre de la première partie"},
-              {"href": "#", "text": "Titre de la deuxième partie"},
-              {"href": "#", "text": "Titre de la troisième partie"}
-            ]
-          })
+          .aside-wrapper
+            +anchors-list
 
         .layout-content
           each component in data.components
