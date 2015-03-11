@@ -5,8 +5,9 @@ mixin accordion(opts)
       - slug = item.slug || uuid + "-" + index
       .accordion-item.panel
         div(role='tab' id='h-#{slug}')
-          a.accordion-item-title.collapsed(href='##{slug}' aria-controls='##{slug}')= item.title
-          span.icon.icon-arrow-top
+          a.accordion-item-title.collapsed(href='##{slug}' aria-controls='##{slug}')
+            = item.title
+            span.icon.icon-arrow-top
         .collapse.accordion-item-content(role='tabpanel' aria-labelledby='h-#{slug}' id="#{slug}")
           .accordion-content-wrapper
             = item.content

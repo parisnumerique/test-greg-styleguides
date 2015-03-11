@@ -22,7 +22,7 @@
     }
   }
 
-  .collapsed + .icon-arrow-top {
+  .collapsed .icon-arrow-top {
     transform: rotate(180deg);
     transform-origin: center center;
   }
