@@ -39,11 +39,11 @@ Paris.header = (function(){
     }
 
     function fixNav() {
-      $('body').addClass('fixed_nav');
+      $('body').addClass('fixed-nav');
     }
 
     function unfixNav() {
-      $('body').removeClass('fixed_nav');
+      $('body').removeClass('fixed-nav');
     }
 
     function fixHeader() {

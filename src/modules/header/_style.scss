@@ -10,7 +10,7 @@ header {
   transition: 0.2s ease height, 0.2s ease padding, 0.5s ease left;
   overflow: hidden;
 
-  .fixed_nav & {
+  .fixed-nav & {
     height: 80px;
     padding: 0;
   }
@@ -26,7 +26,7 @@ header {
     left: -126.5px;
     position: relative;
     transition: 0.2s ease height;
-    .fixed_nav & {
+    .fixed-nav & {
       height: 80px;
     }
   }
@@ -129,7 +129,7 @@ header {
       margin-left: 18px;
       position: relative;
 
-      .fixed_nav & {
+      .fixed-nav & {
         line-height: 80px;
       }
     }
@@ -156,7 +156,7 @@ header {
     transition: 0.5s ease background, 0.2s ease padding-top, 0.2s ease height;
     perspective: 1000;
 
-    .fixed_nav & {
+    .fixed-nav & {
       height: 80px;
     }
   }
@@ -193,7 +193,7 @@ header {
     background: $white;
     transition: 0.3s ease width;
 
-    .fixed_nav & {
+    .fixed-nav & {
       bottom: 25px;
     }
   }
@@ -213,7 +213,7 @@ header {
     text-align: center;
     transition: 0.5s ease all;
 
-    .fixed_nav & {
+    .fixed-nav & {
       line-height: 80px;
     }
   }
@@ -259,7 +259,7 @@ header {
     position: relative;
     transition: 0.3s ease background, 0.2s ease width, 0.2s ease padding-top, 0.2s ease height, 0.2s ease line-height;
 
-    .fixed_nav & {
+    .fixed-nav & {
       height: 80px;
       line-height: 80px;
     }
@@ -276,7 +276,7 @@ header {
       font-size: 13px;
       margin-left: 5px;
 
-      .fixed_nav & {
+      .fixed-nav & {
         margin-left: 0;
       }
     }
@@ -347,25 +347,25 @@ header {
       transition: 0.2s ease line-height;
     }
 
-    .fixed_nav &:before{
+    .fixed-nav &:before{
       line-height: 80px;
     }
   }
 }
 
-.fixed_nav header .right .fixed_display_around_me,
-.fixed_nav header .right .fixed_display_searchbox{
+.fixed-nav header .right .fixed_display_around_me,
+.fixed-nav header .right .fixed_display_searchbox{
   transform: none;
 }
 
 
-.fixed_nav header .right .display-account .label{
+.fixed-nav header .right .display-account .label{
   display: inline-block;
   width: 0px;
 }
 
 
-.fixed_nav header .right .display-account .label, body.page header .right .display-account .label {
+.fixed-nav header .right .display-account .label, body.page header .right .display-account .label {
   opacity: 0;
   transition: 0.1s ease opacity, .4s ease width ;
 }

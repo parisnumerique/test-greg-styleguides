@@ -5,6 +5,7 @@ html
     title Module
     link(href="/css/paris.css" type="text/css" rel="stylesheet")
     script(src="/javascript/jquery-2.1.3.min.js")
-  body
+  - data.bodyModifiers = data.bodyModifiers || []
+  body(class="#{data.bodyModifiers}")
     block main
     script(src="/javascript/paris.js")

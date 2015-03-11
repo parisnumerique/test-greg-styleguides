@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "bodyModifiers": ["fixed-nav"],
       "header": {
         "title": "Paris",
         "h1": true,
