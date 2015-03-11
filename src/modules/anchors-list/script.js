@@ -25,7 +25,7 @@ Paris.anchors = (function(){
       initOptions();
 
       renderAnchors();
-      fillBars();
+      PubSub.subscribe('scroll', fillBars);
     }
 
     function renderAnchors() {
@@ -47,24 +47,23 @@ Paris.anchors = (function(){
       $el.html(content);
       _.defer(function () {
         PubSub.publish('anchors:ready');
+        fillBars();
       });
     }
 
     function fillBars(){
-      PubSub.subscribe('scroll', function(__, e) {
-        _.each(items, function(item) {
-          if($(document).scrollTop() < item.top ) {
-            $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '0%');
-            return;
-          }
-          else if($(document).scrollTop() > item.bottom ) {
-            $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '100%');
-            return;
-          }
-          var progress = ($(document).scrollTop() - item.top) / (item.bottom - item.top);
-          progress = progress*100;
-          $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', ''+progress+'%');
-        })
+      _.each(items, function(item) {
+        if($(document).scrollTop() < item.top ) {
+          $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '0%');
+          return;
+        }
+        else if($(document).scrollTop() > item.bottom ) {
+          $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '100%');
+          return;
+        }
+        var progress = ($(document).scrollTop() - item.top) / (item.bottom - item.top);
+        progress = progress*100;
+        $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', ''+progress+'%');
       });
     }
 
