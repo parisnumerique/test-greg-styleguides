@@ -12,8 +12,10 @@ Paris.quickAccess = (function(){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       $searchField,
+      $searchFieldInput,
       $buttons,
       $results,
+      $more,
       $close,
       isSearching = false,
       algolia,
@@ -25,17 +27,20 @@ Paris.quickAccess = (function(){
       algolia = new AlgoliaSearch('QGS0I5WCQR', '9e4241f56405e46afd6c0bd52fb02a5b');
       index = algolia.initIndex('QueFaire');
 
-      $searchField = $el.find('.search-field-input');
+      $searchField = $el.find('.search-field');
+      $searchFieldInput = $searchField.find('.search-field-input');
       $buttons = $el.find('.quick-access-buttons');
       $results = $el.find('.quick-access-results ul');
+      $more = $el.find('.quick-access-results-more');
       $close = $el.find('.quick-access-close-search');
 
-      $searchField.on('input', onInput);
-      $searchField.on('focus', function(){
-        if ($searchField.val() !== '') {
+      $searchFieldInput.on('input', onInput);
+      $searchFieldInput.on('focus', function(){
+        if ($searchFieldInput.val() !== '') {
           onStartSearching();
         }
       });
+      $more.on('click', onClickMore);
       $close.on('click', onStopSearching);
 
       if ($el.hasClass('searching')) {
@@ -75,17 +80,19 @@ Paris.quickAccess = (function(){
         ease: "ease"
       });
       $results.empty();
+      $more.hide();
     }
 
     function onInput() {
       if (!isSearching) {onStartSearching(); return false;}
-      var val = $searchField.val();
+      var val = $searchFieldInput.val();
       if (val !== "") {
         index.search(val, onSearchResults, {
           hitsPerPage: 6
         });
       } else {
         $results.empty();
+        $more.hide();
       }
     }
 
@@ -99,6 +106,12 @@ Paris.quickAccess = (function(){
           '</a>' +
         '</li>');
       });
+      $more.show();
+    }
+
+    function onClickMore(e){
+      e.preventDefault();
+      $searchField.submit();
     }
 
     init();

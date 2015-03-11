@@ -79,7 +79,7 @@ header + .layout-content .quick-access {
     font-weight: 300;
     line-height: 20px;
     list-style: none;
-    margin: 10px 0 0;
+    margin: 10px 0 35px;
     padding: 0;
 
     > li {
@@ -126,7 +126,7 @@ header + .layout-content .quick-access {
     }
   }
 
-  > .button {
+  .quick-access-results-more {
     display: none;
   }
 }
