@@ -17,6 +17,7 @@ Paris.newsPush = (function(){
     function init(){
       initOptions();
       PubSub.subscribe('scroll', testVisibility);
+      testVisibility();
     }
 
     function testVisibility() {
