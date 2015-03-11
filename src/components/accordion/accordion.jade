@@ -8,5 +8,6 @@ mixin accordion(opts)
           a.accordion-item-title.collapsed(href='##{slug}' aria-controls='##{slug}')= item.title
           span.icon.icon-arrow-top
         .collapse.accordion-item-content(role='tabpanel' aria-labelledby='h-#{slug}' id="#{slug}")
-          = item.content
+          .accordion-content-wrapper
+            = item.content
 

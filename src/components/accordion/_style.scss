@@ -4,7 +4,6 @@
   .accordion-item {
     background-color: $gray242;
     border-radius: 4px;
-    padding: 20px 12px;
     position: relative;
 
     & + .accordion-item {
@@ -34,10 +33,16 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
+    padding: 20px 12px;
     text-decoration: none;
   }
 
   .accordion-item-content {
+    padding: 0 12px;
+  }
+
+  .accordion-content-wrapper {
+    padding-bottom: 12px;
   }
 
   .collapse {
