@@ -20,7 +20,7 @@ Paris.text = (function(){
 
     function init(){
       initOptions();
-      // renderFavorite();
+      renderFavorite();
       renderShare();
     }
 
