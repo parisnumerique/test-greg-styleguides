@@ -144,6 +144,10 @@
             "modifiers": ["color-secondary-background"]
           },
           "content": {
+            "link": {
+              "href": "#",
+              "text": "Voir tous les réseaux sociaux"
+            },
             "items": [
               {
                 "icon": "twitter",
