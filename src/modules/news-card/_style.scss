@@ -118,6 +118,9 @@
         background: transparent;
         border: none;
       }
+
+
+
     }
   }
 
@@ -125,7 +128,7 @@
     opacity: 0;
     transition: .3s ease opacity;
     position: relative;
-    top: -15px;
+    top: -20px;
   }
 
   .facebook-counter,
@@ -133,11 +136,17 @@
     display: inline-block;
     background: $color-primary;
     color: $white;
-    padding: 5px;
+    padding: 5px 10px;
+    height: 40px;
+    line-height: 30px;
     font-size: 18px;
     transition: opacity ease .3s ;
+
+    .counter-value {
+      font-weight: 700;
+    }
     .icon {
-      padding-right: 2px;
+      padding-right: 7px;
     }
   }
 

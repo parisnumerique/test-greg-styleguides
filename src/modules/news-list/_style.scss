@@ -97,11 +97,12 @@
     position: absolute;
     right: 12px;
     top: 50%;
-    margin-top: -20px;
+    margin-top: -34px;
 
     .facebook-counter,
     .twitter-counter {
       position: relative;
+      padding: 5px 0;
     }
 
     .facebook-counter .icon,
@@ -112,6 +113,11 @@
     .twitter-counter {
       margin-top: 6px;
     }
+
+    .counter-value {
+      font-weight: 700;
+    }
+
 
     .facebook-counter::after {
       content: " ";
