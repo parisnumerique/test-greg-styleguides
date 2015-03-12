@@ -73,7 +73,7 @@ Paris.quickAccess = (function(){
     function onClickFromHeader(){
       var $quickAccess = $('.quick-access');
       var $mainSearch = $('#main-search');
-      if ($mainSearch) {
+      if ($mainSearch.length) {
         $quickAccess.velocity("scroll",
           {
             duration: 1000,
@@ -85,7 +85,7 @@ Paris.quickAccess = (function(){
           }
         );
       } else {
-        $parent.toggleClass('visible');
+        $el.toggleClass('searching');
       }
     }
 

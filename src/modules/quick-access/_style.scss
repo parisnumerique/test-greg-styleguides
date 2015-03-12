@@ -8,8 +8,12 @@
   transition: .4s ease transform;
   position: relative;
 
-  .header & {
+  .header-wrapper & {
     transform: translateY(-1000px);
+  }
+
+  .header-wrapper &.visible {
+    transform: translateY(0);
   }
 
   &:after {
