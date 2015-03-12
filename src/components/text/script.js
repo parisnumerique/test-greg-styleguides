@@ -2,7 +2,10 @@
 
 var PubSub = require('pubsub-js');
 var jade = require('jade');
-
+var Globalize = require('globalize');
+Globalize.load(
+  require("cldr-data/supplemental/likelySubtags")
+);
 
 var Paris = window.Paris || {};
 
@@ -14,11 +17,16 @@ Paris.text = (function(){
 
   function text(selector, userOptions){
     var $el     = $(selector),
-        template = require('../../modules/share/client.jade'),
-        options = $.extend({}, defaultOptions, userOptions);
+      options = $.extend({}, defaultOptions, userOptions),
+      template = require('../../modules/share/client.jade'),
+      locale;
 
     function init(){
       initOptions();
+
+      locale = $('html').attr('lang');
+      Globalize.loadMessages(Paris.locales);
+
       renderFavorite();
       renderShare();
     }
@@ -41,17 +49,17 @@ Paris.text = (function(){
           {
             "href": "https://www.facebook.com/sharer/sharer.php?u="+url,
             "icon": "facebook",
-            "title": Paris.t('share.facebook')
+            "title": Globalize(locale).formatMessage("share/facebook")
           },
           {
             "href": "https://twitter.com/intent/tweet?text="+tweetText,
             "icon": "twitter",
-            "title": Paris.t('share.twitter')
+            "title": Globalize(locale).formatMessage("share/twitter")
           },
           {
             "href": "mailto:?subject="+url+"&body="+url,
             "icon": "mail",
-            "title": Paris.t('share.email')
+            "title": Globalize(locale).formatMessage("share/email")
           }
         ];
         var content = template({opts: {

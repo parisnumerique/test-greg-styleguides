@@ -64,15 +64,14 @@
       font-size: 20px;
       font-weight: 700;
       line-height: 20px;
-      padding: 25px 20px;
+      padding: 30px 20px 25px;
       text-decoration: none;
 
       > p {
-        color: $gray128;
-        font-size:14px;
-        font-weight: 300;
-        margin: 0;
-        padding-top: 10px;
+          color: $gray128;
+          font-size:14px;
+          font-weight: 300;
+          margin: 10px 0 0;
         }
     }
 

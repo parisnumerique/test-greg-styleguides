@@ -3,6 +3,10 @@ require('velocity-animate');
 
 var $ = require('jquery');
 var jade = require('jade');
+var Globalize = require('globalize');
+Globalize.load(
+  require("cldr-data/supplemental/likelySubtags")
+);
 
 var Paris = window.Paris || {};
 
@@ -38,6 +42,7 @@ Paris.searchResults = (function(){
       index = algolia.initIndex(Paris.config.algolia.index);
 
       locale = $('html').attr('lang');
+      Globalize.loadMessages(Paris.locales);
 
       $searchFieldInput = $el.find('#main-search');
       $results = $el.find('#results');
@@ -98,7 +103,7 @@ Paris.searchResults = (function(){
 
       } else if (data.nbHits === 0) { // Search with no results
 
-        search_result_data.result = "Désolé, votre recherche ne correspond à aucun de nos contenus.";
+        search_result_data.result = Globalize(locale).formatMessage("search_results/no_result");
         $facets.empty();
         $facetsBlock.hide();
 
