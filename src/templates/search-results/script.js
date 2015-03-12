@@ -3,10 +3,6 @@ require('velocity-animate');
 
 var $ = require('jquery');
 var jade = require('jade');
-var Globalize = require('globalize');
-Globalize.load(
-  require("cldr-data/supplemental/likelySubtags")
-);
 
 var Paris = window.Paris || {};
 
@@ -25,7 +21,6 @@ Paris.searchResults = (function(){
         block_aside_checkboxes: require('../../modules/block-aside-checkboxes/client.jade')
       },
       api = {},
-      locale,
       $searchFieldInput,
       $results,
       $facetsBlock,
@@ -40,9 +35,6 @@ Paris.searchResults = (function(){
 
       algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.index);
-
-      locale = $('html').attr('lang');
-      Globalize.loadMessages(Paris.locales);
 
       $searchFieldInput = $el.find('#main-search');
       $results = $el.find('#results');
@@ -103,13 +95,13 @@ Paris.searchResults = (function(){
 
       } else if (data.nbHits === 0) { // Search with no results
 
-        search_result_data.result = Globalize(locale).formatMessage("search_results/no_result");
+        search_result_data.result = Paris.t("search_results/no_result");
         $facets.empty();
         $facetsBlock.hide();
 
       } else { // Search with results
 
-        search_result_data.result = "<var>" + data.nbHits.toLocaleString(locale) + "</var> résultats";
+        search_result_data.result = "<var>" + Paris.format_number(data.nbHits) + "</var> résultats";
 
         $.each(data.hits, function(index, hit){
           search_result_data.items.push({

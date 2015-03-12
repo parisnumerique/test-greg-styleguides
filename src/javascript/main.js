@@ -5,6 +5,7 @@ window.jQuery = window.$ = require('jquery');
 require('./externals/bootstrap');
 
 // load our librairies
+require('./lib/i18n');
 require('./lib/scroll');
 
 // load our components
