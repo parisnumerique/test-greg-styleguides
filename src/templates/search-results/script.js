@@ -142,8 +142,14 @@ Paris.searchResults = (function(){
 
     function updateFacets() {
       currentFacets = [];
-      $facetsContainer.find("input[type=checkbox]:checked").each(function(){
-        currentFacets.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
+      $.each(options.facets, function(index, facet) {
+        var facetValues = [];
+        $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked").each(function(){
+          facetValues.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
+        });
+        if (facetValues.length > 0) {
+          currentFacets.push(facetValues);
+        }
       });
       onInput();
     }
