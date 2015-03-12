@@ -319,7 +319,7 @@
         },
         "jecoute": {
           "block": {
-            "title": "Parisjecoute",
+            "title": "Paris j'écoute",
             "modifiers": ["color-secondary-background"]
           },
           "content": {

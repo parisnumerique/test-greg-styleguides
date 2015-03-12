@@ -8,6 +8,6 @@ html
     script(src="/javascript/algoliasearch.min.js")
   - data = data || {}
   - data.bodyModifiers = data.bodyModifiers || []
-  body(class="#{data.bodyModifiers}")
+  body(class=data.bodyModifiers)
     block main
     script(src="/javascript/paris.js")

@@ -16,10 +16,12 @@ require('../components/text/script');
 require('../layouts/left-col/script');
 require('../modules/anchors-list/script');
 require('../modules/document-heading/script');
+require('../modules/gallery-ugc/script');
 require('../modules/header/script');
 require('../modules/jecoute/script');
 require('../modules/notice/script');
 require('../modules/quick-access/script');
-require('../modules/search-field/script');
 require('../modules/share/script');
-require('../modules/gallery-ugc/script');
+
+// load our templates
+require('../templates/search-results/script');

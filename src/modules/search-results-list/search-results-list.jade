@@ -1,0 +1,23 @@
+include ../../components/text/text
+include ../../components/buttons/buttons
+
+mixin search-results-list(opts)
+  .search-results-list
+    if opts.items.length === 0
+      h1= opts.no_result
+    else
+      if opts.result
+        h1!= opts.result
+      else
+        .search-results-list-separate-page
+          p= opts.page
+      if opts.items.length !== 0
+        ul.search-results-list-items
+          each item in opts.items
+            li.search-results-list-item
+              a(href=item.href class=item.modifiers)
+                = item.title
+                p= item.text
+        p.search-results-list-button
+          +button({text: "Afficher plus de résultats", modifiers: "wide"})
+

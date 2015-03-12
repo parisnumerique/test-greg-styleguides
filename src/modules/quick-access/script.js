@@ -26,8 +26,8 @@ Paris.quickAccess = (function(){
     function init(){
       initOptions();
 
-      algolia = new AlgoliaSearch('QGS0I5WCQR', '9e4241f56405e46afd6c0bd52fb02a5b');
-      index = algolia.initIndex('QueFaire');
+      algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      index = algolia.initIndex(Paris.config.algolia.index);
 
       $searchField = $el.find('.search-field');
       $searchFieldInput = $searchField.find('.search-field-input');
@@ -109,6 +109,7 @@ Paris.quickAccess = (function(){
     }
 
     function onSearchResults(success, results) {
+      console.log(results);
       $results.empty();
       $.each(results.hits, function(index, hit){
         $results.append('<li>' +
