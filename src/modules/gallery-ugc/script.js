@@ -1,8 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var $ = require('jquery');
-
 var Paris = window.Paris || {};
 
 Paris.galleryUgc = (function(){

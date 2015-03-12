@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
