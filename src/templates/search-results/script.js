@@ -10,7 +10,7 @@ Paris.searchResults = (function(){
 
   var defaultOptions = {
     resultsPerPage: 8,
-    facets: ["rubriques"]
+    facets: ["rubriques", "univers"]
   };
 
   function searchResults(selector, userOptions){
@@ -23,8 +23,7 @@ Paris.searchResults = (function(){
       api = {},
       $searchFieldInput,
       $results,
-      $facetsBlock,
-      $facets,
+      $facetsContainer,
       $more,
       currentFacets = [],
       algolia,
@@ -38,18 +37,12 @@ Paris.searchResults = (function(){
 
       $searchFieldInput = $el.find('#main-search');
       $results = $el.find('#results');
-      $facetsBlock = $el.find('.layout-aside .block-aside-checkboxes');
-      $facets = $facetsBlock.find('.block-aside-items');
+      $facetsContainer = $el.find('.layout-aside');
       //$more = $el.find('.quick-access-results-more');
 
       $searchFieldInput.on('input', onInput);
-      $facets.on('change', 'input[type=checkbox]', updateFacets);
+      $facetsContainer.on('change', 'input[type=checkbox]', updateFacets);
       //$more.on('click', onClickMore);
-
-      // Hide facets if there are none
-      if ($facets.children().length === 0) {
-        $facetsBlock.hide();
-      }
 
       //$el.data('api', api);
     }
@@ -73,11 +66,12 @@ Paris.searchResults = (function(){
         index.search(val, onSearchResults, params);
       } else {
         renderResults(false);
+        renderFacets(false);
       }
     }
 
     function onSearchResults(success, data) {
-      console.log(data);
+      //console.log(data);
       renderResults(data);
       renderFacets(data);
     }
@@ -88,19 +82,10 @@ Paris.searchResults = (function(){
       };
 
       if (!data) { // No search
-
         search_result_data.result = "";
-        $facets.empty();
-        $facetsBlock.hide();
-
       } else if (data.nbHits === 0) { // Search with no results
-
         search_result_data.result = Paris.i18n.t("search_results/no_result");
-        $facets.empty();
-        $facetsBlock.hide();
-
       } else { // Search with results
-
         search_result_data.result = Paris.i18n.t("search_results/title", {
           count: data.nbHits,
           formattedCount: Paris.i18n.formatNumber(data.nbHits)
@@ -113,7 +98,6 @@ Paris.searchResults = (function(){
             text: hit.rubriques[0]
           });
         });
-
       }
 
       var results = templates.search_result({opts: search_result_data});
@@ -121,43 +105,46 @@ Paris.searchResults = (function(){
     }
 
     function renderFacets(data) {
-      if (currentFacets.length === 0
-        && !$.isEmptyObject(options.facets)
-        && !$.isEmptyObject(data.facets)
-      ) {
-        $facetsBlock.show();
 
-        $.each(options.facets, function(index, facet) {
+      if (!data || data.nbHits === 0) {
+        // No search or search with no results
+        $facetsContainer.empty();
+      } else { // Search with results
+        if (currentFacets.length === 0
+          && !$.isEmptyObject(options.facets)
+          && !$.isEmptyObject(data.facets)
+        ) {
+          $facetsContainer.empty();
 
-          var block_aside_checkboxes_data = {
-            name: facet,
-            items: []
-          };
+          $.each(options.facets, function(index, facet) {
 
-          $.each(data.facets[facet], function (name, number) {
-            block_aside_checkboxes_data.items.push({
-              value: name,
-              text: name,
-              number: Paris.i18n.formatNumber(number)
+            var block_aside_checkboxes_data = {
+              title: facet.capitalize(),
+              name: facet,
+              items: []
+            };
+
+            $.each(data.facets[facet], function (name, number) {
+              block_aside_checkboxes_data.items.push({
+                value: name,
+                text: name,
+                number: Paris.i18n.formatNumber(number)
+              });
             });
+
+            var facet_block = templates.block_aside_checkboxes({opts: block_aside_checkboxes_data});
+            $facetsContainer.append(facet_block);
+
           });
-
-          console.log(block_aside_checkboxes_data);
-
-          var facets = templates.block_aside_checkboxes({opts: block_aside_checkboxes_data});
-          // TODO target facet
-          $facets.html(facets);
-
-        });
+        }
       }
     }
 
     function updateFacets() {
       currentFacets = [];
-        $facets.find("input[type=checkbox]:checked").each(function(){
-          currentFacets.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
-        });
-      console.log(currentFacets);
+      $facetsContainer.find("input[type=checkbox]:checked").each(function(){
+        currentFacets.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
+      });
       onInput();
     }
 

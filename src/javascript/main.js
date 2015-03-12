@@ -7,6 +7,7 @@ require('./externals/bootstrap');
 // load our librairies
 require('./lib/i18n');
 require('./lib/scroll');
+require('./lib/string');
 
 // load our components
 require('../components/accordion/script');

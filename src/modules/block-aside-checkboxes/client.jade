@@ -1,12 +1,16 @@
 include ../block-aside/block-aside
 
 if opts.items.length !== 0
-  each item in opts.items
-    li.block-aside-item(class=item.modifiers)
-      label
-        input(type="checkbox" name="#{opts.name}[]" value=item.value checked=item.checked)
-        .block-aside-item-checkbox
-        .block-aside-item-text
-          = item.text
-            if item.number
-              |  (#{item.number})
+  - modifiers = opts.modifiers || []
+  - modifiers.push("block-aside-checkboxes")
+  +block-aside({"title": opts.title, "modifiers": modifiers})
+    ul.block-aside-items
+      each item in opts.items
+        li.block-aside-item(class=item.modifiers)
+          label
+            input(type="checkbox" name="#{opts.name}[]" value=item.value checked=item.checked)
+            .block-aside-item-checkbox
+            .block-aside-item-text
+              = item.text
+                if item.number
+                  |  (#{item.number})
