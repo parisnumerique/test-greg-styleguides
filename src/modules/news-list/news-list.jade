@@ -21,7 +21,6 @@ mixin news-list(opts)
             +news-card(item)
     else
       .news-list.gallery(class=opts.modifiers)
-        - console.log(opts.items)
         each item in opts.items
           +news-card(item)
   else
