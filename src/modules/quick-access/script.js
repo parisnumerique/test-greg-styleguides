@@ -80,13 +80,17 @@ Paris.quickAccess = (function(){
             easing: "ease-in-out",
             complete: function(){
               $mainSearch.trigger('focus');
+              isSearching = true;
               PubSub.publish('header:search:close');
               PubSub.publish('scroll:notice:up');
             }
           }
         );
       } else {
+        isSearching = true;
         $el.toggleClass('searching');
+        $el.find('.search-field-input').trigger('focus');
+        PubSub.publish('header:search:close');
       }
     }
 
