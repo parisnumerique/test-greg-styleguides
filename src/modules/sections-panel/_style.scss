@@ -1,18 +1,74 @@
 .sections-panel {
   display: table;
+  overflow: hidden;
+  position: relative;
 
   > * {
     display: table-cell;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  &:before {
+    background-color: $yellow2;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 1000px;
   }
 }
 
 .sections-panel-nav {
   background-color: $yellow2;
   padding: 50px 20px 50px 0;
+  width: 280px;
+}
+
+.sections-panel-nav-items {
+  color: $gray26;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 0 0 25px;
+
+  a {
+    color: $gray26;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    &:after {
+      @extend %icon-font;
+      @extend %icon-arrow-right;
+      display: block;
+      line-height: 20px;
+      position: absolute;
+      right: 0;
+      top: 10px;
+    }
+  }
+}
+
+.sections-panel-nav-item {
+  & + .sections-panel-nav-item {
+    margin-top: 5px;
+  }
 }
 
 .sections-panel-subnav {
   background-color: $gray242;
+  box-shadow: -1px 0px 3px 0px transparentize($black, 0.9);
   padding: 50px 30px;
 }
 

@@ -10,7 +10,9 @@ mixin sections-panel(opts)
               li.sections-panel-nav-item
                 a(href=item.href data-subnav-item=item.slug)= item.text
         if opts.nav.more
-          +button(opts.nav.more)
+          - more = JSON.parse(JSON.stringify(opts.nav.more)) // clone the data object
+          - more.modifiers = ["action", "white"]
+          +button(more)
       .sections-panel-subnav
         each item in opts.nav.items
           .sections-panel-subnav-section(data-nav-item=item.slug)
