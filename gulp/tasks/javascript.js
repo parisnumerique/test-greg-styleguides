@@ -1,15 +1,16 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var sourcemaps = require('gulp-sourcemaps');
-var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer');
-var watchify = require('watchify');
 var browserify = require('browserify');
-var config      = require('../config');
-var path = require('path');
+var buffer     = require('vinyl-buffer');
+var config     = require('../config');
+var gulp       = require('gulp');
+var gutil      = require('gulp-util');
+var path       = require('path');
+var source     = require('vinyl-source-stream');
+var sourcemaps = require('gulp-sourcemaps');
+var uglify     = require('gulp-uglify');
+var watchify   = require('watchify');
 
 var browserifyBundler = browserify('./src/javascript/main.js', watchify.args);
-var watchifyBundler = watchify(browserify('./src/javascript/main.js', watchify.args));
+var watchifyBundler   = watchify(browserify('./src/javascript/main.js', watchify.args));
 
 browserifyBundler.transform('jadeify');
 watchifyBundler.transform('jadeify');
@@ -43,5 +44,7 @@ function bundle(output) {
     .bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source(config.js.output))
+    .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest(output)) ;
 }
