@@ -2,7 +2,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 600px;
+
   overflow: hidden;
   width: 100%;
   transition: .4s ease transform;
@@ -30,6 +30,7 @@
   // states
   &.searching {
     transform: translate(0);
+    min-height: 600px;
     &:after {
       background-color: rgba(226, 233, 237, 0.9);
     }

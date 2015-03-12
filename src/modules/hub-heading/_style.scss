@@ -47,11 +47,11 @@
 }
 
 // Keep space for the header, when the jumbotron is the first element after it
-header + .layout-content .hub-heading {
+.header-wrapper + .layout-content .hub-heading {
   margin-top: 0px;
 }
 
-header.fixed + .layout-content .hub-heading {
+.header-wrapper.fixed + .layout-content .hub-heading {
   margin-top: 80px;
 }
 
