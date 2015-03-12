@@ -158,59 +158,49 @@
           "title": "Agissez"
         },
         "links_group": {
-          "background": "../../modules/links-group/links-group-image.jpg",
+          "background": "../../modules/links-group/background.jpg",
           "title": "Impliquez-vous",
-          "imgmodifiers":["links-group-header-red"],
+          "modifiers": ["red", "white-buttons"],
           "items": [
             {
               "href": "#",
-              "text": "Les conseils de quartiers",
-              "modifiers": ["links-group-button-red"]
+              "text": "Les conseils de quartiers"
             },
             {
               "href": "#",
-              "text": "Rendez-vous à la mission participation citoyenne",
-              "modifiers": ["links-group-button-red"]
+              "text": "Rendez-vous à la mission participation citoyenne"
             },
             {
               "href": "#",
-              "text": "Université populaire de la citoyenneté active",
-              "modifiers": ["links-group-button-red"]
+              "text": "Université populaire de la citoyenneté active"
             },
             {
               "href": "#",
-              "text": "Citoyenneté étudiante",
-              "modifiers": ["links-group-button-red"]
+              "text": "Citoyenneté étudiante"
             },
             {
               "href": "#",
-              "text": "Egalité Femmes/Hommes",
-              "modifiers": ["links-group-button-red"]
+              "text": "Egalité Femmes/Hommes"
             },
             {
               "href": "#",
-              "text": "Bénévolat",
-              "modifiers": ["links-group-button-red"]
+              "text": "Bénévolat"
             },
             {
               "href": "#",
-              "text": "Lutte contre les discriminations",
-              "modifiers": ["links-group-button-red"]
+              "text": "Lutte contre les discriminations"
             },
             {
               "href": "#",
-              "text": "Pour un Paris plus juste et plus solidaire",
-              "modifiers": ["links-group-button-red"]
+              "text": "Pour un Paris plus juste et plus solidaire"
             },
             {
               "href": "#",
-              "text": "Concertations et enquêtes publiques",
-              "modifiers": ["links-group-button-red"]
+              "text": "Concertations et enquêtes publiques"
             },
             {
               "href": "#",
-              "text": "Service civique",
-              "modifiers": ["links-group-button-red"]
+              "text": "Service civique"
             }
           ]
         }
