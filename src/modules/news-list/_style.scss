@@ -85,6 +85,44 @@
     .news-item-title {
       transform: translateX(20px);
     }
+
+    .social-counters {
+      opacity: 1;
+    }
+  }
+
+  .social-counters {
+    opacity: 0;
+    transition: .3s ease opacity;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -20px;
+
+    .facebook-counter,
+    .twitter-counter {
+      position: relative;
+    }
+
+    .facebook-counter .icon,
+    .twitter-counter .icon {
+      padding-right: 6px;
+    }
+
+    .twitter-counter {
+      margin-top: 6px;
+    }
+
+    .facebook-counter::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      height: 1px;
+      background: $white;
+      width: 25px;
+      left: 6px;
+      bottom: -3px;
+    }
   }
 }
 
