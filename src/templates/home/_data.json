@@ -184,19 +184,31 @@
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
-              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             }
           ]
         }

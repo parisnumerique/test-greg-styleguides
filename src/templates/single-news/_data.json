@@ -198,19 +198,31 @@
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
-              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             }
           ]
         }
@@ -225,25 +237,41 @@
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Logement",
-              "title": "Expulsions : début de la trêve hivernale"
+              "title": "Expulsions : début de la trêve hivernale",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Logement",
-              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
+              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Logement",
-              "title": "Le point sur les nouveaux logements à Paris"
+              "title": "Le point sur les nouveaux logements à Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Culture et patrimoine",
-              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             }
           ]
         }

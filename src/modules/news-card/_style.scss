@@ -82,7 +82,7 @@
     }
 
     .news-card-content {
-      bottom: 0;
+      bottom: 40px;
       padding: 20px;
       position: absolute;
       text-align: left;
@@ -101,6 +101,20 @@
       color: $white;
       font-size: 22px;
       line-height: 26px;
+    }
+
+    .social-counters {
+      opacity: 1;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      top: initial;
+      text-align: left;
+      .facebook-counter,
+      .twitter-counter {
+        background: transparent;
+        border: none;
+      }
     }
   }
 

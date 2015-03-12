@@ -21,6 +21,7 @@ mixin news-list(opts)
             +news-card(item)
     else
       .news-list.gallery(class=opts.modifiers)
+        - console.log(opts.items)
         each item in opts.items
           +news-card(item)
   else
@@ -31,3 +32,12 @@ mixin news-list(opts)
             .news-item-date= item.date
             .news-item-category= item.category
           .news-item-title= item.title
+          if item.counters
+            .social-counters
+              .facebook-counter
+                span.icon.icon-facebook
+                span.counter-value= item.counters.facebook
+              .twitter-counter
+                span.icon.icon-twitter
+                span.counter-value= item.counters.twitter
+
