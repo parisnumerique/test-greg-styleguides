@@ -1,0 +1,10 @@
+include sections-panel
+include ../../helpers/code
+
+h2 Standard
+.lsg-module
+  +sections-panel(defaults)
++code({language: "jade"}).
+  include sections-panel
+
+  +sections-panel(#{JSON.stringify(defaults, null, 2)})

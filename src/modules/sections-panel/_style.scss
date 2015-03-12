@@ -1,0 +1,22 @@
+.sections-panel {
+  display: table;
+
+  > * {
+    display: table-cell;
+  }
+}
+
+.sections-panel-nav {
+  background-color: $yellow2;
+  padding: 50px 20px 50px 0;
+}
+
+.sections-panel-subnav {
+  background-color: $gray242;
+  padding: 50px 30px;
+}
+
+.sections-panel-content {
+  background-color: $white;
+  padding: 50px 30px;
+}

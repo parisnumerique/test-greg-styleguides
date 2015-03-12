@@ -1,0 +1,24 @@
+include ../../modules/button/button
+
+mixin sections-panel(opts)
+  .sections-panel
+    if opts.nav
+      .sections-panel-nav
+        if opts.nav.items.length !== 0
+          ul.sections-panel-nav-items
+            each item in opts.nav.items
+              li.sections-panel-nav-item
+                a(href=item.href data-subnav-item=item.slug)= item.text
+        if opts.nav.more
+          +button(opts.nav.more)
+      .sections-panel-subnav
+        each item in opts.nav.items
+          .sections-panel-subnav-section(data-nav-item=item.slug)
+            if item.subnav && item.subnav.items.length !== 0
+              ul.sections-subnav-items
+                each subitem in item.subnav.items
+                  li.sections-subnav-item
+                    a(href=subitem.href)= subitem.title
+                    p= subitem.text
+    .sections-panel-content
+      p yo
