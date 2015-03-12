@@ -26,6 +26,10 @@
     .news-card-category {
       color: $white;
     }
+
+    .social-counters {
+      opacity: 1;
+    }
   }
 
   // modifiers
@@ -99,6 +103,36 @@
       line-height: 26px;
     }
   }
+
+  .social-counters {
+    opacity: 0;
+    transition: .3s ease opacity;
+    position: relative;
+    top: -15px;
+  }
+
+  .facebook-counter,
+  .twitter-counter {
+    display: inline-block;
+    background: $color-primary;
+    color: $white;
+    padding: 5px;
+    font-size: 18px;
+    transition: opacity ease .3s ;
+    .icon {
+      padding-right: 2px;
+    }
+  }
+
+  .twitter-counter {
+    border-left: 1px solid $color-primary-variant;
+  }
+
+  .social-counters {
+    width: 50%;
+    margin: 0 auto;
+  }
+
 }
 
 .news-card-image {
