@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 var jade = require('jade');
 var PubSub = require('pubsub-js');
 var _ = require('underscore');

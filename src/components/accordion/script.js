@@ -1,7 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
-
 var Paris = window.Paris || {};
 
 Paris.accordion = (function(){
