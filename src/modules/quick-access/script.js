@@ -81,6 +81,7 @@ Paris.quickAccess = (function(){
             complete: function(){
               $mainSearch.trigger('focus');
               PubSub.publish('header:search:close');
+              PubSub.publish('scroll:notice:up');
             }
           }
         );
