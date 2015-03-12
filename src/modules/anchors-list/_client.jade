@@ -1,4 +1,4 @@
-if opts && opts.items
+if opts.items
   each item in opts.items
     .anchor-bar(data-top=item.top)
       a.anchor-link(href=item.href id=item.id)= item.text

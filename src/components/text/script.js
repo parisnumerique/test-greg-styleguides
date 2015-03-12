@@ -14,7 +14,7 @@ Paris.text = (function(){
   function text(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
-      template = require('../../modules/share/client.jade');
+      template = require('../../modules/share/_client.jade');
 
     function init(){
       initOptions();

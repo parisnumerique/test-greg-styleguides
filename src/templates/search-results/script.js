@@ -17,8 +17,8 @@ Paris.searchResults = (function(){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       templates = {
-        search_result: require('../../modules/search-results-list/client.jade'),
-        block_aside_checkboxes: require('../../modules/block-aside-checkboxes/client.jade')
+        search_result: require('../../modules/search-results-list/_client.jade'),
+        block_aside_checkboxes: require('../../modules/block-aside-checkboxes/_client.jade')
       },
       api = {},
       $searchFieldInput,
