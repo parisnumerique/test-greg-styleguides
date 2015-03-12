@@ -42,6 +42,9 @@
 
     &:hover {
       transform: none;
+      .social-counters {
+        opacity: 1;
+      }
 
       .news-card-image {
         transition: transform 10s linear;
@@ -104,7 +107,7 @@
     }
 
     .social-counters {
-      opacity: 1;
+      opacity: 0;
       position: absolute;
       bottom: 20px;
       left: 20px;
