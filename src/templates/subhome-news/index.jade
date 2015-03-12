@@ -12,7 +12,7 @@ include ../../modules/news-list/news-list
 include ../../modules/newsletter/newsletter
 include ../../modules/que-faire/que-faire
 include ../../modules/pagination/pagination
-include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/gallery-ugc/gallery-ugc
 include ../../modules/search-push/search-push
 include ../../modules/social/social
 include ../../modules/video-cover/video-cover
@@ -81,7 +81,7 @@ append content
     .layout-wrapper
       .layout-content
         +heading(data.gallery.heading)
-        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
+        +gallery-ugc(data.gallery.gallery_ugc)
       aside.layout-aside.color-secondary-background
         .blocks-content-vertical
           +block-content(data.connected.newsletter.block)

@@ -1,0 +1,9 @@
+include gallery-ugc
+include ../../helpers/code
+
+.lsg-module
+  +gallery-ugc(defaults)
++code({language: "jade"}).
+  include gallery-ugc
+
+  +gallery-ugc(#{JSON.stringify(defaults, null, 2)})

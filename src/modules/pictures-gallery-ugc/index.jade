@@ -1,9 +1,0 @@
-include pictures-gallery-ugc
-include ../../helpers/code
-
-.lsg-module
-  +pictures-gallery-ugc(defaults)
-+code({language: "jade"}).
-  include pictures-gallery-ugc
-
-  +pictures-gallery-ugc(#{JSON.stringify(defaults, null, 2)})
