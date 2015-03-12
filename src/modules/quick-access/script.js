@@ -1,6 +1,8 @@
 'use strict';
 require('velocity-animate');
 
+var PubSub = require('pubsub-js');
+
 var Paris = window.Paris || {};
 
 Paris.quickAccess = (function(){
@@ -12,6 +14,7 @@ Paris.quickAccess = (function(){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       api = {},
+      $parent,
       $searchField,
       $searchFieldInput,
       $buttons,
@@ -20,6 +23,7 @@ Paris.quickAccess = (function(){
       $close,
       forceSearching = false,
       isSearching = false,
+      isInHeader = false,
       algolia,
       index;
 
@@ -28,6 +32,8 @@ Paris.quickAccess = (function(){
 
       algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.index);
+
+      $parent = $el.parent();
 
       $searchField = $el.find('.search-field');
       $searchFieldInput = $searchField.find('.search-field-input');
@@ -41,6 +47,8 @@ Paris.quickAccess = (function(){
         $buttons.hide();
       }
 
+      isInHeader = $parent.hasClass('header-quick-access');
+
       $searchFieldInput.on('input', onInput);
       $searchFieldInput.on('focus', function(){
         if ($searchFieldInput.val() !== '') {
@@ -48,7 +56,9 @@ Paris.quickAccess = (function(){
         }
       });
       $more.on('click', onClickMore);
-      $close.on('click', onStopSearching);
+      $close.on('click', onClickClose);
+
+      PubSub.subscribe('header:search:click', onClickFromHeader);
 
       if ($el.hasClass('searching')) {
         onStartSearching();
@@ -61,6 +71,28 @@ Paris.quickAccess = (function(){
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
+    }
+
+    function onClickFromHeader(){
+      if (!isInHeader) {return;}
+
+      var $mainSearch = $('#main-search');
+      if ($mainSearch) {
+        $mainSearch.velocity("scroll",
+          {
+            duration: 1000,
+            offset: -150,
+            easing: "ease-in-out",
+            complete: function(){
+              $mainSearch.trigger('focus');
+              PubSub.publish('header:search:close');
+            }
+          }
+        );
+      } else {
+        $parent.toggleClass('visible');
+        //PubSub.publish('header:search:' + $parent.hasClass('visible') ? 'close' : 'open');
+      }
     }
 
     function onStartSearching(){
@@ -80,7 +112,6 @@ Paris.quickAccess = (function(){
 
     function onStopSearching(){
       if (!isSearching) {return false;}
-      $el.trigger('close');
       if (forceSearching) {return false;}
       isSearching = false;
       $el.removeClass('searching');
@@ -125,6 +156,16 @@ Paris.quickAccess = (function(){
     function onClickMore(e){
       e.preventDefault();
       $searchField.submit();
+    }
+
+    function onClickClose(e){
+      e.preventDefault();
+      if (isInHeader) {
+        PubSub.publish('header:search:close');
+        $el.parent('.header-quick-access').removeClass('visible');
+      } else {
+        onStopSearching();
+      }
     }
 
 

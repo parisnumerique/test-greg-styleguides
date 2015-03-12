@@ -22,7 +22,6 @@ Paris.header = (function(){
       $quickAccess = $('.header-quick-access');
 
       $buttonSearch.on('click', onClickSearch);
-      $quickAccess.find('.quick-access').on('close', onCloseQuickAccess);
       positionQuickAccess();
 
       PubSub.subscribe('scroll:search:down', fixNav);
@@ -35,6 +34,10 @@ Paris.header = (function(){
         if (data && data.id === "notice_home_top") {
           fixHeader();
         }
+      });
+
+      PubSub.subscribe('header:search:close', function(){
+        $buttonSearch.removeClass('active');
       });
 
       if(!$('.notice.top').length) {
@@ -84,17 +87,8 @@ Paris.header = (function(){
 
     function onClickSearch(e){
       e.preventDefault();
-      $quickAccess.toggleClass('visible');
-      var visible = $quickAccess.hasClass('visible');
-      if (visible) {
-        $quickAccess.find('.quick-access').data('api').focusSearchField();
-      }
-      $buttonSearch.toggleClass('active', visible);
-    }
-
-    function onCloseQuickAccess() {
-      $quickAccess.removeClass('visible');
-      $buttonSearch.removeClass('active');
+      PubSub.publish('header:search:click');
+      $buttonSearch.toggleClass('active');
     }
 
     init();
