@@ -8,4 +8,6 @@ html(lang="fr")
   body(class="#{data.bodyModifiers}")
     != yield
     script(src="../../javascript/jquery-2.1.3.min.js")
+    script
+      include ../javascript/locales.js
     script(src="../../javascript/paris.js")

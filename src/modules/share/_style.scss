@@ -50,4 +50,16 @@
     }
   }
 
+  .component-text & {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .share-item a {
+      text-decoration: none;
+      color: $gray204;
+    }
+
+  }
+
 }
