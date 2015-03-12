@@ -40,17 +40,17 @@ Paris.text = (function(){
           {
             "href": "https://www.facebook.com/sharer/sharer.php?u="+url,
             "icon": "facebook",
-            "title": Paris.t("share/facebook")
+            "title": Paris.i18n.t("share/facebook")
           },
           {
             "href": "https://twitter.com/intent/tweet?text="+tweetText,
             "icon": "twitter",
-            "title": Paris.t("share/twitter")
+            "title": Paris.i18n.t("share/twitter")
           },
           {
             "href": "mailto:?subject="+url+"&body="+url,
             "icon": "mail",
-            "title": Paris.t("share/email")
+            "title": Paris.i18n.t("share/email")
           }
         ];
         var content = template({opts: {

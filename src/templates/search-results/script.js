@@ -10,7 +10,7 @@ Paris.searchResults = (function(){
 
   var defaultOptions = {
     resultsPerPage: 8,
-    facets: ["rubriques", "univers"]
+    facets: ["rubriques"]
   };
 
   function searchResults(selector, userOptions){
@@ -95,13 +95,16 @@ Paris.searchResults = (function(){
 
       } else if (data.nbHits === 0) { // Search with no results
 
-        search_result_data.result = Paris.t("search_results/no_result");
+        search_result_data.result = Paris.i18n.t("search_results/no_result");
         $facets.empty();
         $facetsBlock.hide();
 
       } else { // Search with results
 
-        search_result_data.result = "<var>" + Paris.format_number(data.nbHits) + "</var> résultats";
+        search_result_data.result = Paris.i18n.t("search_results/title", {
+          count: data.nbHits,
+          formattedCount: Paris.i18n.formatNumber(data.nbHits)
+        });
 
         $.each(data.hits, function(index, hit){
           search_result_data.items.push({
@@ -135,9 +138,11 @@ Paris.searchResults = (function(){
             block_aside_checkboxes_data.items.push({
               value: name,
               text: name,
-              number: number
+              number: Paris.i18n.formatNumber(number)
             });
           });
+
+          console.log(block_aside_checkboxes_data);
 
           var facets = templates.block_aside_checkboxes({opts: block_aside_checkboxes_data});
           // TODO target facet
