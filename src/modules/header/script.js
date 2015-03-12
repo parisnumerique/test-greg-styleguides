@@ -22,7 +22,6 @@ Paris.header = (function(){
       $quickAccess = $('.header-quick-access');
 
       $buttonSearch.on('click', onClickSearch);
-      positionQuickAccess();
 
       PubSub.subscribe('scroll:search:down', fixNav);
       PubSub.subscribe('scroll:search:up', unfixNav);
@@ -56,33 +55,20 @@ Paris.header = (function(){
       });
     }
 
-    function positionQuickAccess() {
-      if ($el.hasClass('fixed')) {
-        var top = $el.outerHeight();
-      } else {
-        var top = $el.offset().top + $el.outerHeight();
-      }
-      $quickAccess.css('top', top);
-    }
-
     function fixNav() {
       $('body').addClass('fixed-nav');
-      positionQuickAccess();
     }
 
     function unfixNav() {
       $('body').removeClass('fixed-nav');
-      positionQuickAccess();
     }
 
     function fixHeader() {
       $el.addClass('fixed');
-      positionQuickAccess();
     }
 
     function unfixHeader() {
       $el.removeClass('fixed');
-      positionQuickAccess();
     }
 
     function onClickSearch(e){
@@ -105,5 +91,5 @@ Paris.header = (function(){
 })();
 
 $(document).ready(function(){
-  Paris.header('header');
+  Paris.header('.header-wrapper');
 });

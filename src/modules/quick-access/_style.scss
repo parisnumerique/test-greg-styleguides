@@ -4,7 +4,13 @@
   background-size: cover;
   min-height: 600px;
   overflow: hidden;
+  width: 100%;
+  transition: .4s ease transform;
   position: relative;
+
+  .header & {
+    transform: translateY(-1000px);
+  }
 
   &:after {
     transition: background-color 0.5s ease;
@@ -19,6 +25,7 @@
 
   // states
   &.searching {
+    transform: translate(0);
     &:after {
       background-color: rgba(226, 233, 237, 0.9);
     }
@@ -44,7 +51,7 @@
 }
 
 // Keep space for the header, when the quick-access is the first element after it
-header + .layout-content .quick-access {
+.header-wrapper + .layout-content .quick-access {
   $offset: 80px;
 
   .quick-access-wrapper {top: 145px + $offset;}

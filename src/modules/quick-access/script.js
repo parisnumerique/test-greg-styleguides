@@ -23,7 +23,6 @@ Paris.quickAccess = (function(){
       $close,
       forceSearching = false,
       isSearching = false,
-      isInHeader = false,
       algolia,
       index;
 
@@ -46,8 +45,6 @@ Paris.quickAccess = (function(){
       if (forceSearching) {
         $buttons.hide();
       }
-
-      isInHeader = $parent.hasClass('header-quick-access');
 
       $searchFieldInput.on('input', onInput);
       $searchFieldInput.on('focus', function(){
@@ -74,14 +71,12 @@ Paris.quickAccess = (function(){
     }
 
     function onClickFromHeader(){
-      if (!isInHeader) {return;}
-
+      var $quickAccess = $('.quick-access');
       var $mainSearch = $('#main-search');
       if ($mainSearch) {
-        $mainSearch.velocity("scroll",
+        $quickAccess.velocity("scroll",
           {
             duration: 1000,
-            offset: -150,
             easing: "ease-in-out",
             complete: function(){
               $mainSearch.trigger('focus');
@@ -91,7 +86,6 @@ Paris.quickAccess = (function(){
         );
       } else {
         $parent.toggleClass('visible');
-        //PubSub.publish('header:search:' + $parent.hasClass('visible') ? 'close' : 'open');
       }
     }
 
@@ -160,12 +154,7 @@ Paris.quickAccess = (function(){
 
     function onClickClose(e){
       e.preventDefault();
-      if (isInHeader) {
-        PubSub.publish('header:search:close');
-        $el.parent('.header-quick-access').removeClass('visible');
-      } else {
-        onStopSearching();
-      }
+      onStopSearching();
     }
 
 
