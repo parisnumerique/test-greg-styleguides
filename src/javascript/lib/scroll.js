@@ -8,7 +8,7 @@ var previousPosition = 0;
 
 function updatePosition(e) {
   var $document = $document || $(document);
-  var $searchEl = $('#quick-search');
+  var $searchEl = $('#main-search');
 
   var $topNotice = $topNotice || $('.notice.top');
   PubSub.publish('scroll', e);
