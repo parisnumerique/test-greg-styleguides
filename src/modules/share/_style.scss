@@ -19,9 +19,7 @@
     color: $gray204;
     display: inline-block;
     text-decoration: none;
-    &:hover {
-      color: $gray102;
-    }
+    &:hover {color: $gray102;}
   }
 
   // modifiers
@@ -53,11 +51,12 @@
   .component-text & {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 40px;
 
     .share-item a {
-      text-decoration: none;
       color: $gray204;
+      text-decoration: none;
+      &:hover {color: $gray102;}
     }
 
   }
