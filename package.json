@@ -15,7 +15,9 @@
     "underscore": "^1.8.2",
     "velocity-animate": "~1.2.2",
     "cldr-data": "~26.0.10",
-    "globalize": "~1.0.0-alpha.17"
+    "globalize": "~1.0.0-alpha.17",
+    "vinyl": "~0.4.6",
+    "through2": "~0.6.3"
   },
   "devDependencies": {
     "browserify": "^9.0.3",
