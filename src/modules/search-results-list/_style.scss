@@ -1,13 +1,18 @@
-.search-result {
+.search-results-list {
   max-width: 770px;
 
-  // resultat
-  .component-text > h1 {
-    border-bottom: 1px solid $gray204;
-    padding: 60px 0 50px 20px; 
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 0 0 40px;
+    padding: 0 20px;
+
+    var {
+      font-style: normal;
+    }
    }
 
-  .search-result-separate-page  {
+  .search-results-list-separate-page  {
     position: relative;
     margin-top: 60px;
     max-width: inherit;
@@ -39,22 +44,18 @@
   }
 
   // ligne de résulat
-  .search-result-items,
-  .search-result-item {
+  .search-results-list-items,
+  .search-results-list-item {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  .search-result-item {
+  .search-results-list-item {
+    border-bottom: 1px solid $gray204;
 
-    & + .search-result-item {
+    &:first-child {
       border-top: 1px solid $gray204;
-    }
-
-
-    &:last-child {
-      border-bottom: 1px solid $gray204;
     }
 
     > a {
@@ -63,15 +64,14 @@
       font-size: 20px;
       font-weight: 700;
       line-height: 20px;
-      padding: 36px 0 26px 20px;
+      padding: 30px 20px 25px;
       text-decoration: none;
 
       > p {
-        color: $gray128;
-        font-size:14px;
-        font-weight: 300;
-        margin: 0;
-        padding-top: 10px;
+          color: $gray128;
+          font-size:14px;
+          font-weight: 300;
+          margin: 10px 0 0;
         }
     }
 
@@ -84,7 +84,7 @@
     }
   }
 
-  .search-result-button {
+  .search-results-list-button {
     margin: 80px 0 20px 0;
     text-align: center;
   }

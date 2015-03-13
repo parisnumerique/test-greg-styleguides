@@ -1,7 +1,7 @@
 {
   "index": {
     "data": {
-      "bodyModifiers": ["fixed-nav"],
+      "bodyModifiers": ["fixed-nav", "search-results"],
       "header": {
         "title": "Paris",
         "h1": true,
@@ -28,11 +28,40 @@
           "visible": true,
           "url": "#",
           "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
         }
       },
       "heading": {
-        "text": "search-field",
         "image": "./hub-heading.jpg"
+      },
+      "search": {
+        "input": {
+          "id": "main-search",
+          "placeholder": "Rechercher un service, une information..."
+        },
+        "submit": {
+          "text": "Rechercher",
+          "icon": true
+        }
       },
       "block_aside_links": {
         "title": "Suggestions",
@@ -56,77 +85,11 @@
         "title": "Rubriques",
         "name": "rubriques",
         "items": [
-          {
-            "value": 0,
-            "text": "Services et infos pratiques",
-            "number": 95
-          },
-          {
-            "value": 1,
-            "text": "Actualités",
-            "number": 15
-          },
-          {
-            "value": 2,
-            "text": "Municipalité",
-            "number": 3
-          },
-          {
-            "value": 3,
-            "text": "Participez",
-            "number": 4
-          }
         ]
       },
       "search_result": {
-        "first_list_result": {
-          "result": "365 résultats",
-           "items": [
-            {
-              "href": "#",
-              "modifiers": ["strong"],
-              "title": "Logement",
-              "text": "Services et infos pratiques"
-            },
-            {
-              "href": "#",
-              "modifiers": ["strong"],
-              "title": "Logement social",
-              "text": "Services et infos pratiques — Logement"
-            },
-            {
-              "href": "#",
-              "modifiers": ["strong"],
-              "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
-              "text": "Services et infos pratiques — Démarches"
-            },
-            {
-              "href": "#",
-              "title": "Aide au logement",
-              "text": "Services et infos pratiques— Logement"
-            },
-            {
-              "href": "#",
-              "title": "Impôts locaux",
-              "text": "Services et infos pratiques — Logement"
-            },
-             {
-              "href": "#",
-              "title": "Un nouveau cadre pour le logement social",
-              "text": "Actualités — Logement"
-            },
-             {
-              "href": "#",
-              "title": "Ian Brossat",
-              "text": "Municipalité — La Maire et ses adjoints"
-            },
-             {
-              "href": "#",
-              "title": "La maison du logement",
-              "text": "Services et infos pratiques — Logement"
-            }
-          ]
-        }
+        "result": "",
+        "items": []
       },
       "connected": {
         "heading": {
@@ -151,7 +114,7 @@
         },
         "jecoute": {
           "block": {
-            "title": "@Parisjecoute",
+            "title": "Paris j'écoute",
             "modifiers": ["color-secondary-background"]
           },
           "content": {

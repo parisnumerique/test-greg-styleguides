@@ -1,3 +1,5 @@
+include ../quick-access/quick-access
+
 mixin header(opts)
   header
     .layout-wrapper.header-wrapper
@@ -34,3 +36,8 @@ mixin header(opts)
           a.display-account(href='#{opts.account.url}')
             span.icon.icon-profile
             span.label= opts.account.text
+  if opts.quick_access
+    .header-quick-access
+      - quick_access = JSON.parse(JSON.stringify(opts.quick_access)) // clone the data object
+      - quick_access.modifiers = ["searching", "force-searching"] // overwrite the modifiers
+      +quick-access(quick_access)

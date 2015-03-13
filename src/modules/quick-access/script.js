@@ -1,6 +1,8 @@
 'use strict';
 require('velocity-animate');
 
+var PubSub = require('pubsub-js');
+
 var Paris = window.Paris || {};
 
 Paris.quickAccess = (function(){
@@ -11,29 +13,58 @@ Paris.quickAccess = (function(){
   function quickAccess(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
+      api = {},
+      $parent,
       $searchField,
+      $searchFieldInput,
       $buttons,
+      $results,
+      $more,
       $close,
-      isSearching = false;
+      forceSearching = false,
+      isSearching = false,
+      isInHeader = false,
+      algolia,
+      index;
 
     function init(){
       initOptions();
 
-      $searchField = $el.find('.quick-access-search-field');
+      algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      index = algolia.initIndex(Paris.config.algolia.index);
+
+      $parent = $el.parent();
+
+      $searchField = $el.find('.search-field');
+      $searchFieldInput = $searchField.find('.search-field-input');
       $buttons = $el.find('.quick-access-buttons');
+      $results = $el.find('.quick-access-results ul');
+      $more = $el.find('.quick-access-results-more');
       $close = $el.find('.quick-access-close-search');
 
-      $searchField.on('input', onStartSearching);
-      $searchField.on('focus', function(){
-        if ($searchField.val() !== '') {
+      forceSearching = $el.hasClass('force-searching');
+      if (forceSearching) {
+        $buttons.hide();
+      }
+
+      isInHeader = $parent.hasClass('header-quick-access');
+
+      $searchFieldInput.on('input', onInput);
+      $searchFieldInput.on('focus', function(){
+        if ($searchFieldInput.val() !== '') {
           onStartSearching();
         }
       });
-      $close.on('click', onStopSearching);
+      $more.on('click', onClickMore);
+      $close.on('click', onClickClose);
+
+      PubSub.subscribe('header:search:click', onClickFromHeader);
 
       if ($el.hasClass('searching')) {
         onStartSearching();
       }
+
+      $el.data('api', api);
     }
 
     function initOptions() {
@@ -42,21 +73,46 @@ Paris.quickAccess = (function(){
       });
     }
 
+    function onClickFromHeader(){
+      if (!isInHeader) {return;}
+
+      var $mainSearch = $('#main-search');
+      if ($mainSearch) {
+        $mainSearch.velocity("scroll",
+          {
+            duration: 1000,
+            offset: -150,
+            easing: "ease-in-out",
+            complete: function(){
+              $mainSearch.trigger('focus');
+              PubSub.publish('header:search:close');
+            }
+          }
+        );
+      } else {
+        $parent.toggleClass('visible');
+        //PubSub.publish('header:search:' + $parent.hasClass('visible') ? 'close' : 'open');
+      }
+    }
+
     function onStartSearching(){
       if (isSearching) {return false;}
       isSearching = true;
+      if (forceSearching) {return false;}
       $el.addClass('searching');
       $buttons.velocity({
         opacity: 0
       }, {
         display: "none",
         duration: 350,
-        ease: "ease"
+        ease: "ease",
+        complete: onInput
       });
     }
 
     function onStopSearching(){
       if (!isSearching) {return false;}
+      if (forceSearching) {return false;}
       isSearching = false;
       $el.removeClass('searching');
       $buttons.velocity({
@@ -66,7 +122,58 @@ Paris.quickAccess = (function(){
         duration: 350,
         ease: "ease"
       });
+      $results.empty();
+      $more.hide();
     }
+
+    function onInput() {
+      if (!isSearching) {onStartSearching(); return false;}
+      var val = $searchFieldInput.val();
+      if (val !== "") {
+        index.search(val, onSearchResults, {
+          hitsPerPage: 6
+        });
+      } else {
+        $results.empty();
+        $more.hide();
+      }
+    }
+
+    function onSearchResults(success, results) {
+      console.log(results);
+      $results.empty();
+      $.each(results.hits, function(index, hit){
+        $results.append('<li>' +
+          '<a href="' + hit.url + '">' +
+            '<span class="title">' + hit._highlightResult.nom.value + '</span>' +
+            '<span class="section">' + hit.rubriques[0] + '</span>' +
+          '</a>' +
+        '</li>');
+      });
+      $more.show();
+    }
+
+    function onClickMore(e){
+      e.preventDefault();
+      $searchField.submit();
+    }
+
+    function onClickClose(e){
+      e.preventDefault();
+      if (isInHeader) {
+        PubSub.publish('header:search:close');
+        $el.parent('.header-quick-access').removeClass('visible');
+      } else {
+        onStopSearching();
+      }
+    }
+
+
+    // The API for external interaction
+
+    api.focusSearchField = function(){
+      $searchFieldInput.trigger('focus');
+    };
 
     init();
 

@@ -5,10 +5,10 @@ header {
   padding: 10px 0;
   background: $color-primary;
   position: relative;
-  z-index: 200;
   left: 0px;
   transition: 0.2s ease height, 0.2s ease padding, 0.5s ease left;
   overflow: hidden;
+  z-index: 200;
 
   .fixed-nav & {
     height: 80px;
@@ -22,11 +22,13 @@ header {
   }
 
   .header-wrapper {
+    background: $color-primary;
     height: 100px;
     left: -126.5px;
     position: relative;
     transition: 0.2s ease height;
-    .fixed-nav & {
+    z-index: 100;
+    .fixed_nav & {
       height: 80px;
     }
   }
@@ -111,6 +113,7 @@ header {
     top: 0px;
     bottom: 0px;
     right: 0px;
+    z-index: 100;
 
     nav{
       a{
@@ -312,7 +315,8 @@ header {
       color: white;
     }
 
-    &:hover {
+    &:hover,
+    &.active, {
       background: $color-primary-variant;
     }
   }
@@ -377,6 +381,21 @@ header + .layout-content {
 
 header.fixed + .layout-content {
   margin-top: 0px;
+}
+
+.header-quick-access {
+  border-bottom: 3px solid transparentize($gray26, 0.8);
+  left: 0;
+  position: fixed;
+  top: -1000px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  width: 100%;
+  z-index: 50;
+
+  &.visible {
+    transform: translateY(0);
+  }
 }
 
 

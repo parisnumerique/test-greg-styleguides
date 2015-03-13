@@ -1,0 +1,17 @@
+include ../button/button
+
+mixin search-field(opts)
+  form.search-field(class=opts.modifiers action=opts.action method=opts.method ? opts.method : "get" autocomplete="off")
+    input.search-field-input(id=opts.input.id type="text" name="search" placeholder=opts.input.placeholder title=opts.input.placeholder value=opts.input.value)
+    button.search-field-submit(type="submit")
+      if opts.submit.icon
+        span= opts.submit.text
+        i.icon.icon-search
+      else
+        = opts.submit.text
+    if opts.around
+      +button({
+        "href": "#",
+        "text": opts.around.text,
+        "modifiers": ["marker"]
+      })

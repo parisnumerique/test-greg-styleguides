@@ -1,10 +1,10 @@
 {
   "index": {
     "defaults": {
-     
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
     },
     "first_list_result": {
-      "result": "365 résultats",
+      "result": "<var>365</var> résultats",
        "items": [
         {
           "href": "#",
@@ -49,10 +49,11 @@
           "title": "Impôts locaux",
           "text": "Services et infos pratiques — Logement"
         }
-      ]
+      ],
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
     },
     "base_list_result": {
-       "page": "Page 2", 
+       "page": "Page 2",
        "items": [
         {
           "href": "#",
@@ -94,7 +95,8 @@
           "title": "Impôts locaux",
           "text": "Services et infos pratiques — Logement"
         }
-      ]
+      ],
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
     }
   }
 }

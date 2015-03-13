@@ -16,7 +16,7 @@ Paris.anchors = (function(){
     var $el     = $(selector),
         $anchors,
         items,
-        template = require('./client.jade'),
+        template = require('./_client.jade'),
         options = $.extend({}, defaultOptions, userOptions);
 
     function init(){

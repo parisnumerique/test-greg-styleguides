@@ -7,22 +7,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  .inner {
-    position: relative;
-    display: table;
-    width: 1100px;
-    margin: 0 auto;
-    height: 100%;
-  }
-
   h1 {
     color: $white;
     font-weight: 700;
     font-size: 70px;
     line-height: 84px;
     margin: 0;
-    display: table-cell;
-    vertical-align: middle;
+    text-align: left;
   }
 
   &:before {
@@ -34,6 +25,24 @@
     position: absolute;
     background: rgba(0,0,0,0.4);
     z-index: -1;
+  }
+}
+
+.hub-heading-wrapper {
+  position: relative;
+  display: table;
+  width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.hub-heading-content {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+
+  .search-field {
+    display: inline-block;
   }
 }
 

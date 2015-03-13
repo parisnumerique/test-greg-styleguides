@@ -7,7 +7,8 @@
           "placeholder": "Rechercher un service, une information..."
         },
         "submit": {
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "icon": true
         },
         "around": {
           "text": "Autour de moi"
@@ -47,6 +48,12 @@
           "text": "Gardes d’enfants"
         }
       ],
+      "results": {
+        "button": {
+          "href": "#",
+          "text": "Voir tous les résultats"
+        }
+      },
       "notice": {
         "modifiers": ["bottom", "transparent"],
         "closable": true,
@@ -61,7 +68,8 @@
           "placeholder": "Rechercher un service, une information..."
         },
         "submit": {
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "icon": true
         },
         "around": {
           "text": "Autour de moi"
@@ -101,6 +109,12 @@
           "text": "Gardes d’enfants"
         }
       ],
+      "results": {
+        "button": {
+          "href": "#",
+          "text": "Voir tous les résultats"
+        }
+      },
       "notice": {
         "modifiers": ["bottom", "transparent"],
         "closable": true,

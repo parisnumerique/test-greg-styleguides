@@ -28,15 +28,17 @@ Paris.accordion = (function(){
       });
     }
 
+
+    // The API for external interaction
+
     api.openItem = function openItem(sel) {
       $el.find(sel).collapse('show');
-    }
-
+    };
 
     api.closeAll = function closeAll() {
       var els = $el.find('.accordion-item-content');
       els.collapse('hide');
-    }
+    };
 
     init();
 

@@ -1,6 +1,6 @@
 include ../block-aside/block-aside
 
-mixin block-aside-checkboxes(opts)
+if opts.items.length !== 0
   - modifiers = opts.modifiers || []
   - modifiers.push("block-aside-checkboxes")
   +block-aside({"title": opts.title, "modifiers": modifiers})
