@@ -51,7 +51,7 @@
         }
       },
       "heading": {
-        "image": "portrait.jpg",
+        "image": "heading.jpg",
         "text": "Bruno Julliard",
         "tags" : [
           {
@@ -88,7 +88,7 @@
       },
       "aside": {
         "picture": {
-          "block": "<img src=\"juliard.jpg\">"
+          "block": "<img src=\"portrait.jpg\" />"
         },
         "permanence": {
           "title": "Permanences",
