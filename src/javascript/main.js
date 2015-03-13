@@ -12,13 +12,16 @@ require('../components/accordion/script');
 require('../components/news-push/script');
 require('../components/text/script');
 
-// load our modules
+// load our layouts
 require('../layouts/left-col/script');
+
+// load our modules
 require('../modules/anchors-list/script');
 require('../modules/document-heading/script');
+require('../modules/gallery-ugc/script');
 require('../modules/header/script');
 require('../modules/jecoute/script');
 require('../modules/notice/script');
 require('../modules/quick-access/script');
 require('../modules/share/script');
-require('../modules/gallery-ugc/script');
+require('../modules/sections-panel/script');

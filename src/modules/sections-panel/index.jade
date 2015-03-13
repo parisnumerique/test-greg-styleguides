@@ -1,0 +1,18 @@
+include sections-panel
+include ../../helpers/code
+
+h2 État initial
+.lsg-module
+  +sections-panel(defaults)
++code({language: "jade"}).
+  include sections-panel
+
+  +sections-panel(#{JSON.stringify(defaults, null, 2)})
+
+//h2 Section ouverte
+//.lsg-module
+//  +sections-panel(section_open)
+//+code({language: "jade"}).
+//  include sections-panel
+//
+//  +sections-panel(#{JSON.stringify(section_open, null, 2)})
