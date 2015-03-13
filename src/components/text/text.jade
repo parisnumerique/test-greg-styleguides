@@ -1,5 +1,5 @@
 mixin text(opts)
-  .component.component-text
+  .component.component-text(class=opts.modifiers)
     if block
       block
     else if opts.block
