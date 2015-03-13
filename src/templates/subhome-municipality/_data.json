@@ -48,128 +48,108 @@
       "team": {
         "background": "image-municipalite-team.jpg",
         "title": "La Maire et les élus",
-        "imgmodifiers": [ "links-group-header-blue"],
+        "modifiers": ["blue"],
         "items": [
           {
             "href": "#",
-            "text": "La Maire de Paris",
-            "modifiers": ["backgray", "links-group-button-blue"]
+            "text": "La Maire de Paris"
           },
           {
             "href": "#",
-            "text": "Adjoints à la Maire",
-            "modifiers": ["backgray", "links-group-button-blue"]
+            "text": "Adjoints à la Maire"
           },
           {
             "href": "#",
-            "text": "Conseillers de Paris",
-            "modifiers": ["backgray", "links-group-button-blue"]
+            "text": "Conseillers de Paris"
           },
           {
             "href": "#",
-            "text": "Elus d’arrondissements",
-            "modifiers": ["backgray", "links-group-button-blue"]
+            "text": "Elus d’arrondissements"
           },
           {
             "href": "#",
-            "text": "Groupes politiques",
-            "modifiers": ["backgray", "links-group-button-blue"]
-         }
+            "text": "Groupes politiques"
+          }
         ]
       },
       "conseil": {
         "background": "image-municipalite-conseil.jpg",
         "title": "Le conseil de Paris",
-        "imgmodifiers": ["links-group-header-red"],
+        "modifiers": ["red"],
         "items": [
           {
             "href": "#",
-            "text": "Prochaines séances",
-            "modifiers": ["backgray", "links-group-button-red"]
+            "text": "Prochaines séances"
           },
           {
             "href": "#",
-            "text": "Le Conseil en vidéo",
-            "modifiers": ["backgray", "links-group-button-red"]
+            "text": "Le Conseil en vidéo"
           },
           {
             "href": "#",
-            "text": "Communications de la Maire",
-            "modifiers": ["backgray", "links-group-button-red"]
+            "text": "Communications de la Maire"
           },
           {
             "href": "#",
-            "text": "Rapports des MIE",
-            "modifiers": ["backgray", "links-group-button-red"]
+            "text": "Rapports des MIE"
           },
           {
             "href": "#",
-            "text": "Commissions",
-            "modifiers": ["backgray", "links-group-button-red"]
-         },
-         {
+            "text": "Commissions"
+          },
+          {
             "href": "#",
-            "text": "Règlement intérieur",
-            "modifiers": ["backgray", "links-group-button-red"]
-         },
-         {
+            "text": "Règlement intérieur"
+          },
+          {
             "href": "#",
-            "text": "Ordre du jour",
-            "modifiers": ["backgray", "links-group-button-red"]
-         },
-         {
+            "text": "Ordre du jour"
+          },
+          {
             "href": "#",
-            "text": "Trouver un débat ou une délibération",
-            "modifiers": ["backgray", "links-group-button-red"]
-         },
-         {
+            "text": "Trouver un débat ou une délibération"
+          },
+          {
             "href": "#",
-            "text": "Assister au conseil",
-            "modifiers": ["backgray", "links-group-button-red"]
-         }
+            "text": "Assister au conseil"
+          }
         ]
       },
       "hotel_ville": {
         "background": "image-municipalite-hotel-ville.jpg",
         "title": "L’hôtel de Ville",
-        "imgmodifiers": ["links-group-header-blue"],
+        "modifiers": ["blue"],
         "items": [
           {
             "href": "#",
-            "text": "Organigramme de la Ville",
-            "modifiers": ["backgray", "links-group-button-blue"]
+            "text": "Organigramme de la Ville"
           },
           {
             "href": "#",
-            "text": "Publications administratives et documents légaux",
-            "modifiers": ["backgray", "links-group-button-blue"]
+            "text": "Publications administratives et documents légaux"
           },
           {
             "href": "#",
-            "text": "Visiter l’Hôtel de Ville",
-            "modifiers": ["backgray", "links-group-button-blue"]
+            "text": "Visiter l’Hôtel de Ville"
           }
         ]
       },
       "histoire_paris": {
         "background": "image-municipalite-histoire-paris.jpg",
         "title": "L’histoire de Paris",
-        "imgmodifiers": ["links-group-header-red"],
+        "modifiers": ["blue"],
         "items": [
           {
             "href": "#",
-            "text": "Histoire du patrimoine",
-            "modifiers": ["backgray", "links-group-button-red"]
+            "text": "Histoire du patrimoine"
           },
           {
             "href": "#",
-            "text": "Paris d’hier à aujourd’hui",
-            "modifiers": ["backgray", "links-group-button-red"]
+            "text": "Paris d’hier à aujourd’hui"
           },
           {
             "href": "#",
-            "text": "Les mairies d’arrondissements",
-            "modifiers": ["backgray", "links-group-button-red"]
+            "text": "Les mairies d’arrondissements"
           }
         ]
       },

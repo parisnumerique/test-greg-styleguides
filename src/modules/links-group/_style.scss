@@ -1,8 +1,25 @@
-.links-group{
-  @include container();
+.links-group {
+  @include container;
+
+  // modifiers
+  &.white-buttons {
+    .links-group-button {
+      background-color: $white;
+      &:hover {background-color: $gray153;}
+    }
+  }
+
+  &.blue {
+    .links-group-header:after {background-color: rgba($blue3, 0.7);}
+    .links-group-button:hover {background-color: $blue3;}
+  }
+
+  &.red {
+    .links-group-header:after {background-color: rgba($red2, 0.7);}
+    .links-group-button:hover {background-color: $red2;}
+  }
 }
 
-// links group header
 .links-group-header {
   color: white;
   background-position: 50% 50%;
@@ -14,6 +31,7 @@
   text-align: center;
 
   &:after {
+    background-color: rgba($gray153, 0.7);
     content: '';
     position: absolute;
     height: 100%;
@@ -46,16 +64,10 @@
   margin-top: 15px;
 }
 
-// filtre couleur de l'image
 
-.links-group-header-red:after {background-color: rgba($red2, 0.7);}
-.links-group-header-blue:after {background-color: rgba($blue3, 0.7);}
-
-// links group button
-.links-group-button-red,
-.links-group-button-blue {
+.links-group-button {
   @include gallery(4 of 12);
-  background-color: white;
+  background-color: $gray242;
   border: none;
   border-radius: 5px;
   color: $gray51;
@@ -68,47 +80,34 @@
   position: relative;
   text-decoration: none;
 
-  .links-group-text {
-    display: table-cell;
-    height: 60px;
-    vertical-align: middle;
-  }
-
-  .links-group-icon {
-    display: block;
-    pointer-events: none;
-    position: absolute;
-    right: 12px;
-    top: 20px;
-
-    &:after {
-      @extend %icon-font;
-      @extend %icon-arrow-right;
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 50%;
-      color: white;
-      float: right;
-      font-size: 1em;
-      padding: 4px 4px 5px 5px;
-    }
+  &:hover {
+    background-color: $gray153;
+    color: $white;
+    transition: all 0.2s ease-in-out;
   }
 }
 
-// fond gris des buttons
-.backgray {
-  background-color:$gray242;
+.links-group-button-text {
+  display: table-cell;
+  height: 60px;
+  vertical-align: middle;
 }
 
-//rollover
-.links-group-button-red:hover {
-  background-color: $red2;
-  color: white;
-  transition: all 0.2s ease-in-out;
-}
+.links-group-button-icon {
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 20px;
 
-.links-group-button-blue:hover {
-  background-color: $blue3;
-  color: white;
-  transition: all 0.2s ease-in-out;
+  &:after {
+    @extend %icon-font;
+    @extend %icon-arrow-right;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    color: white;
+    float: right;
+    font-size: 1em;
+    padding: 4px 4px 5px 5px;
+  }
 }
-
