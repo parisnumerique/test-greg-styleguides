@@ -1,4 +1,6 @@
 include ../../modules/button/button
+include ../../modules/block-aside-links/block-aside-links
+include ../../components/buttons/buttons
 
 mixin sections-panel(opts)
   .sections-panel
@@ -8,19 +10,23 @@ mixin sections-panel(opts)
           ul.sections-panel-nav-items
             each item in opts.nav.items
               li.sections-panel-nav-item
-                a(href=item.href data-subnav-item=item.slug)= item.text
+                a(href=item.href data-subnav-section=item.slug)= item.text
         if opts.nav.more
           - more = JSON.parse(JSON.stringify(opts.nav.more)) // clone the data object
-          - more.modifiers = ["action", "white"]
+          - more.modifiers = ["action", "white", "small"]
           +button(more)
       .sections-panel-subnav
+        .sections-panel-subnav-default
+          +block-aside-links(opts.default.links)
+          +buttons(opts.default.buttons)
         each item in opts.nav.items
-          .sections-panel-subnav-section(data-nav-item=item.slug)
+          .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug)
             if item.subnav && item.subnav.items.length !== 0
-              ul.sections-subnav-items
+              ul.sections-panel-subnav-items
                 each subitem in item.subnav.items
-                  li.sections-subnav-item
-                    a(href=subitem.href)= subitem.title
-                    p= subitem.text
+                  li.sections-panel-subnav-item
+                    a(href=subitem.href)
+                      .sections-panel-subnav-item-title= subitem.title
+                      .sections-panel-subnav-item-text= subitem.text
     .sections-panel-content
-      p yo
+      .sections-panel-content-wrapper
