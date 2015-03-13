@@ -2,7 +2,13 @@
   clear: both;
   float: left;
   margin: 0 25px 25px 0;
-  max-width: 270px;
+  width: 270px;
+
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
 
   &:hover {
     .share a {

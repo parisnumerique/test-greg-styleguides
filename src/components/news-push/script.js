@@ -55,5 +55,5 @@ Paris.newsPush = (function(){
 })();
 
 $(document).ready(function(){
-  Paris.newsPush('.news-push');
+  Paris.newsPush('.component-news-push');
 });
