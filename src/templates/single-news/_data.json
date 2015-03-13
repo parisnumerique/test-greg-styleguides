@@ -79,6 +79,20 @@
           }
         ]
       },
+      "aside": {
+        "anchors_list": {
+          "items": [
+            {
+              "href": "#deux-pistes-sont-proposees",
+              "text": "Deux pistes sont proposées"
+            },
+            {
+              "href": "#patinoire-mode-d-emploi",
+              "text": "Patinoire mode d'emploi"
+            }
+          ]
+        }
+      },
       "components": [
         {
           "type": "text",
@@ -133,7 +147,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2 class='anchor'>Deux pistes sont proposées</h2><p>Une grande et une petite réservée aux enfants de moins de 6 ans. Il n’ y a pas d’âge minimal pour l’accès à la patinoire. Les mineurs restent sous la responsabilité de leurs parents mêmes s’ils se présentent à la patinoire non accompagnés de leurs parents.</p><p>Des moniteurs diplômés sont là pour s’adapter aux différents publics (grand public débutant ou habitué, groupes scolaires, centres de loisirs…). Ils assurent ainsi une mission de conseiller technique et de médiateur pour sécuriser l’espace de glisse.</p>"
+            "block": "<h2 class='anchor' id='deux-pistes-sont-proposees'>Deux pistes sont proposées</h2><p>Une grande et une petite réservée aux enfants de moins de 6 ans. Il n’ y a pas d’âge minimal pour l’accès à la patinoire. Les mineurs restent sous la responsabilité de leurs parents mêmes s’ils se présentent à la patinoire non accompagnés de leurs parents.</p><p>Des moniteurs diplômés sont là pour s’adapter aux différents publics (grand public débutant ou habitué, groupes scolaires, centres de loisirs…). Ils assurent ainsi une mission de conseiller technique et de médiateur pour sécuriser l’espace de glisse.</p>"
           }
         },
         {
@@ -165,7 +179,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2 class='anchor'>Patinoire mode d'emploi</h2><p>L’accès de la patinoire est gratuit pour les personnes équipées de leurs patins. Pour les autres, la location de patins est de 6€.<br />Les pointures disponibles : de la taille 25 à 49 ainsi que des patins double-lame (pointure 27 et inférieure) pour les enfants.<br />Une pièce d’identité est obligatoire pour la location des patins.<br />Pour des raisons de sécurité, le port des gants est obligatoire.<br />Les écoles parisiennes doivent contacter la circonscription des affaires scolaires de leur arrondissement.<br />Les écoles en dehors de Paris ne peuvent bénéficier de ces créneaux.</p>"
+            "block": "<h2 class='anchor' id='patinoire-mode-d-emploi'>Patinoire mode d'emploi</h2><p>L’accès de la patinoire est gratuit pour les personnes équipées de leurs patins. Pour les autres, la location de patins est de 6€.<br />Les pointures disponibles : de la taille 25 à 49 ainsi que des patins double-lame (pointure 27 et inférieure) pour les enfants.<br />Une pièce d’identité est obligatoire pour la location des patins.<br />Pour des raisons de sécurité, le port des gants est obligatoire.<br />Les écoles parisiennes doivent contacter la circonscription des affaires scolaires de leur arrondissement.<br />Les écoles en dehors de Paris ne peuvent bénéficier de ces créneaux.</p>"
           }
         },
         {
