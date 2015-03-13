@@ -15,10 +15,12 @@
     padding: 0 20px 40px 0;
     position: relative;
     width: 280px;
+    vertical-align: top;
 
     .aside-wrapper{
       overflow-y: hidden;
-      padding-top: 100px;
+      padding-top: 40px;
+      transition: .4s ease padding-top;
 
       > *:last-child {
         padding-bottom: 50px;
@@ -28,6 +30,7 @@
         overflow: visible;
         position: fixed;
         top: 80px;
+        padding-top: 100px;
       }
       &.affix-bottom {
         position: absolute;
@@ -46,6 +49,7 @@
       left: -32px;
       padding-left: 10px;
       border-left: 6px solid $color-tertiary;
+      top: 0;
 
       span {
         display: table-cell;
@@ -55,7 +59,7 @@
 
     .aside-wrapper.affix .aside-title,
     .aside-wrapper.affix-bottom .aside-title {
-      top: 0;
+
       transform: none;
     }
 
@@ -75,6 +79,7 @@
     display: table-cell;
     padding: 40px 50px;
     width: 820px;
+    vertical-align: top;
 
     .component {
       max-width: 720px;
