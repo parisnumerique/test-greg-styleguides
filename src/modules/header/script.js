@@ -41,7 +41,7 @@ Paris.header = (function(){
         $buttonSearch.removeClass('active');
       });
 
-      if(!$('.notice.top').length) {
+      if(!$('.notice.top').length || $(document).scrollTop() >= $('.notice.top').height() ) {
         fixHeader();
       }
 

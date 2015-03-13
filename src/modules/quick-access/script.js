@@ -21,8 +21,6 @@ Paris.quickAccess = (function(){
       $results,
       $more,
       $close,
-      forceSearching = false,
-      isSearching = false,
       algolia,
       index;
 
@@ -41,8 +39,7 @@ Paris.quickAccess = (function(){
       $more = $el.find('.quick-access-results-more');
       $close = $el.find('.quick-access-close-search');
 
-      forceSearching = $el.hasClass('force-searching');
-      if (forceSearching) {
+      if (forceSearching()) {
         $buttons.hide();
       }
 
@@ -64,6 +61,14 @@ Paris.quickAccess = (function(){
       $el.data('api', api);
     }
 
+    function isSearching() {
+      return $el.hasClass('searching');
+    }
+
+    function forceSearching() {
+      return $el.hasClass('force-searching');
+    }
+
     function initOptions() {
       $.each($el.data(), function(key, value){
         options[key] = value;
@@ -80,23 +85,23 @@ Paris.quickAccess = (function(){
             easing: "ease-in-out",
             complete: function(){
               $mainSearch.trigger('focus');
-              isSearching = true;
               PubSub.publish('header:search:close');
             }
           }
         );
       } else {
-        isSearching = true;
-        $el.toggleClass('searching');
-        $el.find('.search-field-input').trigger('focus');
-        PubSub.publish('header:search:close');
+        if(isSearching()){
+          onStopSearching();
+        }
+        else {
+          onStartSearching();
+        }
       }
     }
 
     function onStartSearching(){
-      if (isSearching) {return false;}
-      isSearching = true;
-      if (forceSearching) {return false;}
+      if (isSearching()) {return false;}
+      if (forceSearching()) {return false;}
       $el.addClass('searching');
       $buttons.velocity({
         opacity: 0
@@ -109,9 +114,8 @@ Paris.quickAccess = (function(){
     }
 
     function onStopSearching(){
-      if (!isSearching) {return false;}
-      if (forceSearching) {return false;}
-      isSearching = false;
+      if (!isSearching()) {return false;}
+      if (forceSearching()) {return false;}
       $el.removeClass('searching');
       $buttons.velocity({
         opacity: 1
@@ -121,13 +125,19 @@ Paris.quickAccess = (function(){
         ease: "ease"
       });
       $results.empty();
+      PubSub.publish('header:search:close');
       $more.hide();
     }
 
     function onInput() {
-      if (!isSearching) {onStartSearching(); return false;}
+      console.log(!isSearching());
+      if (!isSearching()) {
+        onStartSearching();
+        // return false;
+      }
       var val = $searchFieldInput.val();
       if (val !== "") {
+        onStartSearching();
         index.search(val, onSearchResults, {
           hitsPerPage: 6
         });
