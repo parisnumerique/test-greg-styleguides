@@ -7,12 +7,10 @@ require('./externals/bootstrap');
 // load our librairies
 require('./lib/i18n');
 require('./lib/scroll');
-require('./lib/string');
 
 // load our components
 require('../components/accordion/script');
 require('../components/news-push/script');
-require('../components/text/script');
 
 // load our layouts
 require('../layouts/left-col/script');

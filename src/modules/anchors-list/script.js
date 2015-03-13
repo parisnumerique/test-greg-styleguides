@@ -3,6 +3,7 @@
 var jade = require('jade');
 var PubSub = require('pubsub-js');
 var _ = require('underscore');
+var slugify = require("underscore.string/slugify");
 
 var Paris = window.Paris || {};
 
@@ -16,24 +17,34 @@ Paris.anchors = (function(){
     var $el     = $(selector),
         $anchors,
         items,
-        template = require('./_client.jade'),
+        templates = {
+          anchors_list: require('./_client.jade'),
+          share: require('../../modules/share/_client.jade')
+        },
         options = $.extend({}, defaultOptions, userOptions);
 
     function init(){
       initOptions();
 
+      $anchors = $('.layout-left-col').find(options.anchorsSelector);
+
       renderAnchors();
+      renderFavorite();
+      renderShare();
       followAnchors();
+
       PubSub.subscribe('scroll', fillBars);
     }
 
     function renderAnchors() {
-      $anchors = $('.layout-left-col').find(options.anchorsSelector);
       items = _.map($anchors, function(anchor) {
         var $anchor = $(anchor);
-        if(!$anchor.attr('id')) {
-          $anchor.attr('id', Math.random().toString(36).substr(2, 6));
+
+        // Generate a slug-based id if it doesn't exist
+        if (!$anchor.attr('id')) {
+          $anchor.attr('id', slugify($anchor.text()));
         }
+
         return {
           text: $anchor.text(),
           href: '#' + $anchor.attr('id'),
@@ -45,12 +56,52 @@ Paris.anchors = (function(){
         item.bottom = (list[index+1]) ? list[index+1].top : $('.layout-left-col').position().top + $('.layout-left-col').height();
       });
 
-      var content = template({opts: {items: items  }});
-
+      var content = templates.anchors_list({opts: {items: items}});
       $el.html(content);
+
       _.defer(function () {
         PubSub.publish('anchors:ready');
         fillBars();
+      });
+    }
+
+    function renderFavorite() {
+      $anchors.each(function (i, anchor) {
+        var content = '<span class="icon icon-anchor icon-favorites">';
+        $(anchor).append(content);
+      });
+    }
+
+    function renderShare() {
+      $anchors.each(function (i, anchor) {
+        var $anchor = $(anchor);
+        var id = $anchor.attr('id');
+        var url = encodeURIComponent(document.location.href.split('#')[0] + '#' + id);
+        var tweetContent = [$('title').text(), $anchor.text()].join(' - ').slice(0, 100);
+        var tweetText = [tweetContent, url, 'via @paris'].join(' ');
+        var items = [
+          {
+            "href": "https://www.facebook.com/sharer/sharer.php?u="+url,
+            "icon": "facebook",
+            "title": Paris.i18n.t("share/facebook")
+          },
+          {
+            "href": "https://twitter.com/intent/tweet?text="+tweetText,
+            "icon": "twitter",
+            "title": Paris.i18n.t("share/twitter")
+          },
+          {
+            "href": "mailto:?subject="+url+"&body="+url,
+            "icon": "mail",
+            "title": Paris.i18n.t("share/email")
+          }
+        ];
+        var content = templates.share({opts: {
+          items: items,
+          modifiers: []
+        }});
+
+        $anchor.append(content);
       });
     }
 

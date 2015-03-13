@@ -3,6 +3,7 @@ require('velocity-animate');
 
 var $ = require('jquery');
 var jade = require('jade');
+var capitalize = require("underscore.string/capitalize");
 
 var Paris = window.Paris || {};
 
@@ -119,7 +120,7 @@ Paris.searchResults = (function(){
           $.each(options.facets, function(index, facet) {
 
             var block_aside_checkboxes_data = {
-              title: facet.capitalize(),
+              title: capitalize(facet),
               name: facet,
               items: []
             };
