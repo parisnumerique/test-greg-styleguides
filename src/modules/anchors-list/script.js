@@ -23,6 +23,7 @@ Paris.anchors = (function(){
       initOptions();
 
       renderAnchors();
+      followAnchors();
       PubSub.subscribe('scroll', fillBars);
     }
 
@@ -30,9 +31,12 @@ Paris.anchors = (function(){
       $anchors = $('.layout-left-col').find(options.anchorsSelector);
       items = _.map($anchors, function(anchor) {
         var $anchor = $(anchor);
+        if(!$anchor.attr('id')) {
+          $anchor.attr('id', Math.random().toString(36).substr(2, 6));
+        }
         return {
           text: $anchor.text(),
-          href: '#',
+          href: '#' + $anchor.attr('id'),
           top: Math.round(+$anchor.position().top)
         };
       });
@@ -42,6 +46,7 @@ Paris.anchors = (function(){
       });
 
       var content = template({opts: {items: items  }});
+
       $el.html(content);
       _.defer(function () {
         PubSub.publish('anchors:ready');
@@ -49,19 +54,31 @@ Paris.anchors = (function(){
       });
     }
 
+    function followAnchors() {
+      $el.on('click', '.anchor-link', function (e) {
+        e.preventDefault();
+        $(e.currentTarget.getAttribute('href'))
+          .velocity("scroll", {
+            duration: 1500,
+            offset: $('.header').height() * -1
+        });
+      });
+    }
+
     function fillBars(){
       _.each(items, function(item) {
         if($(document).scrollTop() < item.top ) {
-          $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '0%');
+          $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '0%');
           return;
         }
-        else if($(document).scrollTop() > item.bottom ) {
-          $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '100%');
+        else if($(document).scrollTop() > item.bottom - $('header').height() ) {
+          $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '100%');
           return;
         }
-        var progress = ($(document).scrollTop() - item.top) / (item.bottom - item.top);
+        var progress = ($(document).scrollTop() - item.top - $('header').height()) / (item.bottom - item.top );
+
         progress = progress*100;
-        $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', ''+progress+'%');
+        $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', ''+progress+'%');
       });
     }
 
