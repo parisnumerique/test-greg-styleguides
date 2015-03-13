@@ -5,7 +5,7 @@
 
   overflow: hidden;
   width: 100%;
-  transition: .4s ease transform;
+  transition: .4s ease transform, .4s ease min-height;
   position: relative;
   min-height: 600px;
 

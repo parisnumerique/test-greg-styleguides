@@ -29,6 +29,8 @@ Paris.header = (function(){
       PubSub.subscribe('scroll:notice:down', fixHeader);
       PubSub.subscribe('scroll:notice:up', unfixHeader);
 
+      PubSub.subscribe('header:search:close', fixHeader);
+
       PubSub.subscribe('notice:close', function(e, data){
         if (data && data.id === "notice_home_top") {
           fixHeader();

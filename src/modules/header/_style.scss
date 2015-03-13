@@ -390,14 +390,8 @@
   margin-top: 0px;
 }
 
-.header-quick-access {
+.quick-access {
   border-bottom: 3px solid transparentize($gray26, 0.8);
-  left: 0;
-  top: 80px;
-  transform: translateY(-1000px);
-  transition: transform 0.5s ease;
-  width: 100%;
-  z-index: 50;
 
   &.visible {
     transform: translateY(0);
