@@ -1,7 +1,7 @@
 {
   "index": {
     "data": {
-      "bodyModifiers": ["fixed-nav", "elected-person"],
+      "bodyModifiers": ["fixed-nav", "single-person"],
       "header": {
         "title": "Paris",
         "h1": true,
@@ -51,7 +51,7 @@
         }
       },
       "heading": {
-        "image": "juliard.jpg",
+        "image": "portrait.jpg",
         "text": "Bruno Julliard",
         "tags" : [
           {
@@ -87,6 +87,9 @@
         ]
       },
       "aside": {
+        "picture": {
+          "block": "<img src=\"juliard.jpg\">"
+        },
         "permanence": {
           "title": "Permanences",
           "block": "<p>Sur rendez-vous à la Mairie du XIIIè arrondissement.</p><button class=\"button action\">Demandez un rendez-vous</button>"
