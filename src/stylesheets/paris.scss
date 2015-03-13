@@ -21,6 +21,10 @@ $susy: (
 @import "../base/_normalize";
 @import "../base/_normalize-opentype";
 
+// Themes
+// Do not remove or modify the next line, it's replaced with real themes in the build process
+// @import_theme;
+
 // Modules
 @import "../modules/anchors-list/_style";
 @import "../modules/block-aside/_style";
