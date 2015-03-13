@@ -10,7 +10,9 @@ var Paris = window.Paris || {};
 Paris.anchors = (function(){
 
   var defaultOptions = {
-    anchorsSelector: '.anchor'
+    anchorsSelector: '.anchor',
+    anchorsFavoritable: false,
+    anchorsShareable: false
   };
 
   function anchors(selector, userOptions){
@@ -29,8 +31,10 @@ Paris.anchors = (function(){
       $anchors = $('.layout-left-col').find(options.anchorsSelector);
 
       renderAnchors();
-      renderFavorite();
-      renderShare();
+
+      if (options.anchorsFavoritable) {renderFavorite();}
+      if (options.anchorsShareable) {renderShare();}
+
       followAnchors();
 
       PubSub.subscribe('scroll', fillBars);
