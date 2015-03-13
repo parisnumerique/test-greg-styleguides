@@ -20,9 +20,6 @@ Paris.share = (function(){
 
       $links.on('click', onClickLink);
 
-      if ($el.hasClass('searching')) {
-        onStartSearching();
-      }
     }
 
     function initOptions() {

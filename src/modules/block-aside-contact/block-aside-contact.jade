@@ -1,9 +1,9 @@
 include ../block-aside/block-aside
 
 mixin block-aside-contact(opts)
-  - modifiers = opts.modifiers || []
-  - modifiers.push("block-aside-contact")
-  +block-aside({"title": opts.title, "modifiers": modifiers})
+  - block_modifiers = opts.modifiers || []
+  - block_modifiers.push("block-aside-contact")
+  +block-aside({"title": opts.title, "modifiers": block_modifiers})
     ul.block-aside-items
       each item in opts.items
         - var modifiers = item.modifiers || []
@@ -15,12 +15,12 @@ mixin block-aside-contact(opts)
             else
               = item.title + " "
             if item.href
-              a(href=item.href class=item.microformats)= item.text
+              a(href=item.href class=item.hcard_properties)= item.text
             else
-              span(class=item.microformats)
+              span(class=item.hcard_properties)
                 = item.text
         else
-          li.block-aside-item(class=modifiers class=item.microformats)
+          li.block-aside-item(class=modifiers class=item.hcard_properties)
             if item.icon
               i.icon(class="icon-#{item.icon}")
             else

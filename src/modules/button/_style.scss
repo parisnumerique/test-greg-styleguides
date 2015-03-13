@@ -75,7 +75,18 @@
     }
   }
 
+  &.white {
+    background-color: $white;
+    color: $black;
+    &:after {background-color: $gray250}
+  }
+
   &.wide {
     padding: 15px 60px;
+  }
+
+  &.small {
+    font-size: 11px;
+    padding: 12px;
   }
 }
