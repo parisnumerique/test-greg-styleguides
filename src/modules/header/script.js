@@ -48,7 +48,6 @@ Paris.header = (function(){
       if(!$('#main-search').length) {
         fixNav();
       }
-
     }
 
     function initOptions() {

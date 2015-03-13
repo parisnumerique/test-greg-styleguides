@@ -84,7 +84,7 @@ Paris.quickAccess = (function(){
             duration: 1000,
             easing: "ease-in-out",
             complete: function(){
-              $mainSearch.trigger('focus');
+              api.focusSearchField();
               PubSub.publish('header:search:close');
             }
           }
@@ -95,6 +95,7 @@ Paris.quickAccess = (function(){
         }
         else {
           onStartSearching();
+          api.focusSearchField();
         }
       }
     }
@@ -130,14 +131,11 @@ Paris.quickAccess = (function(){
     }
 
     function onInput() {
-      console.log(!isSearching());
       if (!isSearching()) {
         onStartSearching();
-        // return false;
       }
       var val = $searchFieldInput.val();
       if (val !== "") {
-        onStartSearching();
         index.search(val, onSearchResults, {
           hitsPerPage: 6
         });
