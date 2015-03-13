@@ -118,7 +118,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<p class=\"intro\">Trouver un logement à Paris, une quête qui s’avère parfois difficile : dans notre capitale, la demande est forte. Mais tout Parisien qui le souhaite devrait pouvoir continuer de vivre dans sa ville, c’est notre credo. Pour aider les Parisiens qui en ont besoin, la Ville de Paris mène donc une politique active et volontariste.</p>"
+            "block": "<p>Trouver un logement à Paris, une quête qui s’avère parfois difficile : dans notre capitale, la demande est forte. Mais tout Parisien qui le souhaite devrait pouvoir continuer de vivre dans sa ville, c’est notre credo. Pour aider les Parisiens qui en ont besoin, la Ville de Paris mène donc une politique active et volontariste.</p>"
           }
         },
         {

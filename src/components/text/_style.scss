@@ -51,6 +51,11 @@
       margin-bottom: 0;
     }
   }
+  &:first-child > p:first-child {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+  }
 
   ul, ol {
     font-size: 16px;
@@ -71,12 +76,6 @@
     color: $red2;
     text-decoration: underline;
     &:hover {text-decoration: none;}
-  }
-
-  .intro {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 30px;
   }
 
   .anchor {
