@@ -1,28 +1,24 @@
 include ../button/button
 include ../notice/notice
+include ../search-field/search-field
 
 mixin quick-access(opts)
-  .quick-access(class=opts.modifiers style='background-image: url(#{opts.background});')
+  .quick-access(class=opts.modifiers style=opts.background ? "background-image: url(#{opts.background});" : "")
     .quick-access-wrapper
       .quick-access-search
-        input#quick-search.quick-access-search-field(type="text" placeholder=opts.search.input.placeholder title=opts.search.input.placeholder)
-        button.quick-access-search-submit(type="submit")
-          span= opts.search.submit.text
-          i.icon.icon-search
-        if opts.search.around
-          +button({
-            "href": "#",
-            "text": opts.search.around.text,
-            "modifiers": ["marker"]
-          })
-      ul.quick-access-buttons
-        each item in opts.items
-          li
-            +button({
-              "href": item.href,
-              "text": item.text,
-              "modifiers": ["secondary"]
-            })
+        +search-field(opts.search)
+      if opts.items
+        ul.quick-access-buttons
+          each item in opts.items
+            li
+              - button = JSON.parse(JSON.stringify(item)) // clone the data object
+              - button.modifiers = ["secondary"] // overwrite the modifiers
+              +button(button)
+      .quick-access-results
+        ul
+        - button = JSON.parse(JSON.stringify(opts.results.button)) // clone the data object
+        - button.modifiers = ["action", "tertiary", "quick-access-results-more"] // overwrite the modifiers
+        +button(button)
     .quick-access-close-search: i.icon-close
     if opts.notice
       +notice(opts.notice)

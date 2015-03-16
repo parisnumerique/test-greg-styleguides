@@ -1,6 +1,7 @@
 mixin links(opts)
   .component.component-links
-    h2= opts.title
+    if opts.title
+      h2= opts.title
     ul.links-items
       each item in opts.items
         li.links-item(class=item.modifiers)

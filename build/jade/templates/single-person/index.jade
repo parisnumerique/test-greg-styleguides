@@ -1,0 +1,70 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/anchors-list/anchors-list
+include ../../modules/block-aside/block-aside
+include ../../modules/block-aside-contact/block-aside-contact
+include ../../modules/block-content/block-content
+include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/button/button
+include ../../modules/cross-content/cross-content
+include ../../modules/document-heading/document-heading
+include ../../modules/footer/footer
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jecoute/jecoute
+include ../../modules/news-list/news-list
+include ../../modules/newsletter/newsletter
+include ../../modules/social/social
+
+include ../../components/components
+
+append content
+  +header(data.header)
+
+append content
+  .layout-content
+    +document-heading(data.heading)
+
+append content
+  .layout-content.layout-separate-after.layout-small-padding
+    .layout-wrapper
+      +breadcrumbs(data.breadcrumbs)
+
+append content
+  .layout-content.layout-separate-after.layout-adjacent-before.layout-adjacent-after
+    .layout-left-col
+      .layout-wrapper
+        aside.layout-aside
+          .aside-wrapper
+            +block-aside(data.aside.permanence)
+            +block-aside-contact(data.aside.contact)
+
+        .layout-content
+          each component in data.components
+            +#{component.type}(component.data)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.related.heading)
+      +news-list(data.related.news)
+
+
+append content
+  .layout-content.color-secondary-background.layout-separate-after
+    .layout-three-col
+      .layout-wrapper
+        +heading(data.connected.heading)
+        .layout-content
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+        .layout-content
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+        .layout-content
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
+
+append content
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

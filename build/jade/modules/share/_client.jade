@@ -1,0 +1,7 @@
+.share(class=opts.modifiers)
+  if opts.items
+  ul.share-items
+    each item in opts.items
+      li.share-item
+        a(href=item.href title=item.title target="_blank")
+          i.share-icon(class="icon-#{item.icon}")

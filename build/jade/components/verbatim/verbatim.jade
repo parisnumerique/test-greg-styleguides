@@ -1,7 +1,7 @@
 include ../../modules/share/share
 
 mixin verbatim(opts)
-  blockquote.component-verbatim
+  blockquote.component.component-verbatim
     p.verbatim-text= opts.quote
     footer
       .verbatim-separate
@@ -10,6 +10,6 @@ mixin verbatim(opts)
           = opts.author
           | ,
         .verbatim-function= opts.function
-      - share = Object.create(opts.share) // clone the data object
+      - share = JSON.parse(JSON.stringify(opts.share)) // clone the data object
       - share.modifiers = ["circles"] // overwrite the modifiers
       +share(share)

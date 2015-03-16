@@ -1,72 +1,109 @@
 {
   "index": {
     "defaults": {
-      "background": "links-group-image.jpg",
-      "title": "Titre du groupe de lien",
-      "subtitle": "subtitle du groupe de lien",
-      "imgmodifiers": ["links-group-header-red"],
+      "background": "background.jpg",
+      "title": "Titre",
+      "subtitle": "Sous-titre (optionnel)",
       "items": [
         {
           "href": "#",
-          "text": "Bouton white red",
-          "modifiers": ["links-group-button-red"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton white red",
-          "modifiers": ["links-group-button-red"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton white red",
-          "modifiers": ["links-group-button-red"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton gray red",
-          "modifiers": ["backgray", "links-group-button-red"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton gray red",
-          "modifiers": ["backgray", "links-group-button-red"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton gray red",
-          "modifiers": ["backgray", "links-group-button-red"]
+          "text": "Bouton"
         }
       ]
     },
     "blue": {
-      "background": "links-group-image.jpg",
-      "title": "Titre du groupe de lien bleu",
-      "imgmodifiers": ["links-group-header-blue"],
+      "background": "background.jpg",
+      "title": "Titre",
+      "subtitle": "Sous-titre",
+      "modifiers": ["blue"],
       "items": [
         {
           "href": "#",
-          "text": "Bouton white blue",
-          "modifiers": ["links-group-button-blue"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton white blue",
-          "modifiers": ["links-group-button-blue"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton white blue",
-          "modifiers": ["links-group-button-blue"]
+          "text": "Bouton"
+        }
+      ]
+    },
+    "red": {
+      "background": "background.jpg",
+      "title": "Titre",
+      "subtitle": "Sous-titre",
+      "modifiers": ["red"],
+      "items": [
+        {
+          "href": "#",
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton gray blue",
-          "modifiers": ["backgray links-group-button-blue"]
+          "text": "Bouton"
         },
         {
           "href": "#",
-          "text": "Bouton gray blue",
-          "modifiers": ["backgray links-group-button-blue"]
+          "text": "Bouton"
+        }
+      ]
+    },
+    "white_buttons": {
+      "background": "background.jpg",
+      "title": "Titre",
+      "subtitle": "Sous-titre",
+      "modifiers": ["white-buttons"],
+      "items": [
+        {
+          "href": "#",
+          "text": "Bouton"
+        },
+        {
+          "href": "#",
+          "text": "Bouton"
+        },
+        {
+          "href": "#",
+          "text": "Bouton"
+        }
+      ]
+    },
+    "just_buttons": {
+      "items": [
+        {
+          "href": "#",
+          "text": "Bouton"
+        },
+        {
+          "href": "#",
+          "text": "Bouton"
+        },
+        {
+          "href": "#",
+          "text": "Bouton"
         }
       ]
     }

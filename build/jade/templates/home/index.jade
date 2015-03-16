@@ -13,7 +13,7 @@ include ../../modules/newsletter/newsletter
 include ../../modules/notice/notice
 include ../../modules/que-faire/que-faire
 include ../../modules/quick-access/quick-access
-include ../../modules/pictures-gallery-ugc/pictures-gallery-ugc
+include ../../modules/gallery-ugc/gallery-ugc
 include ../../modules/sections-list/sections-list
 include ../../modules/social/social
 
@@ -58,7 +58,7 @@ append content
     .layout-wrapper
       .layout-content
         +heading(data.gallery.heading)
-        +pictures-gallery-ugc(data.gallery.pictures_gallery_ugc)
+        +gallery-ugc(data.gallery.gallery_ugc)
       aside.layout-aside.color-secondary-background
         .blocks-content-vertical
           +block-content(data.connected.newsletter.block)
