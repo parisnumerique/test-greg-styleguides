@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
@@ -17,6 +16,7 @@ Paris.newsPush = (function(){
     function init(){
       initOptions();
       PubSub.subscribe('scroll', testVisibility);
+      testVisibility();
     }
 
     function testVisibility() {
@@ -55,5 +55,5 @@ Paris.newsPush = (function(){
 })();
 
 $(document).ready(function(){
-  Paris.newsPush('.news-push');
+  Paris.newsPush('.component-news-push');
 });

@@ -15,18 +15,26 @@
     padding: 0 20px 40px 0;
     position: relative;
     width: 280px;
+    vertical-align: top;
 
     .aside-wrapper{
       overflow-y: hidden;
-      padding-top: 100px;
+      padding-top: 40px;
+      transition: .4s ease padding-top;
+
+      > *:last-child {
+        padding-bottom: 50px;
+      }
 
       &.affix {
         overflow: visible;
         position: fixed;
         top: 80px;
+        padding-top: 100px;
       }
       &.affix-bottom {
         position: absolute;
+        overflow: visible;
       }
     }
 
@@ -34,19 +42,26 @@
       text-align: left;
       transform: translateY(-200px);
       height: 80px;
-      line-height: 80px;
+      display: table;
       margin-top: 0;
       transition: .3s ease transform;
       position: absolute;
       left: -32px;
       padding-left: 10px;
       border-left: 6px solid $color-tertiary;
+      top: 0;
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+      }
     }
 
-    .aside-wrapper.affix .aside-title {
-      top: 0;
+    .aside-wrapper.affix .aside-title,
+    .aside-wrapper.affix-bottom .aside-title {
       transform: none;
     }
+
 
     &:before {
       background-color: $gray242;
@@ -64,9 +79,10 @@
     display: table-cell;
     padding: 40px 50px;
     width: 820px;
+    vertical-align: top;
 
     .component {
-      max-width: 820px;
+      max-width: 720px;
     }
   }
 

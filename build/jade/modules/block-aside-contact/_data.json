@@ -5,13 +5,13 @@
       "items": [
         {
           "title": "Tél.",
-          "modifiers": ["tel", "p-tel"],
+          "hcard_properties": ["tel", "p-tel"],
           "text": "01 45 39 89 29",
           "href": "tel:+33145398929"
         },
         {
           "title": "Courriel",
-          "modifiers": ["email", "u-email"],
+          "hcard_properties": ["email", "u-email"],
           "text": "mapiscine@paris.fr",
           "href": "mailto:mapiscine@paris.fr"
         }
@@ -21,24 +21,24 @@
       "title": "Contact",
       "items": [
         {
-          "microformats": ["org", "p-org"],
+          "hcard_properties": ["org", "p-org"],
           "text": "Mairie du XIIIe arrondissement"
         },
         {
-          "microformats": ["street-address", "p-street-address"],
+          "hcard_properties": ["street-address", "p-street-address"],
           "text": "1 place d’Italie"
         },
         {
-          "microformats": ["postal-code", "p-postal-code"],
+          "hcard_properties": ["postal-code", "p-postal-code"],
           "text": "75013"
         },
         {
-          "microformats": ["locality", "p-locality"],
+          "hcard_properties": ["locality", "p-locality"],
           "text": "Paris"
         },
         {
           "title": "Tél.",
-          "microformats": ["tel", "p-tel"],
+          "hcard_properties": ["tel", "p-tel"],
           "text": "01 45 39 89 29",
           "href": "tel:+33145398929"
         },

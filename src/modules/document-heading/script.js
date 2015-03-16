@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 var PubSub = require('pubsub-js');
 var fs = require('fs');
 
@@ -24,8 +23,8 @@ Paris.documentHeading = (function(){
     function copyTitle() {
       var title = $el.find('.document-heading-title').text();
       var $leftWrapper = $('.aside-wrapper');
-
-      var $asideTitle = $('<h3>').text(title).addClass('aside-title');
+      var $span = $('<span>').text(title);
+      var $asideTitle = $('<h3>').html($span).addClass('aside-title');
       $leftWrapper.prepend($asideTitle);
     }
 

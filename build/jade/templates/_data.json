@@ -5,10 +5,12 @@
     "subhome-get-involved",
     "subhome-municipality",
     "hub",
-    "hub-search-result",
+    "search-results",
     "faq",
     "document",
     "generic",
-    "single-news"
+    "single-news",
+    "single-person",
+    "single-person-small-picture"
   ]
 }

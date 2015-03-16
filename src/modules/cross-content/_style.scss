@@ -22,6 +22,7 @@
 
   &:after {
     background-color: rgba($yellow, 0.9);
+    transition: .3s ease background-color;
     content: '';
     position: absolute;
     height: 100%;
@@ -31,13 +32,31 @@
     z-index: 1;
   }
 
+  &:hover {
+    &:after {
+      background-color: rgba($yellow, 1);
+    }
+  }
+
   &:first-child:after {
     background-color: rgba($red2, 0.9);
   }
+  &:first-child:hover {
+    &:after {
+      background-color: rgba($red2, 1);
+    }
+  }
+
 
   &:last-child:after {
     background-color: rgba($blue3, 0.9);
   }
+  &:last-child:hover {
+    &:after {
+      background-color: rgba($blue3, 1);
+    }
+  }
+
 
   &:first-child .cross-content-title,
   &:last-child .cross-content-title {

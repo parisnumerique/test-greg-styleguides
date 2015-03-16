@@ -44,6 +44,18 @@
       @extend %icon-file;
     }
 
+    &.links-primary {
+      color: $color-primary;
+      a {
+        color: $color-primary;
+      }
+
+      .links-item-filesize,
+      .links-item-target {
+        color: $color-primary;
+      }
+    }
+
   }
 
   .links-item-filesize,

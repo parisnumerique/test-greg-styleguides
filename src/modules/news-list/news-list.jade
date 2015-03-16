@@ -11,7 +11,11 @@ mixin news-list(opts)
               "href": item.href,
               "image": item.image,
               "category": item.category,
-              "title": item.title
+              "title": item.title,
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             })
           else
             +news-card(item)
@@ -27,3 +31,12 @@ mixin news-list(opts)
             .news-item-date= item.date
             .news-item-category= item.category
           .news-item-title= item.title
+          if item.counters
+            .social-counters
+              .facebook-counter
+                span.icon.icon-facebook
+                span.counter-value= item.counters.facebook
+              .twitter-counter
+                span.icon.icon-twitter
+                span.counter-value= item.counters.twitter
+

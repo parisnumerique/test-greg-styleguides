@@ -1,0 +1,38 @@
+{
+  "index": {
+    "defaults": {
+      "action": "#",
+      "input": {
+        "id": "main-search",
+        "placeholder": "Rechercher un service, une information..."
+      },
+      "submit": {
+        "text": "Rechercher",
+        "icon": true
+      },
+      "around": {
+        "text": "Autour de moi"
+      }
+    },
+    "without_around": {
+      "action": "#",
+      "input": {
+        "placeholder": "Rechercher un service, une information..."
+      },
+      "submit": {
+        "text": "Rechercher",
+        "icon": true
+      }
+    },
+    "small": {
+      "action": "#",
+      "modifiers": ["small"],
+      "input": {
+        "placeholder": "Rechercher un nom..."
+      },
+      "submit": {
+        "text": "Ok"
+      }
+    }
+  }
+}

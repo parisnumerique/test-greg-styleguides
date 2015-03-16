@@ -5,23 +5,28 @@
       "items": [
         {
           "href": "#",
-          "text": "Texte"
+          "text": "Texte",
+          "title": "Titre"
         },
         {
           "href": "#",
-          "text": "Texte"
+          "text": "Texte",
+          "title": "Titre"
         },
         {
           "href": "#",
-          "text": "Texte"
+          "text": "Texte",
+          "title": "Titre"
         },
         {
           "href": "#",
-          "text": "Texte"
+          "text": "Texte",
+          "title": "Titre"
         },
         {
           "href": "#",
-          "text": "Texte"
+          "text": "Texte",
+          "title": "Titre"
         }
       ]
     }

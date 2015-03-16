@@ -1,7 +1,6 @@
 .anchors-list {
   font-size: 13px;
   width: 260px;
-  padding-bottom: 50px;
   top: 0;
 
 
@@ -12,6 +11,7 @@
     margin-bottom: 13px;
     width: 100%;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   a.anchor-link {
@@ -22,6 +22,8 @@
     position: relative;
     text-decoration: none;
     z-index: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   span.anchor-progress {
@@ -32,8 +34,7 @@
     top: 0;
     width: 0%;
     z-index: 0;
+    transition: 0.1s ease width;
   }
 }
-
-
 

@@ -14,7 +14,7 @@ mixin get-involved-list(opts)
         .get-involved-item.intro
           each item in opts.intro.items
             .get-involved-item-title= item.title
-            - button = Object.create(item.button) // clone the data object
+            - button = JSON.parse(JSON.stringify(item.button)) // clone the data object
             - button.modifiers = ["action", "secondary"] // overwrite the modifiers
             +button(button)
       each item in opts.items.slice(0, 2)

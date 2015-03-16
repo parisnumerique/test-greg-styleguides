@@ -9,3 +9,11 @@ mixin news-card(opts)
       .news-card-content
         .news-card-category= opts.category
         .news-card-title= opts.title
+    if opts.counters
+      .social-counters
+        .facebook-counter
+          span.icon.icon-facebook
+          span.counter-value= opts.counters.facebook
+        .twitter-counter
+          span.icon.icon-twitter
+          span.counter-value= opts.counters.twitter

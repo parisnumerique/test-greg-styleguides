@@ -1,7 +1,10 @@
 mixin anchors-list(opts)
-  .anchors-list
-    if opts && opts.items
-      each item in opts.items
-        .anchor-bar
-          a.anchor-link(href=item.href)= item.text
-          span.anchor-progress
+  if opts && opts.attributes
+    .anchors-list&attributes(opts.attributes)
+  else
+    .anchors-list
+      if opts && opts.items
+        each item in opts.items
+          .anchor-bar
+            a.anchor-link(href=item.href)= item.text
+            span.anchor-progress

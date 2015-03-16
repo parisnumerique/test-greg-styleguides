@@ -1,10 +1,11 @@
 mixin block-aside(opts)
   .block-aside(class=opts.modifiers)
-    h2.block-aside-title= opts.title
+    if opts.title
+      h2.block-aside-title= opts.title
     .block-aside-content
       if block
         block
       else if opts.block
-        = opts.block
+        != opts.block
       else
         | content

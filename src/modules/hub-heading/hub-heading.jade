@@ -1,5 +1,11 @@
 mixin hub-heading(opts)
   .hub-heading(style="background-image:url('#{opts.image}')")
-    .inner
-      h1!= opts.text
+    .hub-heading-wrapper
+      .hub-heading-content
+        if block
+          block
+        else if opts.block
+          != opts.block
+        else if opts.text
+          h1!= opts.text
 

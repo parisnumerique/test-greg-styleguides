@@ -1,8 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var $ = require('jquery');
-
 var Paris = window.Paris || {};
 
 Paris.share = (function(){
@@ -22,9 +20,6 @@ Paris.share = (function(){
 
       $links.on('click', onClickLink);
 
-      if ($el.hasClass('searching')) {
-        onStartSearching();
-      }
     }
 
     function initOptions() {

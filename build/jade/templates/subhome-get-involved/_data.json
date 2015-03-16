@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "bodyModifiers": ["fixed-nav"],
       "header": {
         "title": "Paris",
         "h1": true,
@@ -27,6 +28,26 @@
           "visible": true,
           "url": "#",
           "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
         }
       },
       "heading": {
@@ -157,59 +178,49 @@
           "title": "Agissez"
         },
         "links_group": {
-          "background": "../../modules/links-group/links-group-image.jpg",
+          "background": "../../modules/links-group/background.jpg",
           "title": "Impliquez-vous",
-          "imgmodifiers":["links-group-header-red"],
+          "modifiers": ["red", "white-buttons"],
           "items": [
             {
               "href": "#",
-              "text": "Les conseils de quartiers",
-              "modifiers": ["links-group-button-red"]
+              "text": "Les conseils de quartiers"
             },
             {
               "href": "#",
-              "text": "Rendez-vous à la mission participation citoyenne",
-              "modifiers": ["links-group-button-red"]
+              "text": "Rendez-vous à la mission participation citoyenne"
             },
             {
               "href": "#",
-              "text": "Université populaire de la citoyenneté active",
-              "modifiers": ["links-group-button-red"]
+              "text": "Université populaire de la citoyenneté active"
             },
             {
               "href": "#",
-              "text": "Citoyenneté étudiante",
-              "modifiers": ["links-group-button-red"]
+              "text": "Citoyenneté étudiante"
             },
             {
               "href": "#",
-              "text": "Egalité Femmes/Hommes",
-              "modifiers": ["links-group-button-red"]
+              "text": "Egalité Femmes/Hommes"
             },
             {
               "href": "#",
-              "text": "Bénévolat",
-              "modifiers": ["links-group-button-red"]
+              "text": "Bénévolat"
             },
             {
               "href": "#",
-              "text": "Lutte contre les discriminations",
-              "modifiers": ["links-group-button-red"]
+              "text": "Lutte contre les discriminations"
             },
             {
               "href": "#",
-              "text": "Pour un Paris plus juste et plus solidaire",
-              "modifiers": ["links-group-button-red"]
+              "text": "Pour un Paris plus juste et plus solidaire"
             },
             {
               "href": "#",
-              "text": "Concertations et enquêtes publiques",
-              "modifiers": ["links-group-button-red"]
+              "text": "Concertations et enquêtes publiques"
             },
             {
               "href": "#",
-              "text": "Service civique",
-              "modifiers": ["links-group-button-red"]
+              "text": "Service civique"
             }
           ]
         }
@@ -229,19 +240,31 @@
               "href": "#",
               "image": "./car.jpg",
               "category": "Participez",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "./eiffel.jpg",
               "category": "Culture et patrimoine",
-              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "./cart.jpg",
               "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             }
           ]
         }
@@ -250,39 +273,48 @@
         "heading": {
           "title": "Vu par les Parisiens"
         },
-        "pictures_gallery_ugc": {
-          "title": "Hashtags de la semaine :",
-          "hashtags": [{
-              "url": "#",
-              "text": "automneàparis"
+        "gallery_ugc": {
+          "title": "Hashtags de la semaine",
+          "hashtags": [
+            {
+              "url": "../../modules/gallery-ugc/refresh.html",
+              "text": "#automneàparis",
+              "current": true
             },{
-              "url": "#",
-              "text": "nuit_blanche"
-            }],
+              "url": "../../modules/gallery-ugc/refresh.html",
+              "text": "#nuit_blanche"
+            }
+          ],
           "items": [
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture1.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture2.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture3.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture4.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture5.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture6.jpg",
+              "text": "@user",
+              "href": "#"
             }
           ]
         }
@@ -306,7 +338,7 @@
         },
         "jecoute": {
           "block": {
-            "title": "@Parisjecoute",
+            "title": "Paris j'écoute",
             "modifiers": ["color-secondary-background"]
           },
           "content": {
@@ -355,6 +387,10 @@
           }
         },
         "social": {
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          },
           "block": {
             "title": "Restez connecté",
             "modifiers": ["color-secondary-background"]

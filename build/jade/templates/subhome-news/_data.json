@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "bodyModifiers": ["fixed-nav"],
       "header": {
         "title": "Paris",
         "h1": true,
@@ -27,6 +28,26 @@
           "visible": true,
           "url": "#",
           "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
         }
       },
       "jumbotron": {
@@ -58,31 +79,51 @@
               "href": "#",
               "image": "large-news-1.jpg",
               "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
-              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             }
           ]
         }
@@ -98,31 +139,51 @@
               "href": "#",
               "image": "large-news-2.jpg",
               "category": "International",
-              "title": "Visite de John Kerry à l'Hôtel de Ville de Paris"
+              "title": "Visite de John Kerry à l'Hôtel de Ville de Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris"
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
-              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse"
+              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire"
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             }
           ]
         }
@@ -167,61 +228,101 @@
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Logement",
-              "title": "Expulsions : début de la trêve hivernale"
+              "title": "Expulsions : début de la trêve hivernale",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Logement",
-              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue"
+              "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Logement",
-              "title": "Le point sur les nouveaux logements à Paris"
+              "title": "Le point sur les nouveaux logements à Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Culture et patrimoine",
-              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+              "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Environnement",
-              "title": "Donec sed odio dui"
+              "title": "Donec sed odio dui",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Culture et patrimoine",
-              "title": "Maecenas sed diam eget risus varius blandit sit amet non magna"
+              "title": "Maecenas sed diam eget risus varius blandit sit amet non magna",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Mobilité",
-              "title": "Sed posuere consectetur est at lobortis"
+              "title": "Sed posuere consectetur est at lobortis",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "International",
-              "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam"
+              "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Culture et patrimoine",
-              "title": "Aenean lacinia bibendum nulla sed consectetur"
+              "title": "Aenean lacinia bibendum nulla sed consectetur",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             },
             {
               "href": "#",
               "date": "10 janvier 2015",
               "category": "Environnement",
-              "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor"
+              "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
             }
           ]
         }
@@ -277,41 +378,48 @@
         "heading": {
           "title": "Vu par les Parisiens"
         },
-        "pictures_gallery_ugc": {
-          "title": "Hashtags de la semaine :",
+        "gallery_ugc": {
+          "title": "Hashtags de la semaine",
           "hashtags": [
             {
-              "url": "#",
-              "text": "automneàparis"
+              "url": "../../modules/gallery-ugc/refresh.html",
+              "text": "#automneàparis",
+              "current": true
             },{
-              "url": "#",
-              "text": "nuit_blanche"
+              "url": "../../modules/gallery-ugc/refresh.html",
+              "text": "#nuit_blanche"
             }
           ],
           "items": [
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img1.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture1.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img2.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture2.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img3.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture3.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img4.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture4.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img5.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture5.jpg",
+              "text": "@user",
+              "href": "#"
             },
             {
-              "image": "../../modules/pictures-gallery-ugc/pictures-gallery-img6.jpg",
-              "text": "@texte"
+              "image": "../../modules/gallery-ugc/picture6.jpg",
+              "text": "@user",
+              "href": "#"
             }
           ]
         }
@@ -335,7 +443,7 @@
         },
         "jecoute": {
           "block": {
-            "title": "@Parisjecoute",
+            "title": "Paris j'écoute",
             "modifiers": ["color-secondary-background"]
           },
           "content": {
@@ -389,6 +497,10 @@
             "modifiers": ["color-secondary-background"]
           },
           "content": {
+            "link": {
+              "href": "#",
+              "text": "Voir tous les réseaux sociaux"
+            },
             "items": [
               {
                 "icon": "twitter",

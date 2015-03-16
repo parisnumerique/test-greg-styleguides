@@ -1,70 +1,139 @@
 'use strict';
 
-var $ = require('jquery');
 var jade = require('jade');
 var PubSub = require('pubsub-js');
-var fs = require('fs');
 var _ = require('underscore');
+var slugify = require("underscore.string/slugify");
 
 var Paris = window.Paris || {};
 
 Paris.anchors = (function(){
 
   var defaultOptions = {
-    anchorsSelector: 'h2'
+    anchorsSelector: '.anchor',
+    anchorsFavoritable: false,
+    anchorsShareable: false
   };
 
   function anchors(selector, userOptions){
     var $el     = $(selector),
         $anchors,
         items,
-        template = require('./client.jade'),
+        templates = {
+          anchors_list: require('./_client.jade'),
+          share: require('../../modules/share/_client.jade')
+        },
         options = $.extend({}, defaultOptions, userOptions);
 
     function init(){
       initOptions();
 
+      $anchors = $('.layout-left-col').find(options.anchorsSelector);
+
       renderAnchors();
-      fillBars();
+
+      if (options.anchorsFavoritable) {renderFavorite();}
+      if (options.anchorsShareable) {renderShare();}
+
+      followAnchors();
+
+      PubSub.subscribe('scroll', fillBars);
     }
 
     function renderAnchors() {
-      $anchors = $('.layout-left-col').find(options.anchorsSelector);
       items = _.map($anchors, function(anchor) {
         var $anchor = $(anchor);
+
+        // Generate a slug-based id if it doesn't exist
+        if (!$anchor.attr('id')) {
+          $anchor.attr('id', slugify($anchor.text()));
+        }
+
         return {
           text: $anchor.text(),
-          href: '#',
+          href: '#' + $anchor.attr('id'),
           top: Math.round(+$anchor.position().top)
         };
       });
 
       _.each(items, function (item, index, list) {
-        item.bottom = (list[index+1]) ? list[index+1].top : $('body').height();
+        item.bottom = (list[index+1]) ? list[index+1].top : $('.layout-left-col').position().top + $('.layout-left-col').height();
       });
 
-      var content = template({opts: {items: items  }});
+      var content = templates.anchors_list({opts: {items: items}});
       $el.html(content);
+
       _.defer(function () {
         PubSub.publish('anchors:ready');
+        fillBars();
+      });
+    }
+
+    function renderFavorite() {
+      $anchors.each(function (i, anchor) {
+        var content = '<span class="icon icon-anchor icon-favorites">';
+        $(anchor).append(content);
+      });
+    }
+
+    function renderShare() {
+      $anchors.each(function (i, anchor) {
+        var $anchor = $(anchor);
+        var id = $anchor.attr('id');
+        var url = encodeURIComponent(document.location.href.split('#')[0] + '#' + id);
+        var tweetContent = [$('title').text(), $anchor.text()].join(' - ').slice(0, 100);
+        var tweetText = [tweetContent, url, 'via @paris'].join(' ');
+        var items = [
+          {
+            "href": "https://www.facebook.com/sharer/sharer.php?u="+url,
+            "icon": "facebook",
+            "title": Paris.i18n.t("share/facebook")
+          },
+          {
+            "href": "https://twitter.com/intent/tweet?text="+tweetText,
+            "icon": "twitter",
+            "title": Paris.i18n.t("share/twitter")
+          },
+          {
+            "href": "mailto:?subject="+url+"&body="+url,
+            "icon": "mail",
+            "title": Paris.i18n.t("share/email")
+          }
+        ];
+        var content = templates.share({opts: {
+          items: items,
+          modifiers: []
+        }});
+
+        $anchor.append(content);
+      });
+    }
+
+    function followAnchors() {
+      $el.on('click', '.anchor-link', function (e) {
+        e.preventDefault();
+        $(e.currentTarget.getAttribute('href'))
+          .velocity("scroll", {
+            duration: 1500,
+            offset: $('.header').height() * -1
+        });
       });
     }
 
     function fillBars(){
-      PubSub.subscribe('scroll', function(__, e) {
-        _.each(items, function(item) {
-          if($(document).scrollTop() < item.top ) {
-            $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '0%');
-            return;
-          }
-          else if($(document).scrollTop() > item.bottom ) {
-            $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', '100%');
-            return;
-          }
-          var progress = ($(document).scrollTop() - item.top) / (item.bottom - item.top);
-          progress = progress*100;
-          $el.find('[data-top="'+item.top+'"] .anchor-progress').css('width', ''+progress+'%');
-        })
+      _.each(items, function(item) {
+        if($(document).scrollTop() < item.top ) {
+          $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '0%');
+          return;
+        }
+        else if($(document).scrollTop() > item.bottom - $('header').height() ) {
+          $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '100%');
+          return;
+        }
+        var progress = ($(document).scrollTop() - item.top - $('header').height()) / (item.bottom - item.top );
+
+        progress = progress*100;
+        $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', ''+progress+'%');
       });
     }
 

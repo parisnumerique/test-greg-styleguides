@@ -1,7 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var $ = require('jquery');
 var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};

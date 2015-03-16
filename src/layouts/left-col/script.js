@@ -1,6 +1,5 @@
 'use strict';
 
-var $ = require('jquery');
 var PubSub = require('pubsub-js');
 var fs = require('fs');
 
@@ -27,10 +26,9 @@ Paris.leftCol = (function(){
       }
       var $nextContent = $el.parents('.layout-content').next('.layout-content');
       var offsets = {
-        top: $('.layout-left-col').position().top - $('header').height(),
+        top: $('.layout-left-col').offset().top - $('header').height(),
         bottom: $('body').height() - $nextContent.offset().top + $('header').height()
       };
-
       $el.affix({
         offset: offsets
       });

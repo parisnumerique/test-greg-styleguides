@@ -1,8 +1,7 @@
 include links-group
 include ../../helpers/code
 
-h2 Standard (rose)
-
+h2 Standard
 .lsg-module
   +links-group(defaults)
 +code({language: "jade"}).
@@ -11,10 +10,33 @@ h2 Standard (rose)
   +links-group(#{JSON.stringify(defaults, null, 2)})
 
 h2 Bleu
-
 .lsg-module
   +links-group(blue)
 +code({language: "jade"}).
   include links-group
 
   +links-group(#{JSON.stringify(blue, null, 2)})
+
+h2 Rose
+.lsg-module
+  +links-group(red)
++code({language: "jade"}).
+  include links-group
+
+  +links-group(#{JSON.stringify(blue, null, 2)})
+
+h2 Boutons blancs
+.lsg-module
+  +links-group(white_buttons)
++code({language: "jade"}).
+  include links-group
+
+  +links-group(#{JSON.stringify(white_buttons, null, 2)})
+
+h2 Juste les boutons
+.lsg-module
+  +links-group(just_buttons)
++code({language: "jade"}).
+  include links-group
+
+  +links-group(#{JSON.stringify(just_buttons, null, 2)})
