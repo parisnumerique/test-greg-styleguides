@@ -1,15 +1,13 @@
 mixin links-group(opts)
-  .links-group
-    .links-group-header(class=opts.imgmodifiers style='background-image: url(#{opts.background});')
-      .links-group-wrapper-title
-        .links-group-title= opts.title
-        if opts.subtitle
+  .links-group(class=opts.modifiers)
+    if opts.background
+      .links-group-header(style='background-image: url(#{opts.background});')
+        .links-group-wrapper-title
+          .links-group-title= opts.title
+          if opts.subtitle
             .links-group-subtitle= opts.subtitle
     .links-group-content
       each item in opts.items
-        a(href= item.href class=item.modifiers)
-          .links-group-text= item.text
-          .links-group-icon
-
-
-
+        a.links-group-button(href=item.href)
+          span.links-group-button-text= item.text
+          i.links-group-button-icon

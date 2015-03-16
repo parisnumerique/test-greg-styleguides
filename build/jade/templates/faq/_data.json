@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "bodyModifiers": ["fixed-nav"],
       "header": {
         "title": "Paris",
         "h1": true,
@@ -27,6 +28,26 @@
           "visible": true,
           "url": "#",
           "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
         }
       },
       "heading": {
@@ -130,7 +151,7 @@
       },
       "content": {
         "intro": {
-          "block": "<p class=\"intro\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p><h2>Questions les plus fréquentes</h2>"
+          "block": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p><h2>Questions les plus fréquentes</h2>"
         },
         "accordion": {
           "items": [
@@ -185,7 +206,7 @@
         },
         "jecoute": {
           "block": {
-            "title": "@Parisjecoute",
+            "title": "Paris j'écoute",
             "modifiers": ["color-secondary-background"]
           },
           "content": {
@@ -202,6 +223,10 @@
             "modifiers": ["color-secondary-background"]
           },
           "content": {
+            "link": {
+              "href": "#",
+              "text": "Voir tous les réseaux sociaux"
+            },
             "items": [
               {
                 "icon": "twitter",

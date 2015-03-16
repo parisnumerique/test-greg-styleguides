@@ -1,0 +1,97 @@
+{
+  "index": {
+    "defaults": {
+      "title": "Hashtags de la semaine",
+      "hashtags": [
+        {
+          "url": "refresh.html",
+          "text": "#automneàparis",
+          "current": true
+        },{
+          "url": "refresh.html",
+          "text": "#nuit_blanche"
+        }
+      ],
+      "items": [
+        {
+          "image": "picture1.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "picture2.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "picture3.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "picture4.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "picture5.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "picture6.jpg",
+          "text": "@user",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  "refresh": {
+    "layout": false,
+    "defaults": {
+      "title": "Hashtags de la semaine",
+      "hashtags": [
+        {
+          "url": "../../modules/gallery-ugc/refresh.html",
+          "text": "#automneàparis",
+          "current": true
+        },{
+          "url": "../../modules/gallery-ugc/refresh.html",
+          "text": "#nuit_blanche"
+        }
+      ],
+      "items": [
+        {
+          "image": "../../modules/gallery-ugc/picture3.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "../../modules/gallery-ugc/picture4.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "../../modules/gallery-ugc/picture1.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "../../modules/gallery-ugc/picture6.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "../../modules/gallery-ugc/picture2.jpg",
+          "text": "@user",
+          "href": "#"
+        },
+        {
+          "image": "../../modules/gallery-ugc/picture5.jpg",
+          "text": "@user",
+          "href": "#"
+        }
+      ]
+    }
+  }
+}

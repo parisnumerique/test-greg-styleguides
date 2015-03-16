@@ -10,6 +10,7 @@ include ../../modules/hub-heading/hub-heading
 include ../../modules/jecoute/jecoute
 include ../../modules/newsletter/newsletter
 include ../../modules/news-list/news-list
+include ../../modules/sections-panel/sections-panel
 include ../../modules/social/social
 
 append content
@@ -25,9 +26,9 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.gray-background
+  .layout-content.gray-background.layout-adjacent-before.layout-adjacent-after
     .layout-wrapper
-      h2 sections-tree-panel
+      +sections-panel(data.sections)
 
 append content
   .layout-content

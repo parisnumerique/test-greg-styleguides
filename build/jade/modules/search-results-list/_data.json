@@ -1,0 +1,102 @@
+{
+  "index": {
+    "defaults": {
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
+    },
+    "first_list_result": {
+      "result": "<var>365</var> résultats",
+       "items": [
+        {
+          "href": "#",
+          "modifiers": ["strong"],
+          "title": "Logement",
+          "text": "Services et infos pratiques"
+        },
+        {
+          "href": "#",
+          "modifiers": ["strong"],
+          "title": "Logement social",
+          "text": "Services et infos pratiques — Logement"
+        },
+        {
+          "href": "#",
+          "modifiers": ["strong"],
+          "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
+          "text": "Services et infos pratiques — Démarches"
+        },
+        {
+          "href": "#",
+          "title": "Aide au logement",
+          "text": "Services et infos pratiques— Logement"
+        },
+        {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        },
+         {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        },
+         {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        },
+         {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        }
+      ],
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
+    },
+    "base_list_result": {
+       "page": "Page 2",
+       "items": [
+        {
+          "href": "#",
+          "title": "Logement",
+          "text": "Services et infos pratiques"
+        },
+        {
+          "href": "#",
+          "title": "Logement social",
+          "text": "Services et infos pratiques — Logement"
+        },
+        {
+          "href": "#",
+          "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
+          "text": "Services et infos pratiques — Démarches"
+        },
+        {
+          "href": "#",
+          "title": "Aide au logement",
+          "text": "Services et infos pratiques— Logement"
+        },
+        {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        },
+         {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        },
+         {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        },
+         {
+          "href": "#",
+          "title": "Impôts locaux",
+          "text": "Services et infos pratiques — Logement"
+        }
+      ],
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
+    }
+  }
+}

@@ -1,0 +1,54 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/block-aside-checkboxes/block-aside-checkboxes
+include ../../modules/block-aside-links/block-aside-links
+include ../../modules/block-content/block-content
+include ../../modules/footer/footer
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/hub-heading/hub-heading
+include ../../modules/jecoute/jecoute
+include ../../modules/newsletter/newsletter
+include ../../modules/search-field/search-field
+include ../../modules/search-results-list/search-results-list
+include ../../modules/social/social
+
+append content
+  +header(data.header)
+
+append content
+  .layout-content
+    +hub-heading(data.heading)
+      +search-field(data.search)
+
+append content
+  .layout-left-col
+    .layout-wrapper
+      aside.layout-aside
+        //+block-aside-links(data.block_aside_links)
+        //+block-aside-checkboxes(data.block_aside_checkboxes)
+
+      .layout-content#results
+        +search-results-list(data.search_result)
+
+append content
+  .layout-content
+
+append content
+  .layout-content.color-secondary-background.layout-separate-after
+    .layout-three-col
+      .layout-wrapper
+        +heading(data.connected.heading)
+        .layout-content
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+        .layout-content
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+        .layout-content
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
+
+append content
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

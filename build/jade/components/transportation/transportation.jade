@@ -13,6 +13,6 @@ mixin transportation(opts)
             i.icon(class="icon-#{item.icon}")
             = item.text
     if opts.button
-      - button = Object.create(opts.button) // clone the data object
+      - button = JSON.parse(JSON.stringify(opts.button)) // clone the data object
       - button.modifiers = ["marker"] // overwrite the modifiers
       +button(button)
