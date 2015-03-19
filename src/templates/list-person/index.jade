@@ -1,0 +1,69 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/anchors-list/anchors-list
+include ../../modules/block-aside-checkboxes/block-aside-checkboxes
+include ../../modules/block-content/block-content
+include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/button/button
+include ../../modules/cross-content/cross-content
+include ../../modules/document-heading/document-heading
+include ../../modules/footer/footer
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jecoute/jecoute
+include ../../modules/news-list/news-list
+include ../../modules/newsletter/newsletter
+include ../../modules/pagination/pagination
+include ../../modules/person-block/person-block
+include ../../modules/search-field/search-field
+include ../../modules/share/share
+include ../../modules/social/social
+
+include ../../components/components
+
+append content
+  +header(data.header)
+
+append content
+  .layout-content
+    +document-heading(data.heading)
+
+append content
+  .layout-content.layout-separate-after.layout-small-padding
+    .layout-wrapper
+      +breadcrumbs(data.breadcrumbs)
+
+append content
+  .layout-content.layout-separate-after.layout-adjacent-before.layout-adjacent-after
+    .layout-left-col
+      .layout-wrapper
+        aside.layout-aside
+          .aside-wrapper
+            +share(data.aside.share)
+            +search-field(data.aside.search)
+            +block-aside-checkboxes(data.aside.politique)
+            +block-aside-checkboxes(data.aside.arrondissement)
+
+        .layout-content
+          each module in data.modules
+            +#{module.type}(module.data)
+          +pagination(data.pagination)
+
+append content
+  .layout-content.color-secondary-background.layout-separate-after
+    .layout-three-col
+      .layout-wrapper
+        +heading(data.connected.heading)
+        .layout-content
+          +block-content(data.connected.newsletter.block)
+            +newsletter(data.connected.newsletter.content)
+        .layout-content
+          +block-content(data.connected.jecoute.block)
+            +jecoute(data.connected.jecoute.content)
+        .layout-content
+          +block-content(data.connected.social.block)
+            +social(data.connected.social.content)
+
+append content
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

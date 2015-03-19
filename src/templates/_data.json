@@ -11,6 +11,7 @@
     "generic",
     "single-news",
     "single-person",
-    "single-person-small-picture"
+    "single-person-small-picture",
+    "list-person"
   ]
 }
