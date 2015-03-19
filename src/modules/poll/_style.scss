@@ -1,0 +1,97 @@
+.poll {
+  background-color: $red-poll;
+  color: white;
+  height: 100%;
+  padding: 40px 0 25px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  > canvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+}
+
+.poll-title,
+.poll-link {
+  text-transform: uppercase;
+}
+
+.poll-title,
+.poll-heading,
+.poll-link {
+  font-weight: 700;
+}
+
+.poll-title,
+.poll-link {
+  font-size: 13px;
+}
+
+.poll-title {
+  border-bottom: 6px solid white;
+  display: inline-block;
+  padding-bottom: 6px; 
+}
+
+.poll-heading {
+  font-size: 28px;
+}
+
+.poll-content-button{
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+
+  > li {
+    margin: 0 0 10px 0;
+
+    a {
+      font-weight: 500;
+    }
+  }
+}
+
+.poll-button-inline li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.poll-content-label {
+
+  .button {
+    height: 45px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    line-height: 43px;
+  }
+
+    input {
+      color: $gray77;
+      font-size: 15px;
+      font-weight: 300;
+      min-width: 430px;
+      padding: 0 10px;
+    }
+}
+
+.poll-link {
+  border-bottom: 3px solid $color-tertiary;
+  color: $color-tertiary;
+  display: inline-block;
+  margin: 25px 0 0;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+
+  &:hover {
+    border-color: $yellow3;
+    color: $yellow3;
+  } 
+}
+
+
+

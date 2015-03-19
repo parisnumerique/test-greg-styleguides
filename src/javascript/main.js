@@ -22,6 +22,7 @@ require('../modules/gallery-ugc/script');
 require('../modules/header/script');
 require('../modules/jecoute/script');
 require('../modules/notice/script');
+require('../modules/poll/script');
 require('../modules/quick-access/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');
