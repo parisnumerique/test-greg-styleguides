@@ -16,14 +16,23 @@
   }
 
   .layout-wrapper {
-    display: table;
     margin: 0 auto;
-    width: 1100px;
+
+    @include large {
+      display: table;
+      width: $large-grid-width;
+    }
+  }
+
+  @include large {
+    .layout-aside,
+    .layout-content {
+      display: table-cell;
+    }
   }
 
   .layout-aside {
     background-color: $gray242;
-    display: table-cell;
     padding: 40px 0 40px 20px;
     position: relative;
     text-align: left;
@@ -49,7 +58,6 @@
   }
 
   .layout-content {
-    display: table-cell;
     padding: 40px 30px 40px 0;
     width: 750px;
   }

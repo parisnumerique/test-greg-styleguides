@@ -36,10 +36,9 @@
 
 
 
-  .header-left-wrapper {
+  .header-left {
     background: $color-primary;
-    height: 80px;
-    left: -126.5px;
+    height: 100px;
     position: relative;
     transition: 0.2s ease height;
     z-index: 100;
@@ -50,6 +49,10 @@
 
     .fixed_nav & {
       height: 80px;
+    }
+
+    @include large {
+      left: -126.5px;
     }
   }
 
@@ -305,6 +308,10 @@
 
       .fixed-nav & {
         margin-left: 0;
+      }
+
+      @include medium {
+        display: none;
       }
     }
 

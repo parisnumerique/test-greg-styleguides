@@ -40,13 +40,21 @@
 
   .layout-wrapper {
     margin: 0 auto;
-    width: 1100px;
+    padding-left: 50px;
+    padding-right: 50px;
 
-    .heading,
-    &.layout-outside {
-      left: -32px;
-      position: relative;
+    @include large {
+      padding-left: 0;
+      padding-right: 0;
+      width: $large-grid-width;
+
+      .heading,
+      &.layout-outside {
+        left: -32px;
+        position: relative;
+      }
     }
+
   }
 
 }

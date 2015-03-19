@@ -216,7 +216,7 @@ $sections-panel-subnav-offset: 200px;
   left: $sections-panel-subnav-width + 150px;
   padding: 50px 30px;
   right: 0;
-  width: $grid-width - $sections-panel-nav-width - $sections-panel-subnav-width + $sections-panel-subnav-offset;
+  width: $large-grid-width - $sections-panel-nav-width - $sections-panel-subnav-width + $sections-panel-subnav-offset;
   z-index: 4;
 
   .sections-panel.has-content & {

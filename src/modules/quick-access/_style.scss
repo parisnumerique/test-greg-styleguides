@@ -61,10 +61,6 @@
   .notice {
     z-index: 1;
   }
-
-  .search-field {
-    display: inline-block;
-  }
 }
 
 // Keep space for the header, when the quick-access is the first element after it
@@ -98,6 +94,10 @@
   transform: translateY(0);
   transition: transform 0.5s ease;
   z-index: 1;
+
+  @include medium {
+    padding: 0 20px;
+  }
 }
 
 .quick-access-buttons {

@@ -5,7 +5,7 @@
   .layout-wrapper {
     @include container;
     display: table;
-    width: $grid-width;
+    width: $large-grid-width;
   }
 
   .layout-content {
