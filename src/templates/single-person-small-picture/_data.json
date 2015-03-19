@@ -15,8 +15,9 @@
         "marker": {"visible": true},
         "items": [
           {"href": "#", "text": "Services et infos pratiques"},
-          {"href": "#", "text": "L'Hôtel de ville"},
-          {"href": "#", "text": "Actualités"}
+          {"href": "#", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "#", "text": "Municipalité"}
         ],
         "participate" : {
           "visible": true,
