@@ -1,5 +1,5 @@
 .poll {
-  background-color: $red-poll;
+  background-color: adjust_hue(saturate(darken($color-primary, 7), 2), 353);
   color: white;
   height: 100%;
   padding: 40px 0 25px;
@@ -88,8 +88,8 @@
   z-index: 1;
 
   &:hover {
-    border-color: $yellow3;
-    color: $yellow3;
+    border-color: darken($color-tertiary, 23);
+    color: darken($color-tertiary, 23);
   } 
 }
 

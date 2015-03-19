@@ -9,11 +9,11 @@ mixin poll(opts)
     p.poll-heading= opts.heading
     if opts.items
       ul.poll-content-button(class=opts.modifiers)
-          each item in opts.items
-            li
-              - button = JSON.parse(JSON.stringify(item))
-              - button.modifiers = ["action", "secondary",]
-              +button(button)
+        each item in opts.items
+          li
+            - button = JSON.parse(JSON.stringify(item))
+            - button.modifiers = ["action", "secondary",]
+            +button(button)
     else if opts.poll_label
       .poll-content-label
         input(type="text" placeholder=opts.poll_label.placeholder title=opts.poll_label.placeholder id=opts.poll_label.inputId)
