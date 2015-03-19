@@ -14,7 +14,7 @@ And browser-sync (*)
 
     npm install -g browser-sync
 
-(*) You may not need browser-sync, it can be a bit complicated to install on Windows (http://www.browsersync.io/docs/#windows-users) and is only needed if you want your pages to auto-reload on code changes.
+(*) You may not need browser-sync, it can be a bit complicated to [install on Windows](http://www.browsersync.io/docs/#windows-users) and is only needed if you want your pages to auto-reload on code changes.
 
 And the project dependencies (run this command from the project folder)
 
