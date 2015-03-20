@@ -38,6 +38,13 @@
     }
   }
 
+  @include small {
+    > .layout-swap-order-on-small {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
   .layout-wrapper {
     margin: 0 auto;
     padding-left: $small-page-padding;
@@ -55,8 +62,7 @@
       }
     }
     @include small {
-      .heading .heading-title,
-      &.layout-outside {
+      .heading .heading-title {
         left: -30px;
         position: relative;
       }

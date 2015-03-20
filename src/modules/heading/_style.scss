@@ -1,9 +1,9 @@
 .heading {
-  overflow: auto;
   margin-bottom: 40px;
 
   @include large-and-medium {
     border-left: 6px solid $color-tertiary;
+    overflow: auto;
     padding: 20px 10px 20px 26px;
   }
 
@@ -42,6 +42,9 @@
 
   @include large-and-medium {
     line-height: 40px;
+  }
+  @include small {
+    clear: both;
   }
 
   > a {

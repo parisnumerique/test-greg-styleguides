@@ -15,16 +15,16 @@
     background-color: $gray242;
   }
 
-  .layout-wrapper {
+  > .layout-wrapper {
     margin: 0 auto;
 
-    @include large {
+    @include large-and-medium {
       display: table;
       width: $large-grid-width;
     }
   }
 
-  @include large {
+  @include large-and-medium {
     .layout-aside,
     .layout-content {
       display: table-cell;
@@ -59,7 +59,8 @@
 
   .layout-content {
     padding: 40px 30px 40px 0;
-    width: 750px;
+    @include large {width: 750px;}
+    @include medium {width: 590px;}
   }
 
 }

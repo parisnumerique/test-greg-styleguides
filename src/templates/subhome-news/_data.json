@@ -348,7 +348,12 @@
           {"href": "#", "text": "Que faire à Paris ce week-end ?"},
           {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
           {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-        ]
+        ],
+        "more": {
+          "href": "#",
+          "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
+          "modifiers": "more"
+        }
       },
       "search_push": {
         "text": "Vous n’avez pas trouvé ce que vous cherchez ?",

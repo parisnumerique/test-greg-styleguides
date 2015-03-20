@@ -2,7 +2,6 @@
 }
 
 .get-involved-content {
-  @include container;
 }
 
 .get-involved-card {
@@ -11,13 +10,15 @@
   background-position: 50% 50%;
   background-size: cover;
   border-radius: 5px;
-  display: inline-block;
+  display: block;
   height: 200px;
   text-decoration: none;
   transition: opacity 0.35s ease;
 
-  &:last-child {
-    @include last;
+  @include small {
+    & + .get-involved-card {
+      margin-top: 20px;
+    }
   }
 
   &:hover {
@@ -35,6 +36,20 @@
 
     .get-involved-text {color: $blue2;}
     &:hover .get-involved-text {color: $white;}
+  }
+}
+
+@include large-and-medium {
+  .get-involved-content {
+    @include container;
+  }
+
+  .get-involved-card {
+    @include span(8);
+
+    &:last-child {
+      @include last;
+    }
   }
 }
 

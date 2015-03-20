@@ -2,7 +2,7 @@
   overflow: hidden;
   width: 100%;
 
-  .layout-wrapper {
+  > .layout-wrapper {
     @include container;
     display: table;
     width: $large-grid-width;

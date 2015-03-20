@@ -1,22 +1,26 @@
+$footer-small-breakpoint: 650px;
+$footer-small: (max-width: $footer-small-breakpoint - 1px);
+$footer-medium-and-large: (min-width: $footer-small-breakpoint);
+
 .footer {
   font-size: 13px;
   font-weight: 300;
   background-color: $gray230;
-  @include small {
+  @media #{$footer-small} {
     text-align: center;
   }
 }
 
 .footer-wrapper {
-  padding: 29px 0 31px;
+  padding: 29px 0 21px;
 }
 
 .footer-logo {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 0 20px;
   text-align: center;
 
-  @include large-and-medium {
+  @media #{$footer-medium-and-large} {
     float: left;
     margin: 0 50px 0 0;
   }
@@ -32,6 +36,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media #{$footer-medium-and-large} {
+    margin-left: 230px;
+  }
 
   a {
     color: $gray51;
@@ -55,23 +63,21 @@
       }
     }
 
-    @include small {
+    @media #{$footer-small} {
       margin: 20px 0;
     }
   }
 
-  @include large-and-medium {
-    > li {
-      display: inline-block;
-
-      & + li {
-        margin-left: 20px;
-      }
-    }
-  }
-  @include small {
+  @media #{$footer-small} {
     > li + li {
       margin-top: 10px;
+    }
+  }
+  @media #{$footer-medium-and-large} {
+    > li {
+      display: inline-block;
+      margin-right: 20px;
+      margin-bottom: 10px;
     }
   }
 }

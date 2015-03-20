@@ -53,3 +53,9 @@ $small-max: $medium-min - 1px;
 .hidden-on-small {
   @include hidden-on-small;
 }
+
+@mixin medium-and-small {
+  @media (max-width: $medium-max) {
+    @content;
+  }
+}

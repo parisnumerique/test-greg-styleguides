@@ -1,62 +1,102 @@
 .que-faire {
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  min-height: 240px;
-  max-width: 1100px;
-  overflow: auto;
-  padding: 80px 70px 0 25px;
-  width: 100%;
+  @include large-and-medium {
+    padding: 0 20px;
+  }
 
-  .logo {
-    display: block;
-    float: left;
-    height: 96px;
-    margin-right: 25px;
-    width: 150px;
+  > .que-faire-wrapper {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    max-width: $large-grid-width;
+    overflow: auto;
+    padding: 20px;
+    width: 100%;
 
-    > span {
-      @include hidden-accessibly;
+    @include large {
+      min-height: 240px;
+      padding: 80px 70px 0 25px;
     }
   }
 
+  .logo {
+    display: block;
+    height: 96px;
+    margin: 0 auto 20px;
+    width: 150px;
+
+    @include large {
+      float: left;
+      margin: 0 25px 0 0;
+    }
+
+    > span {@include hidden-accessibly;}
+  }
+
   .que-faire-content {
-    @include container(820px);
-    float: right;
+    overflow: hidden;
+    @include large {
+      @include container(820px);
+      float: right;
+    }
+  }
 
-    .button-que-faire {
+  .button-que-faire {
+    background: url(../modules/que-faire/hachure.svg) $white repeat top left;
+    border: none;
+    display: inline-block;
+    height: 80px;
+    overflow: hidden;
+    padding: 0;
+    white-space: normal;
+
+    html.flexbox & {
+      align-items: center;
+      display: flex;
+    }
+
+    @include large-and-medium {
       @include span(4 of 12);
-      background: url(../modules/que-faire/hachure.svg) $white repeat top left;
-      border: none;
-      display: inline-block;
-      height: 80px;
-      overflow: hidden;
-      padding: 0;
-      white-space: normal;
-
-      html.flexbox & {
-        display: flex;
-        align-items: center;
-      }
-
       &:last-child {@include last;}
+    }
+    @include large            {min-height: 80px;}
+    @include medium-and-small {min-height: 60px;}
+    @include small {
+      margin: 0 auto;
+      max-width: 260px;
+    }
 
-      &:after {
-        border-radius: 5px;
-        background-color: $gray242;
-      }
 
-      > span {
-        color: $gray51;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 20px;
-        padding: 10px 50px 10px 20px;
-        text-align: left;
-        text-decoration: none;
-        transition: color 0.35s ease;
+    &:after {
+      border-radius: 5px;
+      background-color: $gray242;
+    }
+
+    > span {
+      color: $gray51;
+      display: block;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 20px;
+      padding: 10px 20px;
+      text-align: left;
+      text-decoration: none;
+      transition: color 0.35s ease;
+      vertical-align: middle;
+
+      @include large {padding-right: 50px;}
+      @include small {
+        padding: 20px;
+        text-align: center;
       }
-      &:hover > span {color: $red-que-faire;}
+    }
+    &:hover > span {color: $red-que-faire;}
+
+    // modifiers
+    &.more {display: none;}
+
+    @include small {
+      display: none;
+      &.more {display: block;}
     }
   }
 }

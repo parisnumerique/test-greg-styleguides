@@ -264,14 +264,20 @@
           "data": {
             "background": "../../modules/que-faire/que-faire-back-img.jpg",
             "logo": {
-              "href": "#",
-              "image": "../../modules/que-faire/que-faire-img.png"
+              "href": "http://www.quefaire.paris.fr",
+              "image": "../../modules/que-faire/que-faire-img.png",
+              "alt": "Que faire à Paris"
             },
             "items": [
               {"href": "#", "text": "Que faire à Paris ce week-end ?"},
               {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
               {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-            ]
+            ],
+            "more": {
+              "href": "#",
+              "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
+              "modifiers": "more"
+            }
           }
         },
         {
