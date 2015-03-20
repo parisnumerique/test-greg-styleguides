@@ -2,6 +2,9 @@
   font-size: 13px;
   font-weight: 300;
   background-color: $gray230;
+  @include small {
+    text-align: center;
+  }
 }
 
 .footer-wrapper {
@@ -10,11 +13,16 @@
 
 .footer-logo {
   display: block;
-  float: left;
-  margin-right: 50px;
+  margin: 0 auto 20px;
+  text-align: center;
+
+  @include large-and-medium {
+    float: left;
+    margin: 0 50px 0 0;
+  }
 
   img {
-    display: block;
+    display: inline-block;
     height: 20px;
   }
 }
@@ -34,22 +42,36 @@
     }
   }
 
-  > li {
-    display: inline-block;
+  // modifier
+  li.strong {
+    a {
+      border-bottom: 1px solid $gray51;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
 
-    & + li {
-      margin-left: 20px;
+      &:hover {
+        border-bottom-width: 2px;
+      }
+    }
+
+    @include small {
+      margin: 20px 0;
     }
   }
-}
 
-a.footer-link-em {
-  border-bottom: 1px solid $gray51;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
+  @include large-and-medium {
+    > li {
+      display: inline-block;
 
-  &:hover {
-    border-bottom-width: 2px;
+      & + li {
+        margin-left: 20px;
+      }
+    }
+  }
+  @include small {
+    > li + li {
+      margin-top: 10px;
+    }
   }
 }

@@ -2,7 +2,12 @@
   @include container;
 
   .news-card {
-    @include span(4 of 12);
+    @include large {
+      @include span(4 of 12);
+    }
+    @include medium {
+      @include span(6 of 12);
+    }
   }
 
   .news-item {
@@ -10,16 +15,18 @@
   }
 
   // mode gallery
-  &.gallery {
-    .news-card {
-      &:nth-child(3n) {
-        @include last;
+  @include large-and-medium {
+    &.gallery {
+      .news-card {
+        &:nth-child(3n) {
+          @include last;
+        }
       }
-    }
 
-    .news-item {
-      &:nth-child(2n) {
-        @include last;
+      .news-item {
+        &:nth-child(2n) {
+          @include last;
+        }
       }
     }
   }

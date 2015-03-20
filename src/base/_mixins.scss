@@ -18,7 +18,9 @@
 }
 
 // Responsive mixins
-$large-min: $large-grid-width + 100px;
+$small-page-padding: 30px;
+
+$large-min: $large-grid-width + ($small-page-padding * 2);
 @mixin large {
   @media (min-width: $large-min) {
     @content;
@@ -33,9 +35,21 @@ $medium-max: $large-min - 1px;
   }
 }
 
+@mixin large-and-medium {
+  @media (min-width: $medium-min) {
+    @content;
+  }
+}
+
 $small-max: $medium-min - 1px;
 @mixin small {
   @media (max-width: $small-max) {
     @content;
   }
+}
+@mixin hidden-on-small {
+  @include small {display: none;}
+}
+.hidden-on-small {
+  @include hidden-on-small;
 }

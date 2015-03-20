@@ -387,7 +387,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -797,7 +797,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -1291,7 +1291,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

@@ -96,7 +96,8 @@
       margin: 0.67em 0;
     }
 
-    nav {
+    .languages {
+      @include hidden-on-small;
       position: absolute;
       top: 5px;
       font-size: 13px;

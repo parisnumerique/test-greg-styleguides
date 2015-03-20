@@ -40,8 +40,8 @@
 
   .layout-wrapper {
     margin: 0 auto;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: $small-page-padding;
+    padding-right: $small-page-padding;
 
     @include large {
       padding-left: 0;
@@ -51,6 +51,13 @@
       .heading,
       &.layout-outside {
         left: -32px;
+        position: relative;
+      }
+    }
+    @include small {
+      .heading .heading-title,
+      &.layout-outside {
+        left: -30px;
         position: relative;
       }
     }

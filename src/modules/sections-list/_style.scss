@@ -3,12 +3,6 @@
 }
 
 .sections-list-button {
-  @include large {
-    @include gallery(4);
-  }
-  @include medium {
-    @include gallery(4 of 12);
-  }
   background-color: $gray242;
   border: none;
   border-radius: 5px;
@@ -24,6 +18,17 @@
   vertical-align: middle;
   white-space: normal;
   z-index: 1;
+
+  @include large {
+    @include gallery(4);
+  }
+  @include medium {
+    @include gallery(4 of 12);
+  }
+  @include small {
+    display: none;
+    width: 100%;
+  }
 
   /* modifier "more" */
   &.more {

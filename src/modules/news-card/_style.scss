@@ -14,13 +14,16 @@
     .news-card-image {
       border-radius: 5px 5px 0 0;
     }
+  }
 
-    .news-card-content {
-      &:before {
-        background-color: $color-secondary;
-        height: 100%;
+  @include large {
+    &:hover {
+      color: $white;
+      transform: translateY(-20px);
+
+      .news-card-image {
+        border-radius: 5px 5px 0 0;
       }
-    }
 
     .news-card-category {
       color: $white;

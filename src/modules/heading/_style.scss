@@ -1,8 +1,11 @@
 .heading {
-  border-left: 6px solid $color-tertiary;
   overflow: auto;
   margin-bottom: 40px;
-  padding: 20px 10px 20px 26px;
+
+  @include large-and-medium {
+    border-left: 6px solid $color-tertiary;
+    padding: 20px 10px 20px 26px;
+  }
 
   /* modifiers */
   &.white {
@@ -27,11 +30,19 @@
   float: left;
   line-height: 40px;
   margin: 0 20px 0 0;
+
+  @include small {
+    border-left: 6px solid $color-tertiary;
+    padding: 20px 10px 20px 26px;
+  }
 }
 
 .heading-links {
-  line-height: 40px;
   font-size: 15px;
+
+  @include large-and-medium {
+    line-height: 40px;
+  }
 
   > a {
     border-bottom: 1px solid $gray77;

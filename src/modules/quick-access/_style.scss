@@ -98,6 +98,21 @@
   @include medium {
     padding: 0 20px;
   }
+  @include small {
+    text-align: center;
+  }
+}
+
+.quick-access-search {
+
+  .search-field {
+
+    .search-field-input,
+    .search-field-submit {
+      @include hidden-on-small;
+    }
+  }
+
 }
 
 .quick-access-buttons {
