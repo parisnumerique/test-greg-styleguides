@@ -338,53 +338,49 @@
           }
         },
         "jecoute": {
-          "block": {
-            "title": "Paris j'écoute",
-            "modifiers": ["color-secondary-background"]
-          },
-          "content": {
-            "items": [
-              {
-                "question": {
-                  "user": "@juliechanal",
-                  "time": "9h30",
-                  "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
-                },
-                "answer": {
-                  "user": "@Parisjecoute",
-                  "time": "10h11",
-                  "text": "Oui, la piscine reste ouverte cet été."
-                }
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "question": {
+                "user": "@juliechanal",
+                "time": "9h30",
+                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
               },
-              {
-                "question": {
-                  "user": "@JuliePetrucci",
-                  "time": "10h20",
-                  "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
-                },
-                "answer": {
-                  "user": "@Parisjecoute",
-                  "time": "10h50",
-                  "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
-                }
-              },
-              {
-                "question": {
-                  "user": "@billy141512",
-                  "time": "11h02",
-                  "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
-                },
-                "answer": {
-                  "user": "@Parisjecoute",
-                  "time": "11h14",
-                  "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
-                }
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h11",
+                "text": "Oui, la piscine reste ouverte cet été."
               }
-            ],
-            "button": {
-              "href": "#",
-              "text": "Posez votre question !"
+            },
+            {
+              "question": {
+                "user": "@JuliePetrucci",
+                "time": "10h20",
+                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "10h50",
+                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
+              }
+            },
+            {
+              "question": {
+                "user": "@billy141512",
+                "time": "11h02",
+                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+              },
+              "answer": {
+                "user": "@Parisjecoute",
+                "time": "11h14",
+                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+              }
             }
+          ],
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
           }
         },
         "social": {

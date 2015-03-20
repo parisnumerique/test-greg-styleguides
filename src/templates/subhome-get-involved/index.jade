@@ -1,13 +1,13 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/block-content/block-content
+include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/hub-heading/hub-heading
 include ../../modules/heading/heading
 include ../../modules/get-involved-list/get-involved-list
-include ../../modules/jecoute/jecoute
 include ../../modules/links-group/links-group
 include ../../modules/newsletter/newsletter
 include ../../modules/news-list/news-list
@@ -54,8 +54,7 @@ append content
         .blocks-content-vertical
           +block-content(data.connected.newsletter.block)
             +newsletter(data.connected.newsletter.content)
-          +block-content(data.connected.jecoute.block)
-            +jecoute(data.connected.jecoute.content)
+          +block-content-jecoute(data.connected.jecoute)
           +block-content(data.connected.social.block)
             +social(data.connected.social.content)
 

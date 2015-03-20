@@ -54,13 +54,15 @@
       "heading": {
         "image": "../../modules/document-heading/document-heading.png",
         "text": "Demander un logement",
-        "icons" : [{
-          "name": "favorites",
-          "url": "#"
-        },{
-          "name": "bell",
-          "url": "#"
-        }
+        "icons" : [
+          {
+            "name": "favorites",
+            "url": "#"
+          },
+          {
+            "name": "bell",
+            "url": "#"
+          }
         ]
       },
       "breadcrumbs": {
@@ -414,16 +416,12 @@
           }
         },
         "jecoute": {
-          "block": {
-            "title": "Paris j'écoute",
-            "modifiers": ["color-secondary-background"]
-          },
-          "content": {
-            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-            "button": {
-              "href": "#",
-              "text": "Posez votre question !"
-            }
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
           }
         },
         "social": {
