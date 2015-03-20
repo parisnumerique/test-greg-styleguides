@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?7lur4h');
-  src:url('../fonts/paris-icons.eot?#iefix7lur4h') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?7lur4h') format('woff'),
-    url('../fonts/paris-icons.ttf?7lur4h') format('truetype'),
-    url('../fonts/paris-icons.svg?7lur4h#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?-pleu1o');
+  src:url('../fonts/paris-icons.eot?#iefix-pleu1o') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?-pleu1o') format('woff'),
+    url('../fonts/paris-icons.ttf?-pleu1o') format('truetype'),
+    url('../fonts/paris-icons.svg?-pleu1o#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -121,6 +121,11 @@
 %icon-close-rounded,
 .icon-close-rounded:before {
   content: "\e613";
+}
+
+%icon-dailymotion,
+.icon-dailymotion:before {
+  content: "\e620";
 }
 
 %icon-facebook,
