@@ -5,6 +5,7 @@ include ../../modules/block-aside/block-aside
 include ../../modules/block-aside-contact/block-aside-contact
 include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
 include ../../modules/cross-content/cross-content
@@ -13,7 +14,6 @@ include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/news-list/news-list
-include ../../modules/newsletter/newsletter
 include ../../modules/social/social
 
 include ../../components/components
@@ -57,8 +57,7 @@ append content
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
-          +block-content(data.connected.newsletter.block)
-            +newsletter(data.connected.newsletter.content)
+          +block-content-newsletter(data.connected.newsletter)
         .layout-content
           +block-content-jecoute(data.connected.jecoute)
         .layout-content

@@ -308,19 +308,22 @@
           "modifiers": ["white"]
         },
         "newsletter" : {
-          "block": {
-            "title": "L’essentiel de Paris",
-            "modifiers": ["color-secondary-background"]
+          "title": "L’essentiel de Paris",
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "form": {
+            "action": "#",
+            "method": "POST"
           },
-          "content": {
-            "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "input": {
             "placeholder": "Entrez votre courriel",
-            "inputId": "newsletter-input",
-            "submit": "Valider",
-            "otherNewsletters": {
-              "text": "Autres newsletters et alertes",
-              "url": "#"
-            }
+            "id": "connected-newsletter-input"
+          },
+          "submit": {
+            "text": "Valider"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
           }
         },
         "jecoute": {

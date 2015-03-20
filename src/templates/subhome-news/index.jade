@@ -2,6 +2,7 @@ extends ../../layouts/stack/stack
 
 include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
@@ -9,7 +10,6 @@ include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/jumbotron/jumbotron
 include ../../modules/news-list/news-list
-include ../../modules/newsletter/newsletter
 include ../../modules/que-faire/que-faire
 include ../../modules/pagination/pagination
 include ../../modules/gallery-ugc/gallery-ugc
@@ -49,8 +49,7 @@ append content
           +block-content(data.video.block)
             +video-cover(data.video.cover)
         .layout-content
-          +block-content(data.newsletter.block)
-            +newsletter(data.newsletter.newsletter)
+          +block-content-newsletter(data.newsletter)
 
 append content
   .layout-content
@@ -84,8 +83,7 @@ append content
         +gallery-ugc(data.gallery.gallery_ugc)
       aside.layout-aside.color-secondary-background
         .blocks-content-vertical
-          +block-content(data.connected.newsletter.block)
-            +newsletter(data.connected.newsletter.content)
+          +block-content-newsletter(data.connected.newsletter)
           +block-content-jecoute(data.connected.jecoute)
           +block-content(data.connected.social.block)
             +social(data.connected.social.content)

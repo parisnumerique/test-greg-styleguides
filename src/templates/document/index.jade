@@ -3,6 +3,7 @@ extends ../../layouts/stack/stack
 include ../../modules/anchors-list/anchors-list
 include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
 include ../../modules/cross-content/cross-content
@@ -10,7 +11,6 @@ include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
-include ../../modules/newsletter/newsletter
 include ../../modules/share/share
 include ../../modules/social/social
 
@@ -51,8 +51,7 @@ append content
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
-          +block-content(data.connected.newsletter.block)
-            +newsletter(data.connected.newsletter.content)
+          +block-content-newsletter(data.connected.newsletter)
         .layout-content
           +block-content-jecoute(data.connected.jecoute)
         .layout-content

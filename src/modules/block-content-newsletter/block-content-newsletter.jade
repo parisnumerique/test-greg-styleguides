@@ -1,0 +1,11 @@
+include ../../modules/block-content/block-content
+
+mixin block-content-newsletter(opts)
+  - modifiers = opts.modifiers || []
+  - modifiers.push("block-content-newsletter")
+  +block-content({"title": opts.title, "modifiers": modifiers})
+    .newsletter-text= opts.text
+    form&attributes(opts.form)
+      input(type="text" placeholder=opts.input.placeholder title=opts.input.placeholder id=opts.input.id)
+      button.button.action(type="submit")= opts.submit.text
+    a(href="#{opts.link.href}")= opts.link.text

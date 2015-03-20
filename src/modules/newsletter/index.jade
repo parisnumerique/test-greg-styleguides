@@ -1,9 +1,0 @@
-include newsletter
-include ../../helpers/code
-
-.lsg-module
-  +newsletter(defaults)
-+code({language: "jade"}).
-  include newsletter
-
-  +newsletter(#{JSON.stringify(defaults, null, 2)})

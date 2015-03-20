@@ -72,7 +72,6 @@ Paris.searchResults = (function(){
     }
 
     function onSearchResults(success, data) {
-      //console.log(data);
       renderResults(data);
       renderFacets(data);
     }
