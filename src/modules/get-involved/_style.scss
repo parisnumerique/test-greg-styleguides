@@ -53,6 +53,20 @@
   }
 }
 
+@include large-and-medium {
+  .get-involved-content {
+    @include container;
+  }
+
+  .get-involved-card {
+    @include span(8);
+
+    &:last-child {
+      @include last;
+    }
+  }
+}
+
 .get-involved-text {
   color: $blue3;
   font-size: 20px;
