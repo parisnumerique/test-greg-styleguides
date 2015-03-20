@@ -205,6 +205,7 @@
       },
       "newsletter": {
         "title": "L’essentiel de Paris",
+        "modifiers": ["color-secondary-background"],
         "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
         "form": {
           "action": "#",
@@ -431,6 +432,7 @@
       "connected": {
         "newsletter": {
           "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
           "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
           "form": {
             "action": "#",
@@ -496,6 +498,7 @@
         },
         "social": {
           "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
           "items": [
             {
               "icon": "twitter",
