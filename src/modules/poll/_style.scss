@@ -1,5 +1,5 @@
 .poll {
-  background-color: adjust_hue(saturate(darken($color-primary, 7), 2), 353);
+  background-color: $red-poll;
   color: white;
   height: 100%;
   padding: 40px 0 25px;
@@ -34,7 +34,7 @@
 .poll-title {
   border-bottom: 6px solid white;
   display: inline-block;
-  padding-bottom: 6px; 
+  padding-bottom: 6px;
 }
 
 .poll-heading {
@@ -90,7 +90,7 @@
   &:hover {
     border-color: darken($color-tertiary, 23);
     color: darken($color-tertiary, 23);
-  } 
+  }
 }
 
 
