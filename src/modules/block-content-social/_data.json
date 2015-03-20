@@ -1,0 +1,37 @@
+{
+  "index": {
+    "defaults": {
+      "title": "Restez connecté",
+      "items": [
+        {
+          "icon": "twitter",
+          "count": "219 000",
+          "link": {
+            "href": "#",
+            "text": "S’abonner à @paris"
+          }
+        },
+        {
+          "icon": "facebook",
+          "count": "2 508 576",
+          "link": {
+            "href": "#",
+            "text": "Suivre la page Facebook"
+          }
+        },
+        {
+          "icon": "instagram",
+          "count": "16 449",
+          "link": {
+            "href": "#",
+            "text": "S’abonner sur Instagram"
+          }
+        }
+      ],
+      "link": {
+        "href": "#",
+        "text": "Voir tous les réseaux sociaux"
+      }
+    }
+  }
+}

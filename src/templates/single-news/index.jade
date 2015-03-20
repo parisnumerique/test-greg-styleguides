@@ -4,6 +4,7 @@ include ../../modules/anchors-list/anchors-list
 include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
+include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
 include ../../modules/cross-content/cross-content
@@ -12,7 +13,6 @@ include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/news-list/news-list
-include ../../modules/social/social
 
 include ../../components/components
 
@@ -62,8 +62,7 @@ append content
         .layout-content
           +block-content-jecoute(data.connected.jecoute)
         .layout-content
-          +block-content(data.connected.social.block)
-            +social(data.connected.social.content)
+          +block-content-social(data.connected.social)
 
 append content
   .layout-content.layout-adjacent-before

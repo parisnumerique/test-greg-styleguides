@@ -1,31 +1,31 @@
-.social {
+.block-content-social {
   max-width: 360px;
 
-  .social-items {
+  .block-content-items {
     overflow: hidden;
   }
 
-  .social-item {
+  .block-content-item {
     float: left;
     width: 50%;
     margin-bottom: 20px;
 
-    &:hover .social-link {
+    &:hover .block-content-link {
       border-color: transparent;
     }
   }
 
-  .social-count,
-  .social-icon {
+  .block-content-count,
+  .block-content-icon {
     font-size: 24px;
     margin-right: 10px;
   }
 
-  .social-count {
+  .block-content-count {
     font-weight: 700;
   }
 
-  .social-link {
+  .block-content-link {
     border-bottom: 1px solid $white;
     display: inline-block;
     font-size: 13px;

@@ -3,6 +3,7 @@ extends ../../layouts/stack/stack
 include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
+include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
@@ -14,7 +15,6 @@ include ../../modules/que-faire/que-faire
 include ../../modules/pagination/pagination
 include ../../modules/gallery-ugc/gallery-ugc
 include ../../modules/search-push/search-push
-include ../../modules/social/social
 include ../../modules/video-cover/video-cover
 
 append content
@@ -85,8 +85,7 @@ append content
         .blocks-content-vertical
           +block-content-newsletter(data.connected.newsletter)
           +block-content-jecoute(data.connected.jecoute)
-          +block-content(data.connected.social.block)
-            +social(data.connected.social.content)
+          +block-content-social(data.connected.social)
 
 append content
   .layout-content.layout-adjacent-before
