@@ -1,0 +1,13 @@
+mixin jecoute(opts)
+  .component.component-jecoute
+    .component-jecoute-title
+      p= opts.title
+    .component-jecoute-content
+      .component-jecoute-heading
+        p= opts.text
+        span.component-jecoute-icon(class="icon-#{opts.icon}")
+      form.component-jecoute-form(method="post")
+        textarea(placeholder= opts.textarea)
+        button.button(type="submit", class=opts.modifiers)
+          = opts.text_button
+

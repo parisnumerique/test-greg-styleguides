@@ -1,0 +1,12 @@
+{
+  "index": {
+    "defaults": {
+      "title": "@parisjecoute",
+      "text": "Constituer un dossier",
+      "icon": "close-rounded",
+      "textarea": "Quelle information cherchiez-vous dans cette rubrique ?",
+      "modifiers": ["secondary action"],
+      "text_button": "valider"
+    }
+  }
+}
