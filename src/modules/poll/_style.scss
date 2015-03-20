@@ -1,5 +1,6 @@
 .poll {
-  background-color: adjust_hue(saturate(darken($color-primary, 7), 2), 353);
+  background: url(../modules/poll/poll-back-img.jpg) $red-poll repeat top left;
+  background-position: 50% 50%;
   color: white;
   height: 100%;
   padding: 40px 0 25px;
