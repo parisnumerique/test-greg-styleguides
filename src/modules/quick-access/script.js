@@ -146,7 +146,6 @@ Paris.quickAccess = (function(){
     }
 
     function onSearchResults(success, results) {
-      console.log(results);
       $results.empty();
       $.each(results.hits, function(index, hit){
         $results.append('<li>' +

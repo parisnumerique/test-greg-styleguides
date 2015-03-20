@@ -72,7 +72,7 @@ Paris.sectionsPanel = (function(){
     //}
     //
     function onMouseEnterNav(){
-      console.log('onMouseEnterNav', currentLevel);
+      //console.log('onMouseEnterNav', currentLevel);
       if (currentLevel !== "content") {return;}
       $navOverlay.velocity({
         opacity: 0
@@ -80,7 +80,7 @@ Paris.sectionsPanel = (function(){
     }
 
     function onMouseLeaveNav(){
-      console.log('onMouseLeaveNav', currentLevel);
+      //console.log('onMouseLeaveNav', currentLevel);
       if (currentLevel !== "content") {return;}
       $navOverlay.velocity({
         opacity: 1
