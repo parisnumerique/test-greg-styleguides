@@ -20,4 +20,6 @@ mixin jecoute(opts)
                 div.text= item.answer.text
     if opts.text
       .jecoute-text= opts.text
-    +button(opts.button)
+    - button = JSON.parse(JSON.stringify(opts.button)) // clone the data object
+    - button.modifiers = ["action"] // overwrite the modifiers
+    +button(button)

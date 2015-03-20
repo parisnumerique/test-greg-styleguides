@@ -44,6 +44,13 @@
         "href": "#",
         "text": "Posez votre question !"
       }
+    },
+    "simple": {
+      "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+      "button": {
+        "href": "#",
+        "text": "Posez votre question !"
+      }
     }
   }
 }

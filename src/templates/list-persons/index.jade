@@ -1,11 +1,8 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/anchors-list/anchors-list
 include ../../modules/block-aside-checkboxes/block-aside-checkboxes
 include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
-include ../../modules/button/button
-include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
 include ../../modules/header/header
@@ -39,8 +36,10 @@ append content
       .layout-wrapper
         aside.layout-aside
           .aside-wrapper
-            +share(data.aside.share)
-            +search-field(data.aside.search)
+            +block-aside({})
+              +share(data.aside.share)
+            +block-aside({})
+              +search-field(data.aside.search)
             +block-aside-checkboxes(data.aside.politique)
             +block-aside-checkboxes(data.aside.arrondissement)
 

@@ -32,7 +32,7 @@
       border: 1px solid $gray204;
       border-radius: 50%;
       color: $gray204;
-      font-size: 20px;
+      font-size: 24px;
       height: 40px;
       line-height: 40px;
       text-align: center;
@@ -45,6 +45,9 @@
         border-color: $blue3;
         color: $white;
       }
+
+      .icon-facebook {position: relative; top: -1px;}
+      .icon-twitter {position: relative; left: 1px;}
     }
   }
 

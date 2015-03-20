@@ -1,9 +1,18 @@
 include jecoute
 include ../../helpers/code
 
+h2 Standard
 .lsg-module
   +jecoute(defaults)
 +code({language: "jade"}).
   include jecoute
 
   +jecoute(#{JSON.stringify(defaults, null, 2)})
+
+h2 Texte simple
+.lsg-module
+  +jecoute(simple)
++code({language: "jade"}).
+  include jecoute
+
+  +jecoute(#{JSON.stringify(simple, null, 2)})
