@@ -3,11 +3,10 @@ mixin jecoute(opts)
     .component-jecoute-title
       p= opts.title
     .component-jecoute-content
-      .component-jecoute-heading
-        p= opts.text
-        span.component-jecoute-icon(class="icon-#{opts.icon}")
+      p.component-jecoute-heading= opts.text
       form.component-jecoute-form(method="post")
         textarea(placeholder= opts.textarea)
+        input(type="email", placeholder= opts.mail)
         button.button(type="submit", class=opts.modifiers)
           = opts.text_button
 
