@@ -1,0 +1,317 @@
+{
+  "index": {
+    "data": {
+      "bodyModifiers": ["fixed-nav", "single-person"],
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "#", "text": "Municipalité"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "heading": {
+        "image": "heading.jpg",
+        "text": "Adjoints à la Maire"
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "L’hôtel de ville"
+          },
+          {
+            "href": "#",
+            "text": "Adjoints à la Maire"
+          }
+        ]
+      },
+      "aside": {
+        "share": {
+          "modifiers": ["circles"],
+          "items": [
+            {
+              "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
+              "icon": "facebook",
+              "title": "Partager sur Facebook"
+            },
+            {
+              "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
+              "icon": "twitter",
+              "title": "Partager sur Twitter"
+            },
+            {
+              "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
+              "icon": "mail",
+              "title": "Partager par courriel"
+            }
+          ]
+        },
+        "search": {
+          "action": "#",
+          "modifiers": ["small"],
+          "input": {
+            "placeholder": "Rechercher un nom..."
+          },
+          "submit": {
+            "text": "Ok"
+          }
+        },
+        "politique": {
+          "title": "Groupe politique",
+          "name": "groupe_polique",
+          "items": [
+            {
+              "value": 0,
+              "text": "Groupe socialistes et apparentés"
+            },
+            {
+              "value": 1,
+              "text": "Groupe communistes et front de gauche"
+            },
+            {
+              "value": 2,
+              "text": "Groupe écologiste de Paris (G.E.P)",
+              "checked": true
+            },
+            {
+              "value": 3,
+              "text": "Groupe radical de gauche, centre et indépendants"
+            }
+          ]
+        },
+        "arrondissement": {
+          "title": "Arrondissement",
+          "name": "arrondissement",
+          "modifiers": ["two_cols"],
+          "items": [
+            {"value": 1, "text": "1e"},
+            {"value": 2, "text": "2e"},
+            {"value": 3, "text": "3e"},
+            {"value": 4, "text": "4e"},
+            {"value": 5, "text": "5e"},
+            {"value": 6, "text": "6e"},
+            {"value": 7, "text": "7e"},
+            {"value": 8, "text": "8e"},
+            {"value": 9, "text": "9e"},
+            {"value": 10, "text": "10e", "checked": true},
+            {"value": 11, "text": "11e", "checked": true},
+            {"value": 12, "text": "12e"},
+            {"value": 13, "text": "13e"},
+            {"value": 14, "text": "14e"},
+            {"value": 15, "text": "15e"},
+            {"value": 16, "text": "16e"},
+            {"value": 17, "text": "17e"},
+            {"value": 18, "text": "18e"},
+            {"value": 19, "text": "19e", "checked": true},
+            {"value": 20, "text": "20e", "checked": true}
+          ]
+        }
+      },
+      "modules": [
+        {
+          "type": "person-block",
+          "data": {
+            "image": "../../modules/person-block/person-block-img.jpg",
+            "title": "Bruno Julliard",
+            "text": "Premier adjoint, Groupe socialiste et apparentés"
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "image": "../../modules/person-block/person-block-img.jpg",
+            "title": "Julien Bargeton",
+            "text": "Adjoint, Groupe socialiste et apparentés"
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "image": "../../modules/person-block/person-block-img.jpg",
+            "title": "Célia Blauel",
+            "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)"
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "image": "../../modules/person-block/person-block-img.jpg",
+            "title": "Hélène Bidard",
+            "text": "Adjoint, Groupe communiste et front de gauche"
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "image": "../../modules/person-block/person-block-img.jpg",
+            "title": "Ian Brossat",
+            "text": "Adjoint, Groupe communiste et front de gauche"
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "image": "../../modules/person-block/person-block-img.jpg",
+            "title": "Colombe Brossel",
+            "text": "Adjoint, Groupe socialiste et apparentés"
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "image": "../../modules/person-block/person-block-img.jpg",
+            "title": "Alexandra Cordebard",
+            "text": "Adjoint, Groupe socialiste et apparentés"
+          }
+        }
+      ],
+      "pagination": {
+        "items": [
+          {"number": 1, "href": "/1"},
+          {"number": 2, "href": "/2"},
+          {"number": 3, "href": "/3"},
+          {"number": 4, "href": "/4"},
+          {"number": 5, "href": "/5"}
+        ],
+        "current": 1,
+        "total": 10
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "block": {
+            "title": "L’essentiel de Paris",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+            "placeholder": "Entrez votre courriel",
+            "inputId": "newsletter-input",
+            "submit": "Valider",
+            "otherNewsletters": {
+              "text": "Autres newsletters et alertes",
+              "url": "#"
+            }
+          }
+        },
+        "jecoute": {
+          "block": {
+            "title": "Paris j'écoute",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+            "button": {
+              "href": "#",
+              "text": "Posez votre question !"
+            }
+          }
+        },
+        "social": {
+          "block": {
+            "title": "Restez connecté",
+            "modifiers": ["color-secondary-background"]
+          },
+          "content": {
+            "link": {
+              "href": "#",
+              "text": "Voir tous les réseaux sociaux"
+            },
+            "items": [
+              {
+                "icon": "twitter",
+                "count": "219 000",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner à @paris"
+                }
+              },
+              {
+                "icon": "facebook",
+                "count": "2 508 576",
+                "subscribe": {
+                  "url": "#",
+                  "text": "Suivre la page Facebook"
+                }
+              },
+              {
+                "icon": "instagram",
+                "count": "16 449",
+                "subscribe": {
+                  "url": "#",
+                  "text": "S’abonner sur Instagram"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}
