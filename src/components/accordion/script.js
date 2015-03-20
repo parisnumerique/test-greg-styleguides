@@ -14,8 +14,11 @@ Paris.accordion = (function(){
 
     function init(){
       initOptions();
-      $el.find('.accordion-item-content').data('toggle', false);
+      $el.find('.accordion-item-content')
+        .addClass('collapse')
+        .data('toggle', false);
       $el.find('.accordion-item-title')
+        .addClass('collapsed')
         .attr('data-toggle', 'collapse')
         .collapse();
 
