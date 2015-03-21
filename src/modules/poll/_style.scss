@@ -1,6 +1,7 @@
 .poll {
-  background: url(../modules/poll/poll-back-img.jpg) $red-poll repeat top left;
-  background-position: 50% 50%;
+//  background: url(../modules/poll/poll-back-img.jpg) $red-poll repeat top left;
+//  background-position: 50% 50%;
+  background-color: $red-poll;
   color: white;
   height: 100%;
   padding: 40px 0 25px;
@@ -35,7 +36,7 @@
 .poll-title {
   border-bottom: 6px solid white;
   display: inline-block;
-  padding-bottom: 6px; 
+  padding-bottom: 6px;
 }
 
 .poll-heading {
@@ -91,7 +92,7 @@
   &:hover {
     border-color: darken($color-tertiary, 23);
     color: darken($color-tertiary, 23);
-  } 
+  }
 }
 
 
