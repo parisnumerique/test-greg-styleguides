@@ -21,11 +21,10 @@ Paris.poll = (function(){
       initOptions();
 
       $canvas = $('<canvas></canvas>').appendTo($el);
-      offset = $el.offset();
 
       initCanvas();
 
-      $canvas.on('mousemove mouseleave', onMouseEvents);
+      $canvas.on('mouseenter mousemove mouseleave', onMouseEvents);
       animFrame = window.requestAnimationFrame(createDots);
     }
 
@@ -55,7 +54,7 @@ Paris.poll = (function(){
         nb: Math.floor(150 * canvas.height / 500),
         distance: 100,
         d_radius: 150,
-        radius_interval: [0, 2],
+        radius_interval: [0.5, 2],
         array: []
       };
     }
@@ -129,11 +128,14 @@ Paris.poll = (function(){
     }
 
     function onMouseEvents(e) {
-      if(e.type === 'mousemove'){
+      if (e.type === 'mouseenter'){
+        offset = $el.offset();
+      }
+      if (e.type === 'mousemove'){
         mousePosition.x = e.pageX - offset.left;
         mousePosition.y = e.pageY - offset.top;
       }
-      if(e.type === 'mouseleave'){
+      if (e.type === 'mouseleave'){
         mousePosition.x = canvas.width / 2;
         mousePosition.y = canvas.height / 2;
       }
