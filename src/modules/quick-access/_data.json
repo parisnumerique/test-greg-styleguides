@@ -13,7 +13,9 @@
           "icon": true
         },
         "around": {
-          "text": "Autour de moi"
+          "href": "http://meslieux.paris.fr",
+          "text": "Autour de moi",
+          "target": "_blank"
         }
       },
       "items": [
@@ -81,7 +83,9 @@
           "icon": true
         },
         "around": {
-          "text": "Autour de moi"
+          "href": "http://meslieux.paris.fr",
+          "text": "Autour de moi",
+          "target": "_blank"
         }
       },
       "items": [
@@ -144,7 +148,9 @@
           "icon": true
         },
         "around": {
-          "text": "Autour de moi"
+          "href": "http://meslieux.paris.fr",
+          "text": "Autour de moi",
+          "target": "_blank"
         }
       },
       "items": [

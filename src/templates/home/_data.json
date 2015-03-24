@@ -45,10 +45,17 @@
         }
       },
       "quick_access": {
-        "background": "../../modules/quick-access/background.jpg",
+        "background": {
+          "image": "background.jpg",
+          "video": {
+            "sources": [
+              {"src": "//zippy.gfycat.com/PartialMadeupGorilla.webm", "type": "video/webm"},
+              {"src": "//zippy.gfycat.com/PartialMadeupGorilla.mp4", "type": "video/mp4"}
+            ]
+          }
+        },
         "search": {
           "input": {
-            "id": "main-search",
             "placeholder": "Rechercher un service, une information..."
           },
           "submit": {
@@ -56,7 +63,9 @@
             "icon": true
           },
           "around": {
-            "text": "Autour de moi"
+            "href": "http://meslieux.paris.fr",
+            "text": "Autour de moi",
+            "target": "_blank"
           }
         },
         "items": [
