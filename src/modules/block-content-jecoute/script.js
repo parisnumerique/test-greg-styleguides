@@ -15,7 +15,6 @@ Paris.blockContentJecoute = (function(){
 
     function init(){
       initOptions();
-      console.log('blockContentJecoute', $el);
 
       $items = $el.find('.block-content-item');
 
@@ -34,7 +33,6 @@ Paris.blockContentJecoute = (function(){
     function changeVisibleItem() {
       var $current = $items.filter('.visible') || $items.first();
       var $next = $current.next('.block-content-item');
-      console.log('changeVisibleItem', $current, $next);
 
       $items.removeClass('answered');
       $current.removeClass('visible');

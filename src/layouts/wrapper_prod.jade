@@ -10,4 +10,8 @@ html
   - data.bodyModifiers = data.bodyModifiers || []
   body(class=data.bodyModifiers)
     block main
+    script
+      include ./assets/javascript/locales.js
+    script
+      include ./assets/javascript/config.js
     script(src="/javascript/paris.js")
