@@ -6,6 +6,7 @@ require('./externals/bootstrap');
 
 // load our librairies
 require('./lib/i18n');
+require('./lib/requestanimationframe');
 require('./lib/scroll');
 
 // load our components
@@ -22,6 +23,7 @@ require('../modules/document-heading/script');
 require('../modules/gallery-ugc/script');
 require('../modules/header/script');
 require('../modules/notice/script');
+require('../modules/poll/script');
 require('../modules/quick-access/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');

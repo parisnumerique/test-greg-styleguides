@@ -1,0 +1,27 @@
+include poll
+include ../../helpers/code
+
+h2 poll avec bouton vertical
+.lsg-module
+  +poll(poll_button)
++code({language: "jade"}).
+  include poll
+
+  +poll(#{JSON.stringify(defaults, null, 2)})
+
+h2 poll avec bouton horizontal
+.lsg-module
+  +poll(poll_button_inline)
++code({language: "jade"}).
+  include poll
+
+  +poll(#{JSON.stringify(defaults, null, 2)})
+
+h2 poll avec label
+.lsg-module
+  +poll(poll_label)
++code({language: "jade"}).
+  include poll
+
+  +poll(#{JSON.stringify(defaults, null, 2)})
+

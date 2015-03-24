@@ -12,6 +12,7 @@ include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
+include ../../modules/poll/poll
 include ../../modules/share/share
 
 include ../../components/components
@@ -42,8 +43,11 @@ append content
 
 append content
   .layout-content.layout-adjacent-before
-    div
-      +cross-content(data.cross_content)
+    +cross-content(data.cross_content)
+
+append content
+  .layout-content.layout-adjacent-before
+    +poll(data.poll)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
