@@ -1,0 +1,56 @@
+{
+  "index": {
+    "poll_button": {
+      "title": "À vous la parole",
+      "heading": "Le vélo à Paris, c’est…",
+      "items": [
+        {
+          "href": "#",
+          "text": "agréable, on voit la ville d’un autre œil"
+        },
+        {
+          "href": "#",
+          "text": "efficace pour se déplacer en protégeant l’environnement"
+        },
+        {
+          "href": "#",
+          "text": "dangereux"
+        },
+        {
+          "href": "#",
+          "text": "je n’ai jamais essayé"
+        }
+      ],
+      "link_href": "#",
+      "link": "Accéder à l’espace participatif"
+    },
+    "poll_button_inline": {
+      "title": "À vous la parole",
+      "heading": "Etes-vous favorable à une interdiction du diesel à Paris ?",
+      "modifiers": "poll-button-inline",
+      "items": [
+        {
+          "href": "#",
+          "text": "oui"
+        },
+        {
+          "href": "#",
+          "text": "non"
+        }
+      ],
+      "link_href": "#",
+      "link": "Accéder à l’espace participatif"
+    },
+    "poll_label": {
+      "title": "À vous la parole",
+      "heading": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
+      "poll_label": {
+        "placeholder": "Votre réponse",
+        "inputId": "poll-input",
+        "submit": "Envoyer"
+      },
+      "link_href": "#",
+      "link": "Accéder à l’espace participatif"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+include ../../modules/block-content/block-content
+
+mixin block-content-social(opts)
+  - modifiers = opts.modifiers || []
+  - modifiers.push("block-content-social")
+  +block-content({"title": opts.title, "modifiers": modifiers})
+    .block-content-items
+      each item in opts.items
+        a.block-content-item(href=item.link.href)
+          .block-content-count
+            i.block-content-icon(class="icon-#{item.icon}")
+            = item.count
+          .block-content-link= item.link.text
+    if opts.link
+      a.block-content-link(href="#{opts.link.href}")= opts.link.text
