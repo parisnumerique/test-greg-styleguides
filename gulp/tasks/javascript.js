@@ -18,6 +18,8 @@ watchifyBundler.transform('jadeify');
 gulp.task('watch:js', watch); // so you can run `watch:js` to build the file
 gulp.task('compile:js', compile); // so you can run `compile:js` to build the file
 gulp.task('build:js', build); // so you can run `gulp build:js` to build the file
+gulp.task('copy:config', copyConfig);
+gulp.task('copy:locales', copyLocales);
 watchifyBundler.on('update', watch); // on any dep update, runs the watchifyBundler
 watchifyBundler.on('log', gutil.log); // output build logs to terminal
 
@@ -47,4 +49,14 @@ function bundle(output) {
     .pipe(buffer())
     .pipe(uglify())
     .pipe(gulp.dest(output)) ;
+}
+
+function copyConfig() {
+  gulp.src('./src/javascript/config.js')
+    .pipe(gulp.dest(config.build.assets.javascript));
+}
+
+function copyLocales() {
+  gulp.src('./src/javascript/locales.js')
+    .pipe(gulp.dest(config.build.assets.javascript));
 }
