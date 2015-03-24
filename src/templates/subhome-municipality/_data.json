@@ -96,6 +96,7 @@
       "conseil": {
         "background": "image-municipalite-conseil.jpg",
         "title": "Le conseil de Paris",
+        "subtitle": "Prochain conseil dans 5 jours",
         "modifiers": ["red"],
         "items": [
           {
