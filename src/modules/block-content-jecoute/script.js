@@ -3,17 +3,24 @@ require('velocity-animate');
 
 var Paris = window.Paris || {};
 
-Paris.jecoute = (function(){
+Paris.blockContentJecoute = (function(){
 
   var defaultOptions = {
   };
 
-  function header(selector, userOptions){
+  function blockContentJecoute(selector, userOptions){
     var $el     = $(selector),
-        options = $.extend({}, defaultOptions, userOptions);
+        options = $.extend({}, defaultOptions, userOptions),
+        $items;
 
     function init(){
       initOptions();
+      console.log('blockContentJecoute', $el);
+
+      $items = $el.find('.block-content-item');
+
+      if ($items.length === 0) {return;}
+
       setInterval(changeVisibleItem, 10000);
       changeVisibleItem();
     }
@@ -25,18 +32,17 @@ Paris.jecoute = (function(){
     }
 
     function changeVisibleItem() {
-      var current = $el.find('.visible') || $el.find('.jecoute-item:first-child');
-      var $next = $el.find('.visible').next('.jecoute-item');
+      var $current = $items.filter('.visible') || $items.first();
+      var $next = $current.next('.block-content-item');
+      console.log('changeVisibleItem', $current, $next);
 
-      $el.find('.jecoute-item').removeClass('answered');
+      $items.removeClass('answered');
+      $current.removeClass('visible');
 
-      current.removeClass('visible');
-
-      if($next.length) {
+      if ($next.length) {
         $next.addClass('visible');
-      }
-      else {
-        $next = $el.find('.jecoute-item:first-child').addClass('visible');
+      } else {
+        $next = $items.filter(':first-child').addClass('visible');
       }
 
       $next.find('.progress').velocity({
@@ -45,8 +51,8 @@ Paris.jecoute = (function(){
           duration: 10000,
           easing: 'linear',
           complete: function() {
-            $next.find('.jecoute-question').velocity({scale: 1, translateY: 0}, {duration: 0 });
-            $next.find('.jecoute-answer').velocity({scale: 0.5, translateY: '130px'}, {duration: 0 });
+            $next.find('.block-content-question').velocity({scale: 1, translateY: 0}, {duration: 0 });
+            $next.find('.block-content-answer').velocity({scale: 0.5, translateY: '130px'}, {duration: 0 });
             $next.find('.progress').velocity({width: 0}, {duration: 0 });
           }
       });
@@ -54,12 +60,12 @@ Paris.jecoute = (function(){
       setTimeout(function () {
         $next.addClass('answered');
 
-        $next.find('.jecoute-question').velocity(
+        $next.find('.block-content-question').velocity(
             {scale: 0.5, translateY: "-260px"},
             {
               duration: 300,
               complete: function () {
-                $next.find('.jecoute-answer').velocity(
+                $next.find('.block-content-answer').velocity(
                   {translateY: "-130px", scale: 1},
                   {duration: 300}
                 );
@@ -78,12 +84,12 @@ Paris.jecoute = (function(){
 
   return function(selector, userOptions){
     return $(selector).each(function(){
-      header(this, userOptions);
+      blockContentJecoute(this, userOptions);
     });
   };
 
 })();
 
 $(document).ready(function(){
-  Paris.jecoute('.jecoute');
+  Paris.blockContentJecoute('.block-content-jecoute');
 });

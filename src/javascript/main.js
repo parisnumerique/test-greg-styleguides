@@ -17,10 +17,10 @@ require('../layouts/left-col/script');
 
 // load our modules
 require('../modules/anchors-list/script');
+require('../modules/block-content-jecoute/script');
 require('../modules/document-heading/script');
 require('../modules/gallery-ugc/script');
 require('../modules/header/script');
-require('../modules/jecoute/script');
 require('../modules/notice/script');
 require('../modules/quick-access/script');
 require('../modules/sections-panel/script');

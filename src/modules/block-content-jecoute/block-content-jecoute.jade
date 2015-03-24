@@ -1,25 +1,28 @@
+include ../../modules/block-content/block-content
 include ../../modules/button/button
 
-mixin jecoute(opts)
-  .jecoute
+mixin block-content-jecoute(opts)
+  - modifiers = opts.modifiers || []
+  - modifiers.push("block-content-jecoute")
+  +block-content({"title": opts.title, "modifiers": modifiers})
     if opts.items
-      div.jecoute-items
+      div.block-content-items
         each item in opts.items
-          div.jecoute-item
-            div.jecoute-timer
+          div.block-content-item
+            div.block-content-timer
               span.start= item.question.time
               span.end= item.answer.time
-              div.jecoute-bar
+              div.block-content-bar
                 div.progress
-            div.jecoute-question-answer
-              div.jecoute-question
+            div.block-content-question-answer
+              div.block-content-question
                 div.user= item.question.user
                 div.text= item.question.text
-              div.jecoute-answer
+              div.block-content-answer
                 div.user= item.answer.user
                 div.text= item.answer.text
     if opts.text
-      .jecoute-text= opts.text
+      .block-content-text= opts.text
     - button = JSON.parse(JSON.stringify(opts.button)) // clone the data object
     - button.modifiers = ["action"] // overwrite the modifiers
     +button(button)

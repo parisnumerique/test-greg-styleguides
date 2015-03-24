@@ -1,17 +1,17 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/block-content/block-content
 include ../../modules/block-aside-links/block-aside-links
+include ../../modules/block-content/block-content
+include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
+include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/cross-content/cross-content
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
-include ../../modules/jecoute/jecoute
-include ../../modules/newsletter/newsletter
 include ../../modules/news-list/news-list
-include ../../modules/social/social
 include ../../components/accordion/accordion
 include ../../components/text/text
 
@@ -44,14 +44,11 @@ append content
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
-          +block-content(data.connected.newsletter.block)
-            +newsletter(data.connected.newsletter.content)
+          +block-content-newsletter(data.connected.newsletter)
         .layout-content
-          +block-content(data.connected.jecoute.block)
-            +jecoute(data.connected.jecoute.content)
+          +block-content-jecoute(data.connected.jecoute)
         .layout-content
-          +block-content(data.connected.social.block)
-            +social(data.connected.social.content)
+          +block-content-social(data.connected.social)
 
 append content
   .layout-content.layout-adjacent-before
