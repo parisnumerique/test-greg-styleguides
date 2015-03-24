@@ -15,13 +15,14 @@ Paris.newsPush = (function(){
 
     function init(){
       initOptions();
+      $el.addClass('hidden');
       PubSub.subscribe('scroll', testVisibility);
       testVisibility();
     }
 
     function testVisibility() {
-      if(nearViewport()) {
-        $el.addClass('visible');
+      if (nearViewport()) {
+        $el.removeClass('hidden');
       }
     }
 

@@ -11,6 +11,10 @@ html
   body
     .lsg-wrapper
       != yield
+    script
+      include ../javascript/locales.js
+    script
+      include ../javascript/config.js
     script(src="../../javascript/beautify-html.js")
     script(src="../../javascript/prism.js")
     script(src="../../javascript/lsg.js")

@@ -32,6 +32,8 @@ $susy: (
 @import "../modules/block-aside-contact/_style";
 @import "../modules/block-aside-links/_style";
 @import "../modules/block-content/_style";
+@import "../modules/block-content-jecoute/_style";
+@import "../modules/block-content-newsletter/_style";
 @import "../modules/breadcrumbs/_style";
 @import "../modules/button/_style";
 @import "../modules/cross-content/_style";
@@ -42,16 +44,15 @@ $susy: (
 @import "../modules/header/_style";
 @import "../modules/heading/_style";
 @import "../modules/hub-heading/_style";
-@import "../modules/jecoute/_style";
 @import "../modules/jumbotron/_style";
 @import "../modules/links-group/_style";
 @import "../modules/municipal-team/_style";
 @import "../modules/news-card/_style";
 @import "../modules/news-list/_style";
 @import "../modules/notice/_style";
-@import "../modules/newsletter/_style";
 @import "../modules/pagination/_style";
 @import "../modules/person-block/_style";
+@import "../modules/poll/_style";
 @import "../modules/gallery-ugc/_style";
 @import "../modules/que-faire/_style";
 @import "../modules/quick-access/_style";
@@ -61,7 +62,7 @@ $susy: (
 @import "../modules/sections-list/_style";
 @import "../modules/sections-panel/_style";
 @import "../modules/share/_style";
-@import "../modules/social/_style";
+@import "../modules/block-content-social/_style";
 @import "../modules/tags/_style";
 @import "../modules/video-cover/_style";
 
@@ -70,6 +71,7 @@ $susy: (
 @import "../components/accordion/_style";
 @import "../components/buttons/_style";
 @import "../components/image/_style";
+@import "../components/jecoute/_style";
 @import "../components/links/_style";
 @import "../components/news-push/_style";
 @import "../components/sharelines/_style";

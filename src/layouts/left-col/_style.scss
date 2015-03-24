@@ -77,12 +77,12 @@
 
   .layout-content {
     display: table-cell;
-    padding: 40px 50px;
+    padding: 40px 0 40px 50px;
     width: 820px;
     vertical-align: top;
 
     .component {
-      max-width: 720px;
+      max-width: 770px;
     }
   }
 

@@ -1,7 +1,7 @@
-.newsletter {
+.block-content-newsletter {
   font-size: 14px;
 
-  .newsletter-text {
+  .block-content-text {
     margin-bottom: 15px;
     max-width: 360px;
   }
@@ -13,12 +13,13 @@
     line-height: 43px;
   }
 
-  > form {
+  form {
     margin-bottom: 5px;
 
     input {
       color: $color-secondary;
       padding: 0 10px;
+      width: 215px;
     }
   }
 

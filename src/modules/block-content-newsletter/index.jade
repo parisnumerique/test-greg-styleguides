@@ -1,0 +1,9 @@
+include block-content-newsletter
+include ../../helpers/code
+
+.lsg-module
+  +block-content-newsletter(defaults)
++code({language: "jade"}).
+  include block-content-newsletter
+
+  +block-content-newsletter(#{JSON.stringify(defaults, null, 2)})

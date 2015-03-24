@@ -15,8 +15,9 @@
         "marker": {"visible": true},
         "items": [
           {"href": "#", "text": "Services et infos pratiques"},
-          {"href": "#", "text": "L'Hôtel de ville"},
-          {"href": "#", "text": "Actualités"}
+          {"href": "#", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "#", "text": "Municipalité"}
         ],
         "participate" : {
           "visible": true,
@@ -53,6 +54,12 @@
       "heading": {
         "image": "heading.jpg",
         "text": "Bruno Julliard",
+        "icons" : [
+          {
+            "name": "favorites",
+            "url": "#"
+          }
+        ],
         "tags" : [
           {
             "text": "Adjoint"
@@ -304,70 +311,66 @@
           "modifiers": ["white"]
         },
         "newsletter" : {
-          "block": {
-            "title": "L’essentiel de Paris",
-            "modifiers": ["color-secondary-background"]
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "form": {
+            "action": "#",
+            "method": "POST"
           },
-          "content": {
-            "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "input": {
             "placeholder": "Entrez votre courriel",
-            "inputId": "newsletter-input",
-            "submit": "Valider",
-            "otherNewsletters": {
-              "text": "Autres newsletters et alertes",
-              "url": "#"
-            }
+            "id": "connected-newsletter-input"
+          },
+          "submit": {
+            "text": "Valider"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
           }
         },
         "jecoute": {
-          "block": {
-            "title": "Paris j'écoute",
-            "modifiers": ["color-secondary-background"]
-          },
-          "content": {
-            "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
-            "button": {
-              "href": "#",
-              "text": "Posez votre question !"
-            }
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
           }
         },
         "social": {
-          "block": {
-            "title": "Restez connecté",
-            "modifiers": ["color-secondary-background"]
-          },
-          "content": {
-            "link": {
-              "href": "#",
-              "text": "Voir tous les réseaux sociaux"
-            },
-            "items": [
-              {
-                "icon": "twitter",
-                "count": "219 000",
-                "subscribe": {
-                  "url": "#",
-                  "text": "S’abonner à @paris"
-                }
-              },
-              {
-                "icon": "facebook",
-                "count": "2 508 576",
-                "subscribe": {
-                  "url": "#",
-                  "text": "Suivre la page Facebook"
-                }
-              },
-              {
-                "icon": "instagram",
-                "count": "16 449",
-                "subscribe": {
-                  "url": "#",
-                  "text": "S’abonner sur Instagram"
-                }
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "link": {
+                "href": "#",
+                "text": "S’abonner à @paris"
               }
-            ]
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "link": {
+                "href": "#",
+                "text": "Suivre la page Facebook"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "link": {
+                "href": "#",
+                "text": "S’abonner sur Instagram"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
           }
         }
       },

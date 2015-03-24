@@ -2,6 +2,9 @@ extends ../../layouts/stack/stack
 
 include ../../modules/anchors-list/anchors-list
 include ../../modules/block-content/block-content
+include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
+include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
 include ../../modules/cross-content/cross-content
@@ -9,10 +12,8 @@ include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
-include ../../modules/jecoute/jecoute
-include ../../modules/newsletter/newsletter
+include ../../modules/poll/poll
 include ../../modules/share/share
-include ../../modules/social/social
 
 include ../../components/components
 
@@ -42,8 +43,11 @@ append content
 
 append content
   .layout-content.layout-adjacent-before
-    div
-      +cross-content(data.cross_content)
+    +cross-content(data.cross_content)
+
+append content
+  .layout-content.layout-adjacent-before
+    +poll(data.poll)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
@@ -51,14 +55,11 @@ append content
       .layout-wrapper
         +heading(data.connected.heading)
         .layout-content
-          +block-content(data.connected.newsletter.block)
-            +newsletter(data.connected.newsletter.content)
+          +block-content-newsletter(data.connected.newsletter)
         .layout-content
-          +block-content(data.connected.jecoute.block)
-            +jecoute(data.connected.jecoute.content)
+          +block-content-jecoute(data.connected.jecoute)
         .layout-content
-          +block-content(data.connected.social.block)
-            +social(data.connected.social.content)
+          +block-content-social(data.connected.social)
 
 append content
   .layout-content.layout-adjacent-before

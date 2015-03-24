@@ -1,0 +1,12 @@
+mixin jecoute(opts)
+  .component.component-jecoute
+    .component-jecoute-title
+      p= opts.title
+    .component-jecoute-content
+      p.component-jecoute-heading= opts.text
+      form.component-jecoute-form(method="post")
+        textarea(placeholder= opts.textarea)
+        input(type="email", placeholder= opts.mail)
+        button.button(type="submit", class=opts.modifiers)
+          = opts.text_button
+
