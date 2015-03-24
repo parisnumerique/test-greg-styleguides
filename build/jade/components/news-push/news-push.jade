@@ -1,13 +1,12 @@
 mixin news-push(opts)
   .component.component-news-push
-    .actu
-      .after
+    .news-push-wrapper
+      .news-push-after
       - title = [opts.title]
       if opts.image.credit
-        - title.push("(" + opts.credit + ")")
-      - title = title.join(" ")
-      img(src=opts.image.src alt=opts.image.alt title=title)
-      .content
+        - title.push("(" + opts.image.credit + ")")
+      img(src=opts.image.src alt=opts.image.alt title=title.join(" "))
+      .news-push-content
         h3: span= opts.title
         p
           a(href=opts.href)= opts.text

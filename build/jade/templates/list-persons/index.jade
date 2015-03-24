@@ -1,18 +1,20 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/anchors-list/anchors-list
+include ../../modules/block-aside-checkboxes/block-aside-checkboxes
 include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
-include ../../modules/button/button
-include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/heading/heading
 include ../../modules/news-list/news-list
+include ../../modules/pagination/pagination
+include ../../modules/person-block/person-block
+include ../../modules/search-field/search-field
+include ../../modules/share/share
 
 include ../../components/components
 
@@ -34,23 +36,17 @@ append content
       .layout-wrapper
         aside.layout-aside
           .aside-wrapper
-            +anchors-list(data.aside.anchors_list)
+            +block-aside({})
+              +share(data.aside.share)
+            +block-aside({})
+              +search-field(data.aside.search)
+            +block-aside-checkboxes(data.aside.politique)
+            +block-aside-checkboxes(data.aside.arrondissement)
 
         .layout-content
-          each component in data.components
-            +#{component.type}(component.data)
-
-append content
-  .layout-content
-    .layout-wrapper
-      +heading(data.related.heading)
-      +news-list(data.related.news)
-
-append content
-  .layout-content.layout-separate-after
-    .layout-wrapper
-      +heading(data.most_shared.heading)
-      +news-list(data.most_shared.news)
+          each module in data.modules
+            +#{module.type}(module.data)
+          +pagination(data.pagination)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after

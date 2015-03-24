@@ -1,11 +1,10 @@
 include ../../components/buttons/buttons
 
 mixin person-block(opts)
-    .person-block 
-      .person-block-img(style='background-image: url(#{opts.image});')
-      .person-block-content
-        .person-block-title= opts.title
-        .person-block-text= opts.text
-      p.person-block-button
-        +button({text: "Voir la fiche", modifiers: "action"})
-
+  .person-block
+    .person-block-img(style='background-image: url(#{opts.image});')
+    .person-block-content
+      .person-block-title= opts.title
+      .person-block-text= opts.text
+    .person-block-button
+      +button({text: "Voir la fiche", modifiers: "action"})
