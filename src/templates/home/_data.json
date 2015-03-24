@@ -46,7 +46,7 @@
       },
       "quick_access": {
         "background": {
-          "image": "background.jpg",
+          "image": "../../modules/quick-access/video-background.jpg",
           "video": {
             "sources": [
               {"src": "//zippy.gfycat.com/PartialMadeupGorilla.webm", "type": "video/webm"},
