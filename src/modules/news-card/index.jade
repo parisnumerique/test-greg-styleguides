@@ -1,10 +1,26 @@
 include news-card
 include ../../helpers/code
 
-div(style="margin-top: 50px; max-width: 400px")
-  .lsg-module
-    +news-card(defaults)
+h2 Standard
+.lsg-module(style="max-width: 350px")
+  +news-card(defaults)
 +code({language: "jade"}).
   include news-card
 
   +news-card(#{JSON.stringify(defaults, null, 2)})
+
+h2 Test avec valeurs longues
+.lsg-module(style="max-width: 350px")
+  +news-card(long_data)
++code({language: "jade"}).
+  include news-card
+
+  +news-card(#{JSON.stringify(long_data, null, 2)})
+
+h2 Large
+.lsg-module(style="max-width: 350px")
+  +news-card(large)
++code({language: "jade"}).
+  include news-card
+
+  +news-card(#{JSON.stringify(large, null, 2)})

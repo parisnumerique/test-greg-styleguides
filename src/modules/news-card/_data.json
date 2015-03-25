@@ -9,6 +9,27 @@
         "facebook": 5,
         "twitter": 12
       }
+    },
+    "long_data": {
+      "href": "#",
+      "image": "image.jpg",
+      "category": "Longue catégorie avec de nombreux mots",
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra nisi fermentum nulla consequat",
+      "counters": {
+        "facebook": 12345,
+        "twitter": 67890
+      }
+    },
+    "large": {
+      "modifiers": ["large"],
+      "href": "#",
+      "image": "image.jpg",
+      "category": "Catégorie",
+      "title": "Titre",
+      "counters": {
+        "facebook": 5,
+        "twitter": 12
+      }
     }
   }
 }
