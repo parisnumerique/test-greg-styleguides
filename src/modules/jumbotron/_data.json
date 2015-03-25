@@ -4,6 +4,11 @@
       "image": "image.jpg",
       "title": "Titre",
       "text": "Texte"
+    },
+    "with_image_white": {
+      "image": "image-white.jpg",
+      "title": "Titre",
+      "text": "Texte"
     }
   }
 }
