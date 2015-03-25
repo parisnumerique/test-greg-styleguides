@@ -1,7 +1,7 @@
 {
   "index": {
     "data": {
-      "bodyModifiers": ["fixed-nav", "search-results"],
+      "bodyModifiers": ["fixed-nav", "search"],
       "header": {
         "title": "Paris",
         "h1": true,
@@ -29,26 +29,6 @@
           "visible": true,
           "url": "#",
           "text": "Mon compte"
-        },
-        "quick_access": {
-          "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
-          },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
-          }
         }
       },
       "heading": {
@@ -88,9 +68,15 @@
         "items": [
         ]
       },
-      "search_result": {
-        "result": "",
-        "items": []
+      "search_results": {
+        "title": "Contenus les plus recherchés sur Paris.fr",
+        "items": [
+          {
+            "href": "#",
+            "title": "Logement",
+            "text": "Services et infos pratiques"
+          }
+        ]
       },
       "connected": {
         "heading": {
