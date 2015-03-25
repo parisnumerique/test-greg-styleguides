@@ -1,0 +1,8 @@
+.component-html {
+  clear: both;
+  overflow: hidden;
+
+  > * {
+    max-width: 100%;
+  }
+}
