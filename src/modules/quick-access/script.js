@@ -9,6 +9,7 @@ Paris.quickAccess = (function(){
 
   var defaultOptions = {
     index: 'global', // the algolia index to use (should be defined in config.js)
+    link: 'url', // the algolia field to use as a link
     title: 'titre', // the algolia field to use as a title
     sections: 'onglet', // the algolia field to use as a section
     hitsPerPage: 6 // the number of results to display
@@ -154,7 +155,7 @@ Paris.quickAccess = (function(){
       $results.empty();
       $.each(results.hits, function(index, hit){
         var result = '<li>' +
-          '<a href="' + hit.url + '">' +
+          '<a href="' + hit[options.link] + '">' +
             '<span class="title">' + hit._highlightResult[options.title].value + '</span>';
         if (hit[options.algoliaSectionsField]) {
           result += '<span class="section">' + hit[options.sections] + '</span>';
