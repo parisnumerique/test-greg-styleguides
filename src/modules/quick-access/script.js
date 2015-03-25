@@ -8,6 +8,10 @@ var Paris = window.Paris || {};
 Paris.quickAccess = (function(){
 
   var defaultOptions = {
+    index: 'global', // the algolia index to use (should be defined in config.js)
+    title: 'titre', // the algolia field to use as a title
+    sections: 'onglet', // the algolia field to use as a section
+    hitsPerPage: 6 // the number of results to display
   };
 
   function quickAccess(selector, userOptions){
@@ -28,7 +32,7 @@ Paris.quickAccess = (function(){
       initOptions();
 
       algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
-      index = algolia.initIndex(Paris.config.algolia.index);
+      index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $parent = $el.parent();
 
@@ -137,7 +141,7 @@ Paris.quickAccess = (function(){
       var val = $searchFieldInput.val();
       if (val !== "") {
         index.search(val, onSearchResults, {
-          hitsPerPage: 6
+          hitsPerPage: options.hitsPerPage
         });
       } else {
         $results.empty();
@@ -146,14 +150,17 @@ Paris.quickAccess = (function(){
     }
 
     function onSearchResults(success, results) {
+      if (success !== true) {return;}
       $results.empty();
       $.each(results.hits, function(index, hit){
-        $results.append('<li>' +
+        var result = '<li>' +
           '<a href="' + hit.url + '">' +
-            '<span class="title">' + hit._highlightResult.nom.value + '</span>' +
-            '<span class="section">' + hit.rubriques[0] + '</span>' +
-          '</a>' +
-        '</li>');
+            '<span class="title">' + hit._highlightResult[options.title].value + '</span>';
+        if (hit[options.algoliaSectionsField]) {
+          result += '<span class="section">' + hit[options.sections] + '</span>';
+        }
+        result += '</a></li>';
+        $results.append(result);
       });
       $more.show();
     }

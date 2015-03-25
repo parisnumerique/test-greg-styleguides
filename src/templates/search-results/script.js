@@ -10,8 +10,12 @@ var Paris = window.Paris || {};
 Paris.searchResults = (function(){
 
   var defaultOptions = {
-    resultsPerPage: 8,
-    facets: ["rubriques", "univers"]
+    index: 'global', // the algolia index to use (should be defined in config.js)
+    title: 'titre', // the algolia field to use as a title
+    sections: 'onglet', // the algolia field to use as a section
+    resultsPerPage: 8, // the number of results to display per page
+    facets: ["onglet"] // the available facets that will be displayed in the left column (should have been created on Algolia)
+                       // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
   };
 
   function searchResults(selector, userOptions){
@@ -34,7 +38,7 @@ Paris.searchResults = (function(){
       initOptions();
 
       algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
-      index = algolia.initIndex(Paris.config.algolia.index);
+      index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $searchFieldInput = $el.find('#main-search');
       $results = $el.find('#results');
@@ -94,8 +98,8 @@ Paris.searchResults = (function(){
         $.each(data.hits, function(index, hit){
           search_result_data.items.push({
             href: "#", //hit.url,
-            title: hit.nom,
-            text: hit.rubriques[0]
+            title: hit[options.title],
+            text: hit[options.sections]
           });
         });
       }
@@ -119,7 +123,7 @@ Paris.searchResults = (function(){
           $.each(options.facets, function(index, facet) {
 
             var block_aside_checkboxes_data = {
-              title: capitalize(facet),
+              title: Paris.i18n.t("search_results/facets/"+facet),
               name: facet,
               items: []
             };
