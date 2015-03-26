@@ -10,5 +10,5 @@ mixin accordion(opts)
             span.icon.icon-arrow-top
         .accordion-item-content(role='tabpanel' aria-labelledby='h-#{slug}' id="#{slug}")
           .accordion-content-wrapper
-            = item.content
+            != item.content
 
