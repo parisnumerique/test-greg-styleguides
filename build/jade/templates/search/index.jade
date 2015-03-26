@@ -1,0 +1,51 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/block-aside-checkboxes/block-aside-checkboxes
+include ../../modules/block-aside-links/block-aside-links
+include ../../modules/block-content/block-content
+include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
+include ../../modules/block-content-social/block-content-social
+include ../../modules/footer/footer
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/hub-heading/hub-heading
+include ../../modules/search-field/search-field
+include ../../modules/search-results-list/search-results-list
+
+append content
+  +header(data.header)
+
+append content
+  .layout-content
+    +hub-heading(data.heading)
+      +search-field(data.search)
+
+append content
+  .layout-left-col
+    .layout-wrapper
+      aside.layout-aside
+        //+block-aside-links(data.block_aside_links)
+        //+block-aside-checkboxes(data.block_aside_checkboxes)
+
+      .layout-content#results
+        +search-results-list(data.search_results)
+
+append content
+  .layout-content
+
+append content
+  .layout-content.color-secondary-background.layout-separate-after
+    .layout-three-col
+      .layout-wrapper
+        +heading(data.connected.heading)
+        .layout-content
+          +block-content-newsletter(data.connected.newsletter)
+        .layout-content
+          +block-content-jecoute(data.connected.jecoute)
+        .layout-content
+          +block-content-social(data.connected.social)
+
+append content
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

@@ -1,0 +1,9 @@
+{
+  "index": {
+    "defaults": {
+    },
+    "with_block": {
+      "block": "Contenu <strong>HTML</strong>"
+    }
+  }
+}
