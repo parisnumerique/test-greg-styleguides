@@ -7,18 +7,23 @@ var capitalize = require("underscore.string/capitalize");
 
 var Paris = window.Paris || {};
 
-Paris.searchResults = (function(){
+Paris.search = (function(){
 
   var defaultOptions = {
-    resultsPerPage: 8,
-    facets: ["rubriques", "univers"]
+    index: 'global', // the algolia index to use (should be defined in config.js)
+    link: 'url', // the algolia field to use as a link
+    title: 'titre', // the algolia field to use as a title
+    sections: 'onglet', // the algolia field to use as a section
+    resultsPerPage: 8, // the number of results to display per page
+    facets: ["onglet"] // the available facets that will be displayed in the left column (should have been created on Algolia)
+                       // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
   };
 
-  function searchResults(selector, userOptions){
+  function search(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       templates = {
-        search_result: require('../../modules/search-results-list/_client.jade'),
+        search_results_list: require('../../modules/search-results-list/_client.jade'),
         block_aside_checkboxes: require('../../modules/block-aside-checkboxes/_client.jade')
       },
       api = {},
@@ -34,7 +39,7 @@ Paris.searchResults = (function(){
       initOptions();
 
       algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
-      index = algolia.initIndex(Paris.config.algolia.index);
+      index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $searchFieldInput = $el.find('#main-search');
       $results = $el.find('#results');
@@ -77,30 +82,31 @@ Paris.searchResults = (function(){
     }
 
     function renderResults(data) {
-      var search_result_data = {
+      var search_results_list_data = {
         items: []
       };
 
       if (!data) { // No search
-        search_result_data.result = "";
+        search_results_list_data.title = "";
+        // TODO show default
       } else if (data.nbHits === 0) { // Search with no results
-        search_result_data.result = Paris.i18n.t("search_results/no_result");
+        search_results_list_data.title = Paris.i18n.t("search_results/no_result");
       } else { // Search with results
-        search_result_data.result = Paris.i18n.t("search_results/title", {
+        search_results_list_data.title = Paris.i18n.t("search_results/title", {
           count: data.nbHits,
           formattedCount: Paris.i18n.formatNumber(data.nbHits)
         });
 
         $.each(data.hits, function(index, hit){
-          search_result_data.items.push({
-            href: "#", //hit.url,
-            title: hit.nom,
-            text: hit.rubriques[0]
+          search_results_list_data.items.push({
+            href: hit[options.link],
+            title: hit[options.title],
+            text: hit[options.sections]
           });
         });
       }
 
-      var results = templates.search_result({opts: search_result_data});
+      var results = templates.search_results_list({opts: search_results_list_data});
       $results.html(results);
     }
 
@@ -119,7 +125,7 @@ Paris.searchResults = (function(){
           $.each(options.facets, function(index, facet) {
 
             var block_aside_checkboxes_data = {
-              title: capitalize(facet),
+              title: Paris.i18n.t("search_results/facets/"+facet),
               name: facet,
               items: []
             };
@@ -173,12 +179,12 @@ Paris.searchResults = (function(){
 
   return function(selector, userOptions){
     return $(selector).each(function(){
-      searchResults(this, userOptions);
+      search(this, userOptions);
     });
   };
 
 })();
 
 $(document).ready(function(){
-  Paris.searchResults('body.search-results');
+  Paris.search('body.search');
 });

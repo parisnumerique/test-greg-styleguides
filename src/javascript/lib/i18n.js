@@ -22,11 +22,17 @@ Globalize.loadMessages(Paris.i18n.locales);
 
 // Helper function for translation
 Paris.i18n.t = function translate(key, data) {
-  if (typeof data === 'undefined') {
-    return Globalize(Paris.i18n.locale).formatMessage(key);
-  } else {
-    var formatter = Globalize(Paris.i18n.locale).messageFormatter(key);
-    return formatter(data);
+  try {
+    if (typeof data === 'undefined') {
+      return Globalize(Paris.i18n.locale).formatMessage(key);
+    } else {
+      var formatter = Globalize(Paris.i18n.locale).messageFormatter(key);
+      return formatter(data);
+    }
+  }
+  catch (e) {
+    console.error(e);
+    return key;
   }
 };
 

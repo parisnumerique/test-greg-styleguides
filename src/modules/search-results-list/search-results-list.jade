@@ -6,8 +6,8 @@ mixin search-results-list(opts)
     if opts.items.length === 0
       h1= opts.no_result
     else
-      if opts.result
-        h1!= opts.result
+      if opts.title
+        h1!= opts.title
       else
         .search-results-list-separate-page
           p= opts.page
