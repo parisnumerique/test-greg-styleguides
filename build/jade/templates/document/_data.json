@@ -184,7 +184,18 @@
         {
           "type": "text",
           "data": {
-            "block": "<p>Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.</p><p><a href=\"#\" class=\"button\">Estimer mes droits</a></p>"
+            "block": "<p>Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.</p>"
+          }
+        },
+        {
+          "type": "buttons",
+          "data": {
+            "items": [
+              {
+                "href": "#",
+                "text": "Estimer mes droits"
+              }
+            ]
           }
         },
         {
@@ -235,7 +246,24 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2 class='anchor' id='constituer-un-dossier'>Constituer un dossier</h2><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><p><a href=\"#\" class=\"button\">Télécharger le formulaire de demande de logement social</a></p><h3>Les documents à fournir</h3><h4>Pour tous :</h4><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><ul><li>Le <a href=\"#\">formulaire de demande de logement</a> rempli</li><li>Votre carte d’identité, votre passeport ou votre title de séjour en cours de validité.  Si vous êtes ressortissant d'un pays membre de l'Union Européenne, d'Islande, de Norvège, du Liechtenstein ou de Suisse, vous pouvez déposer une demande de logement uniquement avec la carte d'identité de votre pays d'origine ou votre passeport.</li><li>Carte d’identité ou passeport ou titre de séjour en cours de validité pour toutes les personnes majeures à loger</li><li>Les deux derniers avis d’imposition ou de non-imposition de toutes les personnes qui vivront dans le logement (seulement le dernier avis dans le cadre d'un renouvellement)</li><li>Justificatifs des ressources du dernier mois de toutes les personnes qui vivront dans le logement (fiche de paye, attestation d’allocation…)</li><li>Justificatif du domicile actuel (bail et quittances de loyer ou reçus d’hôtel ou attestation d’hébergement…)</li></ul><h4>Attention : dans certains cas, vous devez fournir des pièces complémentaires.</h4>"
+            "block": "<h2 class='anchor' id='constituer-un-dossier'>Constituer un dossier</h2><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p>"
+          }
+        },
+        {
+          "type": "buttons",
+          "data": {
+            "items": [
+              {
+                "href": "#",
+                "text": "Télécharger le formulaire de demande de logement social"
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h3>Les documents à fournir</h3><h4>Pour tous :</h4><p>Première étape pour constituer votre dossier : remplir le formulaire de demande logement, auquel vous devez y joindre certains documents. Retrouvez les pièces justificatives à fournir selon votre situation.</p><ul><li>Le <a href=\"#\">formulaire de demande de logement</a> rempli</li><li>Votre carte d’identité, votre passeport ou votre title de séjour en cours de validité.  Si vous êtes ressortissant d'un pays membre de l'Union Européenne, d'Islande, de Norvège, du Liechtenstein ou de Suisse, vous pouvez déposer une demande de logement uniquement avec la carte d'identité de votre pays d'origine ou votre passeport.</li><li>Carte d’identité ou passeport ou titre de séjour en cours de validité pour toutes les personnes majeures à loger</li><li>Les deux derniers avis d’imposition ou de non-imposition de toutes les personnes qui vivront dans le logement (seulement le dernier avis dans le cadre d'un renouvellement)</li><li>Justificatifs des ressources du dernier mois de toutes les personnes qui vivront dans le logement (fiche de paye, attestation d’allocation…)</li><li>Justificatif du domicile actuel (bail et quittances de loyer ou reçus d’hôtel ou attestation d’hébergement…)</li></ul><h4>Attention : dans certains cas, vous devez fournir des pièces complémentaires.</h4>"
           }
         },
         {
@@ -273,7 +301,18 @@
         {
           "type": "text",
           "data": {
-            "block": "<h3>Envoyer ou déposer un dossier</h3><p><a href=\"#\" class=\"button\">Le numéro unique régional : explication et coordonnées du service</a></p>"
+            "block": "<h3>Envoyer ou déposer un dossier</h3>"
+          }
+        },
+        {
+          "type": "buttons",
+          "data": {
+            "items": [
+              {
+                "href": "#",
+                "text": "Le numéro unique régional : explication et coordonnées du service"
+              }
+            ]
           }
         },
         {

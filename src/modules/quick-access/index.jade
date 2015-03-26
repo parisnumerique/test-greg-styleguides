@@ -9,6 +9,14 @@ h2 Standard
 
   +quick-access(#{JSON.stringify(defaults, null, 2)})
 
+h2 Avec fond vidéo
+.lsg-module
+  +quick-access(with_video)
++code({language: "jade"}).
+  include quick-access
+
+  +quick-access(#{JSON.stringify(with_video, null, 2)})
+
 h2 Recherche en cours
 .lsg-module
   +quick-access(searching)

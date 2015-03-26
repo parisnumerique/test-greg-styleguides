@@ -33,7 +33,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
-    padding: 20px 12px;
+    padding: 20px 40px 20px 12px;
     text-decoration: none;
   }
 
@@ -42,7 +42,42 @@
   }
 
   .accordion-content-wrapper {
+    color: $gray51;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
     padding-bottom: 12px;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    a:not(.button) {
+      color: $red2;
+      text-decoration: underline;
+      &:hover {text-decoration: none;}
+    }
+
+    ul, ol, p {
+      color: $gray51;
+      margin: 0 0 20px;
+      padding: 0;
+    }
+
+    ul, ol {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      list-style-position: inside;
+
+      li + li {
+        margin-top: 10px;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+    }
   }
 
   .collapse {

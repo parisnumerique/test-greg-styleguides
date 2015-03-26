@@ -29,4 +29,4 @@ require('../modules/sections-panel/script');
 require('../modules/share/script');
 
 // load our templates
-require('../templates/search-results/script');
+require('../templates/search/script');

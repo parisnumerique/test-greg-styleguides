@@ -2,6 +2,7 @@
   "components": [
     "accordion",
     "buttons",
+    "html",
     "image",
     "jecoute",
     "links",

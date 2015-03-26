@@ -15,14 +15,17 @@ Paris.i18n.locales = {
         "  other {{formattedCount} résultats}",
         "}"
       ],
-      no_result: "Désolé, votre recherche ne correspond à aucun de nos contenus."
+      no_result: "Désolé, votre recherche ne correspond à aucun de nos contenus.",
+      facets: {
+        onglet: "Catégories"
+      }
     }
   },
   en: {
     share: {
       facebook: 'Share on Facebook',
       twitter: 'Share on Twitter',
-      email: 'Share by email',
+      email: 'Share by email'
     },
     search_results: {
       title: [
@@ -31,14 +34,17 @@ Paris.i18n.locales = {
         "  other {{formattedCount} results}",
         "}"
       ],
-      no_result: "Sorry, your search did not match any of our contents."
+      no_result: "Sorry, your search did not match any of our contents.",
+      facets: {
+        onglet: "Categories"
+      }
     }
   },
   es: {
     share: {
       facebook: 'Compartir en Facebook',
       twitter: 'Compartir en Twitter',
-      email: 'Compartir por correo electrónico',
+      email: 'Compartir por correo electrónico'
     },
     search_results: {
       title: [
@@ -47,7 +53,10 @@ Paris.i18n.locales = {
         "  other {{formattedCount} resultados}",
         "}"
       ],
-      no_result: "Lo sentimos, su búsqueda no coincide con ninguno de nuestros contenidos."
+      no_result: "Lo sentimos, su búsqueda no coincide con ninguno de nuestros contenidos.",
+      facets: {
+        onglet: "Categorías"
+      }
     }
   }
 };

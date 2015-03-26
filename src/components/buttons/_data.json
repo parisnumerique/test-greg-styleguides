@@ -29,6 +29,15 @@
           "title": "Titre"
         }
       ]
+    },
+    "single_button": {
+      "items": [
+        {
+          "href": "#",
+          "text": "Texte",
+          "title": "Titre"
+        }
+      ]
     }
   }
 }
