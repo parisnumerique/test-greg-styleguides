@@ -3,7 +3,6 @@
   width: 260px;
   top: 0;
 
-
   .anchor-bar {
     background-color: $white;
     border-radius: 5px;
@@ -12,9 +11,13 @@
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
+
+    &:hover {
+      background-color: lighten($color-tertiary, 18);
+    }
   }
 
-  a.anchor-link {
+  .anchor-link {
     color: $gray51;
     display: block;
     line-height: 25px;
@@ -26,7 +29,7 @@
     overflow: hidden;
   }
 
-  span.anchor-progress {
+  .anchor-progress {
     background-color: $color-tertiary;
     display: block;
     height: 47px;
