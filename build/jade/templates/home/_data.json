@@ -44,380 +44,406 @@
           "text": "Mon compte"
         }
       },
-      "quick_access": {
-        "background": {
-          "image": "../../modules/quick-access/video-background.jpg",
-          "video": {
-            "sources": [
-              {"src": "//zippy.gfycat.com/PartialMadeupGorilla.webm", "type": "video/webm"},
-              {"src": "//zippy.gfycat.com/PartialMadeupGorilla.mp4", "type": "video/mp4"}
+      "blocks": [
+        {
+          "type": "quick-access",
+          "data": {
+            "background": {
+              "image": "../../modules/quick-access/video-background.jpg",
+              "video": {
+                "sources": [
+                  {"src": "//zippy.gfycat.com/PartialMadeupGorilla.webm", "type": "video/webm"},
+                  {"src": "//zippy.gfycat.com/PartialMadeupGorilla.mp4", "type": "video/mp4"}
+                ]
+              }
+            },
+            "search": {
+              "input": {
+                "placeholder": "Rechercher un service, une information..."
+              },
+              "submit": {
+                "text": "Rechercher",
+                "icon": true
+              },
+              "around": {
+                "href": "http://meslieux.paris.fr",
+                "text": "Autour de moi",
+                "target": "_blank"
+              }
+            },
+            "items": [
+              {
+                "href": "#",
+                "text": "Inscription à la crèche"
+              },
+              {
+                "href": "#",
+                "text": "Cours municipaux pour adultes"
+              },
+              {
+                "href": "#",
+                "text": "État civil"
+              },
+              {
+                "href": "#",
+                "text": "Encombrants"
+              },
+              {
+                "href": "#",
+                "text": "Tennis"
+              },
+              {
+                "href": "#",
+                "text": "Signalement"
+              },
+              {
+                "href": "#",
+                "text": "Facil’familles"
+              },
+              {
+                "href": "#",
+                "text": "Gardes d’enfants"
+              }
+            ],
+            "results": {
+              "button": {
+                "href": "#",
+                "text": "Voir tous les résultats"
+              }
+            },
+            "notice": {
+              "modifiers": ["bottom", "transparent"],
+              "closable": true,
+              "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+            }
+          }
+        },
+        {
+          "type": "sections",
+          "data": {
+            "heading": {
+              "title": "Services et infos pratiques"
+            },
+            "list": {
+              "items": [
+                {
+                  "title": "Aides & démarches",
+                  "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                },
+                {
+                  "title": "Culture & patrimoine",
+                  "text": "Sed posuere consectetur est at lobortis."
+                },
+                {
+                  "title": "Déplacements & stationnement",
+                  "text": "Donec id elit non mi porta gravida at eget metus."
+                },
+                {
+                  "title": "Emploi & formations",
+                  "text": "Sed posuere consectetur est at lobortis."
+                },
+                {
+                  "title": "Environnement & espaces verts",
+                  "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+                },
+                {
+                  "title": "Famille & éducation",
+                  "text": "Donec ullamcorper nulla non metus auctor fringilla."
+                },
+                {
+                  "title": "Innovation",
+                  "text": "Cras mattis consectetur purus sit amet fermentum."
+                },
+                {
+                  "title": "Logement",
+                  "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+                },
+                {
+                  "title": "Santé",
+                  "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                },
+                {
+                  "title": "Social & solidarités",
+                  "text": "Maecenas sed diam eget risus varius blandit sit amet."
+                },
+                {
+                  "title": "Sports & loisirs",
+                  "text": "Cras mattis consectetur purus sit amet fermentum."
+                },
+                {
+                  "title": "Urbanisme",
+                  "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+                },
+                {
+                  "title": "Associations",
+                  "text": "Sed posuere consectetur est at lobortis."
+                },
+                {
+                  "text": "Vous cherchez autre chose&nbsp;?",
+                  "modifiers": ["more"]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "jumbotron",
+          "data": {
+            "image": "../../modules/jumbotron/image.jpg",
+            "title": "À la une",
+            "text": "Revivez Nuit Blanche en photos et vidéo"
+          }
+        },
+        {
+          "type": "news",
+          "data": {
+            "heading": {
+              "title": "En ce moment",
+              "link": "Voir toutes les actualités"
+            },
+            "list": {
+              "modifiers": ["news-cards"],
+              "items": [
+                {
+                  "href": "#",
+                  "image": "../../modules/news-card/image.jpg",
+                  "category": "Mobilité",
+                  "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+                  "counters": {
+                    "facebook": 5,
+                    "twitter": 12
+                  }
+                },
+                {
+                  "href": "#",
+                  "image": "../../modules/news-card/image.jpg",
+                  "category": "Culture et patrimoine",
+                  "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
+                  "counters": {
+                    "facebook": 5,
+                    "twitter": 12
+                  }
+                },
+                {
+                  "href": "#",
+                  "image": "../../modules/news-card/image.jpg",
+                  "category": "Environnement",
+                  "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+                  "counters": {
+                    "facebook": 5,
+                    "twitter": 12
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "que-faire",
+          "data": {
+            "background": "../../modules/que-faire/que-faire-back-img.jpg",
+            "logo": {
+              "href": "#",
+              "image": "../../modules/que-faire/que-faire-img.png"
+            },
+            "items": [
+              {"href": "#", "text": "Que faire à Paris ce week-end ?"},
+              {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
+              {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
             ]
           }
         },
-        "search": {
-          "input": {
-            "placeholder": "Rechercher un service, une information..."
-          },
-          "submit": {
-            "text": "Rechercher",
-            "icon": true
-          },
-          "around": {
-            "href": "http://meslieux.paris.fr",
-            "text": "Autour de moi",
-            "target": "_blank"
-          }
-        },
-        "items": [
-          {
-            "href": "#",
-            "text": "Inscription à la crèche"
-          },
-          {
-            "href": "#",
-            "text": "Cours municipaux pour adultes"
-          },
-          {
-            "href": "#",
-            "text": "État civil"
-          },
-          {
-            "href": "#",
-            "text": "Encombrants"
-          },
-          {
-            "href": "#",
-            "text": "Tennis"
-          },
-          {
-            "href": "#",
-            "text": "Signalement"
-          },
-          {
-            "href": "#",
-            "text": "Facil’familles"
-          },
-          {
-            "href": "#",
-            "text": "Gardes d’enfants"
-          }
-        ],
-        "results": {
-          "button": {
-            "href": "#",
-            "text": "Voir tous les résultats"
-          }
-        },
-        "notice": {
-          "modifiers": ["bottom", "transparent"],
-          "closable": true,
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
-        }
-      },
-      "sections": {
-        "heading": {
-          "title": "Services et infos pratiques"
-        },
-        "list": {
-          "items": [
-            {
-              "title": "Aides & démarches",
-              "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-            },
-            {
-              "title": "Culture & patrimoine",
-              "text": "Sed posuere consectetur est at lobortis."
-            },
-            {
-              "title": "Déplacements & stationnement",
-              "text": "Donec id elit non mi porta gravida at eget metus."
-            },
-            {
-              "title": "Emploi & formations",
-              "text": "Sed posuere consectetur est at lobortis."
-            },
-            {
-              "title": "Environnement & espaces verts",
-              "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-            },
-            {
-              "title": "Famille & éducation",
-              "text": "Donec ullamcorper nulla non metus auctor fringilla."
-            },
-            {
-              "title": "Innovation",
-              "text": "Cras mattis consectetur purus sit amet fermentum."
-            },
-            {
-              "title": "Logement",
-              "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-            },
-            {
-              "title": "Santé",
-              "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-            },
-            {
-              "title": "Social & solidarités",
-              "text": "Maecenas sed diam eget risus varius blandit sit amet."
-            },
-            {
-              "title": "Sports & loisirs",
-              "text": "Cras mattis consectetur purus sit amet fermentum."
-            },
-            {
-              "title": "Urbanisme",
-              "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-            },
-            {
-              "title": "Associations",
-              "text": "Sed posuere consectetur est at lobortis."
-            },
-            {
-              "text": "Vous cherchez autre chose&nbsp;?",
-              "modifiers": ["more"]
-            }
-          ]
-        }
-      },
-      "jumbotron": {
-        "image": "../../modules/jumbotron/image.jpg",
-        "title": "À la une",
-        "text": "Revivez Nuit Blanche en photos et vidéo"
-      },
-      "news": {
-        "heading": {
-          "title": "En ce moment",
-          "link": "Voir toutes les actualités"
-        },
-        "list": {
-          "modifiers": ["news-cards"],
-          "items": [
-            {
-              "href": "#",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Mobilité",
-              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
-              "counters": {
-                "facebook": 5,
-                "twitter": 12
-              }
-            },
-            {
-              "href": "#",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Culture et patrimoine",
-              "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
-              "counters": {
-                "facebook": 5,
-                "twitter": 12
-              }
-            },
-            {
-              "href": "#",
-              "image": "../../modules/news-card/image.jpg",
-              "category": "Environnement",
-              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
-              "counters": {
-                "facebook": 5,
-                "twitter": 12
-              }
-            }
-          ]
-        }
-      },
-      "que_faire": {
-        "background": "../../modules/que-faire/que-faire-back-img.jpg",
-        "logo": {
-          "href": "#",
-          "image": "../../modules/que-faire/que-faire-img.png"
-        },
-        "items": [
-          {"href": "#", "text": "Que faire à Paris ce week-end ?"},
-          {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
-          {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-        ]
-      },
-      "get_involved": {
-        "heading": {
-          "title": "Participez !",
-          "link": {
-            "href": "#",
-            "text": "Accéder à l’espace participatif"
-          }
-        },
-        "items": [
-          {"href": "#", "image": "../../modules/get-involved/get-involved-img1.png", "text": "Votez pour le budget participatif"},
-          {"href": "#", "image": "../../modules/get-involved/get-involved-img2.png", "text": "E-pétition, prenez la main"}
-        ]
-      },
-      "gallery": {
-        "heading": {
-          "title": "Vu par les Parisiens"
-        },
-        "gallery_ugc": {
-          "title": "Hashtags de la semaine",
-          "hashtags": [
-            {
-              "url": "../../modules/gallery-ugc/refresh.html",
-              "text": "#automneàparis",
-              "current": true
-            },{
-              "url": "../../modules/gallery-ugc/refresh.html",
-              "text": "#nuit_blanche"
-            }
-          ],
-          "items": [
-            {
-              "image": "../../modules/gallery-ugc/picture1.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture2.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture3.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture4.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture5.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture6.jpg",
-              "text": "@user",
-              "href": "#"
-            }
-          ]
-        }
-      },
-      "connected": {
-        "newsletter" : {
-          "title": "L’essentiel de Paris",
-          "modifiers": ["color-secondary-background"],
-          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
-          "form": {
-            "action": "#",
-            "method": "POST"
-          },
-          "input": {
-            "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
-          },
-          "submit": {
-            "text": "Valider"
-          },
-          "link": {
-            "href": "#",
-            "text": "Autres newsletters et alertes"
-          }
-        },
-        "jecoute": {
-          "title": "Paris j'écoute",
-          "modifiers": ["color-secondary-background"],
-          "items": [
-            {
-              "question": {
-                "user": "@juliechanal",
-                "time": "9h30",
-                "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
-              },
-              "answer": {
-                "user": "@Parisjecoute",
-                "time": "10h11",
-                "text": "Oui, la piscine reste ouverte cet été."
-              }
-            },
-            {
-              "question": {
-                "user": "@JuliePetrucci",
-                "time": "10h20",
-                "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
-              },
-              "answer": {
-                "user": "@Parisjecoute",
-                "time": "10h50",
-                "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
-              }
-            },
-            {
-              "question": {
-                "user": "@billy141512",
-                "time": "11h02",
-                "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
-              },
-              "answer": {
-                "user": "@Parisjecoute",
-                "time": "11h14",
-                "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
-              }
-            }
-          ],
-          "button": {
-            "href": "#",
-            "text": "Posez votre question !"
-          }
-        },
-        "social": {
-          "title": "Restez connecté",
-          "modifiers": ["color-secondary-background"],
-          "items": [
-            {
-              "icon": "twitter",
-              "count": "219 000",
+        {
+          "type": "get-involved",
+          "data": {
+            "heading": {
+              "title": "Participez !",
               "link": {
                 "href": "#",
-                "text": "S’abonner à @paris"
+                "text": "Accéder à l’espace participatif"
               }
             },
-            {
-              "icon": "facebook",
-              "count": "2 508 576",
-              "link": {
-                "href": "#",
-                "text": "Suivre la page Facebook"
+            "items": [
+              {"href": "#", "image": "../../modules/get-involved/get-involved-img1.png", "text": "Votez pour le budget participatif"},
+              {"href": "#", "image": "../../modules/get-involved/get-involved-img2.png", "text": "E-pétition, prenez la main"}
+            ]
+          }
+        },
+        {
+          "type": "stay-connected",
+          "data": {
+            "gallery": {
+              "heading": {
+                "title": "Vu par les Parisiens"
+              },
+              "gallery_ugc": {
+                "title": "Hashtags de la semaine",
+                "hashtags": [
+                  {
+                    "url": "../../modules/gallery-ugc/refresh.html",
+                    "text": "#automneàparis",
+                    "current": true
+                  },{
+                    "url": "../../modules/gallery-ugc/refresh.html",
+                    "text": "#nuit_blanche"
+                  }
+                ],
+                "items": [
+                  {
+                    "image": "../../modules/gallery-ugc/picture1.jpg",
+                    "text": "@user",
+                    "href": "#"
+                  },
+                  {
+                    "image": "../../modules/gallery-ugc/picture2.jpg",
+                    "text": "@user",
+                    "href": "#"
+                  },
+                  {
+                    "image": "../../modules/gallery-ugc/picture3.jpg",
+                    "text": "@user",
+                    "href": "#"
+                  },
+                  {
+                    "image": "../../modules/gallery-ugc/picture4.jpg",
+                    "text": "@user",
+                    "href": "#"
+                  },
+                  {
+                    "image": "../../modules/gallery-ugc/picture5.jpg",
+                    "text": "@user",
+                    "href": "#"
+                  },
+                  {
+                    "image": "../../modules/gallery-ugc/picture6.jpg",
+                    "text": "@user",
+                    "href": "#"
+                  }
+                ]
               }
             },
-            {
-              "icon": "instagram",
-              "count": "16 449",
+            "newsletter" : {
+              "title": "L’essentiel de Paris",
+              "modifiers": ["color-secondary-background"],
+              "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+              "form": {
+                "action": "#",
+                "method": "POST"
+              },
+              "input": {
+                "placeholder": "Entrez votre courriel",
+                "id": "connected-newsletter-input"
+              },
+              "submit": {
+                "text": "Valider"
+              },
               "link": {
                 "href": "#",
-                "text": "S’abonner sur Instagram"
+                "text": "Autres newsletters et alertes"
+              }
+            },
+            "jecoute": {
+              "title": "Paris j'écoute",
+              "modifiers": ["color-secondary-background"],
+              "items": [
+                {
+                  "question": {
+                    "user": "@juliechanal",
+                    "time": "9h30",
+                    "text": "Bonjour, est-ce que la piscine Joséphine Baker sera ouverte cet été ?"
+                  },
+                  "answer": {
+                    "user": "@Parisjecoute",
+                    "time": "10h11",
+                    "text": "Oui, la piscine reste ouverte cet été."
+                  }
+                },
+                {
+                  "question": {
+                    "user": "@JuliePetrucci",
+                    "time": "10h20",
+                    "text": "Bjr, je loue un local commercial. Quelles sont les démarches pour peindre la façade d'une autre couleur et y peindre le logo ?"
+                  },
+                  "answer": {
+                    "user": "@Parisjecoute",
+                    "time": "10h50",
+                    "text": "bjr, il faut déposer une déclaration préalable au 6 promenade Claude Lévi-Strauss dans le 13e http://t.co/h2uYPqkEOx"
+                  }
+                },
+                {
+                  "question": {
+                    "user": "@billy141512",
+                    "time": "11h02",
+                    "text": "Bonjour, à propos du plan qualité air à Paris, les motos de 2012 (donc 3*) seront-elles autorisées en 2020 ? Pas clair."
+                  },
+                  "answer": {
+                    "user": "@Parisjecoute",
+                    "time": "11h14",
+                    "text": "bonjour, les motos de classe 3 étoiles seront bien concernées par ces mesures de restriction."
+                  }
+                }
+              ],
+              "button": {
+                "href": "#",
+                "text": "Posez votre question !"
+              }
+            },
+            "social": {
+              "title": "Restez connecté",
+              "modifiers": ["color-secondary-background"],
+              "items": [
+                {
+                  "icon": "twitter",
+                  "count": "219 000",
+                  "link": {
+                    "href": "#",
+                    "text": "S’abonner à @paris"
+                  }
+                },
+                {
+                  "icon": "facebook",
+                  "count": "2 508 576",
+                  "link": {
+                    "href": "#",
+                    "text": "Suivre la page Facebook"
+                  }
+                },
+                {
+                  "icon": "instagram",
+                  "count": "16 449",
+                  "link": {
+                    "href": "#",
+                    "text": "S’abonner sur Instagram"
+                  }
+                }
+              ],
+              "link": {
+                "href": "#",
+                "text": "Voir tous les réseaux sociaux"
               }
             }
-          ],
-          "link": {
-            "href": "#",
-            "text": "Voir tous les réseaux sociaux"
+          }
+        },
+        {
+          "type": "municipal-team",
+          "data": {
+            "heading": {
+              "title": "La Maire et ses adjoints",
+              "link": {
+                "href": "#",
+                "text": "L’Hôtel de ville"
+              },
+              "modifiers": ["white"]
+            },
+            "img": {
+              "src": "../../modules/municipal-team/image.jpg",
+              "alt": "La Maire et ses adjoints"
+            },
+            "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+            "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
           }
         }
-      },
-      "municipal_team": {
-        "heading": {
-          "title": "La Maire et ses adjoints",
-          "link": {
-            "href": "#",
-            "text": "L’Hôtel de ville"
-          },
-          "modifiers": ["white"]
-        },
-        "img": {
-          "src": "../../modules/municipal-team/image.jpg",
-          "alt": "La Maire et ses adjoints"
-        },
-        "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
-        "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
-      },
+      ],
       "footer": {
         "logo": {
           "href": "#",

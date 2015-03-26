@@ -2,7 +2,7 @@
 
 ## 0.7 (2015-03-26)
 
-Main feature: improved search modules and template
+### Improved search modules and template
 
 * module `quick-access`: added options for easier Algolia configuration
 * module `search-field`: added documentation in `script.js`
@@ -14,7 +14,13 @@ Main feature: improved search modules and template
 * `locales.js`: added facet names translations
 * `config.js`: better documentation, you can now define multiple Algolia indexes
 
-Miscellaneous:
+### Modularized the `home` template with `blocks`
+
+The data model of the `home` template is now based on an array of `blocks` that are Jade mixins defined in `src/templates/home/blocks/`
+
+The template has been modified in order to loop on this array an call the mixins.
+
+### Miscellaneous:
 
 * module `quick-access`: now supports video background
     * added an example in documentation
@@ -24,6 +30,7 @@ Miscellaneous:
 * module `news-card`: added examples with long values and `large` modifier, fixed hover bugs, improved social-counters animation
 * module `document-heading`: background image is now centered vertically
 * module `jumbotron`: works with a light background, added a test example to the documentation
+* module `anchors-list`: added rollovers
 * component `accordion`: now supports basic HTML content, better rendering, improved documentation with better examples
 * component `buttons`: can be used for adding a single button (without a title)
 * component `text`: removed inline .button from templates and documentation, use a buttons component instead
