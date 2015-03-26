@@ -10,8 +10,6 @@ mixin search-field(opts)
       else
         = opts.submit.text
     if opts.around
-      +button({
-        "href": "#",
-        "text": opts.around.text,
-        "modifiers": ["marker"]
-      })
+      - around = JSON.parse(JSON.stringify(opts.around)) // clone the data object
+      - around.modifiers = ["marker"] // overwrite the modifiers
+      +button(around)

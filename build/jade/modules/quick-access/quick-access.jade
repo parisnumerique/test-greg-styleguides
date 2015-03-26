@@ -3,7 +3,11 @@ include ../notice/notice
 include ../search-field/search-field
 
 mixin quick-access(opts)
-  .quick-access(class=opts.modifiers style=opts.background ? "background-image: url(#{opts.background});" : "")
+  .quick-access(class=opts.modifiers style=opts.background.image ? "background-image: url(#{opts.background.image});" : "")
+    if opts.background.video
+      video.quick-access-video(autoplay=true, loop=true, muted='muted', poster=opts.background.image)
+        each source in opts.background.video.sources
+          source&attributes(source)
     .quick-access-wrapper
       .quick-access-search
         +search-field(opts.search)
