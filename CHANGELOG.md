@@ -7,7 +7,7 @@
 * module `quick-access`: added options for easier Algolia configuration
 * module `search-field`: added documentation in `script.js`
 * module `search-results-list`:
-    * data: `results` is renamed `title`
+    * data: `result` is renamed `title`
 * template `search`:
     * renamed (formerly `search-results`)
     * added options for easier Algolia configuration, translate facet names
@@ -18,9 +18,9 @@
 
 The data model of the `home` template is now based on an array of `blocks` that are Jade mixins defined in `src/templates/home/blocks/`
 
-The template has been modified in order to loop on this array an call the mixins.
+The template has been modified in order to loop on this array and call the mixins.
 
-### Miscellaneous:
+### Miscellaneous
 
 * module `quick-access`: now supports video background
     * added an example in documentation
@@ -35,4 +35,4 @@ The template has been modified in order to loop on this array an call the mixins
 * component `buttons`: can be used for adding a single button (without a title)
 * component `text`: removed inline .button from templates and documentation, use a buttons component instead
 * component `html`: this new component can be used to insert unfiltered HTML content
-* lib `i18n:js`: catch errors when key does not exist
+* lib `i18n:js`: catch errors when a key does not exist
