@@ -25,7 +25,7 @@ gulp.task('build:jade:copy', function () {
 });
 
 gulp.task('build:jade', ['build:jade:copy'], function () {
-  gulp.src(path.join('src', 'layouts', 'wrapper_prod.jade'))
+  gulp.src(path.join('src', 'layouts', '_wrapper_prod.jade'))
     .pipe(rename('wrapper.jade'))
     .pipe(gulp.dest(path.join('build', 'jade', 'layouts')));
 })
