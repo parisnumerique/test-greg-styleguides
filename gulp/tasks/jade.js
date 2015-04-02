@@ -17,6 +17,7 @@ gulp.task('build:jade:copy', function () {
       'src/layouts/**/*.jade',
       '!src/layouts/**/index.jade',
       '!src/layouts/wrapper*.jade',
+      '!src/layouts/_wrapper*.jade',
       'src/layouts/**/*.json',
       'src/templates/**/*.jade',
       'src/templates/**/*.json'
@@ -25,7 +26,7 @@ gulp.task('build:jade:copy', function () {
 });
 
 gulp.task('build:jade', ['build:jade:copy'], function () {
-  gulp.src(path.join('src', 'layouts', 'wrapper_prod.jade'))
+  gulp.src(path.join('src', 'layouts', '_wrapper_prod.jade'))
     .pipe(rename('wrapper.jade'))
     .pipe(gulp.dest(path.join('build', 'jade', 'layouts')));
 })

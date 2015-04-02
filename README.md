@@ -34,9 +34,21 @@ The server is proxied on http://localhost:3000 by browser-sync with the auto-rel
     npm run compile
 
 
-## Use the build in another project
+## Build the styleguide
 
     npm run build
+
+This task will:
+* compile all SCSS files into a single `./build/assets/css/paris.css`
+* compile all JS files into a single `./build/assets/javascript/paris.js`
+* copy `./src/javascript/config.js` to `./build/assets/javascript/config.js` without modification
+* copy `./src/javascript/locales.js` to `./build/assets/javascript/locales.js` without modification
+* copy all webfont files to `./build/assets/fonts/`
+* optimize and copy all images (png, jpg, svg, gif) to `./build/assets/images/` while preserving the original tree structure
+* copy all jade and json files to `./build/jade/` while preserving the original tree structure
+* copy `./src/layouts/_wrapper_prod.jade` to `./build/jade/layouts/wrapper.jade` without modification
+
+### Use the build in another project
 
 Run `npm link` in this folder
 
