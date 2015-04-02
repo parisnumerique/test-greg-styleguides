@@ -63,12 +63,6 @@ Paris.anchors = (function(){
 
       _.each(items, function (item, index, list) {
         item.bottom = (list[index+1]) ? list[index+1].top : $('.layout-left-col').position().top + $('.layout-left-col').height();
-
-        //var $mask = $("<div class=\"mask-anchor\">"+item.text+"</div>").css({
-        //  top: item.top,
-        //  height: item.bottom - item.top
-        //});
-        //$('body').append($mask);
       });
     }
 
