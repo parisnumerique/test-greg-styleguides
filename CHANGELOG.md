@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.1 (2015-04-02)
+
+* fixed compilation errors in some templates
+
 ## 0.7 (2015-03-26)
 
 ### Improved search modules and template

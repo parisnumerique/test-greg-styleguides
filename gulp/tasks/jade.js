@@ -17,6 +17,7 @@ gulp.task('build:jade:copy', function () {
       'src/layouts/**/*.jade',
       '!src/layouts/**/index.jade',
       '!src/layouts/wrapper*.jade',
+      '!src/layouts/_wrapper*.jade',
       'src/layouts/**/*.json',
       'src/templates/**/*.jade',
       'src/templates/**/*.json'
