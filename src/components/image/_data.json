@@ -1,7 +1,12 @@
 {
   "index": {
     "defaults": {
-      "src": "small_image.jpg",
+      "src": "image-600px.jpg",
+      "srcset": [
+        "image-400px.jpg 400w",
+        "image-600px.jpg 600w",
+        "image-800px.jpg 800w"
+      ],
       "alt": "Texte alternatif",
       "title": "Titre",
       "credit": "Mairie de Paris / DICOM"
