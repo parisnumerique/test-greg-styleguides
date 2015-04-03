@@ -1,0 +1,9 @@
+.last-update {
+  color: $gray153;
+  font-size: 15px;
+  font-weight: 500;
+
+  &:before {
+    content: "— ";
+  }
+}
