@@ -9,10 +9,16 @@ include ../../components/buttons/buttons
   if opts.items.length !== 0
     ul.search-results-list-items
       each item in opts.items
-        li.search-results-list-item
-          a(href=item.href class=item.modifiers)
-            != item.title
-            p!= item.text
-    p.search-results-list-button
+        li.search-results-list-item(class=item.modifiers)
+          a(href=item.href)
+            = item.title
+          if item.anchors && item.anchors.length !== 0
+            ul.search-results-list-anchors
+              each anchor in item.anchors
+                li.search-results-list-anchor
+                  a(href=anchor.href)= anchor.label
+          if item.text
+            .search-results-list-text= item.text
+    .search-results-list-button
       +button({text: "Afficher plus de résultats", modifiers: "wide"})
 
