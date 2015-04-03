@@ -54,7 +54,12 @@ Paris.search = (function(){
       $facetsContainer.on('change', 'input[type=checkbox]', updateFacets);
       //$more.on('click', onClickMore);
 
-      //$el.data('api', api);
+      // If the search field is not empty, trigger the search on page load
+      if ($searchFieldInput.val() != "") {
+        $searchFieldInput.trigger('input');
+      }
+
+      $el.data('api', api);
     }
 
     function initOptions() {
@@ -68,14 +73,22 @@ Paris.search = (function(){
       if (val !== "") {
         var params = {
           hitsPerPage: options.resultsPerPage,
+
+          // Explicitly request necessary facets (as defined in options)
           facets: options.facets.join(','),
+
+          // Explicitly request necessary attributes (as defined in options)
           attributesToRetrieve: _.values(options.fields).join(',')
         };
-        console.log(params);
+
+        // If some facets filters are active, add them to the request
         if (currentFacets.length !== 0) {
           params.facetFilters = currentFacets;
         }
+
+        // Launch the search
         index.search(val, onSearchResults, params);
+
       } else {
         renderResults(false);
         renderFacets(false);
@@ -185,9 +198,9 @@ Paris.search = (function(){
 
     // The API for external interaction
 
-    //api.focusSearchField = function(){
-    //  $searchFieldInput.trigger('focus');
-    //};
+    api.search = function(query){
+      $searchFieldInput.val(query).trigger('input');
+    };
 
     init();
 
