@@ -3,17 +3,21 @@ require('velocity-animate');
 
 var $ = require('jquery');
 var jade = require('jade');
-var capitalize = require("underscore.string/capitalize");
+var _ = require('underscore');
 
 var Paris = window.Paris || {};
 
 Paris.search = (function(){
 
   var defaultOptions = {
-    index: 'global', // the algolia index to use (should be defined in config.js)
-    link: 'url', // the algolia field to use as a link
-    title: 'titre', // the algolia field to use as a title
-    sections: 'onglet', // the algolia field to use as a section
+    index: 'global', // the Algolia index to use (should be defined in config.js)
+    fields: { // matching the names of Algolia fields
+      link: 'url',           // the field to use as a link
+      title: 'titre',        // the field to use as a title
+      sections: 'onglet',    // the field to use as a section
+      primary: 'isPromoted', // the field for primary results (boolean)
+      anchors: 'ancres'      // the field for anchors (array of objects)
+    },
     resultsPerPage: 8, // the number of results to display per page
     facets: ["onglet"] // the available facets that will be displayed in the left column (should have been created on Algolia)
                        // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
@@ -64,8 +68,10 @@ Paris.search = (function(){
       if (val !== "") {
         var params = {
           hitsPerPage: options.resultsPerPage,
-          facets: options.facets.join(',')
+          facets: options.facets.join(','),
+          attributesToRetrieve: _.values(options.fields).join(',')
         };
+        console.log(params);
         if (currentFacets.length !== 0) {
           params.facetFilters = currentFacets;
         }
@@ -98,10 +104,21 @@ Paris.search = (function(){
         });
 
         $.each(data.hits, function(index, hit){
+          var modifiers = [];
+          var anchors = [];
+
+          // Add the `primary` modifier when needed
+          if (hit[options.fields.primary] === 1) {modifiers.push("primary");}
+
+          // Parse the anchors if they exist
+          if (hit[options.fields.anchors].length != 0) {anchors = JSON.parse(hit[options.fields.anchors])}
+
           search_results_list_data.items.push({
-            href: hit[options.link],
-            title: hit[options.title],
-            text: hit[options.sections]
+            href: hit[options.fields.link],
+            modifiers: modifiers,
+            title: hit[options.fields.title],
+            text: hit[options.fields.sections],
+            anchors: anchors
           });
         });
       }
