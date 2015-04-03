@@ -40,6 +40,8 @@ append content
         .layout-content
           each component in data.components
             +#{component.type}(component.data)
+          +last-update(data.last_update)
+          +jecoute(data.jecoute)
 
 append content
   .layout-content.layout-adjacent-before
