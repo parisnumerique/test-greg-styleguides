@@ -6,4 +6,9 @@
   &:before {
     content: "— ";
   }
+
+  .component + &,
+  & + .component {
+    margin-top: 50px;
+  }
 }
