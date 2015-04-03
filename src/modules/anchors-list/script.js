@@ -13,11 +13,12 @@ Paris.anchors = (function(){
   var defaultOptions = {
     anchorsSelector: '.anchor',
     anchorsFavoritable: false,
-    anchorsShareable: false
+    anchorsShareable: false,
+    anchorTopBorder: 7 // border-top of the .anchor elements, in pixels
   };
 
   function anchors(selector, userOptions){
-    var $el     = $(selector),
+    var $el = $(selector),
         $anchors,
         items,
         templates = {
@@ -39,9 +40,13 @@ Paris.anchors = (function(){
       followAnchors();
 
       PubSub.subscribe('scroll', fillBars);
+
+      // Fix bad offset by recalculating items dimensions, 1 second after rendering
+      // This could probably be improved by tracking down the origin of the discrepancy
+      setTimeout(parseItems, 1000);
     }
 
-    function renderAnchors() {
+    function parseItems() {
       items = _.map($anchors, function(anchor) {
         var $anchor = $(anchor);
 
@@ -53,13 +58,17 @@ Paris.anchors = (function(){
         return {
           text: $anchor.text(),
           href: '#' + $anchor.attr('id'),
-          top: Math.round(+$anchor.position().top)
+          top: Math.round(+$anchor.position().top - options.anchorTopBorder)
         };
       });
 
       _.each(items, function (item, index, list) {
         item.bottom = (list[index+1]) ? list[index+1].top : $('.layout-left-col').position().top + $('.layout-left-col').height();
       });
+    }
+
+    function renderAnchors() {
+      parseItems();
 
       var content = templates.anchors_list({opts: {items: items}});
       $el.html(content);
@@ -116,7 +125,7 @@ Paris.anchors = (function(){
         $(e.currentTarget.getAttribute('href'))
           .velocity("scroll", {
             duration: 1500,
-            offset: $('.header').height() * -1
+            offset: $('.header').height() * -1 + options.anchorTopBorder
         });
       });
     }
@@ -131,7 +140,7 @@ Paris.anchors = (function(){
           $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '100%');
           return;
         }
-        var progress = ($(document).scrollTop() - item.top - $('header').height()) / (item.bottom - item.top );
+        var progress = ($(document).scrollTop() - item.top - $('header').height()) / (item.bottom - item.top);
 
         progress = progress*100;
         $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', ''+progress+'%');
