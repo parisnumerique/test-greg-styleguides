@@ -10,7 +10,7 @@ Paris.config = {
 
     // You can add any Algolia index here, to be able to use it in the quick-access module and search-results template
     indexes: {
-      global: "ParisFront",
+      global: "recette_ParisFront",
       persons: ""
     }
   }
