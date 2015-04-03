@@ -410,6 +410,16 @@
           }
         }
       ],
+      "last_update": {
+        "text": "Dernière mise à jour le mercredi 10 décembre 2014"
+      },
+      "jecoute": {
+        "title": "@parisjecoute",
+        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+        "textarea": "Quelle information cherchiez-vous dans cette rubrique ?",
+        "mail": "Renseignez votre adresse e-mail",
+        "button": "Valider"
+      },
       "cross_content": {
         "items": [
           {
