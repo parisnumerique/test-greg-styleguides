@@ -1,4 +1,5 @@
 'use strict';
+require('velocity-animate');
 
 var PubSub = require('pubsub-js');
 
@@ -14,18 +15,30 @@ Paris.poll = (function(){
   function poll(selector, userOptions){
     var $el     = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
+        $title, $options, $optionsButtons,
+        $form, $input,
         $canvas, canvas, ctx, color, dots, mousePosition = {}, offset,
-        animFrame;
+        animFrame,
+        isInViewport = true;
 
     function init(){
       initOptions();
 
+      $title = $el.find('.poll-title');
+      $options = $el.find('.poll-options');
+      $optionsButtons = $options.find('.button');
+      $form = $el.find('.poll-form');
+      $input = $el.find('.poll-input');
       $canvas = $('<canvas></canvas>').appendTo($el);
 
       initCanvas();
 
-      $canvas.on('mouseenter mousemove mouseleave', onMouseEvents);
+      $el.on('mouseenter mousemove mouseleave', onMouseEvents);
+      $optionsButtons.on('click', onClickOption);
+      $form.on('submit', onSubmitForm);
       animFrame = window.requestAnimationFrame(createDots);
+
+      PubSub.subscribe('scroll', onScroll);
     }
 
     function initOptions() {
@@ -114,15 +127,17 @@ Paris.poll = (function(){
     };
 
     function createDots(){
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for(var i = 0; i < dots.nb; i++){
-        dots.array.push(new Dot());
-        var dot = dots.array[i];
-        dot.create();
-      }
+      if (isInViewport) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for(var i = 0; i < dots.nb; i++){
+          dots.array.push(new Dot());
+          var dot = dots.array[i];
+          dot.create();
+        }
 
-      dot.line();
-      dot.animate();
+        dot.line();
+        dot.animate();
+      }
 
       window.requestAnimationFrame(createDots);
     }
@@ -135,10 +150,72 @@ Paris.poll = (function(){
         mousePosition.x = e.pageX - offset.left;
         mousePosition.y = e.pageY - offset.top;
       }
-      if (e.type === 'mouseleave'){
-        mousePosition.x = canvas.width / 2;
-        mousePosition.y = canvas.height / 2;
+    }
+
+    function onClickOption(e){
+      e.preventDefault();
+      saveReply($(this).data('value'));
+    }
+
+    function onSubmitForm(e) {
+      e.preventDefault();
+      saveReply($input.val());
+    }
+
+    function saveReply(reply) {
+      // TODO: save answer
+      //console.log('saveReply', reply);
+
+      if ($options.length !== 0 && $optionsButtons.length !== 0) {
+        // Keep the size of the options even when empty
+        $options.css('height', $options.outerHeight());
+
+        // Hide options with animation
+        $optionsButtons.each(function(index){
+          $(this).velocity({
+            opacity: 0
+          }, {
+            delay: index * 80,
+            duration: 350,
+            ease: 'ease',
+            complete: function(){
+              if ($(this).is(':last-child')) {
+                $title.text($title.data('thanks'));
+                setTimeout($optionsButtons.remove, 500);
+              }
+            }
+          });
+        });
       }
+
+      if ($form.length !== 0) {
+        // Keep the size of the form even when empty
+        $form.css('height', $form.outerHeight());
+
+        // Hide content with animation
+        $form.find('> *').velocity({
+          opacity: 0
+        }, {
+          duration: 350,
+          ease: 'ease',
+          complete: function(){
+            $title.text($title.data('thanks'));
+            setTimeout($form.find('> *').remove, 500);
+          }
+        });
+      }
+    }
+
+    function onScroll(){
+      var $window = $(window);
+
+      var docViewTop = $window.scrollTop();
+      var docViewBottom = docViewTop + $window.height();
+
+      var elTop = $el.offset().top;
+      var elBottom = elTop + $el.height();
+
+      isInViewport = ((elBottom <= docViewBottom) || (elTop >= docViewTop));
     }
 
     init();
