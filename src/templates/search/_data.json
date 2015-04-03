@@ -333,5 +333,173 @@
         ]
       }
     }
+  },
+  "no-result": {
+    "data": {
+      "bodyModifiers": ["fixed-nav", "search"],
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques"},
+          {"href": "#", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "#", "text": "Municipalité"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        }
+      },
+      "heading": {
+        "image": "./hub-heading.jpg"
+      },
+      "search": {
+        "input": {
+          "id": "main-search",
+          "placeholder": "Rechercher un service, une information...",
+          "value": "abcdefghijklmnopqstuvwxyz"
+        },
+        "submit": {
+          "text": "Rechercher",
+          "icon": true
+        }
+      },
+      "block_aside_links": {
+        "title": "Suggestions",
+        "modifiers": ["emphasis-links"],
+        "items": [
+          {
+            "href": "#", "text": "Logement social"
+          },
+          {
+            "href": "#", "text": "Logement de la ville"
+          },
+          {
+            "href": "#", "text": "Aide au logement"
+          },
+          {
+            "href": "#", "text": "Logement privatif"
+          }
+        ]
+      },
+      "block_aside_checkboxes": {
+        "title": "Rubriques",
+        "name": "rubriques",
+        "items": [
+        ]
+      },
+      "search_results": {
+        "title": "Contenus les plus recherchés sur Paris.fr",
+        "items": [
+          {
+            "href": "#",
+            "title": "Logement",
+            "text": "Services et infos pratiques"
+          }
+        ]
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "form": {
+            "action": "#",
+            "method": "POST"
+          },
+          "input": {
+            "placeholder": "Entrez votre courriel",
+            "id": "connected-newsletter-input"
+          },
+          "submit": {
+            "text": "Valider"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "link": {
+                "href": "#",
+                "text": "S’abonner à @paris"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "link": {
+                "href": "#",
+                "text": "Suivre la page Facebook"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "link": {
+                "href": "#",
+                "text": "S’abonner sur Instagram"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
   }
 }

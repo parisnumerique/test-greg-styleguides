@@ -34,10 +34,10 @@ Paris.search = (function(){
       $searchFieldInput,
       $results,
       $facetsContainer,
-      $more,
       currentFacets = [],
       algolia,
-      index;
+      index,
+      currentPage = 0;
 
     function init(){
       initOptions();
@@ -48,11 +48,10 @@ Paris.search = (function(){
       $searchFieldInput = $el.find('#main-search');
       $results = $el.find('#results');
       $facetsContainer = $el.find('.layout-aside');
-      //$more = $el.find('.quick-access-results-more');
 
       $searchFieldInput.on('input', onInput);
       $facetsContainer.on('change', 'input[type=checkbox]', updateFacets);
-      //$more.on('click', onClickMore);
+      $el.on('click', '.search-results-list-more .button', onClickMore);
 
       // If the search field is not empty, trigger the search on page load
       if ($searchFieldInput.val() != "") {
@@ -69,30 +68,40 @@ Paris.search = (function(){
     }
 
     function onInput() {
-      var val = $searchFieldInput.val();
-      if (val !== "") {
-        var params = {
-          hitsPerPage: options.resultsPerPage,
-
-          // Explicitly request necessary facets (as defined in options)
-          facets: options.facets.join(','),
-
-          // Explicitly request necessary attributes (as defined in options)
-          attributesToRetrieve: _.values(options.fields).join(',')
-        };
-
-        // If some facets filters are active, add them to the request
-        if (currentFacets.length !== 0) {
-          params.facetFilters = currentFacets;
-        }
-
-        // Launch the search
-        index.search(val, onSearchResults, params);
-
+      currentPage = 0;
+      var query = $searchFieldInput.val();
+      if (query !== "") {
+        launchSearch(query);
       } else {
         renderResults(false);
         renderFacets(false);
       }
+    }
+
+    function launchSearch(query){
+      if (typeof query === 'undefined') {
+        query = $searchFieldInput.val();
+      }
+
+      var params = {
+        // Pagination params
+        page: currentPage,
+        hitsPerPage: options.resultsPerPage,
+
+        // Explicitly request necessary facets (as defined in options)
+        facets: options.facets.join(','),
+
+        // Explicitly request necessary attributes (as defined in options)
+        attributesToRetrieve: _.values(options.fields).join(',')
+      };
+
+      // If some facets filters are active, add them to the request
+      if (currentFacets.length !== 0) {
+        params.facetFilters = currentFacets;
+      }
+
+      // Launch the search
+      index.search(query, onSearchResults, params);
     }
 
     function onSearchResults(success, data) {
@@ -105,16 +114,25 @@ Paris.search = (function(){
         items: []
       };
 
-      if (!data) { // No search
+      if (!data) {
+        // No search
         search_results_list_data.title = "";
         // TODO show default
-      } else if (data.nbHits === 0) { // Search with no results
+      } else if (data.nbHits === 0) {
+        // Search with no results
         search_results_list_data.title = Paris.i18n.t("search_results/no_result");
-      } else { // Search with results
-        search_results_list_data.title = Paris.i18n.t("search_results/title", {
-          count: data.nbHits,
-          formattedCount: Paris.i18n.formatNumber(data.nbHits)
-        });
+      } else {
+        // Search with results
+        if (data.page === 0) {
+          // On the first page, add a title
+          search_results_list_data.title = Paris.i18n.t("search_results/title", {
+            count: data.nbHits,
+            formattedCount: Paris.i18n.formatNumber(data.nbHits)
+          });
+        } else {
+          // On other pages, add the page separator
+          search_results_list_data.page = Paris.i18n.t("search_results/page", [data.page + 1]);
+        }
 
         $.each(data.hits, function(index, hit){
           var modifiers = [];
@@ -124,7 +142,14 @@ Paris.search = (function(){
           if (hit[options.fields.primary] === 1) {modifiers.push("primary");}
 
           // Parse the anchors if they exist
-          if (hit[options.fields.anchors].length != 0) {anchors = JSON.parse(hit[options.fields.anchors])}
+          if (hit[options.fields.anchors].length != 0) {
+            anchors = JSON.parse(hit[options.fields.anchors]);
+
+            // Concatenate hit href and anchor href
+            $.each(anchors, function(index, anchor){
+              anchor.href = hit[options.fields.link] + "#" + anchor.href;
+            });
+          }
 
           search_results_list_data.items.push({
             href: hit[options.fields.link],
@@ -134,10 +159,24 @@ Paris.search = (function(){
             anchors: anchors
           });
         });
+
+        // Add "more" button if needed
+        if (data.page + 1 < data.nbPages) {
+          search_results_list_data.more = {
+            text: Paris.i18n.t("search_results/more"),
+            page: data.page + 1
+          };
+        }
       }
 
       var results = templates.search_results_list({opts: search_results_list_data});
-      $results.html(results);
+
+      if (data.page > 0) {
+        $results.find('.search-results-list-more').remove();
+        $results.append(results);
+      } else {
+        $results.html(results);
+      }
     }
 
     function renderFacets(data) {
@@ -190,10 +229,11 @@ Paris.search = (function(){
       onInput();
     }
 
-    //function onClickMore(e){
-    //  e.preventDefault();
-    //  $searchField.submit();
-    //}
+    function onClickMore(e){
+      e.preventDefault();
+      currentPage = $(this).data('page');
+      launchSearch();
+    }
 
 
     // The API for external interaction
