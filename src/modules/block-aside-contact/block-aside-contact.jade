@@ -10,21 +10,26 @@ mixin block-aside-contact(opts)
         - if (item.icon) {modifiers.push("has-icon")}
         if item.title
           li.block-aside-item(class=modifiers)
-            if item.icon
-              i.icon(class="icon-#{item.icon}" title=item.title)
-            else
+            if !item.icon
               = item.title + " "
             if item.href
-              a(href=item.href class=item.hcard_properties)= item.text
+              a(href=item.href class=item.hcard_properties)
+                if item.icon
+                  i.icon(class="icon-#{item.icon}" title=item.title)
+                = item.text
             else
+              if item.icon
+                i.icon(class="icon-#{item.icon}" title=item.title)
               span(class=item.hcard_properties)
                 = item.text
         else
           li.block-aside-item(class=modifiers class=item.hcard_properties)
-            if item.icon
-              i.icon(class="icon-#{item.icon}")
-            else
-              if item.href
-                a(href=item.href)= item.text
-              else
+            if item.href
+              a(href=item.href)
+                if item.icon
+                  i.icon(class="icon-#{item.icon}")
                 = item.text
+            else
+              if item.icon
+                i.icon(class="icon-#{item.icon}")
+              = item.text
