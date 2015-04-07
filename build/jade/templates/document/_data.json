@@ -410,6 +410,16 @@
           }
         }
       ],
+      "last_update": {
+        "text": "Dernière mise à jour le mercredi 10 décembre 2014"
+      },
+      "jecoute": {
+        "title": "@parisjecoute",
+        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+        "textarea": "Quelle information cherchiez-vous dans cette rubrique ?",
+        "mail": "Renseignez votre adresse e-mail",
+        "button": "Valider"
+      },
       "cross_content": {
         "items": [
           {
@@ -434,15 +444,22 @@
         ]
       },
       "poll": {
-        "title": "À vous la parole",
-        "heading": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
-        "poll_label": {
-          "placeholder": "Votre réponse",
-          "inputId": "poll-input",
-          "submit": "Envoyer"
+        "heading": "À vous la parole",
+        "title": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
+        "form": {
+          "input": {
+            "placeholder": "Votre réponse",
+            "id": "poll-input"
+          },
+          "submit": {
+            "text": "Envoyer"
+          }
         },
-        "link_href": "#",
-        "link": "Accéder à l’espace participatif"
+        "thanks": "Merci de votre participation",
+        "more": {
+          "href": "#",
+          "text": "Accéder à l’espace participatif"
+        }
       },
       "connected": {
         "heading": {

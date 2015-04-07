@@ -3,31 +3,56 @@
     "defaults": {
       "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
     },
-    "first_list_result": {
-      "result": "<var>365</var> résultats",
-       "items": [
+    "results": {
+      "title": "<var>365</var> résultats",
+      "items": [
         {
           "href": "#",
-          "modifiers": ["strong"],
+          "modifiers": ["primary"],
           "title": "Logement",
           "text": "Services et infos pratiques"
         },
         {
           "href": "#",
-          "modifiers": ["strong"],
+          "modifiers": ["primary"],
           "title": "Logement social",
-          "text": "Services et infos pratiques — Logement"
+          "text": "Services et infos pratiques — Logement",
+          "anchors": [
+            {
+              "href": "#",
+              "label": "Est-ce que j’y ai droit ?"
+            },
+            {
+              "href": "#",
+              "label": "Constituer un dossier"
+            },
+            {
+              "href": "#",
+              "label": "Complément : l’aide au logement"
+            },
+            {
+              "href": "#",
+              "label": "Questions fréquentes"
+            },
+            {
+              "href": "#",
+              "label": "Consectetur ultricies fermentum vestibulum"
+            },
+            {
+              "href": "#",
+              "label": "Venenatis euismod"
+            }
+          ]
         },
         {
           "href": "#",
-          "modifiers": ["strong"],
+          "modifiers": ["primary"],
           "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
           "text": "Services et infos pratiques — Démarches"
         },
         {
           "href": "#",
-          "title": "Aide au logement",
-          "text": "Services et infos pratiques— Logement"
+          "title": "Aide au logement"
         },
         {
           "href": "#",
@@ -50,9 +75,13 @@
           "text": "Services et infos pratiques — Logement"
         }
       ],
-      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus.",
+      "more": {
+        "text": "Afficher plus de résultats",
+        "page": 2
+      }
     },
-    "base_list_result": {
+    "second_page": {
        "page": "Page 2",
        "items": [
         {
@@ -69,34 +98,13 @@
           "href": "#",
           "title": "Comment bénéficier du prêt à taux 0% de la ville de Paris",
           "text": "Services et infos pratiques — Démarches"
-        },
-        {
-          "href": "#",
-          "title": "Aide au logement",
-          "text": "Services et infos pratiques— Logement"
-        },
-        {
-          "href": "#",
-          "title": "Impôts locaux",
-          "text": "Services et infos pratiques — Logement"
-        },
-         {
-          "href": "#",
-          "title": "Impôts locaux",
-          "text": "Services et infos pratiques — Logement"
-        },
-         {
-          "href": "#",
-          "title": "Impôts locaux",
-          "text": "Services et infos pratiques — Logement"
-        },
-         {
-          "href": "#",
-          "title": "Impôts locaux",
-          "text": "Services et infos pratiques — Logement"
         }
       ],
-      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus."
+      "no_result": "Désolé, votre recherche ne correspond à aucun de nos contenus.",
+      "more": {
+        "text": "Afficher plus de résultats",
+        "page": 3
+      }
     }
   }
 }

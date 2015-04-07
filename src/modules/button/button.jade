@@ -1,14 +1,15 @@
 mixin button(opts)
   - modifiers = opts.modifiers || []
+  - attributes = opts.attributes || []
   if opts.href
     if opts.icon
       - modifiers.push("icon")
-    a.button(href=opts.href title=opts.title target=opts.target class=modifiers)
+    a.button(href=opts.href title=opts.title target=opts.target class=modifiers)&attributes(attributes)
       if modifiers && modifiers.indexOf("marker") != -1
         i.icon.icon-marker
       else if opts.icon
         i.icon(class="icon-#{opts.icon}")
       = opts.text
   else
-    button.button(class=modifiers)
+    button.button(class=modifiers)&attributes(attributes)
       = opts.text

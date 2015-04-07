@@ -3,23 +3,23 @@ include ../search-field/search-field
 
 mixin poll(opts)
   .poll
-    if opts.title
-      p.poll-title
-        = opts.title
-    p.poll-heading= opts.heading
-    if opts.items
-      ul.poll-content-button(class=opts.modifiers)
-        each item in opts.items
-          li
-            - button = JSON.parse(JSON.stringify(item))
-            - button.modifiers = ["action", "secondary",]
-            +button(button)
-    else if opts.poll_label
-      .poll-content-label
-        input(type="text" placeholder=opts.poll_label.placeholder title=opts.poll_label.placeholder id=opts.poll_label.inputId)
-        button.button.action.secondary(type="submit")= opts.poll_label.submit
-    a.poll-link(href= opts.link_href)
-      =opts.link
-
-
-
+    .poll-wrapper
+      if opts.heading
+        .poll-heading
+          = opts.heading
+      .poll-title(data-thanks=opts.thanks)= opts.title
+      if opts.items
+        ul.poll-options(class=opts.modifiers)
+          each item in opts.items
+            li
+              - button = JSON.parse(JSON.stringify(item))
+              - button.modifiers = ["action", "secondary"]
+              - button.attributes = {"data-value": item.value}
+              +button(button)
+      else if opts.form
+        form.poll-form
+          input.poll-input(type="text" placeholder=opts.form.input.placeholder title=opts.form.input.placeholder id=opts.form.input.id)
+          button.button.action.secondary.poll-submit(type="submit")= opts.form.submit.text
+      if opts.more
+        .poll-more
+          a(href=opts.more.href)= opts.more.text

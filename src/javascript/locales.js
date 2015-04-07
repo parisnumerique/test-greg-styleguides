@@ -15,7 +15,9 @@ Paris.i18n.locales = {
         "  other {{formattedCount} résultats}",
         "}"
       ],
+      page: "Page {0}",
       no_result: "Désolé, votre recherche ne correspond à aucun de nos contenus.",
+      more: "Afficher plus de résultats",
       facets: {
         onglet: "Catégories"
       }
@@ -34,7 +36,9 @@ Paris.i18n.locales = {
         "  other {{formattedCount} results}",
         "}"
       ],
+      page: "Page {0}",
       no_result: "Sorry, your search did not match any of our contents.",
+      more: "See more results",
       facets: {
         onglet: "Categories"
       }
@@ -53,7 +57,9 @@ Paris.i18n.locales = {
         "  other {{formattedCount} resultados}",
         "}"
       ],
+      page: "Página {0}",
       no_result: "Lo sentimos, su búsqueda no coincide con ninguno de nuestros contenidos.",
+      more: "Ver más resultados",
       facets: {
         onglet: "Categorías"
       }

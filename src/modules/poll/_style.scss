@@ -1,15 +1,15 @@
 .poll {
   background-color: $red-poll;
-  //  background: url(../modules/poll/poll-back-img.jpg) $red-poll repeat top left;
-  //  background-position: 50% 50%;
+  background: url(../modules/poll/background.jpg) $red-poll repeat top left;
+  background-position: 50% 50%;
   color: white;
   height: 100%;
-  padding: 40px 0 25px;
   position: relative;
   text-align: center;
   width: 100%;
 
   > canvas {
+    background-color: $red-poll;
     left: 0;
     position: absolute;
     top: 0;
@@ -17,81 +17,80 @@
   }
 }
 
-.poll-title,
-.poll-link {
-  text-transform: uppercase;
+.poll-wrapper {
+  position: relative;
+  padding: 35px 0;
+  z-index: 1;
 }
 
-.poll-title,
 .poll-heading,
-.poll-link {
+.poll-title,
+.poll-more {
   font-weight: 700;
 }
 
-.poll-title,
-.poll-link {
+.poll-heading {
+  border-bottom: 6px solid $white;
   font-size: 13px;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 6px;
+  text-transform: uppercase;
 }
 
 .poll-title {
-  border-bottom: 6px solid white;
-  display: inline-block;
-  padding-bottom: 6px;
-}
-
-.poll-heading {
   font-size: 28px;
+  max-width: 730px;
+  margin: 30px auto 20px;
 }
 
-.poll-content-button{
+.poll-options {
   list-style: none;
-  margin: 10px 0 0;
+  margin: 0;
   padding: 0;
 
   > li {
-    margin: 0 0 10px 0;
+    margin: 0 10px 10px 0;
+    display: inline-block;
+    &:last-child {margin-right: 0;}
 
-    a {
-      font-weight: 500;
-    }
+    a {font-weight: 500;}
   }
 }
 
-.poll-button-inline li {
-  display: inline;
-  margin: 0 10px;
-}
+.poll-form {
+  .poll-input {
+    color: $gray77;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 5px 0 0;
+    min-width: 430px;
+    padding: 0 10px;
+  }
 
-.poll-content-label {
-
-  .button {
+  .poll-submit {
     height: 45px;
     padding-top: 1px;
     padding-bottom: 1px;
     line-height: 43px;
   }
-
-    input {
-      color: $gray77;
-      font-size: 15px;
-      font-weight: 300;
-      min-width: 430px;
-      padding: 0 10px;
-    }
 }
 
-.poll-link {
-  border-bottom: 3px solid $color-tertiary;
-  color: $color-tertiary;
-  display: inline-block;
-  margin: 25px 0 0;
-  position: relative;
-  text-decoration: none;
-  z-index: 1;
+.poll-more {
+  font-size: 13px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
 
-  &:hover {
-    border-color: darken($color-tertiary, 23);
-    color: darken($color-tertiary, 23);
+  a {
+    border-bottom: 3px solid $color-tertiary;
+    color: $color-tertiary;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+      border-color: darken($color-tertiary, 23);
+      color: darken($color-tertiary, 23);
+    }
   }
 }
 

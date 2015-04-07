@@ -6,6 +6,8 @@
     "subhome-municipality",
     "hub",
     "search",
+    "search/results",
+    "search/no-result",
     "faq",
     "document",
     "generic",

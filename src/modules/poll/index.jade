@@ -1,27 +1,27 @@
 include poll
 include ../../helpers/code
 
-h2 poll avec bouton vertical
+h2 Choix unique
 .lsg-module
-  +poll(poll_button)
+  +poll(defaults)
 +code({language: "jade"}).
   include poll
 
   +poll(#{JSON.stringify(defaults, null, 2)})
 
-h2 poll avec bouton horizontal
+h2 Choix binaire
 .lsg-module
-  +poll(poll_button_inline)
+  +poll(yes_no)
 +code({language: "jade"}).
   include poll
 
-  +poll(#{JSON.stringify(defaults, null, 2)})
+  +poll(#{JSON.stringify(yes_no, null, 2)})
 
-h2 poll avec label
+h2 Réponse libre
 .lsg-module
-  +poll(poll_label)
+  +poll(text)
 +code({language: "jade"}).
   include poll
 
-  +poll(#{JSON.stringify(defaults, null, 2)})
+  +poll(#{JSON.stringify(text, null, 2)})
 
