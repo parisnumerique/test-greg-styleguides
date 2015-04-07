@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.8 (2015-04-07)
+
+### Improved search
+
+* module `search-results-list`:
+    * added support for "promoted" results
+    * pagination support
+* template `search/results` added
+    * automatically launch search on page load if search field is not empty
+* `config.js`: changed global Algolia index
+
+### Miscellaneous
+
+* module `poll`
+    * multiple changes in `data`
+    * added second state (after answer)
+    * better performance for `canvas` animation, disable it when not in viewport
+    * use `background-image` when particles do not work
+    * fix `z-index` bug
+    * various CSS fixes (title `max-width`, answers `inline-block`)
+* module `block-aside-contact`: added rollovers on links and better spacing
+* module `anchors-list`: fixed bug shifted progress on click on an anchor
+* module `last-update`: new module
+* component `jecoute`: changed data format (removed `modifiers`, renamed `text_button` to `button`)
+* component `links`: better positioning for icons
+* template `document`: added `last-update` module and `jecoute` component at the end
+* added `lang` param to `html` tag in `wrapper_prod` layout
+
 ## 0.7.1 (2015-04-02)
 
 * fixed compilation errors in some templates
@@ -39,4 +67,4 @@ The template has been modified in order to loop on this array and call the mixin
 * component `buttons`: can be used for adding a single button (without a title)
 * component `text`: removed inline .button from templates and documentation, use a buttons component instead
 * component `html`: this new component can be used to insert unfiltered HTML content
-* lib `i18n:js`: catch errors when a key does not exist
+* lib `i18n.js`: catch errors when a key does not exist

@@ -1,56 +1,74 @@
 {
   "index": {
-    "poll_button": {
-      "title": "À vous la parole",
-      "heading": "Le vélo à Paris, c’est…",
+    "defaults": {
+      "heading": "À vous la parole",
+      "title": "Le vélo à Paris, c’est…",
       "items": [
         {
           "href": "#",
-          "text": "agréable, on voit la ville d’un autre œil"
+          "text": "agréable, on voit la ville d’un autre œil",
+          "value": 0
         },
         {
           "href": "#",
-          "text": "efficace pour se déplacer en protégeant l’environnement"
+          "text": "efficace pour se déplacer en protégeant l’environnement",
+          "value": 1
         },
         {
           "href": "#",
-          "text": "dangereux"
+          "text": "dangereux",
+          "value": 2
         },
         {
           "href": "#",
-          "text": "je n’ai jamais essayé"
+          "text": "je n’ai jamais essayé",
+          "value": 3
         }
       ],
-      "link_href": "#",
-      "link": "Accéder à l’espace participatif"
+      "thanks": "Merci de votre participation",
+      "more": {
+        "href": "#",
+        "text": "Accéder à l’espace participatif"
+      }
     },
-    "poll_button_inline": {
-      "title": "À vous la parole",
-      "heading": "Etes-vous favorable à une interdiction du diesel à Paris ?",
-      "modifiers": "poll-button-inline",
+    "yes_no": {
+      "heading": "À vous la parole",
+      "title": "Etes-vous favorable à une interdiction du diesel à Paris ?",
       "items": [
         {
           "href": "#",
-          "text": "oui"
+          "text": "oui",
+          "value": 1
         },
         {
           "href": "#",
-          "text": "non"
+          "text": "non",
+          "value": 0
         }
       ],
-      "link_href": "#",
-      "link": "Accéder à l’espace participatif"
+      "thanks": "Merci de votre participation",
+      "more": {
+        "href": "#",
+        "text": "Accéder à l’espace participatif"
+      }
     },
-    "poll_label": {
-      "title": "À vous la parole",
-      "heading": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
-      "poll_label": {
-        "placeholder": "Votre réponse",
-        "inputId": "poll-input",
-        "submit": "Envoyer"
+    "text": {
+      "heading": "À vous la parole",
+      "title": "Pollution à Paris : que seriez-vous prêt(e) à sacrifier pour améliorer la qualité de l’air dans notre ville ?",
+      "form": {
+        "input": {
+          "placeholder": "Votre réponse",
+          "id": "poll-input"
+        },
+        "submit": {
+          "text": "Envoyer"
+        }
       },
-      "link_href": "#",
-      "link": "Accéder à l’espace participatif"
+      "thanks": "Merci de votre participation",
+      "more": {
+        "href": "#",
+        "text": "Accéder à l’espace participatif"
+      }
     }
   }
 }
