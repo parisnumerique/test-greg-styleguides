@@ -416,9 +416,19 @@
       "jecoute": {
         "title": "@parisjecoute",
         "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
-        "textarea": "Quelle information cherchiez-vous dans cette rubrique ?",
-        "mail": "Renseignez votre adresse e-mail",
-        "button": "Valider"
+        "form": {
+          "action": "#",
+          "method": "post"
+        },
+        "textarea": {
+          "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
+          "name": "question"
+        },
+        "email": {
+          "placeholder": "Renseignez votre adresse e-mail"
+        },
+        "button": "Valider",
+        "thanks": "Merci, votre question a bien été transmise."
       },
       "cross_content": {
         "items": [
