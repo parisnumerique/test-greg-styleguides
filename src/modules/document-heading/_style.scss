@@ -1,11 +1,12 @@
 .document-heading {
-  height: 320px;
-  width: 100%;
-  z-index: 0;
-  position: relative;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 0;
 
   .document-heading-wrapper {
     position: relative;
@@ -22,16 +23,15 @@
   .document-heading-content {
     background: $white;
     bottom: 0;
-    display: table;
-    height: 90px;
     left: 0;
     position: absolute;
 
+    // white block on the left
     &:before {
       content: ' ';
       background: $white;
       width: 1000px;
-      height: 90px;
+      height: 320px;
       position: absolute;
       left: -1000px;
     }
@@ -39,10 +39,8 @@
 
   .document-heading-content-wrapper {
     border-bottom: 1px solid $gray204;
-    display: table-cell;
-    height: 90px;
-    vertical-align: middle;
-    padding-right: 20px;
+    overflow: hidden;
+    padding: 25px 20px 25px 0;
   }
 
   .document-heading-title {
@@ -71,6 +69,7 @@
     }
   }
 
+  // transparent black layer
   &:before {
     content: " ";
     top: 0;
