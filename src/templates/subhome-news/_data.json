@@ -15,7 +15,7 @@
         "marker": {"visible": true},
         "items": [
           {"href": "#", "text": "Services et infos pratiques"},
-          {"href": "#", "text": "Actualités"},
+          {"href": "#", "text": "Actualités", "current": true},
           {"href": "#", "text": "Entreprises"},
           {"href": "#", "text": "Municipalité"}
         ],
