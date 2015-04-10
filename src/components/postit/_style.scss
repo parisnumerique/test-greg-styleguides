@@ -17,7 +17,8 @@
     width: 6px;
   }
 
-  h2 {
+  h2,
+  a:not(.button) {
     color: $orange-postit;
   }
 

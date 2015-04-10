@@ -66,7 +66,6 @@
   }
 
   a:not(.button) {
-    color: $red2;
     text-decoration: underline;
     &:hover {text-decoration: none;}
   }
@@ -79,6 +78,10 @@
   h2 {
     border-top: 7px solid $gray242;
     color: $gray26;
+  }
+
+  a:not(.button) {
+    color: $red2;
   }
 
   .component-postit + & > p:first-child,
