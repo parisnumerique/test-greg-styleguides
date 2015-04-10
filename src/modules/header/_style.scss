@@ -390,13 +390,3 @@
 .header-wrapper.fixed + .layout-content {
   margin-top: 0px;
 }
-
-.quick-access {
-  border-bottom: 3px solid transparentize($gray26, 0.8);
-
-  &.visible {
-    transform: translateY(0);
-  }
-}
-
-
