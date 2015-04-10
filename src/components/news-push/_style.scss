@@ -37,105 +37,105 @@
       position: relative;
     }
   }
-}
 
-.news-push-wrapper {
-  background: $color-primary;
-  padding: 20px;
+  .news-push-wrapper {
+    background: $color-primary;
+    padding: 20px;
 
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
-
-  > img {
-    width: 260px;
-    height: 160px;
-    position: relative;
-    left: -40px;
-  }
-
-  > * {
-    float: left;
-  }
-}
-
-.news-push-content {
-  position: relative;
-  max-width: 400px;
-  color: $white;
-
-  a {
-    color: $white;
-    text-decoration: none;
-    position: relative;
-    &.next:after {
+    &:before,
+    &:after {
       content: " ";
-      width: 0%;
-      height: 1px;
-      background: $white;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      transition: .3s ease width ;
+      display: table;
     }
-    &.next:hover:after {
+    &:after {
+      clear: both;
+    }
+
+    > img {
+      width: 260px;
+      height: 160px;
+      position: relative;
+      left: -40px;
+    }
+
+    > * {
+      float: left;
+    }
+  }
+
+  .news-push-content {
+    position: relative;
+    max-width: 400px;
+    color: $white;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      position: relative;
+      &.next:after {
+        content: " ";
+        width: 0%;
+        height: 1px;
+        background: $white;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: .3s ease width ;
+      }
+      &.next:hover:after {
+        width: 100%;
+      }
+    }
+
+    & p:hover a.next:after {
       width: 100%;
     }
   }
 
-  & p:hover a.next:after {
-    width: 100%;
-  }
-}
-
-.news-push-link {
-  background: $gray242;
-  clear: both;
-  color: $gray77;
-  font-size: 14px;
-  font-weight: 300;
-  position: absolute;
-  right: 0;
-  height: 50px;
-  line-height: 50px;
-  padding: 0 15px;
-  text-decoration: none;
-  width: 410px;
-
-  &:after {
-    content: " ";
-    top: 0;
-    right: -1000px;
-    bottom: 0;
+  .news-push-link {
     background: $gray242;
-    width: 1000px;
-    height: 100%;
+    clear: both;
+    color: $gray77;
+    font-size: 14px;
+    font-weight: 300;
     position: absolute;
-  }
-
-  > span {
-    left: 0;
-    position: relative;
-    transition: left 0.35s ease;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    text-decoration: none;
+    width: 410px;
 
     &:after {
-      @extend %icon-font;
-      @extend %icon-arrow-light-right;
-      font-size: 17px;
-      padding-left: 8px;
-      vertical-align: middle;
+      content: " ";
+      top: 0;
+      right: -1000px;
+      bottom: 0;
+      background: $gray242;
+      width: 1000px;
+      height: 100%;
+      position: absolute;
     }
-  }
 
-  &:hover {
-    color: $color-primary;
     > span {
-      left: 5px;
+      left: 0;
+      position: relative;
+      transition: left 0.35s ease;
+
+      &:after {
+        @extend %icon-font;
+        @extend %icon-arrow-light-right;
+        font-size: 17px;
+        padding-left: 8px;
+        vertical-align: middle;
+      }
+    }
+
+    &:hover {
+      color: $color-primary;
+      > span {
+        left: 5px;
+      }
     }
   }
 }
