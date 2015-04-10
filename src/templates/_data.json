@@ -1,20 +1,21 @@
 {
   "templates": [
-    "home",
-    "subhome-news",
-    "subhome-get-involved",
-    "subhome-municipality",
-    "municipality",
-    "hub",
-    "search",
-    "search/results",
-    "search/no-result",
-    "faq",
     "document",
+    "document-postit",
+    "faq",
     "generic",
+    "home",
+    "hub",
+    "list-persons",
+    "municipality",
+    "search",
+    "search/no-result",
+    "search/results",
     "single-news",
     "single-person",
     "single-person-small-picture",
-    "list-persons"
+    "subhome-get-involved",
+    "subhome-municipality",
+    "subhome-news"
   ]
 }

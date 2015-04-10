@@ -27,20 +27,22 @@ $susy: (
 
 // Modules
 @import "../modules/anchors-list/_style";
-@import "../modules/block-aside/_style";
 @import "../modules/block-aside-checkboxes/_style";
 @import "../modules/block-aside-contact/_style";
 @import "../modules/block-aside-links/_style";
-@import "../modules/block-content/_style";
+@import "../modules/block-aside/_style";
 @import "../modules/block-content-jecoute/_style";
 @import "../modules/block-content-newsletter/_style";
+@import "../modules/block-content-social/_style";
+@import "../modules/block-content/_style";
 @import "../modules/breadcrumbs/_style";
 @import "../modules/button/_style";
 @import "../modules/cross-content/_style";
 @import "../modules/document-heading/_style";
 @import "../modules/footer/_style";
-@import "../modules/get-involved/_style";
+@import "../modules/gallery-ugc/_style";
 @import "../modules/get-involved-list/_style";
+@import "../modules/get-involved/_style";
 @import "../modules/header/_style";
 @import "../modules/heading/_style";
 @import "../modules/hub-heading/_style";
@@ -55,7 +57,6 @@ $susy: (
 @import "../modules/pagination/_style";
 @import "../modules/person-block/_style";
 @import "../modules/poll/_style";
-@import "../modules/gallery-ugc/_style";
 @import "../modules/que-faire/_style";
 @import "../modules/quick-access/_style";
 @import "../modules/search-field/_style";
@@ -64,7 +65,6 @@ $susy: (
 @import "../modules/sections-list/_style";
 @import "../modules/sections-panel/_style";
 @import "../modules/share/_style";
-@import "../modules/block-content-social/_style";
 @import "../modules/tags/_style";
 @import "../modules/video-cover/_style";
 
@@ -76,6 +76,7 @@ $susy: (
 @import "../components/jecoute/_style";
 @import "../components/links/_style";
 @import "../components/news-push/_style";
+@import "../components/postit/_style";
 @import "../components/sharelines/_style";
 @import "../components/table/_style";
 @import "../components/text/_style";
