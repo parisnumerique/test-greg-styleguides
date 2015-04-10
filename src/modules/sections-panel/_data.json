@@ -8,6 +8,7 @@
             "text": "Culture et patrimoine",
             "slug": "culture-patrimoine",
             "subnav": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
               "items": [
                 {
                   "href": "./content.html",
@@ -22,12 +23,12 @@
                 {
                   "href": "./content.html",
                   "title": "Histoire et patrimoine",
-                  "text": "Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
+                  "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                 },
                 {
                   "href": "./content.html",
                   "title": "Photo et cinéma",
-                  "text": "Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue."
+                  "text": "Donec id elit non mi porta gravida at eget metus."
                 },
                 {
                   "href": "./content.html",
@@ -37,7 +38,7 @@
                 {
                   "href": "./content.html",
                   "title": "Spectacles",
-                  "text": "Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue."
+                  "text": "Donec ullamcorper nulla non metus auctor."
                 }
               ]
             }
@@ -47,6 +48,7 @@
             "text": "Déplacements et stationnement",
             "slug": "deplacements-stationnement",
             "subnav": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
               "items": [
                 {
                   "href": "./content.html",

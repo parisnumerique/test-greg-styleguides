@@ -1,13 +1,18 @@
+include ../../modules/intro-text/intro-text
+
 mixin links-group(opts)
   .links-group(class=opts.modifiers)
     if opts.background
-      .links-group-header(style='background-image: url(#{opts.background});')
-        .links-group-wrapper-title
+      a(href=opts.href).links-group-header(style='background-image: url(#{opts.background});')
+        .links-group-header-wrapper
           .links-group-title= opts.title
           if opts.subtitle
             .links-group-subtitle= opts.subtitle
     .links-group-content
-      each item in opts.items
-        a.links-group-button(href=item.href)
-          span.links-group-button-text= item.text
-          i.links-group-button-icon
+      if opts.text
+        +intro-text({text: opts.text})
+      .links-group-items
+        each item in opts.items
+          a.links-group-item(href=item.href)
+            span.links-group-item-text= item.text
+            i.links-group-item-icon

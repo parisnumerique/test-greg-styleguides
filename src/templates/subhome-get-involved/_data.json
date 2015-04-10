@@ -19,13 +19,13 @@
           {"href": "#", "text": "Entreprises"},
           {"href": "#", "text": "Municipalité"}
         ],
-        "participate" : {
+        "participate": {
           "visible": true,
           "url": "#",
           "front": "Participez !",
           "back": "C'est à vous !"
         },
-        "account" : {
+        "account": {
           "visible": true,
           "url": "#",
           "text": "Mon compte"
@@ -68,8 +68,11 @@
           }
         ]
       },
-      "advice" : {
-        "heading" : {
+      "intro": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia."
+      },
+      "advice": {
+        "heading": {
           "title": "Donnez votre avis"
         },
         "get_involved_list": {
@@ -174,8 +177,8 @@
           ]
         }
       },
-      "act" : {
-        "heading" : {
+      "act": {
+        "heading": {
           "title": "Agissez"
         },
         "links_group": {
@@ -226,8 +229,8 @@
           ]
         }
       },
-      "now" : {
-        "heading" : {
+      "now": {
+        "heading": {
           "title": "En ce moment",
           "link": {
             "href": "#",
@@ -321,7 +324,7 @@
         }
       },
       "connected": {
-        "newsletter" : {
+        "newsletter": {
           "title": "L’essentiel de Paris",
           "modifiers": ["color-secondary-background"],
           "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",

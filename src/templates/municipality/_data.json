@@ -52,8 +52,8 @@
         }
       },
       "heading": {
-        "text": "Municipalité",
-        "image": "./municipality.png"
+        "text": "La Maire et les élus",
+        "image": "./heading.jpg"
       },
       "breadcrumbs": {
         "items": [
@@ -62,16 +62,16 @@
             "text": "Accueil"
           },
           {
+            "href": "#",
             "text": "Municipalité"
+          },
+          {
+            "text": "La Maire et les élus"
           }
         ]
       },
-      "team": {
-        "href": "#",
-        "background": "image-municipalite-team.jpg",
-        "title": "La Maire et les élus",
+      "links": {
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-        "modifiers": ["blue"],
         "items": [
           {
             "href": "#",
@@ -92,82 +92,6 @@
           {
             "href": "#",
             "text": "Groupes politiques"
-          }
-        ]
-      },
-      "conseil": {
-        "href": "#",
-        "background": "image-municipalite-conseil.jpg",
-        "title": "Le conseil de Paris",
-        "subtitle": "Prochain conseil dans 5 jours",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-        "modifiers": ["red"],
-        "items": [
-          {
-            "href": "#",
-            "text": "Prochaines séances"
-          },
-          {
-            "href": "#",
-            "text": "Le Conseil en vidéo"
-          },
-          {
-            "href": "#",
-            "text": "Communications de la Maire"
-          },
-          {
-            "href": "#",
-            "text": "Rapports des MIE"
-          },
-          {
-            "href": "#",
-            "text": "Commissions"
-          },
-          {
-            "href": "#",
-            "text": "Règlement intérieur"
-          }
-        ]
-      },
-      "hotel_ville": {
-        "href": "#",
-        "background": "image-municipalite-hotel-ville.jpg",
-        "title": "L’hôtel de Ville",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-        "modifiers": ["blue"],
-        "items": [
-          {
-            "href": "#",
-            "text": "Organigramme de la Ville"
-          },
-          {
-            "href": "#",
-            "text": "Publications administratives et documents légaux"
-          },
-          {
-            "href": "#",
-            "text": "Visiter l’Hôtel de Ville"
-          }
-        ]
-      },
-      "histoire_paris": {
-        "href": "#",
-        "background": "image-municipalite-histoire-paris.jpg",
-        "title": "L’histoire de Paris",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-        "modifiers": ["blue"],
-        "items": [
-          {
-            "href": "#",
-            "text": "Histoire du patrimoine"
-          },
-          {
-            "href": "#",
-            "text": "Paris d’hier à aujourd’hui"
-          },
-          {
-            "href": "#",
-            "text": "Les mairies d’arrondissements"
           }
         ]
       },

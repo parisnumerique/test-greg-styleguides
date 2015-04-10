@@ -1,5 +1,6 @@
 include ../../modules/button/button
 include ../../modules/block-aside-links/block-aside-links
+include ../../modules/intro-text/intro-text
 include ../../components/buttons/buttons
 
 mixin sections-panel(opts)
@@ -22,6 +23,8 @@ mixin sections-panel(opts)
         each item in opts.nav.items
           .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug)
             if item.subnav && item.subnav.items.length !== 0
+              if item.subnav.text
+                +intro-text({text: item.subnav.text})
               ul.sections-panel-subnav-items
                 each subitem in item.subnav.items
                   li.sections-panel-subnav-item

@@ -21,7 +21,6 @@
   overflow: hidden;
   z-index: 100;
 
-
   .fixed-nav & {
     height: 80px;
     padding: 0;
@@ -210,6 +209,7 @@
     }
   }
 
+  .right nav a.current:after,
   .right nav a:hover:after {
     width: 100%;
   }

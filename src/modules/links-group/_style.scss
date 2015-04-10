@@ -3,46 +3,56 @@
 
   // modifiers
   &.white-buttons {
-    .links-group-button {
+    .links-group-item {
       background-color: $white;
       &:hover {background-color: $gray153;}
     }
   }
 
   &.blue {
-    .links-group-header:after {background-color: rgba($blue3, 0.7);}
-    .links-group-button:hover {background-color: $blue3;}
+    .links-group-header:after,
+    .links-group-item:hover {background-color: $blue3;}
   }
 
   &.red {
-    .links-group-header:after {background-color: rgba($red2, 0.7);}
-    .links-group-button:hover {background-color: $red2;}
+    .links-group-header:after,
+    .links-group-item:hover {background-color: $red2;}
   }
 }
 
 .links-group-header {
-  color: white;
   background-position: 50% 50%;
   background-size: cover;
+  color: $white;
   display: table;
   height: 320px;
-  width: 100%;
+  margin-bottom: 20px;
   position: relative;
   text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    &:after {
+      opacity: 0.8;
+    }
+  }
 
   &:after {
-    background-color: rgba($gray153, 0.7);
+    background-color: $gray153;
     content: '';
-    position: absolute;
     height: 100%;
-    top: 0;
     left: 0;
+    opacity: 0.7;
+    position: absolute;
+    transition: opacity 0.2s ease;
+    top: 0;
     width: 100%;
     z-index: 1;
   }
 }
 
-.links-group-wrapper-title {
+.links-group-header-wrapper {
   display: table-cell;
   vertical-align: middle;
 }
@@ -64,8 +74,7 @@
   margin-top: 15px;
 }
 
-
-.links-group-button {
+.links-group-item {
   @include gallery(4 of 12);
   background-color: $gray242;
   border: none;
@@ -75,7 +84,7 @@
   font-size: 15px;
   font-weight: 300;
   line-height: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 0 80px 0 22px;
   position: relative;
   text-decoration: none;
@@ -83,17 +92,17 @@
   &:hover {
     background-color: $gray153;
     color: $white;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
   }
 }
 
-.links-group-button-text {
+.links-group-item-text {
   display: table-cell;
   height: 60px;
   vertical-align: middle;
 }
 
-.links-group-button-icon {
+.links-group-item-icon {
   display: block;
   pointer-events: none;
   position: absolute;
