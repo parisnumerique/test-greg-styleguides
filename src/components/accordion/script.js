@@ -4,16 +4,11 @@ var Paris = window.Paris || {};
 
 Paris.accordion = (function(){
 
-  var defaultOptions = {
-  };
-
-  function accordion(selector, userOptions){
-    var $el     = $(selector),
-        api     = {},
-        options = $.extend({}, defaultOptions, userOptions);
+  function accordion(selector){
+    var $el = $(selector),
+        api = {};
 
     function init(){
-      initOptions();
       $el.find('.accordion-item-content')
         .addClass('collapse')
         .data('toggle', false);
@@ -23,12 +18,6 @@ Paris.accordion = (function(){
         .collapse();
 
       $el.data('api', api);
-    }
-
-    function initOptions(){
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
     }
 
 
@@ -48,9 +37,9 @@ Paris.accordion = (function(){
     return $el;
   }
 
-  return function(selector, userOptions){
+  return function(selector){
     return $(selector).each(function(){
-      accordion(this, userOptions);
+      accordion(this);
     });
   };
 
