@@ -1,10 +1,10 @@
 include ../../modules/button/button
 
-mixin buttons(opts)
+mixin buttons(data)
   .component.component-buttons
-    if opts.title
-      .component-buttons-title= opts.title
+    if data.title
+      .component-buttons-title= data.title
     ul.component-buttons-items
-      each item in opts.items
+      each item in data.items
         li
           +button(item)

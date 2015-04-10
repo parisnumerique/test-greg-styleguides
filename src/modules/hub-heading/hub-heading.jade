@@ -1,11 +1,11 @@
-mixin hub-heading(opts)
-  .hub-heading(style="background-image:url('#{opts.image}')")
+mixin hub-heading(data)
+  .hub-heading(style="background-image:url('#{data.image}')")
     .hub-heading-wrapper
       .hub-heading-content
         if block
           block
-        else if opts.block
-          != opts.block
-        else if opts.text
-          h1!= opts.text
+        else if data.block
+          != data.block
+        else if data.text
+          h1!= data.text
 

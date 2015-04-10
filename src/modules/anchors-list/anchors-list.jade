@@ -1,9 +1,9 @@
-mixin anchors-list(opts)
-  - opts = opts || {}
-  - attributes = opts.attributes || []
+mixin anchors-list(data)
+  - data = data || {}
+  - attributes = data.attributes || []
   .anchors-list&attributes(attributes)
-    if opts && opts.items
-      each item in opts.items
+    if data && data.items
+      each item in data.items
         .anchor-bar
           a.anchor-link(href=item.href)= item.text
           span.anchor-progress

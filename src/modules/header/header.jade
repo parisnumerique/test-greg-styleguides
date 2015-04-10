@@ -1,6 +1,6 @@
 include ../quick-access/quick-access
 
-mixin header(opts)
+mixin header(data)
   .header-wrapper
     header.header
       .layout-wrapper.header-wrapper
@@ -8,36 +8,36 @@ mixin header(opts)
           span Logo
         .entry
           a(href='/')
-            if opts.h1
-              h1.title= opts.title
+            if data.h1
+              h1.title= data.title
             else
-              div.title= opts.title
+              div.title= data.title
           nav.languages
             ul
-              each lang in opts.languages
-                li(class=(lang.abbr === opts.active_language) ? 'active' : '')
+              each lang in data.languages
+                li(class=(lang.abbr === data.active_language) ? 'active' : '')
                   a(href=lang.href)= lang.abbr
       .right
         .icons.item
-          if opts.search.visible
+          if data.search.visible
             span.fixed_display_searchbox.icon-search
-          if opts.marker.visible
+          if data.marker.visible
             span.fixed_display_around_me.icon-marker
         nav.item
-          each item in opts.items
+          each item in data.items
             a(href=item.href class=(item.current ? "current" : ""))= item.text
         .menu.item
-          if opts.participate.visible
-            a.participate(href=opts.account.url)
+          if data.participate.visible
+            a.participate(href=data.account.url)
               span.front
-                span= opts.participate.front
+                span= data.participate.front
               span.back
-                span= opts.participate.back
-          if opts.participate.visible
-            a.display-account(href=opts.account.url)
+                span= data.participate.back
+          if data.participate.visible
+            a.display-account(href=data.account.url)
               span.icon.icon-profile
-              span.label= opts.account.text
-    if opts.quick_access
-      - quick_access = JSON.parse(JSON.stringify(opts.quick_access)) // clone the data object
+              span.label= data.account.text
+    if data.quick_access
+      - quick_access = JSON.parse(JSON.stringify(data.quick_access)) // clone the data object
       //- - quick_access.modifiers = ["searching", "force-searching"] // overwrite the modifiers
       +quick-access(quick_access)

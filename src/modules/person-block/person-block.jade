@@ -1,10 +1,10 @@
 include ../../components/buttons/buttons
 
-mixin person-block(opts)
+mixin person-block(data)
   .person-block
-    .person-block-img(style='background-image: url(#{opts.image});')
+    .person-block-img(style='background-image: url(#{data.image});')
     .person-block-content
-      .person-block-title= opts.title
-      .person-block-text= opts.text
+      .person-block-title= data.title
+      .person-block-text= data.text
     .person-block-button
       +button({text: "Voir la fiche", modifiers: "action"})

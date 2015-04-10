@@ -1,11 +1,11 @@
 include ../../modules/block-content/block-content
 
-mixin block-content-newsletter(opts)
-  - modifiers = opts.modifiers || []
+mixin block-content-newsletter(data)
+  - modifiers = data.modifiers || []
   - modifiers.push("block-content-newsletter")
-  +block-content({"title": opts.title, "modifiers": modifiers})
-    .block-content-text= opts.text
-    form&attributes(opts.form)
-      input(type="text" placeholder=opts.input.placeholder title=opts.input.placeholder id=opts.input.id)
-      button.button.action(type="submit")= opts.submit.text
-    a(href="#{opts.link.href}")= opts.link.text
+  +block-content({"title": data.title, "modifiers": modifiers})
+    .block-content-text= data.text
+    form&attributes(data.form)
+      input(type="text" placeholder=data.input.placeholder title=data.input.placeholder id=data.input.id)
+      button.button.action(type="submit")= data.submit.text
+    a(href="#{data.link.href}")= data.link.text

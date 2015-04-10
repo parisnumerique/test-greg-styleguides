@@ -2,27 +2,27 @@ include ../button/button
 include ../notice/notice
 include ../search-field/search-field
 
-mixin quick-access(opts)
-  .quick-access(class=opts.modifiers style=opts.background && opts.background.image ? "background-image: url(#{opts.background.image});" : "")
-    if opts.background && opts.background.video
-      video.quick-access-video(autoplay=true, loop=true, muted='muted', poster=opts.background.image)
-        each source in opts.background.video.sources
+mixin quick-access(data)
+  .quick-access(class=data.modifiers style=data.background && data.background.image ? "background-image: url(#{data.background.image});" : "")
+    if data.background && data.background.video
+      video.quick-access-video(autoplay=true, loop=true, muted='muted', poster=data.background.image)
+        each source in data.background.video.sources
           source&attributes(source)
     .quick-access-wrapper
       .quick-access-search
-        +search-field(opts.search)
-      if opts.items
+        +search-field(data.search)
+      if data.items
         ul.quick-access-buttons
-          each item in opts.items
+          each item in data.items
             li
               - button = JSON.parse(JSON.stringify(item)) // clone the data object
               - button.modifiers = ["secondary"] // overwrite the modifiers
               +button(button)
       .quick-access-results
         ul
-        - button = JSON.parse(JSON.stringify(opts.results.button)) // clone the data object
+        - button = JSON.parse(JSON.stringify(data.results.button)) // clone the data object
         - button.modifiers = ["action", "tertiary", "quick-access-results-more"] // overwrite the modifiers
         +button(button)
     .quick-access-close-search: i.icon-close
-    if opts.notice
-      +notice(opts.notice)
+    if data.notice
+      +notice(data.notice)

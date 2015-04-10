@@ -1,6 +1,6 @@
 include ../../modules/button/button
 
-mixin video-cover(opts)
-  .video-cover(style="background-image: url(#{opts.background})")
-    - opts.button.modifiers = ["action"]
-    +button(opts.button)
+mixin video-cover(data)
+  .video-cover(style="background-image: url(#{data.background})")
+    - data.button.modifiers = ["action"]
+    +button(data.button)

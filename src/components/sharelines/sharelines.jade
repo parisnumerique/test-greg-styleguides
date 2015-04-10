@@ -1,10 +1,10 @@
 include ../../modules/share/share
 
-mixin sharelines(opts)
+mixin sharelines(data)
   .component.component-sharelines
-    .sharelines-title= opts.title
+    .sharelines-title= data.title
     ul.sharelines-items
-      each item in opts.items
+      each item in data.items
         li.sharelines-item
           = item.text
           - share = JSON.parse(JSON.stringify(item.share)) // clone the data object

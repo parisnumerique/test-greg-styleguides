@@ -1,7 +1,7 @@
-mixin breadcrumbs(opts)
+mixin breadcrumbs(data)
   ol.breadcrumbs
-    each item, index in opts.items
-      if index === opts.items.length - 1
+    each item, index in data.items
+      if index === data.items.length - 1
         li.breadcrumbs-item.breadcrumbs-item-current= item.text
       else
         li.breadcrumbs-item

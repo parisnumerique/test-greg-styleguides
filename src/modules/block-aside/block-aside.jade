@@ -1,11 +1,11 @@
-mixin block-aside(opts)
-  .block-aside(class=opts.modifiers)
-    if opts.title
-      h2.block-aside-title= opts.title
+mixin block-aside(data)
+  .block-aside(class=data.modifiers)
+    if data.title
+      h2.block-aside-title= data.title
     .block-aside-content
       if block
         block
-      else if opts.block
-        != opts.block
+      else if data.block
+        != data.block
       else
         | content

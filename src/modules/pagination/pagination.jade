@@ -1,16 +1,16 @@
-mixin pagination(opts)
+mixin pagination(data)
   nav.pagination
     ul
-      if opts.current !== 1
+      if data.current !== 1
         li.previous
           a(href='#', aria-label='Previous')
             span(aria-hidden='true') &lt;
-      each page in opts.items
-        - var klass = (page.number === opts.current ? 'active' : '')
+      each page in data.items
+        - var klass = (page.number === data.current ? 'active' : '')
         li(class="#{klass}")
           a(href='#{page.href}')= page.number
 
-      if opts.total !== opts.items[opts.items.length -1].number
+      if data.total !== data.items[data.items.length -1].number
         li.next
           a(href='#', aria-label='Next')
             span(aria-hidden='true') &gt;

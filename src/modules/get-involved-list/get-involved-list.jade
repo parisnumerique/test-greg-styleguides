@@ -1,27 +1,27 @@
 include ../../modules/button/button
 
-mixin get-involved-item(opts)
+mixin get-involved-item(data)
   .get-involved-item
-    .get-involved-item-category= opts.category
-    .get-involved-item-title= opts.title
-    - opts.button.modifiers = ["action", "get-involved-item-button"]
-    +button(opts.button)
+    .get-involved-item-category= data.category
+    .get-involved-item-title= data.title
+    - data.button.modifiers = ["action", "get-involved-item-button"]
+    +button(data.button)
 
-mixin get-involved-list(opts)
+mixin get-involved-list(data)
   .get-involved-list
     .get-involved-column
-      if opts.intro
+      if data.intro
         .get-involved-item.intro
-          each item in opts.intro.items
+          each item in data.intro.items
             .get-involved-item-title= item.title
             - button = JSON.parse(JSON.stringify(item.button)) // clone the data object
             - button.modifiers = ["action", "secondary"] // overwrite the modifiers
             +button(button)
-      each item in opts.items.slice(0, 2)
+      each item in data.items.slice(0, 2)
         +get-involved-item(item)
     .get-involved-column
-      each item in opts.items.slice(2, 6)
+      each item in data.items.slice(2, 6)
         +get-involved-item(item)
     .get-involved-column
-      each item in opts.items.slice(6, 9)
+      each item in data.items.slice(6, 9)
         +get-involved-item(item)

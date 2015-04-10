@@ -1,6 +1,6 @@
-mixin heading(opts)
-  .heading(class=opts.modifiers)
-    h2.heading-title= opts.title
-    if (opts.link)
+mixin heading(data)
+  .heading(class=data.modifiers)
+    h2.heading-title= data.title
+    if (data.link)
       .heading-links
-        a(href=opts.link.href)= opts.link.text
+        a(href=data.link.href)= data.link.text

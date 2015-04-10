@@ -3,24 +3,24 @@ include ../../modules/block-aside-links/block-aside-links
 include ../../modules/intro-text/intro-text
 include ../../components/buttons/buttons
 
-mixin sections-panel(opts)
+mixin sections-panel(data)
   .sections-panel
-    if opts.nav
+    if data.nav
       .sections-panel-nav
-        if opts.nav.items.length !== 0
+        if data.nav.items.length !== 0
           ul.sections-panel-nav-items
-            each item in opts.nav.items
+            each item in data.nav.items
               li.sections-panel-nav-item
                 a(href=item.href data-subnav-section=item.slug)= item.text
-        if opts.nav.more
-          - more = JSON.parse(JSON.stringify(opts.nav.more)) // clone the data object
+        if data.nav.more
+          - more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
           - more.modifiers = ["action", "white", "small"]
           +button(more)
       .sections-panel-subnav
         .sections-panel-subnav-default
-          +block-aside-links(opts.default.links)
-          +buttons(opts.default.buttons)
-        each item in opts.nav.items
+          +block-aside-links(data.default.links)
+          +buttons(data.default.buttons)
+        each item in data.nav.items
           .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug)
             if item.subnav && item.subnav.items.length !== 0
               if item.subnav.text

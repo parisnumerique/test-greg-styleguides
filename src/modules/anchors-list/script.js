@@ -70,7 +70,7 @@ Paris.anchors = (function(){
     function renderAnchors() {
       parseItems();
 
-      var content = templates.anchors_list({opts: {items: items}});
+      var content = templates.anchors_list({data: {items: items}});
       $el.html(content);
 
       _.defer(function () {
@@ -110,7 +110,7 @@ Paris.anchors = (function(){
             "title": Paris.i18n.t("share/email")
           }
         ];
-        var content = templates.share({opts: {
+        var content = templates.share({data: {
           items: items,
           modifiers: []
         }});

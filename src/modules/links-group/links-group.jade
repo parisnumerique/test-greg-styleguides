@@ -1,18 +1,18 @@
 include ../../modules/intro-text/intro-text
 
-mixin links-group(opts)
-  .links-group(class=opts.modifiers)
-    if opts.background
-      a(href=opts.href).links-group-header(style='background-image: url(#{opts.background});')
+mixin links-group(data)
+  .links-group(class=data.modifiers)
+    if data.background
+      a(href=data.href).links-group-header(style='background-image: url(#{data.background});')
         .links-group-header-wrapper
-          .links-group-title= opts.title
-          if opts.subtitle
-            .links-group-subtitle= opts.subtitle
+          .links-group-title= data.title
+          if data.subtitle
+            .links-group-subtitle= data.subtitle
     .links-group-content
-      if opts.text
-        +intro-text({text: opts.text})
+      if data.text
+        +intro-text({text: data.text})
       .links-group-items
-        each item in opts.items
+        each item in data.items
           a.links-group-item(href=item.href)
             span.links-group-item-text= item.text
             i.links-group-item-icon

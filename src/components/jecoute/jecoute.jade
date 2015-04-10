@@ -1,10 +1,10 @@
-mixin jecoute(opts)
+mixin jecoute(data)
   .component.component-jecoute
     .component-jecoute-title
-      p= opts.title
+      p= data.title
     .component-jecoute-content
-      p.component-jecoute-heading= opts.text
+      p.component-jecoute-heading= data.text
       form.component-jecoute-form(method="post")
-        textarea(placeholder= opts.textarea)
-        input(type="email", placeholder= opts.mail)
-        button.button(type="submit", class=["secondary", "action"])= opts.button
+        textarea(placeholder= data.textarea)
+        input(type="email", placeholder= data.mail)
+        button.button(type="submit", class=["secondary", "action"])= data.button
