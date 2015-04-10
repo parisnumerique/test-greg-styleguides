@@ -1,5 +1,5 @@
 if data.items
   each item in data.items
-    .anchor-bar(data-top=item.top)
+    .anchor-bar(data-top=item.top class=item.modifiers)
       a.anchor-link(href=item.href id=item.id)= item.text
       span.anchor-progress

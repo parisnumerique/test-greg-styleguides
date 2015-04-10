@@ -1,9 +1,8 @@
 mixin anchors-list(data)
   - data = data || {}
-  - attributes = data.attributes || []
-  .anchors-list&attributes(attributes)
+  .anchors-list&attributes(data.attributes || [])
     if data && data.items
       each item in data.items
-        .anchor-bar
+        .anchor-bar(class=item.modifiers)
           a.anchor-link(href=item.href)= item.text
           span.anchor-progress
