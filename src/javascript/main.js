@@ -11,6 +11,7 @@ require('./lib/scroll');
 
 // load our components
 require('../components/accordion/script');
+require('../components/jecoute/script');
 require('../components/news-push/script');
 
 // load our layouts
