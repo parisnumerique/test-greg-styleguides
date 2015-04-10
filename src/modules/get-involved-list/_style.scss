@@ -1,61 +1,81 @@
 .get-involved-list {
   @include container;
 
-  .get-involved-column:first-child {
-    .get-involved-item:first-child {
-      @extend .get-involved-item.yellow;
-    }
-    .get-involved-item:nth-child(2) {
-      @extend .get-involved-item.red;
-    }
-    .get-involved-item:nth-child(3) {
-      @extend .get-involved-item.green;
-    }
+  .get-involved-item:nth-child(5n+1) {
+    @extend .get-involved-item.red;
   }
-  .get-involved-column:nth-child(2) {
-    .get-involved-item:first-child {
-      @extend .get-involved-item.half-size;
-      @extend .get-involved-item.red;
-    }
-    .get-involved-item:nth-child(2) {
-      @extend .get-involved-item.light-blue;
-    }
-    .get-involved-item:nth-child(3) {
-      @extend .get-involved-item.blue;
-    }
-    .get-involved-item:nth-child(4) {
-      @extend .get-involved-item.yellow;
-    }
+  .get-involved-item:nth-child(5n+2) {
+    @extend .get-involved-item.blue;
   }
-  .get-involved-column:last-child {
-    .get-involved-item:first-child {
-      @extend .get-involved-item.green;
-    }
-    .get-involved-item:nth-child(2) {
-      @extend .get-involved-item.yellow;
-    }
-    .get-involved-item:nth-child(3) {
-      @extend .get-involved-item.light-blue;
-    }
+  .get-involved-item:nth-child(5n+3) {
+    @extend .get-involved-item.green;
+  }
+  .get-involved-item:nth-child(5n+4) {
+    @extend .get-involved-item.light-blue;
+  }
+  .get-involved-item:nth-child(5n) {
+    @extend .get-involved-item.yellow;
   }
 }
 
-.get-involved-column {
-  @include span(5);
+.get-involved-nav,
+.get-involved-items {
+  @include container;
+}
+
+.get-involved-nav {
+  background-color: $red3;
+  border-radius: 5px;
+  color: $yellow3;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.get-involved-nav-item {
+  @include span(4 of 12);
+  &:last-child {@include last;}
+
+  position: relative;
+  padding: 45px 10px 35px;
+  text-align: center;
+
+  .get-involved-item-title {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 auto 15px;
+    max-width: 260px;
+  }
+
+  .button {
+    background-color: $red4;
+    color: $yellow3;
+    font-weight: 700;
+    &:after {background-color: darken($red4, 6%);}
+  }
+
+  & + .get-involved-nav-item:before {
+    content: '';
+    display: block;
+    border-left: 1px solid $red4;
+    height: 130px;
+    margin-top: -60px;
+    left: -12px;
+    top: 50%;
+    position: absolute;
+  }
 }
 
 .get-involved-item {
+  @include gallery(4 of 12);
   border-radius: 5px;
   color: $blue3;
   display: block;
-  min-height: 360px;
+  margin-bottom: 25px;
+  min-height: 220px;
   overflow: hidden;
   padding: 20px 25px;
   position: relative;
-
-  & + .get-involved-item {
-    margin-top: 25px;
-  }
 
   &:after {
     background-position: bottom;
@@ -63,10 +83,10 @@
     bottom: 0;
     content: "";
     display: block;
-    height: 305px;
+    height: 220px;
     position: absolute;
-    right: 15px;
-    width: 120px;
+    right: 0;
+    width: 100px;
     z-index: 0;
   }
 
@@ -76,15 +96,6 @@
   }
 
   // modifiers
-  &.half-size {
-    min-height: 200px;
-    &:after {
-      background-position: top;
-      bottom: inherit;
-      height: 200px;
-      top: 30px;
-    }
-  }
   &.red {
     background-color: $get-involved-red;
     color: $white;
@@ -118,18 +129,6 @@
       background-image: url('../modules/get-involved-list/green-hand.svg');
     }
   }
-  &.intro {
-    padding: 35px 25px;
-    .get-involved-item-title {
-      max-width: 200px;
-    }
-    .button {
-      margin: 10px 0 25px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
 
   .get-involved-item-category {
     font-size: 16px;
@@ -142,6 +141,7 @@
     font-size: 20px;
     font-weight: bold;
     line-height: 24px;
+    max-width: 230px;
   }
 
   .get-involved-item-button {

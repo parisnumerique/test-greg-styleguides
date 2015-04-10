@@ -76,10 +76,10 @@
           "title": "Donnez votre avis"
         },
         "get_involved_list": {
-          "intro": {
+          "nav": {
             "items": [
               {
-                "title": "Madame la Maire, j’ai une idée",
+                "title": "Madame la Maire,<br />j’ai une idée",
                 "button": {
                   "href": "#",
                   "text": "Voir le site"
@@ -93,7 +93,7 @@
                 }
               },
               {
-                "title": "E-pétition, prenez la main",
+                "title": "E-pétition,<br />prenez la main",
                 "button": {
                   "href": "#",
                   "text": "Voir le site"
@@ -105,6 +105,22 @@
             {
               "category": "Madame la Maire, j’ai une idée",
               "title": "Création d’un jardin partagé",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "Madame la Maire, j’ai une idée",
+              "title": "S’assurer que le métro circule toute la nuit en continu",
+              "button": {
+                "href": "#",
+                "text": "Voir la fiche du projet"
+              }
+            },
+            {
+              "category": "E-pétition",
+              "title": "Restauration du Pont des Arts",
               "button": {
                 "href": "#",
                 "text": "Voir la fiche du projet"
@@ -128,47 +144,7 @@
             },
             {
               "category": "Madame la Maire, j’ai une idée",
-              "title": "Rendre la rue aux enfants",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "Madame la Maire, j’ai une idée",
-              "title": "S’assurer que le métro circule toute la nuit en continu",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "Madame la Maire, j’ai une idée",
-              "title": "Rendre la rue aux enfants",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "E-pétition",
-              "title": "Restauration du Pont des Arts",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "Budget participatif",
-              "title": "Restauration du Pont des Arts",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "Budget participatif",
-              "title": "Restauration du Pont des Arts",
+              "title": "Création d’un jardin partagé",
               "button": {
                 "href": "#",
                 "text": "Voir la fiche du projet"
