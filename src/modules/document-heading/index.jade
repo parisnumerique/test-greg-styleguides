@@ -1,9 +1,18 @@
 include document-heading
 include ../../helpers/code
 
+h2 Standard
 .lsg-module
   +document-heading(defaults)
 +code({language: "jade"}).
   include document-heading
 
   +document-heading(#{JSON.stringify(defaults, null, 2)})
+
+h2 Test avec titre long
+.lsg-module
+  +document-heading(long)
++code({language: "jade"}).
+  include document-heading
+
+  +document-heading(#{JSON.stringify(long, null, 2)})
