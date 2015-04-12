@@ -1,6 +1,9 @@
 include breadcrumbs
 include ../../helpers/code
 
+p!= "Ce module contient une ancre nommée <code>#breadcrumbs</code>. Il ne doit donc être inclus qu'une seule fois dans un template."
+
+h2 Standard
 .lsg-module
   +breadcrumbs(defaults)
 +code({language: "jade"}).
