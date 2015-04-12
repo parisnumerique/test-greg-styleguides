@@ -6,6 +6,7 @@
     "generic",
     "home",
     "hub",
+    "hub/subnav-open",
     "list-persons",
     "municipality",
     "search",

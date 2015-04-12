@@ -4,24 +4,26 @@ include ../../modules/intro-text/intro-text
 include ../../components/buttons/buttons
 
 mixin sections-panel(data)
+  - has_current_item = false
   .sections-panel
     if data.nav
       .sections-panel-nav
         if data.nav.items.length !== 0
           ul.sections-panel-nav-items
             each item in data.nav.items
+              - if (item.current === true) {has_current_item = true;}
               li.sections-panel-nav-item
-                a(href=item.href data-subnav-section=item.slug)= item.text
+                a(href=item.href data-subnav-section=item.slug class=(item.current ? "current" : ""))= item.text
         if data.nav.more
           - more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
-          - more.modifiers = ["action", "white", "small"]
+          - more.modifiers = ["action", "white", "small", "sections-panel-nav-more"]
           +button(more)
-      .sections-panel-subnav
+      .sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))
         .sections-panel-subnav-default
           +block-aside-links(data.default.links)
           +buttons(data.default.buttons)
         each item in data.nav.items
-          .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug)
+          .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug class=(item.current ? "current" : ""))
             if item.subnav && item.subnav.items.length !== 0
               if item.subnav.text
                 +intro-text({text: item.subnav.text})

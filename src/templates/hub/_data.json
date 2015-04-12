@@ -62,11 +62,7 @@
             "text": "Accueil"
           },
           {
-            "href": "#",
             "text": "Services et infos pratiques"
-          },
-          {
-            "text": "Culture et patrimoine"
           }
         ]
       },
@@ -74,7 +70,7 @@
         "nav": {
           "items": [
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Culture et patrimoine",
               "slug": "culture-patrimoine",
               "subnav": {
@@ -114,7 +110,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Déplacements et stationnement",
               "slug": "deplacements-stationnement",
               "subnav": {
@@ -134,42 +130,427 @@
               }
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Éducation",
               "slug": "education"
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Emploi",
               "slug": "emploi"
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Espaces verts et environnement",
               "slug": "espaces-verts-environnement"
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Logement",
               "slug": "logement"
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Solidarités",
               "slug": "solidarites"
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Sports et loisirs",
               "slug": "sports-loisirs"
             },
             {
-              "href": "#",
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Urbanisme",
               "slug": "urbanisme"
             },
             {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Aides, allocations et démarches",
+              "slug": "aides-allocations-demarches"
+            }
+          ],
+          "more": {
+            "href": "#",
+            "text": "Vous cherchez autre chose ?"
+          }
+        },
+        "default": {
+          "links": {
+            "title": "Contenus les plus consultés",
+            "items": [
+              {
+                "href": "#",
+                "text": "Listes des bibliothèques"
+              },
+              {
+                "href": "#",
+                "text": "Bibliothèques de prêt"
+              },
+              {
+                "href": "#",
+                "text": "Bibliothèques spécialisées"
+              },
+              {
+                "href": "#",
+                "text": "Informations pratiques"
+              },
+              {
+                "href": "#",
+                "text": "Collections"
+              },
+              {
+                "href": "#",
+                "text": "Autres bibliothèques"
+              }
+            ]
+          },
+          "buttons": {
+            "title": "Les démarches",
+            "items": [
+              {
+                "href": "#",
+                "text": "Catalogue des bibliothèques de prêt"
+              },
+              {
+                "href": "#",
+                "text": "Facil’ Familles"
+              },
+              {
+                "href": "#",
+                "text": "Catalogue des bibliothèques spécialisées"
+              }
+            ]
+          }
+        }
+      },
+      "news": {
+        "heading": {
+          "title": "En ce moment",
+          "link": {
+            "href": "#",
+            "text": "Voir les actualités"
+          }
+        },
+        "news": {
+          "modifiers": ["news-cards"],
+          "items": [
+            {
               "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
+            },
+            {
+              "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
+            },
+            {
+              "href": "#",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
+            }
+          ]
+        }
+      },
+      "cross_content": {
+        "items": [
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img1.jpg",
+            "title": "participez !",
+            "icon": "instagram",
+            "text": "#MonHLM : photographiez la façade de votre logement social !"
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img2.jpg",
+            "title": "dossier",
+            "text": "Se loger à Paris, le guide."
+          },
+          {
+            "href": "#",
+            "background": "../../modules/cross-content/cross-content-img3.jpg",
+            "title": "actualités",
+            "text": "Locataires HLM : votez pour vos représentants"
+          }
+        ]
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "form": {
+            "action": "#",
+            "method": "POST"
+          },
+          "input": {
+            "placeholder": "Entrez votre courriel",
+            "id": "connected-newsletter-input"
+          },
+          "submit": {
+            "text": "Valider"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "link": {
+                "href": "#",
+                "text": "S’abonner à @paris"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "link": {
+                "href": "#",
+                "text": "Suivre la page Facebook"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "link": {
+                "href": "#",
+                "text": "S’abonner sur Instagram"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  },
+  "subnav-open": {
+    "data": {
+      "bodyModifiers": ["fixed-nav"],
+      "header": {
+        "title": "Paris",
+        "h1": true,
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "#", "text": "Services et infos pratiques", "current": true},
+          {"href": "#", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "#", "text": "Municipalité"}
+        ],
+        "participate" : {
+          "visible": true,
+          "url": "#",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "url": "#",
+          "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "heading": {
+        "text": "Culture et patrimoine",
+        "image": "./hub-heading.png"
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "#",
+            "text": "Accueil"
+          },
+          {
+            "href": "#",
+            "text": "Services et infos pratiques"
+          },
+          {
+            "text": "Culture et patrimoine"
+          }
+        ]
+      },
+      "sections": {
+        "nav": {
+          "items": [
+            {
+              "current": true,
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Culture et patrimoine",
+              "slug": "culture-patrimoine",
+              "subnav": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "items": [
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Musées et expos",
+                    "text": "Donec id elit non mi porta gravida at eget metus."
+                  },
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Bibliothèques",
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                  },
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Histoire et patrimoine",
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                  },
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Photo et cinéma",
+                    "text": "Donec id elit non mi porta gravida at eget metus."
+                  },
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Pratiques artistiques",
+                    "text": "Sollicitudin nibh ultricies ornare."
+                  },
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Spectacles",
+                    "text": "Donec ullamcorper nulla non metus auctor"
+                  }
+                ]
+              }
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Déplacements et stationnement",
+              "slug": "deplacements-stationnement",
+              "subnav": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+                "items": [
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Titre",
+                    "text": "Donec id elit non mi porta gravida at eget metus."
+                  },
+                  {
+                    "href": "../../modules/sections-panel/content.html",
+                    "title": "Titre",
+                    "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
+                  }
+                ]
+              }
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Éducation",
+              "slug": "education"
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Emploi",
+              "slug": "emploi"
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Espaces verts et environnement",
+              "slug": "espaces-verts-environnement"
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Logement",
+              "slug": "logement"
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Solidarités",
+              "slug": "solidarites"
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Sports et loisirs",
+              "slug": "sports-loisirs"
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
+              "text": "Urbanisme",
+              "slug": "urbanisme"
+            },
+            {
+              "href": "../hub/subnav-open#breadcrumbs",
               "text": "Aides, allocations et démarches",
               "slug": "aides-allocations-demarches"
             }
