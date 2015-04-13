@@ -63,9 +63,7 @@
             "text": "Accueil"
           },
           {
-            "href": "#",
-            "text": "Actualité",
-            "current": true
+            "text": "Actualité"
           }
         ]
       },
