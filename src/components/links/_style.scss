@@ -1,6 +1,10 @@
 .component-links {
   clear: both;
 
+  h2 {
+    margin-top: 0;
+  }
+
   .links-items,
   .links-item {
     list-style: none;

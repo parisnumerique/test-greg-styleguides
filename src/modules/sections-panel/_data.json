@@ -161,36 +161,40 @@
   },
   "content": {
     "layout": false,
-    "defaults": {
+    "data": {
       "intro": "Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna.",
-      "links": {
-        "items": [
-          {
-            "href": "#",
-            "text": "Listes des bibliothèques"
-          },
-          {
-            "href": "#",
-            "text": "Bibliothèques de prêt"
-          },
-          {
-            "href": "#",
-            "text": "Bibliothèques spécialisées"
-          },
-          {
-            "href": "#",
-            "text": "Informations pratiques"
-          },
-          {
-            "href": "#",
-            "text": "Collections"
-          },
-          {
-            "href": "#",
-            "text": "Autres bibliothèques"
-          }
-        ]
-      },
+      "items": [
+        {
+          "href": "#",
+          "title": "Listes des bibliothèques",
+          "text": "Donec id elit non mi porta gravida at eget metus…"
+        },
+        {
+          "href": "#",
+          "title": "Bibliothèques de prêt",
+          "text": "Donec id elit non mi porta gravida at eget metus…"
+        },
+        {
+          "href": "#",
+          "title": "Bibliothèques spécialisées",
+          "text": "Donec id elit non mi porta gravida at eget metus…"
+        },
+        {
+          "href": "#",
+          "title": "Informations pratiques",
+          "text": "Donec id elit non mi porta gravida at eget metus…"
+        },
+        {
+          "href": "#",
+          "title": "Collections",
+          "text": "Donec id elit non mi porta gravida at eget metus…"
+        },
+        {
+          "href": "#",
+          "title": "Autres bibliothèques",
+          "text": "Donec id elit non mi porta gravida at eget metus…"
+        }
+      ],
       "buttons": {
         "title": "Les démarches",
         "items": [
