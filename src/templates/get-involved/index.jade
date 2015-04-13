@@ -1,6 +1,5 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
@@ -9,10 +8,7 @@ include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/hub-heading/hub-heading
 include ../../modules/heading/heading
-include ../../modules/get-involved-list/get-involved-list
-include ../../modules/intro-text/intro-text
 include ../../modules/links-group/links-group
-include ../../modules/news-list/news-list
 include ../../modules/gallery-ugc/gallery-ugc
 
 append content
@@ -28,7 +24,7 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.gray-background
+  .layout-content
     .layout-wrapper
       +links-group(data.links)
 
