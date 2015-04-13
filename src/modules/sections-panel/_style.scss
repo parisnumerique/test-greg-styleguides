@@ -124,6 +124,10 @@ $sections-panel-subnav-offset: 200px;
   min-width: $sections-panel-subnav-width;
   padding: 50px 30px;
   z-index: 3;
+
+  .sections-panel.has-content & {
+    transform: translateX(-200px);
+  }
 }
 
 .sections-panel-subnav-default {
@@ -196,6 +200,11 @@ $sections-panel-subnav-offset: 200px;
   right: 0;
   width: $grid-width - $sections-panel-nav-width - $sections-panel-subnav-width + $sections-panel-subnav-offset;
   z-index: 4;
+
+  .sections-panel.has-content & {
+    display: block;
+    transform: translateX(0px);
+  }
 
   &:after {
     background-color: $white;
