@@ -27,22 +27,8 @@ append content
 append content
   .layout-content
     .layout-wrapper
-      +links-group(data.team)
-
-append content
-  .layout-content
-    .layout-wrapper
-      +links-group(data.conseil)
-
-append content
-  .layout-content
-    .layout-wrapper
-      +links-group(data.hotel_ville)
-
-append content
-  .layout-content.layout-separate-after
-    .layout-wrapper
-      +links-group(data.histoire_paris)
+      each group in data.links_groups
+        +links-group(group)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after

@@ -8,10 +8,7 @@ include ../../modules/footer/footer
 include ../../modules/header/header
 include ../../modules/hub-heading/hub-heading
 include ../../modules/heading/heading
-include ../../modules/get-involved-list/get-involved-list
-include ../../modules/intro-text/intro-text
 include ../../modules/links-group/links-group
-include ../../modules/news-list/news-list
 include ../../modules/gallery-ugc/gallery-ugc
 
 append content
@@ -27,23 +24,9 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.layout-padding-after
-    .layout-wrapper
-      +intro-text(data.intro)
-      +heading(data.advice.heading)
-      +get-involved-list(data.advice.get_involved_list)
-
-append content
-  .layout-content.gray-background
-    .layout-wrapper
-      +heading(data.act.heading)
-      +links-group(data.act.links_group)
-
-append content
   .layout-content
     .layout-wrapper
-      +heading(data.now.heading)
-      +news-list(data.now.news_list)
+      +links-group(data.links)
 
 append content
   .layout-right-col.gray-background

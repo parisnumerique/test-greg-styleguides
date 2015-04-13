@@ -1,5 +1,7 @@
 .links-group {
-  @include container;
+  & + .links-group {
+    margin-top: 30px;
+  }
 
   // modifiers
   &.white-buttons {
@@ -72,6 +74,10 @@
   font-size: 18px;
   font-weight: 300;
   margin-top: 15px;
+}
+
+.links-group-items {
+  @include container;
 }
 
 .links-group-item {
