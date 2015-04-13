@@ -5,7 +5,6 @@ $sections-panel-subnav-offset: 200px;
 .sections-panel {
   background-color: $gray242;
   height: 1500px;
-//  overflow: hidden;
   position: relative;
   width: 100%;
 
@@ -74,11 +73,6 @@ $sections-panel-subnav-offset: 200px;
       opacity: 1;
     }
   }
-
-//  .sections-panel-nav.open &,
-//  &:hover {
-//    opacity: 1;
-//  }
 
   a {
     color: $gray26;
