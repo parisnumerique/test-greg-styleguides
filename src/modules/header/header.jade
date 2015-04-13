@@ -4,10 +4,10 @@ mixin header(data)
   .header-wrapper
     header.header
       .layout-wrapper.header-wrapper
-        a#logo(href='/')
+        a#logo(href=data.home)
           span Logo
         .entry
-          a(href='/')
+          a(href=data.home)
             if data.h1
               h1.title= data.title
             else
