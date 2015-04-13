@@ -52,8 +52,8 @@
         }
       },
       "heading": {
-        "text": "Participez !",
-        "image": "./heading.png"
+        "text": "Agissez",
+        "image": "./heading.jpg"
       },
       "breadcrumbs": {
         "items": [
@@ -63,133 +63,58 @@
           },
           {
             "href": "#",
-            "text": "Participez !",
-            "current": true
+            "text": "Participez !"
+          },
+          {
+            "text": "Agissez"
           }
         ]
       },
-      "intro": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia."
-      },
-      "advice": {
-        "heading": {
-          "title": "Donnez votre avis"
-        },
-        "get_involved_list": {
-          "nav": {
-            "items": [
-              {
-                "title": "Madame la Maire,<br />j’ai une idée",
-                "button": {
-                  "href": "#",
-                  "text": "Voir le site"
-                }
-              },
-              {
-                "title": "Votez pour le budget participatif",
-                "button": {
-                  "href": "#",
-                  "text": "Voir le site"
-                }
-              },
-              {
-                "title": "E-pétition,<br />prenez la main",
-                "button": {
-                  "href": "#",
-                  "text": "Voir le site"
-                }
-              }
-            ]
+      "links": {
+        "modifiers": ["red", "white-buttons"],
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+        "items": [
+          {
+            "href": "#",
+            "text": "Les conseils de quartiers"
           },
-          "items": [
-            {
-              "category": "Madame la Maire, j’ai une idée",
-              "title": "Création d’un jardin partagé",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "Madame la Maire, j’ai une idée",
-              "title": "S’assurer que le métro circule toute la nuit en continu",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "E-pétition",
-              "title": "Restauration du Pont des Arts",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "E-pétition",
-              "title": "Des bibliothèques plus attrayantes, ouvertes le dimanche",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "Budget participatif",
-              "title": "Rendre la rue aux enfants",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            },
-            {
-              "category": "Madame la Maire, j’ai une idée",
-              "title": "Création d’un jardin partagé",
-              "button": {
-                "href": "#",
-                "text": "Voir la fiche du projet"
-              }
-            }
-          ]
-        }
-      },
-      "act": {
-        "heading": {
-          "title": "Agissez"
-        },
-        "links_group": {
-          "href": "../get-involved",
-          "background": "./act.jpg",
-          "title": "Impliquez-vous",
-          "modifiers": ["red", "white-buttons"],
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-          "items": [
-            {
-              "href": "#",
-              "text": "Les conseils de quartiers"
-            },
-            {
-              "href": "#",
-              "text": "Rendez-vous à la mission participation citoyenne"
-            },
-            {
-              "href": "#",
-              "text": "Université populaire de la citoyenneté active"
-            },
-            {
-              "href": "#",
-              "text": "Citoyenneté étudiante"
-            },
-            {
-              "href": "#",
-              "text": "Egalité Femmes/Hommes"
-            },
-            {
-              "href": "../get-involved",
-              "text": "Voir plus"
-            }
-          ]
-        }
+          {
+            "href": "#",
+            "text": "Rendez-vous à la mission participation citoyenne"
+          },
+          {
+            "href": "#",
+            "text": "Université populaire de la citoyenneté active"
+          },
+          {
+            "href": "#",
+            "text": "Citoyenneté étudiante"
+          },
+          {
+            "href": "#",
+            "text": "Egalité Femmes/Hommes"
+          },
+          {
+            "href": "#",
+            "text": "Bénévolat"
+          },
+          {
+            "href": "#",
+            "text": "Lutte contre les discriminations"
+          },
+          {
+            "href": "#",
+            "text": "Pour un Paris plus juste et plus solidaire"
+          },
+          {
+            "href": "#",
+            "text": "Concertations et enquêtes publiques"
+          },
+          {
+            "href": "#",
+            "text": "Service civique"
+          }
+        ]
       },
       "now": {
         "heading": {
