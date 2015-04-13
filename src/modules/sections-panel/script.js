@@ -1,5 +1,7 @@
 'use strict';
 require('velocity-animate');
+var has = require('lodash.has');
+var values = require('lodash.values');
 
 var Paris = window.Paris || {};
 
@@ -17,10 +19,11 @@ Paris.sectionsPanel = (function(){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       $nav, $subnav, $content,
-      $navItems, $navItemsLinks, $navOverlay,
+      $navItems, $navItemsLinks, $navMore,
       $subnavSections, $subnavSectionsLinks, $subnavDefault,
       $contentWrapper,
-      currentLevel = "nav";
+      currentLevel = "nav",
+      heights = {};
 
     function init(){
       initOptions();
@@ -28,6 +31,7 @@ Paris.sectionsPanel = (function(){
       $nav = $el.find('.sections-panel-nav');
       $navItems = $nav.find('.sections-panel-nav-items');
       $navItemsLinks = $navItems.find('a');
+      $navMore = $nav.find('.sections-panel-nav-more');
 
       $subnav = $el.find('.sections-panel-subnav');
       $subnavDefault = $subnav.find('.sections-panel-subnav-default');
@@ -37,15 +41,10 @@ Paris.sectionsPanel = (function(){
       $content = $el.find('.sections-panel-content');
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
 
-      $navOverlay = $('<div class="sections-panel-nav-overlay" />').appendTo($nav);
+      setHeight();
 
-      //$el.on('mouseenter', onMouseEnter);
-      //$el.on('mouseleave', onMouseLeave);
       $navItemsLinks.on('click', onClickNavLink);
-      $nav.on('mouseenter', onMouseEnterNav);
-      $nav.on('mouseleave', onMouseLeaveNav);
       $subnavSectionsLinks.on('click', onClickSubnavLink);
-
     }
 
     function initOptions() {
@@ -53,48 +52,40 @@ Paris.sectionsPanel = (function(){
         options[key] = value;
       });
     }
-    //
-    //function onMouseEnter(e){
-    //  console.log('onMouseEnter', e);
-    //  if (currentLevel !== "content") {return;}
-    //  $subnav.velocity({
-    //    translateX: -190
-    //  }, options.velocity);
-    //}
 
-    //function onMouseLeave(e){
-    //  console.log('onMouseLeave', e);
-    //  if (currentLevel !== "content") {return;}
-    //  if (currentLevel !== "content") {return;}
-    //  $subnav.velocity({
-    //    translateX: -200
-    //  }, options.velocity);
-    //}
-    //
-    function onMouseEnterNav(){
-      //console.log('onMouseEnterNav', currentLevel);
-      if (currentLevel !== "content") {return;}
-      $navOverlay.velocity({
-        opacity: 0
-      }, $.extend({}, options.velocity, {display: 'none'}));
+    function setHeight() {
+      var newHeight = calculateHeight();
+      $el.css("height", newHeight);
     }
 
-    function onMouseLeaveNav(){
-      //console.log('onMouseLeaveNav', currentLevel);
-      if (currentLevel !== "content") {return;}
-      $navOverlay.velocity({
-        opacity: 1
-      }, $.extend({}, options.velocity, {display: 'block'}));
+    function calculateHeight(){
+      if (!has(heights, 'nav')) {
+        var navHeight = $navItems.outerHeight(true) + $navMore.outerHeight();
+        var navPadding = $nav.outerHeight() - $nav.height();
+        heights.nav = navHeight + navPadding;
+      }
+      if (!has(heights, 'subNav')) {
+        var subNavHeight = 0;
+        var subNavPadding = $subnav.outerHeight() - $subnav.height();
+        $subnavSections.add($subnavDefault).each(function () {
+          subNavHeight = Math.max(subNavHeight, $(this).outerHeight());
+        });
+        heights.subNav = subNavHeight + subNavPadding;
+      }
+      var contentHeight = $contentWrapper.outerHeight();
+      var contentPadding = $content.outerHeight() - $content.height();
+      heights.content = contentHeight + contentPadding;
+      return Math.max.apply(null, values(heights));
     }
 
     function onClickNavLink(e) {
       e.preventDefault();
       var $this = $(this);
       var subnavSection = $this.data('subnav-section');
-      $navItemsLinks.removeClass("active");
-      $this.addClass("active");
+      $navItemsLinks.removeClass("current");
+      $this.addClass("current");
+      if (currentLevel === "content") {closeContent();}
       openSubnavSection(subnavSection);
-      closeContent();
     }
 
     function openSubnavSection(section) {
@@ -111,43 +102,58 @@ Paris.sectionsPanel = (function(){
       e.preventDefault();
       var $this = $(this);
       var url = $this.attr('href');
-      $subnavSectionsLinks.removeClass("active");
-      $this.addClass("active");
+      $subnavSectionsLinks.removeClass("current");
+      $this.addClass("current");
       openContent(url);
     }
 
     function openContent(url){
-      $contentWrapper.load(url).velocity({
-        opacity: 1
-      }, $.extend({}, options.velocity, {display: 'block'}));
+      $.ajax({
+        url: url,
+        type: "get",
+        success: function(response){
+          // If the full page is loaded, only insert what's in the content-wrapper
+          // If we can't find a content-wrapper, insert the whole response
+          var content = $(response).find('.sections-panel-content-wrapper').html() || response;
+          $contentWrapper.html(content);
+          setTimeout(setHeight, 50);
+          $(this).velocity({
+            opacity: [1, 0]
+          }, $.extend({}, options.velocity, {display: 'block'}));
+        }
+      });
       if (currentLevel !== "content") {
+        $nav.addClass("closed");
         $subnav.velocity({
           translateX: -200
-        }, options.velocity);
-        $navOverlay.velocity({
-          opacity: 1
-        }, $.extend({}, options.velocity, {display: 'block'}));
+        });
         $content.velocity({
           opacity: 1,
-          translateX: [-200, 100]
-        }, $.extend({}, options.velocity, {display: 'block'}));
+          translateX: [0, 200]
+        }, $.extend({}, options.velocity, {
+          delay: 200,
+          display: 'block'
+        }));
       }
       currentLevel = "content";
     }
 
     function closeContent(){
-      $subnavSectionsLinks.removeClass("active");
+      $nav.removeClass("closed");
+      $subnavSectionsLinks.removeClass("current");
       $contentWrapper.empty();
       $subnav.velocity({
         translateX: 0
-      }, options.velocity);
-      $navOverlay.velocity({
-        opacity: 0
-      }, $.extend({}, options.velocity, {display: 'none'}));
+      }, $.extend({}, options.velocity, {
+        delay: 200
+      }));
       $content.velocity({
         opacity: 0,
-        translateX: [100, -200]
-      }, $.extend({}, options.velocity, {display: 'none'}));
+        translateX: [200, 0]
+      }, $.extend({}, options.velocity, {
+        complete: setHeight,
+        display: 'none'
+      }));
       currentLevel = "subnav";
     }
 

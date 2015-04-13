@@ -4,8 +4,7 @@ $sections-panel-subnav-offset: 200px;
 
 .sections-panel {
   background-color: $gray242;
-  min-height: 760px;
-//  overflow: hidden;
+  height: 1500px;
   position: relative;
   width: 100%;
 
@@ -58,24 +57,22 @@ $sections-panel-subnav-offset: 200px;
   width: $sections-panel-nav-width;
 }
 
-.sections-panel-nav-overlay {
-  background-color: transparentize($yellow2, 0.5);
-  display: none;
-  height: 100%;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-}
-
 .sections-panel-nav-items {
   color: $gray26;
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
   margin: 0 0 25px;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+
+  .sections-panel-nav.closed & {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 
   a {
     color: $gray26;
@@ -86,11 +83,11 @@ $sections-panel-subnav-offset: 200px;
 
 
     &:hover,
-    &.active {
+    &.current {
       color: $color-secondary;
     }
 
-    &.active {
+    &.current {
       font-weight: 700;
       cursor: default;
       pointer-events: none;
@@ -116,10 +113,15 @@ $sections-panel-subnav-offset: 200px;
 
 .sections-panel-subnav {
   background-color: $gray242;
-  box-shadow: -1px 0px 3px 0px transparentize($black, 0.9);
+  box-shadow: -3px 0px 3px -2px transparentize($black, 0.9);
   left: $sections-panel-nav-width;
+  min-width: $sections-panel-subnav-width;
   padding: 50px 30px;
   z-index: 3;
+
+  .sections-panel.has-content & {
+    transform: translateX(-200px);
+  }
 }
 
 .sections-panel-subnav-default {
@@ -130,10 +132,16 @@ $sections-panel-subnav-offset: 200px;
   > :first-child {
     h2 {margin-top: 0;}
   }
+
+  .has-current-item & {
+    display: none;
+  }
 }
 
 .sections-panel-subnav-section {
   display: none;
+
+  &.current {display: block;}
 }
 
 .sections-panel-subnav-items {
@@ -146,11 +154,11 @@ $sections-panel-subnav-offset: 200px;
     text-decoration: none;
 
     &:hover,
-    &.active {
+    &.current {
       color: $color-secondary;
     }
 
-    &.active {
+    &.current {
       cursor: default;
       pointer-events: none;
     }
@@ -179,11 +187,18 @@ $sections-panel-subnav-offset: 200px;
 
 .sections-panel-content {
   background-color: $white;
+  box-shadow: -3px 0px 4px -1px transparentize($black, 0.9);
   display: none;
+  left: $sections-panel-subnav-width + 150px;
   padding: 50px 30px;
   right: 0;
   width: $grid-width - $sections-panel-nav-width - $sections-panel-subnav-width + $sections-panel-subnav-offset;
   z-index: 4;
+
+  .sections-panel.has-content & {
+    display: block;
+    transform: translateX(0px);
+  }
 
   &:after {
     background-color: $white;
