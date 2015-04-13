@@ -41,7 +41,7 @@ html
           - for template in public.templates._data.templates
             li
               a(href="templates/#{template}")
-                = template
+                = template.replace('.html', '')
     header.sg-header(role='banner')
       #sg-controls.sg-controls
         .sg-control-content
