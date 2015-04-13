@@ -32,6 +32,7 @@
         }
       },
       "heading": {
+        "modifiers": ["small"],
         "image": "./hub-heading.jpg"
       },
       "search": {
@@ -199,6 +200,7 @@
         }
       },
       "heading": {
+        "modifiers": ["small"],
         "image": "./hub-heading.jpg"
       },
       "search": {
@@ -367,6 +369,7 @@
         }
       },
       "heading": {
+        "modifiers": ["small"],
         "image": "./hub-heading.jpg"
       },
       "search": {
