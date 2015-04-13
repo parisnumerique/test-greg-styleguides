@@ -28,13 +28,13 @@ mixin header(data)
             a(href=item.href class=(item.current ? "current" : ""))= item.text
         .menu.item
           if data.participate.visible
-            a.participate(href=data.account.url)
+            a.participate(href=data.participate.href)
               span.front
                 span= data.participate.front
               span.back
                 span= data.participate.back
           if data.participate.visible
-            a.display-account(href=data.account.url)
+            a.display-account(href=data.account.href)
               span.icon.icon-profile
               span.label= data.account.text
     if data.quick_access

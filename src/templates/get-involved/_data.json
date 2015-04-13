@@ -21,13 +21,13 @@
         ],
         "participate": {
           "visible": true,
-          "url": "../subhome-get-involved",
+          "href": "../subhome-get-involved",
           "front": "Participez !",
           "back": "C'est à vous !"
         },
         "account": {
           "visible": true,
-          "url": "#",
+          "href": "#",
           "text": "Mon compte"
         },
         "quick_access": {
