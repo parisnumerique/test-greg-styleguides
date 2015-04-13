@@ -1,6 +1,5 @@
 include ../../modules/button/button
 include ../../modules/block-aside-links/block-aside-links
-include ../../modules/intro-text/intro-text
 include ../../components/buttons/buttons
 include ../../components/links/links
 
@@ -28,7 +27,7 @@ mixin sections-panel(data)
           .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug class=(item.current ? "current" : ""))
             if item.subnav && item.subnav.items.length !== 0
               if item.subnav.text
-                +intro-text({text: item.subnav.text})
+                .sections-panel-intro= item.subnav.text
               ul.sections-panel-subnav-items
                 each subitem in item.subnav.items
                   li.sections-panel-subnav-item
@@ -38,7 +37,13 @@ mixin sections-panel(data)
     .sections-panel-content
       .sections-panel-content-wrapper
         if has_content
-          .sections-panel-content-intro= data.content.intro
-          +block-aside-links(data.content.links)
+          .sections-panel-intro= data.content.intro
+          if data.content.items.length !== 0
+            ul.sections-panel-content-items
+              each item in data.content.items
+                li.sections-panel-content-item
+                  a(href=item.href)
+                    .sections-panel-content-item-title= item.title
+                    .sections-panel-content-item-text= item.text
           +buttons(data.content.buttons)
           +links(data.content.more_links)

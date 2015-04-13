@@ -2,6 +2,7 @@
 require('velocity-animate');
 var has = require('lodash.has');
 var values = require('lodash.values');
+var throttle = require('lodash.throttle');
 
 var Paris = window.Paris || {};
 
@@ -42,9 +43,13 @@ Paris.sectionsPanel = (function(){
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
 
       setHeight();
+      $(window).on('resize', throttle(setHeight, 1000));
 
       $navItemsLinks.on('click', onClickNavLink);
       $subnavSectionsLinks.on('click', onClickSubnavLink);
+
+      if ($subnav.hasClass('has-current-item')) {currentLevel = "subnav";}
+      if ($el.hasClass('has-content')) {currentLevel = "content";}
     }
 
     function initOptions() {
@@ -115,11 +120,12 @@ Paris.sectionsPanel = (function(){
           // If the full page is loaded, only insert what's in the content-wrapper
           // If we can't find a content-wrapper, insert the whole response
           var content = $(response).find('.sections-panel-content-wrapper').html() || response;
-          $contentWrapper.html(content);
-          setTimeout(setHeight, 50);
-          $(this).velocity({
+          $contentWrapper.html(content).velocity({
             opacity: [1, 0]
-          }, $.extend({}, options.velocity, {display: 'block'}));
+          }, $.extend({}, options.velocity, {
+            complete: setHeight,
+            display: 'block'
+          }));
         }
       });
       if (currentLevel !== "content") {
