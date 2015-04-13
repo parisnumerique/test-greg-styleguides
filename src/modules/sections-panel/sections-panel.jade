@@ -2,12 +2,14 @@ include ../../modules/button/button
 include ../../modules/block-aside-links/block-aside-links
 include ../../modules/intro-text/intro-text
 include ../../components/buttons/buttons
+include ../../components/links/links
 
 mixin sections-panel(data)
   - has_current_item = false
-  .sections-panel
+  - has_content = typeof data.content !== 'undefined'
+  .sections-panel(class=(has_content ? "has-content" : ""))
     if data.nav
-      .sections-panel-nav
+      .sections-panel-nav(class=(has_content ? "closed" : ""))
         if data.nav.items.length !== 0
           ul.sections-panel-nav-items
             each item in data.nav.items
@@ -30,8 +32,13 @@ mixin sections-panel(data)
               ul.sections-panel-subnav-items
                 each subitem in item.subnav.items
                   li.sections-panel-subnav-item
-                    a(href=subitem.href)
+                    a(href=subitem.href class=(subitem.current ? "current" : ""))
                       .sections-panel-subnav-item-title= subitem.title
                       .sections-panel-subnav-item-text= subitem.text
     .sections-panel-content
       .sections-panel-content-wrapper
+        if has_content
+          .sections-panel-content-intro= data.content.intro
+          +block-aside-links(data.content.links)
+          +buttons(data.content.buttons)
+          +links(data.content.more_links)

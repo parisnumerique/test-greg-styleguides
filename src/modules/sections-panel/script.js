@@ -56,37 +56,25 @@ Paris.sectionsPanel = (function(){
     function setHeight() {
       var newHeight = calculateHeight();
       $el.css("height", newHeight);
-      //$el.velocity({
-      //  height: newHeight
-      //}, options.velocity);
-      //console.log("== setHeight", newHeight);
     }
 
     function calculateHeight(){
       if (!has(heights, 'nav')) {
         var navHeight = $navItems.outerHeight(true) + $navMore.outerHeight();
         var navPadding = $nav.outerHeight() - $nav.height();
-        //console.log("navHeight", navHeight);
-        //console.log("navPadding", navPadding);
         heights.nav = navHeight + navPadding;
       }
       if (!has(heights, 'subNav')) {
         var subNavHeight = 0;
         var subNavPadding = $subnav.outerHeight() - $subnav.height();
         $subnavSections.add($subnavDefault).each(function () {
-          console.log($(this).attr('id'), $(this).innerHeight(), $(this).height(), $(this).outerHeight());
           subNavHeight = Math.max(subNavHeight, $(this).outerHeight());
         });
-        //console.log("subNavHeight", subNavHeight);
-        //console.log("subNavPadding", subNavPadding);
         heights.subNav = subNavHeight + subNavPadding;
       }
       var contentHeight = $contentWrapper.outerHeight();
       var contentPadding = $content.outerHeight() - $content.height();
-      console.log("contentHeight", contentHeight);
-      console.log("contentPadding", contentPadding);
       heights.content = contentHeight + contentPadding;
-      console.log("heights", heights);
       return Math.max.apply(null, values(heights));
     }
 
@@ -120,11 +108,19 @@ Paris.sectionsPanel = (function(){
     }
 
     function openContent(url){
-      $contentWrapper.load(url, function(){
-        setHeight();
-        $(this).velocity({
-          opacity: 1
-        }, $.extend({}, options.velocity, {display: 'block'}));
+      $.ajax({
+        url: url,
+        type: "get",
+        success: function(response){
+          // If the full page is loaded, only insert what's in the content-wrapper
+          // If we can't find a content-wrapper, insert the whole response
+          var content = $(response).find('.sections-panel-content-wrapper').html() || response;
+          $contentWrapper.html(content);
+          setTimeout(setHeight, 50);
+          $(this).velocity({
+            opacity: [1, 0]
+          }, $.extend({}, options.velocity, {display: 'block'}));
+        }
       });
       if (currentLevel !== "content") {
         $nav.addClass("closed");
