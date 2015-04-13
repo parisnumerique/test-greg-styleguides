@@ -2,9 +2,9 @@
   "index": {
     "data": {
       "header": {
+        "home": "../home",
         "bodyModifiers": ["fixed-nav"],
         "title": "Paris",
-        "h1": true,
         "languages": [
           {"abbr": "fr", "href": "/fr"},
           {"abbr": "en", "href": "/en"},
@@ -14,14 +14,14 @@
         "search": {"visible": true},
         "marker": {"visible": true},
         "items": [
-          {"href": "#", "text": "Services et infos pratiques"},
-          {"href": "#", "text": "Actualités"},
+          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "#", "text": "Municipalité"}
+          {"href": "../subhome-municipality", "text": "Municipalité"}
         ],
         "participate" : {
           "visible": true,
-          "url": "#",
+          "url": "../subhome-get-involved",
           "front": "Participez !",
           "back": "C'est à vous !"
         },
@@ -64,11 +64,10 @@
       "breadcrumbs": {
         "items": [
           {
-            "href": "#",
+            "href": "../home",
             "text": "Accueil"
           },
           {
-            "href": "#",
             "text": "Titre de la page type"
           }
         ]
