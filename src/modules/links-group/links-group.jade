@@ -3,7 +3,7 @@ include ../../modules/intro-text/intro-text
 mixin links-group(data)
   .links-group(class=data.modifiers)
     if data.background
-      a(href=data.href).links-group-header(style='background-image: url(#{data.background});')
+      a.links-group-header(href=data.href style='background-image: url(#{data.background});')
         .links-group-header-wrapper
           .links-group-title= data.title
           if data.subtitle
