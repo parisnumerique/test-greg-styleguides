@@ -166,57 +166,85 @@
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Bruno Julliard",
-            "text": "Premier adjoint, Groupe socialiste et apparentés"
+            "text": "Premier adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Julien Bargeton",
-            "text": "Adjoint, Groupe socialiste et apparentés"
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Célia Blauel",
-            "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)"
+            "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Hélène Bidard",
-            "text": "Adjoint, Groupe communiste et front de gauche"
+            "text": "Adjoint, Groupe communiste et front de gauche",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Ian Brossat",
-            "text": "Adjoint, Groupe communiste et front de gauche"
+            "text": "Adjoint, Groupe communiste et front de gauche",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Colombe Brossel",
-            "text": "Adjoint, Groupe socialiste et apparentés"
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Alexandra Cordebard",
-            "text": "Adjoint, Groupe socialiste et apparentés"
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         }
       ],
