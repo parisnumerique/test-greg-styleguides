@@ -12,25 +12,29 @@
     }
    }
 
-  .search-results-list-page  {
+  .search-results-list-page {
     color: $color-secondary;
-    display: flex;
-    justify-content: flex-start;
     font-size: 14px;
     font-weight: 700;
     margin: 50px 0;
 
-    &:before,
-    &:after {
-      border-bottom: 1px solid $color-secondary;
-      content: "";
-      transform: translateY(-50%);
+    html.flexbox & {
+      display: flex;
+      justify-content: flex-start;
+
+      &:before,
+      &:after {
+        border-bottom: 1px solid $color-secondary;
+        content: "";
+        display: flex;
+        transform: translateY(-50%);
+      }
+
+      &:before {width: 15px;}
+      &:after {flex-grow: 1;}
+
+      > span {padding: 0 10px;}
     }
-
-    &:before {width: 15px;}
-    &:after {flex-grow: 1;}
-
-    > span {padding: 0 10px;}
   }
 
   .search-results-list-items {

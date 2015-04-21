@@ -174,23 +174,28 @@
 
 .news-card-category {
   color: $color-secondary;
-  display: flex;
   font-size: 14px;
   font-weight: 500;
   margin: 0 auto 5px;
   padding-top: 15px;
   position: relative;
+  text-align: center;
   width: 90%;
 
-  &:before,
-  &:after{
-    border-bottom: 1px solid $gray204;
-    content: "";
-    flex-grow: 1;
-    transform: translateY(-50%);
-  }
+  html.flexbox & {
+    display: flex;
 
-  > span {padding: 0 15px;}
+    &:before,
+    &:after{
+      border-bottom: 1px solid $gray204;
+      content: "";
+      display: flex;
+      flex-grow: 1;
+      transform: translateY(-50%);
+    }
+
+    > span {padding: 0 15px;}
+  }
 }
 
 .news-card-title {
