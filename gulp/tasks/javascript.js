@@ -20,6 +20,7 @@ gulp.task('compile:js', compile); // so you can run `compile:js` to build the fi
 gulp.task('build:js', build); // so you can run `gulp build:js` to build the file
 gulp.task('copy:config', copyConfig);
 gulp.task('copy:locales', copyLocales);
+gulp.task('copy:modernizr', copyModernizr);
 watchifyBundler.on('update', watch); // on any dep update, runs the watchifyBundler
 watchifyBundler.on('log', gutil.log); // output build logs to terminal
 
@@ -58,5 +59,10 @@ function copyConfig() {
 
 function copyLocales() {
   gulp.src('./src/javascript/locales.js')
+    .pipe(gulp.dest(config.build.assets.javascript));
+}
+
+function copyModernizr() {
+  gulp.src('./src/javascript/modernizr.custom.js')
     .pipe(gulp.dest(config.build.assets.javascript));
 }
