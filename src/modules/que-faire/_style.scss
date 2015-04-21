@@ -29,11 +29,16 @@
       @include span(4 of 12);
       background: url(../modules/que-faire/hachure.svg) $white repeat top left;
       border: none;
-      display: table;
+      display: inline-block;
       height: 80px;
       overflow: hidden;
       padding: 0;
       white-space: normal;
+
+      html.flexbox & {
+        display: flex;
+        align-items: center;
+      }
 
       &:last-child {@include last;}
 
@@ -44,7 +49,6 @@
 
       > span {
         color: $gray51;
-        display: table-cell;
         font-size: 15px;
         font-weight: 500;
         line-height: 20px;
@@ -52,7 +56,6 @@
         text-align: left;
         text-decoration: none;
         transition: color 0.35s ease;
-        vertical-align: middle;
       }
       &:hover > span {color: $red-que-faire;}
     }

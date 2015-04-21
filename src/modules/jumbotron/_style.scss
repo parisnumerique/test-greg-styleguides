@@ -55,6 +55,11 @@
     transform: translateX(-20%);
     width: 150%;
     z-index: 0;
+
+    // Target IE 10 and 11
+    @media screen\0 {
+      height: 200%;
+    }
   }
 }
 
