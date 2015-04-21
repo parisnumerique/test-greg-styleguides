@@ -255,6 +255,7 @@
         },
         {
           "type": "que-faire",
+          "modifiers": ["layout-padding-after"],
           "data": {
             "background": "../../modules/que-faire/que-faire-back-img.jpg",
             "logo": {
@@ -270,6 +271,7 @@
         },
         {
           "type": "get-involved",
+          "modifiers": ["gray-background"],
           "data": {
             "heading": {
               "title": "Participez !",
@@ -286,6 +288,7 @@
         },
         {
           "type": "stay-connected",
+          "modifiers": ["layout-adjacent-before"],
           "data": {
             "gallery": {
               "heading": {
@@ -449,6 +452,7 @@
         },
         {
           "type": "municipal-team",
+          "modifiers": "layout-adjacent-before",
           "data": {
             "heading": {
               "title": "La Maire et ses adjoints",
