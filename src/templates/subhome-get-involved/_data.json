@@ -23,7 +23,8 @@
           "visible": true,
           "href": "../subhome-get-involved",
           "front": "Participez !",
-          "back": "C'est à vous !"
+          "back": "C'est à vous !",
+          "current": true
         },
         "account": {
           "visible": true,
