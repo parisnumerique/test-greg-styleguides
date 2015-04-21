@@ -57,7 +57,13 @@
       display: block;
       margin-bottom: 15px;
       overflow: auto;
+      transition: background 0.3s ease;
       width: 100%;
+
+      &:focus {
+        background-color: $grayEEE;
+        outline: 0;
+      }
     }
 
     > textarea {
