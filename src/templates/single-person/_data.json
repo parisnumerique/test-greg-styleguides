@@ -245,7 +245,7 @@
                 "href": "#",
                 "text": "Consulter la feuille de route",
                 "filesize": "2Mo",
-                "modifiers": ["links-item-pdf", "links-primary"]
+                "modifiers": ["links-item-pdf"]
               }
             ]
           }
