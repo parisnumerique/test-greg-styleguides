@@ -34,3 +34,14 @@ input::-moz-focus-inner { // Inner padding and border oddities in FF3/4
   padding: 0;
   border: 0;
 }
+
+input::-ms-clear {
+  display: none;
+}
+
+input, textarea {
+  &:focus {
+    background-color: $gray242;
+    outline: 0;
+  }
+}

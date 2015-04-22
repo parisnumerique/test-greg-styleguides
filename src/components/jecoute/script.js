@@ -20,6 +20,8 @@ Paris.jecoute = (function(){
       $form = $el.find('.jecoute-form');
       $formElements = $form.find('input, textarea, button');
 
+      console.log($form);
+
       $form.on('submit', onSubmitForm);
     }
 
@@ -31,6 +33,7 @@ Paris.jecoute = (function(){
 
     function onSubmitForm(e) {
       e.preventDefault();
+      console.log('onSubmitForm');
       $formElements.attr('disabled', 'disabled');
       saveQuestion($(this).serializeArray());
     }

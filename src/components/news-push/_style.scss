@@ -2,10 +2,12 @@
   clear: both;
   position: relative;
   margin-bottom: 90px; // absolute link = 50px + classic 40px
+  opacity: 1;
   transform: none;
-  transition: 1s ease transform;
+  transition: 1s ease all;
 
   &.hidden {
+    opacity: 0;
     transform: translateX(1600px);
   }
 
@@ -51,15 +53,20 @@
       clear: both;
     }
 
-    > img {
-      width: 260px;
-      height: 160px;
-      position: relative;
-      left: -40px;
-    }
-
     > * {
       float: left;
+    }
+  }
+
+  .news-push-image {
+    display: block;
+    left: -40px;
+    position: relative;
+
+    > img {
+      display: block;
+      width: 260px;
+      height: 160px;
     }
   }
 

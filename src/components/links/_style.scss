@@ -12,6 +12,11 @@
     padding: 0;
   }
 
+  .links-items {
+    border-bottom: 1px solid $gray204;
+    border-top: 1px solid $gray204;
+  }
+
   .links-item {
 
     & + .links-item {

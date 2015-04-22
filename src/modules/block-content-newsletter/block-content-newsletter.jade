@@ -1,7 +1,7 @@
 include ../../modules/block-content/block-content
 
 mixin block-content-newsletter(data)
-  - modifiers = data.modifiers || []
+  - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-newsletter")
   +block-content({"title": data.title, "modifiers": modifiers})
     .block-content-text= data.text

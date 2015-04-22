@@ -2,7 +2,7 @@ include ../../modules/block-content/block-content
 include ../../modules/button/button
 
 mixin block-content-jecoute(data)
-  - modifiers = data.modifiers || []
+  - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-jecoute")
   +block-content({"title": data.title, "modifiers": modifiers})
     if data.items

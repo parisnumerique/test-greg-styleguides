@@ -6,11 +6,11 @@ mixin news-card(data)
       .news-card-content
         .news-card-category: span= data.category
         .news-card-title= data.title
-      if data.counters
-        .news-card-counters
-          .news-card-counter.facebook-counter
-            span.icon.icon-facebook
-            span.counter-value= data.counters.facebook
-          .news-card-counter.twitter-counter
-            span.icon.icon-twitter
-            span.counter-value= data.counters.twitter
+        if data.counters
+          .news-card-counters
+            .news-card-counter.facebook-counter
+              span.icon.icon-facebook
+              span.counter-value= data.counters.facebook
+            .news-card-counter.twitter-counter
+              span.icon.icon-twitter
+              span.counter-value= data.counters.twitter

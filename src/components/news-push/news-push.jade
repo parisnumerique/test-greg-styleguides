@@ -5,7 +5,8 @@ mixin news-push(data)
       - title = [data.title]
       if data.image.credit
         - title.push("(" + data.image.credit + ")")
-      img(src=data.image.src alt=data.image.alt title=title.join(" "))
+      a.news-push-image(href=data.href)
+        img(src=data.image.src alt=data.image.alt title=title.join(" "))
       .news-push-content
         h3: span= data.title
         p

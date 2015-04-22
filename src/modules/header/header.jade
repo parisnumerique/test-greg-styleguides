@@ -28,7 +28,7 @@ mixin header(data)
             a(href=item.href class=(item.current ? "current" : ""))= item.text
         .menu.item
           if data.participate.visible
-            a.participate(href=data.participate.href)
+            a.participate(href=data.participate.href class=(data.participate.current ? "current" : ""))
               span.front
                 span= data.participate.front
               span.back

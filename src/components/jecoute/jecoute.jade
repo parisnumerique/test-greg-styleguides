@@ -7,6 +7,6 @@ mixin jecoute(data)
       form.jecoute-form(method="post")&attributes(data.form)
         - textarea = JSON.parse(JSON.stringify(data.textarea)) // clone the data object
         - delete textarea.value
-        textarea(name="email")&attributes(textarea)= data.textarea.value
-        input(type="email" name="email")&attributes(data.email)
+        textarea(name="email" required=true)&attributes(textarea)= data.textarea.value
+        input(type="email" name="email" required=true)&attributes(data.email)
         button.button(type="submit" class="secondary action")= data.button

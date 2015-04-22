@@ -181,7 +181,8 @@
 
 
 
-  .right .participate:hover {
+  .right .participate:hover,
+  .right .participate.current, {
     background: #fae46a;
   }
   .participate:hover .front {
@@ -192,7 +193,8 @@
     transform: rotateY(0deg);
   }
 
-  .right .participate:hover .back {
+  .right .participate:hover .back,
+  .right .participate.current .back {
     transform: rotateY(0deg);
   }
   .right .participate .back {

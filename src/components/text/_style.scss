@@ -106,19 +106,25 @@
     }
   }
 
-  &.intro-primary p{
-    color: $color-primary;
-    font-weight: 700;
-    font-size: 20px;
+  &.intro-primary {
+    & + .component-text h2 {
+      border-top: 0;
+    }
 
-    &:after {
-      display: block;
-      content: " ";
-      width: 70px;
-      height: 10px;
-      background: #df225a;
-      position: relative;
-      bottom: -20px;
+    p {
+      color: $color-primary;
+      font-weight: 700;
+      font-size: 20px;
+
+      &:after {
+        display: block;
+        content: " ";
+        width: 70px;
+        height: 10px;
+        background: #df225a;
+        position: relative;
+        bottom: -20px;
+      }
     }
   }
 }

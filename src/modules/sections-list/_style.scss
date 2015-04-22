@@ -12,7 +12,7 @@
   float: left;
   height: 120px;
   margin-bottom: 20px;
-  padding: 5px 20px 12px;
+  padding: 7px 20px 12px;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -25,6 +25,8 @@
     background: $yellow;
     color: $black;
     display: table;
+    padding: 12px 18px;
+    text-align: center;
     text-transform: uppercase;
 
     .sections-list-button-text {
@@ -69,7 +71,7 @@
 }
 
 .sections-list-button-title {
-  color: $blue3;
+  color: $color-secondary;
   display: table-cell;
   font-size: 15px;
   font-weight: 700;

@@ -26,8 +26,8 @@ Paris.newsPush = (function(){
       var margin = 200;
       var rect = el.getBoundingClientRect();
       return (
-          rect.top >= 0 &&
-          rect.bottom <= (window.innerHeight + margin || document.documentElement.clientHeight + margin)
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight + margin || document.documentElement.clientHeight + margin)
       );
     }
 

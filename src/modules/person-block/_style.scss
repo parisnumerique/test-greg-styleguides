@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.person-block-img {
+.person-block-portrait {
   background-position: 50% 50%;
   background-size: cover;
   display: table-cell;
@@ -38,6 +38,7 @@
   font-size: 22px;
   font-weight: 700;
   padding-bottom: 20px;
+  text-decoration: none;
 }
 
 .person-block-text {

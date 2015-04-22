@@ -3,22 +3,26 @@
   border-top: none;
 
   .jecoute-title {
-    display: flex;
-    justify-content: flex-start;
 
-    &::after,
-    &::before {
-      content: '';
-      border-top: 5px solid $color-secondary;
-      padding-bottom: 30px;
-    }
+    html.flexbox & {
+      display: flex;
+      justify-content: flex-start;
 
-    &::before {
-      width: 40px;
-    }
+      &:after,
+      &:before {
+        content: "";
+        display: flex;
+        border-top: 5px solid $color-secondary;
+        padding-bottom: 30px;
+      }
 
-    &::after {
-      flex-grow: 1;
+      &:before {
+        width: 40px;
+      }
+
+      &:after {
+        flex-grow: 1;
+      }
     }
 
     > p {
@@ -57,7 +61,13 @@
       display: block;
       margin-bottom: 15px;
       overflow: auto;
+      transition: background 0.3s ease;
       width: 100%;
+
+      &:focus {
+        background-color: $grayEEE;
+        outline: 0;
+      }
     }
 
     > textarea {

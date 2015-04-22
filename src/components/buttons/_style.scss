@@ -1,5 +1,10 @@
 .component-buttons {
 
+  .component + & {
+    // specific case, to improve rendering when there is a single button
+    margin-top: 30px;
+  }
+
   .buttons-title {
     color: $gray51;
     font-size: 22px;

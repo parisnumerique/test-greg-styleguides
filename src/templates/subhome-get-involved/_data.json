@@ -23,7 +23,8 @@
           "visible": true,
           "href": "../subhome-get-involved",
           "front": "Participez !",
-          "back": "C'est à vous !"
+          "back": "C'est à vous !",
+          "current": true
         },
         "account": {
           "visible": true,
@@ -359,7 +360,7 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "S’abonner à @paris"
+                "text": "Twitter"
               }
             },
             {
@@ -367,7 +368,7 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Suivre la page Facebook"
+                "text": "Facebook"
               }
             },
             {
@@ -375,7 +376,15 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "S’abonner sur Instagram"
+                "text": "Instagram"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion"
               }
             }
           ],

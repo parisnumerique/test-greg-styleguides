@@ -23,7 +23,7 @@ append content
 
 append content
   each block in data.blocks
-    .layout-content
+    .layout-content(class=block.modifiers)
       +#{"block-" + block.type}(block.data)
 
 append content
