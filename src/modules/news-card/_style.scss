@@ -111,8 +111,18 @@
       font-size: 17px;
       font-weight: 300;
       margin: 0 0 5px;
+      text-align: left;
 
-      > span {padding: 0;}
+      html.flexbox & {
+        display: block;
+
+        &:before,
+        &:after{
+          display: none;
+        }
+
+        > span {padding: 0;}
+      }
     }
 
     .news-card-title {
