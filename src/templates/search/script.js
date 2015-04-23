@@ -26,10 +26,10 @@ Paris.search = (function(){
   function search(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
-      templates = {
-        search_results_list: require('../../modules/search-results-list/_client.jade'),
-        block_aside_checkboxes: require('../../modules/block-aside-checkboxes/_client.jade')
-      },
+      // templates = {
+      //   search_results_list: require('../../modules/search-results-list/_client.jade'),
+      //   block_aside_checkboxes: require('../../modules/block-aside-checkboxes/_client.jade')
+      // },
       api = {},
       $searchFieldInput,
       $results,
@@ -169,7 +169,7 @@ Paris.search = (function(){
         }
       }
 
-      var results = templates.search_results_list({data: search_results_list_data});
+      var results = templatizer["search-results-list"]["search-results-list"](search_results_list_data);
 
       if (data.page > 0) {
         $results.find('.search-results-list-more').remove();
@@ -207,9 +207,8 @@ Paris.search = (function(){
               });
             });
 
-            var facet_block = templates.block_aside_checkboxes({data: block_aside_checkboxes_data});
+            var facet_block = templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
             $facetsContainer.append(facet_block);
-
           });
         }
       }
