@@ -9,7 +9,7 @@ include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
 include ../../modules/header/header
 include ../../modules/heading/heading
-include ../../modules/jumbotron/jumbotron
+include ../../modules/hub-heading/hub-heading
 include ../../modules/news-list/news-list
 include ../../modules/que-faire/que-faire
 include ../../modules/pagination/pagination
@@ -22,7 +22,7 @@ append content
 
 append content
   .layout-content
-    +jumbotron(data.jumbotron)
+    +hub-heading(data.heading)
 
 append content
   .layout-content.layout-separate-after.layout-small-padding

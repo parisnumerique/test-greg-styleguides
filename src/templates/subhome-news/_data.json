@@ -1071,10 +1071,9 @@
           }
         }
       },
-      "jumbotron": {
-        "image": "../../modules/jumbotron/image.jpg",
-        "title": "À la une",
-        "text": "Revivez Nuit Blanche en photos et vidéo"
+      "heading": {
+        "text": "Sport et loisirs",
+        "image": "./heading.png"
       },
       "breadcrumbs": {
         "items": [
@@ -1093,7 +1092,7 @@
       },
       "latest": {
         "heading": {
-          "title": "Sport et loisirs"
+          "title": "9 janvier 2015"
         },
         "news": {
           "modifiers": ["news-cards", "large-first-child"],
