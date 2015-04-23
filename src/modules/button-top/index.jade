@@ -1,0 +1,11 @@
+include button-top
+include ../../helpers/code
+
+h2 Standard
+p (voir en bas à gauche de l'écran)
+.lsg-module
+  +button-top(defaults)
++code({language: "jade"}).
+  include button-top
+
+  +button-top(#{JSON.stringify(defaults, null, 2)})
