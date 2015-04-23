@@ -127,9 +127,9 @@
           ]
         }
       },
-      "yesterday": {
+      "currently": {
         "heading": {
-          "title": "Hier"
+          "title": "En ce moment"
         },
         "news": {
           "modifiers": ["news-cards", "large-first-child", "secondary"],
