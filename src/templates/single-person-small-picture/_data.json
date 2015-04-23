@@ -264,7 +264,7 @@
         "heading": {
           "title": "À lire aussi",
           "link": {
-            "href": "#",
+            "href": "../subhome-news",
             "text": "Voir toutes les actualités"
           }
         },
@@ -272,7 +272,7 @@
           "modifiers": ["news-cards"],
           "items": [
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Bruno Julliard salue le maintien du spectacle Exhibit B",
@@ -282,7 +282,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
               "title": "Bruno Julliard annonce la création du Conseil Parisien de la Musique",
@@ -292,7 +292,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
               "title": "Bruno Julliard lance l'expérimentation de panneaux vitrés dans le VIè",

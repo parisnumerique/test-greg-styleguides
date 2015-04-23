@@ -6,11 +6,9 @@ mixin pagination(data)
           a(href='#', aria-label='Previous')
             span(aria-hidden='true') &lt;
       each page in data.items
-        - var klass = (page.number === data.current ? 'active' : '')
-        li(class="#{klass}")
-          a(href='#{page.href}')= page.number
-
-      if data.total !== data.items[data.items.length -1].number
+        li(class=(page.number === data.current ? 'active' : ''))
+          a(href=page.href)= page.number
+      if data.total !== data.items[data.items.length - 1].number
         li.next
           a(href='#', aria-label='Next')
             span(aria-hidden='true') &gt;
