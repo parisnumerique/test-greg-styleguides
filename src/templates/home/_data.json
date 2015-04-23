@@ -281,8 +281,8 @@
               }
             },
             "items": [
-              {"href": "#", "image": "../../modules/get-involved/get-involved-img1.png", "text": "Votez pour le budget participatif"},
-              {"href": "#", "image": "../../modules/get-involved/get-involved-img2.png", "text": "E-pétition, prenez la main"}
+              {"href": "#", "image": "../../modules/get-involved/hands.png", "text": "Votez pour le budget participatif"},
+              {"href": "#", "image": "../../modules/get-involved/cards.png", "text": "E-pétition, prenez la main"}
             ]
           }
         },
