@@ -39,8 +39,7 @@ append content
             +block-aside(data.aside.picture)
             +block-aside(data.aside.permanence)
             +block-aside-contact(data.aside.contact)
-
-        .layout-content
+        .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
 
