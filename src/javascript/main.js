@@ -20,6 +20,7 @@ require('../layouts/left-col/script');
 // load our modules
 require('../modules/anchors-list/script');
 require('../modules/block-content-jecoute/script');
+require('../modules/button-top/script');
 require('../modules/document-heading/script');
 require('../modules/gallery-ugc/script');
 require('../modules/header/script');
