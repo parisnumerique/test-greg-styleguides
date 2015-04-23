@@ -22,10 +22,6 @@ Paris.anchors = (function(){
         $layoutContainer,
         $anchors,
         items,
-        templates = {
-          anchors_list: require('./_client.jade'),
-          share: require('../../modules/share/_client.jade')
-        },
         options = $.extend({}, defaultOptions, userOptions);
 
     function init(){
@@ -78,8 +74,8 @@ Paris.anchors = (function(){
     function renderAnchors() {
       parseItems();
 
-      var content = templates.anchors_list({data: {items: items}});
-      $el.html(content);
+      var content = templatizer['anchors-list']['anchors-list']({items: items});
+      $el.html($(content).html());
 
       _.defer(function () {
         PubSub.publish('anchors:ready');
@@ -127,10 +123,11 @@ Paris.anchors = (function(){
             "title": Paris.i18n.t("share/email")
           }
         ];
-        var content = templates.share({data: {
+
+        var content = templatizer.share.share({
           items: items,
           modifiers: []
-        }});
+        });
 
         $anchor.append(content);
       });
