@@ -396,5 +396,406 @@
         ]
       }
     }
+  },
+  "small-portrait": {
+    "data": {
+      "bodyModifiers": ["fixed-nav", "single-person"],
+      "header": {
+        "home": "../home",
+        "title": "Paris",
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality", "text": "Municipalité"}
+        ],
+        "participate" : {
+          "visible": true,
+          "href": "../subhome-get-involved",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "href": "#",
+          "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "heading": {
+        "image": "heading-generic.jpg",
+        "text": "Bruno Julliard",
+        "icons" : [
+          {
+            "name": "favorites",
+            "url": "#"
+          }
+        ],
+        "tags" : [
+          {
+            "text": "Adjoint"
+          },
+          {
+            "text": "XIIIè arrondissement"
+          },
+          {
+            "text": "Groupe socialiste et apparentés",
+            "href": "#"
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "../home",
+            "text": "Accueil"
+          },
+          {
+            "href": "../subhome-municipality",
+            "text": "Municipalité"
+          },
+          {
+            "href": "../municipality",
+            "text": "Vos élus"
+          },
+          {
+            "text": "Bruno Julliard"
+          }
+        ]
+      },
+      "aside": {
+        "picture": {
+          "block": "<img src=\"portrait.jpg\" />"
+        },
+        "permanence": {
+          "title": "Permanences",
+          "block": "<p>Sur rendez-vous à la Mairie du XIIIè arrondissement.</p><button class=\"button action\">Demandez un rendez-vous</button>"
+        },
+        "contact" :{
+          "title": "Contact",
+          "items": [
+            {
+              "hcard_properties": [
+                "org",
+                "p-org"
+              ],
+              "text": "Mairie du XIIIe arrondissement"
+            },
+            {
+              "hcard_properties": [
+                "street-address",
+                "p-street-address"
+              ],
+              "text": "1 place d’Italie"
+            },
+            {
+              "hcard_properties": [
+                "postal-code",
+                "p-postal-code"
+              ],
+              "text": "75013"
+            },
+            {
+              "hcard_properties": [
+                "locality",
+                "p-locality"
+              ],
+              "text": "Paris"
+            },
+            {
+              "title": "Tél.",
+              "hcard_properties": [
+                "tel",
+                "p-tel"
+              ],
+              "text": "01 45 39 89 29",
+              "href": "tel:+33145398929"
+            },
+            {
+              "title": "Twitter",
+              "icon": "twitter",
+              "modifiers": [
+                "social-twitter",
+                "has-icon"
+              ],
+              "text": "@BrunoJulliard",
+              "href": "http://twitter.com/BrunoJulliard"
+            },
+            {
+              "title": "Facebook",
+              "icon": "facebook",
+              "modifiers": [
+                "social-facebook",
+                "has-icon"
+              ],
+              "text": "Facebook",
+              "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
+            },
+            {
+              "title": "Instagram",
+              "icon": "instagram",
+              "modifiers": [
+                "social-instagram",
+                "has-icon"
+              ],
+              "text": "Instagram",
+              "href": "#"
+            }
+          ]
+        },
+        "topics": {
+          "title": "Thématique",
+          "items": [
+            {
+              "href": "#",
+              "text": "Périphérique"
+            },
+            {
+              "href": "#",
+              "text": "Pollution sonore"
+            },
+            {
+              "href": "#",
+              "text": "Mairies d’arrondissement"
+            },
+            {
+              "href": "#",
+              "text": "Lorem ullamcorper"
+            },
+            {
+              "href": "#",
+              "text": "Adipiscing"
+            },
+            {
+              "href": "#",
+              "text": "Ullamcorper"
+            },
+            {
+              "href": "#",
+              "text": "Egestas sollicitudin"
+            },
+            {
+              "href": "#",
+              "text": "Porta cursus"
+            },
+            {
+              "href": "#",
+              "text": "Vulputate"
+            },
+            {
+              "href": "#",
+              "text": "Euismod cursus"
+            },
+            {
+              "href": "#",
+              "text": "Dapibus porta"
+            },
+            {
+              "href": "#",
+              "text": "Cursus"
+            }
+          ]
+        }
+      },
+      "components": [
+        {
+          "type": "text",
+          "data": {
+            "modifiers": ["intro-primary"],
+            "block": "<p>Premier Adjoint chargé de toutes les questions relatives à la culture, au patrimoine, aux métiers d’art, aux entreprises culturelles, à la \"nuit\" et aux relations avec les arrondissements.</p>"
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h2>Présentation</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p><p>Né le 09/02/1981 <br> Profession : juriste</p>"
+          }
+        },
+        {
+          "type": "links",
+          "data": {
+            "items": [
+              {
+                "href": "#",
+                "text": "Consulter la feuille de route",
+                "filesize": "2Mo",
+                "modifiers": ["links-item-pdf"]
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "data": {
+            "block": "<h2>Mairie de XIIIè arrondissement</h2> <ul> <li>Elu conseiller de Paris le 16 mars 2008, réélu le 30 mars 2014Mandats</li> <li>Elu Premier Adjoint à la Maire de Paris, le 5 avril 2014, chargé de toutes les questions relatives à la culture, au patrimoine, aux métiers d’art, aux entreprises culturelles, à la \"nuit\" et aux relations avec les arrondissements</li> <li>Elu vice-président, le 5 avril 2014, de la Commission permanente du Conseil de Paris siégeant en formation de Conseil général</li> <li>Elu adjoint au Maire de Paris, le 21 mars 2008, chargé de la jeunesse puis, à compter du 9 juillet 2012, chargé de la culture (Mandature 2008-2014)</li> <li><a href=\"#\">Mairie de XIIIè arrondissement</a></li> </ul>"
+          }
+        }
+      ],
+      "related": {
+        "heading": {
+          "title": "À lire aussi",
+          "link": {
+            "href": "../subhome-news",
+            "text": "Voir toutes les actualités"
+          }
+        },
+        "news": {
+          "modifiers": ["news-cards"],
+          "items": [
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Mobilité",
+              "title": "Bruno Julliard salue le maintien du spectacle Exhibit B",
+              "counters": {
+                "facebook": 5,
+                "twitter": 12
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Culture et patrimoine",
+              "title": "Bruno Julliard annonce la création du Conseil Parisien de la Musique",
+              "counters": {
+                "facebook": 9,
+                "twitter": 12
+              }
+            },
+            {
+              "href": "../single-news",
+              "image": "../../modules/news-card/image.jpg",
+              "category": "Environnement",
+              "title": "Bruno Julliard lance l'expérimentation de panneaux vitrés dans le VIè",
+              "counters": {
+                "facebook": 5,
+                "twitter": 24
+              }
+            }
+          ]
+        }
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "form": {
+            "action": "#",
+            "method": "POST"
+          },
+          "input": {
+            "placeholder": "Entrez votre courriel",
+            "id": "connected-newsletter-input"
+          },
+          "submit": {
+            "text": "Valider"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "link": {
+                "href": "#",
+                "text": "Twitter"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "link": {
+                "href": "#",
+                "text": "Facebook"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "link": {
+                "href": "#",
+                "text": "Instagram"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
   }
 }
