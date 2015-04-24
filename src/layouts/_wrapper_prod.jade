@@ -18,4 +18,8 @@ html(lang="fr")
     script(src="/javascript/paris.js")
     if data.additionalScripts
       each script in data.additionalScripts
-        script(src=script.src)
+        if script.src
+          script(src=script.src)
+        else if script.inline
+          script
+            != script.inline

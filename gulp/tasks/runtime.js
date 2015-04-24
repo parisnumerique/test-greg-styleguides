@@ -11,7 +11,6 @@ gulp.task('build:runtime', function (cb) {
       dontRemoveMixins: true,
       namespace: 'Paris.bo_templates'
     });
-    console.log('file written');
     cb();
   }
   catch (e) {
@@ -31,7 +30,6 @@ gulp.task('build:clients', function (cb) {
       dontRemoveMixins: true,
       namespace: 'Paris.templates'
     });
-    console.log('file written');
     cb();
   }
   catch (e) {
