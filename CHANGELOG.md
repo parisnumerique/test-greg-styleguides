@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.9.3 (2015-04-24)
+
+* Use last harpjs version (with up-to-date sass and jade)
+* Updated changelog
+* Move built `*.tpl.js` to `build/assets/javascript`
+
+## 0.9.2 (2015-04-24)
+
+* Fix `.header` CSS rule conflict with BO
+* Fix build task
+
+## 0.9.1 (2015-04-24)
+
+* Fixed build task
+* Removed old build files
+* Use modified version of templatizer
+
 ## 0.9 (2015-04-24)
 
 ### New components, modules and templates
