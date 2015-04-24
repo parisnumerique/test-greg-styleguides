@@ -1,6 +1,6 @@
 {
   "name": "paris-styleguide",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Paris.fr styleguide",
   "main": "index.js",
   "dependencies": {
