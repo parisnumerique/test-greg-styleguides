@@ -7,7 +7,7 @@
     "bootstrap": "^3.3.2",
     "cldr-data": "~26.0.10",
     "globalize": "~1.0.0-alpha.17",
-    "harp": "git://github.com/jblanche/harp.git",
+    "harp": "^0.17",
     "jade": "^1.9.2",
     "jadeify": "^4.1.0",
     "jquery": "^2.1.3",
