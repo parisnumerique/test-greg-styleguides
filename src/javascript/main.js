@@ -32,3 +32,6 @@ require('../modules/share/script');
 
 // load our templates
 require('../templates/search/script');
+
+var Paris = window.Paris || {};
+Paris.templates = {};

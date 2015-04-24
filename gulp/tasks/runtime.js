@@ -8,7 +8,8 @@ var templatizer = require('templatizer');
 gulp.task('build:runtime', function () {
   try {
     templatizer(config.harp.input+'/@(components|modules)/!(_*)/!(index).jade', config.build.assets.javascript + '/runtime.tpl.js', {
-      dontRemoveMixins: true
+      dontRemoveMixins: true,
+      namespace: 'Paris.bo_templates'
     });
   }
   catch (e) {
@@ -23,7 +24,8 @@ gulp.task('build:clients', function () {
 
   try {
     templatizer(config.harp.input+'/@(components|modules)/@('+clients.join('|')+')/!(index).jade', config.build.assets.javascript + '/client.tpl.js', {
-      dontRemoveMixins: true
+      dontRemoveMixins: true,
+      namespace: 'Paris.templates'
     });
   }
   catch (e) {

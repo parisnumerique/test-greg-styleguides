@@ -19,7 +19,7 @@ watchifyBundler.transform('jadeify');
 
 gulp.task('watch:js', ['build:clients'],  watch); // so you can run `watch:js` to build the file
 gulp.task('compile:js', ['build:clients'], compile); // so you can run `compile:js` to build the file
-gulp.task('build:js', build); // so you can run `gulp build:js` to build the file
+gulp.task('build:js', ['build:clients'], build); // so you can run `gulp build:js` to build the file
 gulp.task('copy:config', copyConfig);
 gulp.task('copy:locales', copyLocales);
 gulp.task('copy:modernizr', copyModernizr);
@@ -33,7 +33,7 @@ function watch() {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sourcemaps.write('./'))
-    .pipe(insert.prepend(fs.readFileSync(config.build.assets.javascript + '/client.tpl.js')))
+    .pipe(insert.append('\n\n' + fs.readFileSync(config.build.assets.javascript + '/client.tpl.js')))
     .pipe(gulp.dest(path.join(config.harp.input, 'javascript')));
 }
 
@@ -52,7 +52,7 @@ function bundle(output) {
     .pipe(source(config.js.output))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(insert.prepend(fs.readFileSync(config.build.assets.javascript + '/client.tpl.js')))
+    .pipe(insert.append('\n\n' + fs.readFileSync(config.build.assets.javascript + '/client.tpl.js')))
     .pipe(gulp.dest(output)) ;
 }
 
