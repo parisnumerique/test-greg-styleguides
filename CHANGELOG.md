@@ -2,8 +2,76 @@
 
 ## 0.9 (2015-04-24)
 
-_Changelog for 0.9 is coming..._
+### New components, modules and templates
 
+* component `postit`
+* module `button-top`
+* module `intro-text`
+* template `document-postit`
+* template `get-involved`
+* template `hub/content-open`
+* template `hub/subnav-open`
+* template `municipality`
+* template `subhome-news/page2`
+* template `subhome-news/tag`
+
+### Changes after feedback from SEO
+
+* module `links-group`: added links to header, added `intro-text`
+* module `sections-panel`: added intro texts
+* template `subhome-get-involved`: added `intro-text`, data changed
+* template `subhome-municipality`: data changed
+* template `subhome-news`: data changed
+
+### Changes after feedback from acceptance testing
+
+* component `accordion`: added hover
+* component `buttons`: improved margin-top, standardized class names
+* component `jecoute`: focus style for forms, added JS behaviour
+* component `links`: added external border
+* component `news-push`: added link on image, namespaced CSS
+* component `text`: fix bug when anchor is after a floating component
+* module `anchors-list`: added modifier `anchor-postit`
+* module `block-aside-links`: fix padding
+* module `block-content-social`: added Dailymotion
+* module `breadcrumbs`: improved hover style, added anchor `#breadcrumbs` (used for `sections-list` links)
+* module `document-heading`: support for long titles
+* module `get-involved`: added image title+credit and modifier, fixed header links and data
+* module `get-involved-list`: include modules `intro-text` and `heading`, optimized SVG files
+* module `header`: data changed (for all templates)
+* module `hub-heading`: new modifier `small` (for `search` template)
+* module `links-group`: fix vertical alignment of icon
+* module `news-card`: fix margin-bottom
+* module `news-card`: fix regression bug
+* module `notice`: fix close button pading
+* module `pagination`: refactoring
+* module `person-block`: fix jade syntax
+* module `person-block`: refactoring
+* module `quick-access`: added example to documentation, fix border-bottom
+* module `search-results-list`: added transition on links
+* module `sections-list`: fix more button
+* module `sections-panel`: multiple improvements (data changed)
+* module `share`: fix condition
+* template `document`: data changed
+* template `home`: fixed spacings by adding modifiers to blocks
+* template `municipality`: fix links color
+* template `single-person-small-picture`: moved to `single-person/small-portrait`
+* template `subhome-get-involved`: added current state in `header` (data changed)
+* template `subhome-news/tag`: use `hub-heading` instead of `jumbotron`
+* template `subhome-news`: changed wording
+* template ``:
+* all templates:
+  * module `cross-content`: removed instagram icon
+  * added `.components` class to parent element whenever we render components
+
+### Miscellaneous
+
+* Added real links between templates to allow navigation in styleguide
+* Added a way to include additional scripts to `wrapper_prod`
+* Removed normalize-opentype (unused)
+* Added modernizr
+* Misc IE11 fixes
+* Conditional flexbox with modernizr + fixed flexbox in IE11
 
 ## 0.8 (2015-04-07)
 
