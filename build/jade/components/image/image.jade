@@ -1,7 +1,6 @@
-mixin image(opts)
-  .component.component-image(class=opts.modifiers)
-    - title = [opts.title]
-    if opts.credit
-      - title.push("(" + opts.credit + ")")
+mixin image(data)
+  .component.component-image(class=data.modifiers)
+    - title = [data.title]
+    - if (data.credit) {title.push("(" + data.credit + ")")}
     - title = title.join(" ")
-    img(src=opts.src alt=opts.alt title=title)
+    img(src=data.src alt=data.alt title=title)

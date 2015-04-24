@@ -1,6 +1,6 @@
-mixin cross-content(opts)
+mixin cross-content(data)
   .cross-content
-    each item in opts.items
+    each item in data.items
       a.cross-content-item(href=item.href class=item.modifiers style='background-image: url(#{item.background});')
         .cross-content-title= item.title
         if item.icon

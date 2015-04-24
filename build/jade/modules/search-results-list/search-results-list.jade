@@ -1,17 +1,17 @@
 include ../../modules/button/button
 
-mixin search-results-list(opts)
+mixin search-results-list(data)
   .search-results-list
-    if !opts.items || opts.items.length === 0
-      h1= opts.no_result
+    if !data.items || data.items.length === 0
+      h1= data.no_result
     else
-      if opts.title
-        h1!= opts.title
+      if data.title
+        h1!= data.title
       else
-        .search-results-list-page: span= opts.page
-      if opts.items.length !== 0
+        .search-results-list-page: span= data.page
+      if data.items.length !== 0
         ul.search-results-list-items
-          each item in opts.items
+          each item in data.items
             li.search-results-list-item(class=item.modifiers)
               a(href=item.href)
                 = item.title
@@ -22,9 +22,9 @@ mixin search-results-list(opts)
                       a(href=anchor.href)= anchor.label
               if item.text
                 .search-results-list-text= item.text
-        if opts.more
+        if data.more
           .search-results-list-more
-            - more = JSON.parse(JSON.stringify(opts.more)) // clone the data object
+            - more = JSON.parse(JSON.stringify(data.more)) // clone the data object
             - more.modifiers = ["wide"] // overwrite the modifiers
             - more.attributes = {"data-page": more.page}
             +button(more)

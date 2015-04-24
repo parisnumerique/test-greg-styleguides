@@ -1,5 +1,6 @@
 extends ../../layouts/stack/stack
 
+include ../../modules/button-top/button-top
 include ../../modules/notice/notice
 include ../../modules/header/header
 include ../../modules/footer/footer
@@ -23,9 +24,12 @@ append content
 
 append content
   each block in data.blocks
-    .layout-content
+    .layout-content(class=block.modifiers)
       +#{"block-" + block.type}(block.data)
 
 append content
   .layout-content.layout-adjacent-before
     +footer(data.footer)
+
+append content
+  +button-top

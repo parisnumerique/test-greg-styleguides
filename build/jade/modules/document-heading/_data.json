@@ -11,6 +11,18 @@
         "url": "#"
       }
       ]
+    },
+    "long": {
+      "image": "./document-heading.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
+      "icons" : [{
+        "name": "favorites",
+        "url": "#"
+      },{
+        "name": "bell",
+        "url": "#"
+      }
+      ]
     }
   }
 }

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9 (2015-04-24)
+
+_Changelog for 0.9 is coming..._
+
+
 ## 0.8 (2015-04-07)
 
 ### Improved search

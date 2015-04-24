@@ -3,8 +3,8 @@
     "data": {
       "bodyModifiers": ["fixed-nav", "single-person"],
       "header": {
+        "home": "../home",
         "title": "Paris",
-        "h1": true,
         "languages": [
           {"abbr": "fr", "href": "/fr"},
           {"abbr": "en", "href": "/en"},
@@ -14,20 +14,20 @@
         "search": {"visible": true},
         "marker": {"visible": true},
         "items": [
-          {"href": "#", "text": "Services et infos pratiques"},
-          {"href": "#", "text": "Actualités"},
+          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "#", "text": "Municipalité"}
+          {"href": "../subhome-municipality", "text": "Municipalité"}
         ],
         "participate" : {
           "visible": true,
-          "url": "#",
+          "href": "../subhome-get-involved",
           "front": "Participez !",
           "back": "C'est à vous !"
         },
         "account" : {
           "visible": true,
-          "url": "#",
+          "href": "#",
           "text": "Mon compte"
         },
         "quick_access": {
@@ -64,15 +64,18 @@
       "breadcrumbs": {
         "items": [
           {
-            "href": "#",
+            "href": "../home",
             "text": "Accueil"
           },
           {
-            "href": "#",
-            "text": "L’hôtel de ville"
+            "href": "../subhome-municipality",
+            "text": "Municipalité"
           },
           {
-            "href": "#",
+            "href": "../municipality",
+            "text": "Vos élus"
+          },
+          {
             "text": "Adjoints à la Maire"
           }
         ]
@@ -163,68 +166,94 @@
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Bruno Julliard",
-            "text": "Premier adjoint, Groupe socialiste et apparentés"
+            "text": "Premier adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Julien Bargeton",
-            "text": "Adjoint, Groupe socialiste et apparentés"
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Célia Blauel",
-            "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)"
+            "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Hélène Bidard",
-            "text": "Adjoint, Groupe communiste et front de gauche"
+            "text": "Adjoint, Groupe communiste et front de gauche",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Ian Brossat",
-            "text": "Adjoint, Groupe communiste et front de gauche"
+            "text": "Adjoint, Groupe communiste et front de gauche",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Colombe Brossel",
-            "text": "Adjoint, Groupe socialiste et apparentés"
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         },
         {
           "type": "person-block",
           "data": {
-            "image": "../../modules/person-block/person-block-img.jpg",
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
             "title": "Alexandra Cordebard",
-            "text": "Adjoint, Groupe socialiste et apparentés"
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
           }
         }
       ],
       "pagination": {
-        "items": [
-          {"number": 1, "href": "/1"},
-          {"number": 2, "href": "/2"},
-          {"number": 3, "href": "/3"},
-          {"number": 4, "href": "/4"},
-          {"number": 5, "href": "/5"}
-        ],
+        "text": {
+          "prev": "Page précédente",
+          "next": "Page suivante"
+        },
+        "url": "#page-${page}",
         "current": 1,
         "total": 10
       },
@@ -271,7 +300,7 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "S’abonner à @paris"
+                "text": "Twitter"
               }
             },
             {
@@ -279,7 +308,7 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Suivre la page Facebook"
+                "text": "Facebook"
               }
             },
             {
@@ -287,7 +316,15 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "S’abonner sur Instagram"
+                "text": "Instagram"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion"
               }
             }
           ],

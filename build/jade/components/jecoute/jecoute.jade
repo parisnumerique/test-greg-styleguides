@@ -1,3 +1,17 @@
+<<<<<<< Updated upstream
+mixin jecoute(data)
+  .component.component-jecoute(data-thanks=data.thanks)
+    .jecoute-title
+      p= data.title
+    .jecoute-content
+      p.jecoute-text= data.text
+      form.jecoute-form(method="post")&attributes(data.form)
+        - textarea = JSON.parse(JSON.stringify(data.textarea)) // clone the data object
+        - delete textarea.value
+        textarea(name="email" required=true)&attributes(textarea)= data.textarea.value
+        input(type="email" name="email" required=true)&attributes(data.email)
+        button.button(type="submit" class="secondary action")= data.button
+=======
 mixin jecoute(opts)
   .component.component-jecoute
     .component-jecoute-title
@@ -8,3 +22,4 @@ mixin jecoute(opts)
         textarea(placeholder= opts.textarea)
         input(type="email", placeholder= opts.mail)
         button.button(type="submit", class=["secondary", "action"])= opts.button
+>>>>>>> Stashed changes

@@ -1,16 +1,16 @@
-mixin news-card(opts)
-  a.news-card(href=opts.href class=opts.modifiers)
+mixin news-card(data)
+  a.news-card(href=data.href class=data.modifiers)
     .news-card-wrapper
-      if opts.image
-        .news-card-image(style='background-image: url(#{opts.image});')
+      if data.image
+        .news-card-image(style='background-image: url(#{data.image});')
       .news-card-content
-        .news-card-category: span= opts.category
-        .news-card-title= opts.title
-      if opts.counters
-        .news-card-counters
-          .news-card-counter.facebook-counter
-            span.icon.icon-facebook
-            span.counter-value= opts.counters.facebook
-          .news-card-counter.twitter-counter
-            span.icon.icon-twitter
-            span.counter-value= opts.counters.twitter
+        .news-card-category: span= data.category
+        .news-card-title= data.title
+        if data.counters
+          .news-card-counters
+            .news-card-counter.facebook-counter
+              span.icon.icon-facebook
+              span.counter-value= data.counters.facebook
+            .news-card-counter.twitter-counter
+              span.icon.icon-twitter
+              span.counter-value= data.counters.twitter

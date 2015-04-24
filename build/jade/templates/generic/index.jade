@@ -7,6 +7,7 @@ include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button/button
+include ../../modules/button-top/button-top
 include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
@@ -34,8 +35,7 @@ append content
         aside.layout-aside
           .aside-wrapper
             +anchors-list(data.aside.anchors_list)
-
-        .layout-content
+        .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
 
@@ -59,3 +59,6 @@ append content
 append content
   .layout-content.layout-adjacent-before
     +footer(data.footer)
+
+append content
+  +button-top

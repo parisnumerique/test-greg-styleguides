@@ -1,10 +1,13 @@
 include ../heading/heading
 
-mixin get-involved(opts)
+mixin get-involved(data)
   .get-involved
     .layout-wrapper
-      +heading(opts.heading)
+      +heading(data.heading)
       .get-involved-content
-        each item in opts.items
-          a.get-involved-card(href=item.href style='background-image: url(#{item.image});')
+        each item in data.items
+          - title = [item.image.title]
+          - if (item.image.credit) {title.push("(" + item.image.credit + ")")}
+          - title = title.join(" ")
+          a.get-involved-card(href=item.href style="background-image: url(#{item.image.src});" title=title class=item.modifiers)
             div.get-involved-text= item.text

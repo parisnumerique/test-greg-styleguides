@@ -1,12 +1,12 @@
-mixin notice(opts)
-  .notice(class=opts.modifiers id=opts.id)
-    if opts.closable
+mixin notice(data)
+  .notice(class=data.modifiers id=data.id)
+    if data.closable
       .close
     if block
       p.notice-content
         block
-    else if opts.block
+    else if data.block
       p.notice-content
-        != opts.block
+        != data.block
     else
       p.notice-content notice

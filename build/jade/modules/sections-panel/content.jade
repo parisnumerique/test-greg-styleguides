@@ -1,7 +1,13 @@
-include ../../modules/block-aside-links/block-aside-links
 include ../../components/buttons/buttons
 include ../../components/links/links
 
-+block-aside-links(defaults.links)
-+buttons(defaults.buttons)
-+links(defaults.more_links)
+.sections-panel-intro= data.intro
+if data.items && data.items.length !== 0
+  ul.sections-panel-content-items
+    each item in data.items
+      li.sections-panel-content-item
+        a(href=item.href)
+          .sections-panel-content-item-title= item.title
+          .sections-panel-content-item-text= item.text
++buttons(data.buttons)
++links(data.more_links)
