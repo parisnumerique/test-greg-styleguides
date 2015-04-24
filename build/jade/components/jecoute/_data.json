@@ -3,7 +3,6 @@
     "defaults": {
       "title": "@parisjecoute",
       "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
-<<<<<<< Updated upstream
       "form": {
         "action": "#",
         "method": "post"
@@ -36,11 +35,6 @@
       },
       "button": "Valider",
       "thanks": "Merci, votre question a bien été transmise."
-=======
-      "textarea": "Quelle information cherchiez-vous dans cette rubrique ?",
-      "mail": "Renseignez votre adresse e-mail",
-      "button": "Valider"
->>>>>>> Stashed changes
     }
   }
 }
