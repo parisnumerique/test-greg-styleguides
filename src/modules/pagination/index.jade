@@ -17,6 +17,22 @@ h2 Première page
 
   +pagination(#{JSON.stringify(first, null, 2)})
 
+h2 Deuxième page
+.lsg-module
+  +pagination(second)
++code({language: "jade"}).
+  include pagination
+
+  +pagination(#{JSON.stringify(second, null, 2)})
+
+h2 Avant-dernière page
+.lsg-module
+  +pagination(penultimate)
++code({language: "jade"}).
+  include pagination
+
+  +pagination(#{JSON.stringify(penultimate, null, 2)})
+
 h2 Dernière page
 .lsg-module
   +pagination(last)

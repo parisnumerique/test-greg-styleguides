@@ -39,7 +39,7 @@ append content
           .aside-wrapper
             +anchors-list(data.aside.anchors_list)
             +share(data.aside.share)
-        .layout-content
+        .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
           +last-update(data.last_update)

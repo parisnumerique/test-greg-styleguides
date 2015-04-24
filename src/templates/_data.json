@@ -16,9 +16,11 @@
     "search/results.html",
     "single-news",
     "single-person",
-    "single-person-small-picture",
+    "single-person/small-portrait.html",
     "subhome-get-involved",
     "subhome-municipality",
-    "subhome-news"
+    "subhome-news",
+    "subhome-news/page2.html",
+    "subhome-news/tag.html"
   ]
 }

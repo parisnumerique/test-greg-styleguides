@@ -228,7 +228,7 @@
         "heading": {
           "title": "En ce moment",
           "link": {
-            "href": "#",
+            "href": "../subhome-news",
             "text": "Voir les actualités"
           }
         },
@@ -236,7 +236,7 @@
           "modifiers": ["news-cards"],
           "items": [
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -246,7 +246,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -256,7 +256,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
@@ -620,7 +620,7 @@
         "heading": {
           "title": "En ce moment",
           "link": {
-            "href": "#",
+            "href": "../subhome-news",
             "text": "Voir les actualités"
           }
         },
@@ -628,7 +628,7 @@
           "modifiers": ["news-cards"],
           "items": [
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -638,7 +638,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -648,7 +648,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
@@ -1096,7 +1096,7 @@
         "heading": {
           "title": "En ce moment",
           "link": {
-            "href": "#",
+            "href": "../subhome-news",
             "text": "Voir les actualités"
           }
         },
@@ -1104,7 +1104,7 @@
           "modifiers": ["news-cards"],
           "items": [
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -1114,7 +1114,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -1124,7 +1124,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",

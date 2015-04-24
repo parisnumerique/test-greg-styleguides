@@ -16,3 +16,6 @@ html(lang="fr")
     script
       include ../../assets/javascript/config.js
     script(src="/javascript/paris.js")
+    if data.additionalScripts
+      each script in data.additionalScripts
+        script(src=script.src)

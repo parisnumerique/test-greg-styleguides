@@ -192,7 +192,7 @@
         "heading": {
           "title": "En ce moment",
           "link": {
-            "href": "#",
+            "href": "../subhome-news/tag.html",
             "text": "Voir toutes les actualités Participez"
           }
         },
@@ -200,7 +200,7 @@
           "modifiers": ["news-cards"],
           "items": [
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "./car.jpg",
               "category": "Participez",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -210,7 +210,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "./eiffel.jpg",
               "category": "Culture et patrimoine",
               "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
@@ -220,7 +220,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "./cart.jpg",
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",

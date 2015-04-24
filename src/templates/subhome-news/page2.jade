@@ -5,7 +5,6 @@ include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
-include ../../modules/button-top/button-top
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
 include ../../modules/header/header
@@ -33,29 +32,13 @@ append content
 append content
   .layout-content
     .layout-wrapper
-      +heading(data.today.heading)
-      +news-list(data.today.news)
+      +heading(data.latest.heading) // TODO
+      +news-list(data.latest.news)
 
 append content
   .layout-content.gray-background
     .layout-wrapper
-      +heading(data.currently.heading)
-      +news-list(data.currently.news)
-
-append content
-  .layout-content.layout-adjacent-before
-    .layout-half-col.color-secondary-background
-      .layout-wrapper
-        .layout-content
-          +block-content(data.video.block)
-            +video-cover(data.video.cover)
-        .layout-content
-          +block-content-newsletter(data.newsletter)
-
-append content
-  .layout-content
-    .layout-wrapper
-      +heading(data.archive.heading)
+      +heading(data.archive.heading) // TODO
       +news-list(data.archive.news)
 
 append content
@@ -91,6 +74,3 @@ append content
 append content
   .layout-content.layout-adjacent-before
     +footer(data.footer)
-
-append content
-  +button-top
