@@ -1,6 +1,12 @@
 {
   "index": {
     "defaults": {
+      "intro": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia."
+      },
+      "heading": {
+        "title": "Donnez votre avis"
+      },
       "nav": {
         "items": [
           {
