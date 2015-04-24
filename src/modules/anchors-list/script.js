@@ -74,7 +74,7 @@ Paris.anchors = (function(){
     function renderAnchors() {
       parseItems();
 
-      var content = templatizer['anchors-list']['anchors-list']({items: items});
+      var content = Paris.templates.templatizer['anchors-list']['anchors-list']({items: items});
       $el.html($(content).html());
 
       _.defer(function () {
@@ -124,7 +124,7 @@ Paris.anchors = (function(){
           }
         ];
 
-        var content = templatizer.share.share({
+        var content = Paris.templates.templatizer.share.share({
           items: items,
           modifiers: []
         });

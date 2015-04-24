@@ -169,7 +169,7 @@ Paris.search = (function(){
         }
       }
 
-      var results = templatizer["search-results-list"]["search-results-list"](search_results_list_data);
+      var results = Paris.templates.templatizer["search-results-list"]["search-results-list"](search_results_list_data);
 
       if (data.page > 0) {
         $results.find('.search-results-list-more').remove();
@@ -207,7 +207,7 @@ Paris.search = (function(){
               });
             });
 
-            var facet_block = templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
+            var facet_block = Paris.templates.templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
             $facetsContainer.append(facet_block);
           });
         }
