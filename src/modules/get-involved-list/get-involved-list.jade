@@ -1,4 +1,6 @@
 include ../../modules/button/button
+include ../../modules/heading/heading
+include ../../modules/intro-text/intro-text
 
 mixin get-involved-item(data)
   .get-involved-item
@@ -9,6 +11,10 @@ mixin get-involved-item(data)
 
 mixin get-involved-list(data)
   .get-involved-list
+    if data.intro
+      +intro-text(data.intro)
+    if data.heading
+      +heading(data.heading)
     if data.nav
       .get-involved-nav
         each item in data.nav.items
