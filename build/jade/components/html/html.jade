@@ -1,8 +1,8 @@
-mixin html(opts)
+mixin html(data)
   .component.component-html
     if block
       block
-    else if opts.block
-      != opts.block
+    else if data.block
+      != data.block
     else
       | html

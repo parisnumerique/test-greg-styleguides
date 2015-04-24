@@ -1,0 +1,8 @@
+mixin postit(data)
+  .component.component-postit(class=data ? data.modifiers : [])
+    if block
+      block
+    else if data.block
+      != data.block
+    else
+      p postit

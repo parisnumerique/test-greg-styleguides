@@ -24,3 +24,11 @@ h2 Recherche en cours
   include quick-access
 
   +quick-access(#{JSON.stringify(searching, null, 2)})
+
+h2 Avec un item mis en avant
+.lsg-module
+  +quick-access(with_primary_item)
++code({language: "jade"}).
+  include quick-access
+
+  +quick-access(#{JSON.stringify(with_primary_item, null, 2)})

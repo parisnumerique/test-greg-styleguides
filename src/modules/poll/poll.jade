@@ -1,25 +1,25 @@
 include ../button/button
 include ../search-field/search-field
 
-mixin poll(opts)
+mixin poll(data)
   .poll
     .poll-wrapper
-      if opts.heading
+      if data.heading
         .poll-heading
-          = opts.heading
-      .poll-title(data-thanks=opts.thanks)= opts.title
-      if opts.items
-        ul.poll-options(class=opts.modifiers)
-          each item in opts.items
+          = data.heading
+      .poll-title(data-thanks=data.thanks)= data.title
+      if data.items
+        ul.poll-options(class=data.modifiers)
+          each item in data.items
             li
               - button = JSON.parse(JSON.stringify(item))
               - button.modifiers = ["action", "secondary"]
               - button.attributes = {"data-value": item.value}
               +button(button)
-      else if opts.form
+      else if data.form
         form.poll-form
-          input.poll-input(type="text" placeholder=opts.form.input.placeholder title=opts.form.input.placeholder id=opts.form.input.id)
-          button.button.action.secondary.poll-submit(type="submit")= opts.form.submit.text
-      if opts.more
+          input.poll-input(type="text" placeholder=data.form.input.placeholder title=data.form.input.placeholder id=data.form.input.id)
+          button.button.action.secondary.poll-submit(type="submit")= data.form.submit.text
+      if data.more
         .poll-more
-          a(href=opts.more.href)= opts.more.text
+          a(href=data.more.href)= data.more.text

@@ -38,4 +38,4 @@ h2= title
       - for template in public.templates._data.templates
         li
           a(href="../templates/#{template}")
-            = template
+            = template.replace('.html', '')

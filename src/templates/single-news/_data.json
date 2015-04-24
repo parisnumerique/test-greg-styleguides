@@ -3,8 +3,8 @@
     "data": {
       "bodyModifiers": ["fixed-nav"],
       "header": {
+        "home": "../home",
         "title": "Paris",
-        "h1": true,
         "languages": [
           {"abbr": "fr", "href": "/fr"},
           {"abbr": "en", "href": "/en"},
@@ -14,20 +14,20 @@
         "search": {"visible": true},
         "marker": {"visible": true},
         "items": [
-          {"href": "#", "text": "Services et infos pratiques"},
-          {"href": "#", "text": "Actualités"},
+          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "#", "text": "Municipalité"}
+          {"href": "../subhome-municipality", "text": "Municipalité"}
         ],
         "participate" : {
           "visible": true,
-          "url": "#",
+          "href": "../subhome-get-involved",
           "front": "Participez !",
           "back": "C'est à vous !"
         },
         "account" : {
           "visible": true,
-          "url": "#",
+          "href": "#",
           "text": "Mon compte"
         },
         "quick_access": {
@@ -60,22 +60,21 @@
           },
           {
             "text": "Sport et loisirs",
-            "href": "#"
+            "href": "../subhome-news/tag.html"
           }
         ]
       },
       "breadcrumbs": {
         "items": [
           {
-            "href": "#",
+            "href": "../home",
             "text": "Accueil"
           },
           {
-            "href": "#",
+            "href": "../subhome-news",
             "text": "Actualités"
           },
           {
-            "href": "#",
             "text": "Ça glisse sur la patinoire de l’hotel de ville"
           }
         ]
@@ -222,7 +221,7 @@
         "heading": {
           "title": "À lire aussi",
           "link": {
-            "href": "#",
+            "href": "../subhome-news",
             "text": "Voir toutes les actualités"
           }
         },
@@ -230,7 +229,7 @@
           "modifiers": ["news-cards"],
           "items": [
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
@@ -240,7 +239,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Culture et patrimoine",
               "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
@@ -250,7 +249,7 @@
               }
             },
             {
-              "href": "#",
+              "href": "../single-news",
               "image": "../../modules/news-card/image.jpg",
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
@@ -264,7 +263,7 @@
       },
       "most_shared": {
         "heading": {
-          "title": "Les plus partagés"
+          "title": "Les plus partagés sur Paris.fr"
         },
         "news": {
           "items": [
@@ -354,7 +353,7 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "S’abonner à @paris"
+                "text": "Twitter"
               }
             },
             {
@@ -362,7 +361,7 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Suivre la page Facebook"
+                "text": "Facebook"
               }
             },
             {
@@ -370,7 +369,15 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "S’abonner sur Instagram"
+                "text": "Instagram"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion"
               }
             }
           ],

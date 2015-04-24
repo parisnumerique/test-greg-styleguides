@@ -7,16 +7,10 @@ var Paris = window.Paris || {};
 
 Paris.documentHeading = (function(){
 
-  var defaultOptions = {
-  };
-
-  function documentHeading(selector, userOptions){
-    var $el     = $(selector),
-        options = $.extend({}, defaultOptions, userOptions);
+  function documentHeading(selector){
+    var $el = $(selector);
 
     function init(){
-      initOptions();
-
       copyTitle();
     }
 
@@ -28,20 +22,14 @@ Paris.documentHeading = (function(){
       $leftWrapper.prepend($asideTitle);
     }
 
-    function initOptions() {
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
-    }
-
     init();
 
     return $el;
   }
 
-  return function(selector, userOptions){
+  return function(selector){
     return $(selector).each(function(){
-      documentHeading(this, userOptions);
+      documentHeading(this);
     });
   };
 

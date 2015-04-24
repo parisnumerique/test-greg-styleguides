@@ -1,0 +1,25 @@
+.component-postit {
+  @extend %component-text;
+
+  border-bottom: 7px solid $gray242;
+  margin-top: -50px;
+  padding: 10px 0 110px;
+  position: relative;
+
+  &:before {
+    background: $orange-postit;
+    content: " ";
+    display: block;
+    height: 100%;
+    left: -50px;
+    position: absolute;
+    top: 0;
+    width: 6px;
+  }
+
+  h2,
+  a:not(.button) {
+    color: $orange-postit;
+  }
+
+}

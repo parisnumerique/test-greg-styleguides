@@ -19,18 +19,16 @@ Paris.anchors = (function(){
 
   function anchors(selector, userOptions){
     var $el = $(selector),
+        $layoutContainer,
         $anchors,
         items,
-        templates = {
-          anchors_list: require('./_client.jade'),
-          share: require('../../modules/share/_client.jade')
-        },
         options = $.extend({}, defaultOptions, userOptions);
 
     function init(){
       initOptions();
 
-      $anchors = $('.layout-left-col').find(options.anchorsSelector);
+      $layoutContainer = $('.layout-left-col');
+      $anchors = $layoutContainer.find(options.anchorsSelector);
 
       renderAnchors();
 
@@ -47,7 +45,7 @@ Paris.anchors = (function(){
     }
 
     function parseItems() {
-      items = _.map($anchors, function(anchor) {
+      items = _.map($anchors, function(anchor, index) {
         var $anchor = $(anchor);
 
         // Generate a slug-based id if it doesn't exist
@@ -55,23 +53,29 @@ Paris.anchors = (function(){
           $anchor.attr('id', slugify($anchor.text()));
         }
 
+        // Check if the anchor is in a postit
+        $anchor.data('in-postit', ($anchor.closest('.component-postit').length !== 0));
+
         return {
           text: $anchor.text(),
           href: '#' + $anchor.attr('id'),
-          top: Math.round(+$anchor.position().top - options.anchorTopBorder)
+          top: $anchor.data('in-postit') && index === 0 ?
+            $layoutContainer.position().top : // when in-postit and first item
+            Math.round(+$anchor.position().top - options.anchorTopBorder),
+          modifiers: $anchor.data('in-postit') ? ["anchor-postit"] : []
         };
       });
 
       _.each(items, function (item, index, list) {
-        item.bottom = (list[index+1]) ? list[index+1].top : $('.layout-left-col').position().top + $('.layout-left-col').height();
+        item.bottom = (list[index+1]) ? list[index+1].top : $layoutContainer.position().top + $layoutContainer.height();
       });
     }
 
     function renderAnchors() {
       parseItems();
 
-      var content = templates.anchors_list({opts: {items: items}});
-      $el.html(content);
+      var content = templatizer['anchors-list']['anchors-list']({items: items});
+      $el.html($(content).html());
 
       _.defer(function () {
         PubSub.publish('anchors:ready');
@@ -81,14 +85,23 @@ Paris.anchors = (function(){
 
     function renderFavorite() {
       $anchors.each(function (i, anchor) {
+        var $anchor = $(anchor);
+
+        // Do not display favorite when in postit
+        if ($anchor.data('in-postit')) {return;}
+
         var content = '<span class="icon icon-anchor icon-favorites">';
-        $(anchor).append(content);
+        $anchor.append(content);
       });
     }
 
     function renderShare() {
       $anchors.each(function (i, anchor) {
         var $anchor = $(anchor);
+
+        // Do not display share when in postit
+        if ($anchor.data('in-postit')) {return;}
+
         var id = $anchor.attr('id');
         var url = encodeURIComponent(document.location.href.split('#')[0] + '#' + id);
         var tweetContent = [$('title').text(), $anchor.text()].join(' - ').slice(0, 100);
@@ -110,10 +123,11 @@ Paris.anchors = (function(){
             "title": Paris.i18n.t("share/email")
           }
         ];
-        var content = templates.share({opts: {
+
+        var content = templatizer.share.share({
           items: items,
           modifiers: []
-        }});
+        });
 
         $anchor.append(content);
       });

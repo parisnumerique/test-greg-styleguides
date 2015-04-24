@@ -7,15 +7,10 @@ var Paris = window.Paris || {};
 
 Paris.leftCol = (function(){
 
-  var defaultOptions = {
-  };
-
-  function leftCol(selector, userOptions){
-    var $el = $(selector),
-        options = $.extend({}, defaultOptions, userOptions);
+  function leftCol(selector){
+    var $el = $(selector);
 
     function init(){
-      initOptions();
       PubSub.subscribe('anchors:ready', setAffix);
     }
 
@@ -34,20 +29,14 @@ Paris.leftCol = (function(){
       });
     }
 
-    function initOptions() {
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
-    }
-
     init();
 
     return $el;
   }
 
-  return function(selector, userOptions){
+  return function(selector){
     return $(selector).each(function(){
-      leftCol(this, userOptions);
+      leftCol(this);
     });
   };
 

@@ -1,0 +1,76 @@
+extends ../../layouts/stack/stack
+
+include ../../modules/block-content/block-content
+include ../../modules/block-content-jecoute/block-content-jecoute
+include ../../modules/block-content-newsletter/block-content-newsletter
+include ../../modules/block-content-social/block-content-social
+include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/footer/footer
+include ../../modules/get-involved/get-involved
+include ../../modules/header/header
+include ../../modules/heading/heading
+include ../../modules/jumbotron/jumbotron
+include ../../modules/news-list/news-list
+include ../../modules/que-faire/que-faire
+include ../../modules/pagination/pagination
+include ../../modules/gallery-ugc/gallery-ugc
+include ../../modules/search-push/search-push
+include ../../modules/video-cover/video-cover
+
+append content
+  +header(data.header)
+
+append content
+  .layout-content
+    +jumbotron(data.jumbotron)
+
+append content
+  .layout-content.layout-separate-after.layout-small-padding
+    .layout-wrapper
+      +breadcrumbs(data.breadcrumbs)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +heading(data.latest.heading) // TODO
+      +news-list(data.latest.news)
+
+append content
+  .layout-content.gray-background
+    .layout-wrapper
+      +heading(data.archive.heading) // TODO
+      +news-list(data.archive.news)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +pagination(data.pagination)
+
+append content
+  .layout-content
+    .layout-wrapper
+      +que-faire(data.que_faire)
+
+append content
+  .layout-content
+    +search-push(data.search_push)
+
+append content
+  .layout-content.gray-background
+    +get-involved(data.get_involved)
+
+append content
+  .layout-right-col
+    .layout-wrapper
+      .layout-content
+        +heading(data.gallery.heading)
+        +gallery-ugc(data.gallery.gallery_ugc)
+      aside.layout-aside.color-secondary-background
+        .blocks-content-vertical
+          +block-content-newsletter(data.connected.newsletter)
+          +block-content-jecoute(data.connected.jecoute)
+          +block-content-social(data.connected.social)
+
+append content
+  .layout-content.layout-adjacent-before
+    +footer(data.footer)

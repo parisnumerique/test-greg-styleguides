@@ -1,9 +1,9 @@
-mixin video(opts)
+mixin video(data)
   .component.component-video
     .video-wrapper
       if block
         block
-      else if opts.block
-        != opts.block
+      else if data.block
+        != data.block
       else
         | video

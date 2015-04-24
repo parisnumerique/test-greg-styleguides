@@ -1,10 +1,10 @@
-mixin block-content(opts)
-  .block-content(class=opts.modifiers)
-    h2.block-content-title= opts.title
+mixin block-content(data)
+  .block-content(class=data.modifiers)
+    h2.block-content-title= data.title
     .block-content-content
       if block
         block
-      else if opts.block
-        != opts.block
+      else if data.block
+        != data.block
       else
         | blue block

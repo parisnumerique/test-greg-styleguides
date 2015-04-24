@@ -1,15 +1,15 @@
 include ../button/button
 
-mixin search-field(opts)
-  form.search-field(class=opts.modifiers action=opts.action method=opts.method ? opts.method : "get" autocomplete="off")
-    input.search-field-input(id=opts.input.id type="text" name="search" placeholder=opts.input.placeholder title=opts.input.placeholder value=opts.input.value)
+mixin search-field(data)
+  form.search-field(class=data.modifiers action=data.action method=data.method ? data.method : "get" autocomplete="off")
+    input.search-field-input(id=data.input.id type="text" name="search" placeholder=data.input.placeholder title=data.input.placeholder value=data.input.value)
     button.search-field-submit(type="submit")
-      if opts.submit.icon
-        span= opts.submit.text
+      if data.submit.icon
+        span= data.submit.text
         i.icon.icon-search
       else
-        = opts.submit.text
-    if opts.around
-      - around = JSON.parse(JSON.stringify(opts.around)) // clone the data object
+        = data.submit.text
+    if data.around
+      - around = JSON.parse(JSON.stringify(data.around)) // clone the data object
       - around.modifiers = ["marker"] // overwrite the modifiers
       +button(around)

@@ -6,6 +6,10 @@
   white-space: nowrap;
 }
 
+.offset-header.breadcrumbs-offset-header {
+  top: -110px;
+}
+
 .breadcrumbs-item {
   display: inline-block;
   font-size: 16px;
@@ -26,10 +30,26 @@
     color: $gray26;
     display: inline-block;
     line-height: 20px;
+    padding: 2px 0;
+    position: relative;
     text-decoration: none;
+    transition: all 0.35s ease;
+
+    &:after {
+      background-color: $color-primary;
+      bottom: -1px;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transition: width 0.35s ease;
+      width: 0;
+    }
 
     &:hover {
-      border-color: transparent;
+      color: $color-primary;
+      &:after {width: 100%;}
     }
   }
 }

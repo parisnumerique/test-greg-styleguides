@@ -1,10 +1,10 @@
-mixin gallery-ugc(opts)
+mixin gallery-ugc(data)
   .gallery-ugc
-    .gallery-title= opts.title + " :"
-    each hashtag in opts.hashtags
+    .gallery-title= data.title + " :"
+    each hashtag in data.hashtags
       a.gallery-hashtag(href="#{hashtag.url}" class=hashtag.current ? "current" : "")= hashtag.text
     .gallery-content
-      each item in opts.items
+      each item in data.items
         a(href="#" target="_blank" style="background-image: url(#{item.image});").gallery-image
           .overlay
             .gallery-text=item.text

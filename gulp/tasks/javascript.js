@@ -7,7 +7,11 @@ var path       = require('path');
 var source     = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify     = require('gulp-uglify');
+var insert     = require('gulp-insert');
 var watchify   = require('watchify');
+var fs         = require('fs');
+var rimraf     = require('gulp-rimraf');
+
 
 var browserifyBundler = browserify('./src/javascript/main.js', watchify.args);
 var watchifyBundler   = watchify(browserify('./src/javascript/main.js', watchify.args));
@@ -15,21 +19,27 @@ var watchifyBundler   = watchify(browserify('./src/javascript/main.js', watchify
 browserifyBundler.transform('jadeify');
 watchifyBundler.transform('jadeify');
 
-gulp.task('watch:js', watch); // so you can run `watch:js` to build the file
-gulp.task('compile:js', compile); // so you can run `compile:js` to build the file
-gulp.task('build:js', build); // so you can run `gulp build:js` to build the file
+gulp.task('watch:js', ['build:clients'],  watch); // so you can run `watch:js` to build the file
+gulp.task('compile:js', ['build:clients'], compile); // so you can run `compile:js` to build the file
+gulp.task('build:js', ['build:clients'], build); // so you can run `gulp build:js` to build the file
 gulp.task('copy:config', copyConfig);
 gulp.task('copy:locales', copyLocales);
+gulp.task('copy:modernizr', copyModernizr);
+
+
+
 watchifyBundler.on('update', watch); // on any dep update, runs the watchifyBundler
 watchifyBundler.on('log', gutil.log); // output build logs to terminal
 
 function watch() {
-  return watchifyBundler.bundle()
+  watchifyBundler.bundle()
     .on('error', gutil.log.bind(gutil, 'Watchify Error'))
     .pipe(source(config.js.output))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(sourcemaps.write('./'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.write('./'))
+    .pipe(insert.append('\n\n' + fs.readFileSync(config.build.output + '/client.tpl.js')))
+    .pipe(rimraf(config.build.output + '/client.tpl.js'))
     .pipe(gulp.dest(path.join(config.harp.input, 'javascript')));
 }
 
@@ -48,6 +58,8 @@ function bundle(output) {
     .pipe(source(config.js.output))
     .pipe(buffer())
     .pipe(uglify())
+    .pipe(insert.append('\n\n' + fs.readFileSync(config.build.output + '/client.tpl.js')))
+    .pipe(rimraf(config.build.output + '/client.tpl.js'))
     .pipe(gulp.dest(output)) ;
 }
 
@@ -58,5 +70,10 @@ function copyConfig() {
 
 function copyLocales() {
   gulp.src('./src/javascript/locales.js')
+    .pipe(gulp.dest(config.build.assets.javascript));
+}
+
+function copyModernizr() {
+  gulp.src('./src/javascript/modernizr.custom.js')
     .pipe(gulp.dest(config.build.assets.javascript));
 }

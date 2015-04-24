@@ -1,0 +1,195 @@
+{
+  "index": {
+    "data": {
+      "bodyModifiers": ["fixed-nav"],
+      "header": {
+        "home": "../home",
+        "title": "Paris",
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality", "text": "Municipalité", "current": true}
+        ],
+        "participate" : {
+          "visible": true,
+          "href": "../subhome-get-involved",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "href": "#",
+          "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "heading": {
+        "text": "La Maire et les élus",
+        "image": "./heading.jpg"
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "../home",
+            "text": "Accueil"
+          },
+          {
+            "href": "../subhome-municipality",
+            "text": "Municipalité"
+          },
+          {
+            "text": "La Maire et les élus"
+          }
+        ]
+      },
+      "links": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+        "modifiers": ["blue"],
+        "items": [
+          {
+            "href": "#",
+            "text": "La Maire de Paris"
+          },
+          {
+            "href": "#",
+            "text": "Adjoints à la Maire"
+          },
+          {
+            "href": "#",
+            "text": "Conseillers de Paris"
+          },
+          {
+            "href": "#",
+            "text": "Elus d’arrondissements"
+          },
+          {
+            "href": "#",
+            "text": "Groupes politiques"
+          }
+        ]
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter": {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "form": {
+            "action": "#",
+            "method": "POST"
+          },
+          "input": {
+            "placeholder": "Entrez votre courriel",
+            "id": "connected-newsletter-input"
+          },
+          "submit": {
+            "text": "Valider"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "link": {
+                "href": "#",
+                "text": "Twitter"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "link": {
+                "href": "#",
+                "text": "Facebook"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "link": {
+                "href": "#",
+                "text": "Instagram"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}

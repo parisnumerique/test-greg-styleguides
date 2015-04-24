@@ -1,11 +1,11 @@
 include ../block-aside/block-aside
 
-mixin block-aside-contact(opts)
-  - block_modifiers = opts.modifiers || []
+mixin block-aside-contact(data)
+  - block_modifiers = data.modifiers || []
   - block_modifiers.push("block-aside-contact")
-  +block-aside({"title": opts.title, "modifiers": block_modifiers})
+  +block-aside({"title": data.title, "modifiers": block_modifiers})
     ul.block-aside-items
-      each item in opts.items
+      each item in data.items
         - var modifiers = item.modifiers || []
         - if (item.icon) {modifiers.push("has-icon")}
         if item.title

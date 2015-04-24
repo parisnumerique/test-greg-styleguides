@@ -1,9 +1,9 @@
-mixin links(opts)
+mixin links(data)
   .component.component-links
-    if opts.title
-      h2= opts.title
+    if data.title
+      h2= data.title
     ul.links-items
-      each item in opts.items
+      each item in data.items
         li.links-item(class=item.modifiers)
           a(href=item.href target=item.target)
             = item.text

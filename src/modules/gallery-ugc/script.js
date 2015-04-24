@@ -5,29 +5,17 @@ var Paris = window.Paris || {};
 
 Paris.galleryUgc = (function(){
 
-  var defaultOptions = {
-  };
-
-  function galleryUgc(selector, userOptions){
-    var $el     = $(selector),
-      options = $.extend({}, defaultOptions, userOptions),
+  function galleryUgc(selector){
+    var $el = $(selector),
       $hashtags,
       $content,
       $data;
 
     function init(){
-      initOptions();
-
       $hashtags = $el.find('.gallery-hashtag');
       $content = $el.find('.gallery-content');
 
       $hashtags.on('click', onClickHashtag);
-    }
-
-    function initOptions() {
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
     }
 
     function onClickHashtag(e) {
@@ -99,9 +87,9 @@ Paris.galleryUgc = (function(){
     return $el;
   }
 
-  return function(selector, userOptions){
+  return function(selector){
     return $(selector).each(function(){
-      galleryUgc(this, userOptions);
+      galleryUgc(this);
     });
   };
 

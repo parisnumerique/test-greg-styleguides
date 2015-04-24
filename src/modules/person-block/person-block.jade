@@ -1,10 +1,13 @@
 include ../../components/buttons/buttons
 
-mixin person-block(opts)
+mixin person-block(data)
   .person-block
-    .person-block-img(style='background-image: url(#{opts.image});')
+    a.person-block-portrait(href=data.href style="background-image: url(#{data.image});")
     .person-block-content
-      .person-block-title= opts.title
-      .person-block-text= opts.text
+      a(href=data.href).person-block-title= data.title
+      .person-block-text= data.text
     .person-block-button
-      +button({text: "Voir la fiche", modifiers: "action"})
+      - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+      - button.href = data.href
+      - button.modifiers = ["action"] // overwrite the modifiers
+      +button(button)

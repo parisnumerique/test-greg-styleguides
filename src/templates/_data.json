@@ -1,19 +1,26 @@
 {
   "templates": [
-    "home",
-    "subhome-news",
-    "subhome-get-involved",
-    "subhome-municipality",
-    "hub",
-    "search",
-    "search/results",
-    "search/no-result",
-    "faq",
     "document",
+    "document-postit",
+    "faq",
     "generic",
+    "get-involved",
+    "home",
+    "hub",
+    "hub/subnav-open.html",
+    "hub/content-open.html",
+    "list-persons",
+    "municipality",
+    "search",
+    "search/no-result.html",
+    "search/results.html",
     "single-news",
     "single-person",
-    "single-person-small-picture",
-    "list-persons"
+    "single-person/small-portrait.html",
+    "subhome-get-involved",
+    "subhome-municipality",
+    "subhome-news",
+    "subhome-news/page2.html",
+    "subhome-news/tag.html"
   ]
 }

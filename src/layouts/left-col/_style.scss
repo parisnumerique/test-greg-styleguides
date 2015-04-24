@@ -72,6 +72,11 @@
       right: 100%;
       top: 0;
       width: 1000px;
+
+      // Target IE 10 and 11
+      @media screen\0 {
+        height: 99999px;
+      }
     }
   }
 

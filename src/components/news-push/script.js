@@ -6,15 +6,10 @@ var Paris = window.Paris || {};
 
 Paris.newsPush = (function(){
 
-  var defaultOptions = {
-  };
-
-  function header(selector, userOptions){
-    var $el     = $(selector),
-        options = $.extend({}, defaultOptions, userOptions);
+  function header(selector){
+    var $el = $(selector);
 
     function init(){
-      initOptions();
       $el.addClass('hidden');
       PubSub.subscribe('scroll', testVisibility);
       testVisibility();
@@ -31,15 +26,9 @@ Paris.newsPush = (function(){
       var margin = 200;
       var rect = el.getBoundingClientRect();
       return (
-          rect.top >= 0 &&
-          rect.bottom <= (window.innerHeight + margin || document.documentElement.clientHeight + margin)
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight + margin || document.documentElement.clientHeight + margin)
       );
-    }
-
-    function initOptions() {
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
     }
 
     init();
@@ -47,9 +36,9 @@ Paris.newsPush = (function(){
     return $el;
   }
 
-  return function(selector, userOptions){
+  return function(selector){
     return $(selector).each(function(){
-      header(this, userOptions);
+      header(this);
     });
   };
 

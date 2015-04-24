@@ -1,3 +1,10 @@
 include person-block
+include ../../helpers/code
 
-+person-block(defaults)
+h2 Standard
+.lsg-module
+  +person-block(defaults)
++code({language: "jade"}).
+  include person-block
+
+  +person-block(#{JSON.stringify(defaults, null, 2)})

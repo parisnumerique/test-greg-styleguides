@@ -8,6 +8,13 @@
   }
 }
 
+.offset-header {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
 
 .header {
   display: block;
@@ -20,7 +27,6 @@
   transition: 0.2s ease height, 0.2s ease padding, 0.5s ease left;
   overflow: hidden;
   z-index: 100;
-
 
   .fixed-nav & {
     height: 80px;
@@ -175,7 +181,8 @@
 
 
 
-  .right .participate:hover {
+  .right .participate:hover,
+  .right .participate.current, {
     background: #fae46a;
   }
   .participate:hover .front {
@@ -186,7 +193,8 @@
     transform: rotateY(0deg);
   }
 
-  .right .participate:hover .back {
+  .right .participate:hover .back,
+  .right .participate.current .back {
     transform: rotateY(0deg);
   }
   .right .participate .back {
@@ -210,6 +218,7 @@
     }
   }
 
+  .right nav a.current:after,
   .right nav a:hover:after {
     width: 100%;
   }
@@ -390,13 +399,3 @@
 .header-wrapper.fixed + .layout-content {
   margin-top: 0px;
 }
-
-.quick-access {
-  border-bottom: 3px solid transparentize($gray26, 0.8);
-
-  &.visible {
-    transform: translateY(0);
-  }
-}
-
-
