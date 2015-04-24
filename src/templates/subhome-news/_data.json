@@ -331,13 +331,11 @@
         }
       },
       "pagination": {
-        "items": [
-          {"number": 1, "href": "."},
-          {"number": 2, "href": "page2.html"},
-          {"number": 3, "href": "page2.html"},
-          {"number": 4, "href": "page2.html"},
-          {"number": 5, "href": "page2.html"}
-        ],
+        "text": {
+          "prev": "Page précédente",
+          "next": "Page suivante"
+        },
+        "url": "page${page}.html",
         "current": 1,
         "total": 10
       },
@@ -794,13 +792,11 @@
         }
       },
       "pagination": {
-        "items": [
-          {"number": 1, "href": "index.html"},
-          {"number": 2, "href": "."},
-          {"number": 3, "href": "page2.html"},
-          {"number": 4, "href": "page2.html"},
-          {"number": 5, "href": "page2.html"}
-        ],
+        "text": {
+          "prev": "Page précédente",
+          "next": "Page suivante"
+        },
+        "url": "page${page}.html",
         "current": 2,
         "total": 10
       },
@@ -1260,13 +1256,11 @@
         }
       },
       "pagination": {
-        "items": [
-          {"number": 1, "href": "."},
-          {"number": 2, "href": "#"},
-          {"number": 3, "href": "#"},
-          {"number": 4, "href": "#"},
-          {"number": 5, "href": "#"}
-        ],
+        "text": {
+          "prev": "Page précédente",
+          "next": "Page suivante"
+        },
+        "url": "#page-${page}",
         "current": 1,
         "total": 10
       },
