@@ -22,6 +22,15 @@ module.exports = {
     output: harpOutput
   },
 
+  templatizer: {
+    client_modules: [
+      'anchors-list',
+      'block-aside-checkboxes',
+      'search-results-list',
+      'share'
+    ]
+  },
+
   build: {
     output: buildOutput,
     assets: {
