@@ -60,7 +60,7 @@
 * module `links-group`: fix vertical alignment of icon
 * module `news-card`: fix margin-bottom
 * module `news-card`: fix regression bug
-* module `notice`: fix close button pading
+* module `notice`: fix close button padding
 * module `pagination`: refactoring
 * module `person-block`: fix jade syntax
 * module `person-block`: refactoring
