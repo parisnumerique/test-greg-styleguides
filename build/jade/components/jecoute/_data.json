@@ -3,9 +3,44 @@
     "defaults": {
       "title": "@parisjecoute",
       "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+<<<<<<< Updated upstream
+      "form": {
+        "action": "#",
+        "method": "post"
+      },
+      "textarea": {
+        "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
+        "name": "question"
+      },
+      "email": {
+        "placeholder": "Renseignez votre adresse e-mail"
+      },
+      "button": "Valider",
+      "thanks": "Merci, votre question a bien été transmise."
+    },
+    "values": {
+      "title": "@parisjecoute",
+      "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+      "form": {
+        "action": "#",
+        "method": "post"
+      },
+      "textarea": {
+        "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
+        "name": "question",
+        "value": "Je n'ai pas trouvé la réponse à ma question..."
+      },
+      "email": {
+        "placeholder": "Renseignez votre adresse e-mail",
+        "value": "john.doe@gmail.com"
+      },
+      "button": "Valider",
+      "thanks": "Merci, votre question a bien été transmise."
+=======
       "textarea": "Quelle information cherchiez-vous dans cette rubrique ?",
       "mail": "Renseignez votre adresse e-mail",
       "button": "Valider"
+>>>>>>> Stashed changes
     }
   }
 }

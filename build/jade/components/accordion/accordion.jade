@@ -1,7 +1,7 @@
-mixin accordion(opts)
+mixin accordion(data)
   - uuid = Math.random().toString(36).substr(2, 5)
   .component.component-accordion(role='tablist' aria-multiselectable='true')
-    each item, index in opts.items
+    each item, index in data.items
       - slug = item.slug || uuid + "-" + index
       .accordion-item.panel
         div(role='tab' id='h-#{slug}')

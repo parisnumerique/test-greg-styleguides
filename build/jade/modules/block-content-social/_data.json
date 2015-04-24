@@ -1,6 +1,7 @@
 {
   "index": {
     "defaults": {
+      "modifiers": ["color-secondary-background"],
       "title": "Restez connecté",
       "items": [
         {
@@ -8,7 +9,7 @@
           "count": "219 000",
           "link": {
             "href": "#",
-            "text": "S’abonner à @paris"
+            "text": "Twitter"
           }
         },
         {
@@ -16,7 +17,7 @@
           "count": "2 508 576",
           "link": {
             "href": "#",
-            "text": "Suivre la page Facebook"
+            "text": "Facebook"
           }
         },
         {
@@ -24,7 +25,15 @@
           "count": "16 449",
           "link": {
             "href": "#",
-            "text": "S’abonner sur Instagram"
+            "text": "Instagram"
+          }
+        },
+        {
+          "icon": "dailymotion",
+          "count": "5 442",
+          "link": {
+            "href": "#",
+            "text": "Dailymotion"
           }
         }
       ],

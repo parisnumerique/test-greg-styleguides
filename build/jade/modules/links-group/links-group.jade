@@ -1,13 +1,18 @@
-mixin links-group(opts)
-  .links-group(class=opts.modifiers)
-    if opts.background
-      .links-group-header(style='background-image: url(#{opts.background});')
-        .links-group-wrapper-title
-          .links-group-title= opts.title
-          if opts.subtitle
-            .links-group-subtitle= opts.subtitle
+include ../../modules/intro-text/intro-text
+
+mixin links-group(data)
+  .links-group(class=data.modifiers)
+    if data.background
+      a.links-group-header(href=data.href style='background-image: url(#{data.background});')
+        .links-group-header-wrapper
+          .links-group-title= data.title
+          if data.subtitle
+            .links-group-subtitle= data.subtitle
     .links-group-content
-      each item in opts.items
-        a.links-group-button(href=item.href)
-          span.links-group-button-text= item.text
-          i.links-group-button-icon
+      if data.text
+        +intro-text({text: data.text})
+      .links-group-items
+        each item in data.items
+          a.links-group-item(href=item.href)
+            span.links-group-item-text= item.text
+            i.links-group-item-icon

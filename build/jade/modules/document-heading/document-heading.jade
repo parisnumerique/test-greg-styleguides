@@ -1,14 +1,14 @@
 include ../../modules/tags/tags
 
-mixin document-heading(opts)
-  .document-heading(style="background-image:url('#{opts.image}')")
+mixin document-heading(data)
+  .document-heading(style="background-image:url('#{data.image}')")
     .document-heading-wrapper
       .document-heading-content
         .document-heading-content-wrapper
-          h1.document-heading-title!= opts.text
-          if opts.icons
+          h1.document-heading-title!= data.text
+          if data.icons
             .document-heading-icons
-              each icon in opts.icons
+              each icon in data.icons
                 a.icon(class="icon-#{icon.name}" href="#{icon.url}")
-          if opts.tags
-            +tags(opts.tags)
+          if data.tags
+            +tags(data.tags)

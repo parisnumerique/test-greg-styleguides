@@ -1,9 +1,9 @@
-mixin footer(opts)
+mixin footer(data)
   .footer
     .layout-wrapper.footer-wrapper
-      a.footer-logo(href=opts.logo.href)
-        img(src=opts.logo.src alt=opts.logo.alt)
+      a.footer-logo(href=data.logo.href)
+        img(src=data.logo.src alt=data.logo.alt)
       ul.footer-links
-        each item in opts.items
+        each item in data.items
           li
             a(href=item.href class=item.modifiers)= item.text

@@ -5,6 +5,7 @@ include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/button-top/button-top
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
 include ../../modules/header/header
@@ -38,8 +39,8 @@ append content
 append content
   .layout-content.gray-background
     .layout-wrapper
-      +heading(data.yesterday.heading)
-      +news-list(data.yesterday.news)
+      +heading(data.currently.heading)
+      +news-list(data.currently.news)
 
 append content
   .layout-content.layout-adjacent-before
@@ -90,3 +91,6 @@ append content
 append content
   .layout-content.layout-adjacent-before
     +footer(data.footer)
+
+append content
+  +button-top

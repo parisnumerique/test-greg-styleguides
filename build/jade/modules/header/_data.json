@@ -19,13 +19,13 @@
       ],
       "participate" : {
         "visible": true,
-        "url": "#",
+        "href": "#",
         "front": "Participez !",
         "back": "C'est à vous !"
       },
       "account" : {
         "visible": true,
-        "url": "#",
+        "href": "#",
         "text": "Mon compte"
       },
       "quick_access": {

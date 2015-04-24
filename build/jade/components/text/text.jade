@@ -1,8 +1,8 @@
-mixin text(opts)
-  .component.component-text(class=opts ? opts.modifiers : [])
+mixin text(data)
+  .component.component-text(class=data ? data.modifiers : [])
     if block
       block
-    else if opts.block
-      != opts.block
+    else if data.block
+      != data.block
     else
       p text
