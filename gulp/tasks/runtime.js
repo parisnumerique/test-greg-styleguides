@@ -19,7 +19,7 @@ gulp.task('build:runtime', function () {
 
 gulp.task('build:clients', function () {
 
-  var clients = ['anchors-list','block-aside-checkboxes','search-results-list','share'];
+  var clients = config.templatizer.client_modules;
 
   try {
     templatizer(config.harp.input+'/@(components|modules)/@('+clients.join('|')+')/!(index).jade', config.build.assets.javascript + '/client.tpl.js', {
