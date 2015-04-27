@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",
@@ -568,6 +569,7 @@
   },
   "page2": {
     "data": {
+      "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",
@@ -1041,6 +1043,7 @@
   },
   "tag": {
     "data": {
+      "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",

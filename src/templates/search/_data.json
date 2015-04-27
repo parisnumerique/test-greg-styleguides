@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
       "header": {
         "home": "../home",
@@ -177,6 +178,7 @@
   },
   "results": {
     "data": {
+      "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
       "header": {
         "home": "../home",
@@ -354,6 +356,7 @@
   },
   "no-result": {
     "data": {
+      "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
       "header": {
         "home": "../home",

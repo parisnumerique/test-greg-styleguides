@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Bruno Julliard",
       "bodyModifiers": ["fixed-nav", "single-person"],
       "header": {
         "home": "../home",
@@ -399,6 +400,7 @@
   },
   "small-portrait": {
     "data": {
+      "title": "Bruno Julliard",
       "bodyModifiers": ["fixed-nav", "single-person"],
       "header": {
         "home": "../home",

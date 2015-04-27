@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Demander un logement",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",

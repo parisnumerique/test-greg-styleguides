@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Services et infos pratiques",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",
@@ -388,6 +389,7 @@
   },
   "subnav-open": {
     "data": {
+      "title": "Culture et patrimoine",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",
@@ -780,6 +782,7 @@
   },
   "content-open": {
     "data": {
+      "title": "Musées et expos",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",
