@@ -56,7 +56,7 @@ Paris.quickAccess = (function(){
       });
       $more.on('click', onClickMore);
       $close.on('click', onClickClose);
-
+      console.log('header:search:click sub');
       PubSub.subscribe('header:search:click', onClickFromHeader);
 
       if ($el.hasClass('searching')) {
@@ -197,5 +197,12 @@ Paris.quickAccess = (function(){
 })();
 
 $(document).ready(function(){
-  Paris.quickAccess('.quick-access');
+  if($('.quick-access').length) {
+    Paris.quickAccess('.quick-access');
+  }
+  else {
+    PubSub.subscribe('header:search:click', function () {
+      $('#main-search').focus();
+    });
+  }
 });
