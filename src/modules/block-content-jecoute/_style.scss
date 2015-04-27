@@ -7,10 +7,22 @@
     max-width: 360px;
   }
 
-  .block-content-item {
-    display: none;
 
-    &.visible {display: block;}
+  .block-content-items {
+    position: relative;
+    min-height: 150px;
+  }
+
+  .block-content-item {
+    opacity: 0;
+    transition: 1s ease-in-out opacity ;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    &.visible {
+      display: block;
+      opacity: 1;
+    }
   }
 
   .block-content-question-answer {
@@ -21,13 +33,6 @@
   .block-content-question,
   .block-content-answer {
     height: 130px;
-    transform: none;
-    transform-origin: 50% 50%;
-    transition: transform 1s ;
-  }
-
-  .block-content-answer {
-    transform: scale(0.5);
   }
 
   .block-content-timer {
