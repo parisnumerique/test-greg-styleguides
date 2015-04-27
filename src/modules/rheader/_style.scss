@@ -1,0 +1,221 @@
+$rheader-small-max: 600px;
+$rheader-medium-min: $rheader-small-max + 1px;
+$rheader-medium-max: 1024px;
+$rheader-large-min: $rheader-medium-max + 1px;
+$rheader-large-max: 1280px;
+
+$rheader-height: 60px;
+
+.rheader {
+  background-color: $color-primary;
+  height: $rheader-height;
+  position: relative;
+  width: 100%;
+  z-index: 300;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.rheader-logo {
+  background-color: $color-primary;
+  border-bottom: 4px solid $color-tertiary;
+  display: block;
+  height: $rheader-height;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 144px;
+  z-index: 10;
+}
+
+.rheader-logo-nef {
+  background: url('../modules/rheader/nef.svg') center center no-repeat;
+  background-size: contain;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 25px;
+}
+
+.rheader-logo-paris {
+  background: url('../modules/rheader/paris.svg') center center no-repeat;
+  background-size: contain;
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  text-indent: -9999px;
+  width: 106px;
+}
+
+.rheader-locales {
+  display: none;
+}
+
+.rheader-button {
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 60px;
+}
+
+.rheader-button-search {
+  @extend %icon-font;
+  font-size: 20px;
+  left: 0;
+  &:before {@extend %icon-search;}
+}
+
+.rheader-button-menu {
+  right: 0;
+
+  span {
+    background-color: $white;
+    display: block;
+    font-size: 0;
+    height: 1px;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    transition: background-color 0.3s ease;
+    width: 20px;
+
+    -webkit-touch-callout: none;
+    user-select: none;
+
+    &:before,
+    &:after {
+      background-color: $white;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: transform 0.3s ease;
+      width: 20px;
+    }
+
+    &:before {
+      transform: translateY(-6px);
+    }
+    &:after {
+      transform: translateY(6px);
+    }
+  }
+
+  &.open {
+    span {
+      background-color: transparent;
+
+      &:before {
+        transform: translateY(0px) rotate(45deg);
+      }
+      &:after {
+        transform: translateY(0px) rotate(-45deg);
+      }
+    }
+  }
+
+}
+
+
+@media (min-width: $rheader-medium-min) and (max-width: $rheader-medium-max) {
+  $rheader-height: 80px;
+
+  .rheader,
+  .rheader-logo {
+    height: $rheader-height;
+  }
+
+  .rheader-logo {
+    width: 238px;
+  }
+  .rheader-logo-nef {width: 40px;}
+  .rheader-logo-paris {width: 170px;}
+
+  .rheader-button {
+    height: $rheader-height;
+    line-height: $rheader-height;
+    width: $rheader-height + 1px;
+  }
+  .rheader-button-search {
+    border-right: 1px solid $red4;
+  }
+  .rheader-button-menu {
+    border-left: 1px solid $red4;
+
+    span {
+      left: ($rheader-height - 20px) / 2;
+      top: $rheader-height / 2;
+    }
+  }
+}
+
+@media (min-width: $rheader-large-min) {
+  $rheader-height: 80px;
+
+  .rheader,
+  .rheader-logo {
+    height: $rheader-height;
+  }
+
+  .rheader-logo {
+    left: 15px;
+    position: absolute;
+    width: 185px;
+  }
+  .rheader-logo-nef {width: 33px;}
+  .rheader-logo-paris {width: 140px;}
+
+  .rheader-button {
+    height: $rheader-height;
+    line-height: $rheader-height;
+    width: $rheader-height + 1px;
+  }
+
+  .rheader-button-search {
+    border-left: 1px solid $red4;
+    border-right: 1px solid $red4;
+    left: 225px;
+  }
+
+  .rheader-button-menu {
+    display: none;
+  }
+}
+
+@media (min-width: $rheader-large-max) {
+
+  .rheader-logo {
+    border-bottom: 0;
+    left: 30px;
+    width: 285px;
+  }
+
+  .rheader-logo-nef {
+    width: 42px;
+
+    &:after {
+      background-color: $color-tertiary;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 68px;
+      position: absolute;
+      width: 6px;
+    }
+  }
+
+  .rheader-logo-paris {
+    width: 180px;
+  }
+
+}

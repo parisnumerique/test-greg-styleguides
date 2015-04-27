@@ -1,0 +1,16 @@
+mixin rheader(data)
+  header.rheader
+    .layout-wrapper.rheader-wrapper
+      a.rheader-logo#logo(href=data.logo.href)
+        .rheader-logo-nef
+        if data.logo.h1
+          h1.rheader-logo-paris= data.logo.text
+        else
+          .rheader-logo-paris= data.logo.text
+      ul.rheader-locales
+        each locale in data.locales
+          li
+            a(href=locale.href)= locale.code
+      a.rheader-button.rheader-button-search(href=data.search.href title=data.search.title)
+      a.rheader-button.rheader-button-menu#nav-toggle(href=data.menu.href)
+        span= data.menu.title

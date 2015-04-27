@@ -1,0 +1,10 @@
+include rheader
+include ../../helpers/code
+
+h2 Standard
+.lsg-module
+  +rheader(defaults)
++code({language: "jade"}).
+  include rheader
+
+  +rheader(#{JSON.stringify(defaults, null, 2)})

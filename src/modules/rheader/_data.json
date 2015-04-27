@@ -1,0 +1,24 @@
+{
+  "index": {
+    "defaults": {
+      "logo": {
+        "href": "/",
+        "text": "Paris",
+        "h!": true
+      },
+      "locales": [
+        {"code": "fr", "href": "#fr"},
+        {"code": "en", "href": "#en"},
+        {"code": "es", "href": "#es"}
+      ],
+      "search": {
+        "href": "#",
+        "title": "Recherche"
+      },
+      "menu": {
+        "href": "#",
+        "title": "Menu"
+      }
+    }
+  }
+}
