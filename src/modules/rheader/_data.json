@@ -7,9 +7,9 @@
         "h!": true
       },
       "locales": [
-        {"code": "fr", "href": "#fr"},
-        {"code": "en", "href": "#en"},
-        {"code": "es", "href": "#es"}
+        {"href": "#fr", "text": "fr", "current": true},
+        {"href": "#en", "text": "en"},
+        {"href": "#es", "text": "es"}
       ],
       "search": {
         "href": "#",
@@ -18,7 +18,23 @@
       "menu": {
         "href": "#",
         "title": "Menu"
-      }
+      },
+      "items": [
+        {"href": "#", "text": "Services et infos pratiques"},
+        {"href": "#", "text": "Actualités"},
+        {"href": "#", "text": "Entreprises"},
+        {"href": "#", "text": "Municipalité"},
+        {
+          "href": "#",
+          "text": "Participez !",
+          "modifiers": ["get-involved"]
+        },
+        {
+          "href": "#",
+          "text": "Mon compte",
+          "modifiers": ["account"]
+        }
+      ]
     }
   }
 }

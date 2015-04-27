@@ -17,6 +17,11 @@ $rheader-height: 60px;
     color: $white;
     text-decoration: none;
   }
+
+  ul, ol {
+    list-style: none;
+    margin: 0;
+  }
 }
 
 .rheader-logo {
@@ -126,6 +131,10 @@ $rheader-height: 60px;
 
 }
 
+.rheader-nav {
+  display: none;
+}
+
 
 @media (min-width: $rheader-medium-min) and (max-width: $rheader-medium-max) {
   $rheader-height: 80px;
@@ -157,10 +166,18 @@ $rheader-height: 60px;
       top: $rheader-height / 2;
     }
   }
+
+  .rheader-nav {
+    display: none;
+  }
 }
 
 @media (min-width: $rheader-large-min) {
   $rheader-height: 80px;
+
+  .rheader {
+    text-align: right;
+  }
 
   .rheader,
   .rheader-logo {
@@ -172,8 +189,39 @@ $rheader-height: 60px;
     position: absolute;
     width: 185px;
   }
-  .rheader-logo-nef {width: 33px;}
-  .rheader-logo-paris {width: 140px;}
+  .rheader-logo-nef {
+    background-position: 50% 60%;
+    width: 33px;
+  }
+  .rheader-logo-paris {
+    background-position: 50% 60%;
+    width: 140px;
+  }
+
+  .rheader-locales {
+    display: block;
+    font-size: 12px;
+    left: 60px;
+    line-height: 28px;
+    padding: 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    width: 140px;
+    z-index: 15;
+
+    > li {
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    a {
+      color: transparentize($white, 0.4);
+      &:hover,
+      &.current {color: $white;}
+      &.current {cursor: default; pointer-events: none;}
+    }
+  }
 
   .rheader-button {
     height: $rheader-height;
@@ -184,11 +232,57 @@ $rheader-height: 60px;
   .rheader-button-search {
     border-left: 1px solid $red4;
     border-right: 1px solid $red4;
-    left: 225px;
+    display: inline-block;
+    left: inherit;
+    position: static;
   }
 
   .rheader-button-menu {
     display: none;
+  }
+
+  .rheader-nav {
+    display: inline-block;
+    //position: absolute;
+    //right: 0;
+    //top: 0;
+  }
+
+  .rheader-nav-item {
+    display: inline-block;
+
+    & + .rheader-nav-item {
+      margin-left: 14px;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      height: $rheader-height;
+      line-height: $rheader-height;
+      text-transform: uppercase;
+    }
+
+    // modifiers
+    &.get-involved {
+      background-color: $red-poll;
+      margin-left: 22px;
+
+      a {
+        color: #fae46a;
+        font-weight: 700;
+        padding: 0 20px;
+      }
+    }
+    &.account {
+      background-color: $blue3;
+      margin-left: 0;
+
+      a {
+        padding: 0 20px;
+      }
+    }
   }
 }
 
@@ -201,6 +295,7 @@ $rheader-height: 60px;
   }
 
   .rheader-logo-nef {
+    background-position: 50% 54%;
     width: 42px;
 
     &:after {
@@ -215,7 +310,21 @@ $rheader-height: 60px;
   }
 
   .rheader-logo-paris {
+    background-position: 50% 54%;
     width: 180px;
+  }
+
+  .rheader-locales {
+    left: 134px;
+    width: 180px;
+  }
+
+  .rheader-locales {
+    line-height: 24px;
+  }
+
+  .rheader-button-search {
+    left: 400px;
   }
 
 }

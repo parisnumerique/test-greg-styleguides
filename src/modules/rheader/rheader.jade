@@ -10,7 +10,11 @@ mixin rheader(data)
       ul.rheader-locales
         each locale in data.locales
           li
-            a(href=locale.href)= locale.code
+            a(href=locale.href class=(locale.current ? 'current' : ''))= locale.text
       a.rheader-button.rheader-button-search(href=data.search.href title=data.search.title)
       a.rheader-button.rheader-button-menu#nav-toggle(href=data.menu.href)
         span= data.menu.title
+      ul.rheader-nav
+        each item in data.items
+          li.rheader-nav-item(class=item.modifiers)
+            a(href=item.href)= item.text
