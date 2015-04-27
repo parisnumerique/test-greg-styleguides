@@ -3,7 +3,7 @@ mixin image(data)
     - title = [data.title]
     - if (data.credit) {title.push("(" + data.credit + ")")}
     - title = title.join(" ")
-    if opts.srcset
-      img(src=opts.src srcset=opts.srcset.join(", ") alt=opts.alt title=title)
+    if data.srcset
+      img(src=data.src srcset=data.srcset.join(", ") alt=data.alt title=title)
     else
-      img(src=opts.src alt=opts.alt title=title)
+      img(src=data.src alt=data.alt title=title)
