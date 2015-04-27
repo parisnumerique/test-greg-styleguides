@@ -137,6 +137,7 @@ Paris.anchors = (function(){
       $el.on('click', '.anchor-link', function (e) {
         e.preventDefault();
         $(e.currentTarget.getAttribute('href'))
+          .velocity("stop")
           .velocity("scroll", {
             duration: 1500,
             offset: $('.header').height() * -1 + options.anchorTopBorder
