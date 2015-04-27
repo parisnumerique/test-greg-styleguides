@@ -35,7 +35,7 @@ function watch() {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sourcemaps.write('./'))
-    .pipe(insert.append('\n\n' + fs.readFileSync(config.build.output + '/client.tpl.js')))
+    .pipe(insert.append('\n\n' + fs.readFileSync(config.tmp.output + '/client.tpl.js')))
     .pipe(gulp.dest(path.join(config.harp.input, 'javascript')));
 }
 
@@ -54,7 +54,7 @@ function bundle(output) {
     .pipe(source(config.js.output))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(insert.append('\n\n' + fs.readFileSync(config.build.output + '/client.tpl.js')))
+    .pipe(insert.append('\n\n' + fs.readFileSync(config.tmp.output + '/client.tpl.js')))
     .pipe(gulp.dest(output)) ;
 }
 

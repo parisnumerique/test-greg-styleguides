@@ -25,5 +25,6 @@ Thumbs.db
 # Specific to the project
 /www
 node_modules
+tmp/*.js
 src/javascript/paris.js
 src/javascript/paris.js.map
