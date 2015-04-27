@@ -1,8 +1,7 @@
 .component-table {
   clear: both;
   max-width: 750px;
-
-  overflow-x: scroll;
+  overflow-x: auto;
 
   table {
     width: 100%;
