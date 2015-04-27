@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "bodyModifiers": "home",
       "notice": {
         "id": "notice_home_top",
         "modifiers": ["top", "blue", "buildings"],

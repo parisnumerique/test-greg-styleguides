@@ -45,7 +45,7 @@ Paris.header = (function(){
         fixHeader();
       }
 
-      if(!$('#main-search').length) {
+      if(!$('.quick-access-search').length) {
         fixNav();
       }
     }
@@ -75,7 +75,6 @@ Paris.header = (function(){
     function onClickSearch(e){
       e.preventDefault();
       PubSub.publish('header:search:click');
-      $buttonSearch.toggleClass('active');
     }
 
     init();
