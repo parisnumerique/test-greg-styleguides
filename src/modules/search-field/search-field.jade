@@ -11,5 +11,5 @@ mixin search-field(data)
         = data.submit.text
     if data.around
       - around = JSON.parse(JSON.stringify(data.around)) // clone the data object
-      - around.modifiers = ["marker"] // overwrite the modifiers
+      - around.modifiers = ["marker", "around"] // overwrite the modifiers
       +button(around)
