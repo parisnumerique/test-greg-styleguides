@@ -17,6 +17,10 @@ module.exports = {
     output: 'paris.css'
   },
 
+  tmp: {
+    output: join(process.cwd(), 'tmp')
+  },
+
   harp: {
     input: harpSrc,
     output: harpOutput
