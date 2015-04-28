@@ -16,7 +16,8 @@ Paris.hub = (function(){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       $hubHeading,
-      $breadcrumbsParent
+      $breadcrumbsParent,
+      breadcrumbsFirstItem
       ;
 
     function init(){
@@ -24,6 +25,12 @@ Paris.hub = (function(){
 
       $hubHeading = $el.find('.hub-heading');
       $breadcrumbsParent = $el.find('.breadcrumbs').parent();
+
+      var $breadcrumbsFirstItem = $breadcrumbsParent.find('.breadcrumbs-item a').first();
+      breadcrumbsFirstItem = {
+        "href": $breadcrumbsFirstItem.attr("href"),
+        "text": $breadcrumbsFirstItem.text()
+      };
 
       PubSub.subscribe("sections-panel:change", onSectionsPanelChange);
     }
@@ -39,10 +46,7 @@ Paris.hub = (function(){
 
       var breadcrumbs = {
         "items": [
-          {
-            "href": "#",
-            "text": "Accueil"
-          }
+          breadcrumbsFirstItem
         ]
       };
 
