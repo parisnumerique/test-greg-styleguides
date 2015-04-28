@@ -6,6 +6,7 @@ var Paris = window.Paris || {};
 Paris.blockContentJecoute = (function(){
 
   var defaultOptions = {
+    timing: 4000
   };
 
   function blockContentJecoute(selector, userOptions){
@@ -20,7 +21,7 @@ Paris.blockContentJecoute = (function(){
 
       if ($items.length === 0) {return;}
 
-      setInterval(changeVisibleItem, 10000);
+      setInterval(changeVisibleItem, options.timing*2);
       changeVisibleItem();
     }
 
@@ -46,33 +47,16 @@ Paris.blockContentJecoute = (function(){
       $next.find('.progress').velocity({
           width: "100%"
       }, {
-          duration: 10000,
+          duration: options.timing,
           easing: 'linear',
           complete: function() {
-            $next.find('.block-content-question').velocity({scale: 1, translateY: 0}, {duration: 0 });
-            $next.find('.block-content-answer').velocity({scale: 0.5, translateY: '130px'}, {duration: 0 });
-            $next.find('.progress').velocity({width: 0}, {duration: 0 });
+            $next.addClass('answered')
+            setTimeout(function () {
+              $next.find('.progress').velocity({width: 0}, {duration: 0 });
+              $items.parent().append($next);
+            }, options.timing);
           }
       });
-
-      setTimeout(function () {
-        $next.addClass('answered');
-
-        $next.find('.block-content-question').velocity(
-            {scale: 0.5, translateY: "-260px"},
-            {
-              duration: 300,
-              complete: function () {
-                $next.find('.block-content-answer').velocity(
-                  {translateY: "-130px", scale: 1},
-                  {duration: 300}
-                );
-              }
-            }
-          );
-
-      }, 5000);
-
     }
 
     init();

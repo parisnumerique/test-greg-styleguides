@@ -25,4 +25,5 @@ mixin block-content-jecoute(data)
       .block-content-text= data.text
     - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
     - button.modifiers = ["action"] // overwrite the modifiers
-    +button(button)
+    .ask
+      +button(button)
