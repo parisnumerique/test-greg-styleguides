@@ -29,7 +29,7 @@ Do *not* call `npm run build`. The build will be updated by the maintainer of th
 
 Once your changes are made, commit them.
 
-    $ git add .
+    $ git add src/
     $ git commit -m "A short message explaining your changes"
 
 Then, push your new branch to the remote repository.
