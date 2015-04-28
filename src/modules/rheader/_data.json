@@ -14,15 +14,17 @@
       "buttons": {
         "search": {
           "href": "#",
-          "title": "Recherche"
+          "icon": "search",
+          "text": "Recherche"
         },
         "around": {
           "href": "#",
-          "title": "Autour de moi"
+          "icon": "marker",
+          "text": "Autour de moi"
         },
         "menu": {
           "href": "#",
-          "title": "Menu"
+          "text": "Menu"
         }
       },
       "items": [

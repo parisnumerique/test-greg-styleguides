@@ -1,8 +1,8 @@
 $rheader-small-max: 600px;
 $rheader-medium-min: $rheader-small-max + 1px;
-$rheader-medium-max: 1130px;
+$rheader-medium-max: 1140px;
 $rheader-large-min: $rheader-medium-max + 1px;
-$rheader-large-max: 1340px;
+$rheader-large-max: 1360px;
 
 $rheader-height: 60px;
 
@@ -10,7 +10,7 @@ $rheader-height: 60px;
   background-color: $color-primary;
   height: $rheader-height;
   left: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 300;
@@ -62,34 +62,63 @@ $rheader-height: 60px;
 
 .rheader-locales {
   display: none;
+  font-size: 12px;
+  line-height: 28px;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+  z-index: 15;
+
+  > li {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  a {
+    color: transparentize($white, 0.4);
+    &:hover,
+    &.current {color: $white;}
+    &.current {cursor: default; pointer-events: none;}
+  }
 }
 
-.rheader-button {
-  height: 60px;
-  line-height: 60px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 60px;
+.rheader-wrapper {
+  > .rheader-button {
+    height: $rheader-height;
+    line-height: $rheader-height;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: $rheader-height;
+
+    &:hover {
+      .rheader-button-icon,
+      .rheader-button-text {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.rheader-button-text {
+  display: none;
 }
 
 .rheader-button-search {
-  @extend %icon-font;
   font-size: 20px;
   left: 0;
-  &:before {@extend %icon-search;}
 }
 
 .rheader-button-around {
-  @extend %icon-font;
   display: none;
-  &:before {@extend %icon-marker;}
 }
 
 .rheader-button-menu {
+  background-color: $color-primary;
   right: 0;
+  z-index: 900;
 
-  span {
+  .rheader-button-text {
     background-color: $white;
     display: block;
     font-size: 0;
@@ -116,16 +145,16 @@ $rheader-height: 60px;
       width: 20px;
     }
 
-    &:before {
-      transform: translateY(-6px);
-    }
-    &:after {
-      transform: translateY(6px);
-    }
+    &:before {transform: translateY(-6px);}
+    &:after {transform: translateY(6px);}
   }
 
-  &.open {
-    span {
+  @at-root .rheader-mobile-nav-open .rheader-button-menu {
+    border-left-color: transparent;
+  }
+
+  .rheader-mobile-nav-open & {
+    .rheader-button-text {
       background-color: transparent;
 
       &:before {
@@ -143,6 +172,128 @@ $rheader-height: 60px;
   display: none;
 }
 
+.rheader-nav-item {
+  a {
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  // modifiers
+  &.get-involved {
+    background-color: $red-poll;
+    a {
+      color: #fae46a;
+      font-weight: 700;
+    }
+  }
+
+  &.account {
+    background-color: $blue3;
+  }
+}
+
+.rheader-nav-item-icon,
+.rheader-button-icon {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+  vertical-align: baseline;
+}
+
+.rheader-mobile-nav,
+.rheader-mobile-nav-overlay {
+  display: none;
+}
+
+
+@media (max-width: $rheader-medium-max) {
+
+  .rheader-mobile-nav {
+    display: block;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(270px);
+    transition: transform 0.35s ease-in-out;
+    width: 270px;
+    z-index: 800;
+
+    .rheader-mobile-nav-open & {
+      transform: translateX(0);
+    }
+
+    .rheader-locales {
+      display: block;
+      line-height: $rheader-height;
+      margin-right: $rheader-height + 10px;
+      text-align: right;
+
+      > li {margin-right: 12px;}
+    }
+
+    .rheader-nav {
+      background-color: $color-primary;
+      bottom: 0;
+      display: block;
+      overflow: auto;
+      padding: 0;
+      position: absolute;
+      top: $rheader-height;
+      width: 100%;
+    }
+    .rheader-nav-item {
+      border-top: 1px solid transparentize($white, 0.8);
+      min-height: 50px;
+
+      a {
+        display: block;
+        line-height: 50px;
+        padding: 0 20px;
+      }
+
+      // modifiers
+      &.get-involved,
+      &.around,
+      &.account {
+        min-height: 80px;
+        border-top: 0;
+        text-align: center;
+
+        a {line-height: 80px;}
+      }
+
+      &.around {
+        background-color: $green2;
+      }
+    }
+
+    .rheader-button-text {
+      display: inline;
+    }
+  }
+
+  .rheader-mobile-nav-overlay {
+    background-color: transparentize($black, 0.1);
+    bottom: 0;
+    display: block;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity 0.35s ease-in-out;
+
+    .rheader-mobile-nav-open & {
+      opacity: 1;
+    }
+  }
+
+}
+
 
 @media (min-width: $rheader-medium-min) and (max-width: $rheader-medium-max) {
   $rheader-height: 80px;
@@ -158,18 +309,21 @@ $rheader-height: 60px;
   .rheader-logo-nef {width: 40px;}
   .rheader-logo-paris {width: 170px;}
 
-  .rheader-button {
-    height: $rheader-height;
-    line-height: $rheader-height;
-    width: $rheader-height + 1px;
+  .rheader-wrapper {
+    > .rheader-button {
+      height: $rheader-height;
+      line-height: $rheader-height;
+      width: $rheader-height + 1px;
+    }
   }
   .rheader-button-search {
     border-right: 1px solid $red4;
   }
   .rheader-button-menu {
     border-left: 1px solid $red4;
+    transition: border 0.2s;
 
-    span {
+    .rheader-button-text {
       left: ($rheader-height - 20px) / 2;
       top: $rheader-height / 2;
     }
@@ -177,6 +331,14 @@ $rheader-height: 60px;
 
   .rheader-nav {
     display: none;
+  }
+
+  .rheader-mobile-nav {
+    .rheader-nav {top: $rheader-height;}
+    .rheader-locales {
+      line-height: $rheader-height;
+      margin-right: $rheader-height + 10px;
+    }
   }
 }
 
@@ -208,43 +370,25 @@ $rheader-height: 60px;
 
   .rheader-locales {
     display: block;
-    font-size: 12px;
     left: 60px;
-    line-height: 28px;
-    padding: 0;
     position: absolute;
-    text-align: left;
-    text-transform: uppercase;
     top: 0;
     width: 140px;
-    z-index: 15;
+  }
 
-    > li {
+  .rheader-wrapper {
+    > .rheader-button {
+      border-left: 1px solid $red4;
       display: inline-block;
-      margin-right: 8px;
+      font-size: 26px;
+      height: $rheader-height;
+      line-height: $rheader-height;
+      position: static;
+      vertical-align: top;
+      width: $rheader-height + 1px;
     }
 
-    a {
-      color: transparentize($white, 0.4);
-      &:hover,
-      &.current {color: $white;}
-      &.current {cursor: default; pointer-events: none;}
-    }
-  }
-
-  .rheader-button {
-    border-left: 1px solid $red4;
-    display: inline-block;
-    font-size: 26px;
-    height: $rheader-height;
-    line-height: $rheader-height;
-    position: static;
-    vertical-align: top;
-    width: $rheader-height + 1px;
-  }
-
-  .rheader-button-menu {
-    display: none;
+    > .rheader-button-menu {display: none;}
   }
 
   .rheader-nav {
@@ -264,44 +408,22 @@ $rheader-height: 60px;
 
     a {
       display: inline-block;
-      font-size: 13px;
-      font-weight: 500;
       height: $rheader-height;
       line-height: $rheader-height;
-      text-transform: uppercase;
     }
 
     // modifiers
     &.get-involved {
-      background-color: $red-poll;
       margin-left: 22px;
-
-      a {
-        color: #fae46a;
-        font-weight: 700;
-        padding: 0 20px;
-      }
+      a {padding: 0 20px;}
     }
     &.account {
-      background-color: $blue3;
       margin-left: 0;
-
-      a {
-        padding: 0 20px;
-      }
+      a {padding: 0 20px;}
 
       .rheader-nav-item-text {display: none;}
       .rheader-nav-item-icon {margin-right: 0;}
     }
-  }
-
-  .rheader-nav-item-icon {
-    display: inline-block;
-    font-size: 20px;
-    margin-right: 5px;
-    position: relative;
-    top: 3px;
-    vertical-align: baseline;
   }
 }
 
