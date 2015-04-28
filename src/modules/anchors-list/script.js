@@ -12,6 +12,7 @@ Paris.anchors = (function(){
 
   var defaultOptions = {
     anchorsSelector: '.anchor',
+    contentEl: '.layout-left-col',
     anchorsFavoritable: false,
     anchorsShareable: false,
     anchorTopBorder: 7 // border-top of the .anchor elements, in pixels
@@ -56,12 +57,14 @@ Paris.anchors = (function(){
         // Check if the anchor is in a postit
         $anchor.data('in-postit', ($anchor.closest('.component-postit').length !== 0));
 
+        var $contentEl = $(options.contentEl);
+
         return {
           text: $anchor.text(),
           href: '#' + $anchor.attr('id'),
           top: $anchor.data('in-postit') && index === 0 ?
             $layoutContainer.position().top : // when in-postit and first item
-            Math.round(+$anchor.position().top - options.anchorTopBorder),
+            Math.round(+$anchor.position().top - options.anchorTopBorder)+ ( $contentEl.parent().position().top  - $contentEl.position().top),
           modifiers: $anchor.data('in-postit') ? ["anchor-postit"] : []
         };
       });
