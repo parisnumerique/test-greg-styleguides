@@ -3,7 +3,7 @@ require('velocity-animate');
 
 var $ = require('jquery');
 var jade = require('jade');
-var _ = require('underscore');
+var values = require('lodash.values');
 
 var Paris = window.Paris || {};
 
@@ -26,10 +26,6 @@ Paris.search = (function(){
   function search(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
-      // templates = {
-      //   search_results_list: require('../../modules/search-results-list/_client.jade'),
-      //   block_aside_checkboxes: require('../../modules/block-aside-checkboxes/_client.jade')
-      // },
       api = {},
       $searchFieldInput,
       $results,
@@ -92,7 +88,7 @@ Paris.search = (function(){
         facets: options.facets.join(','),
 
         // Explicitly request necessary attributes (as defined in options)
-        attributesToRetrieve: _.values(options.fields).join(',')
+        attributesToRetrieve: values(options.fields).join(',')
       };
 
       // If some facets filters are active, add them to the request
