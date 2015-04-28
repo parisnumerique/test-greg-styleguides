@@ -2,7 +2,7 @@
   "index": {
     "data": {
       "title": "Services et infos pratiques",
-      "bodyModifiers": ["fixed-nav"],
+      "bodyModifiers": ["fixed-nav", "hub"],
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -390,7 +390,7 @@
   "subnav-open": {
     "data": {
       "title": "Culture et patrimoine",
-      "bodyModifiers": ["fixed-nav"],
+      "bodyModifiers": ["fixed-nav", "hub"],
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -783,7 +783,7 @@
   "content-open": {
     "data": {
       "title": "Musées et expos",
-      "bodyModifiers": ["fixed-nav"],
+      "bodyModifiers": ["fixed-nav", "hub"],
       "header": {
         "home": "../home",
         "title": "Paris",

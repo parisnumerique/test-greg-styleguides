@@ -30,6 +30,7 @@ module.exports = {
     client_modules: [
       'anchors-list',
       'block-aside-checkboxes',
+      'breadcrumbs',
       'search-results-list',
       'share'
     ]

@@ -3,6 +3,7 @@ require('velocity-animate');
 var has = require('lodash.has');
 var values = require('lodash.values');
 var throttle = require('lodash.throttle');
+var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
 
@@ -101,6 +102,10 @@ Paris.sectionsPanel = (function(){
         opacity: 1
       }, $.extend({}, options.velocity, {display: 'block'}));
       currentLevel = "subnav";
+
+      PubSub.publish("sections-panel:change", {
+        title: $navItemsLinks.filter('.current').text()
+      });
     }
 
     function onClickSubnavLink(e) {
@@ -142,6 +147,14 @@ Paris.sectionsPanel = (function(){
         }));
       }
       currentLevel = "content";
+
+      PubSub.publish("sections-panel:change", {
+        title: $subnavSectionsLinks.filter('.current').find('.sections-panel-subnav-item-title').text(),
+        parent: {
+          href: $navItemsLinks.filter('.current').attr("href"),
+          text: $navItemsLinks.filter('.current').text()
+        }
+      });
     }
 
     function closeContent(){

@@ -31,6 +31,7 @@ require('../modules/sections-panel/script');
 require('../modules/share/script');
 
 // load our templates
+require('../templates/hub/script');
 require('../templates/search/script');
 
 var Paris = window.Paris || {};
