@@ -212,6 +212,7 @@ $rheader-height: 60px;
 @media (max-width: $rheader-medium-max) {
 
   .rheader-mobile-nav {
+    background-color: $color-primary;
     display: block;
     height: 100%;
     position: fixed;
@@ -229,14 +230,13 @@ $rheader-height: 60px;
     .rheader-locales {
       display: block;
       line-height: $rheader-height;
-      margin-right: $rheader-height + 10px;
-      text-align: right;
+      margin-left: 20px;
+      text-align: left;
 
       > li {margin-right: 12px;}
     }
 
     .rheader-nav {
-      background-color: $color-primary;
       bottom: 0;
       display: block;
       overflow: auto;
@@ -277,19 +277,13 @@ $rheader-height: 60px;
   }
 
   .rheader-mobile-nav-overlay {
-    background-color: transparentize($black, 0.1);
+    background-color: transparentize($black, 0.2);
     bottom: 0;
-    display: block;
     left: 0;
-    opacity: 0;
     position: fixed;
     right: 0;
     top: 0;
-    transition: opacity 0.35s ease-in-out;
-
-    .rheader-mobile-nav-open & {
-      opacity: 1;
-    }
+    z-index: 400;
   }
 
 }

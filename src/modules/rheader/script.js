@@ -1,7 +1,9 @@
 'use strict';
+require('velocity-animate');
 
 var PubSub = require('pubsub-js');
 var throttle = require('lodash.throttle');
+var attachFastClick = require('fastclick');
 
 var Paris = window.Paris || {};
 
@@ -22,6 +24,8 @@ Paris.rheader = (function(){
 
     function init(){
       initOptions();
+
+      attachFastClick(document.body);
 
       $buttonMenu = $el.find('.rheader-button-menu');
 
@@ -52,14 +56,28 @@ Paris.rheader = (function(){
     }
 
     function toggleMenu() {
-      $('body').toggleClass('rheader-mobile-nav-open');
+      $('body').hasClass('rheader-mobile-nav-open') ? closeMenu() : openMenu();
     }
 
     function closeMenu() {
+      $overlay.velocity({
+        opacity: [0, 1]
+      }, {
+        duration: 350,
+        ease: 'ease-in-out',
+        display: 'none'
+      });
       $('body').removeClass('rheader-mobile-nav-open');
     }
 
     function openMenu() {
+      $overlay.velocity({
+        opacity: [1, 0]
+      }, {
+        duration: 350,
+        ease: 'ease-in-out',
+        display: 'block'
+      });
       $('body').addClass('rheader-mobile-nav-open');
     }
 
@@ -79,7 +97,7 @@ Paris.rheader = (function(){
         .wrap('<li class="rheader-nav-item around"></li>');
       $el.append($nav);
 
-      $overlay = $('<div id="'+options.mobileNavId+'-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo('body');
+      $overlay = $('<div id="'+options.mobileNavId+'-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo($el);
     }
 
     function disableMobile() {
