@@ -1,6 +1,15 @@
 .block-content-jecoute {
   font-size: 14px;
   max-width: 360px;
+  position: relative;
+  max-height: 240px;
+  margin-bottom: 30px;
+  overflow: hidden;
+
+  .ask {
+    position: absolute;
+    bottom: 0;
+  }
 
   .block-content-text {
     margin-bottom: 15px;
@@ -13,14 +22,12 @@
     min-height: 150px;
   }
 
+
   .block-content-item {
-    opacity: 0;
-    transition: 1s ease-in-out opacity ;
-    position: absolute;
-    top: 0;
+    transition: 2s ease opacity ;
     width: 100%;
+    opacity: 0;
     &.visible {
-      display: block;
       opacity: 1;
     }
   }
@@ -28,11 +35,29 @@
   .block-content-question-answer {
     height: 130px;
     overflow: hidden;
+    position: relative;
   }
 
   .block-content-question,
   .block-content-answer {
     height: 130px;
+    transition: 1s ease opacity;
+    opacity: 1;
+  }
+
+  .block-content-answer {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition-delay: 1s;
+  }
+
+  .answered .block-content-answer {
+    opacity: 1;
+  }
+
+  .answered .block-content-question {
+    opacity: 0;
   }
 
   .block-content-timer {

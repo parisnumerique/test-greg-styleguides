@@ -44,22 +44,16 @@ Paris.blockContentJecoute = (function(){
         $next = $items.filter(':first-child').addClass('visible');
       }
 
-      $next.find('.block-content-answer').hide();
       $next.find('.progress').velocity({
           width: "100%"
       }, {
           duration: options.timing,
           easing: 'linear',
           complete: function() {
-            $next.find('.block-content-question').hide();
-            $next.find('.block-content-answer').show();
+            $next.addClass('answered')
             setTimeout(function () {
               $next.find('.progress').velocity({width: 0}, {duration: 0 });
-              $next.hide();
-              setTimeout(function () {
-                $next.find('.block-content-question').show();
-                $next.show();
-              }, options.timing / 2 );
+              $items.parent().append($next);
             }, options.timing);
           }
       });
