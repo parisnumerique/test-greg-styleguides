@@ -56,3 +56,13 @@ Assign the merge request to the maintainer.
 Click on "Submit merge request".
 
 The maintainer will now review your request and merge it to the repository. He will then release a new version of the styleguide (including a new build).
+
+Once this is done, you can update your local repository:
+
+    $ git pull origin develop
+
+You can also delete your local branch, which is no longer useful:
+
+    $ git branch -d my_contribution
+
+Thanks for your contribution!
