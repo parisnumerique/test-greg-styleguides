@@ -50,13 +50,18 @@ Paris.quickAccess = (function(){
 
       $searchFieldInput.on('input', onInput);
       $searchFieldInput.on('focus', function(){
+        PubSub.publish('search:focus');
         if ($searchFieldInput.val() !== '') {
           onStartSearching();
         }
       });
+
+      $searchFieldInput.on('blur', function(){
+        PubSub.publish('search:blur');
+      });
+
       $more.on('click', onClickMore);
       $close.on('click', onClickClose);
-      console.log('header:search:click sub');
       PubSub.subscribe('header:search:click', onClickFromHeader);
 
       if ($el.hasClass('searching')) {
@@ -201,8 +206,25 @@ $(document).ready(function(){
     Paris.quickAccess('.quick-access');
   }
   else {
+    var $buttonSearch = $('.header-wrapper .icon-search');
+
+    $('#main-search').focus(function () {
+      $buttonSearch.addClass('active');
+      $(this).velocity({
+          backgroundColor: "#FCF2A6"
+      }).velocity({
+          backgroundColor: "#ffffff"
+      });
+
+    });
+
+    $('#main-search').blur(function () {
+      $buttonSearch.removeClass('active');
+    });
+
     PubSub.subscribe('header:search:click', function () {
       $('#main-search').focus();
+
     });
   }
 });
