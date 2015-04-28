@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Bienvenue du Paris.fr",
       "bodyModifiers": "home",
       "notice": {
         "id": "notice_home_top",

@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Ça glisse sur la patinoire de l’hôtel de ville",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",

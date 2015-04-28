@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "FAQ",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",

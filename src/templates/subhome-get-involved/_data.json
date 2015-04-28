@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Participez !",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",

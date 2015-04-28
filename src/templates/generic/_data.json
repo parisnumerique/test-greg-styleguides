@@ -2,6 +2,7 @@
   "index": {
     "data": {
       "header": {
+        "title": "Titre de la page type",
         "home": "../home",
         "bodyModifiers": ["fixed-nav"],
         "title": "Paris",

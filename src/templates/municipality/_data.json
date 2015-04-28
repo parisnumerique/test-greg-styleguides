@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "La Maire et les élus",
       "bodyModifiers": ["fixed-nav"],
       "header": {
         "home": "../home",

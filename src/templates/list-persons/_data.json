@@ -1,6 +1,7 @@
 {
   "index": {
     "data": {
+      "title": "Adjoints à la Maire",
       "bodyModifiers": ["fixed-nav", "single-person"],
       "header": {
         "home": "../home",
