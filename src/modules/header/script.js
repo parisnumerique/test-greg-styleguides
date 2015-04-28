@@ -31,6 +31,10 @@ Paris.header = (function(){
 
       PubSub.subscribe('header:search:close', fixHeader);
 
+      PubSub.subscribe('search:focus', function () {
+        $buttonSearch.addClass('active');
+      });
+
       PubSub.subscribe('notice:close', function(e, data){
         if (data && data.id === "notice_home_top") {
           fixHeader();
