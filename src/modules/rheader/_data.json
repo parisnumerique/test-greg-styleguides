@@ -11,13 +11,19 @@
         {"href": "#en", "text": "en"},
         {"href": "#es", "text": "es"}
       ],
-      "search": {
-        "href": "#",
-        "title": "Recherche"
-      },
-      "menu": {
-        "href": "#",
-        "title": "Menu"
+      "buttons": {
+        "search": {
+          "href": "#",
+          "title": "Recherche"
+        },
+        "around": {
+          "href": "#",
+          "title": "Autour de moi"
+        },
+        "menu": {
+          "href": "#",
+          "title": "Menu"
+        }
       },
       "items": [
         {"href": "#", "text": "Services et infos pratiques"},
@@ -31,6 +37,7 @@
         },
         {
           "href": "#",
+          "icon": "profile",
           "text": "Mon compte",
           "modifiers": ["account"]
         }

@@ -1,15 +1,17 @@
 $rheader-small-max: 600px;
 $rheader-medium-min: $rheader-small-max + 1px;
-$rheader-medium-max: 1024px;
+$rheader-medium-max: 1130px;
 $rheader-large-min: $rheader-medium-max + 1px;
-$rheader-large-max: 1280px;
+$rheader-large-max: 1340px;
 
 $rheader-height: 60px;
 
 .rheader {
   background-color: $color-primary;
   height: $rheader-height;
-  position: relative;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
   z-index: 300;
 
@@ -76,6 +78,12 @@ $rheader-height: 60px;
   font-size: 20px;
   left: 0;
   &:before {@extend %icon-search;}
+}
+
+.rheader-button-around {
+  @extend %icon-font;
+  display: none;
+  &:before {@extend %icon-marker;}
 }
 
 .rheader-button-menu {
@@ -205,6 +213,7 @@ $rheader-height: 60px;
     line-height: 28px;
     padding: 0;
     position: absolute;
+    text-align: left;
     text-transform: uppercase;
     top: 0;
     width: 140px;
@@ -224,17 +233,14 @@ $rheader-height: 60px;
   }
 
   .rheader-button {
+    border-left: 1px solid $red4;
+    display: inline-block;
+    font-size: 26px;
     height: $rheader-height;
     line-height: $rheader-height;
-    width: $rheader-height + 1px;
-  }
-
-  .rheader-button-search {
-    border-left: 1px solid $red4;
-    border-right: 1px solid $red4;
-    display: inline-block;
-    left: inherit;
     position: static;
+    vertical-align: top;
+    width: $rheader-height + 1px;
   }
 
   .rheader-button-menu {
@@ -242,14 +248,15 @@ $rheader-height: 60px;
   }
 
   .rheader-nav {
+    border-left: 1px solid $red4;
     display: inline-block;
-    //position: absolute;
-    //right: 0;
-    //top: 0;
+    padding: 0 0 0 25px;
+    vertical-align: top;
   }
 
   .rheader-nav-item {
     display: inline-block;
+    vertical-align: top;
 
     & + .rheader-nav-item {
       margin-left: 14px;
@@ -282,7 +289,19 @@ $rheader-height: 60px;
       a {
         padding: 0 20px;
       }
+
+      .rheader-nav-item-text {display: none;}
+      .rheader-nav-item-icon {margin-right: 0;}
     }
+  }
+
+  .rheader-nav-item-icon {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+    vertical-align: baseline;
   }
 }
 
@@ -323,8 +342,12 @@ $rheader-height: 60px;
     line-height: 24px;
   }
 
-  .rheader-button-search {
-    left: 400px;
+  .rheader-nav-item {
+
+    &.account {
+      .rheader-nav-item-text {display: inline;}
+      .rheader-nav-item-icon {margin-right: 5px;}
+    }
   }
 
 }
