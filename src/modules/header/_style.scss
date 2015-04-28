@@ -238,6 +238,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    transition: 0.5s ease transform;
 
     .fixed-nav & {
       line-height: 80px;
