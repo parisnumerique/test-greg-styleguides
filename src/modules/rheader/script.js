@@ -86,8 +86,6 @@ Paris.rheader = (function(){
     }
 
     function enableMobile() {
-      console.log('enableMobile');
-
       // Create nav
       var $nav = $('<div id="'+options.mobileNavId+'" class="rheader-mobile-nav"></div>');
       $el.find('.rheader-locales').clone().appendTo($nav);
@@ -101,8 +99,6 @@ Paris.rheader = (function(){
     }
 
     function disableMobile() {
-      console.log('disableMobile');
-
       // Remove nav
       var $nav = $('#'+options.mobileNavId);
       $nav.remove();

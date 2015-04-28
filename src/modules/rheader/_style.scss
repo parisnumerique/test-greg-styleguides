@@ -149,10 +149,6 @@ $rheader-height: 60px;
     &:after {transform: translateY(6px);}
   }
 
-  @at-root .rheader-mobile-nav-open .rheader-button-menu {
-    border-left-color: transparent;
-  }
-
   .rheader-mobile-nav-open & {
     .rheader-button-text {
       background-color: transparent;
@@ -166,6 +162,14 @@ $rheader-height: 60px;
     }
   }
 
+}
+
+.rheader-mobile-nav-open {
+  overflow: hidden;
+
+  .rheader-button-menu {
+    border-left-color: transparent;
+  }
 }
 
 .rheader-nav {
