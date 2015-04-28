@@ -62,7 +62,6 @@ Paris.quickAccess = (function(){
 
       $more.on('click', onClickMore);
       $close.on('click', onClickClose);
-      console.log('header:search:click sub');
       PubSub.subscribe('header:search:click', onClickFromHeader);
 
       if ($el.hasClass('searching')) {
@@ -211,7 +210,6 @@ $(document).ready(function(){
 
     $('#main-search').focus(function () {
       $buttonSearch.addClass('active');
-      console.log(this);
       $(this).velocity({
           backgroundColor: "#FCF2A6"
       }).velocity({
