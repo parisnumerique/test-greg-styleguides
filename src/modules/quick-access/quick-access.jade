@@ -16,7 +16,8 @@ mixin quick-access(data)
           each item in data.items
             li
               - button = JSON.parse(JSON.stringify(item)) // clone the data object
-              - button.modifiers = button.modifiers || ["secondary"] // set default modifier
+              - button.modifiers = button.modifiers || []
+              - button.modifiers.push("secondary") // set default modifier
               +button(button)
       .quick-access-results
         ul

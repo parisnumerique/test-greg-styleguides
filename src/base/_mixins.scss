@@ -7,3 +7,11 @@
   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+// Useful classes for responsive
+
+@media (max-width: 1000px) { // TODO define breakpoint
+  .hidden-on-mobile {
+    display: none !important;
+  }
+}

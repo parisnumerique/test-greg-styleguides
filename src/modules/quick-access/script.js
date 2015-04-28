@@ -24,6 +24,7 @@ Paris.quickAccess = (function(){
       $searchFieldInput,
       $buttons,
       $results,
+      $around,
       $more,
       $close,
       algolia,
@@ -41,6 +42,7 @@ Paris.quickAccess = (function(){
       $searchFieldInput = $searchField.find('.search-field-input');
       $buttons = $el.find('.quick-access-buttons');
       $results = $el.find('.quick-access-results ul');
+      $around = $el.find('.button.around');
       $more = $el.find('.quick-access-results-more');
       $close = $el.find('.quick-access-close-search');
 
@@ -114,7 +116,7 @@ Paris.quickAccess = (function(){
       if (isSearching()) {return false;}
       if (forceSearching()) {return false;}
       $el.addClass('searching');
-      $buttons.velocity({
+      $buttons.add($around).velocity({
         opacity: 0
       }, {
         display: "none",
@@ -122,6 +124,9 @@ Paris.quickAccess = (function(){
         ease: "ease",
         complete: onInput
       });
+
+      // Close on Esc
+      $(document).keyup(onKeyUp);
     }
 
     function onStopSearching(){
@@ -135,9 +140,18 @@ Paris.quickAccess = (function(){
         duration: 350,
         ease: "ease"
       });
+      $around.velocity({
+        opacity: 1
+      }, {
+        display: "inline-block",
+        duration: 350,
+        ease: "ease"
+      });
       $results.empty();
       PubSub.publish('header:search:close');
       $more.hide();
+      $searchFieldInput.trigger('blur');
+      $(document).unbind("keyup", onKeyUp);
     }
 
     function onInput() {
@@ -169,6 +183,12 @@ Paris.quickAccess = (function(){
         $results.append(result);
       });
       $more.show();
+    }
+
+    function onKeyUp(e){
+      if (e.keyCode == 27) {
+        onClickClose(e);
+      }
     }
 
     function onClickMore(e){
