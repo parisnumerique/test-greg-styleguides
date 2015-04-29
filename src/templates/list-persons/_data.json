@@ -2,7 +2,7 @@
   "index": {
     "data": {
       "title": "Adjoints à la Maire",
-      "bodyModifiers": ["fixed-nav", "single-person"],
+      "bodyModifiers": ["fixed-nav", "list-persons"],
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -106,6 +106,7 @@
           "action": "#",
           "modifiers": ["small"],
           "input": {
+            "id": "search-person",
             "placeholder": "Rechercher un nom..."
           },
           "submit": {
@@ -126,8 +127,7 @@
             },
             {
               "value": 2,
-              "text": "Groupe écologiste de Paris (G.E.P)",
-              "checked": true
+              "text": "Groupe écologiste de Paris (G.E.P)"
             },
             {
               "value": 3,
@@ -149,8 +149,8 @@
             {"value": 7, "text": "7e"},
             {"value": 8, "text": "8e"},
             {"value": 9, "text": "9e"},
-            {"value": 10, "text": "10e", "checked": true},
-            {"value": 11, "text": "11e", "checked": true},
+            {"value": 10, "text": "10e"},
+            {"value": 11, "text": "11e"},
             {"value": 12, "text": "12e"},
             {"value": 13, "text": "13e"},
             {"value": 14, "text": "14e"},
@@ -158,12 +158,12 @@
             {"value": 16, "text": "16e"},
             {"value": 17, "text": "17e"},
             {"value": 18, "text": "18e"},
-            {"value": 19, "text": "19e", "checked": true},
-            {"value": 20, "text": "20e", "checked": true}
+            {"value": 19, "text": "19e"},
+            {"value": 20, "text": "20e"}
           ]
         }
       },
-      "modules": [
+      "results": [
         {
           "type": "person-block",
           "data": {

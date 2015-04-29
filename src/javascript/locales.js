@@ -17,8 +17,13 @@ Paris.i18n.locales = {
       no_result: "Désolé, votre recherche ne correspond à aucun de nos contenus.",
       more: "Afficher plus de résultats",
       facets: {
-        onglet: "Catégories"
+        onglet: "Catégories",
+        "groupe_politique": "Groupe politique",
+        "secteur": "Arrondissement"
       }
+    },
+    person_block: {
+      button_view: "Voir la fiche"
     }
   },
   en: {
@@ -36,8 +41,13 @@ Paris.i18n.locales = {
       no_result: "Sorry, your search did not match any of our contents.",
       more: "See more results",
       facets: {
-        onglet: "Categories"
+        onglet: "Categories",
+        "groupe_politique": "Political group",
+        "secteur": "District"
       }
+    },
+    person_block: {
+      button_view: "See details"
     }
   },
   es: {
@@ -55,8 +65,13 @@ Paris.i18n.locales = {
       no_result: "Lo sentimos, su búsqueda no coincide con ninguno de nuestros contenidos.",
       more: "Ver más resultados",
       facets: {
-        onglet: "Categorías"
+        onglet: "Categorías",
+        "groupe_politique": "Grupo político",
+        "secteur": "Distrito"
       }
+    },
+    person_block: {
+      button_view: "Ver detalles"
     }
   }
 };
