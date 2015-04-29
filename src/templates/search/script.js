@@ -1,8 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var $ = require('jquery');
-var jade = require('jade');
 var values = require('lodash.values');
 
 var Paris = window.Paris || {};
@@ -121,10 +119,12 @@ Paris.search = (function(){
         // Search with results
         if (data.page === 0) {
           // On the first page, add a title
-          search_results_list_data.title = Paris.i18n.t("search_results/title", {
-            count: data.nbHits,
-            formattedCount: Paris.i18n.formatNumber(data.nbHits)
-          });
+          if(data.nbHits < 2 ) {
+            search_results_list_data.title = Paris.i18n.t("search_results/title/one", [Paris.i18n.formatNumber(data.nbHits)]);
+          }
+          else {
+            search_results_list_data.title = Paris.i18n.t("search_results/title/plural", [Paris.i18n.formatNumber(data.nbHits)]);
+          }
         } else {
           // On other pages, add the page separator
           search_results_list_data.page = Paris.i18n.t("search_results/page", [data.page + 1]);

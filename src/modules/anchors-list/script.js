@@ -1,7 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var jade = require('jade');
 var PubSub = require('pubsub-js');
 var map = require('lodash.map');
 var each = require('lodash.foreach');

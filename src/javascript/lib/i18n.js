@@ -13,7 +13,6 @@ Globalize.load(
   require("cldr-data/main/es/numbers"),
   require("cldr-data/main/fr/numbers"),
   require("cldr-data/supplemental/likelySubtags"),
-  require("cldr-data/supplemental/plurals"),
   require("cldr-data/supplemental/numberingSystems")
 );
 
