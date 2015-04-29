@@ -1,0 +1,16 @@
+{
+  "name": "livingstyleguide-harp",
+  "version": "0.9.3",
+  "authors": [
+    "Paris.fr"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "examples",
+    "gulp",
+    "src",
+    "tmp"
+  ]
+}
