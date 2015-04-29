@@ -20,6 +20,7 @@ Paris.sectionsPanel = (function(){
   function sectionsPanel(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
+      api = {},
       $nav, $subnav, $content,
       $navItems, $navItemsLinks, $navMore,
       $subnavSections, $subnavSectionsLinks, $subnavDefault,
@@ -51,6 +52,8 @@ Paris.sectionsPanel = (function(){
 
       if ($subnav.hasClass('has-current-item')) {currentLevel = "subnav";}
       if ($el.hasClass('has-content')) {currentLevel = "content";}
+
+      $el.data('api', api);
     }
 
     function initOptions() {
@@ -151,6 +154,7 @@ Paris.sectionsPanel = (function(){
       PubSub.publish("sections-panel:change", {
         title: $subnavSectionsLinks.filter('.current').find('.sections-panel-subnav-item-title').text(),
         parent: {
+          id: $navItemsLinks.filter('.current').data("subnav-section"),
           href: $navItemsLinks.filter('.current').attr("href"),
           text: $navItemsLinks.filter('.current').text()
         }
@@ -175,6 +179,15 @@ Paris.sectionsPanel = (function(){
       }));
       currentLevel = "subnav";
     }
+
+
+    // The API for external interaction
+
+    api.openSection = function(id){
+      var link = $navItemsLinks.filter("[data-subnav-section='" + id + "']");
+      $(link).trigger('click');
+    };
+
 
     init();
 

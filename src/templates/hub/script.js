@@ -16,6 +16,8 @@ Paris.hub = (function(){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       $hubHeading,
+      $sectionsPanel,
+      currentSection,
       $breadcrumbsParent,
       breadcrumbsFirstItem
       ;
@@ -24,6 +26,7 @@ Paris.hub = (function(){
       initOptions();
 
       $hubHeading = $el.find('.hub-heading');
+      $sectionsPanel = $el.find('.sections-panel');
       $breadcrumbsParent = $el.find('.breadcrumbs').parent();
 
       var $breadcrumbsFirstItem = $breadcrumbsParent.find('.breadcrumbs-item a').first();
@@ -51,6 +54,7 @@ Paris.hub = (function(){
       };
 
       if (data.parent) {
+        currentSection = data.parent.id;
         breadcrumbs.items.push(data.parent);
       }
 
@@ -61,6 +65,11 @@ Paris.hub = (function(){
       renderBreadcrumbs(breadcrumbs);
     }
 
+    function onClickBreadcrumbs(e){
+      e.preventDefault();
+      $sectionsPanel.data('api').openSection(currentSection);
+    }
+
     function setTitle(title){
       $hubHeading.find("h1").text(title);
     }
@@ -68,6 +77,7 @@ Paris.hub = (function(){
     function renderBreadcrumbs(data){
       var breadcrumbs = Paris.templates.templatizer["breadcrumbs"]["breadcrumbs"](data);
       $breadcrumbsParent.html(breadcrumbs);
+      $breadcrumbsParent.find('a').last().on('click', onClickBreadcrumbs);
     }
 
 
