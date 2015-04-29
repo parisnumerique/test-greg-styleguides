@@ -1,9 +1,7 @@
 'use strict';
 require('velocity-animate');
 
-var $ = require('jquery');
-var jade = require('jade');
-var _ = require('underscore');
+var values = require('lodash.values');
 
 var Paris = window.Paris || {};
 
@@ -26,10 +24,6 @@ Paris.search = (function(){
   function search(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
-      // templates = {
-      //   search_results_list: require('../../modules/search-results-list/_client.jade'),
-      //   block_aside_checkboxes: require('../../modules/block-aside-checkboxes/_client.jade')
-      // },
       api = {},
       $searchFieldInput,
       $results,
@@ -92,7 +86,7 @@ Paris.search = (function(){
         facets: options.facets.join(','),
 
         // Explicitly request necessary attributes (as defined in options)
-        attributesToRetrieve: _.values(options.fields).join(',')
+        attributesToRetrieve: values(options.fields).join(',')
       };
 
       // If some facets filters are active, add them to the request
@@ -125,10 +119,12 @@ Paris.search = (function(){
         // Search with results
         if (data.page === 0) {
           // On the first page, add a title
-          search_results_list_data.title = Paris.i18n.t("search_results/title", {
-            count: data.nbHits,
-            formattedCount: Paris.i18n.formatNumber(data.nbHits)
-          });
+          if(data.nbHits < 2 ) {
+            search_results_list_data.title = Paris.i18n.t("search_results/title/one", [Paris.i18n.formatNumber(data.nbHits)]);
+          }
+          else {
+            search_results_list_data.title = Paris.i18n.t("search_results/title/plural", [Paris.i18n.formatNumber(data.nbHits)]);
+          }
         } else {
           // On other pages, add the page separator
           search_results_list_data.page = Paris.i18n.t("search_results/page", [data.page + 1]);

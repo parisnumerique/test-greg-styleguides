@@ -53,8 +53,8 @@ function bundle(output) {
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source(config.js.output))
     .pipe(buffer())
-    .pipe(uglify())
     .pipe(insert.append('\n\n' + fs.readFileSync(config.tmp.output + '/client.tpl.js')))
+    .pipe(uglify())
     .pipe(gulp.dest(output)) ;
 }
 

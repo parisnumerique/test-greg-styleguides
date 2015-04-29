@@ -1,9 +1,10 @@
 'use strict';
 require('velocity-animate');
 
-var jade = require('jade');
 var PubSub = require('pubsub-js');
-var _ = require('underscore');
+var map = require('lodash.map');
+var each = require('lodash.foreach');
+var defer = require('lodash.defer');
 var slugify = require("underscore.string/slugify");
 
 var Paris = window.Paris || {};
@@ -46,7 +47,7 @@ Paris.anchors = (function(){
     }
 
     function parseItems() {
-      items = _.map($anchors, function(anchor, index) {
+      items = map($anchors, function(anchor, index) {
         var $anchor = $(anchor);
 
         // Generate a slug-based id if it doesn't exist
@@ -69,7 +70,7 @@ Paris.anchors = (function(){
         };
       });
 
-      _.each(items, function (item, index, list) {
+      each(items, function (item, index, list) {
         item.bottom = (list[index+1]) ? list[index+1].top : $layoutContainer.position().top + $layoutContainer.height();
       });
     }
@@ -80,7 +81,7 @@ Paris.anchors = (function(){
       var content = Paris.templates.templatizer['anchors-list']['anchors-list']({items: items});
       $el.html($(content).html());
 
-      _.defer(function () {
+      defer(function () {
         PubSub.publish('anchors:ready');
         fillBars();
       });
@@ -149,7 +150,7 @@ Paris.anchors = (function(){
     }
 
     function fillBars(){
-      _.each(items, function(item) {
+      each(items, function(item) {
         if($(document).scrollTop() < item.top ) {
           $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '0%');
           return;

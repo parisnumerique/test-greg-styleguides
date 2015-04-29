@@ -1,7 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var jade = require('jade');
 var throttle = require('lodash.throttle');
 
 var Paris = window.Paris || {};
