@@ -77,7 +77,8 @@ Paris.hub = (function(){
     function renderBreadcrumbs(data){
       var breadcrumbs = Paris.templates.templatizer["breadcrumbs"]["breadcrumbs"](data);
       $breadcrumbsParent.html(breadcrumbs);
-      $breadcrumbsParent.find('a').last().on('click', onClickBreadcrumbs);
+      // a:gt(1) = only match the links after the "home" link
+      $breadcrumbsParent.find('a:gt(1)').on('click', onClickBreadcrumbs);
     }
 
 
