@@ -4,6 +4,13 @@ mixin image(data)
     - if (data.credit) {title.push("(" + data.credit + ")")}
     - title = title.join(" ")
     if data.srcset
-      img(src=data.src srcset=data.srcset.join(", ") alt=data.alt title=title)
+      //- https://ericportis.com/posts/2014/srcset-sizes/
+      //- The srcset is computed from the data passed
+      //- The size is fixed on desktop (max with of the right column in a document page)
+      //- and fluid on mobile (it should be close to full width, hence 100vw)
+      img(src=data.src
+          srcset=data.srcset.join(", ")
+          sizes="(min-width: 1160px) 770px, 100vw"
+          alt=data.alt title=title)
     else
       img(src=data.src alt=data.alt title=title)
