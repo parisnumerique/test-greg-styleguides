@@ -29,6 +29,7 @@ require('../modules/share/script');
 
 // load our templates
 require('../templates/hub/script');
+require('../templates/list-persons/script');
 require('../templates/search/script');
 
 var Paris = window.Paris || {};

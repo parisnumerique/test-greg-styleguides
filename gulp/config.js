@@ -31,6 +31,8 @@ module.exports = {
       'anchors-list',
       'block-aside-checkboxes',
       'breadcrumbs',
+      'pagination',
+      'person-block',
       'search-results-list',
       'share'
     ]
