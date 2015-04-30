@@ -25,6 +25,7 @@ Paris.sectionsPanel = (function(){
       $navItems, $navItemsLinks, $navMore,
       $subnavSections, $subnavSectionsLinks, $subnavDefault,
       $contentWrapper,
+      root,
       currentLevel = "nav",
       heights = {};
 
@@ -52,6 +53,10 @@ Paris.sectionsPanel = (function(){
 
       if ($subnav.hasClass('has-current-item')) {currentLevel = "subnav";}
       if ($el.hasClass('has-content')) {currentLevel = "content";}
+
+      PubSub.subscribe("hub:init", function(e, data){
+        root = data;
+      });
 
       $el.data('api', api);
     }
@@ -106,9 +111,31 @@ Paris.sectionsPanel = (function(){
       }, $.extend({}, options.velocity, {display: 'block'}));
       currentLevel = "subnav";
 
+      var $currentNavItemsLink = $navItemsLinks.filter('.current');
       PubSub.publish("sections-panel:change", {
-        title: $navItemsLinks.filter('.current').text()
+        title: $currentNavItemsLink.text()
       });
+
+      if (Modernizr.history) {
+        history.replaceState({}, $currentNavItemsLink.text(), $currentNavItemsLink.attr("href"));
+      }
+    }
+
+    function closeSubnavSection() {
+      $navItemsLinks.removeClass("current");
+      if (currentLevel === "content") {closeContent();}
+      $subnavDefault.show();
+      $subnavSections.hide();
+      currentLevel = "nav";
+
+      PubSub.publish("sections-panel:change", {
+        root: true,
+        title: root.title
+      });
+
+      if (Modernizr.history) {
+        history.replaceState({}, root.title, root.href);
+      }
     }
 
     function onClickSubnavLink(e) {
@@ -151,14 +178,21 @@ Paris.sectionsPanel = (function(){
       }
       currentLevel = "content";
 
+      var $currentNavItemsLink = $navItemsLinks.filter('.current');
+      var $currentSubnavSectionsLink = $subnavSectionsLinks.filter('.current');
+      var currentTitle = $currentSubnavSectionsLink.find('.sections-panel-subnav-item-title').text();
       PubSub.publish("sections-panel:change", {
-        title: $subnavSectionsLinks.filter('.current').find('.sections-panel-subnav-item-title').text(),
+        title: currentTitle,
         parent: {
-          id: $navItemsLinks.filter('.current').data("subnav-section"),
-          href: $navItemsLinks.filter('.current').attr("href"),
-          text: $navItemsLinks.filter('.current').text()
+          id: $currentNavItemsLink.data("subnav-section"),
+          href: $currentNavItemsLink.attr("href"),
+          text: $currentNavItemsLink.text()
         }
       });
+
+      if (Modernizr.history) {
+        history.replaceState({}, currentTitle, $currentSubnavSectionsLink.attr("href"));
+      }
     }
 
     function closeContent(){
@@ -186,6 +220,15 @@ Paris.sectionsPanel = (function(){
     api.openSection = function(id){
       var link = $navItemsLinks.filter("[data-subnav-section='" + id + "']");
       $(link).trigger('click');
+    };
+
+    api.closeSection = function(){
+      closeSubnavSection();
+    };
+
+    api.currentSection = function(){
+      var $currentNavItemsLink = $navItemsLinks.filter('.current');
+      return $currentNavItemsLink.data("subnav-section")
     };
 
 
