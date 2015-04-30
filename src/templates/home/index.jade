@@ -15,9 +15,9 @@ include blocks/que-faire
 include blocks/sections
 include blocks/stay-connected
 
-append content
-  +notice(data.notice)
-    a(href="#") Visiting Paris ? Plan your trip
+if data.notice
+  append content
+    +notice(data.notice)
 
 append content
   +header(data.header)
