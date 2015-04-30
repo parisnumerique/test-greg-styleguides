@@ -207,7 +207,7 @@
           }
         },
         {
-          "type": "transportation",
+          "type": "place",
           "data": {
             "title": "Patinoire de l'Hôtel de Ville",
             "address": "Parvis de l'Hôtel de Ville",

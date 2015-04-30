@@ -1,25 +1,25 @@
-.component-transportation {
+.component-place {
   background-color: $gray242;
   border-radius: 5px;
   clear: both;
   padding: 40px 50px 40px 25px;
   position: relative;
 
-  .transportation-title,
-  .transportation-address {
+  .place-title,
+  .place-address {
     font-size: 18px;
     line-height: 22px;
   }
 
-  .transportation-title {
+  .place-title {
     font-weight: 700;
   }
 
-  .transportation-address {
+  .place-address {
     font-weight: 300;
   }
 
-  .transportation-items {
+  .place-items {
     font-size: 16px;
     font-weight: 700;
     list-style: none;
@@ -27,8 +27,8 @@
     padding: 0;
   }
 
-  .transportation-item {
-    & + .transportation-item {
+  .place-item {
+    & + .place-item {
       margin-top: 5px;
     }
     .icon {
