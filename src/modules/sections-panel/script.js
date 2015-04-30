@@ -95,6 +95,10 @@ Paris.sectionsPanel = (function(){
       $this.addClass("current");
       if (currentLevel === "content") {closeContent();}
       openSubnavSection(subnavSection);
+
+      if (Modernizr.history) {
+        history.replaceState({}, $this.text(), $this.attr("href"));
+      }
     }
 
     function openSubnavSection(section) {
@@ -118,6 +122,10 @@ Paris.sectionsPanel = (function(){
       $subnavSectionsLinks.removeClass("current");
       $this.addClass("current");
       openContent(url);
+
+      if (Modernizr.history) {
+        history.replaceState({}, $this.text(), url);
+      }
     }
 
     function openContent(url){
