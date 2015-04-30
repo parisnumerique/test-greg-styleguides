@@ -15,8 +15,8 @@ include blocks/que-faire
 include blocks/sections
 include blocks/stay-connected
 
-if data.notice
-  append content
+append content
+  if data.notice
     +notice(data.notice)
 
 append content

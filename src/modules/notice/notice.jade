@@ -1,13 +1,12 @@
 mixin notice(data)
-  if data
-    .notice(class=data.modifiers id=data.id)
-      if data.closable
-        .close
-      if block
-        p.notice-content
-          block
-      else if data.block
-        p.notice-content
-          != data.block
-      else
-        p.notice-content notice
+  .notice(class=data.modifiers id=data.id)
+    if data.closable
+      .close
+    if block
+      p.notice-content
+        block
+    else if data.block
+      p.notice-content
+        != data.block
+    else
+      p.notice-content notice
