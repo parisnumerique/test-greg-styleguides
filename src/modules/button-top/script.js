@@ -18,7 +18,6 @@ Paris.buttonTop = (function(){
 
     function onClick(e) {
       e.preventDefault();
-      console.log("onClick");
       $("html").velocity("scroll", {
         duration: 1500,
         offset: 0,

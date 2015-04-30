@@ -1,7 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var $ = require('jquery');
 var jade = require('jade');
 var PubSub = require('pubsub-js');
 
