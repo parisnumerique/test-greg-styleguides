@@ -38,7 +38,7 @@ Paris.anchors = (function(){
       if (options.anchorsFavoritable) {renderFavorite();}
       if (options.anchorsShareable) {renderShare();}
 
-      followAnchors();
+      $el.on('click', '.anchor-link', onClickAnchorLink);
 
       PubSub.subscribe('scroll', fillBars);
 
@@ -47,6 +47,8 @@ Paris.anchors = (function(){
       setTimeout(parseItems, 1000);
 
       PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+
+      console.log(window.Modernizr.history);
     }
 
     function initOptions() {
@@ -146,15 +148,17 @@ Paris.anchors = (function(){
       });
     }
 
-    function followAnchors() {
-      $el.on('click', '.anchor-link', function (e) {
-        e.preventDefault();
-        $(e.currentTarget.getAttribute('href'))
-          .velocity("stop")
-          .velocity("scroll", {
-            duration: 1500,
-            offset: $('.header').height() * -1 + options.anchorTopBorder
-        });
+    function onClickAnchorLink(e) {
+      e.preventDefault();
+      var anchor = e.currentTarget.getAttribute('href');
+      $(anchor)
+        .velocity("stop")
+        .velocity("scroll", {
+          duration: 1500,
+          offset: $('.header').height() * -1 + options.anchorTopBorder,
+          complete: function(){
+            //document.location.hash = anchor;
+          }
       });
     }
 
