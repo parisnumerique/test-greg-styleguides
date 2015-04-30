@@ -3,7 +3,7 @@
     "data": {
       "title": "Services et infos pratiques",
       "bodyModifiers": ["fixed-nav", "hub"],
-      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"https://browser-update.org/fr/update.html\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -387,7 +387,7 @@
     "data": {
       "title": "Culture et patrimoine",
       "bodyModifiers": ["fixed-nav", "hub"],
-      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"https://browser-update.org/fr/update.html\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -781,7 +781,7 @@
     "data": {
       "title": "Musées et expos",
       "bodyModifiers": ["fixed-nav", "hub"],
-      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"https://browser-update.org/fr/update.html\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
