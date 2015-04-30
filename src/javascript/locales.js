@@ -22,6 +22,9 @@ Paris.i18n.locales = {
         "secteur": "Arrondissement"
       }
     },
+    list_persons: {
+      no_result: "Personne ne correspond à votre recherche.",
+    },
     person_block: {
       button_view: "Voir la fiche"
     }
@@ -46,6 +49,9 @@ Paris.i18n.locales = {
         "secteur": "District"
       }
     },
+    list_persons: {
+      no_result: "No people matched your search.",
+    },
     person_block: {
       button_view: "See details"
     }
@@ -69,6 +75,9 @@ Paris.i18n.locales = {
         "groupe_politique": "Grupo político",
         "secteur": "Distrito"
       }
+    },
+    list_persons: {
+      no_result: "Ningúna persona concuerda con su búsqueda.",
     },
     person_block: {
       button_view: "Ver detalles"

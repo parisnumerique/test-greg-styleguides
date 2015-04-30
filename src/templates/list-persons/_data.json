@@ -115,51 +115,63 @@
         },
         "politique": {
           "title": "Groupe politique",
-          "name": "groupe_polique",
+          "name": "groupe_politique",
           "items": [
             {
-              "value": 0,
-              "text": "Groupe socialistes et apparentés"
+              "value": "Socialiste, radical de Gauche et Apparentés",
+              "text": "Socialiste, radical de Gauche et Apparentés (76)"
             },
             {
-              "value": 1,
-              "text": "Groupe communistes et front de gauche"
+              "value": "UMPPA",
+              "text": "UMPPA (57)"
             },
             {
-              "value": 2,
-              "text": "Groupe écologiste de Paris (G.E.P)"
+              "value": "Centre et Indépendants",
+              "text": "Centre et Indépendants (9)"
             },
             {
-              "value": 3,
-              "text": "Groupe radical de gauche, centre et indépendants"
+              "value": "Les Verts",
+              "text": "Les Verts (9)"
+            },
+            {
+              "value": "Communiste",
+              "text": "Communiste (8)"
+            },
+            {
+              "value": "Mouvement Républicain et Citoyen",
+              "text": "Mouvement Républicain et Citoyen (5)"
+            },
+            {
+              "value": "Non-inscrit(e)",
+              "text": "Non-inscrit(e) (4)"
             }
           ]
         },
         "arrondissement": {
           "title": "Arrondissement",
-          "name": "arrondissement",
+          "name": "secteur",
           "modifiers": ["two_cols"],
           "items": [
-            {"value": 1, "text": "1e"},
-            {"value": 2, "text": "2e"},
-            {"value": 3, "text": "3e"},
-            {"value": 4, "text": "4e"},
-            {"value": 5, "text": "5e"},
-            {"value": 6, "text": "6e"},
-            {"value": 7, "text": "7e"},
-            {"value": 8, "text": "8e"},
-            {"value": 9, "text": "9e"},
-            {"value": 10, "text": "10e"},
-            {"value": 11, "text": "11e"},
-            {"value": 12, "text": "12e"},
-            {"value": 13, "text": "13e"},
-            {"value": 14, "text": "14e"},
-            {"value": 15, "text": "15e"},
-            {"value": 16, "text": "16e"},
-            {"value": 17, "text": "17e"},
-            {"value": 18, "text": "18e"},
-            {"value": 19, "text": "19e"},
-            {"value": 20, "text": "20e"}
+            {"value": "1er arrondissement", "text": "1er"},
+            {"value": "2ème arrondissement", "text": "2ème"},
+            {"value": "3ème arrondissement", "text": "3ème"},
+            {"value": "4ème arrondissement", "text": "4ème"},
+            {"value": "5ème arrondissement", "text": "5ème"},
+            {"value": "6ème arrondissement", "text": "6ème"},
+            {"value": "7ème arrondissement", "text": "7ème"},
+            {"value": "8ème arrondissement", "text": "8ème"},
+            {"value": "9ème arrondissement", "text": "9ème"},
+            {"value": "10ème arrondissement", "text": "10ème"},
+            {"value": "11ème arrondissement", "text": "11ème"},
+            {"value": "12ème arrondissement", "text": "12ème"},
+            {"value": "13ème arrondissement", "text": "13ème"},
+            {"value": "14ème arrondissement", "text": "14ème"},
+            {"value": "15ème arrondissement", "text": "15ème"},
+            {"value": "16ème arrondissement", "text": "16ème"},
+            {"value": "17ème arrondissement", "text": "17ème"},
+            {"value": "18ème arrondissement", "text": "18ème"},
+            {"value": "19ème arrondissement", "text": "19ème"},
+            {"value": "20ème arrondissement", "text": "20ème"}
           ]
         }
       },
@@ -180,7 +192,7 @@
           "type": "person-block",
           "data": {
             "href": "#",
-            "image": "../../modules/person-block/portrait.jpg",
+            "image": "../../modules/person-block/default.png",
             "title": "Julien Bargeton",
             "text": "Adjoint, Groupe socialiste et apparentés",
             "button": {
@@ -192,7 +204,7 @@
           "type": "person-block",
           "data": {
             "href": "#",
-            "image": "../../modules/person-block/portrait.jpg",
+            "image": "../../modules/person-block/default.png",
             "title": "Célia Blauel",
             "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)",
             "button": {
@@ -204,7 +216,7 @@
           "type": "person-block",
           "data": {
             "href": "#",
-            "image": "../../modules/person-block/portrait.jpg",
+            "image": "../../modules/person-block/default.png",
             "title": "Hélène Bidard",
             "text": "Adjoint, Groupe communiste et front de gauche",
             "button": {
@@ -216,7 +228,7 @@
           "type": "person-block",
           "data": {
             "href": "#",
-            "image": "../../modules/person-block/portrait.jpg",
+            "image": "../../modules/person-block/default.png",
             "title": "Ian Brossat",
             "text": "Adjoint, Groupe communiste et front de gauche",
             "button": {
@@ -228,7 +240,7 @@
           "type": "person-block",
           "data": {
             "href": "#",
-            "image": "../../modules/person-block/portrait.jpg",
+            "image": "../../modules/person-block/default.png",
             "title": "Colombe Brossel",
             "text": "Adjoint, Groupe socialiste et apparentés",
             "button": {
@@ -240,7 +252,19 @@
           "type": "person-block",
           "data": {
             "href": "#",
-            "image": "../../modules/person-block/portrait.jpg",
+            "image": "../../modules/person-block/default.png",
+            "title": "Alexandra Cordebard",
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
             "title": "Alexandra Cordebard",
             "text": "Adjoint, Groupe socialiste et apparentés",
             "button": {

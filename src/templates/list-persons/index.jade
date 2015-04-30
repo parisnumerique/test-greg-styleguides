@@ -47,7 +47,8 @@ append content
           #results
             each result in data.results
               +#{result.type}(result.data)
-          +pagination(data.pagination)
+          #pagination
+            +pagination(data.pagination)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
