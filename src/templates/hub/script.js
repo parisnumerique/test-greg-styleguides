@@ -18,7 +18,7 @@ Paris.hub = (function(){
       $sectionsPanel,
       currentSection,
       $breadcrumbsParent,
-      breadcrumbsFirstItem
+      breadcrumbsBase = []
       ;
 
     function init(){
@@ -28,11 +28,27 @@ Paris.hub = (function(){
       $sectionsPanel = $el.find('.sections-panel');
       $breadcrumbsParent = $el.find('.breadcrumbs').parent();
 
-      var $breadcrumbsFirstItem = $breadcrumbsParent.find('.breadcrumbs-item a').first();
-      breadcrumbsFirstItem = {
-        "href": $breadcrumbsFirstItem.attr("href"),
-        "text": $breadcrumbsFirstItem.text()
-      };
+      currentSection = $sectionsPanel.data('api').currentSection();
+
+      var $rootLink = $breadcrumbsParent.find('a:eq(2)');
+      PubSub.publish("hub:init", {
+        href: $rootLink.attr("href"),
+        title: $rootLink.text()
+      });
+
+      // a:eq(2) = only match the "hub" link
+      $breadcrumbsParent.on('click', 'a:eq(2)', onClickBreadcrumbsRoot);
+      // a:gt(2) = only match the links after the "hub" link
+      $breadcrumbsParent.on('click', 'a:gt(2)', onClickBreadcrumbs);
+
+      var $breadcrumbsBase = $breadcrumbsParent.find('.breadcrumbs-item a:lt(2)');
+      $breadcrumbsBase.each(function(){
+        var $this = $(this);
+        breadcrumbsBase.push({
+          "href": $this.attr("href"),
+          "text": $this.text()
+        });
+      });
 
       PubSub.subscribe("sections-panel:change", onSectionsPanelChange);
     }
@@ -47,9 +63,7 @@ Paris.hub = (function(){
       setTitle(data.title);
 
       var breadcrumbs = {
-        "items": [
-          breadcrumbsFirstItem
-        ]
+        "items": breadcrumbsBase.slice()
       };
 
       if (data.parent) {
@@ -57,11 +71,18 @@ Paris.hub = (function(){
         breadcrumbs.items.push(data.parent);
       }
 
-      breadcrumbs.items.push({
-        "text": data.title
-      });
+      if (data.root !== true) {
+        breadcrumbs.items.push({
+          "text": data.title
+        });
+      }
 
       renderBreadcrumbs(breadcrumbs);
+    }
+
+    function onClickBreadcrumbsRoot(e){
+      e.preventDefault();
+      $sectionsPanel.data('api').closeSection();
     }
 
     function onClickBreadcrumbs(e){
@@ -76,8 +97,6 @@ Paris.hub = (function(){
     function renderBreadcrumbs(data){
       var breadcrumbs = Paris.templates.templatizer["breadcrumbs"]["breadcrumbs"](data);
       $breadcrumbsParent.html(breadcrumbs);
-      // a:gt(1) = only match the links after the "home" link
-      $breadcrumbsParent.find('a:gt(1)').on('click', onClickBreadcrumbs);
     }
 
 
