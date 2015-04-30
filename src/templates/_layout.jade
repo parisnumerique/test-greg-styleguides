@@ -14,15 +14,19 @@ html(lang="fr")
     <![endif]-->
 
     script(src="../../javascript/modernizr.custom.js")
-    script(src="../../javascript/jquery-2.1.4.min.js")
-    script(src="../../javascript/algoliasearch.min.js")
     link(rel="apple-touch-icon" href="../../touchicon.png")
     link(rel="icon" href="../../favicon.png")
     meta(name="msapplication-TileColor" content="#dd275c")
     meta(name="msapplication-TileImage" content="../../tileicon.png")
   - data = data || {}
   body(class=data.bodyModifiers)
+    if data.notice_old_browsers
+      <!--[if lt IE 9]>
+      div.notice.notice-browser!= data.notice_old_browsers
+      <![endif]-->
     != yield
+    script(src="../../javascript/jquery-2.1.4.min.js")
+    script(src="../../javascript/algoliasearch.min.js")
     script
       include ../javascript/locales.js
     script

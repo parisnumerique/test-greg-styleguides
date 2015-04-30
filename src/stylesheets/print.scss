@@ -1,6 +1,13 @@
 @import "libs/_universal_css";
 @import "../base/_colors";
 
+.notice-browser {
+  background-color: $orange-notice;
+  color: $white;
+  padding: 20px;
+  a {color: $white;}
+}
+
 /* Paris Specifics */
 
 .color-primary-background,

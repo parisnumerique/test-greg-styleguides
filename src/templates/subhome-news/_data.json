@@ -3,6 +3,7 @@
     "data": {
       "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"https://browser-update.org/fr/update.html\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -571,6 +572,7 @@
     "data": {
       "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"https://browser-update.org/fr/update.html\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -1045,6 +1047,7 @@
     "data": {
       "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"https://browser-update.org/fr/update.html\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
