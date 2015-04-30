@@ -47,8 +47,6 @@ Paris.anchors = (function(){
       setTimeout(parseItems, 1000);
 
       PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
-
-      console.log(window.Modernizr.history);
     }
 
     function initOptions() {
@@ -150,14 +148,17 @@ Paris.anchors = (function(){
 
     function onClickAnchorLink(e) {
       e.preventDefault();
-      var anchor = e.currentTarget.getAttribute('href');
+      var $link = $(e.currentTarget);
+      var anchor = $link.attr("href");
       $(anchor)
         .velocity("stop")
         .velocity("scroll", {
           duration: 1500,
           offset: $('.header').height() * -1 + options.anchorTopBorder,
           complete: function(){
-            //document.location.hash = anchor;
+            if (Modernizr.history) {
+              history.replaceState({}, $link.text(), anchor);
+            }
           }
       });
     }
