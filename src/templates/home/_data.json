@@ -30,7 +30,7 @@
           "visible": true
         },
         "items": [
-          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
           {"href": "../subhome-municipality", "text": "Municipalité"}
