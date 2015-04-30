@@ -4,7 +4,7 @@
       "logo": {
         "href": "/",
         "text": "Paris",
-        "h!": true
+        "h1": true
       },
       "locales": [
         {"href": "#fr", "text": "fr", "current": true},
