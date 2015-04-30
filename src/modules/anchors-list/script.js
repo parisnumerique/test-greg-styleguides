@@ -6,6 +6,7 @@ var map = require('lodash.map');
 var each = require('lodash.foreach');
 var defer = require('lodash.defer');
 var slugify = require("underscore.string/slugify");
+var throttle = require('lodash.throttle');
 
 var Paris = window.Paris || {};
 
@@ -44,6 +45,14 @@ Paris.anchors = (function(){
       // Fix bad offset by recalculating items dimensions, 1 second after rendering
       // This could probably be improved by tracking down the origin of the discrepancy
       setTimeout(parseItems, 1000);
+
+      PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+    }
+
+    function initOptions() {
+      $.each($el.data(), function(key, value){
+        options[key] = value;
+      });
     }
 
     function parseItems() {
@@ -166,10 +175,9 @@ Paris.anchors = (function(){
       });
     }
 
-    function initOptions() {
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
+    function onContentHeightChange(){
+      parseItems();
+      fillBars();
     }
 
     init();
