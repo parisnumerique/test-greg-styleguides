@@ -6,6 +6,7 @@ var map = require('lodash.map');
 var each = require('lodash.foreach');
 var defer = require('lodash.defer');
 var slugify = require("underscore.string/slugify");
+var throttle = require('lodash.throttle');
 
 var Paris = window.Paris || {};
 
@@ -37,13 +38,21 @@ Paris.anchors = (function(){
       if (options.anchorsFavoritable) {renderFavorite();}
       if (options.anchorsShareable) {renderShare();}
 
-      followAnchors();
+      $el.on('click', '.anchor-link', onClickAnchorLink);
 
       PubSub.subscribe('scroll', fillBars);
 
       // Fix bad offset by recalculating items dimensions, 1 second after rendering
       // This could probably be improved by tracking down the origin of the discrepancy
       setTimeout(parseItems, 1000);
+
+      PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+    }
+
+    function initOptions() {
+      $.each($el.data(), function(key, value){
+        options[key] = value;
+      });
     }
 
     function parseItems() {
@@ -137,15 +146,20 @@ Paris.anchors = (function(){
       });
     }
 
-    function followAnchors() {
-      $el.on('click', '.anchor-link', function (e) {
-        e.preventDefault();
-        $(e.currentTarget.getAttribute('href'))
-          .velocity("stop")
-          .velocity("scroll", {
-            duration: 1500,
-            offset: $('.header').height() * -1 + options.anchorTopBorder
-        });
+    function onClickAnchorLink(e) {
+      e.preventDefault();
+      var $link = $(e.currentTarget);
+      var anchor = $link.attr("href");
+      $(anchor)
+        .velocity("stop")
+        .velocity("scroll", {
+          duration: 1500,
+          offset: $('.header').height() * -1 + options.anchorTopBorder,
+          complete: function(){
+            if (Modernizr.history) {
+              history.replaceState({}, $link.text(), anchor);
+            }
+          }
       });
     }
 
@@ -166,10 +180,9 @@ Paris.anchors = (function(){
       });
     }
 
-    function initOptions() {
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
+    function onContentHeightChange(){
+      parseItems();
+      fillBars();
     }
 
     init();
