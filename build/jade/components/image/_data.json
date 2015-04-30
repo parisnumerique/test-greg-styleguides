@@ -1,19 +1,35 @@
 {
   "index": {
     "defaults": {
-      "src": "small_image.jpg",
-      "alt": "Texte alternatif",
-      "title": "Titre",
-      "credit": "Mairie de Paris / DICOM"
-    },
-    "large_image": {
-      "src": "large_image.jpg",
+      "src": "image-600px.jpg",
+      "srcset": [
+        "image-400px.jpg 400w",
+        "image-600px.jpg 600w",
+        "image-800px.jpg 800w"
+      ],
       "alt": "Texte alternatif",
       "title": "Titre",
       "credit": "Mairie de Paris / DICOM"
     },
     "vertical_image": {
-      "src": "vertical_image.jpg",
+      "src": "vertical_image-600px.jpg",
+      "srcset": [
+        "vertical_image-400px.jpg 400w",
+        "vertical_image-600px.jpg 600w",
+        "vertical_image-800px.jpg 800w"
+      ],
+      "alt": "Texte alternatif",
+      "title": "Titre",
+      "credit": "Mairie de Paris / DICOM"
+    },
+    "full_height": {
+      "modifiers": ["full-height"],
+      "src": "vertical_image-600px.jpg",
+      "srcset": [
+        "vertical_image-400px.jpg 400w",
+        "vertical_image-600px.jpg 600w",
+        "vertical_image-800px.jpg 800w"
+      ],
       "alt": "Texte alternatif",
       "title": "Titre",
       "credit": "Mairie de Paris / DICOM"

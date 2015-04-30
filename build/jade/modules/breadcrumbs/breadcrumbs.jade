@@ -2,8 +2,8 @@ mixin breadcrumbs(data)
   a.offset-header.breadcrumbs-offset-header#breadcrumbs
   ol.breadcrumbs
     each item, index in data.items
-      if index === data.items.length - 1
-        li.breadcrumbs-item.breadcrumbs-item-current= item.text
-      else
-        li.breadcrumbs-item
+      li.breadcrumbs-item
+        if item.href
           a(href=item.href)= item.text
+        else
+          = item.text

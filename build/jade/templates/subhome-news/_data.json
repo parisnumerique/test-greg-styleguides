@@ -1,7 +1,9 @@
 {
   "index": {
     "data": {
+      "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -14,7 +16,7 @@
         "search": {"visible": true},
         "marker": {"visible": true},
         "items": [
-          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news", "text": "Actualités", "current": true},
           {"href": "#", "text": "Entreprises"},
           {"href": "../subhome-municipality", "text": "Municipalité"}
@@ -568,7 +570,9 @@
   },
   "page2": {
     "data": {
+      "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -581,7 +585,7 @@
         "search": {"visible": true},
         "marker": {"visible": true},
         "items": [
-          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news", "text": "Actualités", "current": true},
           {"href": "#", "text": "Entreprises"},
           {"href": "../subhome-municipality", "text": "Municipalité"}
@@ -1041,7 +1045,9 @@
   },
   "tag": {
     "data": {
+      "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
         "title": "Paris",
@@ -1054,7 +1060,7 @@
         "search": {"visible": true},
         "marker": {"visible": true},
         "items": [
-          {"href": "../hub", "text": "Services et infos pratiques"},
+          {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news", "text": "Actualités", "current": true},
           {"href": "#", "text": "Entreprises"},
           {"href": "../subhome-municipality", "text": "Municipalité"}

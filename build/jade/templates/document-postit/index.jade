@@ -46,8 +46,9 @@ append content
           +jecoute(data.jecoute)
 
 append content
-  .layout-content.layout-adjacent-before
-    +cross-content(data.cross_content)
+  if data.cross_content.items.length === 3
+    .layout-content.layout-adjacent-before
+      +cross-content(data.cross_content)
 
 append content
   .layout-content.layout-adjacent-before

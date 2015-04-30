@@ -50,6 +50,11 @@
         {
           "href": "#",
           "text": "Gardes d’enfants"
+        },
+        {
+          "href": "#",
+          "text": "Bouton caché sur mobile",
+          "modifiers": ["hidden-on-mobile"]
         }
       ],
       "results": {
