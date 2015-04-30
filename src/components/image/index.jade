@@ -1,7 +1,7 @@
 include image
 include ../../helpers/code
 
-h2 Formats d'images
+h2 Formats d'image
 p Chaque image doit être redimensionnée automatiquement aux formats suivants :
 ul
   li
@@ -14,9 +14,10 @@ ul
     strong Grand
     |  avec une largeur max de 800px
 
-h2 Petite image
-p Par défaut, l'image est affichée à 100% de la taille du fichier image.
-p L'exemple ci-dessous utilise une image de 350x80px.
+h2 Standard (image responsive)
+p La taille d'image moyenne est passée par défaut dans l'attribut <code>src</code>.
+p L'attribut <code>srcset</code> contient un tableau des tailles disponibles, en suivant le format de la <a href="http://responsiveimages.org/" target="_blank">spécification</a> (URL de l'image, espace, largeur en pixels avec l'unité <code>w</code> pour <em>width</em>).
+p Les valeurs de <code>title</code> et <code>credit</code> seront concaténées dans l'attribut <code>title</code> de l'élément <code>img</code>.
 .lsg-component(style="max-width: 770px")
   +image(defaults)
 +code({language: "jade"}).
@@ -24,25 +25,23 @@ p L'exemple ci-dessous utilise une image de 350x80px.
 
   +image(#{JSON.stringify(defaults, null, 2)})
 
-h2 Grande image
-p Si l'image est plus large que son conteneur, elle est mise à l'échelle.
-p L'exemple ci-dessous utilise une image de 1100x400px dans un conteneur d'une largeur de 770px.
-.lsg-component(style="max-width: 770px")
-  +image(large_image)
-+code({language: "jade"}).
-  include image
-
-  +image(#{JSON.stringify(large_image, null, 2)})
-
 h2 Image verticale
-p Les images sont limitées à 400px de haut, pour éviter que les images au format vertical prennent une hauteur trop importante.
-p L'exemple ci-dessous utilise une image de 340x478px, qui est donc contrainte à 400px de haut.
+p Les images sont limitées à 500px de haut, pour éviter que les images au format vertical prennent une hauteur trop importante.
 .lsg-component(style="max-width: 770px")
   +image(vertical_image)
 +code({language: "jade"}).
   include image
 
   +image(#{JSON.stringify(vertical_image, null, 2)})
+
+h2 Image verticale non-contrainte
+p Il est possible de lever la limite de 500px de hauteur en ajoutant le <em>modifier</em> <code>full-height</code>. C'est notamment utile pour les infographies verticales.
+.lsg-component(style="max-width: 770px")
+  +image(full_height)
++code({language: "jade"}).
+  include image
+
+  +image(#{JSON.stringify(full_height, null, 2)})
 
 h2 Image flottant à gauche
 p!= "En ajoutant le <em>modifier</em> <code>left</code>, l'image flotte à gauche et est habillée par le texte qui la suit."
