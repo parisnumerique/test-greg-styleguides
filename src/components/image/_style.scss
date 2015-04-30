@@ -5,7 +5,7 @@
   img {
     display: block;
     margin: 0 auto;
-    max-height: 400px;
+    max-height: 500px;
     max-width: 100%;
   }
 
@@ -27,5 +27,11 @@
     float: right;
     margin-bottom: 25px;
     margin-left: 25px;
+  }
+
+  &.full-height {
+    img {
+      max-height: none;
+    }
   }
 }
