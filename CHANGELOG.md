@@ -11,7 +11,6 @@
   * improved style
   * prepared for responsive
   * improved accessibility by adding caption and summary
-
 * module `anchors-list`:
   * fix bug when clicking a few times quickly
   * fix "rebound" bug when reaching the end of a document
@@ -27,22 +26,20 @@
   * `hidden-on-mobile` modifier to hide buttons on mobile
 * module `sections-panel`:
   * fix URLs and replace them in address bar when navigating
-
 * template `home`: module `notice` on top is now optional
 * template `hub`: refresh modules `hub-heading` and `breadcrumbs` during navigation in `sections-panel`
 * template `list-persons`: search with Algolia
 * all templates:
   * added ability to set page title in data
-  * added notice for deprecated browsers (IE < 9)
-
+  * added notice for deprecated browsers (IE &lt; 9)
 * added `bower.json`
 * added `CONTRIBUTE.md`
 * added Modernizr
 * added print stylesheet
-* added IE < 9 stylesheet
+* added IE &lt; 9 stylesheet
 * optimized JS build
 * added favicon, tileicon, touchicon
-* updated jQuery to 2.1.4 and use CDN instead of building it in paris.js
+* updated jQuery to 2.1.4 and use CDN instead of building it in `paris.js`
 * now cleans the `/build` directory before building
 * changed Algolia key in `config.js`
 
