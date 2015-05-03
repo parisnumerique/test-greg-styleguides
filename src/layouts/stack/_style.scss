@@ -63,6 +63,7 @@
       }
     }
     @include small {
+      margin: 0;
       .heading .heading-title {
         left: -30px;
         position: relative;
