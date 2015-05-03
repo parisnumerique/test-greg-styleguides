@@ -10,44 +10,51 @@
         "closable": true,
         "block": "<a href=\"#\">Visiting Paris ? Plan your trip</a>"
       },
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "h1": true,
-        "languages": [{
-          "abbr": "fr",
-          "href": "/fr"
-        }, {
-          "abbr": "en",
-          "href": "/en"
-        }, {
-          "abbr": "es",
-          "href": "/es"
-        }],
-        "active_language": "fr",
-        "search": {
-          "visible": true
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris",
+          "h1": true
         },
-        "marker": {
-          "visible": true
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
+        ],
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
         },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate": {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account": {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ]
       },
       "blocks": [
         {

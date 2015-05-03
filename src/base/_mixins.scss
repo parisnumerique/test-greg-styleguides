@@ -9,14 +9,6 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-// Useful classes for responsive
-
-@media (max-width: 1000px) { // TODO define breakpoint
-  .hidden-on-mobile {
-    display: none !important;
-  }
-}
-
 // Responsive mixins
 $small-page-padding: 30px;
 
@@ -48,9 +40,12 @@ $small-max: $medium-min - 1px;
   }
 }
 @mixin hidden-on-small {
-  @include small {display: none;}
+  @include small {
+    display: none !important;
+  }
 }
-.hidden-on-small {
+.hidden-on-small,
+.hidden-on-mobile {
   @include hidden-on-small;
 }
 

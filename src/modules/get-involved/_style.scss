@@ -5,9 +5,8 @@
 }
 
 .get-involved-card {
-  @include span(8);
   background-color: $white;
-  background-position: 50% 50%;
+  background-position: right bottom;
   background-size: cover;
   border-radius: 5px;
   display: block;
