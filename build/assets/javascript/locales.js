@@ -9,18 +9,24 @@ Paris.i18n.locales = {
       email: 'Partager par email'
     },
     search_results: {
-      title: [
-        "{count, plural,",
-        "    one {Un résultat}",
-        "  other {{formattedCount} résultats}",
-        "}"
-      ],
+      title: {
+        one: 'Un résultat',
+        plural: '{0} résultats'
+      },
       page: "Page {0}",
       no_result: "Désolé, votre recherche ne correspond à aucun de nos contenus.",
       more: "Afficher plus de résultats",
       facets: {
-        onglet: "Catégories"
+        onglet: "Catégories",
+        "groupe_politique": "Groupe politique",
+        "secteur": "Arrondissement"
       }
+    },
+    list_persons: {
+      no_result: "Personne ne correspond à votre recherche.",
+    },
+    person_block: {
+      button_view: "Voir la fiche"
     }
   },
   en: {
@@ -30,18 +36,24 @@ Paris.i18n.locales = {
       email: 'Share by email'
     },
     search_results: {
-      title: [
-        "{count, plural,",
-        "    one {One result}",
-        "  other {{formattedCount} results}",
-        "}"
-      ],
+      title: {
+        one: 'One result',
+        plural: '{0} results'
+      },
       page: "Page {0}",
       no_result: "Sorry, your search did not match any of our contents.",
       more: "See more results",
       facets: {
-        onglet: "Categories"
+        onglet: "Categories",
+        "groupe_politique": "Political group",
+        "secteur": "District"
       }
+    },
+    list_persons: {
+      no_result: "No people matched your search.",
+    },
+    person_block: {
+      button_view: "See details"
     }
   },
   es: {
@@ -51,18 +63,24 @@ Paris.i18n.locales = {
       email: 'Compartir por correo electrónico'
     },
     search_results: {
-      title: [
-        "{count, plural,",
-        "    one {Un resultado}",
-        "  other {{formattedCount} resultados}",
-        "}"
-      ],
+      title: {
+        one: 'Un resultado',
+        plural: '{0} resultados'
+      },
       page: "Página {0}",
       no_result: "Lo sentimos, su búsqueda no coincide con ninguno de nuestros contenidos.",
       more: "Ver más resultados",
       facets: {
-        onglet: "Categorías"
+        onglet: "Categorías",
+        "groupe_politique": "Grupo político",
+        "secteur": "Distrito"
       }
+    },
+    list_persons: {
+      no_result: "Ningúna persona concuerda con su búsqueda.",
+    },
+    person_block: {
+      button_view: "Ver detalles"
     }
   }
 };

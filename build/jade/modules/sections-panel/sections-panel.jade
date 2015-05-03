@@ -19,7 +19,7 @@ mixin sections-panel(data)
           - more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
           - more.modifiers = ["action", "white", "small", "sections-panel-nav-more"]
           +button(more)
-      .sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))
+      .sections-panel-subnav#sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))
         .sections-panel-subnav-default
           +block-aside-links(data.default.links)
           +buttons(data.default.buttons)
@@ -34,7 +34,7 @@ mixin sections-panel(data)
                     a(href=subitem.href class=(subitem.current ? "current" : ""))
                       .sections-panel-subnav-item-title= subitem.title
                       .sections-panel-subnav-item-text= subitem.text
-    .sections-panel-content
+    .sections-panel-content#sections-panel-content
       .sections-panel-content-wrapper
         if has_content
           .sections-panel-intro= data.content.intro
