@@ -46,11 +46,12 @@
   }
 
   .layout-wrapper {
-    margin: 0 auto;
+    margin: 0;
     padding-left: $small-page-padding;
     padding-right: $small-page-padding;
 
     @include large {
+      margin: 0 auto;
       padding-left: 0;
       padding-right: 0;
       width: $large-grid-width;
@@ -62,7 +63,6 @@
       }
     }
     @include small {
-      margin: 0;
       .heading .heading-title {
         left: -30px;
         position: relative;

@@ -1,21 +1,29 @@
 .layout-three-col {
-  overflow: hidden;
   width: 100%;
 
-  > .layout-wrapper {
-    @include container;
-    display: table;
-    width: $large-grid-width;
+  @include small {
+    .layout-content + .layout-content {
+      margin-top: 50px;
+    }
   }
 
-  .layout-content {
-    @include span(4 of 12);
-    display: table-cell;
-    vertical-align: top;
-  }
+  @include large {
+    overflow: hidden;
 
-  .layout-content:last-child {
-    @include last;
-  }
+    > .layout-wrapper {
+      @include container;
+      display: table;
+      width: $large-grid-width;
+    }
 
+    .layout-content {
+      @include span(4 of 12);
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .layout-content:last-child {
+      @include last;
+    }
+  }
 }

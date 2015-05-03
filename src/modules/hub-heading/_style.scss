@@ -1,28 +1,24 @@
+
 .hub-heading {
-  height: 310px;
-  width: 100%;
-  z-index: 0;
-  position: relative;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  // modifiers
-  &.small {
-    height: 160px;
-  }
+  height: 135px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
 
   h1 {
     color: $white;
+    font-size: 24px;
     font-weight: 700;
-    font-size: 70px;
-    line-height: 84px;
+    line-height: 30px;
     margin: 0;
     text-align: left;
   }
 
   &:before {
-    content: " ";
+    content: "";
     top: 0;
     left: 0;
     bottom: 0;
@@ -36,8 +32,6 @@
 .hub-heading-wrapper {
   position: relative;
   display: table;
-  width: 1100px;
-  margin: 0 auto;
   height: 100%;
 }
 
@@ -58,5 +52,26 @@
 
 .header-wrapper.fixed + .layout-content .hub-heading {
   margin-top: 80px;
+}
+
+.rheader + .layout-content .hub-heading {margin-top: 60px;}
+
+
+@include large {
+
+  .hub-heading {
+    height: 310px;
+
+    // modifiers
+    &.small {
+      height: 160px;
+    }
+
+    h1 {
+      font-size: 70px;
+      line-height: 84px;
+    }
+  }
+
 }
 

@@ -7,7 +7,9 @@
   width: 100%;
   transition: .4s ease transform, .4s ease min-height;
   position: relative;
-  min-height: 600px;
+  @include large-and-medium {
+    min-height: 600px;
+  }
 
 
   .header-wrapper & {
@@ -76,6 +78,11 @@
   }
 }
 
+.quick-access-video,
+.quick-access-search {
+  @include hidden-on-small;
+}
+
 .quick-access-video {
   position: absolute;
   left: 50%;
@@ -90,7 +97,9 @@
   max-width: 820px;
   margin: 0 auto;
   position: relative;
-  top: 145px;
+  @include large-and-medium {
+    top: 145px;
+  }
   transform: translateY(0);
   transition: transform 0.5s ease;
   z-index: 1;
@@ -102,19 +111,6 @@
     text-align: center;
   }
 }
-
-.quick-access-search {
-
-  .search-field {
-
-    .search-field-input,
-    .search-field-submit {
-      @include hidden-on-small;
-    }
-  }
-
-}
-
 .quick-access-buttons {
   list-style: none;
   margin: 10px 0 0;
