@@ -26,4 +26,8 @@ mixin rheader(data)
             a(href=item.href)
               if item.icon
                 i.rheader-nav-item-icon(class="icon-#{item.icon}")
-              span.rheader-nav-item-text= item.text
+              if item.hover
+                span.rheader-nav-item-front: span.rheader-nav-item-text= item.text
+                span.rheader-nav-item-back: span.rheader-nav-item-hover= item.hover
+              else
+                span.rheader-nav-item-text= item.text

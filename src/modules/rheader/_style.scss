@@ -1,8 +1,8 @@
 $rheader-small-max: 600px;
 $rheader-medium-min: $rheader-small-max + 1px;
-$rheader-medium-max: 1140px;
+$rheader-medium-max: 1160px;
 $rheader-large-min: $rheader-medium-max + 1px;
-$rheader-large-max: 1360px;
+$rheader-large-max: 1370px;
 
 $rheader-height: 60px;
 
@@ -24,6 +24,8 @@ $rheader-height: 60px;
     list-style: none;
     margin: 0;
   }
+
+  h1 {margin: 0;}
 }
 
 .rheader-logo {
@@ -89,29 +91,24 @@ $rheader-height: 60px;
     position: absolute;
     text-align: center;
     top: 0;
+    transition: background-color 0.3s ease;
     width: $rheader-height;
 
-    &:hover {
-      .rheader-button-icon,
-      .rheader-button-text {
-        opacity: 0.8;
-      }
+    &:hover,
+    &.active {
+      background: $color-primary-variant;
     }
   }
 }
 
-.rheader-button-text {
-  display: none;
-}
+.rheader-button-text {display: none;}
 
 .rheader-button-search {
   font-size: 20px;
   left: 0;
 }
 
-.rheader-button-around {
-  display: none;
-}
+.rheader-button-around {display: none;}
 
 .rheader-button-menu {
   background-color: $color-primary;
@@ -172,11 +169,11 @@ $rheader-height: 60px;
   }
 }
 
-.rheader-nav {
-  display: none;
-}
+.rheader-nav {display: none;}
 
 .rheader-nav-item {
+  transition: background-color 0.3s ease;
+
   a {
     font-size: 13px;
     font-weight: 500;
@@ -186,14 +183,44 @@ $rheader-height: 60px;
   // modifiers
   &.get-involved {
     background-color: $red-poll;
-    a {
-      color: #fae46a;
-      font-weight: 700;
+    text-align: center;
+
+    a {font-weight: 700;}
+
+    .rheader-nav-item-text,
+    .rheader-nav-item-hover {
+      position: relative;
+
+      &:after {
+        bottom: -8px;
+        content: "";
+        display: block;
+        height: 5px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    .rheader-nav-item-back {display: none;}
+
+    .rheader-nav-item-text {
+      color: $color-tertiary;
+      &:after {background-color: $color-tertiary;}
+    }
+
+    .rheader-nav-item-hover {
+      color: $red-poll;
+      &:after {background-color: $red-poll;}
     }
   }
 
   &.account {
-    background-color: $blue3;
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: $blue3;
+    }
   }
 }
 
@@ -201,10 +228,16 @@ $rheader-height: 60px;
 .rheader-button-icon {
   display: inline-block;
   font-size: 20px;
-  margin-right: 5px;
-  position: relative;
-  top: 3px;
-  vertical-align: baseline;
+}
+
+.rheader-mobile-nav {
+  .rheader-nav-item-icon,
+  .rheader-button-icon {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+    vertical-align: baseline;
+  }
 }
 
 .rheader-mobile-nav,
@@ -272,6 +305,7 @@ $rheader-height: 60px;
 
       &.around {
         background-color: $green2;
+        &:hover {background-color: darken($green2, 8);}
       }
     }
 
@@ -348,7 +382,8 @@ $rheader-height: 60px;
   }
 
   .rheader,
-  .rheader-logo {
+  .rheader-logo,
+  .rheader-nav-item {
     height: $rheader-height;
   }
 
@@ -384,6 +419,8 @@ $rheader-height: 60px;
       position: static;
       vertical-align: top;
       width: $rheader-height + 1px;
+
+      .rheader-button-icon {font-size: 28px;}
     }
 
     > .rheader-button-menu {display: none;}
@@ -401,7 +438,7 @@ $rheader-height: 60px;
     vertical-align: top;
 
     & + .rheader-nav-item {
-      margin-left: 14px;
+      margin-left: 20px;
     }
 
     a {
@@ -413,14 +450,83 @@ $rheader-height: 60px;
     // modifiers
     &.get-involved {
       margin-left: 22px;
-      a {padding: 0 20px;}
+      perspective: 1000px;
+
+      &:hover,
+      &.current {
+        background-color: $color-tertiary;
+      }
+
+      a {
+        padding: 0 20px;
+        width: 140px;
+      }
+
+      .rheader-nav-item-front,
+      .rheader-nav-item-back {
+        backface-visibility: hidden;
+        display: inline-block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        transition: transform 0.5s ease;
+        vertical-align: top;
+      }
+
+      .rheader-nav-item-front,
+      &:hover .rheader-nav-item-back,
+      &.current .rheader-nav-item-back {
+        transform: rotateY(0deg);
+      }
+      .rheader-nav-item-back,
+      &:hover .rheader-nav-item-front,
+      &.current .rheader-nav-item-front {
+        transform: rotateY(180deg);
+      }
     }
+
     &.account {
       margin-left: 0;
       a {padding: 0 20px;}
 
       .rheader-nav-item-text {display: none;}
+      .rheader-nav-item-text:after {display: none;}
       .rheader-nav-item-icon {margin-right: 0;}
+    }
+  }
+
+  .rheader-nav-item-icon {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+    vertical-align: baseline;
+  }
+
+  html.no-touch {
+    .rheader-nav-item-text {
+      position: relative;
+
+      &:after {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0%;
+        position: absolute;
+        left: 0px;
+        bottom: -4px;
+        background: $white;
+        transition: width 0.3s ease;
+      }
+    }
+
+    .rheader-nav-item.current .rheader-nav-item-text:after,
+    .rheader-nav-item:hover .rheader-nav-item-text:after {
+      width: 100%;
+    }
+
+    .rheader-nav-item {
+
     }
   }
 }

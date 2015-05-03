@@ -35,6 +35,7 @@
         {
           "href": "#",
           "text": "Participez !",
+          "hover": "C'est à vous !",
           "modifiers": ["get-involved"]
         },
         {
