@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var through2   = require('through2');
 
 gulp.task('build:css', ['build:themes:files'], function () {
-    gulp.src(['src/stylesheets/paris.scss'])
+    gulp.src(['src/stylesheets/paris.scss', 'src/stylesheets/print.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({
           outputStyle: 'compressed'
@@ -48,7 +48,6 @@ function generate_themes(){
     var base = path.join(file.path, '..');
     themes.forEach(function generateTheme(theme) {
       var content = mainScss.replace('// @import_theme;', '@import "./themes/'+theme+'";');
-
       this.push(new File({
         base: base,
         path: path.join(base, 'paris-' + theme + '.scss'),

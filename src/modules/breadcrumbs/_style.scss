@@ -49,7 +49,17 @@
 
     &:hover {
       color: $color-primary;
-      &:after {width: 100%;}
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &:last-child {
+    a {
+      border-bottom: 0;
+      cursor: default;
+      pointer-events: none;
     }
   }
 }

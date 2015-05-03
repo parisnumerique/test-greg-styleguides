@@ -1,5 +1,7 @@
 'use strict';
 
+var PubSub = require('pubsub-js');
+
 var Paris = window.Paris || {};
 
 Paris.accordion = (function(){
@@ -16,6 +18,9 @@ Paris.accordion = (function(){
         .addClass('collapsed')
         .attr('data-toggle', 'collapse')
         .collapse();
+      $el.on('shown.bs.collapse hidden.bs.collapse', function(){
+        PubSub.publish('accordion:change');
+      });
 
       $el.data('api', api);
     }

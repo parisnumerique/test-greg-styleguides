@@ -28,7 +28,13 @@
       &:first-child {
         > a,
         > span {
-          margin-left: 0;
+          margin-left: 70px;
+        }
+      }
+      &:last-child {
+        > a,
+        > span {
+          margin-right: 70px;
         }
       }
 
@@ -43,6 +49,7 @@
       &.previous {
         > a,
         > span {
+          margin-left: 0;
           margin-right: 25px;
         }
       }
@@ -51,6 +58,7 @@
         > a,
         > span {
           margin-left: 25px;
+          margin-right: 0;
         }
       }
     }

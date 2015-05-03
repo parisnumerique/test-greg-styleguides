@@ -40,9 +40,10 @@ append content
             +#{component.type}(component.data)
 
 append content
-  .layout-content.layout-adjacent-before
-    div
-      +cross-content(data.cross_content)
+  if data.cross_content.items.length === 3
+    .layout-content.layout-adjacent-before
+      div
+        +cross-content(data.cross_content)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after

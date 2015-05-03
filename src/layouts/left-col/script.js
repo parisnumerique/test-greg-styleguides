@@ -1,7 +1,6 @@
 'use strict';
 
 var PubSub = require('pubsub-js');
-var fs = require('fs');
 
 var Paris = window.Paris || {};
 

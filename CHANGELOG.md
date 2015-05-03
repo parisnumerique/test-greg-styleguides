@@ -1,5 +1,51 @@
 # Changelog
 
+## 0.10.0 (2015-05-03)
+
+* component `image`:
+  * now uses responsive images (`srcset`)
+  * improved documentation
+* component `links`: added example for use without title
+* component `place`: renamed (formerly `transportation`)
+* component `table`:
+  * improved style
+  * prepared for responsive
+  * improved accessibility by adding caption and summary
+
+* module `anchors-list`:
+  * fix bug when clicking a few times quickly
+  * fix "rebound" bug when reaching the end of a document
+  * fix bug when document height changes (because of `accordion` interaction)
+  * replace hash in URL when clicking on an anchor
+* module `block-content-jecoute`: improved animations
+* module `que-faire`: added ability to set links targets
+* module `quick-access`:
+  * highlight search field on focus
+  * added documentation for video background
+  * press Esc to close
+  * hide button "Autour de moi" when launching a search
+  * `hidden-on-mobile` modifier to hide buttons on mobile
+* module `sections-panel`:
+  * fix URLs and replace them in address bar when navigating
+
+* template `home`: module `notice` on top is now optional
+* template `hub`: refresh modules `hub-heading` and `breadcrumbs` during navigation in `sections-panel`
+* template `list-persons`: search with Algolia
+* all templates:
+  * added ability to set page title in data
+  * added notice for deprecated browsers (IE < 9)
+
+* added `bower.json`
+* added `CONTRIBUTE.md`
+* added Modernizr
+* added print stylesheet
+* added IE < 9 stylesheet
+* optimized JS build
+* added favicon, tileicon, touchicon
+* updated jQuery to 2.1.4 and use CDN instead of building it in paris.js
+* now cleans the `/build` directory before building
+* changed Algolia key in `config.js`
+
 ## 0.9.3 (2015-04-24)
 
 * Use last harpjs version (with up-to-date sass and jade)
@@ -76,7 +122,6 @@
 * template `subhome-get-involved`: added current state in `header` (data changed)
 * template `subhome-news/tag`: use `hub-heading` instead of `jumbotron`
 * template `subhome-news`: changed wording
-* template ``:
 * all templates:
   * module `cross-content`: removed instagram icon
   * added `.components` class to parent element whenever we render components

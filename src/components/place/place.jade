@@ -1,15 +1,15 @@
 include ../../modules/button/button
 
-mixin transportation(data)
-  .component.component-transportation
+mixin place(data)
+  .component.component-place
     if data.title
-      .transportation-title= data.title
+      .place-title= data.title
     if data.address
-      .transportation-address!= data.address
+      .place-address!= data.address
     if data.items
-      ul.transportation-items
+      ul.place-items
         each item in data.items
-          li.transportation-item
+          li.place-item
             i.icon(class="icon-#{item.icon}")
             = item.text
     if data.button

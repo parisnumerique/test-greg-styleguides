@@ -17,6 +17,10 @@ module.exports = {
     output: 'paris.css'
   },
 
+  tmp: {
+    output: join(process.cwd(), 'tmp')
+  },
+
   harp: {
     input: harpSrc,
     output: harpOutput
@@ -26,6 +30,9 @@ module.exports = {
     client_modules: [
       'anchors-list',
       'block-aside-checkboxes',
+      'breadcrumbs',
+      'pagination',
+      'person-block',
       'search-results-list',
       'share'
     ]

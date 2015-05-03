@@ -1,7 +1,6 @@
 'use strict';
 require('velocity-animate');
 
-var jade = require('jade');
 var throttle = require('lodash.throttle');
 
 var Paris = window.Paris || {};
@@ -19,7 +18,6 @@ Paris.buttonTop = (function(){
 
     function onClick(e) {
       e.preventDefault();
-      console.log("onClick");
       $("html").velocity("scroll", {
         duration: 1500,
         offset: 0,

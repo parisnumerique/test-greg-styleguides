@@ -1,6 +1,3 @@
-// BS3 et Velocity attendent un `jQuery` global sur `window`
-window.jQuery = window.$ = require('jquery');
-
 // load externals
 require('./externals/bootstrap');
 
@@ -31,6 +28,8 @@ require('../modules/sections-panel/script');
 require('../modules/share/script');
 
 // load our templates
+require('../templates/hub/script');
+require('../templates/list-persons/script');
 require('../templates/search/script');
 
 var Paris = window.Paris || {};

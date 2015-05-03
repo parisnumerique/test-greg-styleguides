@@ -39,13 +39,16 @@ append content
               +share(data.aside.share)
             +block-aside({})
               +search-field(data.aside.search)
-            +block-aside-checkboxes(data.aside.politique)
-            +block-aside-checkboxes(data.aside.arrondissement)
+            #facets
+              +block-aside-checkboxes(data.aside.politique)
+              +block-aside-checkboxes(data.aside.arrondissement)
 
         .layout-content
-          each module in data.modules
-            +#{module.type}(module.data)
-          +pagination(data.pagination)
+          #results
+            each result in data.results
+              +#{result.type}(result.data)
+          #pagination
+            +pagination(data.pagination)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after

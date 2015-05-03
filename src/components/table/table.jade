@@ -1,10 +1,10 @@
 mixin table(data)
   .component.component-table
-    table
+    table(summary=data.summary)
+      if data.caption
+        caption= data.caption
       if block
         block
       else if data.block
         != data.block
-      if data.caption
-        caption= data.caption
 

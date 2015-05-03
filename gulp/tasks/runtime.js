@@ -7,7 +7,7 @@ var templatizer = require('templatizer');
 
 gulp.task('build:runtime', function (cb) {
   try {
-    templatizer(config.harp.input+'/@(components|modules)/!(_*)/!(index).jade', config.build.output + '/runtime.tpl.js', {
+    templatizer(config.harp.input+'/@(components|modules)/!(_*)/!(index).jade', config.tmp.output + '/runtime.tpl.js', {
       dontRemoveMixins: true,
       namespace: 'Paris.bo_templates'
     });
@@ -26,7 +26,7 @@ gulp.task('build:clients', function (cb) {
     .pipe(gulp.dest(config.build.assets.javascript));
 
   try {
-    templatizer(config.harp.input+'/@(components|modules)/@('+clients.join('|')+')/!(index).jade', config.build.output + '/client.tpl.js', {
+    templatizer(config.harp.input+'/@(components|modules)/@('+clients.join('|')+')/!(index).jade', config.tmp.output + '/client.tpl.js', {
       dontRemoveMixins: true,
       namespace: 'Paris.templates'
     });

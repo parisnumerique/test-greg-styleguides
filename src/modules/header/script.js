@@ -31,6 +31,10 @@ Paris.header = (function(){
 
       PubSub.subscribe('header:search:close', fixHeader);
 
+      PubSub.subscribe('search:focus', function () {
+        $buttonSearch.addClass('active');
+      });
+
       PubSub.subscribe('notice:close', function(e, data){
         if (data && data.id === "notice_home_top") {
           fixHeader();
@@ -45,7 +49,7 @@ Paris.header = (function(){
         fixHeader();
       }
 
-      if(!$('#main-search').length) {
+      if(!$('.quick-access-search').length) {
         fixNav();
       }
     }
@@ -75,7 +79,6 @@ Paris.header = (function(){
     function onClickSearch(e){
       e.preventDefault();
       PubSub.publish('header:search:click');
-      $buttonSearch.toggleClass('active');
     }
 
     init();

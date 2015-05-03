@@ -1,10 +1,12 @@
 'use strict';
 require('velocity-animate');
 
-var jade = require('jade');
 var PubSub = require('pubsub-js');
-var _ = require('underscore');
+var map = require('lodash.map');
+var each = require('lodash.foreach');
+var defer = require('lodash.defer');
 var slugify = require("underscore.string/slugify");
+var throttle = require('lodash.throttle');
 
 var Paris = window.Paris || {};
 
@@ -12,6 +14,7 @@ Paris.anchors = (function(){
 
   var defaultOptions = {
     anchorsSelector: '.anchor',
+    contentEl: '.layout-left-col',
     anchorsFavoritable: false,
     anchorsShareable: false,
     anchorTopBorder: 7 // border-top of the .anchor elements, in pixels
@@ -35,17 +38,25 @@ Paris.anchors = (function(){
       if (options.anchorsFavoritable) {renderFavorite();}
       if (options.anchorsShareable) {renderShare();}
 
-      followAnchors();
+      $el.on('click', '.anchor-link', onClickAnchorLink);
 
       PubSub.subscribe('scroll', fillBars);
 
       // Fix bad offset by recalculating items dimensions, 1 second after rendering
       // This could probably be improved by tracking down the origin of the discrepancy
       setTimeout(parseItems, 1000);
+
+      PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+    }
+
+    function initOptions() {
+      $.each($el.data(), function(key, value){
+        options[key] = value;
+      });
     }
 
     function parseItems() {
-      items = _.map($anchors, function(anchor, index) {
+      items = map($anchors, function(anchor, index) {
         var $anchor = $(anchor);
 
         // Generate a slug-based id if it doesn't exist
@@ -56,17 +67,19 @@ Paris.anchors = (function(){
         // Check if the anchor is in a postit
         $anchor.data('in-postit', ($anchor.closest('.component-postit').length !== 0));
 
+        var $contentEl = $(options.contentEl);
+
         return {
           text: $anchor.text(),
           href: '#' + $anchor.attr('id'),
           top: $anchor.data('in-postit') && index === 0 ?
             $layoutContainer.position().top : // when in-postit and first item
-            Math.round(+$anchor.position().top - options.anchorTopBorder),
+            Math.round(+$anchor.position().top - options.anchorTopBorder)+ ( $contentEl.parent().position().top  - $contentEl.position().top),
           modifiers: $anchor.data('in-postit') ? ["anchor-postit"] : []
         };
       });
 
-      _.each(items, function (item, index, list) {
+      each(items, function (item, index, list) {
         item.bottom = (list[index+1]) ? list[index+1].top : $layoutContainer.position().top + $layoutContainer.height();
       });
     }
@@ -77,7 +90,7 @@ Paris.anchors = (function(){
       var content = Paris.templates.templatizer['anchors-list']['anchors-list']({items: items});
       $el.html($(content).html());
 
-      _.defer(function () {
+      defer(function () {
         PubSub.publish('anchors:ready');
         fillBars();
       });
@@ -133,19 +146,25 @@ Paris.anchors = (function(){
       });
     }
 
-    function followAnchors() {
-      $el.on('click', '.anchor-link', function (e) {
-        e.preventDefault();
-        $(e.currentTarget.getAttribute('href'))
-          .velocity("scroll", {
-            duration: 1500,
-            offset: $('.header').height() * -1 + options.anchorTopBorder
-        });
+    function onClickAnchorLink(e) {
+      e.preventDefault();
+      var $link = $(e.currentTarget);
+      var anchor = $link.attr("href");
+      $(anchor)
+        .velocity("stop")
+        .velocity("scroll", {
+          duration: 1500,
+          offset: $('.header').height() * -1 + options.anchorTopBorder,
+          complete: function(){
+            if (Modernizr.history) {
+              history.replaceState({}, $link.text(), anchor);
+            }
+          }
       });
     }
 
     function fillBars(){
-      _.each(items, function(item) {
+      each(items, function(item) {
         if($(document).scrollTop() < item.top ) {
           $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '0%');
           return;
@@ -161,10 +180,9 @@ Paris.anchors = (function(){
       });
     }
 
-    function initOptions() {
-      $.each($el.data(), function(key, value){
-        options[key] = value;
-      });
+    function onContentHeightChange(){
+      parseItems();
+      fillBars();
     }
 
     init();
