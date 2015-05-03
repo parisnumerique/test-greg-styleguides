@@ -102,19 +102,23 @@
               },
               {
                 "href": "#",
-                "text": "Tennis"
+                "text": "Tennis",
+                "modifiers": ["hidden-on-mobile"]
               },
               {
                 "href": "#",
-                "text": "Signalement"
+                "text": "Signalement",
+                "modifiers": ["hidden-on-mobile"]
               },
               {
                 "href": "#",
-                "text": "Facil’familles"
+                "text": "Facil’familles",
+                "modifiers": ["hidden-on-mobile"]
               },
               {
                 "href": "#",
-                "text": "Gardes d’enfants"
+                "text": "Gardes d’enfants",
+                "modifiers": ["hidden-on-mobile"]
               }
             ],
             "results": {
