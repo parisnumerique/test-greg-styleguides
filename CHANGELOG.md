@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.2 (2015-05-04)
+
+* fix stylesheets paths in wrapper_prod
+
 ## 0.10.1 (2015-05-04)
 
 * rename stylesheets build output not to break built templates
