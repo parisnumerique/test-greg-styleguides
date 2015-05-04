@@ -2807,6 +2807,87 @@
         return buf.join("");
     };
 
+    // rheader.jade compiled template
+    templatizer["rheader"] = function tmpl_rheader(locals) {
+        var buf = [];
+        var jade_mixins = {};
+        var jade_interp;
+        return buf.join("");
+    };
+
+    // rheader.jade:rheader compiled template
+    templatizer["rheader"]["rheader"] = function tmpl_rheader_rheader(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push('<header class="rheader"><div class="layout-wrapper rheader-wrapper"><a id="logo"' + jade.attr("href", data.logo.href, true, false) + ' class="rheader-logo"><div class="rheader-logo-nef"></div>');
+        if (data.logo.h1) {
+            buf.push('<h1 class="rheader-logo-paris">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</h1>");
+        } else {
+            buf.push('<div class="rheader-logo-paris">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</div>");
+        }
+        buf.push('</a><ul class="rheader-locales">');
+        (function() {
+            var $obj = data.locales;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var locale = $obj[$index];
+                    buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.cls([ locale.current ? "current" : "" ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var locale = $obj[$index];
+                    buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.cls([ locale.current ? "current" : "" ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
+                }
+            }
+        }).call(this);
+        buf.push("</ul><a" + jade.attr("href", data.buttons.search.href, true, false) + jade.attr("title", data.buttons.search.text, true, false) + ' class="rheader-button rheader-button-search">');
+        if (data.buttons.search.icon) {
+            buf.push("<i" + jade.cls([ "rheader-button-icon", "icon-" + data.buttons.search.icon + "" ], [ null, true ]) + "></i>");
+        }
+        buf.push("</a><a" + jade.attr("href", data.buttons.around.href, true, false) + jade.attr("title", data.buttons.around.text, true, false) + ' class="rheader-button rheader-button-around">');
+        if (data.buttons.around.icon) {
+            buf.push("<i" + jade.cls([ "rheader-button-icon", "icon-" + data.buttons.around.icon + "" ], [ null, true ]) + '></i><span class="rheader-button-text">' + jade.escape(null == (jade_interp = data.buttons.around.text) ? "" : jade_interp) + "</span>");
+        }
+        buf.push('</a><a id="nav-toggle"' + jade.attr("href", data.buttons.menu.href, true, false) + ' class="rheader-button rheader-button-menu"><span class="rheader-button-text">' + jade.escape(null == (jade_interp = data.buttons.menu.text) ? "" : jade_interp) + '</span></a><ul class="rheader-nav">');
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    buf.push("<li" + jade.cls([ "rheader-nav-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">");
+                    if (item.icon) {
+                        buf.push("<i" + jade.cls([ "rheader-nav-item-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
+                    }
+                    if (item.hover) {
+                        buf.push('<span class="rheader-nav-item-front"><span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</span></span><span class="rheader-nav-item-back"><span class="rheader-nav-item-hover">' + jade.escape(null == (jade_interp = item.hover) ? "" : jade_interp) + "</span></span>");
+                    } else {
+                        buf.push('<span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span>");
+                    }
+                    buf.push("</a></li>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    buf.push("<li" + jade.cls([ "rheader-nav-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">");
+                    if (item.icon) {
+                        buf.push("<i" + jade.cls([ "rheader-nav-item-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
+                    }
+                    if (item.hover) {
+                        buf.push('<span class="rheader-nav-item-front"><span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</span></span><span class="rheader-nav-item-back"><span class="rheader-nav-item-hover">' + jade.escape(null == (jade_interp = item.hover) ? "" : jade_interp) + "</span></span>");
+                    } else {
+                        buf.push('<span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span>");
+                    }
+                    buf.push("</a></li>");
+                }
+            }
+        }).call(this);
+        buf.push("</ul></div></header>");
+        return buf.join("");
+    };
+
     // search-field.jade compiled template
     templatizer["search-field"] = function tmpl_search_field(locals) {
         var buf = [];
