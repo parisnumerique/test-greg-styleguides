@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.10.1 (2015-05-04)
+
+* rename stylesheets build output not to break built templates
+* fix browserify error on build with trailing underscore, replaced by lodash.values
+* added module `rheader` (responsive header), that will progressively replace the `header` module in all templates
+
 ## 0.10.0 (2015-05-03)
 
 * component `image`:

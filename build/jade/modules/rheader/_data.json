@@ -1,0 +1,50 @@
+{
+  "index": {
+    "defaults": {
+      "logo": {
+        "href": "/",
+        "text": "Paris",
+        "h1": true
+      },
+      "locales": [
+        {"href": "#fr", "text": "fr", "current": true},
+        {"href": "#en", "text": "en"},
+        {"href": "#es", "text": "es"}
+      ],
+      "buttons": {
+        "search": {
+          "href": "#",
+          "icon": "search",
+          "text": "Recherche"
+        },
+        "around": {
+          "href": "#",
+          "icon": "marker",
+          "text": "Autour de moi"
+        },
+        "menu": {
+          "href": "#",
+          "text": "Menu"
+        }
+      },
+      "items": [
+        {"href": "#", "text": "Services et infos pratiques"},
+        {"href": "#", "text": "Actualités"},
+        {"href": "#", "text": "Entreprises"},
+        {"href": "#", "text": "Municipalité"},
+        {
+          "href": "#",
+          "text": "Participez !",
+          "hover": "C'est à vous !",
+          "modifiers": ["get-involved"]
+        },
+        {
+          "href": "#",
+          "icon": "profile",
+          "text": "Mon compte",
+          "modifiers": ["account"]
+        }
+      ]
+    }
+  }
+}
