@@ -2,7 +2,7 @@
 require('velocity-animate');
 
 var jade = require('jade');
-var _ = require('underscore');
+var values = require('lodash.values');
 var map = require('lodash.map');
 var sortBy = require('lodash.sortby');
 
@@ -94,7 +94,7 @@ Paris.listPersons = (function(){
         facets: options.facets.join(','),
 
         // Explicitly request necessary attributes (as defined in options)
-        attributesToRetrieve: _.values(options.fields).join(',')
+        attributesToRetrieve: values(options.fields).join(',')
       };
 
       // If some facets filters are active, add them to the request
