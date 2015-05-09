@@ -21,6 +21,12 @@
   &.with-top-margin {
     margin-top: 40px;
   }
+
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 }
 
 .heading-title {

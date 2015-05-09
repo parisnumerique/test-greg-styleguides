@@ -6,14 +6,14 @@ include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/hub-heading/hub-heading
 include ../../modules/heading/heading
 include ../../modules/links-group/links-group
 include ../../modules/gallery-ugc/gallery-ugc
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content
@@ -25,14 +25,14 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content
+  .layout-content.layout-padding-after
     .layout-wrapper
       +links-group(data.links)
 
 append content
   .layout-right-col.gray-background
     .layout-wrapper
-      .layout-content
+      .layout-content.hidden-on-small
         +heading(data.gallery.heading)
         +gallery-ugc(data.gallery.gallery_ugc)
       aside.layout-aside.color-secondary-background

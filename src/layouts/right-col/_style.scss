@@ -18,6 +18,10 @@
   > .layout-wrapper {
     margin: 0 auto;
 
+    @include small {
+      padding: 0;
+    }
+
     @include large-and-medium {
       display: table;
       width: $large-grid-width;
@@ -34,10 +38,13 @@
   .layout-aside {
     background-color: $gray242;
     padding: 40px 0 40px 20px;
+    @include small {padding: 40px $small-page-padding;}
     position: relative;
     text-align: left;
     vertical-align: top;
-    width: 350px;
+    @include large-and-medium {
+      width: 350px;
+    }
 
     &:after {
       background-color: $gray242;

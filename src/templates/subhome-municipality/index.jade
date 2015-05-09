@@ -26,7 +26,7 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content
+  .layout-content.layout-padding-after
     .layout-wrapper
       each group in data.links_groups
         +links-group(group)
@@ -35,7 +35,8 @@ append content
   .layout-content.color-secondary-background.layout-separate-after
     .layout-three-col
       .layout-wrapper
-        +heading(data.connected.heading)
+        .hidden-on-small
+          +heading(data.connected.heading)
         .layout-content
           +block-content-newsletter(data.connected.newsletter)
         .layout-content

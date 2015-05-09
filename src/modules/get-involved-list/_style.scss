@@ -1,6 +1,4 @@
 .get-involved-list {
-  @include container;
-
   .get-involved-item:nth-child(5n+1) {
     @extend .get-involved-item.red;
   }
@@ -18,11 +16,6 @@
   }
 }
 
-.get-involved-nav,
-.get-involved-items {
-  @include container;
-}
-
 .get-involved-nav {
   background-color: $red3;
   border-radius: 5px;
@@ -32,17 +25,17 @@
 }
 
 .get-involved-nav-item {
-  @include span(4 of 12);
-  &:last-child {@include last;}
-
-  position: relative;
-  padding: 45px 10px 35px;
+  padding: 35px 10px 25px;
   text-align: center;
 
+  & + .get-involved-nav-item {
+    border-top: 1px solid $red4;
+  }
+
   .get-involved-item-title {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 30px;
+    line-height: 28px;
     margin: 0 auto 15px;
     max-width: 260px;
   }
@@ -53,29 +46,21 @@
     font-weight: 700;
     &:after {background-color: darken($red4, 6%);}
   }
-
-  & + .get-involved-nav-item:before {
-    content: '';
-    display: block;
-    border-left: 1px solid $red4;
-    height: 130px;
-    margin-top: -60px;
-    left: -12px;
-    top: 50%;
-    position: absolute;
-  }
 }
 
 .get-involved-item {
-  @include gallery(4 of 12);
   border-radius: 5px;
   color: $blue3;
   display: block;
   margin-bottom: 25px;
-  min-height: 220px;
   overflow: hidden;
   padding: 20px 25px;
   position: relative;
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   &:after {
     background-position: bottom;
@@ -88,11 +73,6 @@
     right: 0;
     width: 100px;
     z-index: 0;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
   }
 
   // modifiers
@@ -145,7 +125,58 @@
   }
 
   .get-involved-item-button {
-    position: absolute;
-    bottom: 20px;
+    margin-top: 20px;
   }
+}
+
+@include large-and-medium {
+
+  .get-involved-list {
+    @include container;
+  }
+
+  .get-involved-nav,
+  .get-involved-items {
+    @include container;
+  }
+
+  .get-involved-nav-item {
+    @include span(4 of 12);
+    &:last-child {@include last;}
+    padding: 45px 10px 35px;
+
+    position: relative;
+
+    & + .get-involved-nav-item {
+      border-top: none;
+    }
+
+    & + .get-involved-nav-item:before {
+      content: '';
+      display: block;
+      border-left: 1px solid $red4;
+      height: 130px;
+      margin-top: -60px;
+      left: -12px;
+      top: 50%;
+      position: absolute;
+    }
+
+    .get-involved-item-title {
+       font-size: 26px;
+       line-height: 30px;
+     }
+  }
+
+  .get-involved-item {
+    @include gallery(4 of 12);
+    min-height: 220px;
+
+    .get-involved-item-button {
+      bottom: 20px;
+      margin-top: 0;
+      position: absolute;
+    }
+  }
+
 }

@@ -1,20 +1,17 @@
-.news-card {
-  color: $black;
-  display: block;
-  text-align: center;
-  text-decoration: none;
+@include large-and-medium {
 
-  @include small {
-    background-color: $gray242;
-    & + .news-card {
-      margin-top: 20px;
-    }
-  }
+  .news-card {
+    color: $black;
+    display: block;
+    text-align: center;
+    text-decoration: none;
 
-  @include large {
     &:hover {
       color: $white;
-      transform: translateY(-20px);
+
+      .news-card-wrapper {
+        transform: translateY(-20px);
+      }
 
       .news-card-image {
         border-radius: 5px 5px 0 0;
@@ -29,226 +26,232 @@
 
       .news-card-category {
         color: $white;
+
+        &:before, &:after {
+          border-color: transparentize($white, 0.7);
+        }
       }
 
-      .social-counters {
+      .news-card-counters {
         opacity: 1;
+        transform: scaleY(1);
+        transition-delay: 0.3s;
       }
     }
-  }
 
-  // modifiers
-  &.large {
-    .news-card-wrapper {
-      background-color: $gray204;
-      height: 480px;
-      margin-bottom: 0;
-      overflow: hidden;
-      position: relative;
-      transition: none;
-      transform: none;
-    }
-
-    &:hover {
+    // modifiers
+    &.large {
       .news-card-wrapper {
+        background-color: $gray204;
+        height: 480px;
+        margin-bottom: 0;
+        overflow: hidden;
+        position: relative;
+        transition: none;
         transform: none;
       }
 
+      &:hover {
+        .news-card-wrapper {
+          transform: none;
+        }
+
+        .news-card-image {
+          transition: transform 10s linear;
+          transform: translateX(20%);
+
+          &:after {
+            transform: translateX(10%);
+          }
+        }
+
+        .news-card-content {
+          transform: translateY(-40px);
+        }
+      }
+
       .news-card-image {
-        transition: transform 10s linear;
-        transform: translateX(20%);
+        height: 100%;
+        position: absolute;
+        right: 0;
+        transition: transform 1s ease;
+        transform: translateX(0);
+        width: 200%;
+        z-index: 0;
 
         &:after {
-          transform: translateX(10%);
+          background: $color-primary; /* Old browsers */
+          background: -moz-linear-gradient(left, $color-primary 0%, transparent 100%); /* FF3.6+ */
+          background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-primary), color-stop(100%,transparent)); /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(left, $color-primary 0%,transparent 100%); /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(left, $color-primary 0%,transparent 100%); /* Opera 11.10+ */
+          background: -ms-linear-gradient(left, $color-primary 0%,transparent 100%); /* IE10+ */
+          background: linear-gradient(to right, $color-primary 0%,transparent 100%); /* W3C */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primary', endColorstr='transparent',GradientType=1 ); /* IE6-8 */
+
+          content: "";
+          display: block;
+          height: 100%;
+          transition: transform 1s ease;
+          transform: translateX(-20%);
+          width: 150%;
         }
       }
 
       .news-card-content {
-        transform: translateY(-40px);
+        bottom: 0;
+        padding: 20px;
+        position: absolute;
+        text-align: left;
+        transform: translateY(0);
+        transition: 0.3s ease transform;
+        z-index: 1;
+        &:before {background: none;}
       }
-    }
 
-    .news-card-image {
-      height: 100%;
-      position: absolute;
-      right: 0;
-      transition: transform 1s ease;
-      transform: translateX(0);
-      width: 200%;
-      z-index: 0;
-
-      &:after {
-        background: $color-primary; /* Old browsers */
-        background: -moz-linear-gradient(left, $color-primary 0%, transparent 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%,$color-primary), color-stop(100%,transparent)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left, $color-primary 0%,transparent 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left, $color-primary 0%,transparent 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(left, $color-primary 0%,transparent 100%); /* IE10+ */
-        background: linear-gradient(to right, $color-primary 0%,transparent 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-primary', endColorstr='transparent',GradientType=1 ); /* IE6-8 */
-
-        content: "";
+      .news-card-category {
+        color: $white;
         display: block;
-        height: 100%;
-        transition: transform 1s ease;
-        transform: translateX(-20%);
-        width: 150%;
-      }
-    }
+        font-size: 17px;
+        font-weight: 300;
+        margin: 0 0 5px;
+        text-align: left;
 
-    .news-card-content {
-      bottom: 0;
-      padding: 20px;
-      position: absolute;
-      text-align: left;
-      transform: translateY(0);
-      transition: 0.3s ease transform;
-      z-index: 1;
-      &:before {background: none;}
-    }
+        html.flexbox & {
+          display: block;
 
-    .news-card-category {
-      color: $white;
-      display: block;
-      font-size: 17px;
-      font-weight: 300;
-      margin: 0 0 5px;
-      text-align: left;
+          &:before,
+          &:after{
+            display: none;
+          }
 
-      html.flexbox & {
-        display: block;
-
-        &:before,
-        &:after{
-          display: none;
+          > span {padding: 0;}
         }
+      }
 
-        > span {padding: 0;}
+      .news-card-title {
+        color: $white;
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      .news-card-counters {
+        position: absolute;
+        left: 20px;
+        top: inherit;
+        text-align: left;
+      }
+
+      .news-card-counter {
+        background: transparent;
+        border: none;
+        height: inherit;
+        padding: 0 20px 0 0;
       }
     }
 
-    .news-card-title {
-      color: $white;
-      font-size: 22px;
-      line-height: 26px;
-    }
-
-    .news-card-counters {
-      position: absolute;
-      left: 20px;
-      top: inherit;
-      text-align: left;
-    }
-
-    .news-card-counter {
-      background: transparent;
-      border: none;
-      height: inherit;
-      padding: 0 20px 0 0;
-    }
   }
 
-}
-
-.news-card-wrapper {
-  border-radius: 5px;
-  margin-bottom: 10px;
-  transition: 0.2s ease transform;
-  transform: translateY(0);
-}
-
-.news-card-image {
-  background-color: #eee;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  height: 180px;
-  width: 100%;
-}
-
-.news-card-content {
-  @mixin large-and-medium {
-    padding-bottom: 20px;
+  .news-card-wrapper {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.2s ease transform;
+    transform: translateY(0);
   }
-  position: relative;
 
-  &:before {
-    background-color: $white;
-    border-radius: 0 0 5px 5px;
-    content: "";
-    height: 0;
-    display: block;
-    position: absolute;
-    transition: all 0.2s ease;
+  .news-card-image {
+    background-color: #eee;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    height: 180px;
     width: 100%;
   }
-}
 
-.news-card-category {
-  color: $color-secondary;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0 auto 5px;
-  padding-top: 15px;
-  position: relative;
-  text-align: center;
-  width: 90%;
+  .news-card-content {
+    padding-bottom: 30px;
+    position: relative;
 
-  html.flexbox & {
-    display: flex;
-
-    &:before,
-    &:after{
-      border-bottom: 1px solid $gray204;
+    &:before {
+      background-color: $white;
+      border-radius: 0 0 5px 5px;
       content: "";
+      height: 0;
+      display: block;
+      position: absolute;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+  }
+
+  .news-card-category {
+    color: $color-secondary;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 auto 5px;
+    padding-top: 15px;
+    position: relative;
+    text-align: center;
+    width: 90%;
+
+    html.flexbox & {
       display: flex;
-      flex-grow: 1;
-      transform: translateY(-50%);
+
+      &:before,
+      &:after{
+        border-bottom: 1px solid $gray204;
+        content: "";
+        display: flex;
+        flex-grow: 1;
+        transform: translateY(-50%);
+      }
+
+      > span {padding: 0 15px;}
+    }
+  }
+
+  .news-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 310px;
+    position: relative;
+  }
+
+  .news-card-counters {
+    opacity: 0;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    transform: scaleY(0);
+    transition: .15s ease all;
+    width: 100%;
+  }
+
+  .news-card-counter {
+    border-radius: 5px 0 0 5px;
+    display: inline-block;
+    background: $color-primary;
+    color: $white;
+    padding: 5px 10px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 18px;
+    transition: opacity ease .3s;
+
+    & + .news-card-counter {
+      border-left: 1px solid $color-primary-variant;
+      border-radius: 0 5px 5px 0;
     }
 
-    > span {padding: 0 15px;}
-  }
-}
-
-.news-card-title {
-  font-size: 17px;
-  font-weight: 700;
-  margin: 0 auto;
-  max-width: 310px;
-  position: relative;
-}
-
-.news-card-counters {
-  opacity: 0;
-  margin: 0 auto;
-  position: absolute;
-  bottom: -20px;
-  transform: scaleY(0);
-  transition: .15s ease all;
-  width: 100%;
-}
-
-.news-card-counter {
-  border-radius: 5px 0 0 5px;
-  display: inline-block;
-  background: $color-primary;
-  color: $white;
-  padding: 5px 10px;
-  height: 40px;
-  line-height: 30px;
-  font-size: 18px;
-  transition: opacity ease .3s;
-
-  & + .news-card-counter {
-    border-left: 1px solid $color-primary-variant;
-    border-radius: 0 5px 5px 0;
+    .counter-value {
+      font-weight: 700;
+    }
+    .icon {
+      padding-right: 7px;
+    }
   }
 
-  .counter-value {
-    font-weight: 700;
-  }
-  .icon {
-    padding-right: 7px;
-  }
+
 }

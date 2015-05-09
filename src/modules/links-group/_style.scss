@@ -5,6 +5,9 @@
 
   // modifiers
   &.white-buttons {
+    .links-group-item {
+      background-color: $white;
+    }
   }
 
   @include small {
@@ -104,10 +107,7 @@
 
     // modifiers
     &.white-buttons {
-      .links-group-item {
-        background-color: $white;
-        &:hover {background-color: $gray153;}
-      }
+      .links-group-item:hover {background-color: $gray153;}
     }
 
     &.blue {

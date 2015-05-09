@@ -5,9 +5,10 @@ include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/button-top/button-top
 include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/news-list/news-list
@@ -18,7 +19,7 @@ include ../../modules/search-push/search-push
 include ../../modules/video-cover/video-cover
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content
@@ -62,7 +63,7 @@ append content
 append content
   .layout-right-col
     .layout-wrapper
-      .layout-content
+      .layout-content.hidden-on-small
         +heading(data.gallery.heading)
         +gallery-ugc(data.gallery.gallery_ugc)
       aside.layout-aside.color-secondary-background
@@ -74,3 +75,6 @@ append content
 append content
   .layout-content.layout-adjacent-before
     +footer(data.footer)
+
+append content
+  +button-top
