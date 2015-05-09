@@ -1,18 +1,29 @@
 .layout-half-col {
-  overflow: hidden;
   width: 100%;
 
-  > .layout-wrapper {
-    @include container;
-  }
-
   .layout-content {
-    @include span(8);
     padding: 40px 0;
   }
+}
 
-  .layout-content:last-child {
-    @include span(7 last);
+
+@include large-and-medium {
+
+  .layout-half-col {
+    overflow: hidden;
+
+    > .layout-wrapper {
+      @include container;
+    }
+
+    .layout-content {
+      @include span(8);
+    }
+
+    .layout-content:last-child {
+      @include span(7 last);
+    }
+
   }
 
 }

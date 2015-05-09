@@ -63,6 +63,10 @@
       }
     }
     @include small {
+      &.full-width-on-small {
+        padding-left: 0;
+        padding-right: 0;
+      }
       .heading .heading-title {
         left: -30px;
         position: relative;

@@ -1,11 +1,10 @@
-@include large-and-medium {
+.news-card {
+  color: $black;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 
-  .news-card {
-    color: $black;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-
+  html.no-touch & {
     &:hover {
       color: $white;
 
@@ -38,7 +37,132 @@
         transition-delay: 0.3s;
       }
     }
+  }
 
+  @include small {
+    & + .news-card {margin-top: 30px;}
+  }
+}
+
+.news-card-wrapper {
+  html.touch &    {margin-bottom: 20px;}
+  html.no-touch & {margin-bottom: 10px;}
+  border-radius: 5px;
+  transition: 0.2s ease transform;
+  transform: translateY(0);
+
+  html.touch & {
+    background-color: $gray242;
+    border-radius: 0 0 5px 5px;
+  }
+  html.touch .gray-background & {
+    background-color: $white;
+  }
+}
+
+.news-card-image {
+  background-color: #eee;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  height: 180px;
+  width: 100%;
+}
+
+.news-card-content {
+  html.touch &    {padding-bottom: 20px;}
+  html.no-touch & {padding-bottom: 30px;}
+  position: relative;
+
+  &:before {
+    background-color: $white;
+    border-radius: 0 0 5px 5px;
+    content: "";
+    height: 0;
+    display: block;
+    position: absolute;
+    transition: all 0.2s ease;
+    width: 100%;
+  }
+}
+
+.news-card-category {
+  color: $color-secondary;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 auto 5px;
+  padding-top: 15px;
+  position: relative;
+  text-align: center;
+  width: 90%;
+
+  html.flexbox & {
+    display: flex;
+
+    &:before,
+    &:after{
+      border-bottom: 1px solid $gray204;
+      content: "";
+      display: flex;
+      flex-grow: 1;
+      transform: translateY(-50%);
+    }
+
+    > span {padding: 0 15px;}
+  }
+}
+
+.news-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 auto;
+  max-width: 310px;
+  position: relative;
+}
+
+.news-card-counters {display: none;}
+
+html.no-touch {
+  .news-card-counters {
+    display: block;
+    opacity: 0;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -20px;
+    transform: scaleY(0);
+    transition: .15s ease all;
+    width: 100%;
+  }
+
+  .news-card-counter {
+    border-radius: 5px 0 0 5px;
+    display: inline-block;
+    background: $color-primary;
+    color: $white;
+    padding: 5px 10px;
+    height: 40px;
+    line-height: 30px;
+    font-size: 18px;
+    transition: opacity ease .3s;
+
+    & + .news-card-counter {
+      border-left: 1px solid $color-primary-variant;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .counter-value {
+      font-weight: 700;
+    }
+    .icon {
+      padding-right: 7px;
+    }
+  }
+}
+
+@include large-and-medium {
+
+  .news-card {
     // modifiers
     &.large {
       .news-card-wrapper {
@@ -51,7 +175,7 @@
         transform: none;
       }
 
-      &:hover {
+      html.no-touch &:hover {
         .news-card-wrapper {
           transform: none;
         }
@@ -106,7 +230,9 @@
         transform: translateY(0);
         transition: 0.3s ease transform;
         z-index: 1;
-        &:before {background: none;}
+        html.no-touch & {
+          &:before {background: none;}
+        }
       }
 
       .news-card-category {
@@ -117,16 +243,14 @@
         margin: 0 0 5px;
         text-align: left;
 
-        html.flexbox & {
-          display: block;
+        display: block;
 
-          &:before,
-          &:after{
-            display: none;
-          }
-
-          > span {padding: 0;}
+        &:before,
+        &:after {
+          display: none;
         }
+
+        > span {padding: 0;}
       }
 
       .news-card-title {
@@ -149,109 +273,6 @@
         padding: 0 20px 0 0;
       }
     }
-
   }
-
-  .news-card-wrapper {
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: 0.2s ease transform;
-    transform: translateY(0);
-  }
-
-  .news-card-image {
-    background-color: #eee;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 5px;
-    height: 180px;
-    width: 100%;
-  }
-
-  .news-card-content {
-    padding-bottom: 30px;
-    position: relative;
-
-    &:before {
-      background-color: $white;
-      border-radius: 0 0 5px 5px;
-      content: "";
-      height: 0;
-      display: block;
-      position: absolute;
-      transition: all 0.2s ease;
-      width: 100%;
-    }
-  }
-
-  .news-card-category {
-    color: $color-secondary;
-    font-size: 14px;
-    font-weight: 500;
-    margin: 0 auto 5px;
-    padding-top: 15px;
-    position: relative;
-    text-align: center;
-    width: 90%;
-
-    html.flexbox & {
-      display: flex;
-
-      &:before,
-      &:after{
-        border-bottom: 1px solid $gray204;
-        content: "";
-        display: flex;
-        flex-grow: 1;
-        transform: translateY(-50%);
-      }
-
-      > span {padding: 0 15px;}
-    }
-  }
-
-  .news-card-title {
-    font-size: 17px;
-    font-weight: 700;
-    margin: 0 auto;
-    max-width: 310px;
-    position: relative;
-  }
-
-  .news-card-counters {
-    opacity: 0;
-    margin: 0 auto;
-    position: absolute;
-    bottom: -20px;
-    transform: scaleY(0);
-    transition: .15s ease all;
-    width: 100%;
-  }
-
-  .news-card-counter {
-    border-radius: 5px 0 0 5px;
-    display: inline-block;
-    background: $color-primary;
-    color: $white;
-    padding: 5px 10px;
-    height: 40px;
-    line-height: 30px;
-    font-size: 18px;
-    transition: opacity ease .3s;
-
-    & + .news-card-counter {
-      border-left: 1px solid $color-primary-variant;
-      border-radius: 0 5px 5px 0;
-    }
-
-    .counter-value {
-      font-weight: 700;
-    }
-    .icon {
-      padding-right: 7px;
-    }
-  }
-
 
 }
