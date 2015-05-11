@@ -33,3 +33,10 @@
   }
 }
 
+@include small {
+  .block-content-social {
+    .block-content-count{
+      font-size: 20px;
+    }
+  }
+}

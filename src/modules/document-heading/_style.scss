@@ -41,6 +41,10 @@
     border-bottom: 1px solid $gray204;
     overflow: hidden;
     padding: 25px 20px 25px 0;
+
+    @include medium-and-small {
+      padding-left: 25px;
+    }
   }
 
   .document-heading-title {

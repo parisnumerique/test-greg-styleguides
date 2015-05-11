@@ -52,3 +52,16 @@
   }
 
 }
+
+@include small {
+  .layout-half-col {
+    .block-content {
+      padding-bottom: 30px;
+    }
+
+    .block-content-title {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}

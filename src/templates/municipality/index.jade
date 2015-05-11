@@ -7,14 +7,14 @@ include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/links-group/links-group
 include ../../modules/search-push/search-push
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content

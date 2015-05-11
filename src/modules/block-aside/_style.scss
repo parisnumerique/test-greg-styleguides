@@ -33,3 +33,9 @@
     margin-top: 10px;
   }
 }
+
+@include small {
+  .block-aside-title:first-child {
+    margin-top: 0;
+  }
+}
