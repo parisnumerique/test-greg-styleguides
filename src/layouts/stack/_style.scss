@@ -23,6 +23,11 @@
     & + .layout-adjacent-before {
       padding-top: 0;
     }
+    @include small {
+      & + .layout-adjacent-before-on-small {
+        padding-top: 0;
+      }
+    }
 
     &.layout-adjacent-after {
       padding-bottom: 0;

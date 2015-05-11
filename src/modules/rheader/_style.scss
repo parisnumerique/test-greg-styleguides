@@ -1,14 +1,17 @@
-$rheader-small-max: 600px;
+$rheader-small-max:  600px;
 $rheader-medium-min: $rheader-small-max + 1px;
 $rheader-medium-max: 1160px;
-$rheader-large-min: $rheader-medium-max + 1px;
-$rheader-large-max: 1370px;
+$rheader-large-min:  $rheader-medium-max + 1px;
+$rheader-large-max:  1370px;
 
-$rheader-height: 60px;
+$rheader-height-small:  60px;
+$rheader-height-medium: 80px;
+$rheader-height-large:  80px;
+
 
 .rheader {
   background-color: $color-primary;
-  height: $rheader-height;
+  height: $rheader-height-small;
   left: 0;
   position: fixed;
   top: 0;
@@ -32,7 +35,7 @@ $rheader-height: 60px;
   background-color: $color-primary;
   border-bottom: 4px solid $color-tertiary;
   display: block;
-  height: $rheader-height;
+  height: $rheader-height-small;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -86,13 +89,13 @@ $rheader-height: 60px;
 
 .rheader-wrapper {
   > .rheader-button {
-    height: $rheader-height;
-    line-height: $rheader-height;
+    height: $rheader-height-small;
+    line-height: $rheader-height-small;
     position: absolute;
     text-align: center;
     top: 0;
     transition: background-color 0.3s ease;
-    width: $rheader-height;
+    width: $rheader-height-small;
 
     &:hover,
     &.active {
@@ -268,7 +271,7 @@ $rheader-height: 60px;
 
     .rheader-locales {
       display: block;
-      line-height: $rheader-height;
+      line-height: $rheader-height-small;
       margin-left: 20px;
       text-align: left;
 
@@ -281,7 +284,7 @@ $rheader-height: 60px;
       overflow: auto;
       padding: 0;
       position: absolute;
-      top: $rheader-height;
+      top: $rheader-height-small;
       width: 100%;
     }
     .rheader-nav-item {
@@ -330,11 +333,9 @@ $rheader-height: 60px;
 
 
 @media (min-width: $rheader-medium-min) and (max-width: $rheader-medium-max) {
-  $rheader-height: 80px;
-
   .rheader,
   .rheader-logo {
-    height: $rheader-height;
+    height: $rheader-height-medium;
   }
 
   .rheader-logo {
@@ -345,9 +346,9 @@ $rheader-height: 60px;
 
   .rheader-wrapper {
     > .rheader-button {
-      height: $rheader-height;
-      line-height: $rheader-height;
-      width: $rheader-height + 1px;
+      height: $rheader-height-medium;
+      line-height: $rheader-height-medium;
+      width: $rheader-height-medium + 1px;
     }
   }
   .rheader-button-search {
@@ -358,8 +359,8 @@ $rheader-height: 60px;
     transition: border 0.2s;
 
     .rheader-button-text {
-      left: ($rheader-height - 20px) / 2;
-      top: $rheader-height / 2;
+      left: ($rheader-height-medium - 20px) / 2;
+      top: $rheader-height-medium / 2;
     }
   }
 
@@ -368,17 +369,15 @@ $rheader-height: 60px;
   }
 
   .rheader-mobile-nav {
-    .rheader-nav {top: $rheader-height;}
+    .rheader-nav {top: $rheader-height-medium;}
     .rheader-locales {
-      line-height: $rheader-height;
-      margin-right: $rheader-height + 10px;
+      line-height: $rheader-height-medium;
+      margin-right: $rheader-height-medium + 10px;
     }
   }
 }
 
 @media (min-width: $rheader-large-min) {
-  $rheader-height: 80px;
-
   .rheader {
     text-align: right;
   }
@@ -386,7 +385,7 @@ $rheader-height: 60px;
   .rheader,
   .rheader-logo,
   .rheader-nav-item {
-    height: $rheader-height;
+    height: $rheader-height-large;
   }
 
   .rheader-logo {
@@ -416,11 +415,11 @@ $rheader-height: 60px;
       border-left: 1px solid $red4;
       display: inline-block;
       font-size: 26px;
-      height: $rheader-height;
-      line-height: $rheader-height;
+      height: $rheader-height-large;
+      line-height: $rheader-height-large;
       position: static;
       vertical-align: top;
-      width: $rheader-height + 1px;
+      width: $rheader-height-large + 1px;
 
       .rheader-button-icon {font-size: 28px;}
     }
@@ -445,8 +444,8 @@ $rheader-height: 60px;
 
     a {
       display: inline-block;
-      height: $rheader-height;
-      line-height: $rheader-height;
+      height: $rheader-height-large;
+      line-height: $rheader-height-large;
     }
 
     // modifiers
@@ -578,4 +577,16 @@ $rheader-height: 60px;
     }
   }
 
+}
+
+
+// Spacing for elements below the rheader
+
+.rheader + .layout-content .hub-heading,
+.rheader + .layout-content .jumbotron,
+.rheader + .layout-content .quick-access {margin-top: $rheader-height-small;}
+@media (min-width: $rheader-medium-min) {
+  .rheader + .layout-content .hub-heading,
+  .rheader + .layout-content .jumbotron,
+  .rheader + .layout-content .quick-access { margin-top: $rheader-height-medium; }
 }
