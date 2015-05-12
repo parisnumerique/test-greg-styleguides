@@ -124,7 +124,6 @@ Paris.listPersons = (function(){
         // Search with results
         $.each(data.hits, function(index, hit){
           var modifiers = [];
-          var anchors = [];
 
           var person_block_data = {
             "href": hit[options.fields.link],
