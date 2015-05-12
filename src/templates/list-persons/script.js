@@ -20,8 +20,9 @@ Paris.listPersons = (function(){
       group: 'groupe_politique' // the field to use in the person-block text
     },
     resultsPerPage: 8, // the number of results to display per page
-    facets: ["groupe_politique", "secteur"] // the available facets that will be displayed in the left column (should have been created on Algolia)
+    facets: ["groupe_politique", "secteur"], // the available facets that will be displayed in the left column (should have been created on Algolia)
                        // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
+    addFacetFilter: null // the facetFilter you want to always add by default (useful for filtering results)
   };
 
   function listPersons(selector, userOptions){
@@ -92,6 +93,7 @@ Paris.listPersons = (function(){
 
         // Explicitly request necessary facets (as defined in options)
         facets: options.facets.join(','),
+        facetFilters: [],
 
         // Explicitly request necessary attributes (as defined in options)
         attributesToRetrieve: values(options.fields).join(',')
@@ -100,6 +102,11 @@ Paris.listPersons = (function(){
       // If some facets filters are active, add them to the request
       if (currentFacets.length !== 0) {
         params.facetFilters = currentFacets;
+      }
+
+      // Add mandatory facet filters
+      if (options.addFacetFilter !== null) {
+        params.facetFilters.push(options.addFacetFilter);
       }
 
       // Launch the search

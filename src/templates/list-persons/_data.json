@@ -1,8 +1,385 @@
 {
   "index": {
     "data": {
+      "title": "Vos élus",
+      "bodyModifiers": ["fixed-nav", "list-persons"],
+      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+      "header": {
+        "home": "../home",
+        "title": "Paris",
+        "languages": [
+          {"abbr": "fr", "href": "/fr"},
+          {"abbr": "en", "href": "/en"},
+          {"abbr": "es", "href": "/es"}
+        ],
+        "active_language": "fr",
+        "search": {"visible": true},
+        "marker": {"visible": true},
+        "items": [
+          {"href": "../hub/", "text": "Services et infos pratiques"},
+          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality", "text": "Municipalité"}
+        ],
+        "participate" : {
+          "visible": true,
+          "href": "../subhome-get-involved",
+          "front": "Participez !",
+          "back": "C'est à vous !"
+        },
+        "account" : {
+          "visible": true,
+          "href": "#",
+          "text": "Mon compte"
+        },
+        "quick_access": {
+          "search": {
+            "input": {
+              "placeholder": "Rechercher un service, une information..."
+            },
+            "submit": {
+              "text": "Rechercher",
+              "icon": true
+            },
+            "around": {
+              "text": "Autour de moi"
+            }
+          },
+          "results": {
+            "button": {
+              "href": "#",
+              "text": "Voir tous les résultats"
+            }
+          }
+        }
+      },
+      "heading": {
+        "image": "heading.jpg",
+        "text": "Vos élus",
+        "icons" : [
+          {
+            "name": "favorites",
+            "url": "#"
+          }
+        ]
+      },
+      "breadcrumbs": {
+        "items": [
+          {
+            "href": "../home",
+            "text": "Accueil"
+          },
+          {
+            "href": "../subhome-municipality",
+            "text": "Municipalité"
+          },
+          {
+            "text": "Vos élus"
+          }
+        ]
+      },
+      "aside": {
+        "share": {
+          "modifiers": ["circles"],
+          "items": [
+            {
+              "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
+              "icon": "facebook",
+              "title": "Partager sur Facebook"
+            },
+            {
+              "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
+              "icon": "twitter",
+              "title": "Partager sur Twitter"
+            },
+            {
+              "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
+              "icon": "mail",
+              "title": "Partager par courriel"
+            }
+          ]
+        },
+        "search": {
+          "action": "#",
+          "modifiers": ["small"],
+          "input": {
+            "id": "search-person",
+            "placeholder": "Rechercher un nom..."
+          },
+          "submit": {
+            "text": "Ok"
+          }
+        },
+        "politique": {
+          "title": "Groupe politique",
+          "name": "groupe_politique",
+          "items": [
+            {
+              "value": "Socialiste, radical de Gauche et Apparentés",
+              "text": "Socialiste, radical de Gauche et Apparentés (76)"
+            },
+            {
+              "value": "UMPPA",
+              "text": "UMPPA (57)"
+            },
+            {
+              "value": "Centre et Indépendants",
+              "text": "Centre et Indépendants (9)"
+            },
+            {
+              "value": "Les Verts",
+              "text": "Les Verts (9)"
+            },
+            {
+              "value": "Communiste",
+              "text": "Communiste (8)"
+            },
+            {
+              "value": "Mouvement Républicain et Citoyen",
+              "text": "Mouvement Républicain et Citoyen (5)"
+            },
+            {
+              "value": "Non-inscrit(e)",
+              "text": "Non-inscrit(e) (4)"
+            }
+          ]
+        },
+        "arrondissement": {
+          "title": "Arrondissement",
+          "name": "secteur",
+          "modifiers": ["two_cols"],
+          "items": [
+            {"value": "1er arrondissement", "text": "1er"},
+            {"value": "2ème arrondissement", "text": "2ème"},
+            {"value": "3ème arrondissement", "text": "3ème"},
+            {"value": "4ème arrondissement", "text": "4ème"},
+            {"value": "5ème arrondissement", "text": "5ème"},
+            {"value": "6ème arrondissement", "text": "6ème"},
+            {"value": "7ème arrondissement", "text": "7ème"},
+            {"value": "8ème arrondissement", "text": "8ème"},
+            {"value": "9ème arrondissement", "text": "9ème"},
+            {"value": "10ème arrondissement", "text": "10ème"},
+            {"value": "11ème arrondissement", "text": "11ème"},
+            {"value": "12ème arrondissement", "text": "12ème"},
+            {"value": "13ème arrondissement", "text": "13ème"},
+            {"value": "14ème arrondissement", "text": "14ème"},
+            {"value": "15ème arrondissement", "text": "15ème"},
+            {"value": "16ème arrondissement", "text": "16ème"},
+            {"value": "17ème arrondissement", "text": "17ème"},
+            {"value": "18ème arrondissement", "text": "18ème"},
+            {"value": "19ème arrondissement", "text": "19ème"},
+            {"value": "20ème arrondissement", "text": "20ème"}
+          ]
+        }
+      },
+      "results": [
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/portrait.jpg",
+            "title": "Bruno Julliard",
+            "text": "Premier adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
+            "title": "Julien Bargeton",
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
+            "title": "Célia Blauel",
+            "text": "Adjoint, Groupe Ecologiste de Paris (G.E.P)",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
+            "title": "Hélène Bidard",
+            "text": "Adjoint, Groupe communiste et front de gauche",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
+            "title": "Ian Brossat",
+            "text": "Adjoint, Groupe communiste et front de gauche",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
+            "title": "Colombe Brossel",
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
+            "title": "Alexandra Cordebard",
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        },
+        {
+          "type": "person-block",
+          "data": {
+            "href": "#",
+            "image": "../../modules/person-block/default.png",
+            "title": "Alexandra Cordebard",
+            "text": "Adjoint, Groupe socialiste et apparentés",
+            "button": {
+              "text": "Voir la fiche"
+            }
+          }
+        }
+      ],
+      "pagination": {
+        "text": {
+          "prev": "Page précédente",
+          "next": "Page suivante"
+        },
+        "url": "#page-${page}",
+        "current": 1,
+        "total": 10
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "form": {
+            "action": "#",
+            "method": "POST"
+          },
+          "input": {
+            "placeholder": "Entrez votre courriel",
+            "id": "connected-newsletter-input"
+          },
+          "submit": {
+            "text": "Valider"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "link": {
+                "href": "#",
+                "text": "Twitter"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "link": {
+                "href": "#",
+                "text": "Facebook"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "link": {
+                "href": "#",
+                "text": "Instagram"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "modifiers": ["strong"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  },
+  "adjoints": {
+    "data": {
       "title": "Adjoints à la Maire",
       "bodyModifiers": ["fixed-nav", "list-persons"],
+      "bodyAttributes": {"data-add-facet-filter": "mandat:Adjoint au Maire"},
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "header": {
         "home": "../home",
@@ -74,7 +451,7 @@
             "text": "Municipalité"
           },
           {
-            "href": "../municipality",
+            "href": "../list-persons",
             "text": "Vos élus"
           },
           {
