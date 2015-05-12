@@ -2,30 +2,100 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 320px;
+  height: 200px;
   overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 0;
 
-  .document-heading-wrapper {
-    position: relative;
-    width: $large-grid-width;
-    margin: 0 auto;
-    height: 100%;
+  // transparent black layer
+  &:before {
+    content: " ";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+}
 
-    .tags {
-      margin: 0;
-      clear: both;
-    }
+.document-heading-wrapper {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+
+  .tags {
+    margin: 0;
+    clear: both;
+  }
+}
+
+.document-heading-content {
+  background: $white;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.document-heading-content-wrapper {
+  border-bottom: 1px solid $gray204;
+  overflow: hidden;
+  padding: 25px 20px 25px 0;
+}
+
+.document-heading-title {
+  color: $gray26;
+  float: left;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0;
+  margin-right: 25px;
+}
+
+.document-heading-icons {
+ float: right;
+ font-size: 24px;
+ line-height: 36px;
+
+ .icon {
+   color: $gray153;
+   margin-right: 15px;
+   text-decoration: none;
+
+   &:hover {
+     color: $color-tertiary;
+   }
+ }
+}
+
+@include small {
+  .document-heading-content {
+    width: 100%;
+  }
+}
+
+
+@include medium-and-small {
+  .document-heading-content-wrapper {
+    padding-left: 25px;
+  }
+}
+
+
+@include large-and-medium {
+
+  .document-heading {
+    height: 320px;
+  }
+
+  .document-heading-wrapper {
+    width: $large-grid-width;
   }
 
   .document-heading-content {
-    background: $white;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-
     // white block on the left
     &:before {
       content: ' ';
@@ -37,56 +107,19 @@
     }
   }
 
-  .document-heading-content-wrapper {
-    border-bottom: 1px solid $gray204;
-    overflow: hidden;
-    padding: 25px 20px 25px 0;
-
-    @include medium-and-small {
-      padding-left: 25px;
-    }
-  }
-
   .document-heading-title {
-    color: $gray26;
-    float: left;
     font-size: 34px;
-    font-weight: 700;
-    margin: 0;
-    margin-right: 25px;
     line-height: 40px;
   }
 
   .document-heading-icons {
     float: left;
-    font-size: 24px;
     line-height: 40px;
   }
 
-  .icon {
-    color: $gray153;
-    margin-right: 15px;
-    text-decoration: none;
+  // Keep space for the header, when the jumbotron is the first element after it
+  //.header-wrapper + .layout-content .document-heading {
+  //  height: 400px;
+  //}
 
-    &:hover {
-      color: $color-tertiary;
-    }
-  }
-
-  // transparent black layer
-  &:before {
-    content: " ";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    background: rgba(0,0,0,0.4);
-    z-index: -1;
-  }
-}
-
-// Keep space for the header, when the jumbotron is the first element after it
-.header-wrapper + .layout-content .document-heading {
-  height: 400px;
 }

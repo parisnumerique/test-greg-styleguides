@@ -582,10 +582,12 @@ $rheader-height-large:  80px;
 
 // Spacing for elements below the rheader
 
+.rheader + .layout-content .document-heading,
 .rheader + .layout-content .hub-heading,
 .rheader + .layout-content .jumbotron,
 .rheader + .layout-content .quick-access {margin-top: $rheader-height-small;}
 @media (min-width: $rheader-medium-min) {
+  .rheader + .layout-content .document-heading,
   .rheader + .layout-content .hub-heading,
   .rheader + .layout-content .jumbotron,
   .rheader + .layout-content .quick-access { margin-top: $rheader-height-medium; }

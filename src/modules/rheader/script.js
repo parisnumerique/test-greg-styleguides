@@ -104,8 +104,10 @@ Paris.rheader = (function(){
       $nav.remove();
       $el.removeClass('rheader-mobile-nav-open');
 
-      $overlay.remove();
-      $overlay = null;
+      if ($overlay) {
+        $overlay.remove();
+        $overlay = null;
+      }
     }
 
     init();
