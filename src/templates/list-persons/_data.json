@@ -497,31 +497,11 @@
           "items": [
             {
               "value": "Socialiste, radical de Gauche et Apparentés",
-              "text": "Socialiste, radical de Gauche et Apparentés (76)"
-            },
-            {
-              "value": "UMPPA",
-              "text": "UMPPA (57)"
-            },
-            {
-              "value": "Centre et Indépendants",
-              "text": "Centre et Indépendants (9)"
-            },
-            {
-              "value": "Les Verts",
-              "text": "Les Verts (9)"
+              "text": "Socialiste, radical de Gauche et Apparentés (4)"
             },
             {
               "value": "Communiste",
-              "text": "Communiste (8)"
-            },
-            {
-              "value": "Mouvement Républicain et Citoyen",
-              "text": "Mouvement Républicain et Citoyen (5)"
-            },
-            {
-              "value": "Non-inscrit(e)",
-              "text": "Non-inscrit(e) (4)"
+              "text": "Communiste (2)"
             }
           ]
         },
@@ -530,22 +510,8 @@
           "name": "secteur",
           "modifiers": ["two_cols"],
           "items": [
-            {"value": "1er arrondissement", "text": "1er"},
-            {"value": "2ème arrondissement", "text": "2ème"},
-            {"value": "3ème arrondissement", "text": "3ème"},
-            {"value": "4ème arrondissement", "text": "4ème"},
-            {"value": "5ème arrondissement", "text": "5ème"},
-            {"value": "6ème arrondissement", "text": "6ème"},
-            {"value": "7ème arrondissement", "text": "7ème"},
-            {"value": "8ème arrondissement", "text": "8ème"},
-            {"value": "9ème arrondissement", "text": "9ème"},
-            {"value": "10ème arrondissement", "text": "10ème"},
             {"value": "11ème arrondissement", "text": "11ème"},
-            {"value": "12ème arrondissement", "text": "12ème"},
             {"value": "13ème arrondissement", "text": "13ème"},
-            {"value": "14ème arrondissement", "text": "14ème"},
-            {"value": "15ème arrondissement", "text": "15ème"},
-            {"value": "16ème arrondissement", "text": "16ème"},
             {"value": "17ème arrondissement", "text": "17ème"},
             {"value": "18ème arrondissement", "text": "18ème"},
             {"value": "19ème arrondissement", "text": "19ème"},
