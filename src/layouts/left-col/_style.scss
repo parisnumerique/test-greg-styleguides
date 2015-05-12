@@ -62,30 +62,6 @@
         }
       }
 
-      .aside-title {
-        text-align: left;
-        transform: translateY(-200px);
-        height: 80px;
-        display: table;
-        margin-top: 0;
-        transition: .3s ease transform;
-        position: absolute;
-        left: -32px;
-        padding-left: 10px;
-        border-left: 6px solid $color-tertiary;
-        top: 0;
-
-        span {
-          display: table-cell;
-          vertical-align: middle;
-        }
-      }
-
-      .aside-wrapper.affix .aside-title,
-      .aside-wrapper.affix-bottom .aside-title {
-        transform: none;
-      }
-
       &:before {
         background-color: $gray242;
         bottom: 0;

@@ -4,54 +4,50 @@
       "title": "Demander un logement",
       "bodyModifiers": ["fixed-nav"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
-        ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
-        "items": [
-          {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités"},
-          {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
         },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        },
-        "quick_access": {
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
+        ],
+        "buttons": {
           "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
           },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
           }
-        }
+        },
+        "items": [
+          {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
+          {"href": "../subhome-news/", "text": "Actualités"},
+          {"href": "#", "text": "Entreprises"},
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ]
       },
       "heading": {
         "image": "../../modules/document-heading/document-heading.png",
@@ -96,6 +92,7 @@
             "data-anchors-favoritable": "true",
             "data-anchors-shareable": "true"
           },
+          "title": "Sommaire",
           "items": [
             {"href": "#est-ce-que-j-y-ai-droit", "text": "Est-ce que j’y ai droit ?"},
             {"href": "#constituer-un-dossier", "text": "Constituer un dossier"},
@@ -185,7 +182,9 @@
         {
           "type": "table",
           "data": {
-            "block": "<tbody><tr><th>Combien de personnes à loger ?</th><th>Logement A</th><th>Logement B</th><th>Logement C</th><th>Logement D</th></tr><tr><td>1 personne</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td></tr><tr><td>2 personnes sans personne à charge / jeunes ménages exclus</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td></tr><tr><td>3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage*</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td></tr><tr><td>4 personnes ou 1 personne seule avec 2 personnes à charge</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td></tr><tr><td>5 personnes ou 1 personne seule avec 3 personnes à charge</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td></tr><tr><td>6 personnes ou 1 personne seule avec 4 personnes à charge</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td></tr><tr><td>par personne supplémentaire</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td><td>12 662 €</td></tr></tbody><caption>* jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.</caption>"
+            "summary": "Sommaire du tableau (pour l'accessibilité)",
+            "caption": "Légende du tableau (pour l'accessibilité)",
+            "block": "<tbody><tr><th class=\"emphasis\">Combien de personnes à loger ?</th><th>Logement A</th><th>Logement B</th><th>Logement C</th><th>Logement D</th></tr><tr><td class=\"emphasis\">1 personne</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">2 personnes sans personne à charge / jeunes ménages exclus</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage*</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">4 personnes ou 1 personne seule avec 2 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">5 personnes ou 1 personne seule avec 3 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">6 personnes ou 1 personne seule avec 4 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr class=\"info\"><td class=\"emphasis\">par personne supplémentaire</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr></tbody><tfoot><tr><td colspan=\"5\">* jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.</td></tr></tfoot>"
           }
         },
         {
