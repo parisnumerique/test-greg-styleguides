@@ -221,7 +221,8 @@
         "link": {
           "href": "#",
           "text": "Autres newsletters et alertes"
-        }
+        },
+        "thanks": "Merci, vous allez recevoir un courriel de confirmation."
       },
       "archive": {
         "heading": {
@@ -450,7 +451,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -458,7 +460,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
@@ -929,7 +932,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -937,7 +941,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
@@ -1411,7 +1416,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -1419,7 +1425,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
