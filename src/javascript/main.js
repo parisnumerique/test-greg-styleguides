@@ -2,6 +2,7 @@
 require('./externals/bootstrap');
 
 // load our librairies
+require('./lib/events');
 require('./lib/i18n');
 require('./lib/requestanimationframe');
 require('./lib/scroll');
