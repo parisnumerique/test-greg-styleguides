@@ -1,7 +1,7 @@
 {
   "index": {
     "defaults": {
-      "title": "@parisjecoute",
+      "title": "Paris j'écoute",
       "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
       "form": {
         "action": "#",
@@ -18,7 +18,7 @@
       "thanks": "Merci, votre question a bien été transmise."
     },
     "values": {
-      "title": "@parisjecoute",
+      "title": "Paris j'écoute",
       "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
       "form": {
         "action": "#",
