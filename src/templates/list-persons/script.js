@@ -5,6 +5,7 @@ var jade = require('jade');
 var values = require('lodash.values');
 var map = require('lodash.map');
 var sortBy = require('lodash.sortby');
+var algoliasearch = require('algoliasearch');
 
 var Paris = window.Paris || {};
 
@@ -41,7 +42,7 @@ Paris.listPersons = (function(){
     function init(){
       initOptions();
 
-      algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $searchFieldInput = $el.find('#search-person');
@@ -110,10 +111,11 @@ Paris.listPersons = (function(){
       }
 
       // Launch the search
-      index.search(query, onSearchResults, params);
+      index.search(query, params, onSearchResults);
     }
 
-    function onSearchResults(success, data) {
+    function onSearchResults(err, data) {
+      if (err) {return;}
       renderResults(data);
       renderFacets(data);
     }

@@ -23,7 +23,8 @@
     "lodash.foreach": "~3.0.3",
     "lodash.defer": "~3.1.0",
     "lodash.sortby": "~3.1.1",
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "algoliasearch": "~3.3.2"
   },
   "devDependencies": {
     "browserify": "^9.0.3",
