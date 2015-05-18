@@ -15,8 +15,9 @@ html(lang="fr")
 
     script(src="/javascript/modernizr.custom.js")
   - data = data || {}
-  - data.bodyModifiers = data.bodyModifiers || []
-  body(class=data.bodyModifiers)
+  - bodyModifiers = data.bodyModifiers || []
+  - bodyAttributes = data.bodyAttributes || {}
+  body(class=bodyModifiers)&attributes(bodyAttributes)
     if data.notice_old_browsers
       <!--[if lt IE 9]>
       div.notice.notice-browser!= data.notice_old_browsers

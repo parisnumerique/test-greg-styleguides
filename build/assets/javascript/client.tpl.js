@@ -381,14 +381,14 @@
                                     if ("number" == typeof $obj.length) {
                                         for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     } else {
                                         var $l = 0;
                                         for (var $index in $obj) {
                                             $l++;
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     }
                                 }).call(this);
@@ -412,14 +412,14 @@
                                     if ("number" == typeof $obj.length) {
                                         for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     } else {
                                         var $l = 0;
                                         for (var $index in $obj) {
                                             $l++;
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     }
                                 }).call(this);
