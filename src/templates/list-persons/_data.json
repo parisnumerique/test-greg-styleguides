@@ -294,7 +294,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -302,7 +303,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
@@ -322,7 +324,8 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "Twitter"
+                "text": "Twitter",
+                "target": "_blank"
               }
             },
             {
@@ -330,7 +333,8 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Facebook"
+                "text": "Facebook",
+                "target": "_blank"
               }
             },
             {
@@ -338,7 +342,8 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "Instagram"
+                "text": "Instagram",
+                "target": "_blank"
               }
             },
             {
@@ -346,7 +351,8 @@
               "count": "5 442",
               "link": {
                 "href": "#",
-                "text": "Dailymotion"
+                "text": "Dailymotion",
+                "target": "_blank"
               }
             }
           ],
@@ -641,7 +647,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -649,7 +656,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
@@ -669,7 +677,8 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "Twitter"
+                "text": "Twitter",
+                "target": "_blank"
               }
             },
             {
@@ -677,7 +686,8 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Facebook"
+                "text": "Facebook",
+                "target": "_blank"
               }
             },
             {
@@ -685,7 +695,8 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "Instagram"
+                "text": "Instagram",
+                "target": "_blank"
               }
             },
             {
@@ -693,7 +704,8 @@
               "count": "5 442",
               "link": {
                 "href": "#",
-                "text": "Dailymotion"
+                "text": "Dailymotion",
+                "target": "_blank"
               }
             }
           ],
