@@ -1,8 +1,0 @@
-mixin document-heading(opts)
-  .document-heading(style="background-image:url('#{opts.image}')")
-    .inner
-      div
-        h1!= opts.text
-        each icon in opts.icons
-          a.icon(class="icon-#{icon.name}" href="#{icon.url}")
-
