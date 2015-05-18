@@ -13,5 +13,8 @@ Paris.config = {
       global: "recette_ParisFront",
       persons: "dev_Elus"
     }
+  },
+  api: {
+    persons: "http://127.0.0.1:3001/elus/getelus"
   }
 };
