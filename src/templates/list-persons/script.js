@@ -111,7 +111,13 @@ Paris.listPersons = (function(){
       }
 
       // Launch the search
-      index.search(query, params, onSearchResults);
+      if (query === "") {
+        // using the API
+        $.getJSON(Paris.config.api.persons, params, onSearchResults);
+      } else {
+        // using Algolia
+        index.search(query, params, onSearchResults);
+      }
     }
 
     function onSearchResults(err, data) {
