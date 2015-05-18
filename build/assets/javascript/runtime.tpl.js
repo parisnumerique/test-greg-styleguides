@@ -1343,7 +1343,7 @@
     // document-heading.jade:document-heading compiled template
     templatizer["document-heading"]["document-heading"] = function tmpl_document_heading_document_heading(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<div" + jade.attr("style", "background-image:url('" + data.image + "')", true, false) + ' class="document-heading"><div class="document-heading-wrapper"><div class="document-heading-content"><div class="document-heading-content-wrapper"><h1 class="document-heading-title">' + (null == (jade_interp = data.text) ? "" : jade_interp) + "</h1>");
+        buf.push("<div" + jade.attr("style", data.image && "background-image:url('" + data.image + "')", true, false) + ' class="document-heading"><div class="document-heading-wrapper"><div class="document-heading-content"><div class="document-heading-content-wrapper"><h1 class="document-heading-title">' + (null == (jade_interp = data.text) ? "" : jade_interp) + "</h1>");
         if (data.icons) {
             buf.push('<div class="document-heading-icons">');
             (function() {
@@ -3075,14 +3075,14 @@
                                     if ("number" == typeof $obj.length) {
                                         for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     } else {
                                         var $l = 0;
                                         for (var $index in $obj) {
                                             $l++;
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     }
                                 }).call(this);
@@ -3106,14 +3106,14 @@
                                     if ("number" == typeof $obj.length) {
                                         for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     } else {
                                         var $l = 0;
                                         for (var $index in $obj) {
                                             $l++;
                                             var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.label) ? "" : jade_interp) + "</a></li>");
+                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                         }
                                     }
                                 }).call(this);

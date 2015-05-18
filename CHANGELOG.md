@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.10.3 (2015-05-18)
+
+* added `list-persons/adjoints` template with default facet filtering
+* added missing `html` component in `components.jade`
+* component `table`: fixed documentation
+* module `document-heading`: background image is now optional
+* module `search-results-list`: renamed `anchors.label` to `anchors.text` for consistency
+* module `share`: improved documentation
+
 ## 0.10.2 (2015-05-04)
 
 * fix stylesheets paths in wrapper_prod

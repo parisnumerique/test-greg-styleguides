@@ -10,6 +10,7 @@
     "hub/subnav-open.html",
     "hub/content-open.html",
     "list-persons",
+    "list-persons/adjoints.html",
     "municipality",
     "search",
     "search/no-result.html",
