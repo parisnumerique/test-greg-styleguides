@@ -222,7 +222,8 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "Twitter"
+                "text": "Twitter",
+                "target": "_blank"
               }
             },
             {
@@ -230,7 +231,8 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Facebook"
+                "text": "Facebook",
+                "target": "_blank"
               }
             },
             {
@@ -238,7 +240,8 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "Instagram"
+                "text": "Instagram",
+                "target": "_blank"
               }
             },
             {
@@ -246,7 +249,8 @@
               "count": "5 442",
               "link": {
                 "href": "#",
-                "text": "Dailymotion"
+                "text": "Dailymotion",
+                "target": "_blank"
               }
             }
           ],
