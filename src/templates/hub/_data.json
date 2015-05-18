@@ -207,23 +207,6 @@
                 "text": "Autres bibliothèques"
               }
             ]
-          },
-          "buttons": {
-            "title": "Les démarches",
-            "items": [
-              {
-                "href": "#",
-                "text": "Catalogue des bibliothèques de prêt"
-              },
-              {
-                "href": "#",
-                "text": "Facil’ Familles"
-              },
-              {
-                "href": "#",
-                "text": "Catalogue des bibliothèques spécialisées"
-              }
-            ]
           }
         }
       },
@@ -599,23 +582,6 @@
               {
                 "href": "#",
                 "text": "Autres bibliothèques"
-              }
-            ]
-          },
-          "buttons": {
-            "title": "Les démarches",
-            "items": [
-              {
-                "href": "#",
-                "text": "Catalogue des bibliothèques de prêt"
-              },
-              {
-                "href": "#",
-                "text": "Facil’ Familles"
-              },
-              {
-                "href": "#",
-                "text": "Catalogue des bibliothèques spécialisées"
               }
             ]
           }
@@ -1004,23 +970,6 @@
               {
                 "href": "#",
                 "text": "Autres bibliothèques"
-              }
-            ]
-          },
-          "buttons": {
-            "title": "Les démarches",
-            "items": [
-              {
-                "href": "#",
-                "text": "Catalogue des bibliothèques de prêt"
-              },
-              {
-                "href": "#",
-                "text": "Facil’ Familles"
-              },
-              {
-                "href": "#",
-                "text": "Catalogue des bibliothèques spécialisées"
               }
             ]
           }

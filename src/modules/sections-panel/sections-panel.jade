@@ -21,8 +21,10 @@ mixin sections-panel(data)
           +button(more)
       .sections-panel-subnav#sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))
         .sections-panel-subnav-default
-          +block-aside-links(data.default.links)
-          +buttons(data.default.buttons)
+          if data.default.links
+            +block-aside-links(data.default.links)
+          if data.default.buttons
+            +buttons(data.default.buttons)
         each item in data.nav.items
           .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug class=(item.current ? "current" : ""))
             if item.subnav && item.subnav.items.length !== 0
