@@ -15,6 +15,6 @@ Paris.config = {
     }
   },
   api: {
-    persons: "http://127.0.0.1:3001/elus/getelus"
+    persons: "http://r7.paris-fr-api.lestudio.mx/elus/getelus"
   }
 };
