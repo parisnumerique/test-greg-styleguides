@@ -19,7 +19,7 @@ mixin search-results-list(data)
                 ul.search-results-list-anchors
                   each anchor in item.anchors
                     li.search-results-list-anchor
-                      a(href=anchor.href)= anchor.label
+                      a(href=anchor.href)= anchor.text
               if item.text
                 .search-results-list-text= item.text
         if data.more

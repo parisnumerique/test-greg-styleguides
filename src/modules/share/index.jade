@@ -1,22 +1,6 @@
 include share
 include ../../helpers/code
 
-h2 Standard
-.lsg-module
-  +share(defaults)
-+code({language: "jade"}).
-  include share
-
-  +share(#{JSON.stringify(defaults, null, 2)})
-
-h2 Avec cercles
-.lsg-module
-  +share(circles)
-+code({language: "jade"}).
-  include share
-
-  +share(#{JSON.stringify(circles, null, 2)})
-
 p Ce module ouvre automatiquement les liens de partage dans des pop-ups.
 p Les URLs passées dans l'attribut&nbsp;
   code href
@@ -32,3 +16,19 @@ ul
     a(href="https://developers.facebook.com/docs/plugins/share-button" target="_blank") (voir documentation)
   li pour le partage par e-mail :&nbsp;
     code mailto:?subject=[TITLE]&body=[URL]
+
+h2 Standard
+.lsg-module
+  +share(defaults)
++code({language: "jade"}).
+  include share
+
+  +share(#{JSON.stringify(defaults, null, 2)})
+
+h2 Avec cercles
+.lsg-module
+  +share(circles)
++code({language: "jade"}).
+  include share
+
+  +share(#{JSON.stringify(circles, null, 2)})

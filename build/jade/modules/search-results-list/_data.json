@@ -20,27 +20,27 @@
           "anchors": [
             {
               "href": "#",
-              "label": "Est-ce que j’y ai droit ?"
+              "text": "Est-ce que j’y ai droit ?"
             },
             {
               "href": "#",
-              "label": "Constituer un dossier"
+              "text": "Constituer un dossier"
             },
             {
               "href": "#",
-              "label": "Complément : l’aide au logement"
+              "text": "Complément : l’aide au logement"
             },
             {
               "href": "#",
-              "label": "Questions fréquentes"
+              "text": "Questions fréquentes"
             },
             {
               "href": "#",
-              "label": "Consectetur ultricies fermentum vestibulum"
+              "text": "Consectetur ultricies fermentum vestibulum"
             },
             {
               "href": "#",
-              "label": "Venenatis euismod"
+              "text": "Venenatis euismod"
             }
           ]
         },
