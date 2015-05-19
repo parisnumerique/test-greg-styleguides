@@ -503,32 +503,16 @@
           "src": "../../modules/footer/mairie-de-paris.png",
           "alt": "Logo de la Mairie de Paris"
         },
-        "items": [{
-          "href": "#",
-          "text": "Visit Paris",
-          "modifiers": ["footer-link-em"]
-        }, {
-          "href": "#",
-          "text": "FAQ"
-        }, {
-          "href": "#",
-          "text": "Newsletter"
-        }, {
-          "href": "#",
-          "text": "Contact"
-        }, {
-          "href": "#",
-          "text": "Presse"
-        }, {
-          "href": "#",
-          "text": "Mentions légales"
-        }, {
-          "href": "#",
-          "text": "Crédits"
-        }, {
-          "href": "#",
-          "text": "Accessibilité"
-        }]
+        "items": [
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
       }
     }
   }
