@@ -561,7 +561,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
