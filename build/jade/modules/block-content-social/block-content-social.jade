@@ -6,10 +6,10 @@ mixin block-content-social(data)
   +block-content({"title": data.title, "modifiers": modifiers})
     .block-content-items
       each item in data.items
-        a.block-content-item(href=item.link.href)
+        a.block-content-item(href=item.link.href target=item.link.target)
           .block-content-count
             i.block-content-icon(class="icon-#{item.icon}")
             = item.count
           .block-content-link= item.link.text
     if data.link
-      a.block-content-link(href="#{data.link.href}")= data.link.text
+      a.block-content-link(href=data.link.href)= data.link.text

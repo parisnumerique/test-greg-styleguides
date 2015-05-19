@@ -9,5 +9,7 @@ if data.items && data.items.length !== 0
         a(href=item.href)
           .sections-panel-content-item-title= item.title
           .sections-panel-content-item-text= item.text
-+buttons(data.buttons)
-+links(data.more_links)
+if data.buttons
+  +buttons(data.buttons)
+if data.more_links
+  +links(data.more_links)
