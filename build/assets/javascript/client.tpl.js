@@ -171,6 +171,29 @@
         return buf.join("");
     };
 
+    // hub-heading.jade compiled template
+    templatizer["hub-heading"] = function tmpl_hub_heading(locals) {
+        var buf = [];
+        var jade_mixins = {};
+        var jade_interp;
+        return buf.join("");
+    };
+
+    // hub-heading.jade:hub-heading compiled template
+    templatizer["hub-heading"]["hub-heading"] = function tmpl_hub_heading_hub_heading(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<div" + jade.attr("style", "background-image:url('" + data.image + "')", true, false) + jade.cls([ "hub-heading", data.modifiers ], [ null, true ]) + '><div class="hub-heading-wrapper"><div class="hub-heading-content">');
+        if (block) {
+            block && block(buf);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        } else if (data.text) {
+            buf.push("<h1>" + (null == (jade_interp = data.text) ? "" : jade_interp) + "</h1>");
+        }
+        buf.push("</div></div></div>");
+        return buf.join("");
+    };
+
     // pagination.jade compiled template
     templatizer["pagination"] = function tmpl_pagination(locals) {
         var buf = [];

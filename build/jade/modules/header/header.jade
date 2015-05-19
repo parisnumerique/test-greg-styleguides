@@ -25,16 +25,16 @@ mixin header(data)
             span.fixed_display_around_me.icon-marker
         nav.item
           each item in data.items
-            a(href=item.href class=(item.current ? "current" : ""))= item.text
+            a(href=item.href target=item.target class=(item.current ? "current" : ""))= item.text
         .menu.item
           if data.participate.visible
-            a.participate(href=data.participate.href class=(data.participate.current ? "current" : ""))
+            a.participate(href=data.participate.href target=data.participate.target class=(data.participate.current ? "current" : ""))
               span.front
                 span= data.participate.front
               span.back
                 span= data.participate.back
           if data.participate.visible
-            a.display-account(href=data.account.href)
+            a.display-account(href=data.account.href target=data.account.target)
               span.icon.icon-profile
               span.label= data.account.text
     if data.quick_access

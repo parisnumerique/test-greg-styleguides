@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.11.0 (2015-05-19)
+
+* component `jecoute`: replaced title
+* module `block-content-social`: added `target` to data
+* module `block-content-jecoute`: fix button positioning
+* module `block-content-newsletter`: added form handling script
+* module `footer`: added links' `target` to data
+* module `header`: added links' `target` to data
+* module `sections-panel`: `buttons` and `more_links` are now optional in `default` and `content` data
+* module `video-cover`: added support for block (useful to add iframes)
+* template `list-persons`: use specific API for consultation using pagination
+* template `hub`: refresh `hub-heading` background image during navigation in `sections-panel`
+* added `Paris.events` as a way to access PubSub
+* upgraded Algolia to v3, switched to npm version
+* removed `examples` folder from repository
+* removed unused AvenirNext webfonts
+
 ## 0.10.3 (2015-05-18)
 
 * added `list-persons/adjoints` template with default facet filtering

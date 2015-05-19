@@ -1,6 +1,12 @@
 include ../../modules/button/button
 
 mixin video-cover(data)
-  .video-cover(style="background-image: url(#{data.background})")
-    - data.button.modifiers = ["action"]
-    +button(data.button)
+  .video-cover(style=data.background && "background-image: url(#{data.background})" class=(block || data.block) ? "with-block" : "")
+    if block
+      != block
+    else if data.block
+      != data.block
+    else
+      if data.button
+        - data.button.modifiers = ["action"]
+        +button(data.button)

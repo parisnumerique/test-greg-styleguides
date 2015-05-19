@@ -3,9 +3,9 @@ include ../../modules/block-content/block-content
 mixin block-content-newsletter(data)
   - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-newsletter")
-  +block-content({"title": data.title, "modifiers": modifiers})
+  +block-content({"title": data.title, "modifiers": modifiers, "attributes": {"data-thanks": data.thanks}})
     .block-content-text= data.text
-    form&attributes(data.form)
-      input(type="text" placeholder=data.input.placeholder title=data.input.placeholder id=data.input.id)
+    form.block-content-form&attributes(data.form)
+      input(type="email" placeholder=data.input.placeholder title=data.input.placeholder id=data.input.id name=data.input.name required=true)
       button.button.action(type="submit")= data.submit.text
-    a(href="#{data.link.href}")= data.link.text
+    a(href=data.link.href target=data.link.target)= data.link.text

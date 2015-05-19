@@ -6,4 +6,4 @@ mixin footer(data)
       ul.footer-links
         each item in data.items
           li
-            a(href=item.href class=item.modifiers)= item.text
+            a(href=item.href target=item.target class=item.modifiers)= item.text
