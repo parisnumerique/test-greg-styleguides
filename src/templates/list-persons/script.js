@@ -5,6 +5,7 @@ var jade = require('jade');
 var values = require('lodash.values');
 var map = require('lodash.map');
 var sortBy = require('lodash.sortby');
+var algoliasearch = require('algoliasearch');
 
 var Paris = window.Paris || {};
 
@@ -14,8 +15,8 @@ Paris.listPersons = (function(){
     index: 'persons', // the Algolia index to use (should be defined in config.js)
     fields: { // matching the names of Algolia fields
       link: 'url',              // the field to use as a link
-      title: 'prenom',          // the field to use as the person-block title
-      text: 'titre',            // the field to use as the person-block text
+      title: 'prenom_nom',          // the field to use as the person-block title
+      text: 'mandat',            // the field to use as the person-block text
       image: 'portrait',        // the field to use as image
       group: 'groupe_politique' // the field to use in the person-block text
     },
@@ -41,7 +42,7 @@ Paris.listPersons = (function(){
     function init(){
       initOptions();
 
-      algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $searchFieldInput = $el.find('#search-person');
@@ -110,10 +111,22 @@ Paris.listPersons = (function(){
       }
 
       // Launch the search
-      index.search(query, onSearchResults, params);
+      if (query === "") {
+        // using the API
+        $.getJSON(Paris.config.api.persons, params)
+          .done(function(data){
+            onSearchResults(null, data);
+          }).fail(function(jqxhr, textStatus, error) {
+            onSearchResults(error, null);
+          });
+      } else {
+        // using Algolia
+        index.search(query, params, onSearchResults);
+      }
     }
 
-    function onSearchResults(success, data) {
+    function onSearchResults(err, data) {
+      if (err) {return;}
       renderResults(data);
       renderFacets(data);
     }
@@ -124,7 +137,7 @@ Paris.listPersons = (function(){
       if (!data) {
         // No search
         // TODO show default
-      } else if (data.nbHits === 0) {
+      } else if (data.nbHits === 0 || !data.hits) {
         // Search with no results
         $results.html("<h2>" + Paris.i18n.t("search_results/no_result") + "</h2>");
       } else {

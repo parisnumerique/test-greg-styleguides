@@ -195,12 +195,7 @@
           "modifiers": ["color-secondary-background"]
         },
         "cover": {
-          "background": "../../modules/video-cover/background.jpg",
-          "button": {
-            "href": "#",
-            "icon": "play",
-            "text": "Voir sur Dailymotion"
-          }
+          "block": "<iframe id=\"dm_jukebox_iframe\" allowfullscreen=\"true\" allowtransparency=\"true\" style=\"overflow:hidden; margin:0; padding:0; width: 100%; height: 100%;\" marginwidth=\"0\" marginheight=\"0\" src=\"http://www.dailymotion.com/widget/jukebox?list[]=%2Fuser%2Fmairiedeparis%2F1&&autoplay=0&automute=0\" align=\"middle\" width=\"100%\" frameborder=\"0\"></iframe>"
         }
       },
       "newsletter": {
@@ -221,7 +216,8 @@
         "link": {
           "href": "#",
           "text": "Autres newsletters et alertes"
-        }
+        },
+        "thanks": "Merci, vous allez recevoir un courriel de confirmation."
       },
       "archive": {
         "heading": {
@@ -450,7 +446,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -458,7 +455,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
@@ -515,7 +513,8 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "Twitter"
+                "text": "Twitter",
+                "target": "_blank"
               }
             },
             {
@@ -523,7 +522,8 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Facebook"
+                "text": "Facebook",
+                "target": "_blank"
               }
             },
             {
@@ -531,7 +531,8 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "Instagram"
+                "text": "Instagram",
+                "target": "_blank"
               }
             },
             {
@@ -539,7 +540,8 @@
               "count": "5 442",
               "link": {
                 "href": "#",
-                "text": "Dailymotion"
+                "text": "Dailymotion",
+                "target": "_blank"
               }
             }
           ],
@@ -556,7 +558,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -925,7 +927,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -933,7 +936,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
@@ -990,7 +994,8 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "Twitter"
+                "text": "Twitter",
+                "target": "_blank"
               }
             },
             {
@@ -998,7 +1003,8 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Facebook"
+                "text": "Facebook",
+                "target": "_blank"
               }
             },
             {
@@ -1006,7 +1012,8 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "Instagram"
+                "text": "Instagram",
+                "target": "_blank"
               }
             },
             {
@@ -1014,7 +1021,8 @@
               "count": "5 442",
               "link": {
                 "href": "#",
-                "text": "Dailymotion"
+                "text": "Dailymotion",
+                "target": "_blank"
               }
             }
           ],
@@ -1031,7 +1039,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -1403,7 +1411,8 @@
           },
           "input": {
             "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input"
+            "id": "connected-newsletter-input",
+            "name": "email"
           },
           "submit": {
             "text": "Valider"
@@ -1411,7 +1420,8 @@
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          }
+          },
+          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
         },
         "jecoute": {
           "title": "Paris j'écoute",
@@ -1468,7 +1478,8 @@
               "count": "219 000",
               "link": {
                 "href": "#",
-                "text": "Twitter"
+                "text": "Twitter",
+                "target": "_blank"
               }
             },
             {
@@ -1476,7 +1487,8 @@
               "count": "2 508 576",
               "link": {
                 "href": "#",
-                "text": "Facebook"
+                "text": "Facebook",
+                "target": "_blank"
               }
             },
             {
@@ -1484,7 +1496,8 @@
               "count": "16 449",
               "link": {
                 "href": "#",
-                "text": "Instagram"
+                "text": "Instagram",
+                "target": "_blank"
               }
             },
             {
@@ -1492,7 +1505,8 @@
               "count": "5 442",
               "link": {
                 "href": "#",
-                "text": "Dailymotion"
+                "text": "Dailymotion",
+                "target": "_blank"
               }
             }
           ],
@@ -1509,7 +1523,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

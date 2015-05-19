@@ -2,6 +2,7 @@
 require('velocity-animate');
 
 var PubSub = require('pubsub-js');
+var algoliasearch = require('algoliasearch');
 
 var Paris = window.Paris || {};
 
@@ -33,7 +34,7 @@ Paris.quickAccess = (function(){
     function init(){
       initOptions();
 
-      algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $parent = $el.parent();
@@ -160,17 +161,17 @@ Paris.quickAccess = (function(){
       }
       var val = $searchFieldInput.val();
       if (val !== "") {
-        index.search(val, onSearchResults, {
+        index.search(val, {
           hitsPerPage: options.hitsPerPage
-        });
+        }, onSearchResults);
       } else {
         $results.empty();
         $more.hide();
       }
     }
 
-    function onSearchResults(success, results) {
-      if (success !== true) {return;}
+    function onSearchResults(err, results) {
+      if (err) {return;}
       $results.empty();
       $.each(results.hits, function(index, hit){
         var result = '<li>' +

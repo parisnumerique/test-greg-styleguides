@@ -2,6 +2,7 @@
 require('velocity-animate');
 
 var values = require('lodash.values');
+var algoliasearch = require('algoliasearch');
 
 var Paris = window.Paris || {};
 
@@ -36,7 +37,7 @@ Paris.search = (function(){
     function init(){
       initOptions();
 
-      algolia = new AlgoliaSearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
+      algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
       $searchFieldInput = $el.find('#main-search');
@@ -95,10 +96,11 @@ Paris.search = (function(){
       }
 
       // Launch the search
-      index.search(query, onSearchResults, params);
+      index.search(query, params, onSearchResults);
     }
 
-    function onSearchResults(success, data) {
+    function onSearchResults(err, data) {
+      if (err) {return;}
       renderResults(data);
       renderFacets(data);
     }

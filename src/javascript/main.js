@@ -2,6 +2,7 @@
 require('./externals/bootstrap');
 
 // load our librairies
+require('./lib/events');
 require('./lib/i18n');
 require('./lib/requestanimationframe');
 require('./lib/scroll');
@@ -17,6 +18,7 @@ require('../layouts/left-col/script');
 // load our modules
 require('../modules/anchors-list/script');
 require('../modules/block-content-jecoute/script');
+require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
 require('../modules/document-heading/script');
 require('../modules/gallery-ugc/script');

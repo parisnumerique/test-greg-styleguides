@@ -6,11 +6,6 @@
   margin-bottom: 30px;
   overflow: hidden;
 
-  .ask {
-    position: absolute;
-    bottom: 0;
-  }
-
   .block-content-text {
     margin-bottom: 15px;
     max-width: 360px;
@@ -58,6 +53,10 @@
 
   .answered .block-content-question {
     opacity: 0;
+
+    .user {
+      font-weight: bold;
+    }
   }
 
   .block-content-timer {
@@ -86,11 +85,13 @@
     }
   }
 
-  .user {
-    font-weight: bold;
-  }
-
   .button {
     margin-top: 10px;
   }
+}
+
+
+.blocks-content-vertical .block-content-jecoute .block-content-button {
+  position: absolute;
+  bottom: 0;
 }
