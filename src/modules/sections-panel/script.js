@@ -113,6 +113,7 @@ Paris.sectionsPanel = (function(){
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
       PubSub.publish("sections-panel:change", {
+        image: $currentNavItemsLink.data('background'),
         title: $currentNavItemsLink.text()
       });
 
@@ -130,6 +131,7 @@ Paris.sectionsPanel = (function(){
 
       PubSub.publish("sections-panel:change", {
         root: true,
+        image: $subnavDefault.data('background'),
         title: root.title
       });
 
@@ -182,6 +184,7 @@ Paris.sectionsPanel = (function(){
       var $currentSubnavSectionsLink = $subnavSectionsLinks.filter('.current');
       var currentTitle = $currentSubnavSectionsLink.find('.sections-panel-subnav-item-title').text();
       PubSub.publish("sections-panel:change", {
+        image: $currentSubnavSectionsLink.data('background'),
         title: currentTitle,
         parent: {
           id: $currentNavItemsLink.data("subnav-section"),
