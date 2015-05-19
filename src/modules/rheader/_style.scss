@@ -584,11 +584,11 @@ $rheader-height-large:  80px;
 
 .rheader + .layout-content .document-heading,
 .rheader + .layout-content .hub-heading,
-.rheader + .layout-content .jumbotron,
-.rheader + .layout-content .quick-access {margin-top: $rheader-height-small;}
+.rheader + .layout-content .jumbotron/*,
+.rheader + .layout-content .quick-access*/ {margin-top: $rheader-height-small;}
 @media (min-width: $rheader-medium-min) {
   .rheader + .layout-content .document-heading,
   .rheader + .layout-content .hub-heading,
-  .rheader + .layout-content .jumbotron,
-  .rheader + .layout-content .quick-access { margin-top: $rheader-height-medium; }
+  .rheader + .layout-content .jumbotron/*,
+  .rheader + .layout-content .quick-access*/ { margin-top: $rheader-height-medium; }
 }

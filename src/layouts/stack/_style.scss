@@ -20,6 +20,15 @@
       position: relative;
     }
 
+    &.layout-small-padding {
+      padding-top: 30px;
+      &.layout-separate-after {padding-bottom: 30px;}
+    }
+
+    &.layout-padding-after {
+      padding-bottom: 40px;
+    }
+
     & + .layout-adjacent-before {
       padding-top: 0;
     }
@@ -32,14 +41,10 @@
     &.layout-adjacent-after {
       padding-bottom: 0;
     }
-
-    &.layout-small-padding {
-      padding-top: 30px;
-      &.layout-separate-after {padding-bottom: 30px;}
-    }
-
-    &.layout-padding-after {
-      padding-bottom: 40px;
+    @include small {
+      &.layout-adjacent-after-on-small {
+        padding-bottom: 0;
+      }
     }
   }
 

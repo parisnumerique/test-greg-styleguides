@@ -136,9 +136,11 @@
         },
         {
           "type": "sections",
+          "modifiers": ["layout-adjacent-before-on-small"],
           "data": {
             "heading": {
-              "title": "Services et infos pratiques"
+              "title": "Services et infos pratiques",
+              "modifiers": ["hidden-on-small"]
             },
             "list": {
               "items": [
@@ -211,6 +213,11 @@
                   "href": "#",
                   "text": "Vous cherchez autre chose&nbsp;?",
                   "modifiers": ["more"]
+                },
+                {
+                  "href": "#",
+                  "text": "Découvrez tous les services de la ville",
+                  "modifiers": ["more", "only-on-small"]
                 }
               ]
             }
@@ -218,6 +225,7 @@
         },
         {
           "type": "jumbotron",
+          "modifiers": ["layout-adjacent-before-on-small"],
           "data": {
             "href": "../single-news",
             "image": "../../modules/jumbotron/image.jpg",
@@ -271,7 +279,7 @@
         },
         {
           "type": "que-faire",
-          "modifiers": ["layout-padding-after"],
+          "modifiers": ["layout-padding-after", "layout-adjacent-after-on-small"],
           "data": {
             "background": "../../modules/que-faire/que-faire-back-img.jpg",
             "logo": {

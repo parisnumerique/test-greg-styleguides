@@ -39,6 +39,12 @@ $small-max: $medium-min - 1px;
     @content;
   }
 }
+@mixin only-on-small {
+  display: none !important;
+  @include small {
+    display: block !important;
+  }
+}
 @mixin hidden-on-small {
   @include small {
     display: none !important;
@@ -47,6 +53,10 @@ $small-max: $medium-min - 1px;
 .hidden-on-small,
 .hidden-on-mobile {
   @include hidden-on-small;
+}
+.only-on-small,
+.only-on-mobile {
+  @include only-on-small;
 }
 
 @mixin medium-and-small {
