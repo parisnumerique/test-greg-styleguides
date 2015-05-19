@@ -74,6 +74,7 @@
           "items": [
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Culture et patrimoine",
               "slug": "culture-patrimoine",
               "subnav": {
@@ -81,31 +82,37 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
                   }
@@ -114,6 +121,7 @@
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Déplacements et stationnement",
               "slug": "deplacements-stationnement",
               "subnav": {
@@ -121,11 +129,13 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   }
@@ -134,41 +144,49 @@
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Éducation",
               "slug": "education"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Emploi",
               "slug": "emploi"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Espaces verts et environnement",
               "slug": "espaces-verts-environnement"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Logement",
               "slug": "logement"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Solidarités",
               "slug": "solidarites"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Sports et loisirs",
               "slug": "sports-loisirs"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Urbanisme",
               "slug": "urbanisme"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Aides, allocations et démarches",
               "slug": "aides-allocations-demarches"
             }
@@ -179,6 +197,7 @@
           }
         },
         "default": {
+          "background": "../hub/hub-heading.png",
           "links": {
             "title": "Contenus les plus consultés",
             "items": [
@@ -450,6 +469,7 @@
           "items": [
             {
               "current": true,
+              "background": "../hub/hub-heading.png",
               "href": "../hub/subnav-open.html#sections-panel-subnav",
               "text": "Culture et patrimoine",
               "slug": "culture-patrimoine",
@@ -458,31 +478,37 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
                   }
@@ -491,6 +517,7 @@
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Déplacements et stationnement",
               "slug": "deplacements-stationnement",
               "subnav": {
@@ -498,11 +525,13 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   }
@@ -511,41 +540,49 @@
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Éducation",
               "slug": "education"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Emploi",
               "slug": "emploi"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Espaces verts et environnement",
               "slug": "espaces-verts-environnement"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Logement",
               "slug": "logement"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Solidarités",
               "slug": "solidarites"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Sports et loisirs",
               "slug": "sports-loisirs"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Urbanisme",
               "slug": "urbanisme"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Aides, allocations et démarches",
               "slug": "aides-allocations-demarches"
             }
@@ -556,6 +593,7 @@
           }
         },
         "default": {
+          "background": "../hub/hub-heading.png",
           "links": {
             "title": "Contenus les plus consultés",
             "items": [
@@ -838,6 +876,7 @@
             {
               "current": true,
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Culture et patrimoine",
               "slug": "culture-patrimoine",
               "subnav": {
@@ -846,31 +885,37 @@
                   {
                     "current": true,
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
                   }
@@ -879,6 +924,7 @@
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Déplacements et stationnement",
               "slug": "deplacements-stationnement",
               "subnav": {
@@ -886,11 +932,13 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   }
@@ -899,41 +947,49 @@
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Éducation",
               "slug": "education"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Emploi",
               "slug": "emploi"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Espaces verts et environnement",
               "slug": "espaces-verts-environnement"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Logement",
               "slug": "logement"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Solidarités",
               "slug": "solidarites"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Sports et loisirs",
               "slug": "sports-loisirs"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Urbanisme",
               "slug": "urbanisme"
             },
             {
               "href": "../hub/subnav-open.html#sections-panel-subnav",
+              "background": "../hub/hub-heading.png",
               "text": "Aides, allocations et démarches",
               "slug": "aides-allocations-demarches"
             }
@@ -944,6 +1000,7 @@
           }
         },
         "default": {
+          "background": "../hub/hub-heading.png",
           "links": {
             "title": "Contenus les plus consultés",
             "items": [

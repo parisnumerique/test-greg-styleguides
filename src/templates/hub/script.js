@@ -60,7 +60,10 @@ Paris.hub = (function(){
     }
 
     function onSectionsPanelChange(e, data) {
-      setTitle(data.title);
+      renderHubHeading({
+        image: data.image,
+        text: data.title
+      });
 
       var breadcrumbs = {
         "items": breadcrumbsBase.slice()
@@ -90,8 +93,10 @@ Paris.hub = (function(){
       $sectionsPanel.data('api').openSection(currentSection);
     }
 
-    function setTitle(title){
-      $hubHeading.find("h1").text(title);
+    function renderHubHeading(data){
+      var hubHeading = Paris.templates.templatizer["hub-heading"]["hub-heading"](data);
+      $hubHeading.replaceWith(hubHeading);
+      $hubHeading = $el.find('.hub-heading');
     }
 
     function renderBreadcrumbs(data){
