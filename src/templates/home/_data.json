@@ -69,6 +69,10 @@
                 ]
               }
             },
+            "heading": {
+              "title": "Accès rapides",
+              "modifiers": ["only-on-small"]
+            },
             "search": {
               "input": {
                 "placeholder": "Rechercher un service, une information..."

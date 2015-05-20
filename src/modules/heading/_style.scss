@@ -1,11 +1,5 @@
 .heading {
-  margin-bottom: 40px;
-
-  @include large-and-medium {
-    border-left: 6px solid $color-tertiary;
-    overflow: auto;
-    padding: 20px 10px 20px 26px;
-  }
+  margin-bottom: 20px;
 
   /* modifiers */
   &.white {
@@ -31,27 +25,15 @@
 
 .heading-title {
   color: $gray51;
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 700;
   float: left;
-  line-height: 40px;
-  margin: 0 20px 0 0;
-
-  @include small {
-    border-left: 6px solid $color-tertiary;
-    padding: 20px 10px 20px 26px;
-  }
+  line-height: 32px;
+  margin: 0;
 }
 
 .heading-links {
   font-size: 15px;
-
-  @include large-and-medium {
-    line-height: 40px;
-  }
-  @include small {
-    clear: both;
-  }
 
   > a {
     border-bottom: 1px solid $gray77;
@@ -79,5 +61,35 @@
       color: $color-primary;
       &:after {width: 100%;}
     }
+  }
+}
+
+@include small {
+  .heading-title {
+    border-left: 6px solid $color-tertiary;
+    padding: 15px 10px 15px ($small-page-padding - 4px);
+  }
+  .heading-links {
+    clear: both;
+  }
+}
+
+
+@include large-and-medium {
+  .heading {
+    border-left: 6px solid $color-tertiary;
+    overflow: auto;
+    margin-bottom: 40px;
+    padding: 20px 10px 20px 26px;
+  }
+
+  .heading-title {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 20px 0 0;
+  }
+
+  .heading-links {
+    line-height: 40px;
   }
 }
