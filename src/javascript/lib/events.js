@@ -3,4 +3,4 @@
 var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
-Paris.events = Paris.PubSub || {};
+Paris.events = Paris.PubSub = Paris.PubSub || PubSub;
