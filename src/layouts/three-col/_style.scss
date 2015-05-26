@@ -7,7 +7,7 @@
     }
   }
 
-  @include large {
+  @include large-and-medium {
     overflow: hidden;
 
     > .layout-wrapper {
@@ -18,12 +18,9 @@
 
     .layout-content {
       @include span(4 of 12);
+      &:last-child {@include last;}
       display: table-cell;
       vertical-align: top;
-    }
-
-    .layout-content:last-child {
-      @include last;
     }
   }
 }

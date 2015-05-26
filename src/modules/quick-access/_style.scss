@@ -55,6 +55,10 @@
   .quick-access-wrapper {
     padding: 0 20px;
   }
+
+  .quick-access-search .search-field-input {
+    width: 60%;
+  }
 }
 
 @include large-and-medium {

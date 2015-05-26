@@ -33,16 +33,13 @@
   position: relative;
   display: table;
   height: 100%;
+  width: 100%;
 }
 
 .hub-heading-content {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-
-  .search-field {
-    display: inline-block;
-  }
 }
 
 // Keep space for the header, when the jumbotron is the first element after it
@@ -52,6 +49,14 @@
 
 .header-wrapper.fixed + .layout-content .hub-heading {
   margin-top: 80px;
+}
+
+@include large-and-medium {
+  .hub-heading-content {
+    .search-field {
+      display: inline-block;
+    }
+  }
 }
 
 

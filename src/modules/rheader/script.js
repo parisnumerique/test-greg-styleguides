@@ -10,7 +10,7 @@ var Paris = window.Paris || {};
 Paris.rheader = (function(){
 
   var defaultOptions = {
-    mobileMediaQuery: window.matchMedia("(max-width: 1130px)"),
+    mobileMediaQuery: window.matchMedia("(max-width: 1160px)"),
     mobileNavId: "rheader-mobile-nav"
   };
 

@@ -1,16 +1,14 @@
 .block-aside {
   color: $gray26;
+  margin-top: 40px;
   text-align: left;
-
-  + .block-aside {
-    margin-top: 40px;
-  }
 }
 
 .block-aside-title {
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
+  margin-top: 0;
 }
 
 .block-aside-content {
@@ -35,7 +33,7 @@
 }
 
 @include small {
-  .block-aside-title:first-child {
+  .block-aside:first-child {
     margin-top: 0;
   }
 }

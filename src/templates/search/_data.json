@@ -4,34 +4,50 @@
       "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ]
       },
       "heading": {
         "modifiers": ["small"],
@@ -46,30 +62,6 @@
           "text": "Rechercher",
           "icon": true
         }
-      },
-      "block_aside_links": {
-        "title": "Suggestions",
-        "modifiers": ["emphasis-links"],
-        "items": [
-          {
-            "href": "#", "text": "Logement social"
-          },
-          {
-            "href": "#", "text": "Logement de la ville"
-          },
-          {
-            "href": "#", "text": "Aide au logement"
-          },
-          {
-            "href": "#", "text": "Logement privatif"
-          }
-        ]
-      },
-      "block_aside_checkboxes": {
-        "title": "Rubriques",
-        "name": "rubriques",
-        "items": [
-        ]
       },
       "search_results": {
         "title": "Contenus les plus recherchés sur Paris.fr",
@@ -188,34 +180,50 @@
       "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ]
       },
       "heading": {
         "modifiers": ["small"],
@@ -232,7 +240,7 @@
           "icon": true
         }
       },
-      "block_aside_links": {
+      "suggestions": {
         "title": "Suggestions",
         "modifiers": ["emphasis-links"],
         "items": [
@@ -250,12 +258,21 @@
           }
         ]
       },
-      "block_aside_checkboxes": {
-        "title": "Rubriques",
-        "name": "rubriques",
-        "items": [
-        ]
-      },
+      "facets": [
+        {
+          "title": "Catégories",
+          "name": "onglet",
+          "items": [
+            {"number": 28, "text": "Equipements", "value": "Equipements"},
+            {"number": 11, "text": "Services et infos pratiques", "value": "Services et infos pratiques"},
+            {"number": 7, "text": "Fiche élu", "value": "Fiche élu"},
+            {"number": 6, "text": "Actualités", "value": "Actualités"},
+            {"number": 5, "text": "FAQ", "value": "FAQ"},
+            {"number": 3, "text": "L'hôtel de ville", "value": "L'hôtel de ville"},
+            {"number": 3, "text": "Participer", "value": "Participer"}
+          ]
+        }
+      ],
       "search_results": {
         "title": "Contenus les plus recherchés sur Paris.fr",
         "items": [
@@ -373,34 +390,50 @@
       "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ]
       },
       "heading": {
         "modifiers": ["small"],
@@ -416,30 +449,6 @@
           "text": "Rechercher",
           "icon": true
         }
-      },
-      "block_aside_links": {
-        "title": "Suggestions",
-        "modifiers": ["emphasis-links"],
-        "items": [
-          {
-            "href": "#", "text": "Logement social"
-          },
-          {
-            "href": "#", "text": "Logement de la ville"
-          },
-          {
-            "href": "#", "text": "Aide au logement"
-          },
-          {
-            "href": "#", "text": "Logement privatif"
-          }
-        ]
-      },
-      "block_aside_checkboxes": {
-        "title": "Rubriques",
-        "name": "rubriques",
-        "items": [
-        ]
       },
       "search_results": {
         "title": "Contenus les plus recherchés sur Paris.fr",
