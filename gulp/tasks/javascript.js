@@ -11,7 +11,7 @@ var insert     = require('gulp-insert');
 var watchify   = require('watchify');
 var fs         = require('fs');
 
-var browserifyBundler = browserify('./src/javascript/main.js', watchify.args);
+var browserifyBundler = browserify('./src/javascript/main.js');
 var watchifyBundler   = watchify(browserify('./src/javascript/main.js', watchify.args));
 
 browserifyBundler.transform('jadeify');
