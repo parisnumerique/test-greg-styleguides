@@ -1,8 +1,8 @@
 .que-faire {
 
-  > .que-faire-wrapper {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+  > .que-faire-wrapper,
+  > .layout-wrapper.que-faire-wrapper {
+    background: center center no-repeat;
     background-size: cover;
     min-height: 240px;
     max-width: $large-grid-width;
@@ -11,19 +11,17 @@
     width: 100%;
   }
 
-  .logo {
-    display: block;
-    height: 96px;
-    margin: 0 auto 20px;
-    width: 150px;
-
-    > span {@include hidden-accessibly;}
-  }
-
 }
 
-.que-faire-content {
-  overflow: hidden;
+.que-faire-logo {
+  background: center center no-repeat;
+  background-size: contain;
+  display: block;
+  height: 96px;
+  margin: 0 auto 20px;
+  width: 150px;
+
+  > span {@include hidden-accessibly;}
 }
 
 .button-que-faire {
@@ -82,35 +80,72 @@
   }
 }
 
+
+@include medium {
+
+  .que-faire {
+    > .que-faire-wrapper,
+    > .layout-wrapper.que-faire-wrapper {
+      padding: 80px 20px 0;
+    }
+  }
+
+  .que-faire-logo {
+    margin: 0;
+    width: 20%;
+  }
+
+  .que-faire-content {
+    width: 78%;
+  }
+
+}
+
 @include large-and-medium {
 
   .que-faire {
     padding: 0 20px;
 
-    > .que-faire-wrapper {
+    > .layout-wrapper.que-faire-wrapper {
       min-height: 240px;
-      padding: 80px 70px 0 25px;
-    }
-
-    .logo {
-      float: left;
-      margin: 0 25px 0 0;
     }
   }
 
+  .que-faire-logo {
+    float: left;
+  }
+
   .que-faire-content {
-    @include container(820px);
+    @include container;
     float: right;
   }
 
   .button-que-faire {
     @include span(4 of 12);
     &:last-child {@include last;}
-    min-height: 80px;
+  }
 
-    > span {
-      padding-right: 50px;
+}
+
+@include large {
+  .que-faire {
+    > .layout-wrapper.que-faire-wrapper {
+      min-height: 240px;
+      padding: 80px 70px 0 25px;
     }
   }
 
+  .que-faire-logo {
+    margin: 0 25px 0 0;
+  }
+
+  .que-faire-content {
+    max-width: 820px;
+  }
+
+  .button-que-faire {
+    min-height: 80px;
+
+    > span {padding-right: 50px;}
+  }
 }

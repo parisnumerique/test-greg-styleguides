@@ -1,29 +1,17 @@
 .quick-access {
   width: 100%;
-}
 
-// Keep space for the header, when the quick-access is the first element after it
-//.header-wrapper + .layout-content .quick-access {
-//  $offset: 80px;
-//
-//  .quick-access-wrapper {top: 145px + $offset;}
-//
-//  &.searching {
-//    .quick-access-close-search {
-//      transform: translateY($offset);
-//    }
-//  }
-//}
+  .quick-access-wrapper.layout-wrapper,
+  .quick-access-wrapper {
+    margin: 0 auto;
+  }
+}
 
 .quick-access-background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
   width: 100%;
-}
-
-.quick-access-wrapper {
 }
 
 .quick-access-buttons {
@@ -50,7 +38,8 @@
       position: relative;
     }
   }
-  .quick-access-wrapper {
+  .quick-access-background {
+    height: 200px;
   }
   .quick-access-buttons {
     padding-bottom: 20px;
@@ -129,6 +118,11 @@
     }
   }
 
+  .quick-access-background {
+    height: 100%;
+    position: absolute;
+  }
+
   .quick-access-video {
     position: absolute;
     left: 50%;
@@ -141,7 +135,6 @@
 
   .quick-access-wrapper {
     max-width: 820px;
-    margin: 0 auto;
     position: relative;
     top: 145px;
     transform: translateY(0);

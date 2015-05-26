@@ -1,7 +1,7 @@
 mixin que-faire(data)
   .que-faire
     .que-faire-wrapper.layout-wrapper(style='background-image: url(#{data.background});')
-      a.logo(href=data.logo.href style='background-image: url(#{data.logo.image});' target="_blank")
+      a.que-faire-logo(href=data.logo.href style='background-image: url(#{data.logo.image});' target="_blank")
         span= data.logo.alt
       .que-faire-content
         each item in data.items
