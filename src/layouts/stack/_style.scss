@@ -49,7 +49,7 @@
   }
 
   .layout-wrapper {
-    margin: 0;
+    margin: 0 auto;
     padding-left: $small-page-padding;
     padding-right: $small-page-padding;
   }
@@ -74,7 +74,6 @@
 
   @include large {
     .layout-wrapper {
-      margin: 0 auto;
       padding-left: 0;
       padding-right: 0;
       width: $large-grid-width;
