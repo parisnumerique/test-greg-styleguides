@@ -1,33 +1,7 @@
 .component-news-push {
   clear: both;
-  position: relative;
   margin-bottom: 90px; // absolute link = 50px + classic 40px
-  opacity: 1;
-  transform: none;
-  transition: 1s ease all;
-
-  &.hidden {
-    opacity: 0;
-    transform: translateX(1600px);
-  }
-
-  .news-push-after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    &:after {
-      content: " ";
-      top: 0;
-      right: -1000px;
-      bottom: 0;
-      background: $color-primary;
-      width: 1000px;
-      height: 100%;
-      position: absolute;
-    }
-  }
+  position: relative;
 
   h3 {
     font-weight: 300;
@@ -43,18 +17,24 @@
   .news-push-wrapper {
     background: $color-primary;
     padding: 20px;
+  }
 
-    &:before,
+  .news-push-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
     &:after {
       content: " ";
-      display: table;
-    }
-    &:after {
-      clear: both;
-    }
-
-    > * {
-      float: left;
+      top: 0;
+      right: -100px;
+      bottom: 0;
+      background: $color-primary;
+      width: 100px;
+      height: 100%;
+      position: absolute;
     }
   }
 
@@ -78,24 +58,9 @@
     a {
       color: $white;
       text-decoration: none;
-      position: relative;
-      &.next:after {
-        content: " ";
-        width: 0%;
-        height: 1px;
-        background: $white;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        transition: .3s ease width ;
+      &.next {
+        text-decoration: underline;
       }
-      &.next:hover:after {
-        width: 100%;
-      }
-    }
-
-    & p:hover a.next:after {
-      width: 100%;
     }
   }
 
@@ -111,15 +76,15 @@
     line-height: 50px;
     padding: 0 15px;
     text-decoration: none;
-    width: 410px;
+    width: 100%;
 
     &:after {
       content: " ";
       top: 0;
-      right: -1000px;
+      right: -100px;
       bottom: 0;
       background: $gray242;
-      width: 1000px;
+      width: 100px;
       height: 100%;
       position: absolute;
     }
@@ -137,11 +102,82 @@
         vertical-align: middle;
       }
     }
+  }
+}
 
-    &:hover {
-      color: $color-primary;
-      > span {
-        left: 5px;
+@include small {
+  .news-push-image {
+    margin-bottom: 20px;
+  }
+}
+
+@include large-and-medium {
+  .component-news-push {
+    opacity: 1;
+    transform: none;
+    transition: 1s ease all;
+
+    &.hidden {
+      opacity: 0;
+      transform: translateX(1600px);
+    }
+
+    .news-push-wrapper {
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+
+      > * {
+        float: left;
+      }
+    }
+
+    .news-push-after:after {
+      right: -1000px;
+      width: 1000px;
+    }
+
+    .news-push-content {
+      a {
+        position: relative;
+        &.next:after {
+          content: " ";
+          width: 0%;
+          height: 1px;
+          background: $white;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          transition: .3s ease width ;
+        }
+        &.next:hover:after {
+          width: 100%;
+        }
+      }
+
+      & p:hover a.next:after {
+        width: 100%;
+      }
+    }
+
+    .news-push-link {
+      width: 410px;
+
+      &:after {
+        right: -1000px;
+        width: 1000px;
+      }
+
+      &:hover {
+        color: $color-primary;
+        > span {
+          left: 5px;
+        }
       }
     }
   }

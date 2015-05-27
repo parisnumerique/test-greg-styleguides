@@ -78,12 +78,7 @@
     .layout-content {
       display: table-cell;
       padding: 40px 0 40px 50px;
-      width: 820px;
       vertical-align: top;
-
-      .component {
-        max-width: 770px;
-      }
     }
 
   }
@@ -103,6 +98,18 @@
     .layout-content {
       padding-right: 50px;
       width: auto;
+    }
+  }
+}
+
+@include large {
+  .layout-left-col {
+    .layout-content {
+      width: 820px;
+
+      .component {
+        max-width: 770px;
+      }
     }
   }
 }

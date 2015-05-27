@@ -11,14 +11,14 @@ include ../../modules/button/button
 include ../../modules/button-top/button-top
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/news-list/news-list
 
 include ../../components/components
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content

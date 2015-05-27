@@ -8,6 +8,7 @@ var Paris = window.Paris || {};
 Paris.poll = (function(){
 
   var defaultOptions = {
+    mobileMediaQuery: window.matchMedia("(max-width: 767px)"),
   };
 
   // node garden based on http://codepen.io/dleatherman/pen/kAzgw
@@ -29,14 +30,15 @@ Paris.poll = (function(){
       $optionsButtons = $options.find('.button');
       $form = $el.find('.poll-form');
       $input = $el.find('.poll-input');
-      $canvas = $('<canvas></canvas>').appendTo($el);
 
-      initCanvas();
+      if (!options.mobileMediaQuery.matches) {
+        // node garden not on mobile
+        initCanvas();
+      }
 
       $el.on('mouseenter mousemove mouseleave', onMouseEvents);
       $optionsButtons.on('click', onClickOption);
       $form.on('submit', onSubmitForm);
-      animFrame = window.requestAnimationFrame(createDots);
 
       PubSub.subscribe('scroll', onScroll);
     }
@@ -48,6 +50,7 @@ Paris.poll = (function(){
     }
 
     function initCanvas() {
+      $canvas = $('<canvas></canvas>').appendTo($el);
       canvas = $canvas[0];
       ctx = canvas.getContext('2d');
       color = '#F8E273';
@@ -70,6 +73,8 @@ Paris.poll = (function(){
         radius_interval: [0.5, 2],
         array: []
       };
+
+      animFrame = window.requestAnimationFrame(createDots);
     }
 
     function Dot(){
