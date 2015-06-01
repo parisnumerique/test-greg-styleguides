@@ -35,6 +35,8 @@ append content
       .layout-wrapper
         aside.layout-aside
           .aside-wrapper
+            if data.aside.picture
+              +block-aside(data.aside.picture)
             +block-aside(data.aside.permanence)
             +block-aside-contact(data.aside.contact)
         .layout-content.components
