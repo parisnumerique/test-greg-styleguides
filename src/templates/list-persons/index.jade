@@ -35,7 +35,7 @@ append content
       .layout-wrapper
         aside.layout-aside
           .aside-wrapper
-            +block-aside({})
+            +block-aside({"modifiers": "hidden-on-small"})
               +share(data.aside.share)
             +block-aside({})
               +search-field(data.aside.search)

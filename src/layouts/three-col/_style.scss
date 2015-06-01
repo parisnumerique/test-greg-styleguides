@@ -1,13 +1,39 @@
 .layout-three-col {
   width: 100%;
+}
 
-  @include small {
+@include small {
+  .layout-three-col {
     .layout-content + .layout-content {
       margin-top: 50px;
     }
   }
+}
 
-  @include large-and-medium {
+@include medium {
+  .layout-three-col {
+    overflow: hidden;
+
+    .layout-content {
+      float: left;
+      margin-bottom: 50px;
+      width: 48%;
+
+      & + .layout-content {
+        margin-left: 4%;
+      }
+
+      &:last-child {
+        clear: both;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include large {
+  .layout-three-col {
     overflow: hidden;
 
     > .layout-wrapper {

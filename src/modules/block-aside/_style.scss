@@ -4,6 +4,10 @@
   text-align: left;
 }
 
+.aside-wrapper > .block-aside:first-child {
+  margin-top: 0;
+}
+
 .block-aside-title {
   font-size: 25px;
   font-weight: 700;
@@ -33,7 +37,7 @@
 }
 
 @include small {
-  .block-aside:first-child {
+  .aside-wrapper > .block-aside.hidden-on-small + .block-aside {
     margin-top: 0;
   }
 }
