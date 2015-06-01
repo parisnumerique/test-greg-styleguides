@@ -10,8 +10,9 @@ var Paris = window.Paris || {};
 Paris.rheader = (function(){
 
   var defaultOptions = {
-    mobileMediaQuery: window.matchMedia("(max-width: 1160px)"),
-    mobileNavId: "rheader-mobile-nav"
+    mobileMediaQuery: window.matchMedia("(max-width: 600px)"),
+    mobileNavId: "rheader-mobile-nav",
+    scrollMinDelta: 50
   };
 
   function rheader(selector, userOptions){
@@ -19,7 +20,9 @@ Paris.rheader = (function(){
         options = $.extend({}, defaultOptions, userOptions),
         isMobile,
         $buttonMenu,
-        $overlay
+        $overlay,
+        scrollMonitor,
+        lastScrollY = 0
       ;
 
     function init(){
@@ -48,6 +51,25 @@ Paris.rheader = (function(){
       isMobile = options.mobileMediaQuery.matches;
       if (wasMobile === isMobile) {return;}
       toggleMobile();
+    }
+
+    function onScroll(e, data) {
+      if (lastScrollY !== 0) {
+        if (data.originalEvent.pageY < 200) {
+          $el.removeClass('folded');
+          return;
+        }
+        var down = (lastScrollY < data.originalEvent.pageY);
+        if (down && Math.abs(lastScrollY - data.originalEvent.pageY) < options.scrollMinDelta) {
+          return;
+        }
+        $el.toggleClass('folded', down);
+      }
+      lastScrollY = data.originalEvent.pageY;
+    }
+
+    function unfold(){
+      $el.removeClass('folded');
     }
 
     function onClickButtonMenu(e) {
@@ -96,6 +118,11 @@ Paris.rheader = (function(){
       $el.append($nav);
 
       $overlay = $('<div id="'+options.mobileNavId+'-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo($el);
+
+      // Monitor scroll
+      scrollMonitor = PubSub.subscribe('scroll', onScroll);
+
+      $el.on('mouseenter', unfold);
     }
 
     function disableMobile() {
@@ -108,6 +135,13 @@ Paris.rheader = (function(){
         $overlay.remove();
         $overlay = null;
       }
+
+      // Stop monitoring scroll
+      if (scrollMonitor) {
+        PubSub.unsubscribe(scrollMonitor);
+      }
+      unfold();
+      $el.off('mouseenter', unfold);
     }
 
     init();
