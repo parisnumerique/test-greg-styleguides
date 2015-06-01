@@ -1,6 +1,7 @@
 'use strict';
 require('velocity-animate');
 
+var PubSub = require('pubsub-js');
 var throttle = require('lodash.throttle');
 
 var Paris = window.Paris || {};
@@ -11,8 +12,10 @@ Paris.buttonTop = (function(){
     var $el = $(selector);
 
     function init(){
-      $el.on('click', onClick);
+      if (!$el.is(':visible')) {return;}
+      $el.hide().on('click', onClick);
       $(window).on('resize', throttle(setAffix, 1000));
+      PubSub.subscribe('scroll', onScroll);
       setAffix();
     }
 
@@ -23,6 +26,10 @@ Paris.buttonTop = (function(){
         offset: 0,
         mobileHA: false
       });
+    }
+
+    function onScroll(e, data) {
+      $el.toggle(data.originalEvent.pageY > 300);
     }
 
     function setAffix() {
