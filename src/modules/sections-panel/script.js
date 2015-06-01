@@ -11,6 +11,7 @@ var Paris = window.Paris || {};
 Paris.sectionsPanel = (function(){
 
   var defaultOptions = {
+    mobileMediaQuery: window.matchMedia("(max-width: 768px)"),
     velocity: {
       duration: 350,
       ease: 'ease-in-out',
@@ -21,6 +22,7 @@ Paris.sectionsPanel = (function(){
   function sectionsPanel(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
+      isMobile,
       api = {},
       $nav, $subnav, $content,
       $navItems, $navItemsLinks, $navMore,
@@ -46,11 +48,8 @@ Paris.sectionsPanel = (function(){
       $content = $el.find('.sections-panel-content');
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
 
-      setHeight();
-      $(window).on('resize', throttle(setHeight, 1000));
-
-      $navItemsLinks.on('click', onClickNavLink);
-      $subnavSectionsLinks.on('click', onClickSubnavLink);
+      onResize();
+      $(window).on('resize', throttle(onResize, 1000));
 
       if ($subnav.hasClass('has-current-item')) {currentLevel = "subnav";}
       if ($el.hasClass('has-content')) {currentLevel = "content";}
@@ -68,8 +67,16 @@ Paris.sectionsPanel = (function(){
       });
     }
 
+    function onResize() {
+      var wasMobile = isMobile;
+      isMobile = options.mobileMediaQuery.matches;
+      if (wasMobile === isMobile) {return;}
+      setHeight();
+      toggleMobile();
+    }
+
     function setHeight() {
-      var newHeight = calculateHeight();
+      var newHeight = isMobile ? 'auto' : calculateHeight();
       $el.css("height", newHeight);
     }
 
@@ -91,6 +98,24 @@ Paris.sectionsPanel = (function(){
       var contentPadding = $content.outerHeight() - $content.height();
       heights.content = contentHeight + contentPadding;
       return Math.max.apply(null, values(heights));
+    }
+
+    function toggleMobile() {
+      isMobile ? enableMobile() : disableMobile();
+    }
+
+    function enableMobile() {
+      console.log('enableMobile');
+
+      $navItemsLinks.off('click', onClickNavLink);
+      $subnavSectionsLinks.off('click', onClickSubnavLink);
+    }
+
+    function disableMobile() {
+      console.log('disableMobile');
+
+      $navItemsLinks.on('click', onClickNavLink);
+      $subnavSectionsLinks.on('click', onClickSubnavLink);
     }
 
     function onClickNavLink(e) {
