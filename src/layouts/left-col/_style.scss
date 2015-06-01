@@ -30,6 +30,7 @@
     > .layout-wrapper {
       display: table;
       height: 400px; // we are in display: table, so this is like a min-height
+      table-layout: fixed;
       width: $large-grid-width;
     }
 

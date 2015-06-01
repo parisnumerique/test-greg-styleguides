@@ -76,6 +76,7 @@
     line-height: 50px;
     padding: 0 15px;
     text-decoration: none;
+    white-space: nowrap;
     width: 100%;
 
     &:after {
@@ -105,7 +106,7 @@
   }
 }
 
-@include small {
+@include medium-and-small {
   .news-push-image {
     margin-bottom: 20px;
   }
@@ -166,8 +167,6 @@
     }
 
     .news-push-link {
-      width: 410px;
-
       &:after {
         right: -1000px;
         width: 1000px;
@@ -179,6 +178,14 @@
           left: 5px;
         }
       }
+    }
+  }
+}
+
+@include large {
+  .component-news-push {
+    .news-push-link {
+      width: 410px;
     }
   }
 }

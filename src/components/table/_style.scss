@@ -10,9 +10,19 @@
     text-align: left;
   }
 
+  table {
+    width: 770px;
+  }
+
+  tr > th,
+  tr > td {
+    border-left: 1px solid $gray204;
+
+    &:first-child {border-left: none;}
+  }
+
   tr > th {
     background-color: $blue5;
-    border-left: 1px solid $gray204;
     color: white;
     font-size: 15px;
     font-weight: 500;
@@ -28,7 +38,6 @@
   }
 
   tr > td {
-    border-left: 1px solid $gray204;
     color: $gray51;
     font-size: 14px;
     font-weight: 300;
@@ -60,11 +69,8 @@
 @include medium-and-small {
   .component-table {
     overflow-x: auto;
+    position: relative;
     width: 100%;
-
-    table {
-      //table-layout: fixed;
-    }
   }
 }
 

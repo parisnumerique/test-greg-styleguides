@@ -42,8 +42,10 @@ append content
         .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
-          +last-update(data.last_update)
-          +jecoute(data.jecoute)
+          if data.last_update
+            +last-update(data.last_update)
+          if data.jecoute
+            +jecoute(data.jecoute)
 
 append content
   if data.cross_content.items.length === 3
