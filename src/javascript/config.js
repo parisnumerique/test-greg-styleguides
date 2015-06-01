@@ -13,8 +13,5 @@ Paris.config = {
       global: "recette_ParisFront",
       persons: "recette_Elus"
     }
-  },
-  api: {
-    persons: "http://r7.paris-fr-api.lestudio.mx/elus/getelus"
   }
 };
