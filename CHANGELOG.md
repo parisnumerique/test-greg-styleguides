@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.11.1 (2015-06-01)
+
+* component `jecoute`: save question implemented
+* template `list-persons`: removed specific API, now only using Algolia
+* template `list-persons/adjoints`: DRY by reusing `list-persons`
+* template `single-person`: `data.aside.picture` now optional
+* template `single-person/small-portrait`: DRY by reusing `single-person`
+* now exposing the PubSub instance in `Paris.events`
+* now exposing the living style guide version in `Paris.version`
+* fixed build task to stop exposing absolute paths on Windows
+
 ## 0.11.0 (2015-05-19)
 
 * component `jecoute`: replaced title
