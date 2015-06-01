@@ -7,8 +7,7 @@
       "rheader": {
         "logo": {
           "href": "../home/",
-          "text": "Paris",
-          "h1": true
+          "text": "Paris"
         },
         "locales": [
           {"href": "#fr", "text": "fr", "current": true},
