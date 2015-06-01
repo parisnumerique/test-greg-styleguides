@@ -110,19 +110,8 @@ Paris.listPersons = (function(){
         params.facetFilters.push(options.addFacetFilter);
       }
 
-      // Launch the search
-      if (query === "") {
-        // using the API
-        $.getJSON(Paris.config.api.persons, params)
-          .done(function(data){
-            onSearchResults(null, data);
-          }).fail(function(jqxhr, textStatus, error) {
-            onSearchResults(error, null);
-          });
-      } else {
-        // using Algolia
-        index.search(query, params, onSearchResults);
-      }
+      // Launch the search using Algolia
+      index.search(query, params, onSearchResults);
     }
 
     function onSearchResults(err, data) {
@@ -137,7 +126,7 @@ Paris.listPersons = (function(){
       if (!data) {
         // No search
         // TODO show default
-      } else if (data.nbHits === 0 || !data.hits) {
+      } else if (data.nbHits === 0) {
         // Search with no results
         $results.html("<h2>" + Paris.i18n.t("search_results/no_result") + "</h2>");
       } else {
@@ -251,9 +240,21 @@ Paris.listPersons = (function(){
       currentFacets = [];
       $.each(options.facets, function(index, facet) {
         var facetValues = [];
-        $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked").each(function(){
-          facetValues.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
-        });
+        var $select = $facetsContainer.find(".block-aside-select[name^='" + facet + "']");
+        var $checkboxes = $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked");
+
+        if ($select.is(':visible')) {
+          if ($select.val() === null) {return;}
+          $.each($select.val(), function(i, value){
+            facetValues.push($select.attr("name").replace("[]", "") + ":" + value);
+          });
+        } else {
+          $checkboxes.each(function(){
+            if ($(this).val() === null) {return;}
+            facetValues.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
+          });
+        }
+
         if (facetValues.length > 0) {
           currentFacets.push(facetValues);
         }

@@ -31,14 +31,27 @@ Paris.jecoute = (function(){
 
     function onSubmitForm(e) {
       e.preventDefault();
+
+      // Serialize array before disabling form elements
+      var data = $(this).serializeArray();
       $formElements.attr('disabled', 'disabled');
-      saveQuestion($(this).serializeArray());
+
+      // Insert current url
+      data.push({
+        name:   'url',
+        value:  window.location.href
+      });
+
+      saveQuestion(data);
     }
 
     function saveQuestion(data) {
-      // TODO: save data and add onQuestionSaved as the callback
-      // for now, we simulate the behaviour with setTimeout
-      setTimeout(onQuestionSaved, 1000);
+      $.ajax({
+        url:      $form.attr('action'),
+        type:     $form.attr('method'),
+        data:     data,
+        complete: onQuestionSaved
+      });
     }
 
     function onQuestionSaved() {
