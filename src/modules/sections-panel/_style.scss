@@ -96,6 +96,10 @@ $sections-panel-subnav-offset: 200px;
   }
 }
 
+.sections-panel-back {
+  display: none;
+}
+
 .sections-panel-subnav-default {
 
   h2 {
@@ -221,6 +225,12 @@ $sections-panel-subnav-offset: 200px;
 
 
 @include small {
+  .sections-panel {
+    &.has-content .sections-panel-subnav.has-current-item,
+    .sections-panel-nav.has-current-item {
+      display: none;
+    }
+  }
   .sections-panel-nav {
     text-align: center;
   }
@@ -231,6 +241,43 @@ $sections-panel-subnav-offset: 200px;
   .sections-panel-subnav,
   .sections-panel-content {
     padding: 40px $small-page-padding;
+    transform: none !important;
+  }
+  .sections-panel-back {
+    box-shadow: inset -3px 0px 3px -2px transparentize($black, 0.9);
+    color: $color-secondary;
+    font-size: 20px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    padding-top: 40px;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 30px;
+    &:before {
+      @extend %icon-font;
+      @extend %icon-arrow-left;
+    }
+    &:hover {color: $black;}
+  }
+
+  .sections-panel-subnav.has-current-item {
+    padding-left: $small-page-padding + 30px;
+
+    .sections-panel-subnav-back {
+      background-color: $yellow2;
+      display: block;
+    }
+  }
+  .sections-panel.has-content {
+    .sections-panel-content {
+      padding-left: $small-page-padding + 30px;
+    }
+    .sections-panel-content-back {
+      background-color: $gray242;
+      display: block;
+    }
   }
 }
 

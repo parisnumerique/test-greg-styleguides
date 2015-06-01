@@ -66,6 +66,7 @@
         ]
       },
       "sections": {
+        "base": "../hub/",
         "nav": {
           "items": [
             {
@@ -465,6 +466,7 @@
         ]
       },
       "sections": {
+        "base": "../hub/",
         "nav": {
           "items": [
             {
@@ -875,6 +877,7 @@
         ]
       },
       "sections": {
+        "base": "../hub/",
         "nav": {
           "items": [
             {

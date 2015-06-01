@@ -6,13 +6,17 @@ include ../../components/links/links
 mixin sections-panel(data)
   - has_current_item = false
   - has_content = typeof data.content !== 'undefined'
+  each item in data.nav.items
+    - if (item.current === true) {current_item = item; has_current_item = true;}
   .sections-panel(class=(has_content ? "has-content" : ""))
     if data.nav
-      .sections-panel-nav(class=(has_content ? "closed" : ""))
+      - nav_classes = []
+      - if (has_current_item) {nav_classes.push('has-current-item');}
+      - if (has_content) {nav_classes.push('closed');}
+      .sections-panel-nav(class=nav_classes)
         if data.nav.items.length !== 0
           ul.sections-panel-nav-items
             each item in data.nav.items
-              - if (item.current === true) {has_current_item = true;}
               li.sections-panel-nav-item
                 a(href=item.href data-subnav-section=item.slug data-background=item.background class=(item.current ? "current" : ""))= item.text
         if data.nav.more
@@ -20,6 +24,7 @@ mixin sections-panel(data)
           - more.modifiers = ["action", "white", "small", "sections-panel-nav-more"]
           +button(more)
       .sections-panel-subnav#sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))
+        a.sections-panel-back.sections-panel-subnav-back(href=data.base)
         .sections-panel-subnav-default(data-background=data.default.background)
           if data.default.links
             +block-aside-links(data.default.links)
@@ -37,6 +42,7 @@ mixin sections-panel(data)
                       .sections-panel-subnav-item-title= subitem.title
                       .sections-panel-subnav-item-text= subitem.text
     .sections-panel-content#sections-panel-content
+      a.sections-panel-back.sections-panel-content-back(href=current_item ? current_item.href : "")
       .sections-panel-content-wrapper
         if has_content
           .sections-panel-intro= data.content.intro

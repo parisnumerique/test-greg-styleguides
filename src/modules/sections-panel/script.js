@@ -27,7 +27,7 @@ Paris.sectionsPanel = (function(){
       $nav, $subnav, $content,
       $navItems, $navItemsLinks, $navMore,
       $subnavSections, $subnavSectionsLinks, $subnavDefault,
-      $contentWrapper,
+      $contentWrapper, $contentBack,
       root,
       currentLevel = "nav",
       heights = {};
@@ -47,6 +47,7 @@ Paris.sectionsPanel = (function(){
 
       $content = $el.find('.sections-panel-content');
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
+      $contentBack = $content.find('.sections-panel-content-back');
 
       onResize();
       $(window).on('resize', throttle(onResize, 1000));
@@ -105,15 +106,11 @@ Paris.sectionsPanel = (function(){
     }
 
     function enableMobile() {
-      console.log('enableMobile');
-
       $navItemsLinks.off('click', onClickNavLink);
       $subnavSectionsLinks.off('click', onClickSubnavLink);
     }
 
     function disableMobile() {
-      console.log('disableMobile');
-
       $navItemsLinks.on('click', onClickNavLink);
       $subnavSectionsLinks.on('click', onClickSubnavLink);
     }
@@ -122,6 +119,7 @@ Paris.sectionsPanel = (function(){
       e.preventDefault();
       var $this = $(this);
       var subnavSection = $this.data('subnav-section');
+      $nav.addClass('has-current-item');
       $navItemsLinks.removeClass("current");
       $this.addClass("current");
       if (currentLevel === "content") {closeContent();}
@@ -135,6 +133,7 @@ Paris.sectionsPanel = (function(){
       $section.velocity({
         opacity: 1
       }, $.extend({}, options.velocity, {display: 'block'}));
+      $subnav.addClass('has-current-item');
       currentLevel = "subnav";
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
@@ -153,6 +152,7 @@ Paris.sectionsPanel = (function(){
       if (currentLevel === "content") {closeContent();}
       $subnavDefault.show();
       $subnavSections.hide();
+      $subnav.removeClass('has-current-item');
       currentLevel = "nav";
 
       PubSub.publish("sections-panel:change", {
@@ -195,10 +195,12 @@ Paris.sectionsPanel = (function(){
           display: 'block'
         }));
       }
+      $el.addClass('has-content');
       currentLevel = "content";
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
       var $currentSubnavSectionsLink = $subnavSectionsLinks.filter('.current');
+      $contentBack.attr('href', $currentNavItemsLink.attr('href'));
       var currentTitle = $currentSubnavSectionsLink.find('.sections-panel-subnav-item-title').text();
       PubSub.publish("sections-panel:change", {
         image: $currentSubnavSectionsLink.data('background'),
@@ -231,6 +233,7 @@ Paris.sectionsPanel = (function(){
         complete: setHeight,
         display: 'none'
       }));
+      $el.removeClass('has-content');
       currentLevel = "subnav";
     }
 
