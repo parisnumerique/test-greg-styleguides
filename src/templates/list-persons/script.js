@@ -240,9 +240,21 @@ Paris.listPersons = (function(){
       currentFacets = [];
       $.each(options.facets, function(index, facet) {
         var facetValues = [];
-        $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked").each(function(){
-          facetValues.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
-        });
+        var $select = $facetsContainer.find(".block-aside-select[name^='" + facet + "']");
+        var $checkboxes = $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked");
+
+        if ($select.is(':visible')) {
+          if ($select.val() === null) {return;}
+          $.each($select.val(), function(i, value){
+            facetValues.push($select.attr("name").replace("[]", "") + ":" + value);
+          });
+        } else {
+          $checkboxes.each(function(){
+            if ($(this).val() === null) {return;}
+            facetValues.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
+          });
+        }
+
         if (facetValues.length > 0) {
           currentFacets.push(facetValues);
         }
