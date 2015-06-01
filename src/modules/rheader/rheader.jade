@@ -11,19 +11,19 @@ mixin rheader(data)
         each locale in data.locales
           li
             a(href=locale.href class=(locale.current ? 'current' : ''))= locale.text
-      a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text)
+      a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text target=data.buttons.search.target)
         if data.buttons.search.icon
           i.rheader-button-icon(class="icon-#{data.buttons.search.icon}")
-      a.rheader-button.rheader-button-around(href=data.buttons.around.href title=data.buttons.around.text)
+      a.rheader-button.rheader-button-around(href=data.buttons.around.href title=data.buttons.around.text target=data.buttons.around.target)
         if data.buttons.around.icon
           i.rheader-button-icon(class="icon-#{data.buttons.around.icon}")
           span.rheader-button-text= data.buttons.around.text
-      a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href)
+      a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target)
         span.rheader-button-text= data.buttons.menu.text
       ul.rheader-nav
         each item in data.items
           li.rheader-nav-item(class=item.modifiers)
-            a(href=item.href)
+            a(href=item.href target=item.target)
               if item.icon
                 i.rheader-nav-item-icon(class="icon-#{item.icon}")
               if item.hover
