@@ -208,6 +208,7 @@
         {
           "type": "jumbotron",
           "data": {
+            "href": "../single-news",
             "image": "../../modules/jumbotron/image.jpg",
             "title": "À la une",
             "text": "Revivez Nuit Blanche en photos et vidéo"

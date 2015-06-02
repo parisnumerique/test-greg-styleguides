@@ -54,6 +54,7 @@
         }
       },
       "jumbotron": {
+        "href": "../single-news",
         "image": "../../modules/jumbotron/image.jpg",
         "title": "À la une",
         "text": "Revivez Nuit Blanche en photos et vidéo"
@@ -625,6 +626,7 @@
         }
       },
       "jumbotron": {
+        "href": "../single-news",
         "image": "../../modules/jumbotron/image.jpg",
         "title": "À la une",
         "text": "Revivez Nuit Blanche en photos et vidéo"
