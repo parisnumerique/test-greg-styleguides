@@ -3,6 +3,7 @@ require('velocity-animate');
 var has = require('lodash.has');
 var values = require('lodash.values');
 var throttle = require('lodash.throttle');
+var map = require('lodash.map');
 var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
@@ -143,7 +144,7 @@ Paris.sectionsPanel = (function(){
     function onClickSubnavLink(e) {
       e.preventDefault();
       var $this = $(this);
-      var url = $this.attr('href');
+      var url = $this.data('json');
       $subnavSectionsLinks.removeClass("current");
       $this.addClass("current");
       openContent(url);
@@ -153,18 +154,9 @@ Paris.sectionsPanel = (function(){
       $.ajax({
         url: url,
         type: "get",
-        success: function(response){
-          // If the full page is loaded, only insert what's in the content-wrapper
-          // If we can't find a content-wrapper, insert the whole response
-          var content = $(response).find('.sections-panel-content-wrapper').html() || response;
-          $contentWrapper.html(content).velocity({
-            opacity: [1, 0]
-          }, $.extend({}, options.velocity, {
-            complete: setHeight,
-            display: 'block'
-          }));
-        }
+        success: renderContent
       });
+
       if (currentLevel !== "content") {
         $nav.addClass("closed");
         $subnav.velocity({
@@ -215,6 +207,35 @@ Paris.sectionsPanel = (function(){
         display: 'none'
       }));
       currentLevel = "subnav";
+    }
+
+    function renderContent(data) {
+      var content =
+        '<div class="sections-panel-intro">' + data.intro + '</div>' +
+        '<ul class="sections-panel-content-items">';
+
+      content += map(data.items, function(item){
+        return '<li class="sections-panel-content-item">' +
+          '<a href="'+item.href+'">' +
+          '<div class="sections-panel-content-item-title">'+item.title+'</div>' +
+          '<div class="sections-panel-content-item-text">'+item.text+'</div>' +
+          '</a></li>';
+      }).join('');
+      content += '</ul>';
+
+      if (data.buttons) {
+        content += Paris.templates.templatizer["buttons"]["buttons"](data.buttons);
+      }
+      if (data.more_links) {
+        content += Paris.templates.templatizer["links"]["links"](data.more_links);
+      }
+
+      $contentWrapper.html(content).velocity({
+        opacity: [1, 0]
+      }, $.extend({}, options.velocity, {
+        complete: setHeight,
+        display: 'block'
+      }));
     }
 
 

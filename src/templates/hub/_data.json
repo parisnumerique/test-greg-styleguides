@@ -82,36 +82,42 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
@@ -129,12 +135,14 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
@@ -478,36 +486,42 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
@@ -525,12 +539,14 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
@@ -885,36 +901,42 @@
                   {
                     "current": true,
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
@@ -932,12 +954,14 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
