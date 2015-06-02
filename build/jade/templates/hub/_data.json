@@ -4,54 +4,50 @@
       "title": "Services et infos pratiques",
       "bodyModifiers": ["fixed-nav", "hub"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        },
-        "quick_access": {
-          "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
           },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
           }
-        }
+        ]
       },
       "heading": {
         "text": "Services <br />et infos pratiques",
@@ -70,6 +66,7 @@
         ]
       },
       "sections": {
+        "base": "../hub/",
         "nav": {
           "items": [
             {
@@ -82,36 +79,42 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
@@ -129,12 +132,14 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
@@ -379,7 +384,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -396,54 +401,50 @@
       "title": "Culture et patrimoine",
       "bodyModifiers": ["fixed-nav", "hub"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        },
-        "quick_access": {
-          "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
           },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
           }
-        }
+        ]
       },
       "heading": {
         "text": "Culture et patrimoine",
@@ -465,6 +466,7 @@
         ]
       },
       "sections": {
+        "base": "../hub/",
         "nav": {
           "items": [
             {
@@ -478,36 +480,42 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
@@ -525,12 +533,14 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
@@ -781,7 +791,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -798,54 +808,50 @@
       "title": "Musées et expos",
       "bodyModifiers": ["fixed-nav", "hub"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        },
-        "quick_access": {
-          "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
           },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
           }
-        }
+        ]
       },
       "heading": {
         "text": "Musées et expos",
@@ -871,6 +877,7 @@
         ]
       },
       "sections": {
+        "base": "../hub/",
         "nav": {
           "items": [
             {
@@ -885,36 +892,42 @@
                   {
                     "current": true,
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Musées et expos",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Bibliothèques",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Histoire et patrimoine",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Photo et cinéma",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Pratiques artistiques",
                     "text": "Sollicitudin nibh ultricies ornare."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Spectacles",
                     "text": "Donec ullamcorper nulla non metus auctor"
@@ -932,12 +945,14 @@
                 "items": [
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Donec id elit non mi porta gravida at eget metus."
                   },
                   {
                     "href": "../hub/content-open.html#sections-panel-content",
+                    "json": "../hub/content.json",
                     "background": "../hub/hub-heading.png",
                     "title": "Titre",
                     "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
@@ -1267,7 +1282,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

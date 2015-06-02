@@ -14,3 +14,9 @@ mixin block-aside-checkboxes(data)
               = item.text
                 if item.number
                   |  (#{item.number})
+    select.block-aside-select(multiple name="#{data.name}[]")
+      each item in data.items
+        option(value=item.value selected=item.checked)
+          = item.text
+          if item.number
+            |  (#{item.number})

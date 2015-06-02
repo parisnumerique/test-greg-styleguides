@@ -1,16 +1,22 @@
 include ../button/button
+include ../heading/heading
 include ../notice/notice
 include ../search-field/search-field
 
 mixin quick-access(data)
-  .quick-access(class=data.modifiers style=data.background && data.background.image ? "background-image: url(#{data.background.image});" : "")
-    if data.background && data.background.video
-      video.quick-access-video(autoplay=true, loop=true, muted='muted', poster=data.background.image)
-        each source in data.background.video.sources
-          source&attributes(source)
-    .quick-access-wrapper
+  .quick-access(class=data.modifiers)
+    if data.background
+      if data.background.image
+        .quick-access-background(style="background-image: url(#{data.background.image});")
+      if data.background.video
+        video.quick-access-video(autoplay=true, loop=true, muted='muted', poster=data.background.image)
+          each source in data.background.video.sources
+            source&attributes(source)
+    .quick-access-wrapper.layout-wrapper
       .quick-access-search
         +search-field(data.search)
+      if data.heading
+        +heading(data.heading)
       if data.items
         ul.quick-access-buttons
           each item in data.items

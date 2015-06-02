@@ -9,7 +9,7 @@ mixin button(data)
         i.icon.icon-marker
       else if data.icon
         i.icon(class="icon-#{data.icon}")
-      = data.text
+      span.button-text= data.text
   else
     button.button(class=modifiers)&attributes(attributes)
       = data.text

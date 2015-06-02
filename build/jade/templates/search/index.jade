@@ -8,14 +8,14 @@ include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
 include ../../modules/button-top/button-top
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/search-field/search-field
 include ../../modules/search-results-list/search-results-list
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content
@@ -26,8 +26,11 @@ append content
   .layout-left-col
     .layout-wrapper
       aside.layout-aside
-        //+block-aside-links(data.block_aside_links)
-        //+block-aside-checkboxes(data.block_aside_checkboxes)
+        if data.suggestions
+          +block-aside-links(data.suggestions)
+        if data.facets
+          each facet in data.facets
+            +block-aside-checkboxes(facet)
 
       .layout-content#results
         +search-results-list(data.search_results)
