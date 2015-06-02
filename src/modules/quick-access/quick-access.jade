@@ -15,7 +15,8 @@ mixin quick-access(data)
     .quick-access-wrapper.layout-wrapper
       .quick-access-search
         +search-field(data.search)
-      +heading(data.heading)
+      if data.heading
+        +heading(data.heading)
       if data.items
         ul.quick-access-buttons
           each item in data.items
