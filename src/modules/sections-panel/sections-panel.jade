@@ -33,7 +33,7 @@ mixin sections-panel(data)
               ul.sections-panel-subnav-items
                 each subitem in item.subnav.items
                   li.sections-panel-subnav-item
-                    a(href=subitem.href data-background=subitem.background class=(subitem.current ? "current" : ""))
+                    a(href=subitem.href data-background=subitem.background data-json=subitem.json class=(subitem.current ? "current" : ""))
                       .sections-panel-subnav-item-title= subitem.title
                       .sections-panel-subnav-item-text= subitem.text
     .sections-panel-content#sections-panel-content
