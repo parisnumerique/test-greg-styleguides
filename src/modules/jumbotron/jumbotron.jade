@@ -1,5 +1,5 @@
 mixin jumbotron(data)
-  a.jumbotron(href='#', style='background-image: url(#{data.image});')
+  a.jumbotron(href=data.href style="background-image: url(#{data.image});")
     .jumbotron-wrapper
       .layout-wrapper.jumbotron-content.layout-outside
           h2.jumbotron-title= data.title
