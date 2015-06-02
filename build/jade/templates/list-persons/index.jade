@@ -9,7 +9,7 @@ include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/news-list/news-list
 include ../../modules/pagination/pagination
@@ -18,14 +18,14 @@ include ../../modules/search-field/search-field
 include ../../modules/share/share
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content
     +document-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-padding
+  .layout-content.layout-separate-after.layout-small-padding.hidden-on-small
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
@@ -35,7 +35,7 @@ append content
       .layout-wrapper
         aside.layout-aside
           .aside-wrapper
-            +block-aside({})
+            +block-aside({"modifiers": "hidden-on-small"})
               +share(data.aside.share)
             +block-aside({})
               +search-field(data.aside.search)

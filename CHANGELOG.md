@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.0 (2015-06-02)
+
+Responsive design (more detailed changelog soon)
+
 ## 0.11.1 (2015-06-01)
 
 * component `jecoute`: save question implemented

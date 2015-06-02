@@ -1,7 +1,8 @@
 include ../../modules/tags/tags
 
 mixin document-heading(data)
-  .document-heading(style=data.image && "background-image:url('#{data.image}')")
+  .document-heading
+    .document-heading-background(style=data.image && "background-image:url('#{data.image}')")
     .document-heading-wrapper
       .document-heading-content
         .document-heading-content-wrapper

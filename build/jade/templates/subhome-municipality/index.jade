@@ -7,26 +7,26 @@ include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/links-group/links-group
 include ../../modules/search-push/search-push
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content
     +hub-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-padding
+  .layout-content.layout-separate-after.layout-small-padding.hidden-on-small
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content
+  .layout-content.layout-padding-after
     .layout-wrapper
       each group in data.links_groups
         +links-group(group)
@@ -35,7 +35,8 @@ append content
   .layout-content.color-secondary-background.layout-separate-after
     .layout-three-col
       .layout-wrapper
-        +heading(data.connected.heading)
+        .hidden-on-small
+          +heading(data.connected.heading)
         .layout-content
           +block-content-newsletter(data.connected.newsletter)
         .layout-content
