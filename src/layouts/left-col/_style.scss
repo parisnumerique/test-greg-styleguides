@@ -1,96 +1,116 @@
 .layout-left-col {
   background-color: $white;
   width: 100%;
-  overflow: hidden;
 
-  .layout-wrapper {
-    display: table;
-    height: 400px; // we are in display: table, so this is like a min-height
+  > .layout-wrapper {
     margin: 0 auto;
-    width: 1100px;
+    padding: 0;
+    width: 100%;
   }
 
   .layout-aside {
     background-color: $gray242;
-    display: table-cell;
-    padding: 0 20px 40px 0;
-    position: relative;
-    width: 280px;
-    vertical-align: top;
+  }
+}
 
-    .aside-wrapper{
-      overflow-y: hidden;
-      padding-top: 40px;
-      transition: .4s ease padding-top;
-
-      > *:last-child {
-        padding-bottom: 50px;
-      }
-
-      &.affix {
-        overflow: visible;
-        position: fixed;
-        top: 80px;
-        padding-top: 100px;
-      }
-      &.affix-bottom {
-        position: absolute;
-        overflow: visible;
-        padding-top: 100px;
-      }
+@include small {
+  .layout-left-col {
+    .layout-aside,
+    .layout-content {
+      padding: 40px $small-page-padding;
     }
+  }
+}
 
-    .aside-title {
-      text-align: left;
-      transform: translateY(-200px);
-      height: 80px;
+@include large-and-medium {
+
+  .layout-left-col {
+    overflow: hidden;
+
+    > .layout-wrapper {
       display: table;
-      margin-top: 0;
-      transition: .3s ease transform;
-      position: absolute;
-      left: -32px;
-      padding-left: 10px;
-      border-left: 6px solid $color-tertiary;
-      top: 0;
+      height: 400px; // we are in display: table, so this is like a min-height
+      table-layout: fixed;
+      width: $large-grid-width;
+    }
 
-      span {
-        display: table-cell;
-        vertical-align: middle;
+    .layout-aside {
+      display: table-cell;
+      padding: 0 20px 40px 0;
+      position: relative;
+      width: 280px;
+      vertical-align: top;
+
+      .aside-wrapper {
+        overflow-y: hidden;
+        padding-top: 40px;
+        transition: .4s ease padding-top;
+
+        > *:last-child {
+          padding-bottom: 50px;
+        }
+
+        &.affix {
+          overflow: visible;
+          position: fixed;
+          top: 80px;
+          padding-top: 100px;
+        }
+        &.affix-bottom {
+          position: absolute;
+          overflow: visible;
+          padding-top: 100px;
+        }
+      }
+
+      &:before {
+        background-color: $gray242;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 99999px; // Fix for IE 10 and 11
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 1000px;
       }
     }
 
-    .aside-wrapper.affix .aside-title,
-    .aside-wrapper.affix-bottom .aside-title {
-      transform: none;
+    .layout-content {
+      display: table-cell;
+      padding: 40px 0 40px 50px;
+      vertical-align: top;
     }
 
+  }
 
-    &:before {
-      background-color: $gray242;
-      bottom: 0;
-      content: "";
-      display: block;
-      position: absolute;
-      right: 100%;
-      top: 0;
-      width: 1000px;
+}
 
-      // Target IE 10 and 11
-      @media screen\0 {
-        height: 99999px;
+@include medium {
+  .layout-left-col {
+    > .layout-wrapper{
+      width: 100%;
+    }
+
+    .layout-aside {
+      padding-left: 20px;
+    }
+
+    .layout-content {
+      padding-right: 50px;
+      width: auto;
+    }
+  }
+}
+
+@include large {
+  .layout-left-col {
+    .layout-content {
+      width: 820px;
+
+      .component {
+        max-width: 770px;
       }
     }
   }
-
-  .layout-content {
-    display: table-cell;
-    padding: 40px 0 40px 50px;
-    width: 820px;
-    vertical-align: top;
-
-    .component {
-      max-width: 770px;
-    }
-  }
-
 }

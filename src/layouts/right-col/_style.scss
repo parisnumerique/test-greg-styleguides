@@ -15,20 +15,36 @@
     background-color: $gray242;
   }
 
-  .layout-wrapper {
-    display: table;
+  > .layout-wrapper {
     margin: 0 auto;
-    width: 1100px;
+
+    @include small {
+      padding: 0;
+    }
+
+    @include large-and-medium {
+      display: table;
+      width: $large-grid-width;
+    }
+  }
+
+  @include large-and-medium {
+    .layout-aside,
+    .layout-content {
+      display: table-cell;
+    }
   }
 
   .layout-aside {
     background-color: $gray242;
-    display: table-cell;
     padding: 40px 0 40px 20px;
+    @include small {padding: 40px $small-page-padding;}
     position: relative;
     text-align: left;
     vertical-align: top;
-    width: 350px;
+    @include large-and-medium {
+      width: 350px;
+    }
 
     &:after {
       background-color: $gray242;
@@ -49,9 +65,9 @@
   }
 
   .layout-content {
-    display: table-cell;
     padding: 40px 30px 40px 0;
-    width: 750px;
+    @include large {width: 750px;}
+    @include medium {width: 590px;}
   }
 
 }

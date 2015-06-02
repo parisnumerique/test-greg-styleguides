@@ -1,9 +1,15 @@
 .video-cover {
-  width: 540px;
-  height: 260px;
-  overflow: hidden;
   background-position: center center;
+  height: 260px;
+  max-width: 540px;
+  overflow: hidden;
   position: relative;
+  width: 100%;
+
+  html.flexbox & {
+    align-items: center;
+    display: flex;
+  }
 
   &:before {
     position: absolute;
@@ -31,10 +37,8 @@
   }
 
   .button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 250px;
-    transform: translateX(-125px) translateY(-25px);
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

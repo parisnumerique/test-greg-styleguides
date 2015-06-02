@@ -2,6 +2,7 @@
   "index": {
     "defaults": {
       "nav": {
+        "base": ".",
         "items": [
           {
             "href": "#",
@@ -13,36 +14,42 @@
               "items": [
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Musées et expos",
                   "text": "Donec id elit non mi porta gravida at eget metus."
                 },
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Bibliothèques",
                   "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                 },
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Histoire et patrimoine",
                   "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
                 },
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Photo et cinéma",
                   "text": "Donec id elit non mi porta gravida at eget metus."
                 },
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Pratiques artistiques",
                   "text": "Sollicitudin nibh ultricies ornare."
                 },
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Spectacles",
                   "text": "Donec ullamcorper nulla non metus auctor."
@@ -60,12 +67,14 @@
               "items": [
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Titre",
                   "text": "Donec id elit non mi porta gravida at eget metus."
                 },
                 {
                   "href": "./content.html",
+                  "json": "./content.json",
                   "background": "../modules/hub-heading/hub-heading.png",
                   "title": "Titre",
                   "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."

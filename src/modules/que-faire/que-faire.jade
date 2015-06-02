@@ -1,8 +1,12 @@
 mixin que-faire(data)
-  .que-faire(style='background-image: url(#{data.background});')
-    a.logo(href=data.logo.href style='background-image: url(#{data.logo.image});' target="_blank")
-      span= data.logo.alt
-    .que-faire-content
-      each item in data.items
-        a.button.button-que-faire(href=item.href target=item.target)
-          span= item.text
+  .que-faire
+    .que-faire-wrapper(style='background-image: url(#{data.background});')
+      a.que-faire-logo(href=data.logo.href style='background-image: url(#{data.logo.image});' target="_blank")
+        span= data.logo.alt
+      .que-faire-content
+        each item in data.items
+          a.button.button-que-faire(href=item.href target=item.target)
+            span= item.text
+      if data.more
+        a.button.button-que-faire.more(href=data.more.href target="_blank")
+          span!= data.more.text

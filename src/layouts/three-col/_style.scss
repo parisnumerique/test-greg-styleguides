@@ -1,21 +1,52 @@
 .layout-three-col {
-  overflow: hidden;
   width: 100%;
+}
 
-  .layout-wrapper {
-    @include container;
-    display: table;
-    width: $grid-width;
+@include small {
+  .layout-three-col {
+    .layout-content + .layout-content {
+      margin-top: 50px;
+    }
   }
+}
 
-  .layout-content {
-    @include span(4 of 12);
-    display: table-cell;
-    vertical-align: top;
+@include medium {
+  .layout-three-col {
+    overflow: hidden;
+
+    .layout-content {
+      float: left;
+      margin-bottom: 50px;
+      width: 48%;
+
+      & + .layout-content {
+        margin-left: 4%;
+      }
+
+      &:last-child {
+        clear: both;
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
+}
 
-  .layout-content:last-child {
-    @include last;
+@include large {
+  .layout-three-col {
+    overflow: hidden;
+
+    > .layout-wrapper {
+      @include container;
+      display: table;
+      width: $large-grid-width;
+    }
+
+    .layout-content {
+      @include span(4 of 12);
+      &:last-child {@include last;}
+      display: table-cell;
+      vertical-align: top;
+    }
   }
-
 }

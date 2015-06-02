@@ -4,56 +4,53 @@
       "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités", "current": true},
+          {"href": "../subhome-news/", "text": "Actualités", "current": true},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        },
-        "quick_access": {
-          "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
           },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
           }
-        }
+        ]
       },
       "jumbotron": {
+        "href": "../single-news",
         "image": "../../modules/jumbotron/image.jpg",
         "title": "À la une",
         "text": "Revivez Nuit Blanche en photos et vidéo"
@@ -347,7 +344,12 @@
           {"href": "#", "text": "Que faire à Paris ce week-end ?"},
           {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
           {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-        ]
+        ],
+        "more": {
+          "href": "#",
+          "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
+          "modifiers": "more"
+        }
       },
       "search_push": {
         "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
@@ -558,7 +560,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -575,56 +577,53 @@
       "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités", "current": true},
+          {"href": "../subhome-news/", "text": "Actualités", "current": true},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        },
-        "quick_access": {
-          "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
           },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
           }
-        }
+        ]
       },
       "jumbotron": {
+        "href": "../single-news",
         "image": "../../modules/jumbotron/image.jpg",
         "title": "À la une",
         "text": "Revivez Nuit Blanche en photos et vidéo"
@@ -828,7 +827,12 @@
           {"href": "#", "text": "Que faire à Paris ce week-end ?"},
           {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
           {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-        ]
+        ],
+        "more": {
+          "href": "#",
+          "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
+          "modifiers": "more"
+        }
       },
       "search_push": {
         "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
@@ -1039,7 +1043,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -1056,54 +1060,50 @@
       "title": "Actualité",
       "bodyModifiers": ["fixed-nav"],
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "languages": [
-          {"abbr": "fr", "href": "/fr"},
-          {"abbr": "en", "href": "/en"},
-          {"abbr": "es", "href": "/es"}
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
         ],
-        "active_language": "fr",
-        "search": {"visible": true},
-        "marker": {"visible": true},
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
+        },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités", "current": true},
+          {"href": "../subhome-news/", "text": "Actualités", "current": true},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate" : {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account" : {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        },
-        "quick_access": {
-          "search": {
-            "input": {
-              "placeholder": "Rechercher un service, une information..."
-            },
-            "submit": {
-              "text": "Rechercher",
-              "icon": true
-            },
-            "around": {
-              "text": "Autour de moi"
-            }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
           },
-          "results": {
-            "button": {
-              "href": "#",
-              "text": "Voir tous les résultats"
-            }
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
           }
-        }
+        ]
       },
       "heading": {
         "text": "Sport et loisirs",
@@ -1312,7 +1312,12 @@
           {"href": "#", "text": "Que faire à Paris ce week-end ?"},
           {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
           {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-        ]
+        ],
+        "more": {
+          "href": "#",
+          "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
+          "modifiers": "more"
+        }
       },
       "search_push": {
         "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
@@ -1523,7 +1528,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

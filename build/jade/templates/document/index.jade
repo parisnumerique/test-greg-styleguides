@@ -11,7 +11,7 @@ include ../../modules/button-top/button-top
 include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/last-update/last-update
 include ../../modules/poll/poll
@@ -20,14 +20,14 @@ include ../../modules/share/share
 include ../../components/components
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content
     +document-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-padding
+  .layout-content.layout-separate-after.layout-small-padding.hidden-on-small
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
@@ -42,8 +42,10 @@ append content
         .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
-          +last-update(data.last_update)
-          +jecoute(data.jecoute)
+          if data.last_update
+            +last-update(data.last_update)
+          if data.jecoute
+            +jecoute(data.jecoute)
 
 append content
   if data.cross_content.items.length === 3

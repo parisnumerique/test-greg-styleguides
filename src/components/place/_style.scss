@@ -2,8 +2,13 @@
   background-color: $gray242;
   border-radius: 5px;
   clear: both;
-  padding: 40px 50px 40px 25px;
+  overflow: auto;
+  padding: 40px 50px 20px 25px;
   position: relative;
+
+  .place-content {
+    padding-bottom: 30px;
+  }
 
   .place-title,
   .place-address {
@@ -40,9 +45,19 @@
   }
 
   > .button {
-    position: absolute;
-    right: 50px;
-    top: 50%;
-    transform: translateY(-40px);
+    margin-bottom: 20px;
+  }
+}
+
+@include large-and-medium {
+  .component-place {
+    .place-content {
+      float: left;
+      padding-bottom: 20px;
+    }
+
+    > .button {
+      float: right;
+    }
   }
 }

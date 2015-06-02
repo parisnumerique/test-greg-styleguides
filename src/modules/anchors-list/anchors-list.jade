@@ -1,8 +1,12 @@
 mixin anchors-list(data)
   - data = data || {}
   .anchors-list&attributes(data.attributes || [])
+    if data.title
+      h3.anchors-list-title
+        span= data.title
     if data && data.items
-      each item in data.items
-        .anchor-bar(class=item.modifiers)
-          a.anchor-link(href=item.href)= item.text
-          span.anchor-progress
+      ul.anchors-list-items
+        each item in data.items
+          li.anchors-list-item(class=item.modifiers)
+            a.anchors-list-link(href=item.href)= item.text
+            span.anchors-list-progress

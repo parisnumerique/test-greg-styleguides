@@ -3,31 +3,28 @@
   background-position:50% 50%;
   background-size: cover;
   display: table;
-  height: 320px;
+  height: 180px;
   text-decoration: none;
   width: 100%;
 
   .layout-wrapper.jumbotron-content {
     border-left: 6px solid $color-tertiary;
     color: $white;
-    padding: 5px 10px 3px 35px;
-  }
-
-  &:hover {
-    .jumbotron-wrapper {
-      &:after {
-        transform: translateX(0);
-      }
+    padding: 5px 24px 3px 24px;
+    @include large-and-medium {
+      padding-left: 35px;
     }
   }
 }
 
 // Keep space for the header, when the jumbotron is the first element after it
 .header-wrapper + .layout-content .jumbotron {
-  height: 400px;
-  padding-top: 80px;
+  margin-top: 0px;
 }
 
+.header-wrapper.fixed + .layout-content .jumbotron {
+  margin-top: 80px;
+}
 
 .jumbotron-wrapper {
   display: table-cell;
@@ -51,8 +48,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    transition: transform 1s ease;
-    transform: translateX(-20%);
+    transform: translateX(0);
     width: 150%;
     z-index: 0;
 
@@ -63,20 +59,51 @@
   }
 }
 
+html.no-touch .jumbotron {
+  .jumbotron-wrapper:after {
+    transition: transform 1s ease;
+    transform: translateX(-20%);
+  }
+
+  &:hover {
+    .jumbotron-wrapper:after {
+      transform: translateX(0);
+    }
+  }
+}
+
 .jumbotron-content {
   position: relative;
   z-index: 1;
 }
 
 .jumbotron-title {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .jumbotron-text {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 44px;
-  margin: 0 0 14px;
+  line-height: 28px;
+  margin: 0 0 8px;
   max-width: 470px;
+}
+
+@include large-and-medium {
+  .jumbotron {
+    height: 320px;
+  }
+
+  .jumbotron-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .jumbotron-text {
+    font-size: 40px;
+    line-height: 44px;
+    margin: 0 0 14px;
+  }
 }

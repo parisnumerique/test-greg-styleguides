@@ -79,6 +79,10 @@
           ]
         }
       },
+      "heading": {
+        "title": "Accès rapides",
+        "modifiers": ["only-on-small"]
+      },
       "search": {
         "input": {
           "placeholder": "Rechercher un service, une information..."
@@ -144,6 +148,10 @@
       "background": {
         "image": "background.jpg"
       },
+      "heading": {
+        "title": "Accès rapides",
+        "modifiers": ["only-on-small"]
+      },
       "search": {
         "input": {
           "placeholder": "Rechercher un service, une information..."
@@ -207,6 +215,10 @@
     "with_primary_item": {
       "background": {
         "image": "background.jpg"
+      },
+      "heading": {
+        "title": "Accès rapides",
+        "modifiers": ["only-on-small"]
       },
       "search": {
         "input": {

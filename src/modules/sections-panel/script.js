@@ -2,7 +2,7 @@
 require('velocity-animate');
 var has = require('lodash.has');
 var values = require('lodash.values');
-var throttle = require('lodash.throttle');
+var map = require('lodash.map');
 var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
@@ -10,6 +10,7 @@ var Paris = window.Paris || {};
 Paris.sectionsPanel = (function(){
 
   var defaultOptions = {
+    breakpoint: "small",
     velocity: {
       duration: 350,
       ease: 'ease-in-out',
@@ -24,7 +25,7 @@ Paris.sectionsPanel = (function(){
       $nav, $subnav, $content,
       $navItems, $navItemsLinks, $navMore,
       $subnavSections, $subnavSectionsLinks, $subnavDefault,
-      $contentWrapper,
+      $contentWrapper, $contentBack,
       root,
       currentLevel = "nav",
       heights = {};
@@ -44,12 +45,11 @@ Paris.sectionsPanel = (function(){
 
       $content = $el.find('.sections-panel-content');
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
+      $contentBack = $content.find('.sections-panel-content-back');
 
-      setHeight();
-      $(window).on('resize', throttle(setHeight, 1000));
-
-      $navItemsLinks.on('click', onClickNavLink);
-      $subnavSectionsLinks.on('click', onClickSubnavLink);
+      PubSub.subscribe('responsive.resize', setHeight);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableSmall);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableSmall);
 
       if ($subnav.hasClass('has-current-item')) {currentLevel = "subnav";}
       if ($el.hasClass('has-content')) {currentLevel = "content";}
@@ -68,7 +68,7 @@ Paris.sectionsPanel = (function(){
     }
 
     function setHeight() {
-      var newHeight = calculateHeight();
+      var newHeight = Paris.responsive.sizes[options.breakpoint].is ? 'auto' : calculateHeight();
       $el.css("height", newHeight);
     }
 
@@ -92,10 +92,21 @@ Paris.sectionsPanel = (function(){
       return Math.max.apply(null, values(heights));
     }
 
+    function enableSmall() {
+      $navItemsLinks.off('click', onClickNavLink);
+      $subnavSectionsLinks.off('click', onClickSubnavLink);
+    }
+
+    function disableSmall() {
+      $navItemsLinks.on('click', onClickNavLink);
+      $subnavSectionsLinks.on('click', onClickSubnavLink);
+    }
+
     function onClickNavLink(e) {
       e.preventDefault();
       var $this = $(this);
       var subnavSection = $this.data('subnav-section');
+      $nav.addClass('has-current-item');
       $navItemsLinks.removeClass("current");
       $this.addClass("current");
       if (currentLevel === "content") {closeContent();}
@@ -109,6 +120,7 @@ Paris.sectionsPanel = (function(){
       $section.velocity({
         opacity: 1
       }, $.extend({}, options.velocity, {display: 'block'}));
+      $subnav.addClass('has-current-item');
       currentLevel = "subnav";
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
@@ -127,6 +139,7 @@ Paris.sectionsPanel = (function(){
       if (currentLevel === "content") {closeContent();}
       $subnavDefault.show();
       $subnavSections.hide();
+      $subnav.removeClass('has-current-item');
       currentLevel = "nav";
 
       PubSub.publish("sections-panel:change", {
@@ -143,7 +156,7 @@ Paris.sectionsPanel = (function(){
     function onClickSubnavLink(e) {
       e.preventDefault();
       var $this = $(this);
-      var url = $this.attr('href');
+      var url = $this.data('json');
       $subnavSectionsLinks.removeClass("current");
       $this.addClass("current");
       openContent(url);
@@ -153,18 +166,9 @@ Paris.sectionsPanel = (function(){
       $.ajax({
         url: url,
         type: "get",
-        success: function(response){
-          // If the full page is loaded, only insert what's in the content-wrapper
-          // If we can't find a content-wrapper, insert the whole response
-          var content = $(response).find('.sections-panel-content-wrapper').html() || response;
-          $contentWrapper.html(content).velocity({
-            opacity: [1, 0]
-          }, $.extend({}, options.velocity, {
-            complete: setHeight,
-            display: 'block'
-          }));
-        }
+        success: renderContent
       });
+
       if (currentLevel !== "content") {
         $nav.addClass("closed");
         $subnav.velocity({
@@ -178,10 +182,12 @@ Paris.sectionsPanel = (function(){
           display: 'block'
         }));
       }
+      $el.addClass('has-content');
       currentLevel = "content";
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
       var $currentSubnavSectionsLink = $subnavSectionsLinks.filter('.current');
+      $contentBack.attr('href', $currentNavItemsLink.attr('href'));
       var currentTitle = $currentSubnavSectionsLink.find('.sections-panel-subnav-item-title').text();
       PubSub.publish("sections-panel:change", {
         image: $currentSubnavSectionsLink.data('background'),
@@ -214,7 +220,37 @@ Paris.sectionsPanel = (function(){
         complete: setHeight,
         display: 'none'
       }));
+      $el.removeClass('has-content');
       currentLevel = "subnav";
+    }
+
+    function renderContent(data) {
+      var content =
+        '<div class="sections-panel-intro">' + data.intro + '</div>' +
+        '<ul class="sections-panel-content-items">';
+
+      content += map(data.items, function(item){
+        return '<li class="sections-panel-content-item">' +
+          '<a href="'+item.href+'">' +
+          '<div class="sections-panel-content-item-title">'+item.title+'</div>' +
+          '<div class="sections-panel-content-item-text">'+item.text+'</div>' +
+          '</a></li>';
+      }).join('');
+      content += '</ul>';
+
+      if (data.buttons) {
+        content += Paris.templates.templatizer["buttons"]["buttons"](data.buttons);
+      }
+      if (data.more_links) {
+        content += Paris.templates.templatizer["links"]["links"](data.more_links);
+      }
+
+      $contentWrapper.html(content).velocity({
+        opacity: [1, 0]
+      }, $.extend({}, options.velocity, {
+        complete: setHeight,
+        display: 'block'
+      }));
     }
 
 

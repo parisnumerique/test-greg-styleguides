@@ -14,18 +14,22 @@ Paris.anchors = (function(){
 
   var defaultOptions = {
     anchorsSelector: '.anchor',
+    anchorsProgressSelector: '.anchors-list-progress',
+    headerSelector: '.rheader',
     contentEl: '.layout-left-col',
     anchorsFavoritable: false,
     anchorsShareable: false,
-    anchorTopBorder: 7 // border-top of the .anchor elements, in pixels
+    anchorTopBorder: 7, // border-top of the .anchor elements, in pixels
+    breakpoint: 'large'
   };
 
   function anchors(selector, userOptions){
     var $el = $(selector),
+        options = $.extend({}, defaultOptions, userOptions),
         $layoutContainer,
         $anchors,
         items,
-        options = $.extend({}, defaultOptions, userOptions);
+        headerHeight = 0;
 
     function init(){
       initOptions();
@@ -33,26 +37,39 @@ Paris.anchors = (function(){
       $layoutContainer = $('.layout-left-col');
       $anchors = $layoutContainer.find(options.anchorsSelector);
 
-      renderAnchors();
+      PubSub.subscribe('responsive.resize', onResize);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableAnchors);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableAnchors);
 
       if (options.anchorsFavoritable) {renderFavorite();}
       if (options.anchorsShareable) {renderShare();}
-
-      $el.on('click', '.anchor-link', onClickAnchorLink);
-
-      PubSub.subscribe('scroll', fillBars);
 
       // Fix bad offset by recalculating items dimensions, 1 second after rendering
       // This could probably be improved by tracking down the origin of the discrepancy
       setTimeout(parseItems, 1000);
 
-      PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+      $el.on('click', '.anchors-list-link', onClickAnchorLink);
     }
 
     function initOptions() {
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
+    }
+
+    function onResize() {
+      headerHeight = $(options.headerSelector).height();
+    }
+
+    function enableAnchors(){
+      renderAnchors();
+      PubSub.subscribe('scroll', fillBars);
+      PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+    }
+
+    function disableAnchors(){
+      PubSub.unsubscribe(fillBars);
+      PubSub.unsubscribe('accordion:change');
     }
 
     function parseItems() {
@@ -74,20 +91,43 @@ Paris.anchors = (function(){
           href: '#' + $anchor.attr('id'),
           top: $anchor.data('in-postit') && index === 0 ?
             $layoutContainer.position().top : // when in-postit and first item
-            Math.round(+$anchor.position().top - options.anchorTopBorder)+ ( $contentEl.parent().position().top  - $contentEl.position().top),
+            Math.round(+$anchor.position().top)+ ( $contentEl.parent().position().top  - $contentEl.position().top),
           modifiers: $anchor.data('in-postit') ? ["anchor-postit"] : []
         };
       });
 
       each(items, function (item, index, list) {
         item.bottom = (list[index+1]) ? list[index+1].top : $layoutContainer.position().top + $layoutContainer.height();
+
+        // DEBUG TODO remove
+        //if ($('#debug-'+index).length === 0) {
+        //  var $item = $('<div id="debug-'+index+'" class="anchors-list-debug">');
+        //  $item.text(index).css({
+        //    top: item.top,
+        //    height: item.bottom - item.top
+        //  });
+        //  $item.appendTo('body');
+        //} else {
+        //  $('#debug-'+index).css({
+        //    top: item.top,
+        //    height: item.bottom - item.top
+        //  });
+        //}
       });
+
     }
 
     function renderAnchors() {
       parseItems();
 
-      var content = Paris.templates.templatizer['anchors-list']['anchors-list']({items: items});
+      var data = {
+        items: items
+      };
+
+      var $documentTitle = $('.document-heading .document-heading-title');
+      if ($documentTitle.length !== 0) {data.title = $documentTitle.text();}
+
+      var content = Paris.templates.templatizer['anchors-list']['anchors-list'](data);
       $el.html($(content).html());
 
       defer(function () {
@@ -154,7 +194,7 @@ Paris.anchors = (function(){
         .velocity("stop")
         .velocity("scroll", {
           duration: 1500,
-          offset: $('.header').height() * -1 + options.anchorTopBorder,
+          offset: $(options.headerSelector).height() * -1 + options.anchorTopBorder,
           complete: function(){
             if (Modernizr.history) {
               history.replaceState({}, $link.text(), anchor);
@@ -165,18 +205,22 @@ Paris.anchors = (function(){
 
     function fillBars(){
       each(items, function(item) {
-        if($(document).scrollTop() < item.top ) {
-          $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '0%');
-          return;
-        }
-        else if($(document).scrollTop() > item.bottom - $('header').height() ) {
-          $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', '100%');
-          return;
-        }
-        var progress = ($(document).scrollTop() - item.top - $('header').height()) / (item.bottom - item.top);
+        var $progress = $el.find('[href="'+item.href+'"]' + ' + ' + options.anchorsProgressSelector);
 
-        progress = progress*100;
-        $el.find('[href="'+item.href+'"]' +' + .anchor-progress').css('width', ''+progress+'%');
+        if ($(document).scrollTop() < item.top - headerHeight) {
+          var progress = 0;
+        }
+        else if ($(document).scrollTop() > item.bottom - headerHeight) {
+          var progress = 100;
+        }
+        else {
+          var progress = ($(document).scrollTop() - item.top + headerHeight) / (item.bottom - item.top);
+          progress = progress * 100;
+          if (progress < 2)       {progress = 0;}
+          else if (progress > 98) {progress = 100;}
+        }
+
+        $progress.css('width', ''+progress+'%');
       });
     }
 

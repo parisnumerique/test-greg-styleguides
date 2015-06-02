@@ -19,7 +19,7 @@
 
 .poll-wrapper {
   position: relative;
-  padding: 35px 0;
+  padding: 35px $small-page-padding;
   z-index: 1;
 }
 
@@ -64,7 +64,6 @@
     font-size: 15px;
     font-weight: 300;
     margin: 0 5px 0 0;
-    min-width: 430px;
     padding: 0 10px;
   }
 
@@ -78,7 +77,7 @@
 
 .poll-more {
   font-size: 13px;
-  margin: 15px 0 0;
+  margin: 0;
   text-transform: uppercase;
 
   a {
@@ -94,5 +93,27 @@
   }
 }
 
+@include small {
+  .poll-form {
+    .poll-input {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
 
+  .poll-more {
+    margin-top: 30px;
+  }
+}
 
+@include large-and-medium {
+  .poll-form {
+    .poll-input {
+      min-width: 430px;
+    }
+  }
+
+  .poll-more {
+    margin-top: 15px;
+  }
+}

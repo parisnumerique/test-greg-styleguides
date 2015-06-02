@@ -1,16 +1,19 @@
 .block-aside {
   color: $gray26;
+  margin-top: 40px;
   text-align: left;
+}
 
-  + .block-aside {
-    margin-top: 40px;
-  }
+.layout-aside > .block-aside:first-child,
+.aside-wrapper > .block-aside:first-child {
+  margin-top: 0;
 }
 
 .block-aside-title {
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
+  margin-top: 0;
 }
 
 .block-aside-content {
@@ -31,5 +34,11 @@
 .block-aside-item {
   & + .block-aside-item {
     margin-top: 10px;
+  }
+}
+
+@include small {
+  .aside-wrapper > .block-aside.hidden-on-small + .block-aside {
+    margin-top: 0;
   }
 }

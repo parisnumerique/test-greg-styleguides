@@ -5,6 +5,7 @@ require('./externals/bootstrap');
 require('./lib/events');
 require('./lib/i18n');
 require('./lib/requestanimationframe');
+require('./lib/responsive');
 require('./lib/scroll');
 
 // load our components
@@ -20,7 +21,6 @@ require('../modules/anchors-list/script');
 require('../modules/block-content-jecoute/script');
 require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
-require('../modules/document-heading/script');
 require('../modules/gallery-ugc/script');
 require('../modules/header/script');
 require('../modules/notice/script');
@@ -36,5 +36,5 @@ require('../templates/list-persons/script');
 require('../templates/search/script');
 
 var Paris = window.Paris || {};
-Paris.version = "0.11.1";
+Paris.version = "0.12.0";
 Paris.templates = {};

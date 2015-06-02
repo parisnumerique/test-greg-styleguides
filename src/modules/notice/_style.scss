@@ -3,7 +3,7 @@
   color: white;
   font-size: 13px;
   font-weight: 500;
-  height: 60px;
+  min-height: 60px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -87,10 +87,14 @@
 }
 
 .notice-content {
-  margin: 0 auto;
   line-height: 20px;
-  padding: 20px 0;
-  width: $grid-width;
+  margin: 0 20px;
+  padding: 20px 80px 20px 0;
+
+  @mixin large {
+    margin: 0 auto;
+    width: $large-grid-width;
+  }
 
   a {
     color: white;

@@ -2,7 +2,7 @@ extends ../../layouts/stack/stack
 
 include ../../modules/button-top/button-top
 include ../../modules/notice/notice
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/footer/footer
 
 // Blocks are reorderable parts of the template
@@ -20,7 +20,7 @@ append content
     +notice(data.notice)
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   each block in data.blocks

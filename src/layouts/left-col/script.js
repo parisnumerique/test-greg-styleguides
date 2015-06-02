@@ -14,7 +14,7 @@ Paris.leftCol = (function(){
     }
 
     function setAffix() {
-      // no affix if there is not enough place to show all the anchors
+      // no affix if there is not enough space to show all the anchors
       if($el.find('.anchors-list').height() > window.innerHeight - $('header').height() - 100){
         return;
       }
