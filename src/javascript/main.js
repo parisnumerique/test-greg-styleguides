@@ -5,6 +5,7 @@ require('./externals/bootstrap');
 require('./lib/events');
 require('./lib/i18n');
 require('./lib/requestanimationframe');
+require('./lib/responsive');
 require('./lib/scroll');
 
 // load our components

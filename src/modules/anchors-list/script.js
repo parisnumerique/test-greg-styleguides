@@ -20,13 +20,12 @@ Paris.anchors = (function(){
     anchorsFavoritable: false,
     anchorsShareable: false,
     anchorTopBorder: 7, // border-top of the .anchor elements, in pixels
-    mobileMediaQuery: window.matchMedia("(max-width: 1160px)")
+    breakpoint: 'large'
   };
 
   function anchors(selector, userOptions){
     var $el = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
-        isMobile,
         $layoutContainer,
         $anchors,
         items,
@@ -38,23 +37,18 @@ Paris.anchors = (function(){
       $layoutContainer = $('.layout-left-col');
       $anchors = $layoutContainer.find(options.anchorsSelector);
 
-      onResize();
-      $(window).on('resize', throttle(onResize, 1000));
-
-      renderAnchors();
+      PubSub.subscribe('responsive.resize', onResize);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableAnchors);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableAnchors);
 
       if (options.anchorsFavoritable) {renderFavorite();}
       if (options.anchorsShareable) {renderShare();}
-
-      $el.on('click', '.anchors-list-link', onClickAnchorLink);
-
-      PubSub.subscribe('scroll', fillBars);
 
       // Fix bad offset by recalculating items dimensions, 1 second after rendering
       // This could probably be improved by tracking down the origin of the discrepancy
       setTimeout(parseItems, 1000);
 
-      PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+      $el.on('click', '.anchors-list-link', onClickAnchorLink);
     }
 
     function initOptions() {
@@ -64,8 +58,18 @@ Paris.anchors = (function(){
     }
 
     function onResize() {
-      isMobile = options.mobileMediaQuery.matches;
       headerHeight = $(options.headerSelector).height();
+    }
+
+    function enableAnchors(){
+      renderAnchors();
+      PubSub.subscribe('scroll', fillBars);
+      PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
+    }
+
+    function disableAnchors(){
+      PubSub.unsubscribe(fillBars);
+      PubSub.unsubscribe('accordion:change');
     }
 
     function parseItems() {
@@ -114,7 +118,6 @@ Paris.anchors = (function(){
     }
 
     function renderAnchors() {
-      if (isMobile) {return;}
       parseItems();
 
       var data = {
@@ -201,7 +204,6 @@ Paris.anchors = (function(){
     }
 
     function fillBars(){
-      if (isMobile) {return;}
       each(items, function(item) {
         var $progress = $el.find('[href="'+item.href+'"]' + ' + ' + options.anchorsProgressSelector);
 

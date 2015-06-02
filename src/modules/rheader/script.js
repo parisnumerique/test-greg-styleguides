@@ -2,15 +2,13 @@
 require('velocity-animate');
 
 var PubSub = require('pubsub-js');
-var throttle = require('lodash.throttle');
-var attachFastClick = require('fastclick');
 
 var Paris = window.Paris || {};
 
 Paris.rheader = (function(){
 
   var defaultOptions = {
-    mobileMediaQuery: window.matchMedia("(max-width: 600px)"),
+    breakpoint: "rheader-medium",
     mobileNavId: "rheader-mobile-nav",
     scrollMinDelta: 50
   };
@@ -18,7 +16,6 @@ Paris.rheader = (function(){
   function rheader(selector, userOptions){
     var $el     = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
-        isMobile,
         $buttonMenu,
         $overlay,
         scrollMonitor,
@@ -28,12 +25,10 @@ Paris.rheader = (function(){
     function init(){
       initOptions();
 
-      attachFastClick(document.body);
-
       $buttonMenu = $el.find('.rheader-button-menu');
 
-      onResize();
-      $(window).on('resize', throttle(onResize, 1000));
+      PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
 
       $buttonMenu.on('click', onClickButtonMenu);
       $('body').on('click', '#'+options.mobileNavId+'-overlay', closeMenu);
@@ -44,13 +39,6 @@ Paris.rheader = (function(){
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
-    }
-
-    function onResize() {
-      var wasMobile = isMobile;
-      isMobile = options.mobileMediaQuery.matches;
-      if (wasMobile === isMobile) {return;}
-      toggleMobile();
     }
 
     function onScroll(e, data) {
@@ -103,11 +91,7 @@ Paris.rheader = (function(){
       $('body').addClass('rheader-mobile-nav-open');
     }
 
-    function toggleMobile() {
-      isMobile ? enableMobile() : disableMobile();
-    }
-
-    function enableMobile() {
+    function enableMobileNav() {
       // Create nav
       var $nav = $('<div id="'+options.mobileNavId+'" class="rheader-mobile-nav"></div>');
       $el.find('.rheader-locales').clone().appendTo($nav);
@@ -125,11 +109,12 @@ Paris.rheader = (function(){
       $el.on('mouseenter', unfold);
     }
 
-    function disableMobile() {
+    function disableMobileNav() {
       // Remove nav
       var $nav = $('#'+options.mobileNavId);
       $nav.remove();
       $el.removeClass('rheader-mobile-nav-open');
+      $('body').removeClass('rheader-mobile-nav-open');
 
       if ($overlay) {
         $overlay.remove();

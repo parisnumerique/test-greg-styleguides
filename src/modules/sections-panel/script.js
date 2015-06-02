@@ -2,7 +2,6 @@
 require('velocity-animate');
 var has = require('lodash.has');
 var values = require('lodash.values');
-var throttle = require('lodash.throttle');
 var map = require('lodash.map');
 var PubSub = require('pubsub-js');
 
@@ -11,7 +10,7 @@ var Paris = window.Paris || {};
 Paris.sectionsPanel = (function(){
 
   var defaultOptions = {
-    mobileMediaQuery: window.matchMedia("(max-width: 768px)"),
+    breakpoint: "small",
     velocity: {
       duration: 350,
       ease: 'ease-in-out',
@@ -22,7 +21,6 @@ Paris.sectionsPanel = (function(){
   function sectionsPanel(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
-      isMobile,
       api = {},
       $nav, $subnav, $content,
       $navItems, $navItemsLinks, $navMore,
@@ -49,8 +47,9 @@ Paris.sectionsPanel = (function(){
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
       $contentBack = $content.find('.sections-panel-content-back');
 
-      onResize();
-      $(window).on('resize', throttle(onResize, 1000));
+      PubSub.subscribe('responsive.resize', setHeight);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableSmall);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableSmall);
 
       if ($subnav.hasClass('has-current-item')) {currentLevel = "subnav";}
       if ($el.hasClass('has-content')) {currentLevel = "content";}
@@ -68,16 +67,8 @@ Paris.sectionsPanel = (function(){
       });
     }
 
-    function onResize() {
-      var wasMobile = isMobile;
-      isMobile = options.mobileMediaQuery.matches;
-      if (wasMobile === isMobile) {return;}
-      setHeight();
-      toggleMobile();
-    }
-
     function setHeight() {
-      var newHeight = isMobile ? 'auto' : calculateHeight();
+      var newHeight = Paris.responsive.sizes[options.breakpoint].is ? 'auto' : calculateHeight();
       $el.css("height", newHeight);
     }
 
@@ -101,16 +92,12 @@ Paris.sectionsPanel = (function(){
       return Math.max.apply(null, values(heights));
     }
 
-    function toggleMobile() {
-      isMobile ? enableMobile() : disableMobile();
-    }
-
-    function enableMobile() {
+    function enableSmall() {
       $navItemsLinks.off('click', onClickNavLink);
       $subnavSectionsLinks.off('click', onClickSubnavLink);
     }
 
-    function disableMobile() {
+    function disableSmall() {
       $navItemsLinks.on('click', onClickNavLink);
       $subnavSectionsLinks.on('click', onClickSubnavLink);
     }
