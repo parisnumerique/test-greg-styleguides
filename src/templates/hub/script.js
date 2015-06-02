@@ -81,6 +81,7 @@ Paris.hub = (function(){
       }
 
       renderBreadcrumbs(breadcrumbs);
+      //renderNews(breadcrumbs);
     }
 
     function onClickBreadcrumbsRoot(e){
@@ -102,6 +103,11 @@ Paris.hub = (function(){
     function renderBreadcrumbs(data){
       var breadcrumbs = Paris.templates.templatizer["breadcrumbs"]["breadcrumbs"](data);
       $breadcrumbsParent.html(breadcrumbs);
+    }
+
+    function renderNews(data){
+      var news = Paris.templates.templatizer["news-list"]["news-list"](data);
+      $newsParent.html(news);
     }
 
 
