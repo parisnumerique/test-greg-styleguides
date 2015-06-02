@@ -5,5 +5,5 @@ mixin footer(data)
         img(src=data.logo.src alt=data.logo.alt)
       ul.footer-links
         each item in data.items
-          li
-            a(href=item.href target=item.target class=item.modifiers)= item.text
+          li(class=item.modifiers)
+            a(href=item.href target=item.target)= item.text

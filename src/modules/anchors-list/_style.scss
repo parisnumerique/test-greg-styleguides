@@ -1,43 +1,95 @@
 .anchors-list {
+  width: 100%;
+}
+
+.anchors-list-title {
+  margin-top: 0;
+  text-align: left;
+}
+
+.anchors-list-items {
   font-size: 13px;
-  width: 260px;
-  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .anchor-bar {
-    background-color: $white;
-    border-radius: 5px;
-    position: relative;
-    margin-bottom: 13px;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
+.anchors-list-item {
+  background-color: $white;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 13px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 
-    &:hover {
-      background-color: lighten($color-tertiary, 18%);
-    }
-
-    // modifiers
-    &.anchor-postit {
-      .anchor-link {
-        color: $orange-postit;
-        font-weight: 700;
-      }
-    }
+  &:hover {
+    background-color: lighten($color-tertiary, 18%);
   }
 
-  .anchor-link {
-    color: $gray51;
-    display: block;
-    line-height: 25px;
-    padding: 11px 15px;
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  // modifiers
+  &.anchor-postit {
+    .anchors-list-link {
+      color: $orange-postit;
+      font-weight: 700;
+    }
+  }
+}
+
+.anchors-list-link {
+  color: $gray51;
+  display: block;
+  line-height: 25px;
+  overflow: hidden;
+  padding: 11px 15px;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  z-index: 1;
+}
+
+
+
+@include medium {
+  .anchors-list {width: 240px;}
+}
+
+
+@include large-and-medium {
+  .anchors-list {
+    top: 0;
   }
 
-  .anchor-progress {
+  .anchors-list-title {
+    border-left: 6px solid $color-tertiary;
+    transform: translateY(-200px);
+    display: table;
+    height: 80px;
+    left: -32px;
+    padding-left: 10px;
+    position: absolute;
+    top: 0;
+    transition: .3s ease transform;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .aside-wrapper.affix &,
+    .aside-wrapper.affix-bottom & {
+      transform: none;
+    }
+  }
+}
+
+
+@include large {
+  .anchors-list {
+    width: 260px;
+  }
+
+  .anchors-list-progress {
     background-color: $color-tertiary;
     display: block;
     height: 47px;
@@ -48,3 +100,16 @@
     transition: width 0.1s ease-in-out;
   }
 }
+
+// DEBUG TODO remove
+//.anchors-list-debug {
+//  color: $white;
+//  font-size: 40px;
+//  left: 40%;
+//  position: absolute;
+//  width: 50px;
+//
+//  &#debug-0, &#debug-3 {background-color: $color-primary;}
+//  &#debug-1, &#debug-4 {background-color: $color-secondary;}
+//  &#debug-2, &#debug-5 {background-color: $color-tertiary;}
+//}

@@ -1,5 +1,4 @@
 .gallery-ugc {
-  @include container(720px);
 }
 
 
@@ -35,15 +34,35 @@
   font-weight: 700;
 }
 
-// Pictures gallerie
-.gallery-content {margin-top: 20px;}
+.gallery-content {
+  margin-top: 20px;
+  @include large {
+    @include container(720px);
+  }
+  @include medium {
+    @include container(570px);
+  }
+}
+
 .gallery-image {
-  @include gallery(4 of 12);
+  @include large {
+    @include gallery(4 of 12);
+    height: 230px;
+  }
+  @include medium {
+    @include gallery(6 of 12);
+    height: 280px;
+
+    &:nth-child(5),
+    &:nth-child(6) {display: none;}
+  }
+  background-position: center center;
   background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
   cursor: pointer;
   display: block;
-  height: 229px;
-  margin-bottom: 22px;
+  margin-bottom: gutter() * 1.8;
   overflow: hidden;
   position: relative;
 

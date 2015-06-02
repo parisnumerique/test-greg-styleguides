@@ -7,6 +7,10 @@
     }
   }
 
+  .block-aside-items {
+    @include hidden-on-small;
+  }
+
   .block-aside-item {
     position: relative;
 
@@ -94,6 +98,12 @@
   .block-aside-item-text {
     display: inline-block;
     margin-left: 25px;
+  }
+
+  .block-aside-select {
+    @include only-on-small;
+    max-width: 100%;
+    min-width: 100px;
   }
 
 }

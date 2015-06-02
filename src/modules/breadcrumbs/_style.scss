@@ -1,9 +1,9 @@
 .breadcrumbs {
   font-size: 0;
+  line-height: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
-  white-space: nowrap;
 }
 
 .offset-header.breadcrumbs-offset-header {
@@ -61,5 +61,11 @@
       cursor: default;
       pointer-events: none;
     }
+  }
+}
+
+@include large {
+  .breadcrumbs {
+    white-space: nowrap;
   }
 }

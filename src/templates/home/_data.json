@@ -10,44 +10,51 @@
         "closable": true,
         "block": "<a href=\"#\">Visiting Paris ? Plan your trip</a>"
       },
-      "header": {
-        "home": "../home",
-        "title": "Paris",
-        "h1": true,
-        "languages": [{
-          "abbr": "fr",
-          "href": "/fr"
-        }, {
-          "abbr": "en",
-          "href": "/en"
-        }, {
-          "abbr": "es",
-          "href": "/es"
-        }],
-        "active_language": "fr",
-        "search": {
-          "visible": true
+      "rheader": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris",
+          "h1": true
         },
-        "marker": {
-          "visible": true
+        "locales": [
+          {"href": "#fr", "text": "fr", "current": true},
+          {"href": "#en", "text": "en"},
+          {"href": "#es", "text": "es"}
+        ],
+        "buttons": {
+          "search": {
+            "href": "../search/",
+            "icon": "search",
+            "text": "Recherche"
+          },
+          "around": {
+            "href": "#",
+            "icon": "marker",
+            "text": "Autour de moi"
+          },
+          "menu": {
+            "href": "#",
+            "text": "Menu"
+          }
         },
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news", "text": "Actualités"},
+          {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality", "text": "Municipalité"}
-        ],
-        "participate": {
-          "visible": true,
-          "href": "../subhome-get-involved",
-          "front": "Participez !",
-          "back": "C'est à vous !"
-        },
-        "account": {
-          "visible": true,
-          "href": "#",
-          "text": "Mon compte"
-        }
+          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {
+            "href": "../subhome-get-involved/",
+            "text": "Participez !",
+            "hover": "C'est à vous !",
+            "modifiers": ["get-involved"]
+          },
+          {
+            "href": "#",
+            "icon": "profile",
+            "text": "Mon compte",
+            "modifiers": ["account"]
+          }
+        ]
       },
       "blocks": [
         {
@@ -61,6 +68,10 @@
                   {"src": "//zippy.gfycat.com/PartialMadeupGorilla.mp4", "type": "video/mp4"}
                 ]
               }
+            },
+            "heading": {
+              "title": "Accès rapides",
+              "modifiers": ["only-on-small"]
             },
             "search": {
               "input": {
@@ -95,19 +106,23 @@
               },
               {
                 "href": "#",
-                "text": "Tennis"
+                "text": "Tennis",
+                "modifiers": ["hidden-on-mobile"]
               },
               {
                 "href": "#",
-                "text": "Signalement"
+                "text": "Signalement",
+                "modifiers": ["hidden-on-mobile"]
               },
               {
                 "href": "#",
-                "text": "Facil’familles"
+                "text": "Facil’familles",
+                "modifiers": ["hidden-on-mobile"]
               },
               {
                 "href": "#",
-                "text": "Gardes d’enfants"
+                "text": "Gardes d’enfants",
+                "modifiers": ["hidden-on-mobile"]
               }
             ],
             "results": {
@@ -125,9 +140,11 @@
         },
         {
           "type": "sections",
+          "modifiers": ["layout-adjacent-before-on-small"],
           "data": {
             "heading": {
-              "title": "Services et infos pratiques"
+              "title": "Services et infos pratiques",
+              "modifiers": ["hidden-on-small"]
             },
             "list": {
               "items": [
@@ -200,6 +217,11 @@
                   "href": "#",
                   "text": "Vous cherchez autre chose&nbsp;?",
                   "modifiers": ["more"]
+                },
+                {
+                  "href": "#",
+                  "text": "Découvrez tous les services de la ville",
+                  "modifiers": ["more", "only-on-small"]
                 }
               ]
             }
@@ -207,6 +229,7 @@
         },
         {
           "type": "jumbotron",
+          "modifiers": ["layout-adjacent-before-on-small"],
           "data": {
             "href": "../single-news",
             "image": "../../modules/jumbotron/image.jpg",
@@ -260,18 +283,24 @@
         },
         {
           "type": "que-faire",
-          "modifiers": ["layout-padding-after"],
+          "modifiers": ["layout-padding-after", "layout-adjacent-after-on-small"],
           "data": {
             "background": "../../modules/que-faire/que-faire-back-img.jpg",
             "logo": {
-              "href": "#",
-              "image": "../../modules/que-faire/que-faire-img.png"
+              "href": "http://www.quefaire.paris.fr",
+              "image": "../../modules/que-faire/que-faire-img.png",
+              "alt": "Que faire à Paris"
             },
             "items": [
               {"href": "#", "text": "Que faire à Paris ce week-end ?"},
               {"href": "#", "text": "Autour de la FIAC du 23 au 26 octobre"},
               {"href": "#", "text": "Capitaine Futur et le voyage extraordinaire"}
-            ]
+            ],
+            "more": {
+              "href": "#",
+              "text": "Voir toutes les activités sur «&nbsp;Que faire à Paris&nbsp;»",
+              "modifiers": "more"
+            }
           }
         },
         {
@@ -505,7 +534,7 @@
           "alt": "Logo de la Mairie de Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["footer-link-em"]},
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

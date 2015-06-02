@@ -1,63 +1,142 @@
 .que-faire {
-  background-repeat:no-repeat;
-  background-position:50% 50%;
+}
+
+.que-faire-wrapper {
+  background: center center no-repeat;
   background-size: cover;
   min-height: 240px;
-  max-width: 1100px;
+  margin: 0 auto;
+  max-width: $large-grid-width;
   overflow: auto;
-  padding: 80px 70px 0 25px;
+  padding: 20px;
   width: 100%;
+}
 
-  .logo {
+.que-faire-logo {
+  background: center center no-repeat;
+  background-size: contain;
+  display: block;
+  height: 96px;
+  width: 150px;
+
+  > span {@include hidden-accessibly;}
+}
+
+.button-que-faire {
+  background: url(../modules/que-faire/hachure.svg) $white repeat top left;
+  border: none;
+  display: inline-block;
+  height: 80px;
+  overflow: hidden;
+  padding: 0;
+  white-space: normal;
+
+  html.flexbox & {
+    align-items: center;
+    display: flex;
+  }
+
+  &:after {
+    border-radius: 5px;
+    background-color: $gray242;
+  }
+
+  > span {
+    color: $gray51;
     display: block;
-    float: left;
-    height: 96px;
-    margin-right: 25px;
-    width: 150px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 20px;
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.35s ease;
+    vertical-align: middle;
+  }
+  &:hover > span {color: $red-que-faire;}
+
+  // modifiers
+  &.more,
+  html.flexbox &.more {display: none;}
+}
+
+
+@include small {
+  .que-faire-logo {
+    margin: 0 auto 20px;
+  }
+
+  .button-que-faire {
+    margin: 0 auto;
+    max-width: 260px;
+
+    &,
+    html.flexbox & {
+      display: none;
+      &.more {display: block;}
+    }
 
     > span {
-      @include hidden-accessibly;
+      text-align: center;
     }
+  }
+}
+
+
+@include medium {
+
+  .que-faire-wrapper {
+    padding-right: 25px;
+  }
+
+  .que-faire-logo {
+    width: 20%;
+  }
+
+  .que-faire-content {
+    width: 78%;
+  }
+
+}
+
+@include large-and-medium {
+
+  .que-faire-wrapper {
+    min-height: 240px;
+    padding-left: 25px;
+    padding-top: 80px;
+  }
+
+  .que-faire-logo {
+    float: left;
   }
 
   .que-faire-content {
     @include container;
     float: right;
-    width: 820px;
+  }
 
-    .button-que-faire {
-      @include span(4 of 12);
-      background: url(../modules/que-faire/hachure.svg) $white repeat top left;
-      border: none;
-      display: inline-block;
-      height: 80px;
-      overflow: hidden;
-      padding: 0;
-      white-space: normal;
+  .button-que-faire {
+    @include span(4 of 12);
+    &:last-child {@include last;}
+  }
 
-      html.flexbox & {
-        display: flex;
-        align-items: center;
-      }
+}
 
-      &:last-child {@include last;}
+@include large {
 
-      &:after {
-        border-radius: 5px;
-        background-color: $gray242;
-      }
+  .que-faire-wrapper {
+    padding-right: 70px;
+    min-height: 240px;
+  }
 
-      > span {
-        color: $gray51;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 20px;
-        padding: 10px 50px 10px 20px;
-        text-align: left;
-        text-decoration: none;
-        transition: color 0.35s ease;
-      }
-      &:hover > span {color: $red-que-faire;}
-    }
+  .que-faire-content {
+    max-width: 820px;
+  }
+
+  .button-que-faire {
+    min-height: 80px;
+
+    > span {padding-right: 50px;}
   }
 }

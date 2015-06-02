@@ -1,3 +1,5 @@
+$municipal-team-breakpoint: 905px;
+
 .municipal-team {
   background-color: $color-primary;
 	padding: 40px 0 50px;
@@ -7,8 +9,11 @@
 	background-repeat:no-repeat;
   display: block;
 	height: auto;
+  margin-bottom: 20px;
 	max-width: 100%;
-  margin-bottom: 50px;
+  @media (min-width: $municipal-team-breakpoint) {
+    margin-bottom: 50px;
+  }
 }
 
 .municipal-team-content {
@@ -23,18 +28,40 @@
 }
 
 .municipal-team-intro {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
-  line-height: 26px;
-  margin-right: 50px;
-  max-width: 320px;
+  line-height: 22px;
   vertical-align: top;
+
+  @media (min-width: $municipal-team-breakpoint) {
+    margin-right: 50px;
+    max-width: 320px;
+  }
 }
 
 .municipal-team-text {
-  border-left: 1px solid transparentize($white, 0.8);
-  font-size: 18px;
-  line-height: 24px;
-  max-width: 500px;
-  padding-left: 20px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: $municipal-team-breakpoint) {
+    border-left: 1px solid transparentize($white, 0.8);
+    max-width: 430px;
+    padding-left: 20px;
+  }
+  @media (max-width: $municipal-team-breakpoint - 1px) {
+    border-top: 1px solid transparentize($white, 0.8);
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+}
+
+@include large-and-medium {
+  .municipal-team-intro {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .municipal-team-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

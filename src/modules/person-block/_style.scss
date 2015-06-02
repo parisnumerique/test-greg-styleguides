@@ -2,7 +2,6 @@
   background-color: $gray242;
   border-radius: 5px;
   display: table;
-  height: 200px;
   padding: 20px;
   margin-bottom: 20px;
   max-width: 770px;
@@ -10,11 +9,18 @@
 }
 
 .person-block-portrait {
-  background-position: 50% 50%;
-  background-size: cover;
+  @include hidden-on-small;
   display: table-cell;
-  height: 160px;
+  padding-right: 35px;
   width: 120px;
+
+  > a {
+    background-position: 50% 50%;
+    background-size: cover;
+    display: block;
+    height: 160px;
+    width: 120px;
+  }
 }
 
 .person-block-content,
@@ -24,7 +30,7 @@
 }
 
 .person-block-content {
-  padding: 0 35px;
+  padding-right: 35px;
   text-align: left;
 }
 
@@ -35,9 +41,9 @@
 
 .person-block-title {
   color: $color-primary;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   text-decoration: none;
 }
 
@@ -49,4 +55,32 @@
 
 .person-block-button {
   text-align: right;
+
+  .button.icon .icon {
+    display: none;
+    font-size: 28px;
+    margin-right: 0;
+  }
+}
+
+@include small {
+  .person-block-button {
+    .button.icon {
+      padding: 10px 12px;
+      .icon {display: inline-block;}
+    }
+
+    .button-text {@include hidden-accessibly;}
+  }
+}
+
+@include large-and-medium {
+  .person-block {
+    height: 200px;
+  }
+
+  .person-block-title {
+    padding-bottom: 20px;
+    font-size: 22px;
+  }
 }

@@ -7,7 +7,7 @@ include ../../../modules/block-content-social/block-content-social
 mixin block-stay-connected(data)
   .layout-right-col
     .layout-wrapper
-      .layout-content
+      .layout-content.hidden-on-small
         +heading(data.gallery.heading)
         +gallery-ugc(data.gallery.gallery_ugc)
       aside.layout-aside.color-secondary-background
@@ -15,4 +15,3 @@ mixin block-stay-connected(data)
           +block-content-newsletter(data.newsletter)
           +block-content-jecoute(data.jecoute)
           +block-content-social(data.social)
-

@@ -20,14 +20,6 @@
       position: relative;
     }
 
-    & + .layout-adjacent-before {
-      padding-top: 0;
-    }
-
-    &.layout-adjacent-after {
-      padding-bottom: 0;
-    }
-
     &.layout-small-padding {
       padding-top: 30px;
       &.layout-separate-after {padding-bottom: 30px;}
@@ -36,16 +28,61 @@
     &.layout-padding-after {
       padding-bottom: 40px;
     }
+
+    & + .layout-adjacent-before {
+      padding-top: 0;
+    }
+    @include small {
+      & + .layout-adjacent-before-on-small {
+        padding-top: 0;
+      }
+    }
+
+    &.layout-adjacent-after {
+      padding-bottom: 0;
+    }
+    @include small {
+      &.layout-adjacent-after-on-small {
+        padding-bottom: 0;
+      }
+    }
   }
 
   .layout-wrapper {
     margin: 0 auto;
-    width: 1100px;
+    padding-left: $small-page-padding;
+    padding-right: $small-page-padding;
+  }
 
-    .heading,
-    &.layout-outside {
-      left: -32px;
-      position: relative;
+  @include small {
+    > .layout-swap-order-on-small {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .layout-wrapper {
+      &.full-width-on-small {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .heading .heading-title {
+        left: -30px;
+        position: relative;
+      }
+    }
+  }
+
+  @include large {
+    .layout-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+      width: $large-grid-width;
+
+      .heading,
+      &.layout-outside {
+        left: -32px;
+        position: relative;
+      }
     }
   }
 

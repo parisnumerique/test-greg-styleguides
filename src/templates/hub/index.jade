@@ -8,31 +8,31 @@ include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/cross-content/cross-content
 include ../../modules/footer/footer
-include ../../modules/header/header
+include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/news-list/news-list
 include ../../modules/sections-panel/sections-panel
 
 append content
-  +header(data.header)
+  +rheader(data.rheader)
 
 append content
   .layout-content
     +hub-heading(data.heading)
 
 append content
-  .layout-content.layout-separate-after.layout-small-padding
+  .layout-content.layout-separate-after.layout-small-padding.hidden-on-small
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
 append content
   .layout-content.gray-background.layout-adjacent-before.layout-adjacent-after
-    .layout-wrapper
+    .layout-wrapper.full-width-on-small
       +sections-panel(data.sections)
 
 append content
-  .layout-content
+  .layout-content.hidden-on-small
     .layout-wrapper
       +heading(data.news.heading)
       +news-list(data.news.news)
