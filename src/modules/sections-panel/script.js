@@ -225,6 +225,12 @@ Paris.sectionsPanel = (function(){
     }
 
     function renderContent(data) {
+      PubSub.publish("sections-panel:change", {
+        news: data.news
+      });
+
+      data = data.content;
+
       var content =
         '<div class="sections-panel-intro">' + data.intro + '</div>' +
         '<ul class="sections-panel-content-items">';

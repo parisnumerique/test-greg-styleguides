@@ -12,8 +12,8 @@ include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/news-list/news-list
-include ../../components/accordion/accordion
-include ../../components/text/text
+
+include ../../components/components
 
 append content
   +rheader(data.rheader)
@@ -32,11 +32,12 @@ append content
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
-          +block-aside-links(data.aside.profile)
-          +block-aside-links(data.aside.topics)
+          .aside-wrapper
+            each aside in data.aside
+              +block-aside-links(aside)
         .layout-content.components
-          +text(data.content.intro)
-          +accordion(data.content.accordion)
+          each component in data.components
+            +#{component.type}(component.data)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after

@@ -1107,7 +1107,7 @@
         var jade_mixins = {};
         var jade_interp;
         var locals_for_with = locals || {};
-        (function(JSON, modifiers) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
+        (function(JSON, button, modifiers) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "button" in locals_for_with ? locals_for_with.button : typeof button !== "undefined" ? button : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
         return buf.join("");
     };
 
@@ -1132,6 +1132,40 @@
     };
 
 
+    // block-content-newsletter.jade:button compiled template
+    templatizer["block-content-newsletter"]["button"] = function tmpl_block_content_newsletter_button(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        modifiers = data.modifiers || [];
+        attributes = data.attributes || [];
+        if (data.href) {
+            if (data.icon) {
+                modifiers.push("icon");
+            }
+            buf.push("<a" + jade.attrs(jade.merge([ {
+                href: jade.escape(data.href),
+                title: jade.escape(data.title),
+                target: jade.escape(data.target),
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">");
+            if (modifiers && modifiers.indexOf("marker") != -1) {
+                buf.push('<i class="icon icon-marker"></i>');
+            } else if (data.icon) {
+                buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+            }
+            buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
+        } else {
+            buf.push("<button" + jade.attrs(jade.merge([ {
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</button>");
+        }
+        return buf.join("");
+    };
+
+
     // block-content-newsletter.jade:block-content-newsletter compiled template
     templatizer["block-content-newsletter"]["block-content-newsletter"] = function tmpl_block_content_newsletter_block_content_newsletter(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
@@ -1139,9 +1173,20 @@
         modifiers.push("block-content-newsletter");
         buf.push(templatizer["block-content-newsletter"]["block-content"].call({
             block: function(buf) {
-                buf.push('<div class="block-content-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div><form" + jade.attrs(jade.merge([ {
-                    "class": "block-content-form"
-                }, data.form ]), false) + '><input type="email"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("id", data.input.id, true, false) + jade.attr("name", data.input.name, true, false) + ' required="required"/><button type="submit" class="button action">' + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + "</button></form><a" + jade.attr("href", data.link.href, true, false) + jade.attr("target", data.link.target, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a>");
+                buf.push('<div class="block-content-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
+                if (data.form) {
+                    buf.push("<form" + jade.attrs(jade.merge([ {
+                        "class": "block-content-form"
+                    }, data.form ]), false) + '><input type="email"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("id", data.input.id, true, false) + jade.attr("name", data.input.name, true, false) + ' required="required"/><button type="submit" class="button action">' + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + "</button></form>");
+                } else if (data.button) {
+                    button = JSON.parse(JSON.stringify(data.button || []));
+                    button.modifiers = button.modifiers || [];
+                    button.modifiers.push("action");
+                    buf.push(templatizer["block-content-newsletter"]["button"](button));
+                }
+                if (data.link) {
+                    buf.push('<div class="block-content-link"><a' + jade.attr("href", data.link.href, true, false) + jade.attr("target", data.link.target, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
+                }
             }
         }, {
             title: data.title,
@@ -2271,6 +2316,8 @@
         var buf = [];
         var jade_mixins = {};
         var jade_interp;
+        var locals_for_with = locals || {};
+        (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
         return buf.join("");
     };
 
@@ -2302,17 +2349,9 @@
                         for (var index = 0, $l = $obj.length; index < $l; index++) {
                             var item = $obj[index];
                             if (index === 0) {
-                                buf.push(templatizer["news-list"]["news-card"]({
-                                    modifiers: [ "large" ],
-                                    href: item.href,
-                                    image: item.image,
-                                    category: item.category,
-                                    title: item.title,
-                                    counters: {
-                                        facebook: 5,
-                                        twitter: 12
-                                    }
-                                }));
+                                item = JSON.parse(JSON.stringify(item));
+                                item.modifiers = [ "large" ];
+                                buf.push(templatizer["news-list"]["news-card"](item));
                             } else {
                                 buf.push(templatizer["news-list"]["news-card"](item));
                             }
@@ -2323,17 +2362,9 @@
                             $l++;
                             var item = $obj[index];
                             if (index === 0) {
-                                buf.push(templatizer["news-list"]["news-card"]({
-                                    modifiers: [ "large" ],
-                                    href: item.href,
-                                    image: item.image,
-                                    category: item.category,
-                                    title: item.title,
-                                    counters: {
-                                        facebook: 5,
-                                        twitter: 12
-                                    }
-                                }));
+                                item = JSON.parse(JSON.stringify(item));
+                                item.modifiers = [ "large" ];
+                                buf.push(templatizer["news-list"]["news-card"](item));
                             } else {
                                 buf.push(templatizer["news-list"]["news-card"](item));
                             }

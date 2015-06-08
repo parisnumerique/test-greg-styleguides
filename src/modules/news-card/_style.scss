@@ -271,6 +271,10 @@ html.no-touch {
         border: none;
         height: inherit;
         padding: 0 20px 0 0;
+
+        & + .news-card-counter {
+          border-left: 0;
+        }
       }
     }
   }
