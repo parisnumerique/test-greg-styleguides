@@ -350,6 +350,118 @@
         return buf.join("");
     };
 
+    // news-list.jade compiled template
+    templatizer["news-list"] = function tmpl_news_list(locals) {
+        var buf = [];
+        var jade_mixins = {};
+        var jade_interp;
+        var locals_for_with = locals || {};
+        (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
+        return buf.join("");
+    };
+
+    // news-list.jade:news-card compiled template
+    templatizer["news-list"]["news-card"] = function tmpl_news_list_news_card(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<a" + jade.attr("href", data.href, true, false) + jade.cls([ "news-card", data.modifiers ], [ null, true ]) + '><div class="news-card-wrapper">');
+        if (data.image) {
+            buf.push("<div" + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + ' class="news-card-image"></div>');
+        }
+        buf.push('<div class="news-card-content"><div class="news-card-category"><span>' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</span></div><div class="news-card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
+        if (data.counters) {
+            buf.push('<div class="news-card-counters"><div class="news-card-counter facebook-counter"><span class="icon icon-facebook"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.facebook) ? "" : jade_interp) + '</span></div><div class="news-card-counter twitter-counter"><span class="icon icon-twitter"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.twitter) ? "" : jade_interp) + "</span></div></div>");
+        }
+        buf.push("</div></div></a>");
+        return buf.join("");
+    };
+
+
+    // news-list.jade:news-list compiled template
+    templatizer["news-list"]["news-list"] = function tmpl_news_list_news_list(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        if (data.modifiers && data.modifiers.indexOf("news-cards") != -1) {
+            if (data.modifiers.indexOf("large-first-child") != -1) {
+                buf.push("<div" + jade.cls([ "news-list", data.modifiers ], [ null, true ]) + ">");
+                (function() {
+                    var $obj = data.items.slice(0, 5);
+                    if ("number" == typeof $obj.length) {
+                        for (var index = 0, $l = $obj.length; index < $l; index++) {
+                            var item = $obj[index];
+                            if (index === 0) {
+                                item = JSON.parse(JSON.stringify(item));
+                                item.modifiers = [ "large" ];
+                                buf.push(templatizer["news-list"]["news-card"](item));
+                            } else {
+                                buf.push(templatizer["news-list"]["news-card"](item));
+                            }
+                        }
+                    } else {
+                        var $l = 0;
+                        for (var index in $obj) {
+                            $l++;
+                            var item = $obj[index];
+                            if (index === 0) {
+                                item = JSON.parse(JSON.stringify(item));
+                                item.modifiers = [ "large" ];
+                                buf.push(templatizer["news-list"]["news-card"](item));
+                            } else {
+                                buf.push(templatizer["news-list"]["news-card"](item));
+                            }
+                        }
+                    }
+                }).call(this);
+                buf.push("</div>");
+            } else {
+                buf.push("<div" + jade.cls([ "news-list", "gallery", data.modifiers ], [ null, null, true ]) + ">");
+                (function() {
+                    var $obj = data.items;
+                    if ("number" == typeof $obj.length) {
+                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                            var item = $obj[$index];
+                            buf.push(templatizer["news-list"]["news-card"](item));
+                        }
+                    } else {
+                        var $l = 0;
+                        for (var $index in $obj) {
+                            $l++;
+                            var item = $obj[$index];
+                            buf.push(templatizer["news-list"]["news-card"](item));
+                        }
+                    }
+                }).call(this);
+                buf.push("</div>");
+            }
+        } else {
+            buf.push("<div" + jade.cls([ "news-list", "gallery", data.modifiers ], [ null, null, true ]) + ">");
+            (function() {
+                var $obj = data.items;
+                if ("number" == typeof $obj.length) {
+                    for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                        var item = $obj[$index];
+                        buf.push("<a" + jade.attr("href", item.href, true, false) + ' class="news-item"><div class="news-item-meta"><div class="news-item-date">' + jade.escape(null == (jade_interp = item.date) ? "" : jade_interp) + '</div><div class="news-item-category">' + jade.escape(null == (jade_interp = item.category) ? "" : jade_interp) + '</div></div><div class="news-item-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
+                        if (item.counters) {
+                            buf.push('<div class="social-counters"><div class="facebook-counter"><span class="icon icon-facebook"></span><span class="counter-value">' + jade.escape(null == (jade_interp = item.counters.facebook) ? "" : jade_interp) + '</span></div><div class="twitter-counter"><span class="icon icon-twitter"></span><span class="counter-value">' + jade.escape(null == (jade_interp = item.counters.twitter) ? "" : jade_interp) + "</span></div></div>");
+                        }
+                        buf.push("</a>");
+                    }
+                } else {
+                    var $l = 0;
+                    for (var $index in $obj) {
+                        $l++;
+                        var item = $obj[$index];
+                        buf.push("<a" + jade.attr("href", item.href, true, false) + ' class="news-item"><div class="news-item-meta"><div class="news-item-date">' + jade.escape(null == (jade_interp = item.date) ? "" : jade_interp) + '</div><div class="news-item-category">' + jade.escape(null == (jade_interp = item.category) ? "" : jade_interp) + '</div></div><div class="news-item-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
+                        if (item.counters) {
+                            buf.push('<div class="social-counters"><div class="facebook-counter"><span class="icon icon-facebook"></span><span class="counter-value">' + jade.escape(null == (jade_interp = item.counters.facebook) ? "" : jade_interp) + '</span></div><div class="twitter-counter"><span class="icon icon-twitter"></span><span class="counter-value">' + jade.escape(null == (jade_interp = item.counters.twitter) ? "" : jade_interp) + "</span></div></div>");
+                        }
+                        buf.push("</a>");
+                    }
+                }
+            }).call(this);
+            buf.push("</div>");
+        }
+        return buf.join("");
+    };
+
     // pagination.jade compiled template
     templatizer["pagination"] = function tmpl_pagination(locals) {
         var buf = [];

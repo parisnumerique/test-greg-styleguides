@@ -68,8 +68,8 @@
           }
         ]
       },
-      "aside": {
-        "profile": {
+      "aside": [
+        {
           "title": "Profil",
           "items": [
             {
@@ -94,7 +94,7 @@
             }
           ]
         },
-        "topics": {
+        {
           "title": "Thématique",
           "items": [
             {
@@ -147,41 +147,47 @@
             }
           ]
         }
-      },
-      "content": {
-        "intro": {
-          "block": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p><h2>Questions les plus fréquentes</h2>"
+      ],
+      "components": [
+        {
+          "type": "text",
+          "data": {
+            "block": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p><h2>Questions les plus fréquentes</h2>"
+          }
         },
-        "accordion": {
-          "items": [
-            {
-              "title": "Aenean lacinia bibendum nulla sed consectetur ?",
-              "slug": "titre1",
-              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-            },
-            {
-              "title": "Curabitur blandit tempus porttitor ?",
-              "slug": "titre2",
-              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-            },
-            {
-              "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam ?",
-              "slug": "titre3",
-              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-            },
-            {
-              "title": "Pellentesque ornare sem lacinia quam venenatis vestibulum ?",
-              "slug": "titre4",
-              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-            },
-            {
-              "title": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros ?",
-              "slug": "titre5",
-              "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
-            }
-          ]
+        {
+          "type": "accordion",
+          "data": {
+            "items": [
+              {
+                "title": "Aenean lacinia bibendum nulla sed consectetur ?",
+                "slug": "titre1",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Curabitur blandit tempus porttitor ?",
+                "slug": "titre2",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam ?",
+                "slug": "titre3",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Pellentesque ornare sem lacinia quam venenatis vestibulum ?",
+                "slug": "titre4",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              },
+              {
+                "title": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros ?",
+                "slug": "titre5",
+                "content": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum."
+              }
+            ]
+          }
         }
-      },
+      ],
       "connected": {
         "heading": {
           "title": "Restez connecté",
@@ -191,23 +197,15 @@
           "title": "L’essentiel de Paris",
           "modifiers": ["color-secondary-background"],
           "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
-          "form": {
-            "action": "#",
-            "method": "POST"
-          },
-          "input": {
-            "placeholder": "Entrez votre courriel",
-            "id": "connected-newsletter-input",
-            "name": "email"
-          },
-          "submit": {
-            "text": "Valider"
+          "button": {
+            "href": "#",
+            "text": "Je m'abonne",
+            "target": "_blank"
           },
           "link": {
             "href": "#",
             "text": "Autres newsletters et alertes"
-          },
-          "thanks": "Merci, vous allez recevoir un courriel de confirmation."
+          }
         },
         "jecoute": {
           "title": "Paris j'écoute",

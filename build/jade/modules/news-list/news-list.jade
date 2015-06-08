@@ -6,17 +6,9 @@ mixin news-list(data)
       .news-list(class=data.modifiers)
         each item, index in data.items.slice(0, 5)
           if index === 0
-            +news-card({
-              "modifiers": ["large"],
-              "href": item.href,
-              "image": item.image,
-              "category": item.category,
-              "title": item.title,
-              "counters": {
-                "facebook": 5,
-                "twitter": 12
-              }
-            })
+            - item = JSON.parse(JSON.stringify(item)) // clone the data object
+            - item.modifiers = ["large"] // overwrite the modifiers
+            +news-card(item)
           else
             +news-card(item)
     else
