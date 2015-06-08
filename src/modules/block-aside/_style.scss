@@ -5,7 +5,8 @@
 }
 
 .layout-aside > .block-aside:first-child,
-.aside-wrapper > .block-aside:first-child {
+.aside-wrapper > .block-aside:first-child,
+.aside-wrapper > :first-child > .block-aside:first-child {
   margin-top: 0;
 }
 

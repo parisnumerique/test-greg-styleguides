@@ -26,11 +26,13 @@ append content
   .layout-left-col
     .layout-wrapper
       aside.layout-aside
-        if data.suggestions
-          +block-aside-links(data.suggestions)
-        if data.facets
-          each facet in data.facets
-            +block-aside-checkboxes(facet)
+        .aside-wrapper
+          if data.suggestions
+            +block-aside-links(data.suggestions)
+          #facets
+            if data.facets
+              each facet in data.facets
+                +block-aside-checkboxes(facet)
 
       .layout-content#results
         +search-results-list(data.search_results)
