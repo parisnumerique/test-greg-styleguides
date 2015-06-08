@@ -2,7 +2,10 @@ doctype html
 html(lang="fr")
   head
     meta(charset='utf-8')
-    title= (data && data.title) || "Paris"
+    if data && data.title
+      title= data.title + " – Paris.fr"
+    else
+      title= "Paris.fr"
 
     if data.opengraph
       each og in data.opengraph
