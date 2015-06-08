@@ -36,5 +36,5 @@ require('../templates/list-persons/script');
 require('../templates/search/script');
 
 var Paris = window.Paris || {};
-Paris.version = "0.12.0";
+Paris.version = "0.12.1";
 Paris.templates = {};
