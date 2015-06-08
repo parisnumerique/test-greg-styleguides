@@ -18,7 +18,8 @@ Paris.hub = (function(){
       $sectionsPanel,
       currentSection,
       $breadcrumbsParent,
-      breadcrumbsBase = []
+      breadcrumbsBase = [],
+      $newsParent
       ;
 
     function init(){
@@ -27,6 +28,7 @@ Paris.hub = (function(){
       $hubHeading = $el.find('.hub-heading');
       $sectionsPanel = $el.find('.sections-panel');
       $breadcrumbsParent = $el.find('.breadcrumbs').parent();
+      $newsParent = $el.find('.news-list').parent();
 
       currentSection = $sectionsPanel.data('api').currentSection();
 
@@ -60,28 +62,35 @@ Paris.hub = (function(){
     }
 
     function onSectionsPanelChange(e, data) {
-      renderHubHeading({
-        image: data.image,
-        text: data.title
-      });
-
-      var breadcrumbs = {
-        "items": breadcrumbsBase.slice()
-      };
-
-      if (data.parent) {
-        currentSection = data.parent.id;
-        breadcrumbs.items.push(data.parent);
-      }
-
-      if (data.root !== true) {
-        breadcrumbs.items.push({
-          "text": data.title
+      if (data.image && data.title) {
+        renderHubHeading({
+          image: data.image,
+          text: data.title
         });
       }
 
-      renderBreadcrumbs(breadcrumbs);
-      //renderNews(breadcrumbs);
+      if (data.title || data.parent) {
+        var breadcrumbs = {
+          "items": breadcrumbsBase.slice()
+        };
+
+        if (data.parent) {
+          currentSection = data.parent.id;
+          breadcrumbs.items.push(data.parent);
+        }
+
+        if (data.root !== true) {
+          breadcrumbs.items.push({
+            "text": data.title
+          });
+        }
+
+        renderBreadcrumbs(breadcrumbs);
+      }
+
+      if (data.news) {
+        renderNews(data.news);
+      }
     }
 
     function onClickBreadcrumbsRoot(e){
@@ -107,7 +116,8 @@ Paris.hub = (function(){
 
     function renderNews(data){
       var news = Paris.templates.templatizer["news-list"]["news-list"](data);
-      $newsParent.html(news);
+      $newsParent.find('.news-list').remove();
+      $newsParent.append(news);
     }
 
 
