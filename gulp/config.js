@@ -34,6 +34,7 @@ module.exports = {
       'buttons',
       'hub-heading',
       'links',
+      'news-list',
       'pagination',
       'person-block',
       'search-results-list',
