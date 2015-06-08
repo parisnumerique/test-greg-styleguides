@@ -6,6 +6,10 @@
     max-width: 360px;
   }
 
+  .block-content-link {
+    margin-top: 15px;
+  }
+
   .button {
     height: 45px;
     padding-top: 1px;
@@ -23,7 +27,7 @@
     }
   }
 
-  a:not(.button) {
+  .block-content-link a {
     display: inline-block;
     border-bottom: 1px solid;
     text-decoration: none;

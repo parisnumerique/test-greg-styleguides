@@ -3,6 +3,19 @@
     "defaults": {
       "title": "L’essentiel de Paris",
       "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+      "button": {
+        "href": "#",
+        "text": "Je m'abonne",
+        "target": "_blank"
+      },
+      "link": {
+        "href": "#",
+        "text": "Autres newsletters et alertes"
+      }
+    },
+    "with_form": {
+      "title": "L’essentiel de Paris",
+      "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
       "form": {
         "action": "#",
         "method": "POST"
