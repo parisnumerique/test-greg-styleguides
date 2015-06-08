@@ -21,7 +21,6 @@
   margin-bottom: 13px;
   width: 100%;
   overflow: hidden;
-  white-space: nowrap;
 
   &:hover {
     background-color: lighten($color-tertiary, 18%);
@@ -39,12 +38,11 @@
 .anchors-list-link {
   color: $gray51;
   display: block;
-  line-height: 25px;
+  line-height: 20px;
   overflow: hidden;
-  padding: 11px 15px;
+  padding: 13px 15px;
   position: relative;
   text-decoration: none;
-  text-overflow: ellipsis;
   z-index: 1;
 }
 
@@ -92,7 +90,7 @@
   .anchors-list-progress {
     background-color: $color-tertiary;
     display: block;
-    height: 47px;
+    height: 100%;
     position: absolute;
     top: 0;
     width: 0%;
