@@ -18,6 +18,10 @@ Paris.blockContentNewsletter = (function(){
       initOptions();
 
       $form = $el.find('.block-content-form');
+
+      // Halt here if the module does not contain a form
+      if ($form.length === 0) {return;}
+
       $formElements = $form.find('input, textarea, button');
 
       $form.on('submit', onSubmitForm);
