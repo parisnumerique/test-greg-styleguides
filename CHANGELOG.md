@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.12.1 (2015-06-08)
+
+Miscellaneous fixes:
+* replaced templatizer url in `package.json` to use HTTPS
+* component `faq`: add this component, which is a alias to `accordion`
+* module `hub-heading`: optional image
+* module `sections-panel`: fix undefined in client-side content rendering
+* template `single-person`: set `permanence` and `contact` optional
+* template `subhome-news`: switch between `hub-heading` and `jumbotron`, depending on data
+* add suffix and default value "Paris.fr" to page title in wrapper_prod
+
 ## 0.12.0 (2015-06-02)
 
 Responsive design (more detailed changelog soon)

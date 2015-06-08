@@ -10,6 +10,7 @@ include ../../modules/footer/footer
 include ../../modules/get-involved/get-involved
 include ../../modules/rheader/rheader
 include ../../modules/heading/heading
+include ../../modules/hub-heading/hub-heading
 include ../../modules/jumbotron/jumbotron
 include ../../modules/news-list/news-list
 include ../../modules/que-faire/que-faire
@@ -23,7 +24,10 @@ append content
 
 append content
   .layout-content
-    +jumbotron(data.jumbotron)
+    if data.heading
+      +hub-heading(data.heading)
+    else 
+      +jumbotron(data.jumbotron)
 
 append content
   .layout-content.layout-separate-after.layout-small-padding.hidden-on-small

@@ -37,8 +37,10 @@ append content
           .aside-wrapper
             if data.aside.picture
               +block-aside(data.aside.picture)
-            +block-aside(data.aside.permanence)
-            +block-aside-contact(data.aside.contact)
+            if data.aside.permanence
+              +block-aside(data.aside.permanence)
+            if data.aside.contact
+              +block-aside-contact(data.aside.contact)
         .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
