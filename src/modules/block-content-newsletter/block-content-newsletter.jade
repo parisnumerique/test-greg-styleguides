@@ -11,7 +11,6 @@ mixin block-content-newsletter(data)
         input(type="email" placeholder=data.input.placeholder title=data.input.placeholder id=data.input.id name=data.input.name required=true)
         button.button.action(type="submit")= data.submit.text
     else if data.button
-      - console.log(data.button)
       - button = JSON.parse(JSON.stringify(data.button || [])) // clone the data object
       - button.modifiers = button.modifiers || []
       - button.modifiers.push("action")
