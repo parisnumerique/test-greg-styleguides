@@ -2,7 +2,6 @@
   font-size: 14px;
   max-width: 360px;
   position: relative;
-  max-height: 240px;
   margin-bottom: 30px;
   overflow: hidden;
 
@@ -19,9 +18,11 @@
 
 
   .block-content-item {
-    transition: 2s ease opacity ;
+    transition: 2s ease opacity;
     width: 100%;
     opacity: 0;
+    position: absolute;
+    top: 0;
     &.visible {
       opacity: 1;
     }
@@ -91,7 +92,18 @@
 }
 
 
-.blocks-content-vertical .block-content-jecoute .block-content-button {
-  position: absolute;
-  bottom: 0;
+.blocks-content-vertical .block-content-jecoute {
+  .block-content-button {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+
+@include small {
+  .blocks-content-vertical .block-content-jecoute {
+    &.block-content {
+      padding-bottom: 50px;
+    }
+  }
 }
