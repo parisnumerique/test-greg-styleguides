@@ -230,11 +230,14 @@ Paris.sectionsPanel = (function(){
         '<ul class="sections-panel-content-items">';
 
       content += map(data.items, function(item){
-        return '<li class="sections-panel-content-item">' +
+        var render = '<li class="sections-panel-content-item">' +
           '<a href="'+item.href+'">' +
-          '<div class="sections-panel-content-item-title">'+item.title+'</div>' +
-          '<div class="sections-panel-content-item-text">'+item.text+'</div>' +
-          '</a></li>';
+          '<div class="sections-panel-content-item-title">'+item.title+'</div>';
+        if (item.text) {
+          render += '<div class="sections-panel-content-item-text">'+item.text+'</div>';
+        }
+        render += '</a></li>';
+        return render;
       }).join('');
       content += '</ul>';
 
