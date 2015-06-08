@@ -1,15 +1,15 @@
 {
   "name": "paris-styleguide",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "description": "Paris.fr styleguide",
   "main": "index.js",
   "dependencies": {
+    "cldr-data": "~26.0.10"
   },
   "devDependencies": {
     "algoliasearch": "~3.3.2",
     "bootstrap": "^3.3.2",
     "browserify": "^9.0.3",
-    "cldr-data": "~26.0.10",
     "fastclick": "~1.0.6",
     "globalize": "^1.0.0",
     "gulp": "^3.8.11",

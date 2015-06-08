@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.2 (2015-06-08)
+
+Fix `package.json`
+
 ## 0.12.1 (2015-06-08)
 
 Miscellaneous fixes:
