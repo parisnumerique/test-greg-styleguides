@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.12.3 (2015-06-08)
+
+* module `anchors-list`: allow multiline text
+* module `block-content-jecoute`: fixed height bug
+* module `block-content-newsletter`: added a variation to have a button instead of the form
+* module `document-heading`: fixed responsive bug
+* module `news-card`: fix tiny CSS border bug
+* module `news-list`: pass large item data directly to `news-card`, overriding the modifier
+* template `faq`: changed to use arrays for content and aside
+* template `hub`: refresh the `news-list` module when navigating in `sections-panel`
+
 ## 0.12.2 (2015-06-08)
 
 Fix `package.json`
