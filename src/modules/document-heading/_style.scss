@@ -62,11 +62,14 @@
 
  .icon {
    color: $gray153;
-   margin-right: 15px;
    text-decoration: none;
 
    &:hover {
      color: $color-tertiary;
+   }
+
+   & + .icon {
+     margin-left: 15px;
    }
  }
 }
@@ -110,7 +113,7 @@
 
   .document-heading-wrapper {
     height: 100%;
-    position: absolute;
+    position: relative;
   }
 
   .document-heading-content {
