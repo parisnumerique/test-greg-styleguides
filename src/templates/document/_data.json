@@ -96,7 +96,7 @@
           "items": [
             {"href": "#est-ce-que-j-y-ai-droit", "text": "Est-ce que j’y ai droit ?"},
             {"href": "#constituer-un-dossier", "text": "Constituer un dossier"},
-            {"href": "#complement-l-aide-au-logement", "text": "Complément : l’aide au logement"},
+            {"href": "#complement-l-aide-au-logement", "text": "Complément : l’aide au logement avec texte très long"},
             {"href": "#questions-frequentes", "text": "Questions fréquentes"}
           ]
         },
@@ -335,7 +335,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2 class='anchor' id='complement-l-aide-au-logement'>Complément : l’aide au logement</h2><p>Le logement social n’est pas la seule aide possible pour les Parisiens et Parisiennes qui en ont besoin. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p><h3>Les aides au logement de la Ville de Paris</h3><p>A Paris, de nombreux dispositifs existent pour vous aider à assumer vos dépenses de logement – et les coûts afférents - ou à améliorer votre habitat. Les aides au logement de la Ville de Paris sont accordées sous condition de ressources.</p>"
+            "block": "<h2 class='anchor' id='complement-l-aide-au-logement'>Complément : l’aide au logement avec texte très long</h2><p>Le logement social n’est pas la seule aide possible pour les Parisiens et Parisiennes qui en ont besoin. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p><h3>Les aides au logement de la Ville de Paris</h3><p>A Paris, de nombreux dispositifs existent pour vous aider à assumer vos dépenses de logement – et les coûts afférents - ou à améliorer votre habitat. Les aides au logement de la Ville de Paris sont accordées sous condition de ressources.</p>"
           }
         },
         {
