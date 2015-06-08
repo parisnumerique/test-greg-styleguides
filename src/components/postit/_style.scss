@@ -1,7 +1,7 @@
 .component-postit {
   @extend %component-text;
 
-  border-bottom: 7px solid $gray242;
+  border-bottom: 7px solid $orange-postit;
   margin-top: -50px;
   padding: 10px 0 110px;
   position: relative;
