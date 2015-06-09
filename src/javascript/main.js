@@ -37,6 +37,9 @@ require('../templates/hub/script');
 require('../templates/list-persons/script');
 require('../templates/search/script');
 
+// additional scripts
+require('./lib/cnil');
+
 var Paris = window.Paris || {};
 Paris.version = "0.12.3";
 Paris.templates = {};

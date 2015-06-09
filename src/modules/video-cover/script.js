@@ -22,9 +22,8 @@ Paris.videoCover = (function(){
 
       $placeholder.on('click', 'a[data-action="allow_cookies"]', onClickAllowCookies);
 
-      if (Cookies.get(Paris.config.cnil.cookie.name) === Paris.config.cnil.cookie.value) {
-        renderVideo();
-      }
+      renderVideo();
+      PubSub.subscribe('cookies:updated', renderVideo);
     }
 
     function onClickAllowCookies(e){
@@ -36,9 +35,11 @@ Paris.videoCover = (function(){
     }
 
     function renderVideo(){
+      if ($embed === null || Cookies.get(Paris.config.cnil.cookie.name) !== Paris.config.cnil.cookie.value) {return;}
       var embed = $embed.text();
       $el.html(embed);
       $embed.remove();
+      $embed = null;
     }
 
     init();

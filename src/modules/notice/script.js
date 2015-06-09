@@ -67,7 +67,7 @@ Paris.notice = (function(){
 
     api.open = function(data){
       $el.velocity({
-        opacity: 1
+        opacity: [1, 0]
       }, {
         display: 'block',
         duration: 350,

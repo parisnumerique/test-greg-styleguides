@@ -3,7 +3,15 @@
     "data": {
       "title": "Titre de la page type",
       "bodyModifiers": ["fixed-nav"],
-      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": true,
+          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+        }
+      },
       "rheader": {
         "logo": {
           "href": "../home/",

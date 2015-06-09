@@ -3,7 +3,15 @@
     "data": {
       "title": "Ça glisse sur la patinoire de l’hôtel de ville",
       "bodyModifiers": ["fixed-nav"],
-      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": true,
+          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+        }
+      },
       "rheader": {
         "logo": {
           "href": "../home/",
@@ -152,6 +160,7 @@
         {
           "type": "video",
           "data": {
+            "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
             "block": "<iframe frameborder=\"0\" width=\"480\" height=\"270\" src=\"//www.dailymotion.com/embed/video/xn4p8l\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/xn4p8l_venez-patiner-devant-l-hotel-de-ville_people\" target=\"_blank\">Venez patiner devant l&#039;H&ocirc;tel de Ville!</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
           }
         },

@@ -23,9 +23,9 @@ html(lang="fr")
   - bodyModifiers = data.bodyModifiers || []
   - bodyAttributes = data.bodyAttributes || {}
   body(class=bodyModifiers)&attributes(bodyAttributes)
-    if data.notice_old_browsers
+    if data.notices && data.notices.old_browsers
       <!--[if lt IE 9]>
-      div.notice.notice-browser!= data.notice_old_browsers
+      div.notice.notice-browser!= data.notices.old_browsers
       <![endif]-->
     != yield
     script(src="../../javascript/jquery-2.1.4.min.js")
