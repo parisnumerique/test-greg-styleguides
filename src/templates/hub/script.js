@@ -115,9 +115,14 @@ Paris.hub = (function(){
     }
 
     function renderNews(data){
-      var news = Paris.templates.templatizer["news-list"]["news-list"](data);
       $newsParent.find('.news-list').remove();
-      $newsParent.append(news);
+      if(data && data.items) {
+        var news = Paris.templates.templatizer["news-list"]["news-list"](data);
+        $newsParent.closest('.layout-content').show();
+        $newsParent.append(news);
+      } else {
+        $newsParent.closest('.layout-content').hide();
+      }
     }
 
 
