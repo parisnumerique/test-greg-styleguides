@@ -6,9 +6,9 @@ var Cookies = require('cookies-js');
 PubSub.subscribe('notice:close', function(e, data){
   // Set the cookie when the notice is closed
   if (data.id === 'notice_cnil') {
-    if (Cookies.get(Paris.config.cnil.cookie.name) !== Paris.config.cnil.cookie.value) {
-      Cookies.set(Paris.config.cnil.cookie.name, Paris.config.cnil.cookie.value, {
-        expires: Paris.config.cnil.cookie.expires
+    if (Cookies.get(Paris.config.cookies.cnil.name) !== Paris.config.cookies.cnil.value) {
+      Cookies.set(Paris.config.cookies.cnil.name, Paris.config.cookies.cnil.value, {
+        expires: Paris.config.cookies.cnil.expires
       });
       PubSub.publish('cookies:updated');
     }
@@ -17,7 +17,7 @@ PubSub.subscribe('notice:close', function(e, data){
 
 $(function () {
   // Open the notice if the cookie is not set
-  if (Cookies.get(Paris.config.cnil.cookie.name) !== Paris.config.cnil.cookie.value) {
+  if (Cookies.get(Paris.config.cookies.cnil.name) !== Paris.config.cookies.cnil.value) {
     PubSub.publish('notice:open', {id: 'notice_cnil'});
   }
 });
