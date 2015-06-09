@@ -3,21 +3,19 @@ include ../../helpers/code
 
 h2 Standard
 .lsg-module
-  +notice(defaults)
+  +notice({"block": "Texte de la notice"})
 +code.
   include notice
-  +notice(#{JSON.stringify(defaults, null, 2)})
-
+  +notice({"block": "Texte de la notice"})
 
 // You can also pass the block as a parameter, named "block"
 
 h2 Fermable
 .lsg-module
-  +notice(closable_with_id)
+  +notice({"id": "my_notice", "closable": true, "block": "Texte de la notice"})
 +code.
   include notice
-  +notice(#{JSON.stringify(closable_with_id, null, 2)})
-
+  +notice({"id": "my_notice", "closable": true, "block": "Texte de la notice"})
 
 .lsg-module
   +notice({"modifiers": ["blue"], "closable": true})
@@ -26,13 +24,21 @@ h2 Fermable
   include notice
   +notice({"modifiers": ["blue"], "closable": true})
 
-
 .lsg-module
   +notice({"modifiers": ["white"], "closable": true})
     | Texte de la notice
 +code.
   include notice
   +notice({"modifiers": ["white"], "closable": true})
+
+h2 Fermé par défaut
+p Pour ouvrir cette notice, publier l'évènement <code>notice:open</code> avec l'<code>id</code> de la notice en <code>data</code> :
+p: code Paris.events.publish('notice:open', {id: "openable_notice"});
+.lsg-module
+  +notice({"modifiers": ["blue", "closed"], "closable": true, "id": "openable_notice"})
++code.
+  include notice
+  +notice({"modifiers": ["blue", "closed"], "closable": true, "id": "openable_notice"})
 
 h2 Contenant un lien
 .lsg-module
@@ -43,6 +49,22 @@ h2 Contenant un lien
   +notice({})
     a(href='#') Texte de la notice
 
+h2 Texte ou lien centré
+.lsg-module
+  +notice({"modifiers": ["center-text"]})
+    | Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["center-text"]})
+    | Texte de la notice
+
+.lsg-module
+  +notice({"modifiers": ["center-text"]})
+    a(href='#') Texte de la notice
++code.
+  include notice
+  +notice({"modifiers": ["center-text"]})
+    a(href='#') Texte de la notice
 
 h2 Avec une icône alert
 .lsg-module
