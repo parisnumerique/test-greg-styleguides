@@ -30,12 +30,24 @@ Paris.rheader = (function(){
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
 
+      // fix or unfix
+      PubSub.subscribe('scroll:notice:down', fix);
+      PubSub.subscribe('scroll:notice:up', unfix);
+      PubSub.subscribe('header:search:close', fix);
+      PubSub.subscribe('notice:close', function(e, data){
+        if (data && data.id === "notice_home_top") {
+          fix();
+        }
+      });
+      if(!$('.notice.top').length || $(document).scrollTop() >= $('.notice.top').height() ) {
+        fix();
+      }
+
       if (!$el.hasClass('standalone')) {
         // in standalone mode, we follow the links
         $buttonMenu.on('click', onClickButtonMenu);
         $('body').on('click', '#'+options.mobileNavId+'-overlay', closeMenu);
       }
-
     }
 
     function initOptions() {
@@ -47,7 +59,7 @@ Paris.rheader = (function(){
     function onScroll(e, data) {
       if (lastScrollY !== 0) {
         if (data.originalEvent.pageY < 200) {
-          $el.removeClass('folded');
+          unfold();
           return;
         }
         var down = (lastScrollY < data.originalEvent.pageY);
@@ -61,6 +73,14 @@ Paris.rheader = (function(){
 
     function unfold(){
       $el.removeClass('folded');
+    }
+
+    function fix() {
+      $el.addClass('fixed');
+    }
+
+    function unfix() {
+      $el.removeClass('fixed');
     }
 
     function onClickButtonMenu(e) {

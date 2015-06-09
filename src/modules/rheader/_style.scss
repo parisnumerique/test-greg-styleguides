@@ -12,11 +12,15 @@ $rheader-height-large:  80px;
 .rheader {
   background-color: $color-primary;
   height: $rheader-height-small;
-  left: 0;
-  position: fixed;
-  top: 0;
+  position: relative;
   width: 100%;
   z-index: 300;
+
+  &.fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+  }
 
   a {
     color: $white;
