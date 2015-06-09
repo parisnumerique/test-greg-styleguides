@@ -32,9 +32,9 @@ append content
       +sections-panel(data.sections)
 
 append content
-  if data.news.news
-    .layout-content.hidden-on-small
-      .layout-wrapper
+  .layout-content.hidden-on-small(style= data.news.news ? null : "display: none")
+    .layout-wrapper
+      if data.news.news
         +heading(data.news.heading)
         +news-list(data.news.news)
 
