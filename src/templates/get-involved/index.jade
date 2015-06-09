@@ -30,16 +30,28 @@ append content
       +links-group(data.links)
 
 append content
-  .layout-right-col.gray-background
-    .layout-wrapper
-      .layout-content.hidden-on-small
-        +heading(data.gallery.heading)
-        +gallery-ugc(data.gallery.gallery_ugc)
-      aside.layout-aside.color-secondary-background
-        .blocks-content-vertical
-          +block-content-newsletter(data.connected.newsletter)
-          +block-content-jecoute(data.connected.jecoute)
-          +block-content-social(data.connected.social)
+  if data.gallery
+    .layout-right-col
+      .layout-wrapper
+        .layout-content.hidden-on-small
+          +heading(data.gallery.heading)
+          +gallery-ugc(data.gallery.gallery_ugc)
+        aside.layout-aside.color-secondary-background
+          .blocks-content-vertical
+            +block-content-newsletter(data.connected.newsletter)
+            +block-content-jecoute(data.connected.jecoute)
+            +block-content-social(data.connected.social)
+  else
+    .layout-content.color-secondary-background.layout-separate-after
+      .layout-three-col
+        .layout-wrapper
+          +heading(data.connected.heading)
+          .layout-content
+            +block-content-newsletter(data.connected.newsletter)
+          .layout-content
+            +block-content-jecoute(data.connected.jecoute)
+          .layout-content
+            +block-content-social(data.connected.social)
 
 append content
   .layout-content.layout-adjacent-before
