@@ -6,7 +6,7 @@
       "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
       "notice": {
         "id": "notice_home_top",
-        "modifiers": ["top", "blue", "buildings"],
+        "modifiers": ["top", "blue", "buildings", "center-text"],
         "closable": true,
         "block": "<a href=\"#\">Visiting Paris ? Plan your trip</a>"
       },
