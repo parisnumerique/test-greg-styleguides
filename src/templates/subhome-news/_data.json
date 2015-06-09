@@ -34,7 +34,7 @@
             "text": "Autour de moi"
           },
           "menu": {
-            "href": "#",
+            "href": "../nav/",
             "text": "Menu"
           }
         },
@@ -600,7 +600,7 @@
             "text": "Autour de moi"
           },
           "menu": {
-            "href": "#",
+            "href": "../nav/",
             "text": "Menu"
           }
         },
@@ -1083,7 +1083,7 @@
             "text": "Autour de moi"
           },
           "menu": {
-            "href": "#",
+            "href": "../nav/",
             "text": "Menu"
           }
         },

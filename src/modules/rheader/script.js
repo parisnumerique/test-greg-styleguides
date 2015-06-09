@@ -30,8 +30,11 @@ Paris.rheader = (function(){
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
 
-      $buttonMenu.on('click', onClickButtonMenu);
-      $('body').on('click', '#'+options.mobileNavId+'-overlay', closeMenu);
+      if (!$el.hasClass('standalone')) {
+        // in standalone mode, we follow the links
+        $buttonMenu.on('click', onClickButtonMenu);
+        $('body').on('click', '#'+options.mobileNavId+'-overlay', closeMenu);
+      }
 
     }
 
