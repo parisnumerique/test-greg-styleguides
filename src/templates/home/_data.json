@@ -214,12 +214,12 @@
                   "text": "Sed posuere consectetur est at lobortis."
                 },
                 {
-                  "href": "#",
+                  "href": "../faq/",
                   "text": "Vous cherchez autre chose&nbsp;?",
                   "modifiers": ["more"]
                 },
                 {
-                  "href": "#",
+                  "href": "../hub/",
                   "text": "Découvrez tous les services de la ville",
                   "modifiers": ["more", "only-on-small"]
                 }
