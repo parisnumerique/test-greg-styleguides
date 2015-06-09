@@ -13,17 +13,17 @@ mixin block-stay-connected(data)
           +gallery-ugc(data.gallery.gallery_ugc)
         aside.layout-aside.color-secondary-background
           .blocks-content-vertical
-            +block-content-newsletter(data.connected.newsletter)
-            +block-content-jecoute(data.connected.jecoute)
-            +block-content-social(data.connected.social)
+            +block-content-newsletter(data.newsletter)
+            +block-content-jecoute(data.jecoute)
+            +block-content-social(data.social)
   else
     .layout-content.color-secondary-background.layout-separate-after
       .layout-three-col
         .layout-wrapper
-          +heading(data.connected.heading)
+          +heading(data.heading)
           .layout-content
-            +block-content-newsletter(data.connected.newsletter)
+            +block-content-newsletter(data.newsletter)
           .layout-content
-            +block-content-jecoute(data.connected.jecoute)
+            +block-content-jecoute(data.jecoute)
           .layout-content
-            +block-content-social(data.connected.social)
+            +block-content-social(data.social)
