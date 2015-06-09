@@ -32,10 +32,11 @@ append content
       +sections-panel(data.sections)
 
 append content
-  .layout-content.hidden-on-small
-    .layout-wrapper
-      +heading(data.news.heading)
-      +news-list(data.news.news)
+  if data.news.news
+    .layout-content.hidden-on-small
+      .layout-wrapper
+        +heading(data.news.heading)
+        +news-list(data.news.news)
 
 append content
   if data.cross_content.items.length === 3
