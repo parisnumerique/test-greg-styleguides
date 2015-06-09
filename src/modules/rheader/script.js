@@ -31,8 +31,8 @@ Paris.rheader = (function(){
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
 
       // fix or unfix
-      PubSub.subscribe('scroll:notice:down', fix);
-      PubSub.subscribe('scroll:notice:up', unfix);
+      PubSub.subscribe('scroll.notice.down', fix);
+      PubSub.subscribe('scroll.notice.up', unfix);
       PubSub.subscribe('header:search:close', fix);
       PubSub.subscribe('notice:close', function(e, data){
         if (data && data.id === "notice_home_top") {
