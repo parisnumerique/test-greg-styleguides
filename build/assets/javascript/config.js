@@ -13,5 +13,11 @@ Paris.config = {
       global: "recette_ParisFront",
       persons: "recette_Elus"
     }
+  },
+  cnil: {
+    cookie: {
+      name: "CNIL",
+      value: "Accepted"
+    }
   }
 };

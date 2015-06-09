@@ -25,14 +25,25 @@
     height: 0;
     padding-bottom: 70%;
 
-    &:before {display: none;}
+    &:before,
+    .video-cover-embed {display: none;}
 
-    > iframe {
+    > iframe,
+    .video-cover-placeholder {
       display: block;
       position: absolute;
       width: 100%;
       height: 100%;
       left: 0; top: 0;
+    }
+
+    .video-cover-placeholder {
+      background: $gray242;
+      color: $black;
+      padding: 20px;
+      text-align: center;
+
+      a {color: $color-primary}
     }
   }
 
