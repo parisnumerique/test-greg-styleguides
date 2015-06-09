@@ -6,11 +6,12 @@ include ../../modules/block-content-social/block-content-social
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/footer/footer
-include ../../modules/rheader/rheader
-include ../../modules/hub-heading/hub-heading
-include ../../modules/heading/heading
-include ../../modules/links-group/links-group
 include ../../modules/gallery-ugc/gallery-ugc
+include ../../modules/heading/heading
+include ../../modules/hub-heading/hub-heading
+include ../../modules/links-group/links-group
+include ../../modules/notice/notice
+include ../../modules/rheader/rheader
 
 append content
   +rheader(data.rheader)
@@ -47,3 +48,7 @@ append content
 
 append content
   +button-top
+
+append content
+  if data.notices && data.notices.cnil
+    +notice(data.notices.cnil)

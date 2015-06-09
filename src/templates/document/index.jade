@@ -1,20 +1,21 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/anchors-list/anchors-list
-include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
-include ../../modules/button/button
 include ../../modules/button-top/button-top
+include ../../modules/button/button
 include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
-include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/last-update/last-update
+include ../../modules/notice/notice
 include ../../modules/poll/poll
+include ../../modules/rheader/rheader
 include ../../modules/share/share
 
 include ../../components/components
@@ -74,3 +75,7 @@ append content
 
 append content
   +button-top
+
+append content
+  if data.notices && data.notices.cnil
+    +notice(data.notices.cnil)

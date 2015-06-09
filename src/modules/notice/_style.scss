@@ -85,6 +85,10 @@
     bottom: 0;
     position: absolute;
   }
+  &.fixed {
+    position: fixed;
+    z-index: 1000;
+  }
 
   // text
   &.center-text {
