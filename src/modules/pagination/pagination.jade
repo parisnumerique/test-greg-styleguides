@@ -4,16 +4,16 @@ mixin pagination(data)
     - total = parseInt(data.total) || 0
     - prev = current - 1
     - next = current + 1
+    - items_before = function(){if (current < 3){return 1;} else if (current > total - 1) {return 3;} else {return 2;}}
     - items_after = function(){if (current < 3){return (current * -1) + 5;} else if (current > total - 2) {return total - current;} else {return 2;}}
-    - items_before = 5 - 1 - items_after()
     ul
       if current !== 1
         li.previous
           a(href=data.url.replace("${page}", prev) aria-label=data.text.prev data-page="prev")
             span(aria-hidden='true') &lt;
-        - item = current - items_before
+        - item = current - items_before()
         while item < current
-          li: a(href=data.url.replace("${page}", item) data-page=item)= item
+          li.hidden-on-small: a(href=data.url.replace("${page}", item) data-page=item)= item
           - item++
       li.current
         a(href=data.url.replace("${page}", current) data-page=current)= current
@@ -21,7 +21,7 @@ mixin pagination(data)
         - item = current
         while item < total && item < current + items_after()
          - item++
-         li: a(href=data.url.replace("${page}", item) data-page=item)= item
+         li.hidden-on-small: a(href=data.url.replace("${page}", item) data-page=item)= item
         li.next
           a(href=data.url.replace("${page}", next) aria-label=data.text.next data-page="next")
             span(aria-hidden='true') &gt;
