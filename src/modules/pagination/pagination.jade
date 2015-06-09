@@ -1,7 +1,7 @@
 mixin pagination(data)
   nav.pagination
-    - current = data.current || 1
-    - total = data.total || 0
+    - current = parseInt(data.current) || 1
+    - total = parseInt(data.total) || 0
     - prev = current - 1
     - next = current + 1
     - items_after = function(){if (current < 3){return (current * -1) + 5;} else if (current > total - 2) {return total - current;} else {return 2;}}
