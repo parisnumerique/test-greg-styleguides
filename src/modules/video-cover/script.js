@@ -28,14 +28,14 @@ Paris.videoCover = (function(){
 
     function onClickAllowCookies(e){
       e.preventDefault();
-      Cookies.set(Paris.config.cnil.cookie.name, Paris.config.cnil.cookie.value, {
-        expires: Paris.config.cnil.cookie.expires
+      Cookies.set(Paris.config.cookies.cnil.name, Paris.config.cookies.cnil.value, {
+        expires: Paris.config.cookies.cnil.expires
       });
       renderVideo();
     }
 
     function renderVideo(){
-      if ($embed === null || Cookies.get(Paris.config.cnil.cookie.name) !== Paris.config.cnil.cookie.value) {return;}
+      if ($embed === null || Cookies.get(Paris.config.cookies.cnil.name) !== Paris.config.cookies.cnil.value) {return;}
       var embed = $embed.text();
       $el.html(embed);
       $embed.remove();
