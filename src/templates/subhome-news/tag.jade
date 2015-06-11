@@ -35,10 +35,11 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.gray-background
-    .layout-wrapper
-      +heading(data.archive.heading)
-      +news-list(data.archive.news)
+  if data.archive
+    .layout-content.gray-background
+      .layout-wrapper
+        +heading(data.archive.heading)
+        +news-list(data.archive.news)
 
 append content
   .layout-content

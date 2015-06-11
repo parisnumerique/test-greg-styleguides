@@ -26,7 +26,7 @@ append content
   .layout-content
     if data.heading
       +hub-heading(data.heading)
-    else 
+    else
       +jumbotron(data.jumbotron)
 
 append content
@@ -35,10 +35,11 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.gray-background
-    .layout-wrapper
-      +heading(data.archive.heading) // TODO
-      +news-list(data.archive.news)
+  if data.archive
+    .layout-content.gray-background
+      .layout-wrapper
+        +heading(data.archive.heading) // TODO
+        +news-list(data.archive.news)
 
 append content
   .layout-content
