@@ -5,7 +5,7 @@ mixin block-content-jecoute(data)
   - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-jecoute")
   +block-content({"title": data.title, "modifiers": modifiers})
-    if data.items
+    if data.items && data.items.length
       div.block-content-items
         each item in data.items
           div.block-content-item
