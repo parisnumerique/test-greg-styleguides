@@ -1,0 +1,12 @@
+include ../../modules/button/button
+
+mixin error-heading(data)
+  .error-heading(class=data.modifiers)
+    .error-heading-wrapper.layout-wrapper(style= data.background ? "background-image: url(#{data.background})" : "")
+      .error-heading-logo Paris
+      .error-heading-content
+        if data.title
+          h1!= data.title
+        if data.button
+          +button(data.button)
+

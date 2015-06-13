@@ -1,0 +1,43 @@
+
+.error-heading {
+  background-color: $color-secondary;
+  color: $white;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+
+  h1 {
+    color: $white;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+.error-heading-wrapper {
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.error-heading-content {
+}
+
+@include large {
+
+  .error-heading {
+    height: 400px;
+
+    h1 {
+      font-size: 40px;
+      line-height: 46px;
+      margin: 120px 0 20px;
+    }
+  }
+
+}
+

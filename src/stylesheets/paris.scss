@@ -21,8 +21,9 @@ $susy: (
 @import "../base/_normalize";
 
 // Themes
-// Do not remove or modify the next line, it's replaced with real themes in the build process
-// @import_theme;
+@if variable-exists(theme) and $theme == "minitel" {
+  @import "./themes/minitel";
+}
 
 // Modules
 @import "../modules/anchors-list/_style";
@@ -39,6 +40,7 @@ $susy: (
 @import "../modules/button-top/_style";
 @import "../modules/cross-content/_style";
 @import "../modules/document-heading/_style";
+@import "../modules/error-heading/_style";
 @import "../modules/footer/_style";
 @import "../modules/gallery-ugc/_style";
 @import "../modules/get-involved-list/_style";
@@ -66,6 +68,7 @@ $susy: (
 @import "../modules/sections-list/_style";
 @import "../modules/sections-panel/_style";
 @import "../modules/share/_style";
+@import "../modules/table-of-contents/_style";
 @import "../modules/tags/_style";
 @import "../modules/video-cover/_style";
 
