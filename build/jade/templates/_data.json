@@ -2,6 +2,7 @@
   "templates": [
     "document",
     "document-postit",
+    "error",
     "faq",
     "generic",
     "get-involved",
@@ -12,6 +13,7 @@
     "list-persons",
     "list-persons/adjoints.html",
     "municipality",
+    "nav",
     "search",
     "search/no-result.html",
     "search/results.html",

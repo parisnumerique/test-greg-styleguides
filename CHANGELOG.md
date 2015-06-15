@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.12.5 (2015-06-15)
+
+* fixed build (files were missing)
+* added templates `error` and `nav` to list
+* module `sections-list`: hide arrow when not on small screen
+
 ## 0.12.4 (2015-06-15)
 
 * component `jecoute`: prefill email from cookie
