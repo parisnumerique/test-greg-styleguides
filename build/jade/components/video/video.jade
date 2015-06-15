@@ -1,9 +1,10 @@
 mixin video(data)
   .component.component-video
     .video-wrapper
-      if block
-        block
-      else if data.block
-        != data.block
-      else
-        | video
+      if data.placeholder
+        .video-placeholder!= data.placeholder
+      script.video-embed(type="text/html")
+        if block
+          != block
+        else if data.block
+          != data.block

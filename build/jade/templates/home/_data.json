@@ -3,10 +3,18 @@
     "data": {
       "title": "Bienvenue sur Paris.fr",
       "bodyModifiers": "home",
-      "notice_old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": true,
+          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+        }
+      },
       "notice": {
         "id": "notice_home_top",
-        "modifiers": ["top", "blue", "buildings"],
+        "modifiers": ["top", "blue", "buildings", "center-text"],
         "closable": true,
         "block": "<a href=\"#\">Visiting Paris ? Plan your trip</a>"
       },
@@ -33,7 +41,7 @@
             "text": "Autour de moi"
           },
           "menu": {
-            "href": "#",
+            "href": "../nav/",
             "text": "Menu"
           }
         },
@@ -130,11 +138,6 @@
                 "href": "#",
                 "text": "Voir tous les résultats"
               }
-            },
-            "notice": {
-              "modifiers": ["bottom", "transparent"],
-              "closable": true,
-              "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
             }
           }
         },
@@ -214,12 +217,12 @@
                   "text": "Sed posuere consectetur est at lobortis."
                 },
                 {
-                  "href": "#",
+                  "href": "../faq/",
                   "text": "Vous cherchez autre chose&nbsp;?",
                   "modifiers": ["more"]
                 },
                 {
-                  "href": "#",
+                  "href": "../hub/",
                   "text": "Découvrez tous les services de la ville",
                   "modifiers": ["more", "only-on-small"]
                 }

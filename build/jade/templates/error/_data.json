@@ -1,8 +1,8 @@
 {
   "index": {
     "data": {
-      "title": "La Maire et les élus",
-      "bodyModifiers": ["fixed-nav"],
+      "title": "Erreur 404 : page non trouvée",
+      "theme": "minitel",
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -12,102 +12,108 @@
           "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
         }
       },
-      "rheader": {
+      "heading": {
         "logo": {
           "href": "../home/",
           "text": "Paris"
         },
-        "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
-        ],
-        "buttons": {
-          "search": {
-            "href": "../search/",
-            "icon": "search",
-            "text": "Recherche"
-          },
-          "around": {
-            "href": "#",
-            "icon": "marker",
-            "text": "Autour de moi"
-          },
-          "menu": {
-            "href": "../nav/",
-            "text": "Menu"
-          }
-        },
-        "items": [
-          {"href": "../hub/", "text": "Services et infos pratiques"},
-          {"href": "../subhome-news/", "text": "Actualités"},
-          {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality/", "text": "Municipalité", "current": true},
+        "background": "../../modules/error-heading/animation.gif",
+        "title": "Erreur 404 : page non trouvée",
+        "button": {
+          "text": "Retour au site",
+          "href": "#"
+        }
+      },
+      "contents": {
+        "nav": [
           {
-            "href": "../subhome-get-involved/",
-            "text": "Participez !",
-            "hover": "C'est à vous !",
-            "modifiers": ["get-involved"]
+            "href": "#",
+            "text": "Services et infos pratiques"
           },
           {
             "href": "#",
-            "icon": "profile",
-            "text": "Mon compte",
-            "modifiers": ["account"]
-          }
-        ]
-      },
-      "heading": {
-        "text": "La Maire et les élus",
-        "image": "./heading.jpg"
-      },
-      "breadcrumbs": {
-        "items": [
-          {
-            "href": "../home",
-            "text": "Accueil"
+            "text": "Actualités"
           },
           {
-            "href": "../subhome-municipality",
+            "href": "#",
+            "text": "Entreprises"
+          },
+          {
+            "href": "#",
             "text": "Municipalité"
           },
           {
-            "text": "La Maire et les élus"
+            "href": "#",
+            "text": "Participez"
           }
-        ]
-      },
-      "links": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
-        "modifiers": ["blue"],
-        "items": [
-          {
-            "href": "#",
-            "text": "La Maire de Paris"
-          },
-          {
-            "href": "#",
-            "text": "Adjoints à la Maire"
-          },
-          {
-            "href": "#",
-            "text": "Conseillers de Paris"
-          },
-          {
-            "href": "#",
-            "text": "Elus d’arrondissements"
-          },
-          {
-            "href": "#",
-            "text": "Groupes politiques"
+        ],
+        "sections": {
+          "items": [
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Aides & démarches"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Culture & patrimoine"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Déplacements & stationnement"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Emploi & formations"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Environnement & espaces verts"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Famille & éducation"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Innovation"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Logement"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Santé"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Social & solidarités"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Sports & loisirs"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Urbanisme"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Associations"
+            }
+          ],
+          "more": {
+            "href": "../faq/",
+            "text": "FAQ"
           }
-        ]
+        }
       },
       "connected": {
         "heading": {
           "title": "Restez connecté",
           "modifiers": ["white"]
         },
-        "newsletter": {
+        "newsletter" : {
           "title": "L’essentiel de Paris",
           "modifiers": ["color-secondary-background"],
           "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",

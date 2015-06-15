@@ -1,9 +1,9 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/button-top/button-top
+include ../../modules/footer/footer
 include ../../modules/notice/notice
 include ../../modules/rheader/rheader
-include ../../modules/footer/footer
 
 // Blocks are reorderable parts of the template
 include blocks/get-involved
@@ -24,8 +24,9 @@ append content
 
 append content
   each block in data.blocks
-    .layout-content(class=block.modifiers)
-      +#{"block-" + block.type}(block.data)
+    if block.data
+      .layout-content(class=block.modifiers)
+        +#{"block-" + block.type}(block.data)
 
 append content
   .layout-content.layout-adjacent-before
@@ -33,3 +34,7 @@ append content
 
 append content
   +button-top
+
+append content
+  if data.notices && data.notices.cnil
+    +notice(data.notices.cnil)
