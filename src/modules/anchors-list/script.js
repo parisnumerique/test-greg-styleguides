@@ -98,21 +98,6 @@ Paris.anchors = (function(){
 
       each(items, function (item, index, list) {
         item.bottom = (list[index+1]) ? list[index+1].top : $layoutContainer.position().top + $layoutContainer.height();
-
-        // DEBUG TODO remove
-        //if ($('#debug-'+index).length === 0) {
-        //  var $item = $('<div id="debug-'+index+'" class="anchors-list-debug">');
-        //  $item.text(index).css({
-        //    top: item.top,
-        //    height: item.bottom - item.top
-        //  });
-        //  $item.appendTo('body');
-        //} else {
-        //  $('#debug-'+index).css({
-        //    top: item.top,
-        //    height: item.bottom - item.top
-        //  });
-        //}
       });
 
     }
@@ -120,15 +105,11 @@ Paris.anchors = (function(){
     function renderAnchors() {
       parseItems();
 
-      var data = {
-        items: items
-      };
-
+      // Anchors are already rendered, just update the title
       var $documentTitle = $('.document-heading .document-heading-title');
-      if ($documentTitle.length !== 0) {data.title = $documentTitle.text();}
-
-      var content = Paris.templates.templatizer['anchors-list']['anchors-list'](data);
-      $el.html($(content).html());
+      if ($documentTitle.length !== 0) {
+        $el.find('.anchors-list-title span').text($documentTitle.text());
+      }
 
       defer(function () {
         PubSub.publish('anchors:ready');
@@ -151,31 +132,18 @@ Paris.anchors = (function(){
     function renderShare() {
       $anchors.each(function (i, anchor) {
         var $anchor = $(anchor);
+        var $anchorInList = $el.find('.anchors-list-link[href="#'+$anchor.attr('id')+'"]');
 
         // Do not display share when in postit
         if ($anchor.data('in-postit')) {return;}
 
-        var id = $anchor.attr('id');
-        var url = encodeURIComponent(document.location.href.split('#')[0] + '#' + id);
-        var tweetContent = [$('title').text(), $anchor.text()].join(' - ').slice(0, 100);
-        var tweetText = [tweetContent, url, 'via @paris'].join(' ');
-        var items = [
-          {
-            "href": "https://www.facebook.com/sharer/sharer.php?u="+url,
-            "icon": "facebook",
-            "title": Paris.i18n.t("share/facebook")
-          },
-          {
-            "href": "https://twitter.com/intent/tweet?text="+tweetText,
-            "icon": "twitter",
-            "title": Paris.i18n.t("share/twitter")
-          },
-          {
-            "href": "mailto:?subject="+url+"&body="+url,
-            "icon": "mail",
-            "title": Paris.i18n.t("share/email")
-          }
-        ];
+        var items = map(['facebook', 'twitter', 'mail'], function(type) {
+          return {
+            "href": $anchorInList.data('share-' + type),
+            "icon": type,
+            "title": Paris.i18n.t("share/" + type)
+          };
+        });
 
         var content = Paris.templates.templatizer.share.share({
           items: items,
