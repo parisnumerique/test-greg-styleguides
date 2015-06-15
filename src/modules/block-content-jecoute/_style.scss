@@ -2,7 +2,6 @@
   font-size: 14px;
   max-width: 360px;
   position: relative;
-  margin-bottom: 30px;
   overflow: hidden;
 
   .block-content-text {
@@ -85,17 +84,13 @@
       }
     }
   }
-
-  .button {
-    margin-top: 10px;
-  }
 }
 
 
 .blocks-content-vertical .block-content-jecoute {
-  .block-content-button {
+  .block-content-items + .block-content-button {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
   }
 }
 
