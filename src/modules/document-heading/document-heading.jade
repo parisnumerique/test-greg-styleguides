@@ -10,6 +10,6 @@ mixin document-heading(data)
           if data.icons
             .document-heading-icons
               each icon in data.icons
-                a.icon(class="icon-#{icon.name}" href="#{icon.url}")
+                a.icon(class="icon-#{icon.name}" href=icon.href title=icon.title class=icon.modifiers)
           if data.tags
             +tags(data.tags)

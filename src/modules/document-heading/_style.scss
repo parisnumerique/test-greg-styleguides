@@ -63,7 +63,12 @@
    color: $gray153;
    text-decoration: none;
 
-   &:hover {
+   &.active {
+     color: $color-secondary;
+   }
+
+   &:hover,
+   &.active:hover {
      color: $color-tertiary;
    }
 
