@@ -42,7 +42,7 @@ Paris.search = (function(){
 
       $searchFieldInput = $el.find('#main-search');
       $results = $el.find('#results');
-      $facetsContainer = $el.find('.layout-aside');
+      $facetsContainer = $el.find('#facets');
 
       $searchFieldInput.on('input', onInput);
       $facetsContainer.on('change', 'input[type=checkbox]', updateFacets);
