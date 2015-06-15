@@ -12,6 +12,7 @@ require('./lib/scroll');
 require('../components/accordion/script');
 require('../components/jecoute/script');
 require('../components/news-push/script');
+require('../components/video/script');
 
 // load our layouts
 require('../layouts/left-col/script');
@@ -29,12 +30,16 @@ require('../modules/quick-access/script');
 require('../modules/rheader/script');
 require('../modules/sections-panel/script');
 require('../modules/share/script');
+require('../modules/video-cover/script');
 
 // load our templates
 require('../templates/hub/script');
 require('../templates/list-persons/script');
 require('../templates/search/script');
 
+// additional scripts
+require('./lib/cnil');
+
 var Paris = window.Paris || {};
-Paris.version = "0.12.3";
+Paris.version = "0.12.4";
 Paris.templates = {};

@@ -5,22 +5,22 @@ mixin block-content-jecoute(data)
   - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-jecoute")
   +block-content({"title": data.title, "modifiers": modifiers})
-    if data.items
-      div.block-content-items
+    if data.items && data.items.length
+      .block-content-items
         each item in data.items
-          div.block-content-item
-            div.block-content-timer
+          .block-content-item
+            .block-content-timer
               span.start= item.question.time
               span.end= item.answer.time
-              div.block-content-bar
-                div.progress
-            div.block-content-question-answer
-              div.block-content-question
-                div.user= item.question.user
-                div.text= item.question.text
-              div.block-content-answer
-                div.user= item.answer.user
-                div.text= item.answer.text
+              .block-content-bar
+                .progress
+            .block-content-question-answer
+              .block-content-question
+                .user= item.question.user
+                .text= item.question.text
+              .block-content-answer
+                .user= item.answer.user
+                .text= item.answer.text
     if data.text
       .block-content-text= data.text
     - button = JSON.parse(JSON.stringify(data.button)) // clone the data object

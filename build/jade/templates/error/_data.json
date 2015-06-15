@@ -1,0 +1,205 @@
+{
+  "index": {
+    "data": {
+      "title": "Erreur 404 : page non trouvée",
+      "theme": "minitel",
+      "notices": {
+        "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
+        "cnil": {
+          "id": "notice_cnil",
+          "modifiers": ["bottom", "transparent", "fixed", "closed"],
+          "closable": true,
+          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+        }
+      },
+      "heading": {
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "background": "../../modules/error-heading/animation.gif",
+        "title": "Erreur 404 : page non trouvée",
+        "button": {
+          "text": "Retour au site",
+          "href": "#"
+        }
+      },
+      "contents": {
+        "nav": [
+          {
+            "href": "#",
+            "text": "Services et infos pratiques"
+          },
+          {
+            "href": "#",
+            "text": "Actualités"
+          },
+          {
+            "href": "#",
+            "text": "Entreprises"
+          },
+          {
+            "href": "#",
+            "text": "Municipalité"
+          },
+          {
+            "href": "#",
+            "text": "Participez"
+          }
+        ],
+        "sections": {
+          "items": [
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Aides & démarches"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Culture & patrimoine"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Déplacements & stationnement"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Emploi & formations"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Environnement & espaces verts"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Famille & éducation"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Innovation"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Logement"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Santé"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Social & solidarités"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Sports & loisirs"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Urbanisme"
+            },
+            {
+              "href": "../hub/subnav-open.html#breadcrumbs",
+              "text": "Associations"
+            }
+          ],
+          "more": {
+            "href": "../faq/",
+            "text": "FAQ"
+          }
+        }
+      },
+      "connected": {
+        "heading": {
+          "title": "Restez connecté",
+          "modifiers": ["white"]
+        },
+        "newsletter" : {
+          "title": "L’essentiel de Paris",
+          "modifiers": ["color-secondary-background"],
+          "text": "Chaque semaine, recevez l’essentiel de Paris pour savoir tout ce qu’il se passe dans la capitale.",
+          "button": {
+            "href": "#",
+            "text": "Je m'abonne",
+            "target": "_blank"
+          },
+          "link": {
+            "href": "#",
+            "text": "Autres newsletters et alertes"
+          }
+        },
+        "jecoute": {
+          "title": "Paris j'écoute",
+          "modifiers": ["color-secondary-background"],
+          "text": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+          "button": {
+            "href": "#",
+            "text": "Posez votre question !"
+          }
+        },
+        "social": {
+          "title": "Restez connecté",
+          "modifiers": ["color-secondary-background"],
+          "items": [
+            {
+              "icon": "twitter",
+              "count": "219 000",
+              "link": {
+                "href": "#",
+                "text": "Twitter",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "facebook",
+              "count": "2 508 576",
+              "link": {
+                "href": "#",
+                "text": "Facebook",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "instagram",
+              "count": "16 449",
+              "link": {
+                "href": "#",
+                "text": "Instagram",
+                "target": "_blank"
+              }
+            },
+            {
+              "icon": "dailymotion",
+              "count": "5 442",
+              "link": {
+                "href": "#",
+                "text": "Dailymotion",
+                "target": "_blank"
+              }
+            }
+          ],
+          "link": {
+            "href": "#",
+            "text": "Voir tous les réseaux sociaux"
+          }
+        }
+      },
+      "footer": {
+        "logo": {
+          "href": "#",
+          "src": "../../modules/footer/mairie-de-paris.png",
+          "alt": "Logo de la Mairie de Paris"
+        },
+        "items": [
+          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "FAQ"},
+          {"href": "#", "text": "Newsletter"},
+          {"href": "#", "text": "Contact"},
+          {"href": "#", "text": "Presse"},
+          {"href": "#", "text": "Mentions légales"},
+          {"href": "#", "text": "Crédits"},
+          {"href": "#", "text": "Accessibilité"}
+        ]
+      }
+    }
+  }
+}

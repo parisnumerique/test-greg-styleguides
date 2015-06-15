@@ -1,17 +1,18 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/cross-content/cross-content
 include ../../modules/footer/footer
-include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/news-list/news-list
+include ../../modules/notice/notice
+include ../../modules/rheader/rheader
 include ../../modules/sections-panel/sections-panel
 
 append content
@@ -32,14 +33,15 @@ append content
       +sections-panel(data.sections)
 
 append content
-  .layout-content.hidden-on-small
+  .layout-content.hidden-on-small(style= data.news.news ? null : "display: none")
     .layout-wrapper
-      +heading(data.news.heading)
-      +news-list(data.news.news)
+      if data.news.news
+        +heading(data.news.heading)
+        +news-list(data.news.news)
 
 append content
   if data.cross_content.items.length === 3
-    .layout-content
+    .layout-content.layout-adjacent-before
       +cross-content(data.cross_content)
 
 append content
@@ -60,3 +62,7 @@ append content
 
 append content
   +button-top
+
+append content
+  if data.notices && data.notices.cnil
+    +notice(data.notices.cnil)

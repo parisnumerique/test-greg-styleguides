@@ -1,93 +1,14 @@
-// Grid variables
-$large-grid-width: 1100px;
-
-// Libraries
-@import "../../node_modules/susy/sass/susy";
-$susy: (
-  columns: 16,
-  column-width: 50,
-  container: $large-grid-width,
-  gutters: .4,
-  gutter-position: after
-);
+// Grid config
+@import "_grid";
 
 // Base
-@import "../base/_colors";
-@import "../base/_defaults";
-@import "../base/_fonts";
-@import "../base/_forms";
-@import "../base/_icons";
-@import "../base/_mixins";
-@import "../base/_normalize";
-
-// Themes
-// Do not remove or modify the next line, it's replaced with real themes in the build process
-// @import_theme;
+@import "../base/_all";
 
 // Modules
-@import "../modules/anchors-list/_style";
-@import "../modules/block-aside-checkboxes/_style";
-@import "../modules/block-aside-contact/_style";
-@import "../modules/block-aside-links/_style";
-@import "../modules/block-aside/_style";
-@import "../modules/block-content-jecoute/_style";
-@import "../modules/block-content-newsletter/_style";
-@import "../modules/block-content-social/_style";
-@import "../modules/block-content/_style";
-@import "../modules/breadcrumbs/_style";
-@import "../modules/button/_style";
-@import "../modules/button-top/_style";
-@import "../modules/cross-content/_style";
-@import "../modules/document-heading/_style";
-@import "../modules/footer/_style";
-@import "../modules/gallery-ugc/_style";
-@import "../modules/get-involved-list/_style";
-@import "../modules/get-involved/_style";
-@import "../modules/header/_style";
-@import "../modules/heading/_style";
-@import "../modules/hub-heading/_style";
-@import "../modules/intro-text/_style";
-@import "../modules/jumbotron/_style";
-@import "../modules/last-update/_style";
-@import "../modules/links-group/_style";
-@import "../modules/municipal-team/_style";
-@import "../modules/news-card/_style";
-@import "../modules/news-list/_style";
-@import "../modules/notice/_style";
-@import "../modules/pagination/_style";
-@import "../modules/person-block/_style";
-@import "../modules/poll/_style";
-@import "../modules/que-faire/_style";
-@import "../modules/quick-access/_style";
-@import "../modules/rheader/_style";
-@import "../modules/search-field/_style";
-@import "../modules/search-push/_style";
-@import "../modules/search-results-list/_style";
-@import "../modules/sections-list/_style";
-@import "../modules/sections-panel/_style";
-@import "../modules/share/_style";
-@import "../modules/tags/_style";
-@import "../modules/video-cover/_style";
+@import "../modules/_all";
 
 // Components
-@import "../components/_style";
-@import "../components/accordion/_style";
-@import "../components/buttons/_style";
-@import "../components/image/_style";
-@import "../components/jecoute/_style";
-@import "../components/links/_style";
-@import "../components/news-push/_style";
-@import "../components/place/_style";
-@import "../components/postit/_style";
-@import "../components/sharelines/_style";
-@import "../components/table/_style";
-@import "../components/text/_style";
-@import "../components/verbatim/_style";
-@import "../components/video/_style";
+@import "../components/_all";
 
 // Layouts
-@import "../layouts/stack/_style";
-@import "../layouts/half-col/_style";
-@import "../layouts/left-col/_style";
-@import "../layouts/right-col/_style";
-@import "../layouts/three-col/_style";
+@import "../layouts/_all";

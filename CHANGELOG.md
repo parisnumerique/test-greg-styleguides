@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.12.4 (2015-06-15)
+
+* component `jecoute`: prefill email from cookie
+* component `video`: load only if CNIL cookie is set
+* module `anchors-list`: changed how anchors share links are rendered (now in `anchors-list` data)
+* module `block-content-jecoute`: fixed button positioning
+* module `document-heading`: added active state to icons
+* module `error-heading` added
+* module `notice`: improved rendering on small screens, added a way to render a hidden notice and open it using a JS event
+* module `pagination`: fixed bug with negative numbers, simplify on small screens
+* module `table-of-contents` added
+* module `video-cover`: load only if CNIL cookie is set
+* template `document-postit`: removed icons from postit tile
+* template `error` added
+* template `get-involved`: optional gallery
+* template `home`: optional gallery
+* template `nav` added (standalone header for mobile, when JS is disabled)
+* template `subhome-get-involved`: renamed `news_list` to `news` in data, optional gallery
+* template `subhome-news`: optional gallery
+* all templates: hide `news-list` module when there are no news
+* all templates: put CNIL `notice` as a fixed notice, put cookie logic in `cnil.js`
+* reorganized CSS to allow theming (and ability to force a theme using template data)
+* added variables for cookies in `config.js`
+* various bug fixing after acceptance testing
+* various parts of templates are now optional
+
 ## 0.12.3 (2015-06-08)
 
 * module `anchors-list`: allow multiline text

@@ -1,6 +1,17 @@
 .component-video {
   clear: both;
 
+  .video-embed {display: none;}
+
+  .video-placeholder {
+    background: $gray242;
+    color: $black;
+    padding: 20px;
+    text-align: center;
+
+    a {color: $color-primary}
+  }
+
   .video-wrapper {
     display: inline-block;
     position: relative;
@@ -12,7 +23,8 @@
       content: "";
     }
 
-    iframe {
+    iframe,
+    .video-placeholder {
       bottom: 0;
       height: 100%;
       left: 0;

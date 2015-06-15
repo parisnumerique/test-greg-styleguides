@@ -14,6 +14,7 @@
     "button-top",
     "cross-content",
     "document-heading",
+    "error-heading",
     "footer",
     "gallery-ugc",
     "get-involved",
@@ -40,6 +41,7 @@
     "sections-list",
     "sections-panel",
     "share",
+    "table-of-contents",
     "tags",
     "video-cover"
   ]

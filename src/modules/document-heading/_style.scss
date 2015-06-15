@@ -56,7 +56,6 @@
 }
 
 .document-heading-icons {
- float: right;
  font-size: 24px;
  line-height: 36px;
 
@@ -64,7 +63,12 @@
    color: $gray153;
    text-decoration: none;
 
-   &:hover {
+   &.active {
+     color: $color-secondary;
+   }
+
+   &:hover,
+   &.active:hover {
      color: $color-tertiary;
    }
 

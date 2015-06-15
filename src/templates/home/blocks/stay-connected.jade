@@ -5,13 +5,25 @@ include ../../../modules/block-content-newsletter/block-content-newsletter
 include ../../../modules/block-content-social/block-content-social
 
 mixin block-stay-connected(data)
-  .layout-right-col
-    .layout-wrapper
-      .layout-content.hidden-on-small
-        +heading(data.gallery.heading)
-        +gallery-ugc(data.gallery.gallery_ugc)
-      aside.layout-aside.color-secondary-background
-        .blocks-content-vertical
-          +block-content-newsletter(data.newsletter)
-          +block-content-jecoute(data.jecoute)
-          +block-content-social(data.social)
+  if data.gallery
+    .layout-right-col
+      .layout-wrapper
+        .layout-content.hidden-on-small
+          +heading(data.gallery.heading)
+          +gallery-ugc(data.gallery.gallery_ugc)
+        aside.layout-aside.color-secondary-background
+          .blocks-content-vertical
+            +block-content-newsletter(data.newsletter)
+            +block-content-jecoute(data.jecoute)
+            +block-content-social(data.social)
+  else
+    .layout-content.color-secondary-background.layout-separate-after
+      .layout-three-col
+        .layout-wrapper
+          +heading(data.heading)
+          .layout-content
+            +block-content-newsletter(data.newsletter)
+          .layout-content
+            +block-content-jecoute(data.jecoute)
+          .layout-content
+            +block-content-social(data.social)

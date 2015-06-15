@@ -1,0 +1,75 @@
+
+.error-heading {
+  background-color: $color-secondary;
+  color: $white;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+
+  h1 {
+    color: $white;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+.error-heading-wrapper {
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.error-heading-logo {
+  color: $white;
+  height: 80px;
+  left: -28px;
+  position: relative;
+  top: 40px;
+  width: 144px;
+}
+.error-heading-logo-nef {
+  background: url('../modules/error-heading/nef.svg') center center no-repeat;
+  background-size: contain;
+  display: block;
+  height: 80px;
+  right: 0;
+  margin-right: 25px;
+  position: absolute;
+  top: 0;
+  width: 45px;
+}
+.error-heading-logo-paris {
+  border-left: 4px solid $yellow;
+  display: block;
+  font-size: 40px;
+  line-height: 80px;
+  padding-left: 25px;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.error-heading-content {
+  padding-top: 190px;
+}
+
+@include large {
+
+  .error-heading {
+    height: 400px;
+
+    h1 {
+      font-size: 40px;
+      line-height: 46px;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+

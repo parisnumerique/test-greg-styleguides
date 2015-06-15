@@ -1,5 +1,7 @@
 'use strict';
 
+var Cookies = require('cookies-js');
+
 var Paris = window.Paris || {};
 
 Paris.jecoute = (function(){
@@ -21,6 +23,10 @@ Paris.jecoute = (function(){
       $formElements = $form.find('input, textarea, button');
 
       $form.on('submit', onSubmitForm);
+
+      if (Cookies.get(Paris.config.cookies.email.name)) {
+        $formElements.filter('input[name="email"]').attr('value', Cookies.get(Paris.config.cookies.email.name));
+      }
     }
 
     function initOptions() {

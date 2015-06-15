@@ -13,10 +13,15 @@ $color-tertiary:  #29fd2e;
 .color-tertiary-background  {background-color: $color-tertiary;}
 
 $gray230: #2dfffe;
+$yellow: yellow;
 
 // Fonts
 
 body {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   font-weight: normal;
+}
+
+.button {
+  border-radius: 0 !important;
 }
