@@ -13,12 +13,16 @@
         }
       },
       "heading": {
-          "background": "../../modules/error-heading/animation.gif",
-          "title": "Erreur 404 : page non trouvée",
-          "button": {
-            "text": "Retour au site",
-            "href": "#"
-          }
+        "logo": {
+          "href": "../home/",
+          "text": "Paris"
+        },
+        "background": "../../modules/error-heading/animation.gif",
+        "title": "Erreur 404 : page non trouvée",
+        "button": {
+          "text": "Retour au site",
+          "href": "#"
+        }
       },
       "contents": {
         "nav": [

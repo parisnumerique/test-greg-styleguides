@@ -18,6 +18,13 @@
   a {
     color: $white;
     text-decoration: none;
+
+    &:hover {
+      color: $yellow;
+      strong {
+        background-color: $yellow;
+      }
+    }
   }
 
   strong {
@@ -43,6 +50,11 @@
   a {
     color: $black;
     text-decoration: none;
+
+    &:hover strong {
+      background-color: $black;
+      color: $white;
+    }
   }
 
   strong {
@@ -91,4 +103,6 @@
   background-color: $yellow;
   color: $black;
   padding: 4px 10px;
+
+  &:hover {background-color: $white;}
 }

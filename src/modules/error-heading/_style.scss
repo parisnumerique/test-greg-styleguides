@@ -24,7 +24,39 @@
   width: 100%;
 }
 
+.error-heading-logo {
+  color: $white;
+  height: 80px;
+  left: -28px;
+  position: relative;
+  top: 40px;
+  width: 144px;
+}
+.error-heading-logo-nef {
+  background: url('../modules/error-heading/nef.svg') center center no-repeat;
+  background-size: contain;
+  display: block;
+  height: 80px;
+  right: 0;
+  margin-right: 25px;
+  position: absolute;
+  top: 0;
+  width: 45px;
+}
+.error-heading-logo-paris {
+  border-left: 4px solid $yellow;
+  display: block;
+  font-size: 40px;
+  line-height: 80px;
+  padding-left: 25px;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: 0;
+}
+
 .error-heading-content {
+  padding-top: 190px;
 }
 
 @include large {
@@ -35,7 +67,7 @@
     h1 {
       font-size: 40px;
       line-height: 46px;
-      margin: 120px 0 20px;
+      margin-bottom: 20px;
     }
   }
 
