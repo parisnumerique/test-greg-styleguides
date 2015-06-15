@@ -3,25 +3,45 @@
     "defaults": {
       "image": "./document-heading.png",
       "text": "Demander un logement",
-      "icons" : [{
-        "name": "favorites",
-        "url": "#"
-      },{
-        "name": "bell",
-        "url": "#"
-      }
+      "icons" : [
+        {
+          "name": "favorites",
+          "href": "#"
+        },
+        {
+          "name": "bell",
+          "href": "#"
+        }
+      ]
+    },
+    "active_icon": {
+      "image": "./document-heading.png",
+      "text": "Demander un logement",
+      "icons" : [
+        {
+          "name": "favorites",
+          "href": "#"
+        },
+        {
+          "name": "bell",
+          "href": "#",
+          "modifiers": ["active"],
+          "title": "Vous êtes abonné(e)"
+        }
       ]
     },
     "long": {
       "image": "./document-heading.png",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
-      "icons" : [{
-        "name": "favorites",
-        "url": "#"
-      },{
-        "name": "bell",
-        "url": "#"
-      }
+      "icons" : [
+        {
+          "name": "favorites",
+          "href": "#"
+        },
+        {
+          "name": "bell",
+          "href": "#"
+        }
       ]
     }
   }

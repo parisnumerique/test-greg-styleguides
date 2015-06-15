@@ -14,10 +14,15 @@ Paris.config = {
       persons: "recette_Elus"
     }
   },
-  cnil: {
-    cookie: {
+  cookies: {
+    email: {
+      name: "email"
+    },
+    cnil: {
       name: "CNIL",
-      value: "Accepted"
+      value: "Accepted",
+      // `expires` is a number (of seconds), a date parsable string, or a Date object of when the cookie will expire
+      expires: 34186670 // 13 months
     }
   }
 };

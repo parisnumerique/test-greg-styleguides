@@ -1,0 +1,88 @@
+{
+  "index": {
+    "defaults": {
+      "nav": [
+        {
+          "href": "#",
+          "text": "Services et infos pratiques"
+        },
+        {
+          "href": "#",
+          "text": "Actualités"
+        },
+        {
+          "href": "#",
+          "text": "Entreprises"
+        },
+        {
+          "href": "#",
+          "text": "Municipalité"
+        },
+        {
+          "href": "#",
+          "text": "Participez"
+        }
+      ],
+      "sections": {
+        "items": [
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Aides & démarches"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Culture & patrimoine"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Déplacements & stationnement"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Emploi & formations"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Environnement & espaces verts"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Famille & éducation"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Innovation"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Logement"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Santé"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Social & solidarités"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Sports & loisirs"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Urbanisme"
+          },
+          {
+            "href": "../hub/subnav-open.html#breadcrumbs",
+            "text": "Associations"
+          }
+        ],
+        "more": {
+          "href": "../faq/",
+          "text": "FAQ"
+        }
+      }
+    }
+  }
+}

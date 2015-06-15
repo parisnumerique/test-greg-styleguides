@@ -1,16 +1,17 @@
 extends ../../layouts/stack/stack
 
-include ../../modules/block-content/block-content
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
+include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
 include ../../modules/button-top/button-top
 include ../../modules/footer/footer
-include ../../modules/rheader/rheader
 include ../../modules/heading/heading
 include ../../modules/hub-heading/hub-heading
 include ../../modules/links-group/links-group
+include ../../modules/notice/notice
+include ../../modules/rheader/rheader
 include ../../modules/search-push/search-push
 
 append content
@@ -50,3 +51,7 @@ append content
 
 append content
   +button-top
+
+append content
+  if data.notices && data.notices.cnil
+    +notice(data.notices.cnil)
