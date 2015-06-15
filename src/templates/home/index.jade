@@ -24,8 +24,9 @@ append content
 
 append content
   each block in data.blocks
-    .layout-content(class=block.modifiers)
-      +#{"block-" + block.type}(block.data)
+    if block.data
+      .layout-content(class=block.modifiers)
+        +#{"block-" + block.type}(block.data)
 
 append content
   .layout-content.layout-adjacent-before

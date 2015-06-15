@@ -41,16 +41,18 @@ append content
             +#{component.type}(component.data)
 
 append content
-  .layout-content
-    .layout-wrapper
-      +heading(data.related.heading)
-      +news-list(data.related.news)
+  if data.related
+    .layout-content
+      .layout-wrapper
+        +heading(data.related.heading)
+        +news-list(data.related.news)
 
 append content
-  .layout-content.layout-separate-after
-    .layout-wrapper
-      +heading(data.most_shared.heading)
-      +news-list(data.most_shared.news)
+  if data.most_shared
+    .layout-content.layout-separate-after
+      .layout-wrapper
+        +heading(data.most_shared.heading)
+        +news-list(data.most_shared.news)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after

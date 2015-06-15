@@ -36,16 +36,18 @@ append content
       +breadcrumbs(data.breadcrumbs)
 
 append content
-  .layout-content.layout-padding-after
-    .layout-wrapper
-      +heading(data.today.heading)
-      +news-list(data.today.news)
+  if data.today
+    .layout-content.layout-padding-after
+      .layout-wrapper
+        +heading(data.today.heading)
+        +news-list(data.today.news)
 
 append content
-  .layout-content.gray-background
-    .layout-wrapper
-      +heading(data.currently.heading)
-      +news-list(data.currently.news)
+  if data.currently
+    .layout-content.gray-background
+      .layout-wrapper
+        +heading(data.currently.heading)
+        +news-list(data.currently.news)
 
 append content
   .layout-content.layout-adjacent-before
@@ -58,10 +60,11 @@ append content
           +block-content-newsletter(data.newsletter)
 
 append content
-  .layout-content
-    .layout-wrapper
-      +heading(data.archive.heading)
-      +news-list(data.archive.news)
+  if data.archive
+    .layout-content
+      .layout-wrapper
+        +heading(data.archive.heading)
+        +news-list(data.archive.news)
 
 append content
   .layout-content

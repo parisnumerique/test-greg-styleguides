@@ -39,10 +39,11 @@ append content
       +links-group(data.act.links_group)
 
 append content
-  .layout-content.layout-padding-after
-    .layout-wrapper
-      +heading(data.now.heading)
-      +news-list(data.now.news_list)
+  if data.now
+    .layout-content.layout-padding-after
+      .layout-wrapper
+        +heading(data.now.heading)
+        +news-list(data.now.news)
 
 append content
   if data.gallery
