@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var through2   = require('through2');
 
 gulp.task('build:css', ['build:themes:files'], function () {
-    gulp.src(['src/stylesheets/paris.scss', 'src/stylesheets/print.scss'])
+    gulp.src(['src/stylesheets/paris*.scss', 'src/stylesheets/print.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({
           outputStyle: 'compressed'
