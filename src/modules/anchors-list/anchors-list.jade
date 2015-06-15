@@ -1,6 +1,6 @@
 mixin anchors-list(data)
   - data = data || {}
-  .anchors-list&attributes(data.attributes || [])
+  .anchors-list&attributes(data.attributes || {})
     if data.title
       h3.anchors-list-title
         span= data.title
@@ -8,5 +8,5 @@ mixin anchors-list(data)
       ul.anchors-list-items
         each item in data.items
           li.anchors-list-item(class=item.modifiers)
-            a.anchors-list-link(href=item.href)&attributes(item.attributes)= item.text
+            a.anchors-list-link(href=item.href)&attributes(item.attributes || {})= item.text
             span.anchors-list-progress
