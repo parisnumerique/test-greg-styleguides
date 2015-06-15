@@ -93,6 +93,10 @@
     &.more {
       text-transform: uppercase;
       text-align: center;
+
+      &:after {
+        display: none;
+      }
     }
 
     html.no-touch & {
