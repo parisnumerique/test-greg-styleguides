@@ -202,7 +202,7 @@
             "text": "Voir toutes les actualités Participez"
           }
         },
-        "news_list": {
+        "news": {
           "modifiers": ["news-cards"],
           "items": [
             {
