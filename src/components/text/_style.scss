@@ -106,7 +106,12 @@
     line-height: 1;
     padding-left: 10px;
 
-    &:hover {
+    &.active {
+      color: $color-secondary;
+    }
+
+    &:hover,
+    &.active:hover {
       color: $color-tertiary;
       cursor: pointer;
     }
@@ -131,6 +136,14 @@
         position: relative;
         bottom: -20px;
       }
+    }
+  }
+}
+
+@include large-and-medium {
+  .component-text {
+    .anchor {
+      padding-right: 100px;
     }
   }
 }
