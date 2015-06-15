@@ -1,0 +1,9 @@
+include error-heading
+include ../../helpers/code
+
+.lsg-module
+  +error-heading(defaults)
++code({language: "jade"}).
+  include error-heading
+
+  +error-heading(#{JSON.stringify(defaults, null, 2)})
