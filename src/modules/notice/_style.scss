@@ -33,7 +33,7 @@
     cursor: pointer;
     display: block;
     position: absolute;
-    right: 50px;
+    right: 20px;
     top: 18px;
 
     &:hover {
@@ -106,18 +106,29 @@
 .notice-content {
   line-height: 20px;
   margin: 0 20px;
-  padding: 20px 80px 20px 0;
-
-  @mixin large {
-    margin: 0 auto;
-    width: $large-grid-width;
-  }
+  padding: 20px 40px 20px 0;
 
   a {
     color: white;
     text-transform: uppercase;
     text-decoration: underline;
     &:hover {text-decoration: none;}
+  }
+}
+
+@include large-and-medium {
+  .notice .close {
+    right: 50px;
+  }
+  .notice-content {
+    padding-right: 80px;
+  }
+}
+
+@include large {
+  .notice-content {
+    margin: 0 auto;
+    width: $large-grid-width;
   }
 }
 
