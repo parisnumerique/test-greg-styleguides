@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.6 (2015-06-16)
+
+* fixed CSS path in wrapper_prod
+
 ## 0.12.5 (2015-06-15)
 
 * fixed build (files were missing)
