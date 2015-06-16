@@ -25,6 +25,8 @@ Paris.rheader = (function(){
     function init(){
       initOptions();
 
+      var documentScrollTop = $(document).scrollTop();
+
       $buttonMenu = $el.find('.rheader-button-menu');
 
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
@@ -39,8 +41,16 @@ Paris.rheader = (function(){
           fix();
         }
       });
-      if(!$('.notice.top').length || $(document).scrollTop() >= $('.notice.top').height() ) {
+      if(!$('.notice.top').length || documentScrollTop >= $('.notice.top').height() ) {
         fix();
+      }
+
+      // extend or unextend
+      PubSub.subscribe('scroll.search.down', unextend);
+      PubSub.subscribe('scroll.search.up', extend);
+      var $searchEl = $('.quick-access-search');
+      if ($searchEl.length && documentScrollTop < $searchEl.offset().top) {
+        extend();
       }
 
       if (!$el.hasClass('standalone')) {
@@ -71,17 +81,11 @@ Paris.rheader = (function(){
       lastScrollY = data.originalEvent.pageY;
     }
 
-    function unfold(){
-      $el.removeClass('folded');
-    }
-
-    function fix() {
-      $el.addClass('fixed');
-    }
-
-    function unfix() {
-      $el.removeClass('fixed');
-    }
+    function unfold(){$el.removeClass('folded');}
+    function fix() {$el.addClass('fixed');}
+    function unfix() {$el.removeClass('fixed');}
+    function extend() {console.log('extend'); $el.addClass('extended');}
+    function unextend() {console.log('unextend'); $el.removeClass('extended');}
 
     function onClickButtonMenu(e) {
       e.preventDefault();

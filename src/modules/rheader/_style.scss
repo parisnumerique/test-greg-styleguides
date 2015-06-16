@@ -7,6 +7,7 @@ $rheader-large-max:  1370px;
 $rheader-height-small:  60px;
 $rheader-height-medium: 80px;
 $rheader-height-large:  80px;
+$rheader-height-large-extended: $rheader-height-large + 20px;
 
 
 .rheader {
@@ -409,13 +410,46 @@ $rheader-height-large:  80px;
 
 @media (min-width: $rheader-large-min) {
   .rheader {
+    overflow: hidden;
     text-align: right;
+
+    &.extended {
+      &,
+      .rheader-nav-item {
+        height: $rheader-height-large-extended;
+      }
+
+      .rheader-logo,
+      .rheader-locales {
+        transform: translateY(10px);
+      }
+
+      .rheader-nav-item a {
+        height: $rheader-height-large-extended;
+        line-height: $rheader-height-large-extended;
+      }
+
+      .rheader-wrapper > .rheader-button {
+        border-left: 1px solid transparent;
+        transform: translateY($rheader-height-large-extended);
+      }
+    }
   }
 
   .rheader,
-  .rheader-logo,
+  .rheader-logo {
+    height: $rheader-height-large;
+    transition: height 0.2s ease;
+  }
+
   .rheader-nav-item {
     height: $rheader-height-large;
+    transition: background-color 0.3s ease, height 0.2s ease;
+  }
+
+  .rheader-logo,
+  .rheader-locales {
+    transition: transform 0.2s ease;
   }
 
   .rheader-logo {
@@ -448,6 +482,7 @@ $rheader-height-large:  80px;
       height: $rheader-height-large;
       line-height: $rheader-height-large;
       position: static;
+      transition: background-color 0.3s ease, transform 0.4s ease, border 0.4s ease 0.2s;
       vertical-align: top;
       width: $rheader-height-large + 1px;
 
@@ -476,6 +511,7 @@ $rheader-height-large:  80px;
       display: inline-block;
       height: $rheader-height-large;
       line-height: $rheader-height-large;
+      transition: height 0.2s ease, line-height 0.2s ease;
     }
 
     // modifiers

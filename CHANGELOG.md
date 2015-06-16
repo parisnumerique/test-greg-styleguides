@@ -12,6 +12,7 @@
   * aligned the vertical bar in logo with the `heading` modules of the body
   * better spacing with following `layout-content`
   * re-added the fix / unfix for top `notice` support
+  * added `extended` state for `home` template
 * module `sections-panel`:
   * removed separator when there is no intro text
   * optional intro, buttons and links in content
@@ -21,6 +22,7 @@
 * template `home`:
   * removed modifiers from `stay-connected` block
   * added "closed" modifier to `notice`
+  * added "extended" modifier to `rheader`
 * template `single-news`: added `share` in left column
 * fixed `share.mail` in `locales.js`
 * improved cookie logic in `cnil.js`
