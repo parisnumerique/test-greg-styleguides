@@ -7,7 +7,7 @@
 * module `button-top`: hide on small and medium screens
 * module `document-heading`: added target to icons
 * module `error-heading`: responsive
-* module `notice`: persist close state for the session
+* module `notice`: persist close state for the session, improved animation
 * module `rheader`:
   * aligned the vertical bar in logo with the `heading` modules of the body
   * better spacing with following `layout-content`
@@ -18,7 +18,9 @@
 * module `table-of-contents`: responsive
 * module `video-cover`: improve cookie logic
 * layout `left-col`: fixed bug affix
-* template `home`: removed modifiers from `stay-connected` block
+* template `home`:
+  * removed modifiers from `stay-connected` block
+  * added "closed" modifier to `notice`
 * template `single-news`: added `share` in left column
 * fixed `share.mail` in `locales.js`
 * improved cookie logic in `cnil.js`

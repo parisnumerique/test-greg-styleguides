@@ -14,7 +14,7 @@
       },
       "notice": {
         "id": "notice_home_top",
-        "modifiers": ["top", "blue", "buildings", "center-text"],
+        "modifiers": ["top", "blue", "buildings", "center-text", "closed"],
         "closable": true,
         "block": "<a href=\"#\">Visiting Paris ? Plan your trip</a>"
       },
