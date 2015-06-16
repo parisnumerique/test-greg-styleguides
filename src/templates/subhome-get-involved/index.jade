@@ -33,11 +33,12 @@ append content
       +get-involved-list(data.get_involved_list)
 
 append content
-  .layout-content.layout-padding-after
-    .layout-wrapper
-      +heading(data.links_group_heading)
-      each group in data.links_groups
-        +links-group(group)
+  if data.links_groups && data.links_groups.length !== 0
+    .layout-content.layout-padding-after
+      .layout-wrapper
+        +heading(data.links_group_heading)
+        each group in data.links_groups
+          +links-group(group)
 
 append content
   if data.now
