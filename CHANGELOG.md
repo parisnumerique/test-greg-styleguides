@@ -8,6 +8,8 @@
 * module `document-heading`: added target to icons
 * module `error-heading`: responsive
 * module `notice`: persist close state for the session
+* module `rheader`:
+  * align the vertical bar in logo with the `heading` modules of the body
 * module `sections-panel`:
   * removed separator when there is no intro text
   * optional intro, buttons and links in content

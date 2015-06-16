@@ -564,10 +564,17 @@ $rheader-height-large:  80px;
 
 @media (min-width: $rheader-large-max) {
 
+  $rheader-nef-border-offset: 68px;
+  $rheader-logo-width: 285px;
+  $rheader-logo-paris-width: 180px;
+  $rheader-logo-offset: $large-grid-width / 2 + $offset-heading + $rheader-nef-border-offset;
+  $rheader-locales-offset: $rheader-logo-offset - $rheader-logo-width + $rheader-logo-paris-width;
+
   .rheader-logo {
     border-bottom: 0;
-    left: 30px;
-    width: 285px;
+    left: 30px; /* fallback for browsers not supporting calc */
+    left: calc(50% - #{$rheader-logo-offset});
+    width: $rheader-logo-width;
   }
 
   .rheader-logo-nef {
@@ -579,7 +586,7 @@ $rheader-height-large:  80px;
       content: "";
       display: block;
       height: 100%;
-      left: 68px;
+      left: $rheader-nef-border-offset;
       position: absolute;
       width: 6px;
     }
@@ -587,12 +594,13 @@ $rheader-height-large:  80px;
 
   .rheader-logo-paris {
     background-position: 50% 54%;
-    width: 180px;
+    width: $rheader-logo-paris-width;
   }
 
   .rheader-locales {
-    left: 134px;
-    width: 180px;
+    left: 134px; /* fallback for browsers not supporting calc */
+    left: calc(50% - #{$rheader-locales-offset});
+    width: $rheader-logo-paris-width;
   }
 
   .rheader-locales {
