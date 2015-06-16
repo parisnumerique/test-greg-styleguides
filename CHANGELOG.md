@@ -3,6 +3,8 @@
 ## Current
 
 * module `button-top`: hide on small and medium screens
+* module `error-heading`: responsive
+* module `table-of-contents`: responsive
 * module `document-heading`: added target to icons
 * module `sections-panel`: removed separator when there is no intro text
 * layout `left-col`: fixed bug affix
