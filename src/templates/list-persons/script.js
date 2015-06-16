@@ -204,7 +204,7 @@ Paris.listPersons = (function(){
           var block_aside_checkboxes_data = {
             title: Paris.i18n.t("search_results/facets/"+facet),
             name: facet,
-            modifiers: facet === "secteur" ? ["two_cols"] : [],
+            modifiers: facet === "secteur" ? ["two-cols"] : [],
             items: []
           };
 

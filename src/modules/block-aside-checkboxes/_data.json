@@ -53,7 +53,7 @@
     "two_cols": {
       "title": "Arrondissement",
       "name": "arrondissement",
-      "modifiers": ["two_cols"],
+      "modifiers": ["two-cols"],
       "items": [
         {"value": 1, "text": "1e"},
         {"value": 2, "text": "2e"},

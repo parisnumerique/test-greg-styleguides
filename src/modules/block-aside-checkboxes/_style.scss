@@ -1,9 +1,11 @@
 .block-aside-checkboxes {
 
   // modifiers
-  &.two_cols {
+  &.two-cols {
     .block-aside-items {
       columns: 2;
+      -moz-columns: 2;
+      -webkit-columns: 2;
     }
   }
 

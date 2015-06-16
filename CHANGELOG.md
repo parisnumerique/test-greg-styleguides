@@ -5,6 +5,7 @@
 * component `video`:
   * improved cookie logic
   * added a `cookie: false` data to bypass the cookie verification
+* module `block-aside`: fixed modifier `two-cols` (previously `two_cols`)
 * module `breadcrumbs`: fix padding
 * module `button-top`: hide on small and medium screens
 * module `document-heading`: added target to icons
