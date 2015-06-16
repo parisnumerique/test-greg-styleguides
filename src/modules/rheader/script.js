@@ -34,7 +34,7 @@ Paris.rheader = (function(){
       PubSub.subscribe('scroll.notice.down', fix);
       PubSub.subscribe('scroll.notice.up', unfix);
       PubSub.subscribe('header:search:close', fix);
-      PubSub.subscribe('notice:close', function(e, data){
+      PubSub.subscribe('notice.closed', function(e, data){
         if (data && data.id === "notice_home_top") {
           fix();
         }
@@ -127,7 +127,7 @@ Paris.rheader = (function(){
       $overlay = $('<div id="'+options.mobileNavId+'-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo($el);
 
       // Monitor scroll
-      scrollMonitor = PubSub.subscribe('scroll', onScroll);
+      scrollMonitor = PubSub.subscribe('scroll.document', onScroll);
 
       $el.on('mouseenter', unfold);
     }

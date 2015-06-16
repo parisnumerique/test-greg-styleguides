@@ -3,39 +3,46 @@
 var PubSub = require('pubsub-js');
 var throttle = require('lodash.throttle');
 
-var throttledUpdate = throttle(updatePosition, 100);
 var previousPosition = 0;
+
+function throttledUpdatePosition(e) {
+  PubSub.publish('scroll.document', e);
+}
 
 function updatePosition(e) {
   var $document = $document || $(document);
-  var $searchEl = $('.quick-access-search');
+  var documentScrollTop = $document.scrollTop();
 
-  var $topNotice = $topNotice || $('.notice.top');
-  PubSub.publish('scroll', e);
+  var $searchEl = $searchEl || $('.quick-access-search');
+  if ($searchEl.length) {
+    var searchElTop = $searchEl.offset().top;
 
-  if($searchEl.length) {
-    if($document.scrollTop() > $searchEl.offset().top && previousPosition < $searchEl.offset().top){
+    if(documentScrollTop > searchElTop && previousPosition < searchElTop){
       PubSub.publish('scroll.search.down');
     }
 
-    if($document.scrollTop() < $searchEl.offset().top && previousPosition > $searchEl.offset().top){
+    if(documentScrollTop < searchElTop && previousPosition > searchElTop){
       PubSub.publish('scroll.search.up');
     }
   }
 
-  if($topNotice.length) {
-    if($document.scrollTop() > $topNotice.height() && previousPosition < $topNotice.height()) {
+  var $topNotice = $topNotice || $('.notice.top');
+  if ($topNotice.length) {
+    var topNoticeHeight = $topNotice.height();
+
+    if(documentScrollTop > topNoticeHeight && previousPosition < topNoticeHeight) {
       PubSub.publish('scroll.notice.down');
     }
 
-    if($document.scrollTop() < $topNotice.height() && previousPosition > $topNotice.height()) {
+    if(documentScrollTop < topNoticeHeight && previousPosition > topNoticeHeight) {
       PubSub.publish('scroll.notice.up');
     }
   }
 
-  previousPosition = $document.scrollTop();
+  previousPosition = documentScrollTop;
 }
 
 $(function () {
-  $(window).on('scroll', throttledUpdate);
+  $(window).on('scroll', updatePosition);
+  $(window).on('scroll', throttle(throttledUpdatePosition, 100));
 });

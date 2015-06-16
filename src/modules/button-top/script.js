@@ -14,7 +14,7 @@ Paris.buttonTop = (function(){
     function init(){
       if (!$el.is(':visible')) {return;}
       $el.hide().on('click', onClick);
-      PubSub.subscribe('scroll', onScroll);
+      PubSub.subscribe('scroll.document', onScroll);
 
       $(window).on('resize', throttle(setAffix, 1000));
 
@@ -32,7 +32,9 @@ Paris.buttonTop = (function(){
     }
 
     function onScroll(e, data) {
-      $el.toggle(data.originalEvent.pageY > 300);
+      if (data.originalEvent.pageY) {
+        $el.toggle(data.originalEvent.pageY > 300);
+      }
     }
 
     function setAffix() {
