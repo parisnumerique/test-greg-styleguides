@@ -11,6 +11,9 @@ Paris.leftCol = (function(){
 
     function init(){
       PubSub.subscribe('anchors:ready', setAffix);
+
+      PubSub.subscribe('responsive.small.enable', setAffix);
+      PubSub.subscribe('responsive.small.disable', unsetAffix);
     }
 
     function setAffix() {
@@ -23,9 +26,15 @@ Paris.leftCol = (function(){
         top: $('.layout-left-col').offset().top - $('header').height(),
         bottom: $('body').height() - $nextContent.offset().top + $('header').height()
       };
+      unsetAffix();
       $el.affix({
         offset: offsets
       });
+    }
+
+    function unsetAffix(){
+      $(window).off('.affix');
+      $el.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
     }
 
     init();
