@@ -16,3 +16,11 @@ h2 Avec un contenu HTML
   include video-cover
 
   +video-cover(#{JSON.stringify(with_block, null, 2)})
+
+h2 Sans prendre en compte le cookie
+.lsg-module(style="width: 600px;")
+  +video-cover(without_cookie)
++code({language: "jade"}).
+  include video-cover
+
+  +video-cover(#{JSON.stringify(without_cookie, null, 2)})

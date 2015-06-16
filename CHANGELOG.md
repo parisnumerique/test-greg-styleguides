@@ -2,7 +2,9 @@
 
 ## Current
 
-* component `video`: improve cookie logic
+* component `video`:
+  * improved cookie logic
+  * added a `cookie: false` data to bypass the cookie verification
 * module `breadcrumbs`: fix padding
 * module `button-top`: hide on small and medium screens
 * module `document-heading`: added target to icons
@@ -17,7 +19,9 @@
   * removed separator when there is no intro text
   * optional intro, buttons and links in content
 * module `table-of-contents`: responsive
-* module `video-cover`: improve cookie logic
+* module `video-cover`:
+  * improved cookie logic
+  * added a `cookie: false` data to bypass the cookie verification
 * layout `left-col`: fixed bug affix
 * template `home`:
   * removed modifiers from `stay-connected` block
