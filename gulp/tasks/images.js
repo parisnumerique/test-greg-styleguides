@@ -8,7 +8,8 @@ var imageFilter = gulpFilter([
   '**/*.png',
   '**/*.jpg',
   '**/*.svg',
-  '**/*.gif'
+  '**/*.gif',
+  '**/*.ico'
 ]);
 
 gulp.task('build:images', function () {

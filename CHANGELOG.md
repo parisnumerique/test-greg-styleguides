@@ -19,6 +19,7 @@
 * fixed `share.mail` in `locales.js`
 * improved cookie logic in `cnil.js`
 * changed cookie lib (`cookies-js` to `js-cookie`) to prevent automatic cookie setting
+* added `favicon.ico` to build
 
 ## 0.12.6 (2015-06-16)
 
