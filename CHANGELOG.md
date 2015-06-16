@@ -1,5 +1,9 @@
 # Changelog
 
+## Current
+
+* fixed `share.mail` in `locales.js`
+
 ## 0.12.6 (2015-06-16)
 
 * fixed CSS path in wrapper_prod
