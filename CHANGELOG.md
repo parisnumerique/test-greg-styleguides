@@ -6,10 +6,11 @@
   * improved cookie logic
   * added a `cookie: false` data to bypass the cookie verification
 * module `block-aside`: fixed modifier `two-cols` (previously `two_cols`)
-* module `breadcrumbs`: fix padding
+* module `breadcrumbs`: fixed padding
 * module `button-top`: hide on small and medium screens
 * module `document-heading`: added target to icons
 * module `error-heading`: responsive
+* module `links-group`: fixed centering of icon in button
 * module `notice`: persist close state for the session, improved animation
 * module `rheader`:
   * aligned the vertical bar in logo with the `heading` modules of the body
