@@ -80,7 +80,7 @@
 
       .heading,
       &.layout-outside {
-        left: -32px;
+        left: -$offset-heading;
         position: relative;
       }
     }

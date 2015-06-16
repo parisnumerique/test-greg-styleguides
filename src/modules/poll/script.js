@@ -40,7 +40,7 @@ Paris.poll = (function(){
       $optionsButtons.on('click', onClickOption);
       $form.on('submit', onSubmitForm);
 
-      PubSub.subscribe('scroll', onScroll);
+      PubSub.subscribe('scroll.document', onScroll);
     }
 
     function initOptions() {

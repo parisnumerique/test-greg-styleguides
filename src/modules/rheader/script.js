@@ -25,17 +25,39 @@ Paris.rheader = (function(){
     function init(){
       initOptions();
 
+      var documentScrollTop = $(document).scrollTop();
+
       $buttonMenu = $el.find('.rheader-button-menu');
 
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
+
+      // fix or unfix
+      PubSub.subscribe('scroll.notice.down', fix);
+      PubSub.subscribe('scroll.notice.up', unfix);
+      PubSub.subscribe('header:search:close', fix);
+      PubSub.subscribe('notice.closed', function(e, data){
+        if (data && data.id === "notice_home_top") {
+          fix();
+        }
+      });
+      if(!$('.notice.top').length || documentScrollTop >= $('.notice.top').height() ) {
+        fix();
+      }
+
+      // extend or unextend
+      PubSub.subscribe('scroll.search.down', unextend);
+      PubSub.subscribe('scroll.search.up', extend);
+      var $searchEl = $('.quick-access-search');
+      if ($searchEl.length && documentScrollTop < $searchEl.offset().top) {
+        extend();
+      }
 
       if (!$el.hasClass('standalone')) {
         // in standalone mode, we follow the links
         $buttonMenu.on('click', onClickButtonMenu);
         $('body').on('click', '#'+options.mobileNavId+'-overlay', closeMenu);
       }
-
     }
 
     function initOptions() {
@@ -47,7 +69,7 @@ Paris.rheader = (function(){
     function onScroll(e, data) {
       if (lastScrollY !== 0) {
         if (data.originalEvent.pageY < 200) {
-          $el.removeClass('folded');
+          unfold();
           return;
         }
         var down = (lastScrollY < data.originalEvent.pageY);
@@ -59,9 +81,11 @@ Paris.rheader = (function(){
       lastScrollY = data.originalEvent.pageY;
     }
 
-    function unfold(){
-      $el.removeClass('folded');
-    }
+    function unfold(){$el.removeClass('folded');}
+    function fix() {$el.addClass('fixed');}
+    function unfix() {$el.removeClass('fixed');}
+    function extend() {console.log('extend'); $el.addClass('extended');}
+    function unextend() {console.log('unextend'); $el.removeClass('extended');}
 
     function onClickButtonMenu(e) {
       e.preventDefault();
@@ -107,7 +131,7 @@ Paris.rheader = (function(){
       $overlay = $('<div id="'+options.mobileNavId+'-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo($el);
 
       // Monitor scroll
-      scrollMonitor = PubSub.subscribe('scroll', onScroll);
+      scrollMonitor = PubSub.subscribe('scroll.document', onScroll);
 
       $el.on('mouseenter', unfold);
     }

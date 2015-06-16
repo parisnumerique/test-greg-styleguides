@@ -70,8 +70,8 @@ Paris.notice = (function(){
 
     api.close = function(){
       $el.velocity({
-        height: 0,
-        opacity: 0
+        scaleY: [0, 1],
+        opacity: [0, 1]
       }, {
         duration: 350,
         easing: "ease",

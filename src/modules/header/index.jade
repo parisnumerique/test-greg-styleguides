@@ -1,10 +1,11 @@
 include header
 include ../../helpers/code
 
-.lsg-module(style="margin-top: 100px")
+.spacer(style="height: 80px")
+.lsg-module
   +header(defaults)
 
-+code().
++code({language: "jade"}).
   include header
 
   +header(#{JSON.stringify(defaults, null, 2)})
