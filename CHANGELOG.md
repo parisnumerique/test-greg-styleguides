@@ -9,7 +9,9 @@
 * module `error-heading`: responsive
 * module `notice`: persist close state for the session
 * module `rheader`:
-  * align the vertical bar in logo with the `heading` modules of the body
+  * aligned the vertical bar in logo with the `heading` modules of the body
+  * better spacing with following `layout-content`
+  * re-added the fix / unfix for top `notice` support
 * module `sections-panel`:
   * removed separator when there is no intro text
   * optional intro, buttons and links in content
