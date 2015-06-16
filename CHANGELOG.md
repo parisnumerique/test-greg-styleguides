@@ -12,6 +12,7 @@
   * optional buttons and links in content
 * layout `left-col`: fixed bug affix
 * template `home`: removed modifiers from `stay-connected` block
+* template `single-news`: added `share` in left column
 * fixed `share.mail` in `locales.js`
 
 ## 0.12.6 (2015-06-16)
