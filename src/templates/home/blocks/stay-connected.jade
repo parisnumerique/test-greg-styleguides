@@ -17,13 +17,12 @@ mixin block-stay-connected(data)
             +block-content-jecoute(data.jecoute)
             +block-content-social(data.social)
   else
-    .layout-content.color-secondary-background.layout-separate-after
-      .layout-three-col
-        .layout-wrapper
-          +heading(data.heading)
-          .layout-content
-            +block-content-newsletter(data.newsletter)
-          .layout-content
-            +block-content-jecoute(data.jecoute)
-          .layout-content
-            +block-content-social(data.social)
+    .layout-three-col
+      .layout-wrapper
+        +heading(data.heading)
+        .layout-content
+          +block-content-newsletter(data.newsletter)
+        .layout-content
+          +block-content-jecoute(data.jecoute)
+        .layout-content
+          +block-content-social(data.social)
