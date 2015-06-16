@@ -3,7 +3,8 @@
 ## Current
 
 * module `document-heading`: added target to icons
-* template `left-col`: fixed bug affix
+* layout `left-col`: fixed bug affix
+* template `home`: removed modifiers from `stay-connected` block
 * fixed `share.mail` in `locales.js`
 
 ## 0.12.6 (2015-06-16)
