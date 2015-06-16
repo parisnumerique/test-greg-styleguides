@@ -53,5 +53,7 @@ mixin sections-panel(data)
                   a(href=item.href)
                     .sections-panel-content-item-title= item.title
                     .sections-panel-content-item-text= item.text
-          +buttons(data.content.buttons)
-          +links(data.content.more_links)
+          if data.content.buttons
+            +buttons(data.content.buttons)
+          if data.content.more_links
+            +links(data.content.more_links)

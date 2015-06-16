@@ -6,7 +6,9 @@
 * module `error-heading`: responsive
 * module `table-of-contents`: responsive
 * module `document-heading`: added target to icons
-* module `sections-panel`: removed separator when there is no intro text
+* module `sections-panel`:
+  * removed separator when there is no intro text
+  * optional buttons and links in content
 * layout `left-col`: fixed bug affix
 * template `home`: removed modifiers from `stay-connected` block
 * fixed `share.mail` in `locales.js`
