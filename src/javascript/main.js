@@ -41,5 +41,5 @@ require('../templates/search/script');
 require('./lib/cnil');
 
 var Paris = window.Paris || {};
-Paris.version = "0.12.5";
+Paris.version = "0.12.6";
 Paris.templates = {};
