@@ -1,6 +1,6 @@
 @include medium-and-small {
   .button-top {
-    display: none;
+    display: none !important;
   }
 }
 

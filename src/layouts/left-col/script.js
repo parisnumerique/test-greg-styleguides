@@ -17,14 +17,15 @@ Paris.leftCol = (function(){
     }
 
     function setAffix() {
+      var rheaderHeight = $('.rheader').height();
       // no affix if there is not enough space to show all the anchors
-      if($el.find('.anchors-list').height() > window.innerHeight - $('header').height() - 100){
+      if($el.find('.anchors-list').height() > window.innerHeight - rheaderHeight - 100){
         return;
       }
       var $nextContent = $el.parents('.layout-content').next('.layout-content');
       var offsets = {
-        top: $('.layout-left-col').offset().top - $('header').height(),
-        bottom: $('body').height() - $nextContent.offset().top + $('header').height()
+        top: $('.layout-left-col').offset().top - rheaderHeight,
+        bottom: $('body').height() - $nextContent.offset().top + rheaderHeight
       };
       unsetAffix();
       $el.affix({
