@@ -21,8 +21,8 @@ Paris.config = {
     cnil: {
       name: "cookies",
       value: "accepted",
-      // `expires` is a number (of seconds), a date parsable string, or a Date object of when the cookie will expire
-      expires: 34186670 // 13 months
+      // `expires` can be a Number which will be interpreted as days from time of creation or a Date instance
+      expires: 395 // 13 months
     }
   }
 };

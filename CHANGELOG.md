@@ -2,18 +2,23 @@
 
 ## Current
 
+* component `video`: improve cookie logic
 * module `breadcrumbs`: fix padding
 * module `button-top`: hide on small and medium screens
-* module `error-heading`: responsive
-* module `table-of-contents`: responsive
 * module `document-heading`: added target to icons
+* module `error-heading`: responsive
+* module `notice`: persist close state for the session
 * module `sections-panel`:
   * removed separator when there is no intro text
   * optional intro, buttons and links in content
+* module `table-of-contents`: responsive
+* module `video-cover`: improve cookie logic
 * layout `left-col`: fixed bug affix
 * template `home`: removed modifiers from `stay-connected` block
 * template `single-news`: added `share` in left column
 * fixed `share.mail` in `locales.js`
+* improved cookie logic in `cnil.js`
+* changed cookie lib (`cookies-js` to `js-cookie`) to prevent automatic cookie setting
 
 ## 0.12.6 (2015-06-16)
 

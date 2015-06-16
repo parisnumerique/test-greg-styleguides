@@ -1,6 +1,6 @@
 'use strict';
 
-var Cookies = require('cookies-js');
+var Cookies = require('js-cookie');
 
 var Paris = window.Paris || {};
 
