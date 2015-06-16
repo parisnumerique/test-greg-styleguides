@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `document-heading`: added target to icons
 * template `left-col`: fixed bug affix
 * fixed `share.mail` in `locales.js`
 
