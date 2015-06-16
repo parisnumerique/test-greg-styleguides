@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `breadcrumbs`: fix padding
 * module `button-top`: hide on small and medium screens
 * module `error-heading`: responsive
 * module `table-of-contents`: responsive
