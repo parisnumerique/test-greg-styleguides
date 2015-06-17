@@ -1,6 +1,6 @@
 .news-item {
-  border-bottom: 1px solid $gray230;
-  color: $gray77;
+  border-bottom: 1px solid $grayEE;
+  color: $gray4D;
   display: block;
   min-height: 100px;
   padding: 25px 0;
@@ -10,7 +10,7 @@
 
   &:first-child,
   &:nth-child(2) {
-    border-top: 1px solid $gray230;
+    border-top: 1px solid $grayEE;
   }
 
   html.no-touch & {
@@ -101,7 +101,7 @@
 }
 
 .news-item-title {
-  color: $gray51;
+  color: $gray33;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;

@@ -5,7 +5,7 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
 .footer {
   font-size: 13px;
   font-weight: 300;
-  background-color: $gray230;
+  background-color: $grayEE;
   @media #{$footer-small} {
     text-align: center;
   }
@@ -42,10 +42,10 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
   }
 
   a {
-    color: $gray51;
+    color: $gray33;
     text-decoration: none;
     &:hover {
-      border-bottom: 1px solid $gray51;
+      border-bottom: 1px solid $gray33;
       color: $black;
     }
   }
@@ -53,7 +53,7 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
   // modifier
   li.strong {
     a {
-      border-bottom: 1px solid $gray51;
+      border-bottom: 1px solid $gray33;
       font-size: 14px;
       font-weight: 500;
       text-transform: uppercase;

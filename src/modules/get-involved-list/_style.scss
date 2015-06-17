@@ -19,7 +19,7 @@
 .get-involved-nav {
   background-color: $red3;
   border-radius: 5px;
-  color: $yellow3;
+  color: $yellow1;
   margin-bottom: 25px;
   padding: 0 20px;
 }
@@ -29,7 +29,7 @@
   text-align: center;
 
   & + .get-involved-nav-item {
-    border-top: 1px solid $red4;
+    border-top: 1px solid $red2;
   }
 
   .get-involved-item-title {
@@ -41,16 +41,16 @@
   }
 
   .button {
-    background-color: $red4;
-    color: $yellow3;
+    background-color: $red2;
+    color: $yellow1;
     font-weight: 700;
-    &:after {background-color: darken($red4, 6%);}
+    &:after {background-color: darken($red2, 6%);}
   }
 }
 
 .get-involved-item {
   border-radius: 5px;
-  color: $blue3;
+  color: $color-secondary-variant;
   display: block;
   margin-bottom: 25px;
   overflow: hidden;
@@ -154,7 +154,7 @@
     & + .get-involved-nav-item:before {
       content: '';
       display: block;
-      border-left: 1px solid $red4;
+      border-left: 1px solid $red2;
       height: 130px;
       margin-top: -60px;
       left: -12px;

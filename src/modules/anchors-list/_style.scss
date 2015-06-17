@@ -29,14 +29,14 @@
   // modifiers
   &.anchor-postit {
     .anchors-list-link {
-      color: $orange-postit;
+      color: $orange1;
       font-weight: 700;
     }
   }
 }
 
 .anchors-list-link {
-  color: $gray51;
+  color: $gray33;
   display: block;
   line-height: 20px;
   overflow: hidden;
@@ -98,16 +98,3 @@
     transition: width 0.1s ease-in-out;
   }
 }
-
-// DEBUG TODO remove
-//.anchors-list-debug {
-//  color: $white;
-//  font-size: 40px;
-//  left: 40%;
-//  position: absolute;
-//  width: 50px;
-//
-//  &#debug-0, &#debug-3 {background-color: $color-primary;}
-//  &#debug-1, &#debug-4 {background-color: $color-secondary;}
-//  &#debug-2, &#debug-5 {background-color: $color-tertiary;}
-//}

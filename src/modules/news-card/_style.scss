@@ -52,7 +52,7 @@
   transform: translateY(0);
 
   html.touch & {
-    background-color: $gray242;
+    background-color: $grayF2;
     border-radius: 0 0 5px 5px;
   }
   html.touch .gray-background & {
@@ -61,7 +61,7 @@
 }
 
 .news-card-image {
-  background-color: #eee;
+  background-color: $grayEE;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -102,7 +102,7 @@
 
     &:before,
     &:after{
-      border-bottom: 1px solid $gray204;
+      border-bottom: 1px solid $grayCC;
       content: "";
       display: flex;
       flex-grow: 1;
@@ -166,7 +166,7 @@ html.no-touch {
     // modifiers
     &.large {
       .news-card-wrapper {
-        background-color: $gray204;
+        background-color: $grayCC;
         height: 480px;
         margin-bottom: 0;
         overflow: hidden;

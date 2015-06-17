@@ -40,13 +40,13 @@
 }
 
 .document-heading-content-wrapper {
-  border-bottom: 1px solid $gray204;
+  border-bottom: 1px solid $grayCC;
   overflow: hidden;
   padding: 25px 20px 25px 0;
 }
 
 .document-heading-title {
-  color: $gray26;
+  color: $gray1A;
   float: left;
   font-size: 24px;
   font-weight: 700;
@@ -60,7 +60,7 @@
  line-height: 36px;
 
  .icon {
-   color: $gray153;
+   color: $gray99;
    text-decoration: none;
 
    &.active {

@@ -16,10 +16,10 @@
   }
 
   a {
-    color: $gray204;
+    color: $grayCC;
     display: inline-block;
     text-decoration: none;
-    &:hover {color: $gray102;}
+    &:hover {color: $gray66;}
   }
 
   // modifiers
@@ -29,9 +29,9 @@
     }
 
     a {
-      border: 1px solid $gray204;
+      border: 1px solid $grayCC;
       border-radius: 50%;
-      color: $gray204;
+      color: $grayCC;
       font-size: 24px;
       height: 40px;
       line-height: 40px;
@@ -41,8 +41,8 @@
       width: 40px;
 
       &:hover {
-        background-color: $blue3;
-        border-color: $blue3;
+        background-color: $color-secondary-variant;
+        border-color: $color-secondary-variant;
         color: $white;
       }
 
@@ -53,9 +53,9 @@
 
   .component-text & {
     .share-item a {
-      color: $gray204;
+      color: $grayCC;
       text-decoration: none;
-      &:hover {color: $gray102;}
+      &:hover {color: $gray66;}
     }
   }
 

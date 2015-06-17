@@ -7,7 +7,7 @@
   &.emphasis-links {
     .block-aside-item {
       a {
-        border-bottom: 1px solid $gray77;
+        border-bottom: 1px solid $gray4D;
       }
       &.current a {
         border-bottom: 0;
@@ -17,7 +17,7 @@
 
   .block-aside-item {
     a {
-      color: $gray26;
+      color: $gray1A;
       display: inline-block;
       line-height: 20px;
       padding: 0;
@@ -45,11 +45,11 @@
 
     &.current {
       a {
-        color: $blue3;
+        color: $color-secondary-variant;
         font-weight: 700;
         pointer-events: none;
         &:hover {
-          color: $blue3;
+          color: $color-secondary-variant;
           cursor: default;
           text-decoration: none;
         }

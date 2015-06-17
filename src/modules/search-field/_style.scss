@@ -22,7 +22,7 @@
     }
 
     .search-field-submit {
-      background-color: $gray230;
+      background-color: $grayEE;
       border-radius: 5px;
       padding: 0 10px;
       width: auto;
@@ -39,7 +39,7 @@
 }
 
 .search-field-input[type="text"] {
-  @include input-color-placeholder($gray77);
+  @include input-color-placeholder($gray4D);
   border-radius: 5px 0 0 5px;
   font-size: 18px;
   font-weight: 300;
@@ -48,8 +48,8 @@
 }
 
 .search-field-submit {
-  background-color: $gray242;
-  color: $gray77;
+  background-color: $grayF2;
+  color: $gray4D;
   border: 0;
   border-radius: 0 5px 5px 0;
   font-size: 24px;
