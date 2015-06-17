@@ -88,7 +88,7 @@ Paris.hub = (function(){
         renderBreadcrumbs(breadcrumbs);
       }
 
-      if (data.news) {
+      if (data.hasOwnProperty('news')) {
         renderNews(data.news);
       }
     }
@@ -116,7 +116,7 @@ Paris.hub = (function(){
 
     function renderNews(data){
       $newsParent.find('.news-list').remove();
-      if(data && data.items) {
+      if(data && data.items && data.items.length) {
         var news = Paris.templates.templatizer["news-list"]["news-list"](data);
         $newsParent.closest('.layout-content').show();
         $newsParent.append(news);
