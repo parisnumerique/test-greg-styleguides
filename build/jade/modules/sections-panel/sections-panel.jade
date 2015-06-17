@@ -45,7 +45,8 @@ mixin sections-panel(data)
       a.sections-panel-back.sections-panel-content-back(href=current_item ? current_item.href : "")
       .sections-panel-content-wrapper
         if has_content
-          .sections-panel-intro= data.content.intro
+          if data.content.intro
+            .sections-panel-intro= data.content.intro
           if data.content.items.length !== 0
             ul.sections-panel-content-items
               each item in data.content.items
@@ -53,5 +54,7 @@ mixin sections-panel(data)
                   a(href=item.href)
                     .sections-panel-content-item-title= item.title
                     .sections-panel-content-item-text= item.text
-          +buttons(data.content.buttons)
-          +links(data.content.more_links)
+          if data.content.buttons
+            +buttons(data.content.buttons)
+          if data.content.more_links
+            +links(data.content.more_links)

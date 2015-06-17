@@ -1,7 +1,8 @@
 include ../../components/buttons/buttons
 include ../../components/links/links
 
-.sections-panel-intro= data.intro
+if data.intro
+  .sections-panel-intro= data.intro
 if data.items && data.items.length !== 0
   ul.sections-panel-content-items
     each item in data.items

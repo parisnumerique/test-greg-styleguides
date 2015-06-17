@@ -36,6 +36,8 @@ append content
         aside.layout-aside
           .aside-wrapper
             +anchors-list(data.aside.anchors_list)
+            if data.aside.share
+              +share(data.aside.share)
         .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
