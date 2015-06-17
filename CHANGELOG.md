@@ -3,6 +3,7 @@
 ## Current
 
 * colors: simplified the number of variables, improved documentation
+* module `anchors-list`: automatically scroll to anchor in URL on page load
 * module `document-heading`:
   * added default background-color
   * changed transparent black layer from 40% to 10%
