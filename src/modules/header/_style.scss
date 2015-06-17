@@ -169,11 +169,11 @@
     vertical-align: top;
     width: 130px;
     height: 100px;
-    background: #BF2257;
+    background: $red3;
     padding: 0 26px;
     box-sizing: border-box;
     font-weight: bold;
-    color: #fae46a;
+    color: $yellow1;
     text-align: center;
     margin-left: 20px;
     padding-top: 27px;
@@ -193,7 +193,7 @@
 
   .right .participate:hover,
   .right .participate.current, {
-    background: #fae46a;
+    background: $yellow1;
   }
   .participate:hover .front {
     transform: rotateY(180deg);

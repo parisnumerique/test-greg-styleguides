@@ -44,7 +44,7 @@
 
   &.tertiary {
     background-color: $color-tertiary;
-    color: $gray26;
+    color: $gray1A;
     padding: 15px;
     &:after {background-color: darken($color-tertiary, 10%);}
   }
@@ -62,11 +62,11 @@
   }
 
   &.marker {
-    background-color: $green2;
+    background-color: $green1;
     font-size: 15px;
     font-weight: 700;
     line-height: 50px;
-    &:after {background-color: darken($green2, 10%);}
+    &:after {background-color: darken($green1, 10%);}
     .icon {
       font-size: 30px;
       margin-right: 5px;
@@ -77,7 +77,7 @@
   &.white {
     background-color: $white;
     color: $black;
-    &:after {background-color: $gray250}
+    &:after {background-color: $grayF2}
   }
 
   &.wide {

@@ -1,10 +1,10 @@
 .component-sharelines {
-  border-left: 7px solid $gray242;
+  border-left: 7px solid $grayF2;
   clear: both;
   padding-left: 22px;
 
   .sharelines-title {
-    color: $blue3;
+    color: $color-secondary-variant;
     font-size: 26px;
     font-weight: 700;
     line-height: 32px;
@@ -12,8 +12,8 @@
   }
 
   .sharelines-items {
-    border-top: 1px solid $gray204;
-    color: $gray51;
+    border-top: 1px solid $grayCC;
+    color: $gray33;
     font-size: 15px;
     font-weight: 300;
     line-height: 20px;
@@ -23,13 +23,13 @@
   }
 
   .sharelines-item {
-    border-bottom: 1px solid $gray204;
+    border-bottom: 1px solid $grayCC;
     padding: 20px 80px 20px 0;
     position: relative;
     &:hover {
       .share a {
-        border-color: $gray179;
-        &:hover {border-color: $blue3;}
+        border-color: $grayCC;
+        &:hover {border-color: $color-secondary-variant;}
       }
     }
   }

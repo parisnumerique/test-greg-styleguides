@@ -1,6 +1,6 @@
 .poll {
-  background-color: $red-poll;
-  background: url(../modules/poll/background.jpg) $red-poll repeat top left;
+  background-color: $red3;
+  background: url(../modules/poll/background.jpg) $red3 repeat top left;
   background-position: 50% 50%;
   color: white;
   height: 100%;
@@ -9,7 +9,7 @@
   width: 100%;
 
   > canvas {
-    background-color: $red-poll;
+    background-color: $red3;
     left: 0;
     position: absolute;
     top: 0;
@@ -60,7 +60,7 @@
 
 .poll-form {
   .poll-input {
-    color: $gray77;
+    color: $gray4D;
     font-size: 15px;
     font-weight: 300;
     margin: 0 5px 0 0;

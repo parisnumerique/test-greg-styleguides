@@ -46,7 +46,10 @@ Paris.anchors = (function(){
 
       // Fix bad offset by recalculating items dimensions, 1 second after rendering
       // This could probably be improved by tracking down the origin of the discrepancy
-      setTimeout(parseItems, 1000);
+      setTimeout(function(){
+        parseItems();
+        scrollToAnchor(window.location.hash);
+      }, 1000);
 
       $el.on('click', '.anchors-list-link', onClickAnchorLink);
     }
@@ -158,17 +161,23 @@ Paris.anchors = (function(){
       e.preventDefault();
       var $link = $(e.currentTarget);
       var anchor = $link.attr("href");
-      $(anchor)
+      scrollToAnchor(anchor);
+    }
+
+    function scrollToAnchor(anchor) {
+      var $anchor = $(anchor);
+      if ($anchor.length === 0) {return;}
+      $anchor
         .velocity("stop")
         .velocity("scroll", {
           duration: 1500,
           offset: $(options.headerSelector).height() * -1 + options.anchorTopBorder,
           complete: function(){
-            if (Modernizr.history) {
-              history.replaceState({}, $link.text(), anchor);
+            if (Modernizr.history && window.location.hash !== anchor) {
+              history.replaceState({}, $anchor.text(), anchor);
             }
           }
-      });
+        });
     }
 
     function fillBars(){

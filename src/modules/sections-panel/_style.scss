@@ -3,13 +3,13 @@ $sections-panel-subnav-width: 350px;
 $sections-panel-subnav-offset: 200px;
 
 %sections-panel-separator {
-  border-top: 1px solid $gray204;
+  border-top: 1px solid $grayCC;
   margin: 30px 0 0;
   padding: 30px 0 0;
 }
 
 .sections-panel {
-  background-color: $gray242;
+  background-color: $grayF2;
   position: relative;
   width: 100%;
 
@@ -19,23 +19,23 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-intro {
-  color: $gray77;
+  color: $gray4D;
   font-size: 14px;
   line-height: 20px;
   margin: 0px 0px 30px;
 
   .sections-panel-content & {
-    color: $gray102;
+    color: $gray66;
   }
 }
 
 .sections-panel-nav {
-  background-color: $yellow2;
+  background-color: $yellow1;
   padding: 50px 0;
 }
 
 .sections-panel-nav-items {
-  color: $gray26;
+  color: $gray1A;
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
@@ -53,7 +53,7 @@ $sections-panel-subnav-offset: 200px;
   }
 
   a {
-    color: $gray26;
+    color: $gray1A;
     display: block;
     padding: 10px 0;
     position: relative;
@@ -89,7 +89,7 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-subnav {
-  background-color: $gray242;
+  background-color: $grayF2;
 
   .block-aside:first-child {
     margin-top: 0;
@@ -142,7 +142,7 @@ $sections-panel-subnav-offset: 200px;
 .sections-panel-subnav-items,
 .sections-panel-content-items {
   a {
-    color: $gray51;
+    color: $gray33;
     display: block;
     text-decoration: none;
 
@@ -199,7 +199,7 @@ $sections-panel-subnav-offset: 200px;
 .sections-panel-content-items {
   a {
     .sections-panel-content-item-text {
-      color: $gray102;
+      color: $gray66;
     }
   }
 }
@@ -209,7 +209,7 @@ $sections-panel-subnav-offset: 200px;
     margin-top: 20px;
 
     &:before {
-      background-color: $gray230;
+      background-color: $grayEE;
       content: " ";
       display: block;
       margin-bottom: 20px;
@@ -266,7 +266,7 @@ $sections-panel-subnav-offset: 200px;
     padding-left: $small-page-padding + 30px;
 
     .sections-panel-subnav-back {
-      background-color: $yellow2;
+      background-color: $yellow1;
       display: block;
     }
   }
@@ -275,7 +275,7 @@ $sections-panel-subnav-offset: 200px;
       padding-left: $small-page-padding + 30px;
     }
     .sections-panel-content-back {
-      background-color: $gray242;
+      background-color: $grayF2;
       display: block;
     }
   }
@@ -293,7 +293,7 @@ $sections-panel-subnav-offset: 200px;
     }
 
     &:before {
-      background-color: $yellow2;
+      background-color: $yellow1;
       bottom: 0;
       content: "";
       display: block;
@@ -304,7 +304,7 @@ $sections-panel-subnav-offset: 200px;
     }
 
     &:after {
-      background-color: $gray242;
+      background-color: $grayF2;
       bottom: 0;
       content: "";
       display: block;

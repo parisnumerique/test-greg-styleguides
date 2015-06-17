@@ -5,6 +5,7 @@
 }
 
 .document-heading-background {
+  background-color: $white;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +15,7 @@
 
   // transparent black layer
   &:before {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.1);
     content: " ";
     left: 0;
     position: absolute;
@@ -40,13 +41,13 @@
 }
 
 .document-heading-content-wrapper {
-  border-bottom: 1px solid $gray204;
+  border-bottom: 1px solid $grayCC;
   overflow: hidden;
   padding: 25px 20px 25px 0;
 }
 
 .document-heading-title {
-  color: $gray26;
+  color: $gray1A;
   float: left;
   font-size: 24px;
   font-weight: 700;
@@ -60,7 +61,7 @@
  line-height: 36px;
 
  .icon {
-   color: $gray153;
+   color: $gray99;
    text-decoration: none;
 
    &.active {
@@ -145,11 +146,6 @@
     float: left;
     line-height: 40px;
   }
-
-  // Keep space for the header, when the jumbotron is the first element after it
-  //.header-wrapper + .layout-content .document-heading {
-  //  height: 400px;
-  //}
 
 }
 

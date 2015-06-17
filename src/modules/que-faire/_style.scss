@@ -38,11 +38,11 @@
 
   &:after {
     border-radius: 5px;
-    background-color: $gray242;
+    background-color: $grayF2;
   }
 
   > span {
-    color: $gray51;
+    color: $gray33;
     display: block;
     font-size: 15px;
     font-weight: 500;
@@ -53,7 +53,7 @@
     transition: color 0.35s ease;
     vertical-align: middle;
   }
-  &:hover > span {color: $red-que-faire;}
+  &:hover > span {color: $que-faire-red;}
 
   // modifiers
   &.more,

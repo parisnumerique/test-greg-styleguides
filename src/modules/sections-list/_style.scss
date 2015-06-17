@@ -2,7 +2,7 @@
 }
 
 .sections-list-button {
-  background-color: $gray242;
+  background-color: $grayF2;
   border: none;
   cursor: pointer;
   display: block;
@@ -17,7 +17,7 @@
 
   /* modifier "more" */
   &.more {
-    background: $yellow;
+    background: $yellow1;
     color: $black;
     display: table;
     padding: 12px 18px;
@@ -32,7 +32,7 @@
 
   html.no-touch & {
     &:before {
-      background: $red2;
+      background: $red1;
       bottom: 0px;
       content: "";
       display: block;
@@ -48,7 +48,7 @@
     &:hover {
       .sections-list-button-title,
       .sections-list-button-text {
-        color: $gray242;
+        color: $grayF2;
       }
       &:before {
         width: 100%;
@@ -76,7 +76,7 @@
 }
 
 .sections-list-button-text {
-  color: $gray77;
+  color: $gray4D;
   font-size: 14px;
   font-weight: 300;
   line-height: 18px;
@@ -129,7 +129,7 @@
       padding: 30px $small-page-padding;
 
       html.no-touch &:hover:after {
-        color: $gray242;
+        color: $grayF2;
       }
 
       &:after {

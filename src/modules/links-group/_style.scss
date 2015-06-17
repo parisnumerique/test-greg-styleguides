@@ -13,21 +13,21 @@
   @include small {
     // modifiers
     &.blue {
-      .links-group-header {color: $blue3;}
+      .links-group-header {color: $color-secondary-variant;}
       .links-group-item-icon,
-      .links-group-item:hover {background-color: $blue3;}
+      .links-group-item:hover {background-color: $color-secondary-variant;}
     }
     &.red {
-      .links-group-header {color: $red2;}
+      .links-group-header {color: $red1;}
       .links-group-item-icon,
-      .links-group-item:hover {background-color: $red2;}
+      .links-group-item:hover {background-color: $red1;}
     }
   }
 
 }
 
 .links-group-header {
-  color: $gray153;
+  color: $gray99;
   display: block;
   margin-bottom: 20px;
   text-decoration: none;
@@ -58,10 +58,10 @@
 }
 
 .links-group-item {
-  background-color: $gray242;
+  background-color: $grayF2;
   border: none;
   border-radius: 5px;
-  color: $gray51;
+  color: $gray33;
   display: block;
   font-size: 15px;
   font-weight: 300;
@@ -72,7 +72,7 @@
   text-decoration: none;
 
   &:hover {
-    background-color: $gray153;
+    background-color: $gray99;
     color: $white;
     transition: all 0.2s ease;
   }
@@ -109,17 +109,17 @@
 
     // modifiers
     &.white-buttons {
-      .links-group-item:hover {background-color: $gray153;}
+      .links-group-item:hover {background-color: $gray99;}
     }
 
     &.blue {
       .links-group-header:after,
-      .links-group-item:hover {background-color: $blue3;}
+      .links-group-item:hover {background-color: $color-secondary-variant;}
     }
 
     &.red {
       .links-group-header:after,
-      .links-group-item:hover {background-color: $red2;}
+      .links-group-item:hover {background-color: $red1;}
     }
   }
 
@@ -139,7 +139,7 @@
     }
 
     &:after {
-      background-color: $gray153;
+      background-color: $gray99;
       content: '';
       height: 100%;
       left: 0;
@@ -172,7 +172,7 @@
     text-decoration: none;
 
     &:hover {
-      background-color: $gray153;
+      background-color: $gray99;
       color: $white;
       transition: all 0.2s ease;
     }

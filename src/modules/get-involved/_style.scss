@@ -24,16 +24,16 @@
     opacity: 0.8;
 
     .get-involved-text {
-      color: $gray26;
+      color: $gray1A;
       opacity: 1;
     }
   }
 
   // modifiers
   &.dark {
-    background-color: $gray26;
+    background-color: $gray1A;
 
-    .get-involved-text {color: $blue2;}
+    .get-involved-text {color: $light-blue;}
     &:hover .get-involved-text {color: $white;}
   }
 }
@@ -67,7 +67,7 @@
 }
 
 .get-involved-text {
-  color: $blue3;
+  color: $color-secondary-variant;
   font-size: 20px;
   font-weight: 700;
   margin: 0;

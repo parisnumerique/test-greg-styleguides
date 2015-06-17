@@ -2,7 +2,7 @@
 @import "../base/_colors";
 
 .notice-browser {
-  background-color: $orange-notice;
+  background-color: $notice-orange;
   color: $white;
   padding: 20px;
   a {color: $white;}
@@ -44,11 +44,11 @@ img, video {
   display: none;
 }
 
-.header .title {
+.rheader .title {
   font-size: 40px;
 }
 
-.header nav a,
+.rheader nav a,
 .menu a {
   display: block;
 }

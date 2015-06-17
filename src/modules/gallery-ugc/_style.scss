@@ -4,7 +4,7 @@
 
 .gallery-title,
 .gallery-hashtag {
-  color: $gray51;
+  color: $gray33;
   display: inline-block;
 }
 
@@ -18,13 +18,13 @@
   text-decoration: none;
 
   &:hover {
-    border-color: $gray51;
+    border-color: $gray33;
   }
 
   &.current,
   &.current:hover {
-    border-color: $red2;
-    color: $red2;
+    border-color: $red1;
+    color: $red1;
     cursor: default;
     pointer-events: none;
   }
@@ -80,7 +80,7 @@
       width:100%;
       height:100%;
       position:absolute;
-      background-color: rgba(#000, 0.5);
+      background-color: transparentize($black, 0.5);
       transition: background-color 0.2s ease-in-out;
     }
 

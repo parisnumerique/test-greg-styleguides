@@ -25,7 +25,7 @@
   }
 
   h3 {
-    color: $gray26;
+    color: $gray1A;
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
@@ -41,7 +41,7 @@
   }
 
   ul, ol, p {
-    color: $gray51;
+    color: $gray33;
     margin: 0 0 20px;
     padding: 0;
   }
@@ -82,12 +82,12 @@
   @extend %component-text;
 
   h2 {
-    border-top: 7px solid $gray242;
-    color: $gray26;
+    border-top: 7px solid $grayF2;
+    color: $gray1A;
   }
 
   a:not(.button) {
-    color: $red2;
+    color: $red1;
   }
 
   .component-postit + & > p:first-child,
@@ -101,7 +101,7 @@
   }
 
   .icon-anchor {
-    color: $gray204;
+    color: $grayCC;
     font-size: 20px;
     line-height: 1;
     padding-left: 10px;
@@ -132,7 +132,7 @@
         content: " ";
         width: 70px;
         height: 10px;
-        background: #df225a;
+        background: $color-primary;
         position: relative;
         bottom: -20px;
       }

@@ -12,7 +12,7 @@
   }
 
   &.gray-background {
-    background-color: $gray242;
+    background-color: $grayF2;
   }
 
   > .layout-wrapper {
@@ -36,7 +36,7 @@
   }
 
   .layout-aside {
-    background-color: $gray242;
+    background-color: $grayF2;
     padding: 40px 0 40px 20px;
     @include small {padding: 40px $small-page-padding;}
     position: relative;
@@ -47,7 +47,7 @@
     }
 
     &:after {
-      background-color: $gray242;
+      background-color: $grayF2;
       bottom: 0;
       content: "";
       display: block;

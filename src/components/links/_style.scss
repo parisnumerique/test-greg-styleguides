@@ -13,18 +13,18 @@
   }
 
   .links-items {
-    border-bottom: 1px solid $gray204;
-    border-top: 1px solid $gray204;
+    border-bottom: 1px solid $grayCC;
+    border-top: 1px solid $grayCC;
   }
 
   .links-item {
 
     & + .links-item {
-      border-top: 1px solid $gray204;
+      border-top: 1px solid $grayCC;
     }
 
     > a {
-      color: $gray51;
+      color: $gray33;
       display: block;
       font-size: 16px;
       line-height: 20px;
@@ -69,7 +69,7 @@
 
   .links-item-filesize,
   .links-item-target {
-    color: $gray128;
+    color: $gray66;
     display: inline-block;
     font-size: 14px;
     margin-left: 10px;

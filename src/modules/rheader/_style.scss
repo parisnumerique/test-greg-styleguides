@@ -198,7 +198,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
 
   // modifiers
   &.get-involved {
-    background-color: $red-poll;
+    background-color: $red3;
     text-align: center;
 
     a {font-weight: 700;}
@@ -226,8 +226,8 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
     }
 
     .rheader-nav-item-hover {
-      color: $red-poll;
-      &:after {background-color: $red-poll;}
+      color: $red3;
+      &:after {background-color: $red3;}
     }
   }
 
@@ -235,7 +235,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
     background-color: $color-secondary;
 
     &:hover {
-      background-color: $blue3;
+      background-color: $color-secondary-variant;
     }
   }
 }
@@ -340,8 +340,8 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
       }
 
       &.around {
-        background-color: $green2;
-        &:hover {background-color: darken($green2, 8);}
+        background-color: $green1;
+        &:hover {background-color: darken($green1, 8);}
       }
     }
 
@@ -383,10 +383,10 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
     }
   }
   .rheader-button-search {
-    border-right: 1px solid $red4;
+    border-right: 1px solid $red2;
   }
   .rheader-button-menu {
-    border-left: 1px solid $red4;
+    border-left: 1px solid $red2;
     transition: border 0.2s;
 
     .rheader-button-text {
@@ -476,7 +476,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
 
   .rheader-wrapper {
     > .rheader-button {
-      border-left: 1px solid $red4;
+      border-left: 1px solid $red2;
       display: inline-block;
       font-size: 26px;
       height: $rheader-height-large;
@@ -493,7 +493,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
   }
 
   .rheader-nav {
-    border-left: 1px solid $red4;
+    border-left: 1px solid $red2;
     display: inline-block;
     padding: 0 0 0 25px;
     vertical-align: top;
