@@ -1,5 +1,9 @@
 # Changelog
 
+## Current
+
+* colors: simplified the number of variables, improved documentation
+
 ## 0.13.0 (2015-06-17)
 
 * component `video`:
