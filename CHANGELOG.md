@@ -1,6 +1,6 @@
 # Changelog
 
-## Current
+## 0.13.0 (2015-06-17)
 
 * component `video`:
   * improved cookie logic
