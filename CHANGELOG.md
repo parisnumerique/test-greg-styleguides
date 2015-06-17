@@ -1,5 +1,9 @@
 # Changelog
 
+## Current
+
+* added `autoprefixer` to build process
+
 ## 0.13.1 (2015-06-17)
 
 * colors: simplified the number of variables, improved documentation
