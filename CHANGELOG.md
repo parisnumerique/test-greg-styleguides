@@ -3,6 +3,8 @@
 ## Current
 
 * colors: simplified the number of variables, improved documentation
+* module `document-heading`: added default background-color
+* module `hub-heading`: added default background-color
 
 ## 0.13.0 (2015-06-17)
 
