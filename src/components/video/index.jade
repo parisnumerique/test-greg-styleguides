@@ -10,3 +10,11 @@ h2 Standard
   include video
 
   +video(#{JSON.stringify(defaults, null, 2)})
+
+h2 Sans prendre en compte le cookie
+.lsg-component(style="max-width: 500px")
+  +video(without_cookie)
++code({language: "jade"}).
+  include video
+
+  +video(#{JSON.stringify(without_cookie, null, 2)})

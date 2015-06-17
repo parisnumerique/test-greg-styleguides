@@ -25,8 +25,17 @@ Paris.notice = (function(){
 
       $el.data('api', api);
 
+      PubSub.subscribe('notice.close', onCloseEvent);
+      if ($el.attr('id') !== 'notice_cnil' && sessionStorage.getItem($el.attr('id')) === 'closed') {
+        api.close();
+      }
+
       if ($el.hasClass('closed')) {
-        PubSub.subscribe('notice:open', onOpenEvent);
+        PubSub.subscribe('notice.open', onOpenEvent);
+
+        if ($el.attr('id') !== 'notice_cnil' && sessionStorage.getItem($el.attr('id')) !== 'closed') {
+          api.open();
+        }
       }
     }
 
@@ -41,25 +50,36 @@ Paris.notice = (function(){
       api.close();
     }
 
+    function onCloseEvent(e, data){
+      if (data.id === $el.attr('id')) {
+        api.close();
+      }
+    }
+
     function onOpenEvent(e, data){
       if (data.id === $el.attr('id')) {
         api.open();
       }
     }
 
+    function saveCloseForSession(){
+      sessionStorage.setItem($el.attr('id'), 'closed');
+    }
+
     // The API for external interaction
 
     api.close = function(){
       $el.velocity({
-        height: 0,
-        opacity: 0
+        scaleY: [0, 1],
+        opacity: [0, 1]
       }, {
         duration: 350,
         easing: "ease",
         complete: function(){
+          saveCloseForSession();
           var data = {};
           if ($el.attr('id')) {data.id = $el.attr('id');}
-          PubSub.publish('notice:close', data);
+          PubSub.publish('notice.closed', data);
           $el.remove();
         }
       });
@@ -75,7 +95,7 @@ Paris.notice = (function(){
         complete: function(){
           var data = {};
           if ($el.attr('id')) {data.id = $el.attr('id');}
-          PubSub.publish('notice:opened', data);
+          PubSub.publish('notice.opened', data);
         }
       });
     };

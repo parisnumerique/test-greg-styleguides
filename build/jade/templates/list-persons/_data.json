@@ -151,7 +151,7 @@
         "arrondissement": {
           "title": "Arrondissement",
           "name": "secteur",
-          "modifiers": ["two_cols"],
+          "modifiers": ["two-cols"],
           "items": [
             {"value": "1er arrondissement", "text": "1er"},
             {"value": "2ème arrondissement", "text": "2ème"},
@@ -514,7 +514,7 @@
         "arrondissement": {
           "title": "Arrondissement",
           "name": "secteur",
-          "modifiers": ["two_cols"],
+          "modifiers": ["two-cols"],
           "items": [
             {"value": "11ème arrondissement", "text": "11ème"},
             {"value": "13ème arrondissement", "text": "13ème"},

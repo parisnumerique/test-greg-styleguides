@@ -2,6 +2,7 @@
 .error-heading {
   background-color: $color-secondary;
   color: $white;
+  padding: 20px;
   position: relative;
   width: 100%;
   z-index: 0;
@@ -11,7 +12,7 @@
     font-size: 24px;
     font-weight: normal;
     line-height: 30px;
-    margin: 0;
+    margin: 0 0 20px;
     text-align: left;
     text-transform: uppercase;
   }
@@ -20,6 +21,7 @@
 .error-heading-wrapper {
   background-position: right center;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 100%;
   width: 100%;
 }
@@ -27,7 +29,7 @@
 .error-heading-logo {
   color: $white;
   height: 80px;
-  left: -28px;
+  left: 70px;
   position: relative;
   top: 40px;
   width: 144px;
@@ -56,7 +58,7 @@
 }
 
 .error-heading-content {
-  padding-top: 190px;
+  padding: 140px 0 40px;
 }
 
 @include large {
@@ -67,8 +69,16 @@
     h1 {
       font-size: 40px;
       line-height: 46px;
-      margin-bottom: 20px;
     }
+  }
+
+  .error-heading-logo {
+    left: -28px;
+    top: 40px;
+  }
+
+  .error-heading-content {
+    padding: 190px 0 0;
   }
 
 }

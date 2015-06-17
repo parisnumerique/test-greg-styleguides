@@ -2,7 +2,7 @@
 require('velocity-animate');
 
 var PubSub = require('pubsub-js');
-var Cookies = require('cookies-js');
+var Cookies = require('js-cookie');
 
 var Paris = window.Paris || {};
 
@@ -25,15 +25,12 @@ Paris.video = (function(){
       $placeholder.on('click', 'a[data-action="allow_cookies"]', onClickAllowCookies);
 
       renderVideo();
-      PubSub.subscribe('cookies:updated', renderVideo);
+      PubSub.subscribe('cookies.updated', renderVideo);
     }
 
     function onClickAllowCookies(e){
       e.preventDefault();
-      Cookies.set(Paris.config.cookies.cnil.name, Paris.config.cookies.cnil.value, {
-        expires: Paris.config.cookies.cnil.expires
-      });
-      renderVideo();
+      PubSub.publish('cookies.allow');
     }
 
     function renderVideo(){

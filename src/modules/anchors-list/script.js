@@ -63,7 +63,7 @@ Paris.anchors = (function(){
 
     function enableAnchors(){
       renderAnchors();
-      PubSub.subscribe('scroll', fillBars);
+      PubSub.subscribe('scroll.document', fillBars);
       PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
     }
 

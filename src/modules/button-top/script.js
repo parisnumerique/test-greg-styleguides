@@ -14,9 +14,12 @@ Paris.buttonTop = (function(){
     function init(){
       if (!$el.is(':visible')) {return;}
       $el.hide().on('click', onClick);
+      PubSub.subscribe('scroll.document', onScroll);
+
       $(window).on('resize', throttle(setAffix, 1000));
-      PubSub.subscribe('scroll', onScroll);
-      setAffix();
+
+      PubSub.subscribe('responsive.small.enable', unsetAffix);
+      PubSub.subscribe('responsive.small.disable', setAffix);
     }
 
     function onClick(e) {
@@ -29,17 +32,23 @@ Paris.buttonTop = (function(){
     }
 
     function onScroll(e, data) {
-      $el.toggle(data.originalEvent.pageY > 300);
+      if (data.originalEvent.pageY) {
+        $el.toggle(data.originalEvent.pageY > 300);
+      }
     }
 
     function setAffix() {
-      $(window).off('.affix');
-      $el.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
+      unsetAffix();
       $el.affix({
         offset: {
           bottom: $("body").height() - $(".footer").offset().top + 20
         }
       });
+    }
+
+    function unsetAffix() {
+      $(window).off('.affix');
+      $el.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
     }
 
     init();

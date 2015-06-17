@@ -1,10 +1,16 @@
 mixin video(data)
   .component.component-video
     .video-wrapper
-      if data.placeholder
-        .video-placeholder!= data.placeholder
-      script.video-embed(type="text/html")
+      if data.cookie === false
         if block
           != block
         else if data.block
           != data.block
+      else
+        if data.placeholder
+          .video-placeholder!= data.placeholder
+        script.video-embed(type="text/html")
+          if block
+            != block
+          else if data.block
+            != data.block

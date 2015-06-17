@@ -10,9 +10,9 @@
   float: left;
   font-size: 20px;
   letter-spacing: 3px;
-  line-height: 26px;
+  line-height: 32px;
   margin: 0;
-  padding: 80px 0 50px;
+  padding: 40px 0;
   text-transform: uppercase;
 
   a {
@@ -38,12 +38,11 @@
 
 .table-of-contents-nav-item {
   + .table-of-contents-nav-item {
-    margin-top: 40px;
+    margin-top: 32px;
   }
 }
 
 .table-of-contents-sections {
-  float: right;
   line-height: 26px;
   margin: 40px 0;
 
@@ -73,7 +72,6 @@
 .table-of-contents-sections-items {
   background-color: $color-tertiary;
   margin: 0 0 10px;
-  min-width: 460px;
   padding: 20px 30px 20px 20px;
   position: relative;
 
@@ -105,4 +103,37 @@
   padding: 4px 10px;
 
   &:hover {background-color: $white;}
+}
+
+@include medium-and-small {
+
+  .table-of-contents-nav {
+    margin-right: 40px;
+  }
+
+  .table-of-contents-sections {
+    float: left;
+    margin-top: 20px;
+  }
+
+}
+
+@include large-and-medium {
+
+  .table-of-contents-sections-items {
+    min-width: 460px;
+  }
+
+}
+
+@include large {
+
+  .table-of-contents-nav {
+    padding: 80px 0 50px;
+  }
+
+  .table-of-contents-sections {
+    float: right;
+  }
+
 }

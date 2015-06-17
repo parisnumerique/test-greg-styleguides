@@ -1,5 +1,41 @@
 # Changelog
 
+## 0.13.0 (2015-06-17)
+
+* component `video`:
+  * improved cookie logic
+  * added a `cookie: false` data to bypass the cookie verification
+* module `block-aside`: fixed modifier `two-cols` (previously `two_cols`)
+* module `breadcrumbs`: fixed padding
+* module `button-top`: hide on small and medium screens
+* module `document-heading`: added target to icons
+* module `error-heading`: responsive
+* module `links-group`: fixed centering of icon in button
+* module `notice`: persist close state for the session, improved animation
+* module `rheader`:
+  * aligned the vertical bar in logo with the `heading` modules of the body
+  * better spacing with following `layout-content`
+  * re-added the fix / unfix for top `notice` support
+  * added `extended` state for `home` template
+* module `sections-panel`:
+  * removed separator when there is no intro text
+  * optional intro, buttons and links in content
+* module `table-of-contents`: responsive
+* module `video-cover`:
+  * improved cookie logic
+  * added a `cookie: false` data to bypass the cookie verification
+* layout `left-col`: fixed bug affix
+* template `home`:
+  * removed modifiers from `stay-connected` block
+  * added "closed" modifier to `notice`
+  * added "extended" modifier to `rheader`
+* template `single-news`: added `share` in left column
+* fixed `share.mail` in `locales.js`
+* improved cookie logic in `cnil.js`
+* changed cookie lib (`cookies-js` to `js-cookie`) to prevent automatic cookie setting
+* added `favicon.ico` to build
+* added `egg.js` script ;)
+
 ## 0.12.6 (2015-06-16)
 
 * fixed CSS path in wrapper_prod

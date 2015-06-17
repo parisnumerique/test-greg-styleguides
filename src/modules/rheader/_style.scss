@@ -7,16 +7,21 @@ $rheader-large-max:  1370px;
 $rheader-height-small:  60px;
 $rheader-height-medium: 80px;
 $rheader-height-large:  80px;
+$rheader-height-large-extended: $rheader-height-large + 20px;
 
 
 .rheader {
   background-color: $color-primary;
   height: $rheader-height-small;
-  left: 0;
-  position: fixed;
-  top: 0;
+  position: relative;
   width: 100%;
   z-index: 300;
+
+  &.fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+  }
 
   a {
     color: $white;
@@ -405,13 +410,46 @@ $rheader-height-large:  80px;
 
 @media (min-width: $rheader-large-min) {
   .rheader {
+    overflow: hidden;
     text-align: right;
+
+    &.extended {
+      &,
+      .rheader-nav-item {
+        height: $rheader-height-large-extended;
+      }
+
+      .rheader-logo,
+      .rheader-locales {
+        transform: translateY(10px);
+      }
+
+      .rheader-nav-item a {
+        height: $rheader-height-large-extended;
+        line-height: $rheader-height-large-extended;
+      }
+
+      .rheader-wrapper > .rheader-button {
+        border-left: 1px solid transparent;
+        transform: translateY($rheader-height-large-extended);
+      }
+    }
   }
 
   .rheader,
-  .rheader-logo,
+  .rheader-logo {
+    height: $rheader-height-large;
+    transition: height 0.2s ease;
+  }
+
   .rheader-nav-item {
     height: $rheader-height-large;
+    transition: background-color 0.3s ease, height 0.2s ease;
+  }
+
+  .rheader-logo,
+  .rheader-locales {
+    transition: transform 0.2s ease;
   }
 
   .rheader-logo {
@@ -444,6 +482,7 @@ $rheader-height-large:  80px;
       height: $rheader-height-large;
       line-height: $rheader-height-large;
       position: static;
+      transition: background-color 0.3s ease, transform 0.4s ease, border 0.4s ease 0.2s;
       vertical-align: top;
       width: $rheader-height-large + 1px;
 
@@ -472,6 +511,7 @@ $rheader-height-large:  80px;
       display: inline-block;
       height: $rheader-height-large;
       line-height: $rheader-height-large;
+      transition: height 0.2s ease, line-height 0.2s ease;
     }
 
     // modifiers
@@ -560,10 +600,17 @@ $rheader-height-large:  80px;
 
 @media (min-width: $rheader-large-max) {
 
+  $rheader-nef-border-offset: 68px;
+  $rheader-logo-width: 285px;
+  $rheader-logo-paris-width: 180px;
+  $rheader-logo-offset: $large-grid-width / 2 + $offset-heading + $rheader-nef-border-offset;
+  $rheader-locales-offset: $rheader-logo-offset - $rheader-logo-width + $rheader-logo-paris-width;
+
   .rheader-logo {
     border-bottom: 0;
-    left: 30px;
-    width: 285px;
+    left: 30px; /* fallback for browsers not supporting calc */
+    left: calc(50% - #{$rheader-logo-offset});
+    width: $rheader-logo-width;
   }
 
   .rheader-logo-nef {
@@ -575,7 +622,7 @@ $rheader-height-large:  80px;
       content: "";
       display: block;
       height: 100%;
-      left: 68px;
+      left: $rheader-nef-border-offset;
       position: absolute;
       width: 6px;
     }
@@ -583,12 +630,13 @@ $rheader-height-large:  80px;
 
   .rheader-logo-paris {
     background-position: 50% 54%;
-    width: 180px;
+    width: $rheader-logo-paris-width;
   }
 
   .rheader-locales {
-    left: 134px;
-    width: 180px;
+    left: 134px; /* fallback for browsers not supporting calc */
+    left: calc(50% - #{$rheader-locales-offset});
+    width: $rheader-logo-paris-width;
   }
 
   .rheader-locales {
@@ -608,13 +656,12 @@ $rheader-height-large:  80px;
 
 // Spacing for elements below the rheader
 
-.rheader + .layout-content .document-heading,
-.rheader + .layout-content .hub-heading,
-.rheader + .layout-content .jumbotron/*,
-.rheader + .layout-content .quick-access*/ {margin-top: $rheader-height-small;}
+.rheader.fixed + .layout-content {
+  padding-top: $rheader-height-small;
+}
 @media (min-width: $rheader-medium-min) {
-  .rheader + .layout-content .document-heading,
-  .rheader + .layout-content .hub-heading,
-  .rheader + .layout-content .jumbotron/*,
-  .rheader + .layout-content .quick-access*/ { margin-top: $rheader-height-medium; }
+  .rheader.fixed + .layout-content {
+    background-color: $color-primary; // to prevent a white area below header (edge case)
+    padding-top: $rheader-height-medium;
+  }
 }

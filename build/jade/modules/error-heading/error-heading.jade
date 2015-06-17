@@ -10,5 +10,7 @@ mixin error-heading(data)
         if data.title
           h1!= data.title
         if data.button
-          +button(data.button)
-
+          - button = JSON.parse(JSON.stringify(data.button || [])) // clone the data object
+          - button.modifiers = button.modifiers || []
+          - button.modifiers.push("white")
+          +button(button)

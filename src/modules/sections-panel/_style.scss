@@ -135,7 +135,7 @@ $sections-panel-subnav-offset: 200px;
   }
 }
 
-.sections-panel-subnav-items {
+.sections-panel-intro + .sections-panel-subnav-items {
   @extend %sections-panel-separator;
 }
 

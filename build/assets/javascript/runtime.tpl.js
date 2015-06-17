@@ -617,16 +617,25 @@
     templatizer["video"]["video"] = function tmpl_video_video(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push('<div class="component component-video"><div class="video-wrapper">');
-        if (data.placeholder) {
-            buf.push('<div class="video-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+        if (data.cookie === false) {
+            if (block) {
+                buf.push(null == (jade_interp = block) ? "" : jade_interp);
+            } else if (data.block) {
+                buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+            }
+        } else {
+            if (data.placeholder) {
+                buf.push('<div class="video-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+            }
+            buf.push('<script type="text/html" class="video-embed">');
+            if (block) {
+                buf.push(null == (jade_interp = block) ? "" : jade_interp);
+            } else if (data.block) {
+                buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+            }
+            buf.push("</script>");
         }
-        buf.push('<script type="text/html" class="video-embed">');
-        if (block) {
-            buf.push(null == (jade_interp = block) ? "" : jade_interp);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-        }
-        buf.push("</script></div></div>");
+        buf.push("</div></div>");
         return buf.join("");
     };
 
@@ -1448,6 +1457,8 @@
         var buf = [];
         var jade_mixins = {};
         var jade_interp;
+        var locals_for_with = locals || {};
+        (function(JSON, modifiers) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
         return buf.join("");
     };
 
@@ -1505,14 +1516,18 @@
                 if ("number" == typeof $obj.length) {
                     for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                         var icon = $obj[$index];
-                        buf.push("<a" + jade.attr("href", icon.href, true, false) + jade.attr("title", icon.title, true, false) + jade.cls([ "icon", "icon-" + icon.name + "", icon.modifiers ], [ null, true, true ]) + "></a>");
+                        modifiers = JSON.parse(JSON.stringify(icon.modifiers || []));
+                        modifiers.push("icon-#{icon.name}");
+                        buf.push("<a" + jade.attr("href", icon.href, true, false) + jade.attr("title", icon.title, true, false) + jade.attr("target", icon.target, true, false) + jade.cls([ "icon", modifiers ], [ null, true ]) + "></a>");
                     }
                 } else {
                     var $l = 0;
                     for (var $index in $obj) {
                         $l++;
                         var icon = $obj[$index];
-                        buf.push("<a" + jade.attr("href", icon.href, true, false) + jade.attr("title", icon.title, true, false) + jade.cls([ "icon", "icon-" + icon.name + "", icon.modifiers ], [ null, true, true ]) + "></a>");
+                        modifiers = JSON.parse(JSON.stringify(icon.modifiers || []));
+                        modifiers.push("icon-#{icon.name}");
+                        buf.push("<a" + jade.attr("href", icon.href, true, false) + jade.attr("title", icon.title, true, false) + jade.attr("target", icon.target, true, false) + jade.cls([ "icon", modifiers ], [ null, true ]) + "></a>");
                     }
                 }
             }).call(this);
@@ -1531,7 +1546,7 @@
         var jade_mixins = {};
         var jade_interp;
         var locals_for_with = locals || {};
-        (function(modifiers) {}).call(this, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
+        (function(JSON, button, modifiers) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "button" in locals_for_with ? locals_for_with.button : typeof button !== "undefined" ? button : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
         return buf.join("");
     };
 
@@ -1577,7 +1592,10 @@
             buf.push("<h1>" + (null == (jade_interp = data.title) ? "" : jade_interp) + "</h1>");
         }
         if (data.button) {
-            buf.push(templatizer["error-heading"]["button"](data.button));
+            button = JSON.parse(JSON.stringify(data.button || []));
+            button.modifiers = button.modifiers || [];
+            button.modifiers.push("white");
+            buf.push(templatizer["error-heading"]["button"](button));
         }
         buf.push("</div></div></div>");
         return buf.join("");
@@ -2291,8 +2309,8 @@
     templatizer["links-group"]["links-group"] = function tmpl_links_group_links_group(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.cls([ "links-group", data.modifiers ], [ null, true ]) + ">");
-        if (data.background) {
-            buf.push("<a" + jade.attr("href", data.href, true, false) + jade.attr("style", "background-image: url(" + data.background + ");", true, false) + ' class="links-group-header"><div class="links-group-header-wrapper"><div class="links-group-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
+        if (data.title) {
+            buf.push("<a" + jade.attr("href", data.href, true, false) + jade.attr("style", data.background ? "background-image: url(" + data.background + ");" : null, true, false) + ' class="links-group-header"><div class="links-group-header-wrapper"><div class="links-group-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
             if (data.subtitle) {
                 buf.push('<div class="links-group-subtitle">' + jade.escape(null == (jade_interp = data.subtitle) ? "" : jade_interp) + "</div>");
             }
@@ -3451,7 +3469,9 @@
         var jade_interp;
         var locals_for_with = locals || {};
         (function(data, modifiers, undefined) {
-            buf.push('<div class="sections-panel-intro">' + jade.escape(null == (jade_interp = data.intro) ? "" : jade_interp) + "</div>");
+            if (data.intro) {
+                buf.push('<div class="sections-panel-intro">' + jade.escape(null == (jade_interp = data.intro) ? "" : jade_interp) + "</div>");
+            }
             if (data.items && data.items.length !== 0) {
                 buf.push('<ul class="sections-panel-content-items">');
                 (function() {
@@ -3937,7 +3957,9 @@
         }
         buf.push('<div id="sections-panel-content" class="sections-panel-content"><a' + jade.attr("href", current_item ? current_item.href : "", true, false) + ' class="sections-panel-back sections-panel-content-back"></a><div class="sections-panel-content-wrapper">');
         if (has_content) {
-            buf.push('<div class="sections-panel-intro">' + jade.escape(null == (jade_interp = data.content.intro) ? "" : jade_interp) + "</div>");
+            if (data.content.intro) {
+                buf.push('<div class="sections-panel-intro">' + jade.escape(null == (jade_interp = data.content.intro) ? "" : jade_interp) + "</div>");
+            }
             if (data.content.items.length !== 0) {
                 buf.push('<ul class="sections-panel-content-items">');
                 (function() {
@@ -3958,8 +3980,12 @@
                 }).call(this);
                 buf.push("</ul>");
             }
-            buf.push(templatizer["sections-panel"]["buttons"](data.content.buttons));
-            buf.push(templatizer["sections-panel"]["links"](data.content.more_links));
+            if (data.content.buttons) {
+                buf.push(templatizer["sections-panel"]["buttons"](data.content.buttons));
+            }
+            if (data.content.more_links) {
+                buf.push(templatizer["sections-panel"]["links"](data.content.more_links));
+            }
         }
         buf.push("</div></div></div>");
         return buf.join("");
@@ -4163,15 +4189,23 @@
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.attr("style", data.background && "background-image: url(" + data.background + ")", true, false) + jade.cls([ "video-cover", block || data.block ? "with-block" : "" ], [ null, true ]) + ">");
         if (block) {
-            if (data.placeholder) {
-                buf.push('<div class="video-cover-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+            if (data.cookie === false) {
+                buf.push(null == (jade_interp = block) ? "" : jade_interp);
+            } else {
+                if (data.placeholder) {
+                    buf.push('<div class="video-cover-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+                }
+                buf.push('<script type="text/html" class="video-cover-embed">' + (null == (jade_interp = block) ? "" : jade_interp) + "</script>");
             }
-            buf.push('<script type="text/html" class="video-cover-embed">' + (null == (jade_interp = block) ? "" : jade_interp) + "</script>");
         } else if (data.block) {
-            if (data.placeholder) {
-                buf.push('<div class="video-cover-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+            if (data.cookie === false) {
+                buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+            } else {
+                if (data.placeholder) {
+                    buf.push('<div class="video-cover-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+                }
+                buf.push('<script type="text/html" class="video-cover-embed">' + (null == (jade_interp = data.block) ? "" : jade_interp) + "</script>");
             }
-            buf.push('<script type="text/html" class="video-cover-embed">' + (null == (jade_interp = data.block) ? "" : jade_interp) + "</script>");
         } else {
             if (data.button) {
                 button = JSON.parse(JSON.stringify(data.button));

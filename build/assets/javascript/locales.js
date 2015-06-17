@@ -6,7 +6,7 @@ Paris.i18n.locales = {
     share: {
       facebook: 'Partager sur Facebook',
       twitter: 'Partager sur Twitter',
-      email: 'Partager par email'
+      mail: 'Partager par email'
     },
     search_results: {
       title: {
@@ -33,7 +33,7 @@ Paris.i18n.locales = {
     share: {
       facebook: 'Share on Facebook',
       twitter: 'Share on Twitter',
-      email: 'Share by email'
+      mail: 'Share by email'
     },
     search_results: {
       title: {

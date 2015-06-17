@@ -39,7 +39,8 @@ require('../templates/search/script');
 
 // additional scripts
 require('./lib/cnil');
+require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "0.12.6";
+Paris.version = "0.13.0";
 Paris.templates = {};
