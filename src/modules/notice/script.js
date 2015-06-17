@@ -69,8 +69,9 @@ Paris.notice = (function(){
     // The API for external interaction
 
     api.close = function(){
+      $el.css('min-height', 'auto');
       $el.velocity({
-        scaleY: [0, 1],
+        height: 0,
         opacity: [0, 1]
       }, {
         duration: 350,
@@ -85,7 +86,7 @@ Paris.notice = (function(){
       });
     };
 
-    api.open = function(data){
+    api.open = function(){
       $el.velocity({
         opacity: [1, 0]
       }, {

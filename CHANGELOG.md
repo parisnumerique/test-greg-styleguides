@@ -9,6 +9,7 @@
 * module `hub-heading`:
   * added default background-color
   * changed transparent black layer from 40% to 10%
+* module `notice`: improved closing animation
 * layout `left-col`: now uses flexbox when available, fixed scroll bug
 
 ## 0.13.0 (2015-06-17)
