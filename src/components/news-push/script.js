@@ -6,7 +6,7 @@ var Paris = window.Paris || {};
 
 Paris.newsPush = (function(){
 
-  function header(selector){
+  function newsPush(selector){
     var $el = $(selector);
 
     function init(){
@@ -38,7 +38,7 @@ Paris.newsPush = (function(){
 
   return function(selector){
     return $(selector).each(function(){
-      header(this);
+      newsPush(this);
     });
   };
 
