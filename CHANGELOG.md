@@ -10,6 +10,7 @@
   * added default background-color
   * changed transparent black layer from 40% to 10%
 * layout `left-col`: now uses flexbox when available, fixed scroll bug
+* template `hub`: display `news-list` only when it has content
 
 ## 0.13.0 (2015-06-17)
 
