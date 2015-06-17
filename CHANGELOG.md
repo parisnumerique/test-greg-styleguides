@@ -5,6 +5,7 @@
 * colors: simplified the number of variables, improved documentation
 * module `document-heading`: added default background-color
 * module `hub-heading`: added default background-color
+* layout `left-col`: now uses flexbox when available, fixed scroll bug
 
 ## 0.13.0 (2015-06-17)
 

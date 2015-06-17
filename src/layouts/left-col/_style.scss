@@ -27,19 +27,41 @@
   .layout-left-col {
     overflow: hidden;
 
-    > .layout-wrapper {
-      display: table;
-      height: 400px; // we are in display: table, so this is like a min-height
-      table-layout: fixed;
-      width: $large-grid-width;
+    // using flexbox
+    html.flexbox & {
+
+      > .layout-wrapper {
+        display: flex;
+        min-height: 400px;
+        width: $large-grid-width;
+      }
+
+      .layout-aside {
+        flex: none;
+      }
+
+    }
+
+    // without flexbox
+    html.no-flexbox & {
+      > .layout-wrapper {
+        display: table;
+        height: 400px; // we are in display: table, so this is like a min-height
+        table-layout: fixed;
+        width: $large-grid-width;
+      }
+
+      .layout-aside,
+      .layout-content {
+        display: table-cell;
+        vertical-align: top;
+      }
     }
 
     .layout-aside {
-      display: table-cell;
       padding: 0 20px 40px 0;
       position: relative;
       width: 280px;
-      vertical-align: top;
 
       .aside-wrapper {
         overflow-y: hidden;
@@ -68,7 +90,6 @@
         bottom: 0;
         content: "";
         display: block;
-        height: 99999px; // Fix for IE 10 and 11
         position: absolute;
         right: 100%;
         top: 0;
@@ -77,9 +98,7 @@
     }
 
     .layout-content {
-      display: table-cell;
       padding: 40px 0 40px 50px;
-      vertical-align: top;
     }
 
   }
@@ -88,8 +107,11 @@
 
 @include medium {
   .layout-left-col {
-    > .layout-wrapper{
-      width: 100%;
+    html.flexbox &,
+    html.no-flexbox & {
+      > .layout-wrapper{
+        width: 100%;
+      }
     }
 
     .layout-aside {
@@ -98,13 +120,20 @@
 
     .layout-content {
       padding-right: 50px;
-      width: auto;
     }
   }
 }
 
 @include large {
   .layout-left-col {
+
+    // using flexbox
+    html.flexbox & {
+      .layout-content {
+        flex: none;
+      }
+    }
+
     .layout-content {
       width: 820px;
 
