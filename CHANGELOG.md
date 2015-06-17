@@ -1,12 +1,13 @@
 # Changelog
 
-## Current
+## 0.13.1 (2015-06-17)
 
 * colors: simplified the number of variables, improved documentation
 * module `anchors-list`: automatically scroll to anchor in URL on page load
 * module `document-heading`:
   * added default background-color
   * changed transparent black layer from 40% to 10%
+* module `header`: DEPRECATED in favor of `rheader`
 * module `hub-heading`:
   * added default background-color
   * changed transparent black layer from 40% to 10%
