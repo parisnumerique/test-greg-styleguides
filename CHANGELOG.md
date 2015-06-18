@@ -3,6 +3,7 @@
 ## Current
 
 * added `autoprefixer` to build process
+* added the meta `viewport` to wrapper_prod
 
 ## 0.13.1 (2015-06-17)
 
