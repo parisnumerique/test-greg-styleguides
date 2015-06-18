@@ -3,6 +3,8 @@
 ## Current
 
 * module `document-heading`: fixed broken icons
+* module `table-of-contents`: optional parts
+* template `error`: optional parts
 * added `autoprefixer` to build process
 * added the meta `viewport` to wrapper_prod
 
