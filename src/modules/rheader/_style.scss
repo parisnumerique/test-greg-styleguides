@@ -261,6 +261,10 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
   display: none;
 }
 
+.rheader.fixed + .layout-content {
+  padding-top: $rheader-height-small;
+}
+
 
 @media (max-width: $rheader-small-max) {
   .rheader {
@@ -407,6 +411,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
     }
   }
 }
+
 
 @media (min-width: $rheader-large-min) {
   .rheader {
@@ -604,6 +609,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
   }
 }
 
+
 @media (min-width: $rheader-large-max) {
 
   .rheader.extended {
@@ -668,8 +674,11 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
 
 // Spacing for elements below the rheader
 
-.rheader.fixed + .layout-content {
-  padding-top: $rheader-height-small;
+@media (max-width: $rheader-small-max) {
+  .rheader.fixed + .layout-content,
+  .rheader + .quick-access + .layout-content {
+    padding-top: $rheader-height-small;
+  }
 }
 
 @media (min-width: $rheader-large-min) {
@@ -690,5 +699,11 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
   }
   .rheader + .quick-access {
     margin-top: $rheader-height-medium;
+  }
+}
+
+@include small {
+  .rheader + .quick-access {
+    margin-top: 0;
   }
 }
