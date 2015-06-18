@@ -9,10 +9,10 @@ mixin table-of-contents(data)
               strong= abbr
               = item.text
     if data.sections
-      if data.sections.items && data.sections.items.length !== 0
+      if data.sections.list && data.sections.list.items && data.sections.list.items.length !== 0
         .table-of-contents-sections
           ul.table-of-contents-sections-items
-            each item in data.sections.items
+            each item in data.sections.list.items
               li.table-of-contents-sections-item
                 a(href=item.href)
                   = item.text

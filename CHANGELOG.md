@@ -6,8 +6,8 @@
 * module `header`: deleted
 * module `quick-access`: can now be used inside `rheader`
 * module `rheader`: integrated `quick-access`
-* module `table-of-contents`: optional parts
-* template `error`: optional parts
+* module `table-of-contents`: optional parts, wrapped `items` in `list`
+* template `error`: optional parts, updated `table-of-contents` data
 * template `home`:
   * set data `data.search.input.id` and  `data.results.button.href` (in `quick-access` block)
 * all templates except `home` and `search`: added `quick-search` to `rheader` data
