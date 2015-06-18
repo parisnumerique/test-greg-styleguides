@@ -72,14 +72,15 @@
     }
   }
 
-  .error-heading-logo {
-    left: -28px;
-    top: 40px;
-  }
-
   .error-heading-content {
     padding: 190px 0 0;
   }
 
 }
 
+@media (min-width: 1350px) {
+  .error-heading-logo {
+    left: -28px;
+    top: 40px;
+  }
+}

@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `error-heading`: fixed responsive for logo
 * template `home`: `data.news` instead of `data.list` for the `news-list`
 
 ## 0.13.2 (2015-06-18)
