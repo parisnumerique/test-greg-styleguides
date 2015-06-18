@@ -1,5 +1,9 @@
 # Changelog
 
+## Current
+
+* template `home`: `data.news` instead of `data.list` for the `news-list`
+
 ## 0.13.2 (2015-06-18)
 
 * module `button-top`: fixed bug on Chrome
