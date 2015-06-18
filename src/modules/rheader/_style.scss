@@ -485,7 +485,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
 
   .rheader-wrapper {
     > .rheader-button {
-      border-left: 1px solid $red2;
+      border-right: 1px solid $red2;
       display: inline-block;
       font-size: 26px;
       height: $rheader-height-large;
@@ -499,8 +499,8 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
     }
 
     > .rheader-button-menu {display: none;}
-    > .rheader-button-around {
-      border-right: 1px solid $red2;
+    > .rheader-button-search {
+      border-left: 1px solid $red2;
     }
   }
 
