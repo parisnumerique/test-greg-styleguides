@@ -1,3 +1,5 @@
+include ../quick-access/quick-access
+
 mixin rheader(data)
   header.rheader(class=data.modifiers)
     .rheader-wrapper
@@ -34,3 +36,6 @@ mixin rheader(data)
                 span.rheader-nav-item-back: span.rheader-nav-item-hover= item.hover
               else
                 span.rheader-nav-item-text= item.text
+  if data.quick_access
+    - quick_access = JSON.parse(JSON.stringify(data.quick_access)) // clone the data object
+    +quick-access(quick_access)
