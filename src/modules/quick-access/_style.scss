@@ -67,7 +67,7 @@
     overflow: hidden;
     height: 520px;
     position: relative;
-    transition: .4s ease transform, .4s ease min-height;
+    transition: .4s ease transform, .4s ease height;
 
     .rheader + & {
       border-bottom: 3px solid transparentize($gray1A, 0.8);
