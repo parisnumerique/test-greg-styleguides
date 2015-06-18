@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `document-heading`: fixed broken icons
 * added `autoprefixer` to build process
 * added the meta `viewport` to wrapper_prod
 
