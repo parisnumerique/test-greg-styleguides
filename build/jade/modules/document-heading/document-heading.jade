@@ -11,7 +11,7 @@ mixin document-heading(data)
             .document-heading-icons
               each icon in data.icons
                 - modifiers = JSON.parse(JSON.stringify(icon.modifiers || [])) // clone the data object
-                - modifiers.push("icon-#{icon.name}")
+                - modifiers.push("icon-" + icon.name)
                 a.icon(href=icon.href title=icon.title target=icon.target class=modifiers)
           if data.tags
             +tags(data.tags)

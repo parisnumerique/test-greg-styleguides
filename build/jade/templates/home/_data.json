@@ -84,7 +84,8 @@
             },
             "search": {
               "input": {
-                "placeholder": "Rechercher un service, une information..."
+                "placeholder": "Rechercher un service, une information...",
+                "id": "main-search"
               },
               "submit": {
                 "text": "Rechercher",
@@ -136,7 +137,7 @@
             ],
             "results": {
               "button": {
-                "href": "#",
+                "href": "../search",
                 "text": "Voir tous les résultats"
               }
             }
