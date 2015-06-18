@@ -28,8 +28,6 @@ Paris.rheader = (function(){
     function init(){
       initOptions();
 
-      var documentScrollTop = $(document).scrollTop();
-
       $buttonMenu = $el.find('.rheader-button-menu');
       $buttonSearch = $el.find('.rheader-button-search');
       $mainSearch = $('#main-search');
@@ -46,7 +44,7 @@ Paris.rheader = (function(){
           fix();
         }
       });
-      if(!$('.notice.top').length || documentScrollTop >= $('.notice.top').height() ) {
+      if(!$('.notice.top').length || $(window).scrollTop() >= $('.notice.top').height() ) {
         fix();
       }
 
@@ -79,22 +77,22 @@ Paris.rheader = (function(){
     }
 
     function isAboveMainSearch(){
-      return $(document).scrollTop() < $mainSearch.offset().top;
+      return $(window).scrollTop() < $mainSearch.offset().top;
     }
 
     function onScroll(e, data) {
       if (lastScrollY !== 0) {
-        if (data.originalEvent.pageY < 200) {
+        if (data.scrollTop < 200) {
           unfold();
           return;
         }
-        var down = (lastScrollY < data.originalEvent.pageY);
-        if (down && Math.abs(lastScrollY - data.originalEvent.pageY) < options.scrollMinDelta) {
+        var down = (lastScrollY < data.scrollTop);
+        if (down && Math.abs(lastScrollY - data.scrollTop) < options.scrollMinDelta) {
           return;
         }
         $el.toggleClass('folded', down);
       }
-      lastScrollY = data.originalEvent.pageY;
+      lastScrollY = data.scrollTop;
     }
 
     function unfold(){$el.removeClass('folded');}

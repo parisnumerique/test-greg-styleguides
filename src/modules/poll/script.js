@@ -211,16 +211,15 @@ Paris.poll = (function(){
       }
     }
 
-    function onScroll(){
+    function onScroll(e, data){
       var $window = $(window);
 
-      var docViewTop = $window.scrollTop();
-      var docViewBottom = docViewTop + $window.height();
+      var docViewBottom = data.scrollTop + $window.height();
 
       var elTop = $el.offset().top;
       var elBottom = elTop + $el.height();
 
-      isInViewport = ((elBottom <= docViewBottom) || (elTop >= docViewTop));
+      isInViewport = ((elBottom <= docViewBottom) || (elTop >= data.scrollTop));
     }
 
     init();

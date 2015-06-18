@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `button-top`: fixed bug on Chrome
 * module `document-heading`: fixed broken icons
 * module `header`: deleted
 * module `quick-access`: can now be used inside `rheader`
@@ -13,7 +14,7 @@
 * all templates except `home` and `search`: added `quick-search` to `rheader` data
 * added `autoprefixer` to build process
 * added the meta `viewport` to wrapper_prod
-* fixed bug in `scroll.js`
+* fixed bug and optimized `scroll.js`
 
 ## 0.13.1 (2015-06-17)
 

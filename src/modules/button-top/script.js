@@ -32,9 +32,7 @@ Paris.buttonTop = (function(){
     }
 
     function onScroll(e, data) {
-      if (data.originalEvent.pageY) {
-        $el.toggle(data.originalEvent.pageY > 300);
-      }
+      $el.toggle(data.scrollTop > 300);
     }
 
     function setAffix() {

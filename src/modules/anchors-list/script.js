@@ -66,12 +66,12 @@ Paris.anchors = (function(){
 
     function enableAnchors(){
       renderAnchors();
-      PubSub.subscribe('scroll.document', fillBars);
+      PubSub.subscribe('scroll.document', onScroll);
       PubSub.subscribe('accordion:change', throttle(onContentHeightChange, 500));
     }
 
     function disableAnchors(){
-      PubSub.unsubscribe(fillBars);
+      PubSub.unsubscribe(onScroll);
       PubSub.unsubscribe('accordion:change');
     }
 
@@ -180,18 +180,25 @@ Paris.anchors = (function(){
         });
     }
 
-    function fillBars(){
+    function onScroll(e, data){
+      fillBars(data.scrollTop);
+    }
+
+    function fillBars(scrollTop){
+      if (typeof scrollTop === 'undefined') {
+        var scrollTop = $(window).scrollTop();
+      }
       each(items, function(item) {
         var $progress = $el.find('[href="'+item.href+'"]' + ' + ' + options.anchorsProgressSelector);
 
-        if ($(document).scrollTop() < item.top - headerHeight) {
+        if (scrollTop < item.top - headerHeight) {
           var progress = 0;
         }
-        else if ($(document).scrollTop() > item.bottom - headerHeight) {
+        else if (scrollTop > item.bottom - headerHeight) {
           var progress = 100;
         }
         else {
-          var progress = ($(document).scrollTop() - item.top + headerHeight) / (item.bottom - item.top);
+          var progress = (scrollTop - item.top + headerHeight) / (item.bottom - item.top);
           progress = progress * 100;
           if (progress < 2)       {progress = 0;}
           else if (progress > 98) {progress = 100;}
