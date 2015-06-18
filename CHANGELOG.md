@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.13.2 (2015-06-18)
+
+* module `button-top`: fixed bug on Chrome
+* module `document-heading`: fixed broken icons
+* module `header`: deleted
+* module `quick-access`:
+  * can now be used inside `rheader`
+  * fixed display of section in results
+* module `rheader`:
+  * integrated `quick-access`
+  * fixed logo offset while extended on large screens
+* module `table-of-contents`: optional parts, wrapped `items` in `list`
+* template `error`:
+  * added `data.trace`
+  * optional parts
+  * updated `table-of-contents` data
+* template `home`:
+  * set data `data.search.input.id` and  `data.results.button.href` (in `quick-access` block)
+* all templates except `home` and `search`: added `quick-search` to `rheader` data
+* added `autoprefixer` to build process
+* added the meta `viewport` to wrapper_prod
+* fixed bug and optimized `scroll.js`
+
 ## 0.13.1 (2015-06-17)
 
 * colors: simplified the number of variables, improved documentation

@@ -1,20 +1,23 @@
 mixin table-of-contents(data)
   .table-of-contents
-    ul.table-of-contents-nav
-      each item in data.nav
-        li.table-of-contents-nav-item
-          a(href=item.href)
-            - abbr = item.text.slice(0, 3)
-            strong= abbr
-            = item.text
-    .table-of-contents-sections
-      ul.table-of-contents-sections-items
-        each item in data.sections.items
-          li.table-of-contents-sections-item
+    if data.nav && data.nav.length !== 0
+      ul.table-of-contents-nav
+        each item in data.nav
+          li.table-of-contents-nav-item
             a(href=item.href)
-              = item.text
               - abbr = item.text.slice(0, 3)
               strong= abbr
-      if data.sections.more
-        a.table-of-contents-sections-more(href=data.sections.more.href)
-          = data.sections.more.text
+              = item.text
+    if data.sections
+      if data.sections.list && data.sections.list.items && data.sections.list.items.length !== 0
+        .table-of-contents-sections
+          ul.table-of-contents-sections-items
+            each item in data.sections.list.items
+              li.table-of-contents-sections-item
+                a(href=item.href)
+                  = item.text
+                  - abbr = item.text.slice(0, 3)
+                  strong= abbr
+          if data.sections.more
+            a.table-of-contents-sections-more(href=data.sections.more.href)
+              = data.sections.more.text

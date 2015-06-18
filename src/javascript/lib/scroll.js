@@ -6,22 +6,23 @@ var throttle = require('lodash.throttle');
 var previousPosition = 0;
 
 function throttledUpdatePosition(e) {
-  PubSub.publish('scroll.document', e);
+  PubSub.publish('scroll.document', {
+    scrollTop: $(window).scrollTop()
+  });
 }
 
 function updatePosition(e) {
-  var $document = $document || $(document);
-  var documentScrollTop = $document.scrollTop();
+  var scrollTop = $(window).scrollTop();
 
   var $searchEl = $searchEl || $('.quick-access-search');
   if ($searchEl.length) {
     var searchElTop = $searchEl.offset().top;
 
-    if(documentScrollTop > searchElTop && previousPosition < searchElTop){
+    if(scrollTop >= searchElTop && previousPosition <= searchElTop){
       PubSub.publish('scroll.search.down');
     }
 
-    if(documentScrollTop < searchElTop && previousPosition > searchElTop){
+    if(scrollTop <= searchElTop && previousPosition >= searchElTop){
       PubSub.publish('scroll.search.up');
     }
   }
@@ -30,16 +31,16 @@ function updatePosition(e) {
   if ($topNotice.length) {
     var topNoticeHeight = $topNotice.height();
 
-    if(documentScrollTop > topNoticeHeight && previousPosition < topNoticeHeight) {
+    if(scrollTop >= topNoticeHeight && previousPosition <= topNoticeHeight) {
       PubSub.publish('scroll.notice.down');
     }
 
-    if(documentScrollTop < topNoticeHeight && previousPosition > topNoticeHeight) {
+    if(scrollTop <= topNoticeHeight && previousPosition >= topNoticeHeight) {
       PubSub.publish('scroll.notice.up');
     }
   }
 
-  previousPosition = documentScrollTop;
+  previousPosition = scrollTop;
 }
 
 $(function () {

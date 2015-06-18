@@ -1,6 +1,6 @@
 {
   "name": "paris-styleguide",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "description": "Paris.fr styleguide",
   "main": "index.js",
   "dependencies": {
@@ -13,6 +13,7 @@
     "fastclick": "~1.0.6",
     "globalize": "^1.0.0",
     "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.1",
     "gulp-clean": "^0.3.1",
     "gulp-filter": "^2.0.2",
     "gulp-imagemin": "^2.2.1",

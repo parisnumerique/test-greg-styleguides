@@ -19,21 +19,23 @@ append content
     +error-heading(data.heading)
 
 append content
-  .layout-content.layout-adjacent-before.black-background
-    .layout-wrapper
-      +table-of-contents(data.contents)
+  if data.contents
+    .layout-content.layout-adjacent-before.black-background
+      .layout-wrapper
+        +table-of-contents(data.contents)
 
 append content
-  .layout-content.color-secondary-background.layout-separate-after
-    .layout-three-col
-      .layout-wrapper
-        +heading(data.connected.heading)
-        .layout-content
-          +block-content-newsletter(data.connected.newsletter)
-        .layout-content
-          +block-content-jecoute(data.connected.jecoute)
-        .layout-content
-          +block-content-social(data.connected.social)
+  if data.connected
+    .layout-content.color-secondary-background.layout-separate-after
+      .layout-three-col
+        .layout-wrapper
+          +heading(data.connected.heading)
+          .layout-content
+            +block-content-newsletter(data.connected.newsletter)
+          .layout-content
+            +block-content-jecoute(data.connected.jecoute)
+          .layout-content
+            +block-content-social(data.connected.social)
 
 append content
   .layout-content.layout-adjacent-before

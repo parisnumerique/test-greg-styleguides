@@ -17,15 +17,6 @@
   }
 }
 
-// Keep space for the header, when the jumbotron is the first element after it
-.header-wrapper + .layout-content .jumbotron {
-  margin-top: 0px;
-}
-
-.header-wrapper.fixed + .layout-content .jumbotron {
-  margin-top: 80px;
-}
-
 .jumbotron-wrapper {
   display: table-cell;
   overflow: hidden;
