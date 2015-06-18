@@ -8,7 +8,9 @@
 * module `quick-access`:
   * can now be used inside `rheader`
   * fixed display of section in results
-* module `rheader`: integrated `quick-access`
+* module `rheader`:
+  * integrated `quick-access`
+  * fixed logo offset while extended on large screens
 * module `table-of-contents`: optional parts, wrapped `items` in `list`
 * template `error`: optional parts, updated `table-of-contents` data
 * template `home`:

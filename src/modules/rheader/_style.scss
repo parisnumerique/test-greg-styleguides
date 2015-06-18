@@ -419,6 +419,10 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
         height: $rheader-height-large-extended;
       }
 
+      .rheader-logo {
+        height: $rheader-height-large + 9px;
+      }
+
       .rheader-logo,
       .rheader-locales {
         transform: translateY(10px);
@@ -600,6 +604,12 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
 
 @media (min-width: $rheader-large-max) {
 
+  .rheader.extended {
+    .rheader-logo {
+      height: $rheader-height-large;
+    }
+  }
+
   $rheader-nef-border-offset: 68px;
   $rheader-logo-width: 285px;
   $rheader-logo-paris-width: 180px;
@@ -660,6 +670,16 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
   padding-top: $rheader-height-small;
 }
 
+@media (min-width: $rheader-large-min) {
+  .rheader.fixed.extended + .layout-content,
+  .rheader.extended + .quick-access + .layout-content {
+    padding-top: $rheader-height-medium + 20px;
+  }
+  .rheader.extended + .quick-access {
+    margin-top: $rheader-height-medium + 20px;
+  }
+}
+
 @media (min-width: $rheader-medium-min) {
   .rheader.fixed + .layout-content,
   .rheader + .quick-access + .layout-content {
@@ -668,13 +688,5 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
   }
   .rheader + .quick-access {
     margin-top: $rheader-height-medium;
-  }
-
-  .rheader.fixed.extended + .layout-content,
-  .rheader.extended + .quick-access + .layout-content {
-    padding-top: $rheader-height-medium + 20px;
-  }
-  .rheader.extended + .quick-access {
-    margin-top: $rheader-height-medium + 20px;
   }
 }
