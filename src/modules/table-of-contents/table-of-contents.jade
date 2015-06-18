@@ -18,6 +18,6 @@ mixin table-of-contents(data)
                   = item.text
                   - abbr = item.text.slice(0, 3)
                   strong= abbr
-      if data.sections.more
-        a.table-of-contents-sections-more(href=data.sections.more.href)
-          = data.sections.more.text
+          if data.sections.more
+            a.table-of-contents-sections-more(href=data.sections.more.href)
+              = data.sections.more.text

@@ -12,7 +12,10 @@
   * integrated `quick-access`
   * fixed logo offset while extended on large screens
 * module `table-of-contents`: optional parts, wrapped `items` in `list`
-* template `error`: optional parts, updated `table-of-contents` data
+* template `error`:
+  * added `data.trace`
+  * optional parts
+  * updated `table-of-contents` data
 * template `home`:
   * set data `data.search.input.id` and  `data.results.button.href` (in `quick-access` block)
 * all templates except `home` and `search`: added `quick-search` to `rheader` data
