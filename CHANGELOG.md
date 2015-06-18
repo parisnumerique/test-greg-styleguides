@@ -5,7 +5,9 @@
 * module `button-top`: fixed bug on Chrome
 * module `document-heading`: fixed broken icons
 * module `header`: deleted
-* module `quick-access`: can now be used inside `rheader`
+* module `quick-access`:
+  * can now be used inside `rheader`
+  * fixed display of section in results
 * module `rheader`: integrated `quick-access`
 * module `table-of-contents`: optional parts, wrapped `items` in `list`
 * template `error`: optional parts, updated `table-of-contents` data

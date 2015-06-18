@@ -141,7 +141,7 @@ Paris.quickAccess = (function(){
         var result = '<li>' +
           '<a href="' + hit[options.link] + '">' +
             '<span class="title">' + hit._highlightResult[options.title].value + '</span>';
-        if (hit[options.algoliaSectionsField]) {
+        if (hit[options.sections]) {
           result += '<span class="section">' + hit[options.sections] + '</span>';
         }
         result += '</a></li>';
