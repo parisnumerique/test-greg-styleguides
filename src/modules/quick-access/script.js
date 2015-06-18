@@ -19,7 +19,6 @@ Paris.quickAccess = (function(){
   function quickAccess(selector, userOptions){
     var $el     = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
-      api = {},
       $parent,
       $searchField,
       $searchFieldInput,
@@ -47,39 +46,22 @@ Paris.quickAccess = (function(){
       $more = $el.find('.quick-access-results-more');
       $close = $el.find('.quick-access-close-search');
 
-      if (forceSearching()) {
-        $buttons.hide();
-      }
-
-      $searchFieldInput.on('input', onInput);
-      $searchFieldInput.on('focus', function(){
-        PubSub.publish('search:focus');
-        if ($searchFieldInput.val() !== '') {
-          onStartSearching();
-        }
-      });
-
-      $searchFieldInput.on('blur', function(){
-        PubSub.publish('search:blur');
-      });
+      $searchFieldInput
+        .on('input', onInput)
+        .on('focus', function(){
+          if ($searchFieldInput.val() !== '') {
+            startSearch();
+          }
+        });
 
       $more.on('click', onClickMore);
       $close.on('click', onClickClose);
-      PubSub.subscribe('header:search:click', onClickFromHeader);
 
       if ($el.hasClass('searching')) {
-        onStartSearching();
+        startSearch();
       }
 
-      $el.data('api', api);
-    }
-
-    function isSearching() {
-      return $el.hasClass('searching');
-    }
-
-    function forceSearching() {
-      return $el.hasClass('force-searching');
+      PubSub.subscribe('rheader.search.click', toggleSearch);
     }
 
     function initOptions() {
@@ -88,34 +70,16 @@ Paris.quickAccess = (function(){
       });
     }
 
-    function onClickFromHeader(){
-      var $quickAccess = $('.quick-access');
-      var $mainSearch = $('#main-search');
-      if ($mainSearch.length) {
-        $quickAccess.velocity("scroll",
-          {
-            duration: 1000,
-            easing: "ease-in-out",
-            complete: function(){
-              api.focusSearchField();
-              PubSub.publish('header:search:close');
-            }
-          }
-        );
-      } else {
-        if(isSearching()){
-          onStopSearching();
-        }
-        else {
-          onStartSearching();
-          api.focusSearchField();
-        }
-      }
+    function toggleSearch(){
+      isSearching() ? stopSearch() : startSearch();
     }
 
-    function onStartSearching(){
+    function isSearching() {
+      return $el.hasClass('searching');
+    }
+
+    function startSearch(){
       if (isSearching()) {return false;}
-      if (forceSearching()) {return false;}
       $el.addClass('searching');
       $buttons.add($around).velocity({
         opacity: 0
@@ -125,14 +89,14 @@ Paris.quickAccess = (function(){
         ease: "ease",
         complete: onInput
       });
+      $searchFieldInput.trigger('focus');
 
       // Close on Esc
       $(document).keyup(onKeyUp);
     }
 
-    function onStopSearching(){
+    function stopSearch(){
       if (!isSearching()) {return false;}
-      if (forceSearching()) {return false;}
       $el.removeClass('searching');
       $buttons.velocity({
         opacity: 1
@@ -149,7 +113,7 @@ Paris.quickAccess = (function(){
         ease: "ease"
       });
       $results.empty();
-      PubSub.publish('header:search:close');
+      PubSub.publish('rheader.search.close');
       $more.hide();
       $searchFieldInput.trigger('blur');
       $(document).unbind("keyup", onKeyUp);
@@ -157,7 +121,7 @@ Paris.quickAccess = (function(){
 
     function onInput() {
       if (!isSearching()) {
-        onStartSearching();
+        startSearch();
       }
       var val = $searchFieldInput.val();
       if (val !== "") {
@@ -187,7 +151,7 @@ Paris.quickAccess = (function(){
     }
 
     function onKeyUp(e){
-      if (e.keyCode == 27) {
+      if (e.keyCode == 27) { // Esc
         onClickClose(e);
       }
     }
@@ -199,15 +163,9 @@ Paris.quickAccess = (function(){
 
     function onClickClose(e){
       e.preventDefault();
-      onStopSearching();
+      stopSearch();
     }
 
-
-    // The API for external interaction
-
-    api.focusSearchField = function(){
-      $searchFieldInput.trigger('focus');
-    };
 
     init();
 
@@ -223,29 +181,5 @@ Paris.quickAccess = (function(){
 })();
 
 $(document).ready(function(){
-  if($('.quick-access').length) {
-    Paris.quickAccess('.quick-access');
-  }
-  else {
-    var $buttonSearch = $('.header-wrapper .icon-search');
-
-    $('#main-search').focus(function () {
-      $buttonSearch.addClass('active');
-      $(this).velocity({
-          backgroundColor: "#FCF2A6"
-      }).velocity({
-          backgroundColor: "#ffffff"
-      });
-
-    });
-
-    $('#main-search').blur(function () {
-      $buttonSearch.removeClass('active');
-    });
-
-    PubSub.subscribe('header:search:click', function () {
-      $('#main-search').focus();
-
-    });
-  }
+  Paris.quickAccess('.quick-access');
 });

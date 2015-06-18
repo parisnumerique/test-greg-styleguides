@@ -3,10 +3,17 @@
 ## Current
 
 * module `document-heading`: fixed broken icons
+* module `header`: deleted
+* module `quick-access`: can now be used inside `rheader`
+* module `rheader`: integrated `quick-access`
 * module `table-of-contents`: optional parts
 * template `error`: optional parts
+* template `home`:
+  * set data `data.search.input.id` and  `data.results.button.href` (in `quick-access` block)
+* all templates except `home` and `search`: added `quick-search` to `rheader` data
 * added `autoprefixer` to build process
 * added the meta `viewport` to wrapper_prod
+* fixed bug in `scroll.js`
 
 ## 0.13.1 (2015-06-17)
 

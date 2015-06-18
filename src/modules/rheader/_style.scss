@@ -659,9 +659,22 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
 .rheader.fixed + .layout-content {
   padding-top: $rheader-height-small;
 }
+
 @media (min-width: $rheader-medium-min) {
-  .rheader.fixed + .layout-content {
+  .rheader.fixed + .layout-content,
+  .rheader + .quick-access + .layout-content {
     background-color: $color-primary; // to prevent a white area below header (edge case)
     padding-top: $rheader-height-medium;
+  }
+  .rheader + .quick-access {
+    margin-top: $rheader-height-medium;
+  }
+
+  .rheader.fixed.extended + .layout-content,
+  .rheader.extended + .quick-access + .layout-content {
+    padding-top: $rheader-height-medium + 20px;
+  }
+  .rheader.extended + .quick-access {
+    margin-top: $rheader-height-medium + 20px;
   }
 }

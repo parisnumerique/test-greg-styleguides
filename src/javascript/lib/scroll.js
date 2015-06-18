@@ -17,11 +17,11 @@ function updatePosition(e) {
   if ($searchEl.length) {
     var searchElTop = $searchEl.offset().top;
 
-    if(documentScrollTop > searchElTop && previousPosition < searchElTop){
+    if(documentScrollTop >= searchElTop && previousPosition <= searchElTop){
       PubSub.publish('scroll.search.down');
     }
 
-    if(documentScrollTop < searchElTop && previousPosition > searchElTop){
+    if(documentScrollTop <= searchElTop && previousPosition >= searchElTop){
       PubSub.publish('scroll.search.up');
     }
   }
@@ -30,11 +30,11 @@ function updatePosition(e) {
   if ($topNotice.length) {
     var topNoticeHeight = $topNotice.height();
 
-    if(documentScrollTop > topNoticeHeight && previousPosition < topNoticeHeight) {
+    if(documentScrollTop >= topNoticeHeight && previousPosition <= topNoticeHeight) {
       PubSub.publish('scroll.notice.down');
     }
 
-    if(documentScrollTop < topNoticeHeight && previousPosition > topNoticeHeight) {
+    if(documentScrollTop <= topNoticeHeight && previousPosition >= topNoticeHeight) {
       PubSub.publish('scroll.notice.up');
     }
   }

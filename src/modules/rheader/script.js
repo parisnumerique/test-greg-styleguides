@@ -10,14 +10,17 @@ Paris.rheader = (function(){
   var defaultOptions = {
     breakpoint: "rheader-medium",
     mobileNavId: "rheader-mobile-nav",
-    scrollMinDelta: 50
+    scrollMinDelta: 50,
+    extendOnTemplate: 'home'
   };
 
   function rheader(selector, userOptions){
     var $el     = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
         $buttonMenu,
+        $buttonSearch,
         $overlay,
+        $mainSearch,
         scrollMonitor,
         lastScrollY = 0
       ;
@@ -28,6 +31,8 @@ Paris.rheader = (function(){
       var documentScrollTop = $(document).scrollTop();
 
       $buttonMenu = $el.find('.rheader-button-menu');
+      $buttonSearch = $el.find('.rheader-button-search');
+      $mainSearch = $('#main-search');
 
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobileNav);
       PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobileNav);
@@ -35,7 +40,7 @@ Paris.rheader = (function(){
       // fix or unfix
       PubSub.subscribe('scroll.notice.down', fix);
       PubSub.subscribe('scroll.notice.up', unfix);
-      PubSub.subscribe('header:search:close', fix);
+      PubSub.subscribe('header.search.close', fix);
       PubSub.subscribe('notice.closed', function(e, data){
         if (data && data.id === "notice_home_top") {
           fix();
@@ -48,22 +53,33 @@ Paris.rheader = (function(){
       // extend or unextend
       PubSub.subscribe('scroll.search.down', unextend);
       PubSub.subscribe('scroll.search.up', extend);
-      var $searchEl = $('.quick-access-search');
-      if ($searchEl.length && documentScrollTop < $searchEl.offset().top) {
+      if ($mainSearch.length !== 0 && isAboveMainSearch()) {
+        // extend initially if we are above the main search field
         extend();
       }
 
+      // standalone mode
       if (!$el.hasClass('standalone')) {
-        // in standalone mode, we follow the links
+        // follow the links
         $buttonMenu.on('click', onClickButtonMenu);
         $('body').on('click', '#'+options.mobileNavId+'-overlay', closeMenu);
       }
+
+      // search
+      $buttonSearch.on('click', onClickButtonSearch);
+      $mainSearch.on('focus', function(){activeSearchButton(true);})
+        .on('blur', function(){activeSearchButton(false);});
+      PubSub.subscribe('rheader.search.close', function(){activeSearchButton(false);});
     }
 
     function initOptions() {
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
+    }
+
+    function isAboveMainSearch(){
+      return $(document).scrollTop() < $mainSearch.offset().top;
     }
 
     function onScroll(e, data) {
@@ -82,14 +98,59 @@ Paris.rheader = (function(){
     }
 
     function unfold(){$el.removeClass('folded');}
+
+    // fix or unfix
     function fix() {$el.addClass('fixed');}
     function unfix() {$el.removeClass('fixed');}
-    function extend() {console.log('extend'); $el.addClass('extended');}
-    function unextend() {console.log('unextend'); $el.removeClass('extended');}
+
+    // extend or unextend
+    function extend() {
+      if ($mainSearch.length === 0 || !$('body').hasClass(options.extendOnTemplate)) {return;}
+      $el.addClass('extended');
+    }
+    function unextend() {
+      $el.removeClass('extended');
+    }
+
 
     function onClickButtonMenu(e) {
       e.preventDefault();
       toggleMenu();
+    }
+
+    function onClickButtonSearch(e) {
+      e.preventDefault();
+      activeSearchButton(true);
+      PubSub.publish('rheader.search.click');
+
+      if ($mainSearch.length === 1) {
+        // scroll to main search field and give it focus
+        if (isAboveMainSearch()) {
+          focusMainSearch();
+          return;
+        }
+        var $parent = $mainSearch.closest('.layout-content');
+        if ($mainSearch.length) {
+          $parent.velocity("scroll",
+            {
+              duration: 1000,
+              complete: focusMainSearch
+            }
+          );
+        }
+      } else {
+        //$quickAccess
+      }
+    }
+
+    function focusMainSearch(){
+      $mainSearch.trigger('focus').velocity({
+        backgroundColor: ["#ffffff", "#F8E273"]
+      });
+    }
+
+    function activeSearchButton(toggle){
+      $buttonSearch.toggleClass('active', toggle);
     }
 
     function toggleMenu() {

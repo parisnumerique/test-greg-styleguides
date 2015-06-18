@@ -64,26 +64,22 @@
 @include large-and-medium {
   .quick-access {
     overflow: hidden;
-    min-height: 600px;
+    height: 520px;
     position: relative;
     transition: .4s ease transform, .4s ease min-height;
 
-    .header-wrapper & {
+    .rheader + & {
       border-bottom: 3px solid transparentize($gray1A, 0.8);
-      transform: translateY(-1000px);
+      transform: translateY(-600px);
       height: 0;
-      min-height: 0;
+      position: fixed;
+      z-index: 200;
 
       &.searching {
         &:after {
-          background-color: rgba(226, 233, 237, 1);
+          background-color: rgba($light-blue, 1);
         }
       }
-    }
-
-
-    .header-wrapper &.visible {
-      transform: translateY(0);
     }
 
     &:after {
@@ -100,20 +96,16 @@
     // states
     &.searching {
       transform: translate(0);
-      min-height: 600px;
+      height: 520px;
       &:after {
         background-color: rgba(226, 233, 237, 0.9);
       }
 
-      .quick-access-wrapper {transform: translateY(-100px);}
+      .quick-access-wrapper {transform: translateY(-115px);}
       .quick-access-close-search {
         opacity: 1;
         transform: translateY(0);
       }
-    }
-
-    .header-quick-access &:after {
-      background-color: rgb(226, 233, 237);
     }
 
     .notice {
@@ -218,16 +210,16 @@
     border-radius: 50%;
     color: $gray66;
     cursor: pointer;
-    font-size: 70px;
-    height: 70px;
+    font-size: 49px;
+    height: 50px;
     opacity: 0;
     position: absolute;
     right: 50px;
     text-align: center;
-    top: 50px;
+    top: 35px;
     transform: translateY(-150px);
     transition: transform 0.3s ease 0.2s, opacity 0.3s ease 0.2s, background-color 0.3s ease, border-color 0.3s ease;
-    width: 70px;
+    width: 50px;
     z-index: 2;
 
     &:hover {
@@ -237,7 +229,7 @@
 
     .icon-close {
       display: block;
-      line-height: 65px;
+      line-height: 45px;
     }
   }
 }
