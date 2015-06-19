@@ -2,6 +2,7 @@
 
 ## Current
 
+* component `jecoute`: fixed input placeholder
 * module `news-card`: fixed display without image
 
 ## 0.13.3 (2015-06-19)
