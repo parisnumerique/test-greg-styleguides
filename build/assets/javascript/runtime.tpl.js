@@ -1592,7 +1592,7 @@
             buf.push("<h1>" + (null == (jade_interp = data.title) ? "" : jade_interp) + "</h1>");
         }
         if (data.trace) {
-            buf.push('<p class="error-heading-trace">' + jade.escape(null == (jade_interp = data.trace) ? "" : jade_interp) + "</p>");
+            buf.push('<p class="error-heading-trace">' + (null == (jade_interp = data.trace) ? "" : jade_interp) + "</p>");
         }
         if (data.button) {
             button = JSON.parse(JSON.stringify(data.button || []));
@@ -3893,7 +3893,7 @@
             if (data.content.intro) {
                 buf.push('<div class="sections-panel-intro">' + jade.escape(null == (jade_interp = data.content.intro) ? "" : jade_interp) + "</div>");
             }
-            if (data.content.items.length !== 0) {
+            if (data.content.items && data.content.items.length !== 0) {
                 buf.push('<ul class="sections-panel-content-items">');
                 (function() {
                     var $obj = data.content.items;
