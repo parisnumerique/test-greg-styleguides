@@ -2,7 +2,8 @@
 
 ## Current
 
-* module `error-heading`: fixed responsive for logo
+* module `error-heading`: fixed responsive for logo, allow HTML in `trace`
+* module `sections-panel`: fixed condition
 * template `home`: `data.news` instead of `data.list` for the `news-list`
 
 ## 0.13.2 (2015-06-18)
