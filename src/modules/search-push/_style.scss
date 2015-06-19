@@ -3,7 +3,9 @@
   background-position: 92% 100%;
   min-height: 160px;
   overflow: hidden;
+  padding: 40px;
   position: relative;
+  text-align: center;
   width: 100%;
 
   &:after {
@@ -21,13 +23,5 @@
   color: $gray33;
   font-size: 24px;
   font-weight: 700;
-  padding: 40px 30px 12px;
-  margin: 0;
-  text-align: center;
-}
-
-.search-push-wrapper-link{
-  margin: 0;
-  padding: 0 0 34px;
-  text-align: center;
+  margin-bottom: 12px;
 }
