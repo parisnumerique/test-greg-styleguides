@@ -8,8 +8,8 @@ mixin news-card(data)
         if data.counters
           .news-card-counters
             .news-card-counter.facebook-counter
-              span.icon.icon-facebook
+              i.icon.icon-facebook(aria-hidden="true")
               span.counter-value= data.counters.facebook
             .news-card-counter.twitter-counter
-              span.icon.icon-twitter
+              i.icon.icon-twitter(aria-hidden="true")
               span.counter-value= data.counters.twitter

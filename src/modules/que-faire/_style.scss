@@ -22,10 +22,19 @@
   > span {@include hidden-accessibly;}
 }
 
+.que-faire-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.que-faire-item {
+  display: inline-block;
+}
+
 .button-que-faire {
   background: url(../modules/que-faire/hachure.svg) $white repeat top left;
   border: none;
-  display: inline-block;
   height: 80px;
   overflow: hidden;
   padding: 0;
@@ -93,7 +102,7 @@
     width: 20%;
   }
 
-  .que-faire-content {
+  .que-faire-items {
     width: 78%;
   }
 
@@ -111,12 +120,12 @@
     float: left;
   }
 
-  .que-faire-content {
+  .que-faire-items {
     @include container;
     float: right;
   }
 
-  .button-que-faire {
+  .que-faire-item {
     @include span(4 of 12);
     &:last-child {@include last;}
   }
@@ -130,7 +139,7 @@
     min-height: 240px;
   }
 
-  .que-faire-content {
+  .que-faire-items {
     max-width: 820px;
   }
 

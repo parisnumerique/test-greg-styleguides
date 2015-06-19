@@ -15,7 +15,8 @@
 
   html.no-js &,
   html.no-touch & {
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-secondary;
       transition: none;
       &,

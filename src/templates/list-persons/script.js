@@ -190,8 +190,10 @@ Paris.listPersons = (function(){
       if ((data.nbPages > 1) || !isFiltered) {
         var pagination_data = {
           "text": {
+            "label": "Pagination des résultats",
             "prev": Paris.i18n.t("pagination/prev"),
-            "next": Paris.i18n.t("pagination/next")
+            "next": Paris.i18n.t("pagination/next"),
+            "link_title": "Aller à la page ${page}"
           },
           "base_url": window.location.pathname,
           "url": "?page=${page}",

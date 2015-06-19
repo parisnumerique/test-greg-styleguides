@@ -26,9 +26,9 @@ mixin news-list(data)
           if item.counters
             .social-counters
               .facebook-counter
-                span.icon.icon-facebook
+                i.icon.icon-facebook(aria-hidden="true")
                 span.counter-value= item.counters.facebook
               .twitter-counter
-                span.icon.icon-twitter
+                i.icon.icon-twitter(aria-hidden="true")
                 span.counter-value= item.counters.twitter
 

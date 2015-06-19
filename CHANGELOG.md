@@ -197,6 +197,14 @@ Let's take the `x.β.α` version number:
   * added `role`
   * added `lang` to items
   * changed `alt` to logo
+* module `get-involved`: use `ul` and `li`
+* module `news-card` & `news-list`:
+  * trigger hover on focus on buttons
+  * added `aria-hidden` to counters icons
+* module `pagination`:
+  * added strong in current item
+  * added `label` and `link_title` to data
+* module `que-faire`: use `ul` and `li`
 * module `quick-access`:
   * added `role` to search
 * module `rheader`:
@@ -215,6 +223,7 @@ Let's take the `x.β.α` version number:
   * added `lang` to "Visit Paris" in `footer`
   * changed `alt` of logo in `footer`
   * added `unit` in `connected.social.items`
+  * added `label` and `link_title` to `pagination` data
 
 * component `jecoute`: fixed input placeholder
 * module `news-card`: fixed display without image
