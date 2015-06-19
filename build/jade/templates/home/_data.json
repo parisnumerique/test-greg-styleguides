@@ -249,7 +249,7 @@
               "title": "En ce moment",
               "link": "Voir toutes les actualités"
             },
-            "list": {
+            "news": {
               "modifiers": ["news-cards"],
               "items": [
                 {
