@@ -47,7 +47,7 @@ mixin sections-panel(data)
         if has_content
           if data.content.intro
             .sections-panel-intro= data.content.intro
-          if data.content.items.length !== 0
+          if data.content.items && data.content.items.length !== 0
             ul.sections-panel-content-items
               each item in data.content.items
                 li.sections-panel-content-item
