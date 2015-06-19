@@ -2,6 +2,8 @@
 
 ## Current
 
+* module `news-card`: fixed display without image
+
 ## 0.13.3 (2015-06-19)
 
 * module `error-heading`: fixed responsive for logo, allow HTML in `trace`

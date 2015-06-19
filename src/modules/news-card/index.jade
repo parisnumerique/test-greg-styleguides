@@ -24,3 +24,11 @@ h2 Large
   include news-card
 
   +news-card(#{JSON.stringify(large, null, 2)})
+
+h2 Pas d'image
+.lsg-module(style="max-width: 350px")
+  +news-card(no_image)
++code({language: "jade"}).
+  include news-card
+
+  +news-card(#{JSON.stringify(no_image, null, 2)})
