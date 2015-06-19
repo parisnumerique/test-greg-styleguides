@@ -83,7 +83,8 @@
   a {
     color: transparentize($white, 0.4);
     &:hover,
-    &.current {color: $white;}
+    strong {color: $white;}
+    strong {font-weight: normal;}
     &.current {cursor: default; pointer-events: none;}
   }
 }
@@ -184,6 +185,8 @@ body.rheader-mobile-nav-open {
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
+
+    strong {font-weight: normal;}
   }
 
   // modifiers
@@ -221,10 +224,12 @@ body.rheader-mobile-nav-open {
     }
   }
 
-  &.account {
+  &.account a {
     background-color: $color-secondary;
+    transition: background-color 0.3s ease;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-secondary-variant;
     }
   }
@@ -251,7 +256,7 @@ body.rheader-mobile-nav-open {
   display: none;
 }
 
-.rheader.fixed + .layout-main .layout-content:first-child {
+.rheader.fixed + .layout-main > .layout-content:first-child {
   padding-top: $rheader-height-small;
 }
 
@@ -525,14 +530,16 @@ body.rheader-mobile-nav-open {
       margin-left: 22px;
       perspective: 1000px;
 
-      &:hover,
-      &.current {
+      &:hover a,
+      & a:focus,
+      &.current a {
         background-color: $color-tertiary;
       }
 
       a {
         padding: 0 20px;
         position: relative;
+        transition: background-color 0.3s ease;
         width: 140px;
       }
 
@@ -550,11 +557,13 @@ body.rheader-mobile-nav-open {
 
       .rheader-nav-item-front,
       &:hover .rheader-nav-item-back,
+      & a:focus .rheader-nav-item-back,
       &.current .rheader-nav-item-back {
         transform: rotateY(0deg);
       }
       .rheader-nav-item-back,
       &:hover .rheader-nav-item-front,
+      & a:focus .rheader-nav-item-front,
       &.current .rheader-nav-item-front {
         transform: rotateY(180deg);
       }
@@ -672,15 +681,15 @@ body.rheader-mobile-nav-open {
 // Spacing for elements below the rheader
 
 @media (max-width: $rheader-small-max) {
-  .rheader.fixed + .layout-main .layout-content:first-child,
-  .rheader + .quick-access + .layout-main .layout-content:first-child {
+  .rheader.fixed + .layout-main > .layout-content:first-child,
+  .rheader + .quick-access + .layout-main > .layout-content:first-child {
     padding-top: $rheader-height-small;
   }
 }
 
 @media (min-width: $rheader-large-min) {
-  .rheader.fixed.extended + .layout-main .layout-content:first-child,
-  .rheader.extended + .quick-access + .layout-main .layout-content:first-child {
+  .rheader.fixed.extended + .layout-main > .layout-content:first-child,
+  .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
     padding-top: $rheader-height-medium + 20px;
   }
   .rheader.extended + .quick-access {
@@ -689,8 +698,8 @@ body.rheader-mobile-nav-open {
 }
 
 @media (min-width: $rheader-medium-min) {
-  .rheader.fixed + .layout-main .layout-content:first-child,
-  .rheader + .quick-access + .layout-main .layout-content:first-child {
+  .rheader.fixed + .layout-main > .layout-content:first-child,
+  .rheader + .quick-access + .layout-main > .layout-content:first-child {
     background-color: $color-primary; // to prevent a white area below header (edge case)
     padding-top: $rheader-height-medium;
   }

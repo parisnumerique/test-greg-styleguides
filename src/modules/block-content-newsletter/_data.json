@@ -26,7 +26,8 @@
         "name": "email"
       },
       "submit": {
-        "text": "Valider"
+        "text": "Valider",
+        "title": "Valider votre inscription à la newsletter"
       },
       "link": {
         "href": "#",

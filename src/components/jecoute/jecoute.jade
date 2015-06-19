@@ -7,8 +7,8 @@ mixin jecoute(data)
       form.jecoute-form(method="post")&attributes(data.form)
         - var textarea = JSON.parse(JSON.stringify(data.textarea)) // clone the data object
         - delete textarea.value
-        textarea(name="message" required=true)&attributes(textarea)= data.textarea.value
-        input(type="email" name="email" required=true)&attributes(data.email)
+        textarea(name="message" required=true aria-required="true")&attributes(textarea)= data.textarea.value
+        input(type="email" name="email" required=true aria-required="true")&attributes(data.email)
         if data.upload
           - var upload = JSON.parse(JSON.stringify(data.upload))
           div.jecoute-upload

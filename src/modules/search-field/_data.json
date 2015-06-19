@@ -7,7 +7,7 @@
         "placeholder": "Rechercher un service, une information..."
       },
       "submit": {
-        "text": "Rechercher",
+        "text": "Valider la recherche sur le site",
         "icon": true
       },
       "around": {
@@ -22,7 +22,7 @@
         "placeholder": "Rechercher un service, une information..."
       },
       "submit": {
-        "text": "Rechercher",
+        "text": "Valider la recherche sur le site",
         "icon": true
       }
     },
