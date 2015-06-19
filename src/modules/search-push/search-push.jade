@@ -3,7 +3,6 @@ include ../button/button
 mixin search-push(data)
   .search-push
     .search-push-text= data.text
-    - console.log(data)
     - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
     - button.modifiers = ["action"] // overwrite the modifiers
     - button.attributes = {"data-action": "open-search"}
