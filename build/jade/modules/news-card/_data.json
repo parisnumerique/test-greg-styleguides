@@ -30,6 +30,16 @@
         "facebook": 5,
         "twitter": 12
       }
+    },
+    "no_image": {
+      "href": "#",
+      "image": "",
+      "category": "Catégorie",
+      "title": "Titre",
+      "counters": {
+        "facebook": 5,
+        "twitter": 12
+      }
     }
   }
 }

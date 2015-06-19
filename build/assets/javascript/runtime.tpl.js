@@ -2111,11 +2111,7 @@
     // news-card.jade:news-card compiled template
     templatizer["news-card"]["news-card"] = function tmpl_news_card_news_card(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<a" + jade.attr("href", data.href, true, false) + jade.cls([ "news-card", data.modifiers ], [ null, true ]) + '><div class="news-card-wrapper">');
-        if (data.image) {
-            buf.push("<div" + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + ' class="news-card-image"></div>');
-        }
-        buf.push('<div class="news-card-content"><div class="news-card-category"><span>' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</span></div><div class="news-card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
+        buf.push("<a" + jade.attr("href", data.href, true, false) + jade.cls([ "news-card", data.modifiers ], [ null, true ]) + '><div class="news-card-wrapper"><div' + jade.attr("style", data.image && "background-image: url(" + data.image + ");", true, false) + ' class="news-card-image"></div><div class="news-card-content"><div class="news-card-category"><span>' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</span></div><div class="news-card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
         if (data.counters) {
             buf.push('<div class="news-card-counters"><div class="news-card-counter facebook-counter"><span class="icon icon-facebook"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.facebook) ? "" : jade_interp) + '</span></div><div class="news-card-counter twitter-counter"><span class="icon icon-twitter"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.twitter) ? "" : jade_interp) + "</span></div></div>");
         }
@@ -2136,11 +2132,7 @@
     // news-list.jade:news-card compiled template
     templatizer["news-list"]["news-card"] = function tmpl_news_list_news_card(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<a" + jade.attr("href", data.href, true, false) + jade.cls([ "news-card", data.modifiers ], [ null, true ]) + '><div class="news-card-wrapper">');
-        if (data.image) {
-            buf.push("<div" + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + ' class="news-card-image"></div>');
-        }
-        buf.push('<div class="news-card-content"><div class="news-card-category"><span>' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</span></div><div class="news-card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
+        buf.push("<a" + jade.attr("href", data.href, true, false) + jade.cls([ "news-card", data.modifiers ], [ null, true ]) + '><div class="news-card-wrapper"><div' + jade.attr("style", data.image && "background-image: url(" + data.image + ");", true, false) + ' class="news-card-image"></div><div class="news-card-content"><div class="news-card-category"><span>' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</span></div><div class="news-card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
         if (data.counters) {
             buf.push('<div class="news-card-counters"><div class="news-card-counter facebook-counter"><span class="icon icon-facebook"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.facebook) ? "" : jade_interp) + '</span></div><div class="news-card-counter twitter-counter"><span class="icon icon-twitter"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.twitter) ? "" : jade_interp) + "</span></div></div>");
         }
@@ -3169,7 +3161,7 @@
         var jade_mixins = {};
         var jade_interp;
         var locals_for_with = locals || {};
-        (function(modifiers) {}).call(this, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
+        (function(JSON, button, modifiers) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "button" in locals_for_with ? locals_for_with.button : typeof button !== "undefined" ? button : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
         return buf.join("");
     };
 
@@ -3210,9 +3202,14 @@
     // search-push.jade:search-push compiled template
     templatizer["search-push"]["search-push"] = function tmpl_search_push_search_push(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push('<div class="search-push"><div class="search-push-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + '</div><div class="search-push-wrapper-link">');
-        buf.push(templatizer["search-push"]["button"](data.button));
-        buf.push("</div></div>");
+        buf.push('<div class="search-push"><div class="search-push-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
+        button = JSON.parse(JSON.stringify(data.button));
+        button.modifiers = [ "action" ];
+        button.attributes = {
+            "data-action": "open-search"
+        };
+        buf.push(templatizer["search-push"]["button"](button));
+        buf.push("</div>");
         return buf.join("");
     };
 
