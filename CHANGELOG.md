@@ -188,6 +188,7 @@ Let's take the `x.β.α` version number:
 ## 0.13.4 (2015-06-19)
 
 * module `button-top`: added `aria-hidden`
+* layout `stack`: added default color
 * all templates:
   * put all contents in a `main` element
 
