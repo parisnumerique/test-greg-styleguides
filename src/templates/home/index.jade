@@ -15,11 +15,11 @@ include blocks/que-faire
 include blocks/sections
 include blocks/stay-connected
 
-append content
+append header
   if data.notice
     +notice(data.notice)
 
-append content
+append header
   +rheader(data.rheader)
 
 append content
@@ -33,13 +33,13 @@ append content
     .layout-content.layout-adjacent-before
       +notice(data.notices.legal)
 
-append content
+append footer
   .layout-content.layout-adjacent-before
     +footer(data.footer)
 
-append content
+append footer
   +button-top
 
-append content
+append footer
   if data.notices && data.notices.cnil
     +notice(data.notices.cnil)

@@ -14,7 +14,7 @@ include ../../modules/heading/heading
 include ../../modules/notice/notice
 include ../../modules/table-of-contents/table-of-contents
 
-append content
+append header
   .layout-content
     +error-heading(data.heading)
 
@@ -37,10 +37,10 @@ append content
           .layout-content
             +block-content-social(data.connected.social)
 
-append content
+append footer
   .layout-content.layout-adjacent-before
     +footer(data.footer)
 
-append content
+append footer
   if data.notices && data.notices.cnil
     +notice(data.notices.cnil)

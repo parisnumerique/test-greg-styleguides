@@ -251,7 +251,7 @@ body.rheader-mobile-nav-open {
   display: none;
 }
 
-.rheader.fixed + .layout-content {
+.rheader.fixed + .layout-main .layout-content:first-child {
   padding-top: $rheader-height-small;
 }
 
@@ -672,15 +672,15 @@ body.rheader-mobile-nav-open {
 // Spacing for elements below the rheader
 
 @media (max-width: $rheader-small-max) {
-  .rheader.fixed + .layout-content,
-  .rheader + .quick-access + .layout-content {
+  .rheader.fixed + .layout-main .layout-content:first-child,
+  .rheader + .quick-access + .layout-main .layout-content:first-child {
     padding-top: $rheader-height-small;
   }
 }
 
 @media (min-width: $rheader-large-min) {
-  .rheader.fixed.extended + .layout-content,
-  .rheader.extended + .quick-access + .layout-content {
+  .rheader.fixed.extended + .layout-main .layout-content:first-child,
+  .rheader.extended + .quick-access + .layout-main .layout-content:first-child {
     padding-top: $rheader-height-medium + 20px;
   }
   .rheader.extended + .quick-access {
@@ -689,8 +689,8 @@ body.rheader-mobile-nav-open {
 }
 
 @media (min-width: $rheader-medium-min) {
-  .rheader.fixed + .layout-content,
-  .rheader + .quick-access + .layout-content {
+  .rheader.fixed + .layout-main .layout-content:first-child,
+  .rheader + .quick-access + .layout-main .layout-content:first-child {
     background-color: $color-primary; // to prevent a white area below header (edge case)
     padding-top: $rheader-height-medium;
   }

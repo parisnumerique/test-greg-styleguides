@@ -3,7 +3,7 @@
   width: 100%;
   overflow: hidden;
 
-  > .layout-content {
+  .layout-main > .layout-content {
     & + .layout-content {
       padding-top: 40px;
     }

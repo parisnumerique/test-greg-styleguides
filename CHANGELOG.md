@@ -188,6 +188,8 @@ Let's take the `x.β.α` version number:
 ## 0.13.4 (2015-06-19)
 
 * module `button-top`: added `aria-hidden`
+* all templates:
+  * put all contents in a `main` element
 
 * component `jecoute`: fixed input placeholder
 * module `news-card`: fixed display without image

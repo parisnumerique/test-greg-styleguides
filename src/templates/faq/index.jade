@@ -16,7 +16,7 @@ include ../../modules/rheader/rheader
 
 include ../../components/components
 
-append content
+append header
   +rheader(data.rheader)
 
 append content
@@ -52,13 +52,13 @@ append content
         .layout-content
           +block-content-social(data.connected.social)
 
-append content
+append footer
   .layout-content.layout-adjacent-before
     +footer(data.footer)
 
-append content
+append footer
   +button-top
 
-append content
+append footer
   if data.notices && data.notices.cnil
     +notice(data.notices.cnil)
