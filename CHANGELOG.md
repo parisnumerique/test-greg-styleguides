@@ -2,6 +2,14 @@
 
 ## Current
 
+## 0.13.4 (2015-06-19)
+
+* component `jecoute`: fixed input placeholder
+* module `news-card`: fixed display without image
+* module `rheader`: look for buttons with `data-action="open-search"`
+* module `search-push`: override modifiers, added `data-action`, improved CSS
+* template `subhome-news`: modified `search_push.button` data
+
 ## 0.13.3 (2015-06-19)
 
 * module `error-heading`: fixed responsive for logo, allow HTML in `trace`

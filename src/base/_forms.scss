@@ -25,9 +25,6 @@ input[type="email"] {
   height: 45px;
   margin: 5px 5px 5px 0;
   padding: 5px;
-  font-size: 13px;
-
-  @include input-color-placeholder($color-secondary);
 }
 
 button::-moz-focus-inner,

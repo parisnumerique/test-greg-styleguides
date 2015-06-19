@@ -369,11 +369,7 @@
     // news-list.jade:news-card compiled template
     templatizer["news-list"]["news-card"] = function tmpl_news_list_news_card(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<a" + jade.attr("href", data.href, true, false) + jade.cls([ "news-card", data.modifiers ], [ null, true ]) + '><div class="news-card-wrapper">');
-        if (data.image) {
-            buf.push("<div" + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + ' class="news-card-image"></div>');
-        }
-        buf.push('<div class="news-card-content"><div class="news-card-category"><span>' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</span></div><div class="news-card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
+        buf.push("<a" + jade.attr("href", data.href, true, false) + jade.cls([ "news-card", data.modifiers ], [ null, true ]) + '><div class="news-card-wrapper"><div' + jade.attr("style", data.image && "background-image: url(" + data.image + ");", true, false) + ' class="news-card-image"></div><div class="news-card-content"><div class="news-card-category"><span>' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</span></div><div class="news-card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
         if (data.counters) {
             buf.push('<div class="news-card-counters"><div class="news-card-counter facebook-counter"><span class="icon icon-facebook"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.facebook) ? "" : jade_interp) + '</span></div><div class="news-card-counter twitter-counter"><span class="icon icon-twitter"></span><span class="counter-value">' + jade.escape(null == (jade_interp = data.counters.twitter) ? "" : jade_interp) + "</span></div></div>");
         }

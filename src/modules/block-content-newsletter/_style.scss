@@ -22,8 +22,11 @@
 
     input {
       color: $color-secondary;
+      font-size: 13px;
       padding: 0 10px;
       width: 215px;
+
+      @include input-color-placeholder($color-secondary);
     }
   }
 

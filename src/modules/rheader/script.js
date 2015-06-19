@@ -68,6 +68,9 @@ Paris.rheader = (function(){
       $mainSearch.on('focus', function(){activeSearchButton(true);})
         .on('blur', function(){activeSearchButton(false);});
       PubSub.subscribe('rheader.search.close', function(){activeSearchButton(false);});
+
+      // button in page content that can be used to open the search
+      $('.button[data-action="open-search"]').on('click', onClickButtonSearch);
     }
 
     function initOptions() {
@@ -136,8 +139,6 @@ Paris.rheader = (function(){
             }
           );
         }
-      } else {
-        //$quickAccess
       }
     }
 
