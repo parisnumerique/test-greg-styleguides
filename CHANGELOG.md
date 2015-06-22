@@ -2,6 +2,9 @@
 
 ## Current
 
+* component `image`: new `max-height: 540px`
+* module `quick-access`: fixed video 1px bug on Firefox
+
 ## 0.13.5 (2015-06-22)
 
 * module `quick-access`:
