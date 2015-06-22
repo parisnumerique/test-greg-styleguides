@@ -2,14 +2,26 @@
 
 ## Current
 
+## 0.13.6 (2015-06-22)
+
+* component `image`: new `max-height: 540px`
+* module `get-involved-list`: remove hands background by default (added a `hand` modifier if needed)
+* module `quick-access`: fixed video 1px bug on Firefox
+* module `rheader`:
+  * added `target` for `locales`
+  * now follows search button link
+* layout `left-col`: fixed bug with
+* template `search`:
+  * show popular searches when search is empty
+  * show `rheader` search button as always active (data changed to add `"current": true`)
+  * improved on mobile
+* `config.js`: added `algolia.url.api_popular_searches`
+
 ## 0.13.5 (2015-06-22)
 
-* module `quick-access`:
-  * do not add `secondary` modifier if `primary` is already set
-* module `rheader`:
-  * fixed current item
-* module `search-results-list`:
-  * fixed title when no result
+* module `quick-access`: do not add `secondary` modifier if `primary` is already set
+* module `rheader`: fixed current item
+* module `search-results-list`: fixed title when no result
 * module `sections-panel`:
   * fixed content animation
   * removed anchors from links in data

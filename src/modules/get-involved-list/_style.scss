@@ -62,7 +62,7 @@
     z-index: 1;
   }
 
-  &:after {
+  &.hand:after {
     background-position: bottom;
     background-repeat: no-repeat;
     bottom: 0;
@@ -79,33 +79,33 @@
   &.red {
     background-color: $get-involved-red;
     color: $white;
-    &:after {
+    &.hand:after {
       background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
   }
   &.yellow {
     background-color: $get-involved-yellow;
-    &:after {
+    &.hand:after {
       background-image: url('../modules/get-involved-list/blue-hand.svg');
     }
   }
   &.green {
     background-color: $get-involved-green;
     color: $white;
-    &:after {
+    &.hand:after {
       background-image: url('../modules/get-involved-list/yellow-hand.svg');
     }
   }
   &.blue {
     background-color: $get-involved-blue1;
     color: $white;
-    &:after {
+    &.hand:after {
       background-image: url('../modules/get-involved-list/red-hand.svg');
     }
   }
   &.light-blue {
     background-color: $get-involved-blue2;
-    &:after {
+    &.hand:after {
       background-image: url('../modules/get-involved-list/green-hand.svg');
     }
   }

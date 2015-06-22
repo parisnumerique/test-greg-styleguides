@@ -11,7 +11,8 @@ Paris.rheader = (function(){
     breakpoint: "rheader-medium",
     mobileNavId: "rheader-mobile-nav",
     scrollMinDelta: 50,
-    extendOnTemplate: 'home'
+    extendOnTemplate: 'home',
+    selectorButtonInPage: '.button[data-action="open-search"]'
   };
 
   function rheader(selector, userOptions){
@@ -63,14 +64,8 @@ Paris.rheader = (function(){
         $('body').on('click', '#'+options.mobileNavId+'-overlay', closeMenu);
       }
 
-      // search
+      // Search
       $buttonSearch.on('click', onClickButtonSearch);
-      $mainSearch.on('focus', function(){activeSearchButton(true);})
-        .on('blur', function(){activeSearchButton(false);});
-      PubSub.subscribe('rheader.search.close', function(){activeSearchButton(false);});
-
-      // button in page content that can be used to open the search
-      $('.button[data-action="open-search"]').on('click', onClickButtonSearch);
     }
 
     function initOptions() {
@@ -120,6 +115,11 @@ Paris.rheader = (function(){
     }
 
     function onClickButtonSearch(e) {
+      if (Paris.responsive.is(options.breakpoint)) {
+        // below breakpoint
+        return;
+      }
+
       e.preventDefault();
       activeSearchButton(true);
       PubSub.publish('rheader.search.click');
@@ -192,8 +192,12 @@ Paris.rheader = (function(){
 
       // Monitor scroll
       scrollMonitor = PubSub.subscribe('scroll.document', onScroll);
-
       $el.on('mouseenter', unfold);
+
+      // Search
+      $mainSearch.off('focus').off('blur');
+      PubSub.unsubscribe('rheader.search.close');
+      $(options.selectorButtonInPage).off('click', onClickButtonSearch);
     }
 
     function disableMobileNav() {
@@ -214,6 +218,16 @@ Paris.rheader = (function(){
       }
       unfold();
       $el.off('mouseenter', unfold);
+
+      // Search
+      if (!$buttonSearch.hasClass('active')) {
+        $mainSearch.on('focus', function(){activeSearchButton(true);})
+          .on('blur', function(){activeSearchButton(false);});
+      }
+      PubSub.subscribe('rheader.search.close', function(){activeSearchButton(false);});
+
+      // button in page content that can be used to open the search
+      $(options.selectorButtonInPage).on('click', onClickButtonSearch);
     }
 
     init();

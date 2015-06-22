@@ -13,9 +13,9 @@ mixin rheader(data)
         ul.rheader-locales
           each locale in data.locales
             li
-              a(href=locale.href class=(locale.current ? 'current' : null))= locale.text
+              a(href=locale.href class=(locale.current ? 'current' : null) target=locale.target)= locale.text
       if data.buttons.search
-        a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text target=data.buttons.search.target)
+        a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text target=data.buttons.search.target class=data.buttons.search.current ? 'active' : null)
           if data.buttons.search.icon
             i.rheader-button-icon(class="icon-#{data.buttons.search.icon}")
       if data.buttons.around

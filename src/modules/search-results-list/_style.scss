@@ -1,7 +1,8 @@
 .search-results-list {
   h1 {
-    font-size: 34px;
+    font-size: 24px;
     font-weight: 700;
+    line-height: 30px;
     margin: 0 0 40px;
 
     var {
@@ -104,6 +105,8 @@
 @include large-and-medium {
   .search-results-list {
     h1 {
+      font-size: 34px;
+      line-height: 38px;
       padding: 0 20px;
     }
   }
