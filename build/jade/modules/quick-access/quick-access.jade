@@ -17,13 +17,13 @@ mixin quick-access(data)
         +search-field(data.search)
       if data.heading
         +heading(data.heading)
-      if data.items
+      if data.items && data.items.length
         ul.quick-access-buttons
           each item in data.items
             li
               - button = JSON.parse(JSON.stringify(item)) // clone the data object
               - button.modifiers = button.modifiers || []
-              - button.modifiers.push("secondary") // set default modifier
+              - if (button.modifiers.indexOf("primary") === -1) button.modifiers.push("secondary") // set default modifier
               +button(button)
       .quick-access-results
         ul

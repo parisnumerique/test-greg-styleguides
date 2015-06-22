@@ -2,6 +2,8 @@
 
 ## Current
 
+## 0.13.5 (2015-06-22)
+
 * module `quick-access`:
   * do not add `secondary` modifier if `primary` is already set
 * module `rheader`:
