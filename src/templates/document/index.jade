@@ -54,8 +54,9 @@ append content
       +cross-content(data.cross_content)
 
 append content
-  .layout-content.layout-adjacent-before
-    +poll(data.poll)
+  if data.poll
+    .layout-content.layout-adjacent-before
+      +poll(data.poll)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after

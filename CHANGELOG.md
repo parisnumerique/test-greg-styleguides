@@ -15,6 +15,7 @@
   * do not take out-dated answers into account
 * templates with links to hub (`document`, `error`, `home`, `hub`):
   * removed anchors from links in data
+* template `document`: optional `poll`
 * template `list-persons`: added pagination data to `locales.js`
 * template `nav`: use layout wrapper
 * template `search`:
