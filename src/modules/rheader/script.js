@@ -65,8 +65,10 @@ Paris.rheader = (function(){
 
       // search
       $buttonSearch.on('click', onClickButtonSearch);
-      $mainSearch.on('focus', function(){activeSearchButton(true);})
-        .on('blur', function(){activeSearchButton(false);});
+      if (!$buttonSearch.hasClass('active')) {
+        $mainSearch.on('focus', function(){activeSearchButton(true);})
+                   .on('blur', function(){activeSearchButton(false);});
+      }
       PubSub.subscribe('rheader.search.close', function(){activeSearchButton(false);});
 
       // button in page content that can be used to open the search

@@ -68,7 +68,7 @@ Paris.search = (function(){
       if (query !== "") {
         launchSearch(query);
       } else {
-        renderResults(false);
+        updateResults(false);
         renderFacets(false);
       }
     }
@@ -107,19 +107,23 @@ Paris.search = (function(){
         return;
       }
 
-      renderResults(data);
+      updateResults(data);
       renderFacets(data);
     }
 
-    function renderResults(data) {
+    function updateResults(data) {
       var search_results_list_data = {
         items: []
       };
 
       if (!data) {
         // No search
-        search_results_list_data.title = "";
-        // TODO show default
+        $.getJSON(Paris.config.algolia.url.api_popular_searches, function(data){
+          if ($searchFieldInput.val() === "") {
+            // do not take render if out-dated
+            renderResults(data);
+          }
+        });
 
         if (Modernizr.history) {
           history.replaceState({}, Paris.i18n.t("search_results/search"), options.baseUrl);
@@ -185,7 +189,13 @@ Paris.search = (function(){
         }
       }
 
-      var results = Paris.templates.templatizer["search-results-list"]["search-results-list"](search_results_list_data);
+      search_results_list_data.page = data.page;
+
+      renderResults(search_results_list_data);
+    }
+
+    function renderResults(data) {
+      var results = Paris.templates.templatizer["search-results-list"]["search-results-list"](data);
 
       if (data.page > 0) {
         $results.find('.search-results-list-more').remove();

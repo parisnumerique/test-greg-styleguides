@@ -30,7 +30,8 @@
           "search": {
             "href": "../search/",
             "icon": "search",
-            "text": "Recherche"
+            "text": "Recherche",
+            "current": true
           },
           "around": {
             "href": "#",
@@ -211,7 +212,8 @@
           "search": {
             "href": "../search/",
             "icon": "search",
-            "text": "Recherche"
+            "text": "Recherche",
+            "current": true
           },
           "around": {
             "href": "#",
@@ -426,7 +428,8 @@
           "search": {
             "href": "../search/",
             "icon": "search",
-            "text": "Recherche"
+            "text": "Recherche",
+            "current": true
           },
           "around": {
             "href": "#",
