@@ -26,7 +26,7 @@ p Les valeurs de <code>title</code> et <code>credit</code> seront concaténées 
   +image(#{JSON.stringify(defaults, null, 2)})
 
 h2 Image verticale
-p Les images sont limitées à 500px de haut, pour éviter que les images au format vertical prennent une hauteur trop importante.
+p Les images sont limitées à 540px de haut, pour éviter que les images au format vertical prennent une hauteur trop importante.
 .lsg-component(style="max-width: 770px")
   +image(vertical_image)
 +code({language: "jade"}).
@@ -35,7 +35,7 @@ p Les images sont limitées à 500px de haut, pour éviter que les images au for
   +image(#{JSON.stringify(vertical_image, null, 2)})
 
 h2 Image verticale non-contrainte
-p Il est possible de lever la limite de 500px de hauteur en ajoutant le <em>modifier</em> <code>full-height</code>. C'est notamment utile pour les infographies verticales.
+p Il est possible de lever la limite de 540px de hauteur en ajoutant le <em>modifier</em> <code>full-height</code>. C'est notamment utile pour les infographies verticales.
 .lsg-component(style="max-width: 770px")
   +image(full_height)
 +code({language: "jade"}).
