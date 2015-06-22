@@ -251,10 +251,10 @@ Paris.sectionsPanel = (function(){
       }).join('');
       content += '</ul>';
 
-      if (data.buttons) {
+      if (data.buttons && data.buttons.items && data.buttons.items.length) {
         content += Paris.templates.templatizer["buttons"]["buttons"](data.buttons);
       }
-      if (data.more_links) {
+      if (data.more_links && data.more_links.items && data.more_links.items.length) {
         content += Paris.templates.templatizer["links"]["links"](data.more_links);
       }
 

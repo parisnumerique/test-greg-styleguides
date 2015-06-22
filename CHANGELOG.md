@@ -11,6 +11,7 @@
 * module `sections-panel`:
   * fixed content animation
   * removed anchors from links in data
+  * fixed content rendering to have optional `buttons` and `more_links`
 * module `quick-access` and templates with search feature (`search`, `list-persons`):
   * do not take out-dated answers into account
 * templates with links to hub (`document`, `error`, `home`, `hub`):
