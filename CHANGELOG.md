@@ -4,6 +4,8 @@
 
 * module `quick-access`:
   * do not add `secondary` modifier if `primary` is already set
+* module `rheader`:
+  * fixed current item
 * module `search-results-list`:
   * fixed title when no result
 * module `quick-access` and templates with search feature (`search`, `list-persons`):
