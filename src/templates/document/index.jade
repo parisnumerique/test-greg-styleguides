@@ -49,7 +49,7 @@ append content
             +jecoute(data.jecoute)
 
 append content
-  if data.cross_content.items.length === 3
+  if data.cross_content && data.cross_content.items && data.cross_content.items.length === 3
     .layout-content.layout-adjacent-before
       +cross-content(data.cross_content)
 

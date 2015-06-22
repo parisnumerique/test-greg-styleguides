@@ -17,7 +17,7 @@ mixin quick-access(data)
         +search-field(data.search)
       if data.heading
         +heading(data.heading)
-      if data.items
+      if data.items && data.items.length
         ul.quick-access-buttons
           each item in data.items
             li

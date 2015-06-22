@@ -21,6 +21,7 @@
   * update URL during search (added `bodyAttributes` to template data)
   * do no launch search in the browser if done on the server
 * use JSON syntax in `locales.js`
+* harmonized tests on items length
 
 ## 0.13.4 (2015-06-19)
 

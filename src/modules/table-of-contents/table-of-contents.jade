@@ -1,6 +1,6 @@
 mixin table-of-contents(data)
   .table-of-contents
-    if data.nav && data.nav.length !== 0
+    if data.nav && data.nav.length
       ul.table-of-contents-nav
         each item in data.nav
           li.table-of-contents-nav-item
@@ -9,7 +9,7 @@ mixin table-of-contents(data)
               strong= abbr
               = item.text
     if data.sections
-      if data.sections.list && data.sections.list.items && data.sections.list.items.length !== 0
+      if data.sections.list && data.sections.list.items && data.sections.list.items.length
         .table-of-contents-sections
           ul.table-of-contents-sections-items
             each item in data.sections.list.items

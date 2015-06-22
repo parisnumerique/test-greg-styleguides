@@ -6,13 +6,13 @@ mixin search-results-list(data)
       h1= data.title
     else if data.page
       .search-results-list-page: span= data.page
-    if data.items && data.items.length !== 0
+    if data.items && data.items.length
       ul.search-results-list-items
         each item in data.items
           li.search-results-list-item(class=item.modifiers)
             a(href=item.href)
               = item.title
-            if item.anchors && item.anchors.length !== 0
+            if item.anchors && item.anchors.length
               ul.search-results-list-anchors
                 each anchor in item.anchors
                   li.search-results-list-anchor

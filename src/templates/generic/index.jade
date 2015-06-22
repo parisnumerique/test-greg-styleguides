@@ -41,7 +41,7 @@ append content
             +#{component.type}(component.data)
 
 append content
-  if data.cross_content.items.length === 3
+  if data.cross_content && data.cross_content.items && data.cross_content.items.length === 3
     .layout-content.layout-adjacent-before
       div
         +cross-content(data.cross_content)

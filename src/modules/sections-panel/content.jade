@@ -3,7 +3,7 @@ include ../../components/links/links
 
 if data.intro
   .sections-panel-intro= data.intro
-if data.items && data.items.length !== 0
+if data.items && data.items.length
   ul.sections-panel-content-items
     each item in data.items
       li.sections-panel-content-item

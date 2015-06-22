@@ -33,7 +33,7 @@ append content
       +get-involved-list(data.get_involved_list)
 
 append content
-  if data.links_groups && data.links_groups.length !== 0
+  if data.links_groups && data.links_groups.length
     .layout-content.layout-padding-after
       .layout-wrapper
         +heading(data.links_group_heading)
