@@ -3,6 +3,10 @@
     "data": {
       "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
+      "bodyAttributes": {
+        "data-base-url": "/templates/search",
+        "data-search-url": "/templates/search/?search=${search}"
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -179,6 +183,11 @@
     "data": {
       "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
+      "bodyAttributes": {
+        "data-base-url": "/templates/search",
+        "data-search-url": "/templates/search/?search=${search}",
+        "data-results": "true"
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -389,6 +398,11 @@
     "data": {
       "title": "Recherche",
       "bodyModifiers": ["fixed-nav", "search"],
+      "bodyAttributes": {
+        "data-base-url": "/templates/search",
+        "data-search-url": "/templates/search/?search=${search}",
+        "data-results": "true"
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {

@@ -101,15 +101,15 @@
             "text": "Accueil"
           },
           {
-            "href": "../hub#breadcrumbs",
+            "href": "../hub",
             "text": "Services et infos pratiques"
           },
           {
-            "href": "../hub/subnav-open.html#breadcrumbs",
+            "href": "../hub/subnav-open.html",
             "text": "Logement"
           },
           {
-            "href": "../hub/content-open.html#breadcrumbs",
+            "href": "../hub/content-open.html",
             "text": "Logement social"
           },
           {
