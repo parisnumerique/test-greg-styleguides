@@ -175,14 +175,16 @@ Paris.sectionsPanel = (function(){
           translateX: -200
         });
         $content.velocity({
-          opacity: 1,
+          opacity: [1, 0],
           translateX: [0, 200]
         }, $.extend({}, options.velocity, {
+          complete: function(){
+            $el.addClass('has-content');
+          },
           delay: 200,
           display: 'block'
         }));
       }
-      $el.addClass('has-content');
       currentLevel = "content";
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
@@ -214,13 +216,15 @@ Paris.sectionsPanel = (function(){
         delay: 200
       }));
       $content.velocity({
-        opacity: 0,
+        opacity: [0, 1],
         translateX: [200, 0]
       }, $.extend({}, options.velocity, {
-        complete: setHeight,
+        complete: function(){
+          $el.removeClass('has-content');
+          setHeight();
+        },
         display: 'none'
       }));
-      $el.removeClass('has-content');
       currentLevel = "subnav";
     }
 

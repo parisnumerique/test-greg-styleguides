@@ -8,6 +8,8 @@
   * fixed current item
 * module `search-results-list`:
   * fixed title when no result
+* module `sections-panel`:
+  * fixed content animation
 * module `quick-access` and templates with search feature (`search`, `list-persons`):
   * do not take out-dated answers into account
 * template `list-persons`: added pagination data to `locales.js`
