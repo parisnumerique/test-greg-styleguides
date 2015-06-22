@@ -38,10 +38,6 @@
       }
     }
   }
-
-  @include small {
-    & + .news-card {margin-top: 30px;}
-  }
 }
 
 .news-card-wrapper {
@@ -157,6 +153,15 @@ html.no-touch {
     .icon {
       padding-right: 7px;
     }
+  }
+}
+
+@include small {
+  .news-card + .news-card {margin-top: 30px;}
+
+  .news-card-title {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 

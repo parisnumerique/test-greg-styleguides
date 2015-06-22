@@ -23,7 +23,8 @@ Paris.rheader = (function(){
         $overlay,
         $mainSearch,
         scrollMonitor,
-        lastScrollY = 0
+        lastScrollY = 0,
+        mobileNavOpen = false
       ;
 
     function init(){
@@ -57,7 +58,7 @@ Paris.rheader = (function(){
         extend();
       }
 
-      // standalone mode
+      // not standalone mode
       if (!$el.hasClass('standalone')) {
         // follow the links
         $buttonMenu.on('click', onClickButtonMenu);
@@ -80,6 +81,7 @@ Paris.rheader = (function(){
 
     function onScroll(e, data) {
       if (lastScrollY !== 0) {
+        if (mobileNavOpen) {return;}
         if (data.scrollTop < 200) {
           unfold();
           return;
@@ -165,6 +167,7 @@ Paris.rheader = (function(){
         display: 'none'
       });
       $('body').removeClass('rheader-mobile-nav-open');
+      mobileNavOpen = false;
     }
 
     function openMenu() {
@@ -176,6 +179,7 @@ Paris.rheader = (function(){
         display: 'block'
       });
       $('body').addClass('rheader-mobile-nav-open');
+      mobileNavOpen = true;
     }
 
     function enableMobileNav() {

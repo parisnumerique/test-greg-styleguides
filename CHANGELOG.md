@@ -2,6 +2,11 @@
 
 ## Current
 
+* module `news-card`: improved CSS on small screens
+* module `quick-access`: improved CSS on small screens
+* module `rheader`:
+  * disable scroll monitoring when nav is opened
+
 ## 0.13.6 (2015-06-22)
 
 * component `image`: new `max-height: 540px`
@@ -10,7 +15,7 @@
 * module `rheader`:
   * added `target` for `locales`
   * now follows search button link
-* layout `left-col`: fixed bug with
+* layout `left-col`: fixed JS bug
 * template `search`:
   * show popular searches when search is empty
   * show `rheader` search button as always active (data changed to add `"current": true`)
