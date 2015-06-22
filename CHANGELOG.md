@@ -2,6 +2,9 @@
 
 ## Current
 
+* module `quick-access`:
+  * do not add `secondary` modifier if `primary` is already set
+
 ## 0.13.4 (2015-06-19)
 
 * component `jecoute`: fixed input placeholder

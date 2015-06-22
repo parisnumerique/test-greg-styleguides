@@ -23,7 +23,7 @@ mixin quick-access(data)
             li
               - button = JSON.parse(JSON.stringify(item)) // clone the data object
               - button.modifiers = button.modifiers || []
-              - button.modifiers.push("secondary") // set default modifier
+              - if (button.modifiers.indexOf("primary") === -1) button.modifiers.push("secondary") // set default modifier
               +button(button)
       .quick-access-results
         ul
