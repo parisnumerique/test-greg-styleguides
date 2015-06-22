@@ -136,6 +136,12 @@ Paris.quickAccess = (function(){
 
     function onSearchResults(err, results) {
       if (err) {return;}
+
+      if (results.query !== $searchFieldInput.val()) {
+        // do not take out-dated answers into account
+        return;
+      }
+
       $results.empty();
       $.each(results.hits, function(index, hit){
         var result = '<li>' +

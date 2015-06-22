@@ -4,6 +4,16 @@
 
 * module `quick-access`:
   * do not add `secondary` modifier if `primary` is already set
+* module `search-results-list`:
+  * fixed title when no result
+* module `quick-access` and templates with search feature (`search`, `list-persons`):
+  * do not take out-dated answers into account
+* template `list-persons`: added pagination data to `locales.js`
+* template `nav`: use layout wrapper
+* template `search`:
+  * update URL during search (added `bodyAttributes` to template data)
+  * do no launch search in the browser if done on the server
+* use JSON syntax in `locales.js`
 
 ## 0.13.4 (2015-06-19)
 

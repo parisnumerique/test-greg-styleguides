@@ -49,7 +49,7 @@ Paris.search = (function(){
       $el.on('click', '.search-results-list-more .button', onClickMore);
 
       // If the search field is not empty, trigger the search on page load
-      if ($searchFieldInput.val() != "") {
+      if ($searchFieldInput.val() != "" && options.results !== true) {
         $searchFieldInput.trigger('input');
       }
 
@@ -101,6 +101,12 @@ Paris.search = (function(){
 
     function onSearchResults(err, data) {
       if (err) {return;}
+
+      if (data && data.query !== $searchFieldInput.val()) {
+        // do not take out-dated answers into account
+        return;
+      }
+
       renderResults(data);
       renderFacets(data);
     }
@@ -114,9 +120,17 @@ Paris.search = (function(){
         // No search
         search_results_list_data.title = "";
         // TODO show default
+
+        if (Modernizr.history) {
+          history.replaceState({}, Paris.i18n.t("search_results/search"), options.baseUrl);
+        }
       } else if (data.nbHits === 0) {
         // Search with no results
         search_results_list_data.title = Paris.i18n.t("search_results/no_result");
+
+        if (Modernizr.history) {
+          history.replaceState({}, Paris.i18n.t("search_results/search"), options.searchUrl.replace('${search}', data.query));
+        }
       } else {
         // Search with results
         if (data.page === 0) {
@@ -130,6 +144,10 @@ Paris.search = (function(){
         } else {
           // On other pages, add the page separator
           search_results_list_data.page = Paris.i18n.t("search_results/page", [data.page + 1]);
+        }
+
+        if (Modernizr.history) {
+          history.replaceState({}, Paris.i18n.t("search_results/search"), options.searchUrl.replace('${search}', data.query));
         }
 
         $.each(data.hits, function(index, hit){
