@@ -12,6 +12,10 @@ Paris.config = {
     indexes: {
       global: "recette_ParisFront",
       persons: "recette_Elus"
+    },
+
+    url: {
+      api_popular_searches: "http://r7.paris-fr-api.lestudio.mx/AlgoliaStats/getMostSearchedKeywords"
     }
   },
   cookies: {
