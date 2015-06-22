@@ -7,9 +7,12 @@
 * module `quick-access`: fixed video 1px bug on Firefox
 * module `rheader`:
   * added `target` for `locales`
+  * now follows search button link
+* layout `left-col`: fixed bug with
 * template `search`:
   * show popular searches when search is empty
   * show `rheader` search button as always active (data changed to add `"current": true`)
+  * improved on mobile
 * `config.js`: added `algolia.url.api_popular_searches`
 
 ## 0.13.5 (2015-06-22)

@@ -3,12 +3,14 @@ require('velocity-animate');
 
 var values = require('lodash.values');
 var algoliasearch = require('algoliasearch');
+var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
 
 Paris.search = (function(){
 
   var defaultOptions = {
+    breakpoint: "small",
     index: 'global', // the Algolia index to use (should be defined in config.js)
     fields: { // matching the names of Algolia fields
       link: 'url',           // the field to use as a link
@@ -17,9 +19,10 @@ Paris.search = (function(){
       primary: 'isPromoted', // the field for primary results (boolean)
       anchors: 'ancres'      // the field for anchors (array of objects)
     },
-    resultsPerPage: 8, // the number of results to display per page
-    facets: ["onglet"] // the available facets that will be displayed in the left column (should have been created on Algolia)
-                       // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
+    resultsPerPage: 8,  // the number of results to display per page
+    facets: ["onglet"], // the available facets that will be displayed in the left column (should have been created on Algolia)
+                        // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
+    headerSelector: '.rheader'
   };
 
   function search(selector, userOptions){
@@ -27,6 +30,7 @@ Paris.search = (function(){
       options = $.extend({}, defaultOptions, userOptions),
       api = {},
       $searchFieldInput,
+      $searchFieldForm,
       $results,
       $facetsContainer,
       currentFacets = [],
@@ -40,13 +44,20 @@ Paris.search = (function(){
       algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
 
+      PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableMobile);
+      PubSub.subscribe('responsive.' + options.breakpoint + '.disable', disableMobile);
+
       $searchFieldInput = $el.find('#main-search');
+      $searchFieldForm = $searchFieldInput.closest('form');
       $results = $el.find('#results');
       $facetsContainer = $el.find('#facets');
 
       $searchFieldInput.on('input', onInput);
-      $facetsContainer.on('change', 'input[type=checkbox]', updateFacets);
+      $facetsContainer.on('change', 'input[type=checkbox], select', updateFacets);
       $el.on('click', '.search-results-list-more .button', onClickMore);
+
+      $searchFieldInput.trigger('focus');
+      $searchFieldForm.on('submit', onSubmit);
 
       // If the search field is not empty, trigger the search on page load
       if ($searchFieldInput.val() != "" && options.results !== true) {
@@ -62,6 +73,18 @@ Paris.search = (function(){
       });
     }
 
+    function enableMobile() {
+      // Hide facets if empty
+      if ($facetsContainer.is(':empty')) {
+        $facetsContainer.closest('.layout-aside').hide();
+      }
+    }
+
+    function disableMobile() {
+      // Unhide facets
+      $facetsContainer.closest('.layout-aside').show();
+    }
+
     function onInput() {
       currentPage = 0;
       var query = $searchFieldInput.val();
@@ -71,6 +94,20 @@ Paris.search = (function(){
         updateResults(false);
         renderFacets(false);
       }
+    }
+
+    function onSubmit(e){
+      e.preventDefault();
+      onInput();
+      $results
+        .velocity("stop")
+        .velocity("scroll", {
+          duration: 800,
+          offset: -8, // height of folded rheader
+          complete: function(){
+            $searchFieldInput.trigger('blur');
+          }
+        });
     }
 
     function launchSearch(query){
@@ -209,13 +246,13 @@ Paris.search = (function(){
 
       if (!data || data.nbHits === 0) {
         // No search or search with no results
-        $facetsContainer.empty();
+        $facetsContainer.empty().closest('.layout-aside').hide();
       } else { // Search with results
         if (currentFacets.length === 0
           && !$.isEmptyObject(options.facets)
           && !$.isEmptyObject(data.facets)
         ) {
-          $facetsContainer.empty();
+          $facetsContainer.empty().closest('.layout-aside').show();
 
           $.each(options.facets, function(index, facet) {
 
@@ -241,12 +278,23 @@ Paris.search = (function(){
     }
 
     function updateFacets() {
+      var isSmall = Paris.responsive.is(options.breakpoint);
+
       currentFacets = [];
       $.each(options.facets, function(index, facet) {
         var facetValues = [];
-        $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked").each(function(){
-          facetValues.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
-        });
+        if (isSmall) {
+          var values = $facetsContainer.find("select[name^='" + facet + "']").val();
+          if (values) {
+            facetValues = $.map(values, function(val){
+              return facet + ":" + val;
+            });
+          }
+        } else {
+          $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked").each(function(){
+            facetValues.push(facet + ":" + $(this).val());
+          });
+        }
         if (facetValues.length > 0) {
           currentFacets.push(facetValues);
         }

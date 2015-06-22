@@ -21,6 +21,10 @@ Paris.responsive.sizes = {
   }
 };
 
+Paris.responsive.is = function(size){
+  return Paris.responsive.sizes[size].is;
+};
+
 var onResize = function() {
   var sizes = Paris.responsive.sizes;
   PubSub.publish('responsive.resize');

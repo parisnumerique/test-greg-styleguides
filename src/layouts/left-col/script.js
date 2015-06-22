@@ -23,14 +23,16 @@ Paris.leftCol = (function(){
         return;
       }
       var $nextContent = $el.parents('.layout-content').next('.layout-content');
-      var offsets = {
-        top: $('.layout-left-col').offset().top - rheaderHeight,
-        bottom: $('body').height() - $nextContent.offset().top + rheaderHeight
-      };
-      unsetAffix();
-      $el.affix({
-        offset: offsets
-      });
+      if ($nextContent.length) {
+        var offsets = {
+          top: $('.layout-left-col').offset().top - rheaderHeight,
+          bottom: $('body').height() - $nextContent.offset().top + rheaderHeight
+        };
+        unsetAffix();
+        $el.affix({
+          offset: offsets
+        });
+      }
     }
 
     function unsetAffix(){
