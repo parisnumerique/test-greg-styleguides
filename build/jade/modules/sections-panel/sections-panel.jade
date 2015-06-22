@@ -14,7 +14,7 @@ mixin sections-panel(data)
       - if (has_current_item) {nav_classes.push('has-current-item');}
       - if (has_content) {nav_classes.push('closed');}
       .sections-panel-nav(class=nav_classes)
-        if data.nav.items.length !== 0
+        if data.nav.items && data.nav.items.length
           ul.sections-panel-nav-items
             each item in data.nav.items
               li.sections-panel-nav-item
@@ -32,7 +32,7 @@ mixin sections-panel(data)
             +buttons(data.default.buttons)
         each item in data.nav.items
           .sections-panel-subnav-section(id="subnav-#{item.slug}" data-nav-item=item.slug class=(item.current ? "current" : ""))
-            if item.subnav && item.subnav.items.length !== 0
+            if item.subnav && item.subnav.items && item.subnav.items.length
               if item.subnav.text
                 .sections-panel-intro= item.subnav.text
               ul.sections-panel-subnav-items
@@ -47,7 +47,7 @@ mixin sections-panel(data)
         if has_content
           if data.content.intro
             .sections-panel-intro= data.content.intro
-          if data.content.items && data.content.items.length !== 0
+          if data.content.items && data.content.items.length
             ul.sections-panel-content-items
               each item in data.content.items
                 li.sections-panel-content-item

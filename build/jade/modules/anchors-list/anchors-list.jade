@@ -4,7 +4,7 @@ mixin anchors-list(data)
     if data.title
       h3.anchors-list-title
         span= data.title
-    if data && data.items
+    if data.items && data.items.length
       ul.anchors-list-items
         each item in data.items
           li.anchors-list-item(class=item.modifiers)

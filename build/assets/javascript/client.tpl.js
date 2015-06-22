@@ -163,7 +163,7 @@
         if (data.title) {
             buf.push('<h3 class="anchors-list-title"><span>' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</span></h3>");
         }
-        if (data && data.items) {
+        if (data.items && data.items.length) {
             buf.push('<ul class="anchors-list-items">');
             (function() {
                 var $obj = data.items;
@@ -304,8 +304,8 @@
         (function() {
             var $obj = data.items;
             if ("number" == typeof $obj.length) {
-                for (var index = 0, $l = $obj.length; index < $l; index++) {
-                    var item = $obj[index];
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
                     buf.push('<li class="breadcrumbs-item">');
                     if (item.href) {
                         buf.push("<a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a>");
@@ -316,9 +316,9 @@
                 }
             } else {
                 var $l = 0;
-                for (var index in $obj) {
+                for (var $index in $obj) {
                     $l++;
-                    var item = $obj[index];
+                    var item = $obj[$index];
                     buf.push('<li class="breadcrumbs-item">');
                     if (item.href) {
                         buf.push("<a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a>");
@@ -660,91 +660,87 @@
     templatizer["search-results-list"]["search-results-list"] = function tmpl_search_results_list_search_results_list(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push('<div class="search-results-list">');
-        if (!data.items || data.items.length === 0) {
-            buf.push("<h1>" + jade.escape(null == (jade_interp = data.no_result) ? "" : jade_interp) + "</h1>");
-        } else {
-            if (data.title) {
-                buf.push("<h1>" + (null == (jade_interp = data.title) ? "" : jade_interp) + "</h1>");
-            } else {
-                buf.push('<div class="search-results-list-page"><span>' + jade.escape(null == (jade_interp = data.page) ? "" : jade_interp) + "</span></div>");
-            }
-            if (data.items.length !== 0) {
-                buf.push('<ul class="search-results-list-items">');
-                (function() {
-                    var $obj = data.items;
-                    if ("number" == typeof $obj.length) {
-                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                            var item = $obj[$index];
-                            buf.push("<li" + jade.cls([ "search-results-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</a>");
-                            if (item.anchors && item.anchors.length !== 0) {
-                                buf.push('<ul class="search-results-list-anchors">');
-                                (function() {
-                                    var $obj = item.anchors;
-                                    if ("number" == typeof $obj.length) {
-                                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                                            var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
-                                        }
-                                    } else {
-                                        var $l = 0;
-                                        for (var $index in $obj) {
-                                            $l++;
-                                            var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
-                                        }
+        if (data.title) {
+            buf.push("<h1>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h1>");
+        } else if (data.page) {
+            buf.push('<div class="search-results-list-page"><span>' + jade.escape(null == (jade_interp = data.page) ? "" : jade_interp) + "</span></div>");
+        }
+        if (data.items && data.items.length) {
+            buf.push('<ul class="search-results-list-items">');
+            (function() {
+                var $obj = data.items;
+                if ("number" == typeof $obj.length) {
+                    for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                        var item = $obj[$index];
+                        buf.push("<li" + jade.cls([ "search-results-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</a>");
+                        if (item.anchors && item.anchors.length) {
+                            buf.push('<ul class="search-results-list-anchors">');
+                            (function() {
+                                var $obj = item.anchors;
+                                if ("number" == typeof $obj.length) {
+                                    for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                        var anchor = $obj[$index];
+                                        buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                     }
-                                }).call(this);
-                                buf.push("</ul>");
-                            }
-                            if (item.text) {
-                                buf.push('<div class="search-results-list-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div>");
-                            }
-                            buf.push("</li>");
-                        }
-                    } else {
-                        var $l = 0;
-                        for (var $index in $obj) {
-                            $l++;
-                            var item = $obj[$index];
-                            buf.push("<li" + jade.cls([ "search-results-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</a>");
-                            if (item.anchors && item.anchors.length !== 0) {
-                                buf.push('<ul class="search-results-list-anchors">');
-                                (function() {
-                                    var $obj = item.anchors;
-                                    if ("number" == typeof $obj.length) {
-                                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                                            var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
-                                        }
-                                    } else {
-                                        var $l = 0;
-                                        for (var $index in $obj) {
-                                            $l++;
-                                            var anchor = $obj[$index];
-                                            buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
-                                        }
+                                } else {
+                                    var $l = 0;
+                                    for (var $index in $obj) {
+                                        $l++;
+                                        var anchor = $obj[$index];
+                                        buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
                                     }
-                                }).call(this);
-                                buf.push("</ul>");
-                            }
-                            if (item.text) {
-                                buf.push('<div class="search-results-list-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div>");
-                            }
-                            buf.push("</li>");
+                                }
+                            }).call(this);
+                            buf.push("</ul>");
                         }
+                        if (item.text) {
+                            buf.push('<div class="search-results-list-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div>");
+                        }
+                        buf.push("</li>");
                     }
-                }).call(this);
-                buf.push("</ul>");
-                if (data.more) {
-                    buf.push('<div class="search-results-list-more">');
-                    more = JSON.parse(JSON.stringify(data.more));
-                    more.modifiers = [ "wide" ];
-                    more.attributes = {
-                        "data-page": more.page
-                    };
-                    buf.push(templatizer["search-results-list"]["button"](more));
-                    buf.push("</div>");
+                } else {
+                    var $l = 0;
+                    for (var $index in $obj) {
+                        $l++;
+                        var item = $obj[$index];
+                        buf.push("<li" + jade.cls([ "search-results-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</a>");
+                        if (item.anchors && item.anchors.length) {
+                            buf.push('<ul class="search-results-list-anchors">');
+                            (function() {
+                                var $obj = item.anchors;
+                                if ("number" == typeof $obj.length) {
+                                    for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                        var anchor = $obj[$index];
+                                        buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
+                                    }
+                                } else {
+                                    var $l = 0;
+                                    for (var $index in $obj) {
+                                        $l++;
+                                        var anchor = $obj[$index];
+                                        buf.push('<li class="search-results-list-anchor"><a' + jade.attr("href", anchor.href, true, false) + ">" + jade.escape(null == (jade_interp = anchor.text) ? "" : jade_interp) + "</a></li>");
+                                    }
+                                }
+                            }).call(this);
+                            buf.push("</ul>");
+                        }
+                        if (item.text) {
+                            buf.push('<div class="search-results-list-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div>");
+                        }
+                        buf.push("</li>");
+                    }
                 }
+            }).call(this);
+            buf.push("</ul>");
+            if (data.more) {
+                buf.push('<div class="search-results-list-more">');
+                more = JSON.parse(JSON.stringify(data.more));
+                more.modifiers = [ "wide" ];
+                more.attributes = {
+                    "data-page": more.page
+                };
+                buf.push(templatizer["search-results-list"]["button"](more));
+                buf.push("</div>");
             }
         }
         buf.push("</div>");
@@ -763,7 +759,7 @@
     templatizer["share"]["share"] = function tmpl_share_share(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.cls([ "share", data.modifiers ], [ null, true ]) + ">");
-        if (data.items) {
+        if (data.items && data.items.length) {
             buf.push('<ul class="share-items">');
             (function() {
                 var $obj = data.items;

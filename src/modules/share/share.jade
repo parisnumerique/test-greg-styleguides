@@ -1,6 +1,6 @@
 mixin share(data)
   .share(class=data.modifiers)
-    if data.items
+    if data.items && data.items.length
       ul.share-items
         each item in data.items
           li.share-item

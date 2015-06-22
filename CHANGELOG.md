@@ -2,6 +2,32 @@
 
 ## Current
 
+## 0.13.5 (2015-06-22)
+
+* module `quick-access`:
+  * do not add `secondary` modifier if `primary` is already set
+* module `rheader`:
+  * fixed current item
+* module `search-results-list`:
+  * fixed title when no result
+* module `sections-panel`:
+  * fixed content animation
+  * removed anchors from links in data
+  * fixed content rendering to have optional `buttons` and `more_links`
+* module `quick-access` and templates with search feature (`search`, `list-persons`):
+  * do not take out-dated answers into account
+* templates with links to hub (`document`, `error`, `home`, `hub`):
+  * removed anchors from links in data
+* template `document`: optional `poll`
+* template `list-persons`: added pagination data to `locales.js`
+* template `nav`: use layout wrapper
+* template `search`:
+  * update URL during search (added `bodyAttributes` to template data)
+  * do no launch search in the browser if done on the server
+* use JSON syntax in `locales.js`
+* added stylesheet for IE >= 9, fixed IE conditional comments
+* harmonized tests on items length
+
 ## 0.13.4 (2015-06-19)
 
 * component `jecoute`: fixed input placeholder

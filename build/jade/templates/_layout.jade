@@ -6,10 +6,16 @@ html(lang="fr")
     title= (data && data.title) || "Paris"
 
     link(href="../../stylesheets/print.css" type="text/css" media="print" rel="stylesheet")
-    <!--[if !IE]>-->
+
     - css = data && data.theme ? "paris-"+data.theme+".css" : "paris.css"
+    <!--[if !IE]>-->
     link#theme(href="../../stylesheets/#{css}" type="text/css" media="screen" rel="stylesheet")
     <!--<![endif]-->
+
+    <!--[if gte IE 9]>
+    link#theme(href="../../stylesheets/#{css}" type="text/css" media="screen" rel="stylesheet")
+    link(href="../../stylesheets/paris-ie.css" type="text/css" media="screen" rel="stylesheet")
+    <![endif]-->
 
     <!--[if lt IE 9]>
     link(href="../../stylesheets/print.css" type="text/css" media="screen" rel="stylesheet")

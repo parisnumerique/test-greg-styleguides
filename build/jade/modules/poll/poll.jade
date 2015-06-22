@@ -8,7 +8,7 @@ mixin poll(data)
         .poll-heading
           = data.heading
       .poll-title(data-thanks=data.thanks)= data.title
-      if data.items
+      if data.items && data.items.length
         ul.poll-options(class=data.modifiers)
           each item in data.items
             li

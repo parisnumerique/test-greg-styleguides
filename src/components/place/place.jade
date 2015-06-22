@@ -7,7 +7,7 @@ mixin place(data)
         .place-title= data.title
       if data.address
         .place-address!= data.address
-      if data.items
+      if data.items && data.items.length
         ul.place-items
           each item in data.items
             li.place-item

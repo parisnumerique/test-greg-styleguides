@@ -116,6 +116,12 @@ Paris.listPersons = (function(){
 
     function onSearchResults(err, data) {
       if (err) {return;}
+
+      if (data.query !== $searchFieldInput.val()) {
+        // do not take out-dated answers into account
+        return;
+      }
+
       renderResults(data);
       renderFacets(data);
     }
@@ -163,8 +169,8 @@ Paris.listPersons = (function(){
       if (data.nbPages > 1) {
         var pagination_data = {
           "text": {
-            "prev": "Page précédente",
-            "next": "Page suivante"
+            "prev": Paris.i18n.t("pagination/prev"),
+            "next": Paris.i18n.t("pagination/next")
           },
           "url": "/page/${page}",
           "current": data.page + 1,
