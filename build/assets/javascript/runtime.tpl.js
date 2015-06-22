@@ -1805,7 +1805,7 @@
     // get-involved-list.jade:get-involved-item compiled template
     templatizer["get-involved-list"]["get-involved-item"] = function tmpl_get_involved_list_get_involved_item(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push('<div class="get-involved-item"><div class="get-involved-item-category">' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</div><div class="get-involved-item-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
+        buf.push("<div" + jade.cls([ "get-involved-item", data.modifiers ], [ null, true ]) + '><div class="get-involved-item-category">' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</div><div class="get-involved-item-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
         data.button.modifiers = [ "action", "get-involved-item-button" ];
         buf.push(templatizer["get-involved-list"]["button"](data.button));
         buf.push("</div>");
@@ -3022,21 +3022,21 @@
                 if ("number" == typeof $obj.length) {
                     for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                         var locale = $obj[$index];
-                        buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
+                        buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.attr("target", locale.target, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
                     }
                 } else {
                     var $l = 0;
                     for (var $index in $obj) {
                         $l++;
                         var locale = $obj[$index];
-                        buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
+                        buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.attr("target", locale.target, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
                     }
                 }
             }).call(this);
             buf.push("</ul>");
         }
         if (data.buttons.search) {
-            buf.push("<a" + jade.attr("href", data.buttons.search.href, true, false) + jade.attr("title", data.buttons.search.text, true, false) + jade.attr("target", data.buttons.search.target, true, false) + ' class="rheader-button rheader-button-search">');
+            buf.push("<a" + jade.attr("href", data.buttons.search.href, true, false) + jade.attr("title", data.buttons.search.text, true, false) + jade.attr("target", data.buttons.search.target, true, false) + jade.cls([ "rheader-button", "rheader-button-search", data.buttons.search.current ? "active" : null ], [ null, null, true ]) + ">");
             if (data.buttons.search.icon) {
                 buf.push("<i" + jade.cls([ "rheader-button-icon", "icon-" + data.buttons.search.icon + "" ], [ null, true ]) + "></i>");
             }

@@ -2,6 +2,8 @@
 
 ## Current
 
+## 0.13.6 (2015-06-22)
+
 * component `image`: new `max-height: 540px`
 * module `get-involved-list`: remove hands background by default (added a `hand` modifier if needed)
 * module `quick-access`: fixed video 1px bug on Firefox
