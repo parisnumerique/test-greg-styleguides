@@ -4,15 +4,14 @@
 
 * component `image`: new `max-height: 540px`
 * module `quick-access`: fixed video 1px bug on Firefox
+* module `rheader`:
+  * added `target` for `locales`
 
 ## 0.13.5 (2015-06-22)
 
-* module `quick-access`:
-  * do not add `secondary` modifier if `primary` is already set
-* module `rheader`:
-  * fixed current item
-* module `search-results-list`:
-  * fixed title when no result
+* module `quick-access`: do not add `secondary` modifier if `primary` is already set
+* module `rheader`: fixed current item
+* module `search-results-list`: fixed title when no result
 * module `sections-panel`:
   * fixed content animation
   * removed anchors from links in data
