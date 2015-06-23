@@ -2,6 +2,8 @@
 
 ## Current
 
+## 0.14.0 (2015-06-23)
+
 * component `jecoute`: improved CSS on small screens
 * component `buttons`: improved CSS on very small screens
 * modules `block-content-*`: behave as `three-col` on medium screens
