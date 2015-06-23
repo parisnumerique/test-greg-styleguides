@@ -160,28 +160,71 @@ Paris.rheader = (function(){
       $('body').hasClass('rheader-mobile-nav-open') ? closeMenu() : openMenu();
     }
 
-    function closeMenu() {
-      $overlay.velocity({
-        opacity: [0, 1]
-      }, {
-        duration: 350,
-        ease: 'ease-in-out',
-        display: 'none'
-      });
-      $('body').removeClass('rheader-mobile-nav-open');
-      mobileNavOpen = false;
-    }
-
     function openMenu() {
+      $('.rheader-mobile-nav .rheader-nav').get(0).scrollTop = 0;
+
+      if (!$el.hasClass('fixed')) {$buttonMenu.hide();}
       $overlay.velocity({
         opacity: [1, 0]
       }, {
         duration: 350,
         ease: 'ease-in-out',
-        display: 'block'
+        display: 'block',
+        complete: function(){
+          if (!$el.hasClass('fixed')) {$buttonMenu.css('transform', 'translateY(-' + (60 - $(document).scrollTop()) + 'px)').show();}
+        }
       });
       $('body').addClass('rheader-mobile-nav-open');
+
+      $(document).on('touchmove', function(e) {e.preventDefault();});
+      $(document).on('touchstart', '.rheader-mobile-nav .rheader-nav', onMobileNavTouchStart);
+      $(document).on('touchmove', '.rheader-mobile-nav .rheader-nav', onMobileNavTouchMove);
+
       mobileNavOpen = true;
+    }
+
+    function closeMenu() {
+      if (!$el.hasClass('fixed')) {$buttonMenu.hide();}
+      $overlay.velocity({
+        opacity: [0, 1]
+      }, {
+        duration: 350,
+        ease: 'ease-in-out',
+        display: 'none',
+        complete: function(){
+          if (!$el.hasClass('fixed')) {$buttonMenu.css('transform', 'translateY(0)').show();}
+        }
+      });
+      $('body').removeClass('rheader-mobile-nav-open');
+      $(document).off('touchstart touchmove');
+      mobileNavOpen = false;
+    }
+
+    function onMobileNavTouchStart(e) {
+      // If the element is scrollable (content overflows), then...
+      if (this.scrollHeight !== this.clientHeight) {
+        // If we're at the top, scroll down one pixel to allow scrolling up
+        if (this.scrollTop === 0) {
+          this.scrollTop = 1;
+        }
+        // If we're at the bottom, scroll up one pixel to allow scrolling down
+        if (this.scrollTop === this.scrollHeight - this.clientHeight) {
+          this.scrollTop = this.scrollHeight - this.clientHeight - 1;
+        }
+      }
+      // Check if we can scroll
+      this.allowUp = this.scrollTop > 0;
+      this.allowDown = this.scrollTop < (this.scrollHeight - this.clientHeight);
+      this.lastY = e.pageY;
+    }
+
+    function onMobileNavTouchMove(e) {
+      var up = event.pageY > this.lastY;
+      var down = !up;
+      this.lastY = event.pageY;
+
+      if ((up && this.allowUp) || (down && this.allowDown)) {e.stopPropagation();}
+      else {e.preventDefault();}
     }
 
     function enableMobileNav() {
@@ -200,6 +243,8 @@ Paris.rheader = (function(){
         $overlay = $('<div id="' + options.mobileNavId + '-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo($el);
       }
 
+      $buttonMenu.css('transform', 'translateY(0)').show();
+
       // Monitor scroll
       scrollMonitor = PubSub.subscribe('scroll.document', onScroll);
       $el.on('mouseenter', unfold);
@@ -212,13 +257,15 @@ Paris.rheader = (function(){
 
     function disableMobileNav() {
       // Remove nav
+      $buttonMenu.hide();
       var $nav = $('#'+options.mobileNavId);
       $nav.remove();
-      $el.removeClass('rheader-mobile-nav-open');
       $('body').removeClass('rheader-mobile-nav-open');
+      $(document).off('touchstart touchmove');
+      mobileNavOpen = false;
 
       if ($overlay) {
-        $overlay.remove();
+        $overlay.velocity('stop').remove();
         $overlay = null;
       }
 

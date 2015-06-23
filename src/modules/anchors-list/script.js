@@ -71,7 +71,7 @@ Paris.anchors = (function(){
     }
 
     function disableAnchors(){
-      PubSub.unsubscribe(onScroll);
+      PubSub.unsubscribe('scroll.document', onScroll);
       PubSub.unsubscribe('accordion:change');
     }
 
