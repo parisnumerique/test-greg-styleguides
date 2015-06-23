@@ -24,19 +24,17 @@ Paris.leftCol = (function(){
       }
       var $nextContent = $el.parents('.layout-content').next('.layout-content');
       if ($nextContent.length) {
-        var offsets = {
-          top: $('.layout-left-col').offset().top - rheaderHeight,
-          bottom: $('body').height() - $nextContent.offset().top + rheaderHeight
-        };
         unsetAffix();
         $el.affix({
-          offset: offsets
+          offset: {
+            top: $('.layout-left-col').offset().top - rheaderHeight,
+            bottom: $('body').height() - $nextContent.offset().top + rheaderHeight
+          }
         });
       }
     }
 
     function unsetAffix(){
-      $(window).off('.affix');
       $el.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
     }
 

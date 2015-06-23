@@ -54,7 +54,6 @@ Paris.buttonTop = (function(){
     }
 
     function unsetAffix() {
-      $(window).off('.affix');
       $el.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
     }
 

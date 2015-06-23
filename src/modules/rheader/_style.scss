@@ -160,7 +160,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
     &:after {transform: translateY(6px);}
   }
 
-  .rheader-mobile-nav-open & {
+  body.rheader-mobile-nav-open & {
     &:hover {background: $color-primary;}
 
     .rheader-button-text {
@@ -177,7 +177,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
 
 }
 
-.rheader-mobile-nav-open {
+body.rheader-mobile-nav-open {
   overflow: hidden;
 
   .rheader-button-menu {
@@ -300,7 +300,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
     width: 270px;
     z-index: 800;
 
-    .rheader-mobile-nav-open & {
+    body.rheader-mobile-nav-open & {
       transform: translateX(0);
     }
 
@@ -321,6 +321,7 @@ $rheader-height-large-extended: $rheader-height-large + 20px;
       position: absolute;
       top: $rheader-height-small;
       width: 100%;
+      -webkit-overflow-scrolling: touch;
     }
     .rheader-nav-item {
       border-top: 1px solid transparentize($white, 0.8);
