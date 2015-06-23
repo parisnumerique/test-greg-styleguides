@@ -1,8 +1,8 @@
 include ../news-card/news-card
 
 mixin news-list(data)
-  if data.modifiers && data.modifiers.indexOf("news-cards") != -1
-    if data.modifiers.indexOf("large-first-child") != -1
+  if data.modifiers && data.modifiers.indexOf("news-cards") !== -1
+    if data.modifiers.indexOf("large-first-child") !== -1
       .news-list(class=data.modifiers)
         each item, index in data.items.slice(0, 5)
           if index === 0

@@ -36,6 +36,34 @@ mixin rheader(data)
                 span.rheader-nav-item-back: span.rheader-nav-item-hover= item.hover
               else
                 span.rheader-nav-item-text= item.text
+    if data.modifiers && data.modifiers.indexOf("standalone") !== -1
+      +rheader-mobile-nav(data)
   if data.quick_access
     - quick_access = JSON.parse(JSON.stringify(data.quick_access)) // clone the data object
     +quick-access(quick_access)
+
+// This mixin is used to render the mobile-nav server-side, when JS is disabled client-side
+mixin rheader-mobile-nav(data)
+  .rheader-mobile-nav#rheader-mobile-nav
+    if data.locales
+      ul.rheader-locales
+        each locale in data.locales
+          li
+            a(href=locale.href class=(locale.current ? 'current' : null) target=locale.target)= locale.text
+    ul.rheader-nav
+      each item in data.items
+        if item.modifiers && item.modifiers.indexOf("account") !== -1 && data.buttons.around
+          li.rheader-nav-item.around
+            a.rheader-button.rheader-button-around(href=data.buttons.around.href title=data.buttons.around.text target=data.buttons.around.target)
+              if data.buttons.around.icon
+                i.rheader-button-icon(class="icon-#{data.buttons.around.icon}")
+                span.rheader-button-text= data.buttons.around.text
+        li.rheader-nav-item(class=item.modifiers class=(item.current ? "current" : null))
+          a(href=item.href target=item.target)
+            if item.icon
+              i.rheader-nav-item-icon(class="icon-#{item.icon}")
+            if item.hover
+              span.rheader-nav-item-front: span.rheader-nav-item-text= item.text
+              span.rheader-nav-item-back: span.rheader-nav-item-hover= item.hover
+            else
+              span.rheader-nav-item-text= item.text

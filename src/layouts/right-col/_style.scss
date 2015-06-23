@@ -17,34 +17,16 @@
 
   > .layout-wrapper {
     margin: 0 auto;
-
-    @include small {
-      padding: 0;
-    }
-
-    @include large-and-medium {
-      display: table;
-      width: $large-grid-width;
-    }
-  }
-
-  @include large-and-medium {
-    .layout-aside,
-    .layout-content {
-      display: table-cell;
-    }
+    padding: 0;
+    width: 100%;
   }
 
   .layout-aside {
     background-color: $grayF2;
     padding: 40px 0 40px 20px;
-    @include small {padding: 40px $small-page-padding;}
     position: relative;
     text-align: left;
     vertical-align: top;
-    @include large-and-medium {
-      width: 350px;
-    }
 
     &:after {
       background-color: $grayF2;
@@ -66,8 +48,51 @@
 
   .layout-content {
     padding: 40px 30px 40px 0;
-    @include large {width: 750px;}
-    @include medium {width: 590px;}
   }
 
+}
+
+
+@include small {
+  .layout-right-col {
+    > .layout-wrapper {
+      padding: 0;
+    }
+
+    .layout-aside {
+      padding: 40px $small-page-padding;
+    }
+  }
+}
+
+@include large {
+  .layout-right-col {
+    > .layout-wrapper {
+      display: table;
+      width: $large-grid-width;
+    }
+
+    .layout-aside,
+    .layout-content {
+      display: table-cell;
+    }
+
+    .layout-aside {
+      width: 350px;
+    }
+
+    .layout-content {
+      width: 750px;
+    }
+  }
+}
+
+@include medium {
+  .layout-right-col {
+    .layout-aside,
+    .layout-content {
+      padding-left: $small-page-padding;
+      padding-right: $small-page-padding;
+    }
+  }
 }

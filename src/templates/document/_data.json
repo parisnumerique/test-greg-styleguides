@@ -13,6 +13,7 @@
         }
       },
       "rheader": {
+        "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
           "text": "Paris"
@@ -488,7 +489,7 @@
           "name": "question"
         },
         "email": {
-          "placeholder": "Renseignez votre adresse e-mail"
+          "placeholder": "Votre adresse e-mail"
         },
         "button": "Valider",
         "thanks": "Merci, votre question a bien été transmise."

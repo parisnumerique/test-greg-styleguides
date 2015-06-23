@@ -62,6 +62,12 @@ Paris.quickAccess = (function(){
       }
 
       PubSub.subscribe('rheader.search.click', toggleSearch);
+
+      // Remove video on iOS
+      var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      if (iOS) {
+        $el.find('.quick-access-video').remove();
+      }
     }
 
     function initOptions() {

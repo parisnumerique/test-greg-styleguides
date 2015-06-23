@@ -6,9 +6,6 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
   font-size: 13px;
   font-weight: 300;
   background-color: $grayEE;
-  @media #{$footer-small} {
-    text-align: center;
-  }
 }
 
 .footer-wrapper {
@@ -19,11 +16,6 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
   display: block;
   margin: 0 0 20px;
   text-align: center;
-
-  @media #{$footer-medium-and-large} {
-    float: left;
-    margin: 0 50px 0 0;
-  }
 
   img {
     display: inline-block;
@@ -36,10 +28,6 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
   list-style: none;
   margin: 0;
   padding: 0;
-
-  @media #{$footer-medium-and-large} {
-    margin-left: 230px;
-  }
 
   a {
     color: $gray33;
@@ -62,18 +50,37 @@ $footer-medium-and-large: (min-width: $footer-small-breakpoint);
         border-bottom-width: 2px;
       }
     }
+  }
+}
 
-    @media #{$footer-small} {
-      margin: 20px 0;
-    }
+@media #{$footer-small} {
+  .footer {
+    text-align: center;
   }
 
-  @media #{$footer-small} {
+  .footer-links {
+
+    li.strong {
+      margin: 20px 0;
+    }
+
     > li + li {
       margin-top: 10px;
     }
+
   }
-  @media #{$footer-medium-and-large} {
+}
+
+
+@media #{$footer-medium-and-large} {
+  .footer-logo {
+    float: left;
+    margin: 0 50px 0 0;
+  }
+
+  .footer-links {
+    margin-left: 230px;
+
     > li {
       display: inline-block;
       margin-right: 20px;

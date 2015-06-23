@@ -65,3 +65,33 @@
     }
   }
 }
+
+@include medium {
+  .blocks-content-vertical {
+    overflow: hidden;
+
+    .block-content {
+      float: left;
+      margin-bottom: 50px;
+      padding-bottom: 0;
+      width: 48%;
+
+      & + .block-content {
+        border-top: 0;
+        margin-left: 4%;
+        padding-top: 0;
+      }
+
+      &:last-child {
+        clear: both;
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    .block-content-title {
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 8px;
+    }
+  }
+}

@@ -2,6 +2,27 @@
 
 ## Current
 
+## 0.14.0 (2015-06-23)
+
+* component `jecoute`: improved CSS on small screens
+* component `buttons`: improved CSS on very small screens
+* modules `block-content-*`: behave as `three-col` on medium screens
+* module `button-top`: added to small and medium screens
+* module `cross-content`: fixed font size for medium screens
+* module `news-card`: improved CSS on small screens
+* module `quick-access`:
+  * improved CSS on small screens
+  * remove video on iOS devices
+* module `rheader`:
+  * disable scroll monitoring when nav is opened
+  * fixed rendering with JS disabled on template `nav`
+* module `sections-panel`: fixed rendering on iPad
+* layout `right-col`: improved CSS on medium screens
+* template `error`: fixed XSS fault
+* template `subhome-get-involved`: added modifier `gray-background` to `links_group`
+* templates using component `jecoute`: shortened email field placeholder
+* all templates except `home`, `error` and `nav`: added `fixed` modifier to `rheader`
+
 ## 0.13.6 (2015-06-22)
 
 * component `image`: new `max-height: 540px`
@@ -10,7 +31,7 @@
 * module `rheader`:
   * added `target` for `locales`
   * now follows search button link
-* layout `left-col`: fixed bug with
+* layout `left-col`: fixed JS bug
 * template `search`:
   * show popular searches when search is empty
   * show `rheader` search button as always active (data changed to add `"current": true`)

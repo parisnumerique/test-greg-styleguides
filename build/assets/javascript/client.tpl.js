@@ -46,7 +46,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -381,8 +381,8 @@
     // news-list.jade:news-list compiled template
     templatizer["news-list"]["news-list"] = function tmpl_news_list_news_list(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        if (data.modifiers && data.modifiers.indexOf("news-cards") != -1) {
-            if (data.modifiers.indexOf("large-first-child") != -1) {
+        if (data.modifiers && data.modifiers.indexOf("news-cards") !== -1) {
+            if (data.modifiers.indexOf("large-first-child") !== -1) {
                 buf.push("<div" + jade.cls([ "news-list", data.modifiers ], [ null, true ]) + ">");
                 (function() {
                     var $obj = data.items.slice(0, 5);
@@ -549,7 +549,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -639,7 +639,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");

@@ -24,4 +24,11 @@
     }
   }
 
+  @media (max-width: 450px) {
+    .buttons-items > li {
+      display: block;
+      .button {width: 100%;}
+    }
+  }
+
 }

@@ -83,7 +83,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -357,7 +357,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -1058,7 +1058,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -1166,7 +1166,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -1396,7 +1396,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -1567,7 +1567,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -1589,10 +1589,10 @@
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.cls([ "error-heading", data.modifiers ], [ null, true ]) + "><div" + jade.attr("style", data.background ? "background-image: url(" + data.background + ")" : "", true, false) + ' class="error-heading-wrapper layout-wrapper"><a id="logo"' + jade.attr("href", data.logo.href, true, false) + ' class="error-heading-logo"><div class="error-heading-logo-nef"></div><div class="error-heading-logo-paris">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + '</div></a><div class="error-heading-content">');
         if (data.title) {
-            buf.push("<h1>" + (null == (jade_interp = data.title) ? "" : jade_interp) + "</h1>");
+            buf.push("<h1>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h1>");
         }
         if (data.trace) {
-            buf.push('<p class="error-heading-trace">' + (null == (jade_interp = data.trace) ? "" : jade_interp) + "</p>");
+            buf.push('<p class="error-heading-trace">' + jade.escape(null == (jade_interp = data.trace) ? "" : jade_interp) + "</p>");
         }
         if (data.button) {
             button = JSON.parse(JSON.stringify(data.button || []));
@@ -1765,7 +1765,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -2144,8 +2144,8 @@
     // news-list.jade:news-list compiled template
     templatizer["news-list"]["news-list"] = function tmpl_news_list_news_list(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        if (data.modifiers && data.modifiers.indexOf("news-cards") != -1) {
-            if (data.modifiers.indexOf("large-first-child") != -1) {
+        if (data.modifiers && data.modifiers.indexOf("news-cards") !== -1) {
+            if (data.modifiers.indexOf("large-first-child") !== -1) {
                 buf.push("<div" + jade.cls([ "news-list", data.modifiers ], [ null, true ]) + ">");
                 (function() {
                     var $obj = data.items.slice(0, 5);
@@ -2340,7 +2340,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -2430,7 +2430,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -2464,7 +2464,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -2615,7 +2615,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -2682,7 +2682,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -2802,7 +2802,9 @@
         var jade_mixins = {};
         var jade_interp;
         var locals_for_with = locals || {};
-        (function(JSON, around, button, modifiers, quick_access) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "around" in locals_for_with ? locals_for_with.around : typeof around !== "undefined" ? around : undefined, "button" in locals_for_with ? locals_for_with.button : typeof button !== "undefined" ? button : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined, "quick_access" in locals_for_with ? locals_for_with.quick_access : typeof quick_access !== "undefined" ? quick_access : undefined);
+        (function(JSON, around, button, modifiers, quick_access) {
+            buf.push("<!-- This mixin is used to render the mobile-nav server-side, when JS is disabled client-side-->");
+        }).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "around" in locals_for_with ? locals_for_with.around : typeof around !== "undefined" ? around : undefined, "button" in locals_for_with ? locals_for_with.button : typeof button !== "undefined" ? button : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined, "quick_access" in locals_for_with ? locals_for_with.quick_access : typeof quick_access !== "undefined" ? quick_access : undefined);
         return buf.join("");
     };
 
@@ -2823,7 +2825,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -2890,7 +2892,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -3084,11 +3086,93 @@
                 }
             }
         }).call(this);
-        buf.push("</ul></div></header>");
+        buf.push("</ul></div>");
+        if (data.modifiers && data.modifiers.indexOf("standalone") !== -1) {
+            buf.push(templatizer["rheader"]["rheader-mobile-nav"](data));
+        }
+        buf.push("</header>");
         if (data.quick_access) {
             quick_access = JSON.parse(JSON.stringify(data.quick_access));
             buf.push(templatizer["rheader"]["quick-access"](quick_access));
         }
+        return buf.join("");
+    };
+
+
+    // rheader.jade:rheader-mobile-nav compiled template
+    templatizer["rheader"]["rheader-mobile-nav"] = function tmpl_rheader_rheader_mobile_nav(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push('<div id="rheader-mobile-nav" class="rheader-mobile-nav">');
+        if (data.locales) {
+            buf.push('<ul class="rheader-locales">');
+            (function() {
+                var $obj = data.locales;
+                if ("number" == typeof $obj.length) {
+                    for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                        var locale = $obj[$index];
+                        buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.attr("target", locale.target, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
+                    }
+                } else {
+                    var $l = 0;
+                    for (var $index in $obj) {
+                        $l++;
+                        var locale = $obj[$index];
+                        buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.attr("target", locale.target, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">" + jade.escape(null == (jade_interp = locale.text) ? "" : jade_interp) + "</a></li>");
+                    }
+                }
+            }).call(this);
+            buf.push("</ul>");
+        }
+        buf.push('<ul class="rheader-nav">');
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    if (item.modifiers && item.modifiers.indexOf("account") !== -1 && data.buttons.around) {
+                        buf.push('<li class="rheader-nav-item around"><a' + jade.attr("href", data.buttons.around.href, true, false) + jade.attr("title", data.buttons.around.text, true, false) + jade.attr("target", data.buttons.around.target, true, false) + ' class="rheader-button rheader-button-around">');
+                        if (data.buttons.around.icon) {
+                            buf.push("<i" + jade.cls([ "rheader-button-icon", "icon-" + data.buttons.around.icon + "" ], [ null, true ]) + '></i><span class="rheader-button-text">' + jade.escape(null == (jade_interp = data.buttons.around.text) ? "" : jade_interp) + "</span>");
+                        }
+                        buf.push("</a></li>");
+                    }
+                    buf.push("<li" + jade.cls([ "rheader-nav-item", item.modifiers, item.current ? "current" : null ], [ null, true, true ]) + "><a" + jade.attr("href", item.href, true, false) + jade.attr("target", item.target, true, false) + ">");
+                    if (item.icon) {
+                        buf.push("<i" + jade.cls([ "rheader-nav-item-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
+                    }
+                    if (item.hover) {
+                        buf.push('<span class="rheader-nav-item-front"><span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</span></span><span class="rheader-nav-item-back"><span class="rheader-nav-item-hover">' + jade.escape(null == (jade_interp = item.hover) ? "" : jade_interp) + "</span></span>");
+                    } else {
+                        buf.push('<span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span>");
+                    }
+                    buf.push("</a></li>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    if (item.modifiers && item.modifiers.indexOf("account") !== -1 && data.buttons.around) {
+                        buf.push('<li class="rheader-nav-item around"><a' + jade.attr("href", data.buttons.around.href, true, false) + jade.attr("title", data.buttons.around.text, true, false) + jade.attr("target", data.buttons.around.target, true, false) + ' class="rheader-button rheader-button-around">');
+                        if (data.buttons.around.icon) {
+                            buf.push("<i" + jade.cls([ "rheader-button-icon", "icon-" + data.buttons.around.icon + "" ], [ null, true ]) + '></i><span class="rheader-button-text">' + jade.escape(null == (jade_interp = data.buttons.around.text) ? "" : jade_interp) + "</span>");
+                        }
+                        buf.push("</a></li>");
+                    }
+                    buf.push("<li" + jade.cls([ "rheader-nav-item", item.modifiers, item.current ? "current" : null ], [ null, true, true ]) + "><a" + jade.attr("href", item.href, true, false) + jade.attr("target", item.target, true, false) + ">");
+                    if (item.icon) {
+                        buf.push("<i" + jade.cls([ "rheader-nav-item-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
+                    }
+                    if (item.hover) {
+                        buf.push('<span class="rheader-nav-item-front"><span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '</span></span><span class="rheader-nav-item-back"><span class="rheader-nav-item-hover">' + jade.escape(null == (jade_interp = item.hover) ? "" : jade_interp) + "</span></span>");
+                    } else {
+                        buf.push('<span class="rheader-nav-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</span>");
+                    }
+                    buf.push("</a></li>");
+                }
+            }
+        }).call(this);
+        buf.push("</ul></div>");
         return buf.join("");
     };
 
@@ -3119,7 +3203,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -3182,7 +3266,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -3240,7 +3324,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -3445,7 +3529,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -3564,7 +3648,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -3652,7 +3736,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
@@ -4102,7 +4186,7 @@
                     return jade_interp[i] ? jade.escape(cls) : cls;
                 })))
             }, attributes ]), false) + ">");
-            if (modifiers && modifiers.indexOf("marker") != -1) {
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
                 buf.push('<i class="icon icon-marker"></i>');
             } else if (data.icon) {
                 buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
