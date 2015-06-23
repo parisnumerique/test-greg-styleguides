@@ -5,7 +5,7 @@ mixin button(data)
     if data.icon
       - modifiers.push("icon")
     a.button(href=data.href title=data.title target=data.target class=modifiers)&attributes(attributes)
-      if modifiers && modifiers.indexOf("marker") != -1
+      if modifiers && modifiers.indexOf("marker") !== -1
         i.icon.icon-marker
       else if data.icon
         i.icon(class="icon-#{data.icon}")

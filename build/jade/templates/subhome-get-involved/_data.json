@@ -13,6 +13,7 @@
         }
       },
       "rheader": {
+        "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
           "text": "Paris"
@@ -179,11 +180,11 @@
           }
         ]
       },
-      "act": {
-        "heading": {
-          "title": "Agissez"
-        },
-        "links_group": {
+      "links_group_heading": {
+        "title": "Agissez"
+      },
+      "links_groups": [
+        {
           "href": "../get-involved",
           "background": "./act.jpg",
           "title": "Impliquez-vous",
@@ -216,7 +217,7 @@
             }
           ]
         }
-      },
+      ],
       "now": {
         "heading": {
           "title": "En ce moment",
