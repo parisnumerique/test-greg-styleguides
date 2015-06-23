@@ -90,9 +90,24 @@
     width: 33.3333%;
   }
 
+}
+
+
+@include large {
+
   .cross-content-text {
     font-size: 30px;
     line-height: 38px;
+  }
+
+}
+
+
+@include medium {
+
+  .cross-content-text {
+    font-size: 24px;
+    line-height: 30px;
   }
 
 }

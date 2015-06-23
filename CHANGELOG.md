@@ -3,14 +3,21 @@
 ## Current
 
 * component `jecoute`: improved CSS on small screens
+* component `buttons`: improved CSS on very small screens
+* modules `block-content-*`: behave as `three-col` on medium screens
 * module `button-top`: added to small and medium screens
+* module `cross-content`: fixed font size for medium screens
 * module `news-card`: improved CSS on small screens
-* module `quick-access`: improved CSS on small screens
+* module `quick-access`:
+  * improved CSS on small screens
+  * remove video on iOS devices
 * module `rheader`:
   * disable scroll monitoring when nav is opened
   * fixed rendering with JS disabled on template `nav`
-* modules `block-content-*`: behave as `three-col` on medium screens
+* module `sections-panel`: fixed rendering on iPad
 * layout `right-col`: improved CSS on medium screens
+* template `error`: fixed XSS fault
+* template `subhome-get-involved`: added modifier `gray-background` to `links_group`
 * templates using component `jecoute`: shortened email field placeholder
 * all templates except `home`, `error` and `nav`: added `fixed` modifier to `rheader`
 
