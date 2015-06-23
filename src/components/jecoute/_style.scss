@@ -36,7 +36,7 @@
   }
 
   .jecoute-content {
-    padding: 0 42px 25px 40px;
+    padding: 0 20px 20px 20px;
   }
 
   .jecoute-text {
@@ -80,4 +80,11 @@
       padding: 10px 20px;
     }
   }
+
+  @include large-and-medium {
+    .jecoute-content {
+      padding: 0 42px 25px 40px;
+    }
+  }
+
 }

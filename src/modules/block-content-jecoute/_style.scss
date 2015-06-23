@@ -9,12 +9,10 @@
     max-width: 360px;
   }
 
-
   .block-content-items {
     position: relative;
     min-height: 150px;
   }
-
 
   .block-content-item {
     transition: 2s ease opacity;
@@ -86,14 +84,19 @@
   }
 }
 
-
 .blocks-content-vertical .block-content-jecoute {
   .block-content-items + .block-content-button {
     position: absolute;
     bottom: 20px;
+    @include medium {bottom: 0;}
   }
 }
 
+@include medium {
+  .block-content-jecoute .block-content-items {
+    min-height: 165px;
+  }
+}
 
 @include small {
   .blocks-content-vertical .block-content-jecoute {

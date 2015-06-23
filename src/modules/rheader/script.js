@@ -80,7 +80,9 @@ Paris.rheader = (function(){
     }
 
     function onScroll(e, data) {
-      if (lastScrollY !== 0) {
+      if (data.scrollTop === 0) {
+        unfold();
+      } else if (lastScrollY !== 0) {
         if (mobileNavOpen) {return;}
         if (data.scrollTop < 200) {
           unfold();
@@ -184,15 +186,19 @@ Paris.rheader = (function(){
 
     function enableMobileNav() {
       // Create nav
-      var $nav = $('<div id="'+options.mobileNavId+'" class="rheader-mobile-nav"></div>');
-      $el.find('.rheader-locales').clone().appendTo($nav);
-      $el.find('.rheader-nav').clone().appendTo($nav);
-      $el.find('.rheader-button-around').clone()
-        .insertBefore($nav.find('.rheader-nav-item.account'))
-        .wrap('<li class="rheader-nav-item around"></li>');
-      $el.append($nav);
+      if ($el.find('.rheader-mobile-nav').length === 0) {
+        var $nav = $('<div id="'+options.mobileNavId+'" class="rheader-mobile-nav"></div>');
+        $el.find('.rheader-locales').clone().appendTo($nav);
+        $el.find('.rheader-nav').clone().appendTo($nav);
+        $el.find('.rheader-button-around').clone()
+          .insertBefore($nav.find('.rheader-nav-item.account'))
+          .wrap('<li class="rheader-nav-item around"></li>');
+        $el.append($nav);
+      }
 
-      $overlay = $('<div id="'+options.mobileNavId+'-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo($el);
+      if ($el.find('.rheader-mobile-nav-overlay').length === 0) {
+        $overlay = $('<div id="' + options.mobileNavId + '-overlay" class="rheader-mobile-nav-overlay"></div>').appendTo($el);
+      }
 
       // Monitor scroll
       scrollMonitor = PubSub.subscribe('scroll.document', onScroll);

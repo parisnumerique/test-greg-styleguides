@@ -2,10 +2,17 @@
 
 ## Current
 
+* component `jecoute`: improved CSS on small screens
+* module `button-top`: added to small and medium screens
 * module `news-card`: improved CSS on small screens
 * module `quick-access`: improved CSS on small screens
 * module `rheader`:
   * disable scroll monitoring when nav is opened
+  * fixed rendering with JS disabled on template `nav`
+* modules `block-content-*`: behave as `three-col` on medium screens
+* layout `right-col`: improved CSS on medium screens
+* templates using component `jecoute`: shortened email field placeholder
+* all templates except `home`, `error` and `nav`: added `fixed` modifier to `rheader`
 
 ## 0.13.6 (2015-06-22)
 

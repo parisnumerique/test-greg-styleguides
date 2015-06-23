@@ -13,6 +13,7 @@
         }
       },
       "rheader": {
+        "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
           "text": "Paris"
@@ -603,6 +604,7 @@
         }
       },
       "rheader": {
+        "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
           "text": "Paris"
@@ -1109,6 +1111,7 @@
         }
       },
       "rheader": {
+        "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
           "text": "Paris"

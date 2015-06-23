@@ -18,17 +18,26 @@ Paris.buttonTop = (function(){
 
       $(window).on('resize', throttle(setAffix, 1000));
 
-      PubSub.subscribe('responsive.small.enable', unsetAffix);
-      PubSub.subscribe('responsive.small.disable', setAffix);
+      setAffix();
     }
 
     function onClick(e) {
       e.preventDefault();
-      $("html").velocity("scroll", {
-        duration: 1500,
-        offset: 0,
-        mobileHA: false
-      });
+      if (Paris.responsive.is('small')) {
+        // instant scroll
+        window.scrollTo(0, 0);
+        window.location.hash = "";
+        PubSub.publish('scroll.document', {
+          scrollTop: 0
+        });
+      } else {
+        // animated scroll
+        $("html").velocity("scroll", {
+          duration: 1500,
+          offset: 0,
+          mobileHA: false
+        });
+      }
     }
 
     function onScroll(e, data) {

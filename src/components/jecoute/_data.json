@@ -12,7 +12,7 @@
         "name": "question"
       },
       "email": {
-        "placeholder": "Renseignez votre adresse e-mail"
+        "placeholder": "Votre adresse e-mail"
       },
       "button": "Valider",
       "thanks": "Merci, votre question a bien été transmise."
@@ -30,7 +30,7 @@
         "value": "Je n'ai pas trouvé la réponse à ma question..."
       },
       "email": {
-        "placeholder": "Renseignez votre adresse e-mail",
+        "placeholder": "Votre adresse e-mail",
         "value": "john.doe@gmail.com"
       },
       "button": "Valider",
