@@ -2,6 +2,9 @@
 
 ## Current
 
+
+## 1.0.0 (2015-06-23)
+
 * module `button-top`: display it under `rheader`
 * module `rheader`:
   * prevent scroll on iOS, when mobile nav is open
