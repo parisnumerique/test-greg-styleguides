@@ -2,6 +2,13 @@
 
 ## Current
 
+* module `button-top`:
+  * fix the `rheader` when scrolling to the top
+  * reset the hash when scrolling to the top
+* module `rheader`:
+  * prevent click on buttons when folded
+* module `search-field`:
+  * enlarge input when the `around` button is hidden
 
 ## 1.0.0 (2015-06-23)
 

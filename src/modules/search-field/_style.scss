@@ -70,6 +70,13 @@
   }
 }
 
+@include medium {
+  .search-field-input[type="text"] {
+    .quick-access-search & {width: 74%;}
+    .quick-access-search .search-field.with-around & {width: 60%;}
+  }
+}
+
 @include large-and-medium {
   .search-field-input[type="text"],
   .search-field-submit {
@@ -79,6 +86,9 @@
 
   .search-field-input[type="text"] {
     padding: 0 20px;
+    width: 600px;
+  }
+  .search-field.with-around .search-field-input[type="text"] {
     width: 530px;
   }
 

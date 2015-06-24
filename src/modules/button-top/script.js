@@ -27,15 +27,16 @@ Paris.buttonTop = (function(){
         // instant scroll
         window.scrollTo(0, 0);
         window.location.hash = "";
-        PubSub.publish('scroll.document', {
-          scrollTop: 0
-        });
+        $(window).trigger('scroll');
       } else {
         // animated scroll
         $("html").velocity("scroll", {
           duration: 1500,
           offset: 0,
-          mobileHA: false
+          mobileHA: false,
+          complete: function(){
+            window.location.hash = "";
+          }
         });
       }
     }
