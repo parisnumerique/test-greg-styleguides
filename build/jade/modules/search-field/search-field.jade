@@ -1,7 +1,9 @@
 include ../button/button
 
 mixin search-field(data)
-  form.search-field(class=data.modifiers action=data.action method=data.method ? data.method : "get" autocomplete="off")
+  - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - if (data.around) {modifiers.push("with-around");}
+  form.search-field(class=modifiers action=data.action method=data.method ? data.method : "get" autocomplete="off")
     input.search-field-input(id=data.input.id type="text" name="search" placeholder=data.input.placeholder title=data.input.placeholder value=data.input.value)
     button.search-field-submit(type="submit")
       if data.submit.icon

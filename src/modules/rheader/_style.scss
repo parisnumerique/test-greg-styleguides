@@ -281,6 +281,10 @@ body.rheader-mobile-nav-open {
         opacity: 0;
         transition-delay: 0.5s;
       }
+
+      .rheader-button {
+        pointer-events: none;
+      }
     }
   }
 }
