@@ -2,6 +2,9 @@
 
 ## Current
 
+
+## 1.0.1 (2015-06-24)
+
 * module `button-top`:
   * fix the `rheader` when scrolling to the top
   * reset the hash when scrolling to the top
