@@ -2,6 +2,7 @@
 
 ## Current
 
+* composant `table`: improved CSS
 
 ## 1.0.1 (2015-06-24)
 
