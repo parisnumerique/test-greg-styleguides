@@ -2484,7 +2484,11 @@
     // poll.jade:search-field compiled template
     templatizer["poll"]["search-field"] = function tmpl_poll_search_field(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", data.modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
+        if (data.around) {
+            modifiers.push("with-around");
+        }
+        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
@@ -2702,7 +2706,11 @@
     // quick-access.jade:search-field compiled template
     templatizer["quick-access"]["search-field"] = function tmpl_quick_access_search_field(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", data.modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
+        if (data.around) {
+            modifiers.push("with-around");
+        }
+        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
@@ -2912,7 +2920,11 @@
     // rheader.jade:search-field compiled template
     templatizer["rheader"]["search-field"] = function tmpl_rheader_search_field(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", data.modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
+        if (data.around) {
+            modifiers.push("with-around");
+        }
+        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
@@ -3223,7 +3235,11 @@
     // search-field.jade:search-field compiled template
     templatizer["search-field"]["search-field"] = function tmpl_search_field_search_field(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", data.modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
+        if (data.around) {
+            modifiers.push("with-around");
+        }
+        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
