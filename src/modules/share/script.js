@@ -30,6 +30,7 @@ Paris.share = (function(){
 
     function onClickLink(e){
       e.preventDefault();
+      e.stopPropagation();
       openInNewWindow($(this).attr('href'));
     }
 

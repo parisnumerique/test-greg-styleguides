@@ -3,6 +3,7 @@
 ## Current
 
 * composant `table`: improved CSS
+* module `share`: fixed bug when a tweet is embedded in the page
 
 ## 1.0.1 (2015-06-24)
 
