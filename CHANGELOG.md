@@ -4,6 +4,7 @@
 
 * composant `table`: improved CSS
 * module `jumbotron`: fixed CSS bug in Firefox 24
+* module `pagination`: fixed bug when current = 3 and total = 3
 * module `rheader`:
   * fixed get-involved button in IE9 and Firefox 24
   * put variables in separate file to allow import
