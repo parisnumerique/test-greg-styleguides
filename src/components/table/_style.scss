@@ -12,11 +12,14 @@
 
   table {
     width: 770px;
+
+    p {margin: 0;}
   }
 
   tr > th,
   tr > td {
     border-left: 1px solid $grayCC;
+    padding: 15px 5px;
 
     &:first-child {border-left: none;}
   }
@@ -41,7 +44,6 @@
     color: $gray33;
     font-size: 14px;
     font-weight: 300;
-    padding: 30px;
     text-align: center;
 
     &.emphasis {
@@ -49,7 +51,7 @@
       color: $color-secondary-variant;
       font-size: 15px;
       font-weight: 500;
-      padding: 0 30px;
+      padding: 10px 30px;
       text-align: left;
     }
   }

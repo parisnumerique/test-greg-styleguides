@@ -2,3 +2,22 @@
 .gradient {
   filter: none;
 }
+
+// Fix 3d transforms on nav buttons
+@import "../modules/rheader/_variables";
+
+@media (min-width: $rheader-large-min) {
+  .rheader-nav-item {
+    // modifiers
+    &.get-involved {
+      .rheader-nav-item-back {
+        display: none;
+      }
+      &:hover .rheader-nav-item-back,
+      &.current .rheader-nav-item-back {
+        display: block;
+      }
+
+    }
+  }
+}

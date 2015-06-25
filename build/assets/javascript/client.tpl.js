@@ -485,7 +485,7 @@
         items_before = function() {
             if (current < 3) {
                 return 1;
-            } else if (current > total - 1) {
+            } else if (current > total - 1 && total > 3) {
                 return 3;
             } else {
                 return 2;
