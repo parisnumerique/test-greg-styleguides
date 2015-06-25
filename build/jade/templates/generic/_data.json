@@ -141,6 +141,23 @@
           }
         }
       ],
+      "jecoute": {
+        "title": "Paris j'écoute",
+        "text": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.",
+        "form": {
+          "action": "#",
+          "method": "post"
+        },
+        "textarea": {
+          "placeholder": "Quelle information cherchiez-vous dans cette rubrique ?",
+          "name": "question"
+        },
+        "email": {
+          "placeholder": "Votre adresse e-mail"
+        },
+        "button": "Valider",
+        "thanks": "Merci, votre question a bien été transmise."
+      },
       "cross_content": {
         "items": [
           {

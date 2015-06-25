@@ -37,6 +37,7 @@ append content
           .aside-wrapper
             +anchors-list(data.aside.anchors_list)
         .layout-content.components
+          - if (data.jecoute) {data.components.push({"type": "jecoute", "data": data.jecoute});}
           each component in data.components
             +#{component.type}(component.data)
 
