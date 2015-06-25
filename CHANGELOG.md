@@ -3,6 +3,9 @@
 ## Current
 
 * composant `table`: improved CSS
+* module `rheader`:
+  * fixed get-involved button in IE9
+  * put variables in separate file to allow import
 * module `share`: fixed bug when a tweet is embedded in the page
 
 ## 1.0.1 (2015-06-24)
