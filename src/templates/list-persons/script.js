@@ -131,7 +131,6 @@ Paris.listPersons = (function(){
 
       if (!data) {
         // No search
-        // TODO show default
       } else if (data.nbHits === 0) {
         // Search with no results
         $results.html("<h2>" + Paris.i18n.t("search_results/no_result") + "</h2>");
@@ -218,7 +217,8 @@ Paris.listPersons = (function(){
 
             var facetArray = map(data.facets[facet], function(number, name){ return {
               value: name,
-              text: name.replace(" arrondissement", "")
+              text: name.replace(" arrondissement", ""),
+              number: Paris.i18n.formatNumber(number)
             }; });
             block_aside_checkboxes_data.items = sortBy(facetArray, function(o){
               return parseInt(o.value, 10);
@@ -229,7 +229,7 @@ Paris.listPersons = (function(){
             $.each(data.facets[facet], function (name, number) {
               block_aside_checkboxes_data.items.push({
                 value: name,
-                text: name.replace(" arrondissement", ""),
+                text: name,
                 number: Paris.i18n.formatNumber(number)
               });
             });

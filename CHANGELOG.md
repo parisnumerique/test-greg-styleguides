@@ -8,6 +8,7 @@
   * fixed get-involved button in IE9 and Firefox 24
   * put variables in separate file to allow import
 * module `share`: fixed bug when a tweet is embedded in the page
+* template `list-persons`: added number to `secteur` facet
 
 ## 1.0.1 (2015-06-24)
 
