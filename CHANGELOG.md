@@ -2,6 +2,8 @@
 
 ## Current
 
+## 1.0.2 (2015-06-25)
+
 * composant `table`: improved CSS
 * module `jumbotron`: fixed CSS bug in Firefox 24
 * module `pagination`: fixed bug when current = 3 and total = 3
