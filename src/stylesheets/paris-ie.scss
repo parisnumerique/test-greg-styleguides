@@ -10,12 +10,6 @@
   .rheader-nav-item {
     // modifiers
     &.get-involved {
-      .rheader-nav-item-front,
-      .rheader-nav-item-back {
-        left: auto;
-        position: absolute;
-        right: auto;
-      }
       .rheader-nav-item-back {
         display: none;
       }
