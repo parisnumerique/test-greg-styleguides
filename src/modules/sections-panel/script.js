@@ -129,6 +129,8 @@ Paris.sectionsPanel = (function(){
         title: $currentNavItemsLink.text()
       });
 
+      $('title').text($currentNavItemsLink.data('pageTitle'));
+
       if (Modernizr.history) {
         history.replaceState({}, $currentNavItemsLink.text(), $currentNavItemsLink.attr("href"));
       }
@@ -200,6 +202,9 @@ Paris.sectionsPanel = (function(){
           text: $currentNavItemsLink.text()
         }
       });
+
+
+      $('title').text($currentSubnavSectionsLink.data('pageTitle'));
 
       if (Modernizr.history) {
         history.replaceState({}, currentTitle, $currentSubnavSectionsLink.attr("href"));
