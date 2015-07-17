@@ -38,7 +38,8 @@ module.exports = {
       'pagination',
       'person-block',
       'search-results-list',
-      'share'
+      'share',
+      'postit'
     ]
   },
 
