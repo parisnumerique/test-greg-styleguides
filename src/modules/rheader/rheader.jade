@@ -23,7 +23,7 @@ mixin rheader(data)
           if data.buttons.around.icon
             i.rheader-button-icon(class="icon-#{data.buttons.around.icon}")
             span.rheader-button-text= data.buttons.around.text
-      a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target)
+      a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target rel="nofollow")
         span.rheader-button-text= data.buttons.menu.text
       ul.rheader-nav
         each item in data.items

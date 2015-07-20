@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `rheader`: added `rel="nofollow"` to menu button
 * module `sections-panel`: refresh page `title` on navigation
 * template `single-news`: added `jecoute` component
 
