@@ -5,6 +5,8 @@
 * module `rheader`: added `rel="nofollow"` to menu button
 * module `sections-panel`: refresh page `title` on navigation
 * template `single-news`: added `jecoute` component
+* template `search`: added meta tag `robots`
+* added ability to add meta tags to wrapper_prod
 
 ## 1.0.2 (2015-06-25)
 
