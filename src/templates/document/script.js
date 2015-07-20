@@ -1,17 +1,18 @@
 'use strict';
 
-// var jade = require('jade');
-// var Cookies = require('js-cookie');
+var Cookies = require('js-cookie');
 
 var Paris = window.Paris;
 
 $(document).ready(function(){
-  var pageId = window.location.href.split('-').pop();
-  $.ajax({
-    url: '/postit/' + pageId,
-    type: 'get',
-    success: renderPostIt
-  });
+  if(Cookies.get('pcuid')) {
+    var pageId = $('body').data('pageid');
+    $.ajax({
+      url: '/postit/' + pageId,
+      type: 'get',
+      success: renderPostIt
+    });
+  }
 });
 
 
