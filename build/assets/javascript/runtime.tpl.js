@@ -2261,7 +2261,7 @@
         var jade_mixins = {};
         var jade_interp;
         var locals_for_with = locals || {};
-        (function(current, item, items_after, items_before, next, parseInt, prev, total) {}).call(this, "current" in locals_for_with ? locals_for_with.current : typeof current !== "undefined" ? current : undefined, "item" in locals_for_with ? locals_for_with.item : typeof item !== "undefined" ? item : undefined, "items_after" in locals_for_with ? locals_for_with.items_after : typeof items_after !== "undefined" ? items_after : undefined, "items_before" in locals_for_with ? locals_for_with.items_before : typeof items_before !== "undefined" ? items_before : undefined, "next" in locals_for_with ? locals_for_with.next : typeof next !== "undefined" ? next : undefined, "parseInt" in locals_for_with ? locals_for_with.parseInt : typeof parseInt !== "undefined" ? parseInt : undefined, "prev" in locals_for_with ? locals_for_with.prev : typeof prev !== "undefined" ? prev : undefined, "total" in locals_for_with ? locals_for_with.total : typeof total !== "undefined" ? total : undefined);
+        (function(item, parseInt) {}).call(this, "item" in locals_for_with ? locals_for_with.item : typeof item !== "undefined" ? item : undefined, "parseInt" in locals_for_with ? locals_for_with.parseInt : typeof parseInt !== "undefined" ? parseInt : undefined);
         return buf.join("");
     };
 
@@ -2269,11 +2269,11 @@
     templatizer["pagination"]["pagination"] = function tmpl_pagination_pagination(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push('<nav class="pagination">');
-        current = parseInt(data.current) || 1;
-        total = parseInt(data.total) || 0;
-        prev = current - 1;
-        next = current + 1;
-        items_before = function() {
+        var current = parseInt(data.current) || 1;
+        var total = parseInt(data.total) || 0;
+        var prev = current - 1;
+        var next = current + 1;
+        var items_before = function() {
             if (current < 3) {
                 return 1;
             } else if (current > total - 1 && total > 3) {
@@ -2282,7 +2282,7 @@
                 return 2;
             }
         };
-        items_after = function() {
+        var items_after = function() {
             if (current < 3) {
                 return current * -1 + 5;
             } else if (current > total - 2) {
@@ -2293,19 +2293,25 @@
         };
         buf.push("<ul>");
         if (current !== 1) {
-            buf.push('<li class="previous"><a' + jade.attr("href", data.url.replace("${page}", prev), true, false) + jade.attr("aria-label", data.text.prev, true, false) + ' data-page="prev"><span aria-hidden="true">&lt;</span></a></li>');
+            buf.push('<li class="previous">');
+            var href = prev === 1 ? data.base_url : data.url.replace("${page}", prev);
+            buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("aria-label", data.text.prev, true, false) + ' data-page="prev"><span aria-hidden="true">&lt;</span></a></li>');
             item = current - items_before();
             while (item < current) {
-                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", data.url.replace("${page}", item), true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
+                var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
                 item++;
             }
         }
-        buf.push('<li class="current"><a' + jade.attr("href", data.url.replace("${page}", current), true, false) + jade.attr("data-page", current, true, false) + ">" + jade.escape(null == (jade_interp = current) ? "" : jade_interp) + "</a></li>");
+        buf.push('<li class="current">');
+        var href = current === 1 ? data.base_url : data.url.replace("${page}", current);
+        buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("data-page", current, true, false) + ">" + jade.escape(null == (jade_interp = current) ? "" : jade_interp) + "</a></li>");
         if (current !== total) {
             item = current;
             while (item < total && item < current + items_after()) {
                 item++;
-                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", data.url.replace("${page}", item), true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
+                var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
             }
             buf.push('<li class="next"><a' + jade.attr("href", data.url.replace("${page}", next), true, false) + jade.attr("aria-label", data.text.next, true, false) + ' data-page="next"><span aria-hidden="true">&gt;</span></a></li>');
         }
@@ -3063,7 +3069,7 @@
             }
             buf.push("</a>");
         }
-        buf.push('<a id="nav-toggle"' + jade.attr("href", data.buttons.menu.href, true, false) + jade.attr("target", data.buttons.menu.target, true, false) + ' class="rheader-button rheader-button-menu"><span class="rheader-button-text">' + jade.escape(null == (jade_interp = data.buttons.menu.text) ? "" : jade_interp) + '</span></a><ul class="rheader-nav">');
+        buf.push('<a id="nav-toggle"' + jade.attr("href", data.buttons.menu.href, true, false) + jade.attr("target", data.buttons.menu.target, true, false) + ' rel="nofollow" class="rheader-button rheader-button-menu"><span class="rheader-button-text">' + jade.escape(null == (jade_interp = data.buttons.menu.text) ? "" : jade_interp) + '</span></a><ul class="rheader-nav">');
         (function() {
             var $obj = data.items;
             if ("number" == typeof $obj.length) {
@@ -3889,14 +3895,14 @@
                     if ("number" == typeof $obj.length) {
                         for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                             var item = $obj[$index];
-                            buf.push('<li class="sections-panel-nav-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("data-subnav-section", item.slug, true, false) + jade.attr("data-background", item.background, true, false) + jade.cls([ item.current ? "current" : "" ], [ true ]) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+                            buf.push('<li class="sections-panel-nav-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("data-subnav-section", item.slug, true, false) + jade.attr("data-background", item.background, true, false) + jade.attr("data-page-title", item.pageTitle, true, false) + jade.cls([ item.current ? "current" : "" ], [ true ]) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
                         }
                     } else {
                         var $l = 0;
                         for (var $index in $obj) {
                             $l++;
                             var item = $obj[$index];
-                            buf.push('<li class="sections-panel-nav-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("data-subnav-section", item.slug, true, false) + jade.attr("data-background", item.background, true, false) + jade.cls([ item.current ? "current" : "" ], [ true ]) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+                            buf.push('<li class="sections-panel-nav-item"><a' + jade.attr("href", item.href, true, false) + jade.attr("data-subnav-section", item.slug, true, false) + jade.attr("data-background", item.background, true, false) + jade.attr("data-page-title", item.pageTitle, true, false) + jade.cls([ item.current ? "current" : "" ], [ true ]) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
                         }
                     }
                 }).call(this);
@@ -3931,14 +3937,14 @@
                                 if ("number" == typeof $obj.length) {
                                     for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                         var subitem = $obj[$index];
-                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
+                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.attr("data-page-title", subitem.pageTitle, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
                                     }
                                 } else {
                                     var $l = 0;
                                     for (var $index in $obj) {
                                         $l++;
                                         var subitem = $obj[$index];
-                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
+                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.attr("data-page-title", subitem.pageTitle, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
                                     }
                                 }
                             }).call(this);
@@ -3962,14 +3968,14 @@
                                 if ("number" == typeof $obj.length) {
                                     for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                         var subitem = $obj[$index];
-                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
+                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.attr("data-page-title", subitem.pageTitle, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
                                     }
                                 } else {
                                     var $l = 0;
                                     for (var $index in $obj) {
                                         $l++;
                                         var subitem = $obj[$index];
-                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
+                                        buf.push('<li class="sections-panel-subnav-item"><a' + jade.attr("href", subitem.href, true, false) + jade.attr("data-background", subitem.background, true, false) + jade.attr("data-json", subitem.json, true, false) + jade.attr("data-page-title", subitem.pageTitle, true, false) + jade.cls([ subitem.current ? "current" : "" ], [ true ]) + '><div class="sections-panel-subnav-item-title">' + jade.escape(null == (jade_interp = subitem.title) ? "" : jade_interp) + '</div><div class="sections-panel-subnav-item-text">' + jade.escape(null == (jade_interp = subitem.text) ? "" : jade_interp) + "</div></a></li>");
                                     }
                                 }
                             }).call(this);

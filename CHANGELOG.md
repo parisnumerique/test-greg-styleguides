@@ -2,6 +2,8 @@
 
 ## Current
 
+## 1.0.3 (2015-07-20)
+
 * module `news-card`: added `min-height`
 * module `pagination`:
   * prevent click on current page
