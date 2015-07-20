@@ -145,6 +145,29 @@
         return buf.join("");
     };
 
+    // postit.jade compiled template
+    templatizer["postit"] = function tmpl_postit(locals) {
+        var buf = [];
+        var jade_mixins = {};
+        var jade_interp;
+        return buf.join("");
+    };
+
+    // postit.jade:postit compiled template
+    templatizer["postit"]["postit"] = function tmpl_postit_postit(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<div" + jade.cls([ "component", "component-postit", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
+        if (block) {
+            block && block(buf);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        } else {
+            buf.push("<p>postit</p>");
+        }
+        buf.push("</div>");
+        return buf.join("");
+    };
+
     // anchors-list.jade compiled template
     templatizer["anchors-list"] = function tmpl_anchors_list(locals) {
         var buf = [];
@@ -470,7 +493,7 @@
         var jade_mixins = {};
         var jade_interp;
         var locals_for_with = locals || {};
-        (function(current, item, items_after, items_before, next, parseInt, prev, total) {}).call(this, "current" in locals_for_with ? locals_for_with.current : typeof current !== "undefined" ? current : undefined, "item" in locals_for_with ? locals_for_with.item : typeof item !== "undefined" ? item : undefined, "items_after" in locals_for_with ? locals_for_with.items_after : typeof items_after !== "undefined" ? items_after : undefined, "items_before" in locals_for_with ? locals_for_with.items_before : typeof items_before !== "undefined" ? items_before : undefined, "next" in locals_for_with ? locals_for_with.next : typeof next !== "undefined" ? next : undefined, "parseInt" in locals_for_with ? locals_for_with.parseInt : typeof parseInt !== "undefined" ? parseInt : undefined, "prev" in locals_for_with ? locals_for_with.prev : typeof prev !== "undefined" ? prev : undefined, "total" in locals_for_with ? locals_for_with.total : typeof total !== "undefined" ? total : undefined);
+        (function(item, parseInt) {}).call(this, "item" in locals_for_with ? locals_for_with.item : typeof item !== "undefined" ? item : undefined, "parseInt" in locals_for_with ? locals_for_with.parseInt : typeof parseInt !== "undefined" ? parseInt : undefined);
         return buf.join("");
     };
 
@@ -478,11 +501,11 @@
     templatizer["pagination"]["pagination"] = function tmpl_pagination_pagination(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push('<nav class="pagination">');
-        current = parseInt(data.current) || 1;
-        total = parseInt(data.total) || 0;
-        prev = current - 1;
-        next = current + 1;
-        items_before = function() {
+        var current = parseInt(data.current) || 1;
+        var total = parseInt(data.total) || 0;
+        var prev = current - 1;
+        var next = current + 1;
+        var items_before = function() {
             if (current < 3) {
                 return 1;
             } else if (current > total - 1 && total > 3) {
@@ -491,7 +514,7 @@
                 return 2;
             }
         };
-        items_after = function() {
+        var items_after = function() {
             if (current < 3) {
                 return current * -1 + 5;
             } else if (current > total - 2) {
@@ -502,19 +525,25 @@
         };
         buf.push("<ul>");
         if (current !== 1) {
-            buf.push('<li class="previous"><a' + jade.attr("href", data.url.replace("${page}", prev), true, false) + jade.attr("aria-label", data.text.prev, true, false) + ' data-page="prev"><span aria-hidden="true">&lt;</span></a></li>');
+            buf.push('<li class="previous">');
+            var href = prev === 1 ? data.base_url : data.url.replace("${page}", prev);
+            buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("aria-label", data.text.prev, true, false) + ' data-page="prev"><span aria-hidden="true">&lt;</span></a></li>');
             item = current - items_before();
             while (item < current) {
-                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", data.url.replace("${page}", item), true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
+                var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
                 item++;
             }
         }
-        buf.push('<li class="current"><a' + jade.attr("href", data.url.replace("${page}", current), true, false) + jade.attr("data-page", current, true, false) + ">" + jade.escape(null == (jade_interp = current) ? "" : jade_interp) + "</a></li>");
+        buf.push('<li class="current">');
+        var href = current === 1 ? data.base_url : data.url.replace("${page}", current);
+        buf.push("<a" + jade.attr("href", href, true, false) + jade.attr("data-page", current, true, false) + ">" + jade.escape(null == (jade_interp = current) ? "" : jade_interp) + "</a></li>");
         if (current !== total) {
             item = current;
             while (item < total && item < current + items_after()) {
                 item++;
-                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", data.url.replace("${page}", item), true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
+                var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+                buf.push('<li class="hidden-on-small"><a' + jade.attr("href", href, true, false) + jade.attr("data-page", item, true, false) + ">" + jade.escape(null == (jade_interp = item) ? "" : jade_interp) + "</a></li>");
             }
             buf.push('<li class="next"><a' + jade.attr("href", data.url.replace("${page}", next), true, false) + jade.attr("aria-label", data.text.next, true, false) + ' data-page="next"><span aria-hidden="true">&gt;</span></a></li>');
         }
