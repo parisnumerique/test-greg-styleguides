@@ -2,10 +2,15 @@
 
 ## Current
 
+* module `pagination`:
+  * prevent click on current page
+  * added `base_url` that will be used as link to first page
 * module `rheader`: added `rel="nofollow"` to menu button
 * module `sections-panel`: refresh page `title` on navigation
-* template `single-news`: added `jecoute` component
+* template `list-persons`: added `base_url` to `pagination` data
 * template `search`: added meta tag `robots`
+* template `single-news`: added `jecoute` component
+* template `subhome-news`: added `base_url` to `pagination` data
 * added ability to add meta tags to wrapper_prod
 
 ## 1.0.2 (2015-06-25)

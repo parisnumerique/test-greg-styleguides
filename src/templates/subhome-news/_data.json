@@ -356,6 +356,7 @@
           "prev": "Page précédente",
           "next": "Page suivante"
         },
+        "base_url": "../subhome-news",
         "url": "page${page}.html",
         "current": 1,
         "total": 10
@@ -863,6 +864,7 @@
           "prev": "Page précédente",
           "next": "Page suivante"
         },
+        "base_url": "../subhome-news",
         "url": "page${page}.html",
         "current": 2,
         "total": 10
@@ -1372,6 +1374,7 @@
           "prev": "Page précédente",
           "next": "Page suivante"
         },
+        "base_url": "../subhome-news",
         "url": "#page-${page}",
         "current": 1,
         "total": 10
