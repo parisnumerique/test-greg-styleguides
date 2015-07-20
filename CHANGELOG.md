@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `news-card`: added `min-height`
 * module `pagination`:
   * prevent click on current page
   * added `base_url` that will be used as link to first page
