@@ -37,6 +37,7 @@ module.exports = {
       'news-list',
       'pagination',
       'person-block',
+      'postit',
       'search-results-list',
       'share'
     ]
