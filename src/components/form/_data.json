@@ -4,28 +4,43 @@
       "items": [
         {
           "type": "title",
-          "text": "input text"
+          "text": "inputs"
         },
         {
           "type": "text",
           "name": "text1",
           "id": "text1",
-          "label": "Label",
-          "optional": true
+          "label": "Label"
+        },
+        {
+          "type": "email",
+          "name": "email1",
+          "id": "email1",
+          "label": "Adresse e-mail"
+        },
+        {
+          "type": "tel",
+          "name": "tel1",
+          "id": "tel1",
+          "label": "Numéro de téléphone"
+        },
+        {
+          "type": "url",
+          "name": "url1",
+          "id": "url1",
+          "label": "Adresse URL"
         },
         {
           "type": "text",
           "name": "text2",
           "id": "text2",
-          "label": "Label plus long sur deux lignes, ce qui peut arriver",
-          "optional": true
+          "label": "Label plus long sur deux lignes, ce qui peut arriver"
         },
         {
           "type": "text",
           "name": "text3",
           "id": "text3",
           "label": "Label",
-          "optional": true,
           "focus": true,
           "placeholder": "Placeholder avec champ focus"
         },
@@ -34,6 +49,7 @@
           "name": "text4",
           "id": "text4",
           "label": "Label obligatoire",
+          "required": true,
           "focus": true,
           "value": "Texte en cours de frappe"
         },
@@ -42,7 +58,6 @@
           "name": "text5",
           "id": "text5",
           "label": "Label",
-          "optional": true,
           "placeholder": "Placeholder",
           "help": "Avec de l’information supplémentaire pour expliquer comment ça marche"
         },
@@ -51,7 +66,6 @@
           "name": "text6",
           "id": "text6",
           "label": "Champ non rempli",
-          "optional": true,
           "placeholder": "Placeholder",
           "error": true
         },
@@ -98,8 +112,9 @@
           "type": "textarea",
           "name": "textarea2",
           "id": "textarea2",
-          "label": "Label plus long sur deux lignes, ce qui peut arriver dans certains cas de force majeure. Et avec une scrollbar (système)",
-          "placeholder": "Placeholder"
+          "label": "Label plus long sur deux lignes, ce qui peut arriver dans certains cas de force majeure",
+          "placeholder": "Placeholder",
+          "rows": 10
         },
         {
           "type": "textarea",

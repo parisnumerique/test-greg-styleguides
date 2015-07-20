@@ -4,38 +4,60 @@ mixin form-title(data)
   h2= data.text
 
 mixin form-text(data)
-  label.form-item-title(for=data.id)= data.label
-  input(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value)
+  label.form-item-label(for=data.id)= data.label
+  input(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
   if data.help
     p.form-item-help= data.help
 
+mixin form-email(data)
+  +form-text(data)
+
+mixin form-tel(data)
+  +form-text(data)
+
+mixin form-url(data)
+  +form-text(data)
+
 mixin form-select(data)
-  label.form-item-title(for=data.id)= data.label
-  select(name=data.name id=data.id)
+  label.form-item-label(for=data.id)= data.label
+  select(name=data.name id=data.id required=data.required)
     each item in data.items
       option(value=item.value)= item.text
 
 mixin form-textarea(data)
-  label.form-item-title(for=data.id)= data.label
-  textarea(name=data.name id=data.id placeholder=data.placeholder)
+  label.form-item-label(for=data.id)= data.label
+  textarea(name=data.name id=data.id placeholder=data.placeholder rows=data.rows required=data.required)
     = data.value
 
 mixin form-checkbox(data)
-  .form-item-title= data.label
+  .form-item-label= data.label
   each item in data.items
-    label
-      input(type="checkbox" name=data.name value=item.value checked=item.checked)
+    div: label
+      input(type="checkbox" name=data.name value=item.value checked=item.checked required=data.required)
       = item.text
 
 mixin form-radio(data)
-  .form-item-title= data.label
+  .form-item-label= data.label
   each item in data.items
-    label
-      input(type="radio" name=data.name value=item.value checked=item.checked)
+    div: label
+      input(type="radio" name=data.name value=item.value checked=item.checked required=data.required)
       = item.text
 
 mixin form-matrix(data)
-  p matrix
+  - var type = data.multiple ? 'checkbox' : 'radio';
+  table
+    tr
+      th: .form-item-label= data.label
+      each option in data.options
+        th.matrix-option= option.text
+    each item in data.items
+      tr.matrix-item
+        th.matrix-item-text= item.text
+        - var i = 0
+        while i < data.options.length
+          td.matrix-item-option
+            input(type=type name=data.name+"["+item.name+"]"+(data.multiple ? "[]" : "") value=data.options[i].value)
+          - i++
 
 mixin form-captcha(data)
   p CAPTCHA
@@ -53,7 +75,8 @@ mixin form(data)
       - item = JSON.parse(JSON.stringify(item || [])) // clone the data object
       - item.modifiers = item.modifiers || []
       - item.modifiers.push("form-item-" + item.type);
-      - if (item.optional !== true) {item.modifiers.push("form-item-required"); item.label += " *";}
+      - if (["email", "tel", "url"].indexOf(item.type) !== -1) {item.modifiers.push("form-item-text");}
+      - if (item.required === true) {item.modifiers.push("form-item-required"); item.label += " *";}
       - if (item.error === true) {item.modifiers.push("form-item-error");}
       .form-item(class=item.modifiers)
         +#{"form-" + item.type}(item)

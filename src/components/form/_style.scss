@@ -1,11 +1,12 @@
 .component-form {
   clear: both;
+  max-width: 770px;
 
   .form-item + .form-item {
     margin-top: 20px;
   }
 
-  .form-item-title {
+  .form-item-label {
     color: $color-secondary;
     display: block;
     font-size: 16px;
@@ -21,29 +22,109 @@
     max-width: 385px;
   }
 
+  // error
   .form-item-error {
-    .form-item-title {
+    .form-item-label {
+      position: relative;
+
+      &:after {
+        @extend %icon-font;
+        @extend %icon-alert;
+        color: $color-primary;
+        margin-left: 5px;
+      }
+
       color: $color-primary;
+    }
+  }
+  .form-item-text input:invalid,
+  .form-item-text.form-item-error input,
+  .form-item-textarea textarea:invalid,
+  .form-item-textarea.form-item-error textarea,
+  .form-item-select select:invalid,
+  .form-item-select.form-item-error select {
+    border-color: $color-primary;
+    box-shadow: none;
+  }
+
+
+  // input & textarea
+  .form-item-text input,
+  .form-item-textarea textarea,
+  .form-item-select select {
+    background-color: $grayF2;
+    border: 2px solid $grayF2;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &:focus {
+      border-color: $color-secondary;
     }
   }
 
   // input
-  .form-item-text {
-    input {
-      background-color: $grayF2;
-      border: 2px solid $grayF2;
-      font-size: 14px;
-      padding: 0 15px;
-      width: 385px;
+  .form-item-text input {
+    padding: 0 15px;
+    width: 385px;
+  }
 
-      &:focus {
-        border-color: $color-secondary;
-      }
+  // textarea
+  .form-item-textarea {
+    textarea {
+      height: 160px;
+      padding: 15px;
+      width: 570px;
     }
 
-    &.form-item-error input {
-      border-color: $color-primary;
+    .form-item-label {
+      max-width: 500px;
     }
   }
+
+  // select
+  .form-item-select select {
+    cursor: pointer;
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  // checkbox & radio
+  .form-item-checkbox,
+  .form-item-radio {
+    > div + div {
+      margin-top: 5px;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    input {
+      cursor: pointer;
+      margin: 2px 10px 2px 0;
+    }
+  }
+
+  // matrix
+  .form-item-matrix {
+    .form-item-label {
+      max-width: none;
+    }
+
+    .form-item-label,
+    .matrix-item-text {
+      text-align: left;
+    }
+
+    table {width: 100%;}
+    td {
+      text-align: center;
+    }
+
+    input {
+      cursor: pointer;
+    }
+  }
+
 
 }
