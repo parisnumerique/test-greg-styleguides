@@ -2,6 +2,11 @@
 
 ## Current
 
+* template `document`:
+  * async loading of `postit`
+  * added `data-pageid` to `bodyAttributes`
+* added `cookies.parisconnect` in `config.js`
+
 ## 1.0.2 (2015-06-25)
 
 * composant `table`: improved CSS

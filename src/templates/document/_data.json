@@ -2,7 +2,10 @@
   "index": {
     "data": {
       "title": "Demander un logement",
-      "bodyModifiers": ["fixed-nav"],
+      "bodyModifiers": ["fixed-nav", "document"],
+      "bodyAttributes": {
+        "data-pageid": 1
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {

@@ -32,8 +32,8 @@ require('../modules/share/script');
 require('../modules/video-cover/script');
 
 // load our templates
-require('../templates/hub/script');
 require('../templates/document/script');
+require('../templates/hub/script');
 require('../templates/list-persons/script');
 require('../templates/search/script');
 
