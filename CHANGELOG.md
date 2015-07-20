@@ -2,6 +2,8 @@
 
 ## Current
 
+* template `single-news`: added `jecoute` component
+
 ## 1.0.2 (2015-06-25)
 
 * composant `table`: improved CSS
