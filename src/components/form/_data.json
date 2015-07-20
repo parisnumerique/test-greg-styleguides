@@ -1,0 +1,212 @@
+{
+  "index": {
+    "defaults": {
+      "items": [
+        {
+          "type": "title",
+          "text": "input text"
+        },
+        {
+          "type": "text",
+          "name": "text1",
+          "id": "text1",
+          "label": "Label",
+          "optional": true
+        },
+        {
+          "type": "text",
+          "name": "text2",
+          "id": "text2",
+          "label": "Label plus long sur deux lignes, ce qui peut arriver",
+          "optional": true
+        },
+        {
+          "type": "text",
+          "name": "text3",
+          "id": "text3",
+          "label": "Label",
+          "optional": true,
+          "focus": true,
+          "placeholder": "Placeholder avec champ focus"
+        },
+        {
+          "type": "text",
+          "name": "text4",
+          "id": "text4",
+          "label": "Label obligatoire",
+          "focus": true,
+          "value": "Texte en cours de frappe"
+        },
+        {
+          "type": "text",
+          "name": "text5",
+          "id": "text5",
+          "label": "Label",
+          "optional": true,
+          "placeholder": "Placeholder",
+          "help": "Avec de l’information supplémentaire pour expliquer comment ça marche"
+        },
+        {
+          "type": "text",
+          "name": "text6",
+          "id": "text6",
+          "label": "Champ non rempli",
+          "optional": true,
+          "placeholder": "Placeholder",
+          "error": true
+        },
+        {
+          "type": "title",
+          "text": "select"
+        },
+        {
+          "type": "select",
+          "name": "select1",
+          "id": "select1",
+          "label": "Label",
+          "items": [
+            {"value": 1, "text": "Valeur 1"},
+            {"value": 2, "text": "Valeur 2"},
+            {"value": 3, "text": "Valeur 3"}
+          ]
+        },
+        {
+          "type": "select",
+          "name": "select2",
+          "id": "select2",
+          "label": "Champ non rempli",
+          "items": [
+            {"text": ""},
+            {"value": 1, "text": "Valeur 1"},
+            {"value": 2, "text": "Valeur 2"},
+            {"value": 3, "text": "Valeur 3"}
+          ],
+          "error": true
+        },
+        {
+          "type": "title",
+          "text": "textarea"
+        },
+        {
+          "type": "textarea",
+          "name": "textarea1",
+          "id": "textarea1",
+          "label": "Label",
+          "placeholder": "Placeholder"
+        },
+        {
+          "type": "textarea",
+          "name": "textarea2",
+          "id": "textarea2",
+          "label": "Label plus long sur deux lignes, ce qui peut arriver dans certains cas de force majeure. Et avec une scrollbar (système)",
+          "placeholder": "Placeholder"
+        },
+        {
+          "type": "textarea",
+          "name": "textarea3",
+          "id": "textarea3",
+          "label": "Label plus long sur deux lignes, ce qui peut arriver dans certains cas de force majeure",
+          "placeholder": "Placeholder",
+          "error": true
+        },
+        {
+          "type": "title",
+          "text": "checkbox"
+        },
+        {
+          "type": "checkbox",
+          "name": "checkbox1[]",
+          "id": "checkbox1",
+          "label": "Label",
+          "items": [
+            {"value": 1, "text": "Choix 1"},
+            {"value": 2, "text": "Choix 2", "checked": true},
+            {"value": 3, "text": "Choix 3"}
+          ]
+        },
+        {
+          "type": "title",
+          "text": "radio buttons"
+        },
+        {
+          "type": "radio",
+          "name": "radio1",
+          "id": "radio1",
+          "label": "Label",
+          "items": [
+            {"value": 1, "text": "Choix 1"},
+            {"value": 2, "text": "Choix 2", "checked": true},
+            {"value": 3, "text": "Choix 3"}
+          ]
+        },
+        {
+          "type": "title",
+          "text": "matrice checkboxes"
+        },
+        {
+          "type": "matrix",
+          "name": "matrix1",
+          "id": "matrix1",
+          "label": "Label",
+          "multiple": true,
+          "options": [
+            {"value": 1, "text": "Un"},
+            {"value": 2, "text": "Deux"},
+            {"value": 3, "text": "Trois"},
+            {"value": 4, "text": "Quatre"}
+          ],
+          "items": [
+            {"name": "first", "text": "Première question"},
+            {"name": "second", "text": "Deuxième question", "checked": [1, 3, 4]},
+            {"name": "third", "text": "Troisième question", "checked": [2]},
+            {"name": "fourth", "text": "Quatrième question"}
+          ]
+        },
+        {
+          "type": "title",
+          "text": "matrice radio"
+        },
+        {
+          "type": "matrix",
+          "name": "matrix2",
+          "id": "matrix2",
+          "label": "Label",
+          "options": [
+            {"value": 1, "text": "Un"},
+            {"value": 2, "text": "Deux"},
+            {"value": 3, "text": "Trois"},
+            {"value": 4, "text": "Quatre"}
+          ],
+          "items": [
+            {"name": "first", "text": "Première question"},
+            {"name": "second", "text": "Deuxième question", "checked": 1},
+            {"name": "third", "text": "Troisième question", "checked": 2},
+            {"name": "fourth", "text": "Quatrième question"}
+          ]
+        },
+        {
+          "type": "title",
+          "text": "captcha"
+        },
+        {
+          "type": "captcha"
+        },
+        {
+          "type": "title",
+          "text": "boutons"
+        },
+        {
+          "type": "buttons",
+          "items": [
+            {
+              "text": "Valider",
+              "attributes": {
+                "type": "submit"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

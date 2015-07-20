@@ -1,0 +1,59 @@
+include ../../modules/button/button
+
+mixin form-title(data)
+  h2= data.text
+
+mixin form-text(data)
+  label.form-item-title(for=data.id)= data.label
+  input(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value)
+  if data.help
+    p.form-item-help= data.help
+
+mixin form-select(data)
+  label.form-item-title(for=data.id)= data.label
+  select(name=data.name id=data.id)
+    each item in data.items
+      option(value=item.value)= item.text
+
+mixin form-textarea(data)
+  label.form-item-title(for=data.id)= data.label
+  textarea(name=data.name id=data.id placeholder=data.placeholder)
+    = data.value
+
+mixin form-checkbox(data)
+  .form-item-title= data.label
+  each item in data.items
+    label
+      input(type="checkbox" name=data.name value=item.value checked=item.checked)
+      = item.text
+
+mixin form-radio(data)
+  .form-item-title= data.label
+  each item in data.items
+    label
+      input(type="radio" name=data.name value=item.value checked=item.checked)
+      = item.text
+
+mixin form-matrix(data)
+  p matrix
+
+mixin form-captcha(data)
+  p CAPTCHA
+
+mixin form-buttons(data)
+  each item in data.items
+    - button = JSON.parse(JSON.stringify(item || [])) // clone the data object
+    - button.modifiers = button.modifiers || []
+    - if (item.attributes && item.attributes.type === 'submit') {button.modifiers.push("action");}
+    +button(button)
+
+mixin form(data)
+  .component-form
+    each item in data.items
+      - item = JSON.parse(JSON.stringify(item || [])) // clone the data object
+      - item.modifiers = item.modifiers || []
+      - item.modifiers.push("form-item-" + item.type);
+      - if (item.optional !== true) {item.modifiers.push("form-item-required"); item.label += " *";}
+      - if (item.error === true) {item.modifiers.push("form-item-error");}
+      .form-item(class=item.modifiers)
+        +#{"form-" + item.type}(item)

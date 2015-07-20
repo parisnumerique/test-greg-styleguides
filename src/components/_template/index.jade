@@ -1,3 +1,10 @@
 include component
+include ../../helpers/code
 
-+component(defaults)
+h2 Standard
+.lsg-component
+  +component(defaults)
++code({language: "jade"}).
+  include component
+
+  +component(#{JSON.stringify(defaults, null, 2)})
