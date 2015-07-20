@@ -1,0 +1,49 @@
+.component-form {
+  clear: both;
+
+  .form-item + .form-item {
+    margin-top: 20px;
+  }
+
+  .form-item-title {
+    color: $color-secondary;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    max-width: 320px;
+  }
+
+  .form-item-help {
+    color: $gray4D;
+    font-size: 13px;
+    margin-top: 5px;
+    max-width: 385px;
+  }
+
+  .form-item-error {
+    .form-item-title {
+      color: $color-primary;
+    }
+  }
+
+  // input
+  .form-item-text {
+    input {
+      background-color: $grayF2;
+      border: 2px solid $grayF2;
+      font-size: 14px;
+      padding: 0 15px;
+      width: 385px;
+
+      &:focus {
+        border-color: $color-secondary;
+      }
+    }
+
+    &.form-item-error input {
+      border-color: $color-primary;
+    }
+  }
+
+}
