@@ -2,6 +2,7 @@
 
 ## Current
 
+* module `sections-panel`: refresh page `title` on navigation
 * template `single-news`: added `jecoute` component
 
 ## 1.0.2 (2015-06-25)
