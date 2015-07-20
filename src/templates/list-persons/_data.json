@@ -303,6 +303,7 @@
           "prev": "Page précédente",
           "next": "Page suivante"
         },
+        "base_url": "../list-persons",
         "url": "#page-${page}",
         "current": 1,
         "total": 10
@@ -676,6 +677,7 @@
           "prev": "Page précédente",
           "next": "Page suivante"
         },
+        "base_url": "../list-persons",
         "url": "#page-${page}",
         "current": 1,
         "total": 10

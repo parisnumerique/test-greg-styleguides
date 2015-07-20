@@ -5,6 +5,7 @@
         "prev": "Page précédente",
         "next": "Page suivante"
       },
+      "base_url": "/",
       "url": "/page/${page}",
       "current": 3,
       "total": 10
@@ -14,6 +15,7 @@
         "prev": "Page précédente",
         "next": "Page suivante"
       },
+      "base_url": "/",
       "url": "/page/${page}",
       "current": 1,
       "total": 10
@@ -23,6 +25,7 @@
         "prev": "Page précédente",
         "next": "Page suivante"
       },
+      "base_url": "/",
       "url": "/page/${page}",
       "current": 2,
       "total": 10
@@ -32,6 +35,7 @@
         "prev": "Page précédente",
         "next": "Page suivante"
       },
+      "base_url": "/",
       "url": "/page/${page}",
       "current": 9,
       "total": 10
@@ -41,6 +45,7 @@
         "prev": "Page précédente",
         "next": "Page suivante"
       },
+      "base_url": "/",
       "url": "/page/${page}",
       "current": 10,
       "total": 10

@@ -41,6 +41,8 @@ append content
         .layout-content.components
           each component in data.components
             +#{component.type}(component.data)
+          if data.jecoute
+            +jecoute(data.jecoute)
 
 append content
   if data.related

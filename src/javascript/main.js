@@ -32,6 +32,7 @@ require('../modules/share/script');
 require('../modules/video-cover/script');
 
 // load our templates
+require('../templates/document/script');
 require('../templates/hub/script');
 require('../templates/list-persons/script');
 require('../templates/search/script');
@@ -41,5 +42,5 @@ require('./lib/cnil');
 require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "1.0.2";
+Paris.version = "1.0.3";
 Paris.templates = {};

@@ -2,6 +2,9 @@
   "index": {
     "data": {
       "title": "Recherche",
+      "meta": [
+        {"name": "robots", "content": "NOINDEX, NOFOLLOW"}
+      ],
       "bodyModifiers": ["fixed-nav", "search"],
       "bodyAttributes": {
         "data-base-url": "/templates/search",
@@ -184,6 +187,9 @@
   "results": {
     "data": {
       "title": "Recherche",
+      "meta": [
+        {"name": "robots", "content": "NOINDEX, NOFOLLOW"}
+      ],
       "bodyModifiers": ["fixed-nav", "search"],
       "bodyAttributes": {
         "data-base-url": "/templates/search",
@@ -401,6 +407,9 @@
   "no-result": {
     "data": {
       "title": "Recherche",
+      "meta": [
+        {"name": "robots", "content": "NOINDEX, NOFOLLOW"}
+      ],
       "bodyModifiers": ["fixed-nav", "search"],
       "bodyAttributes": {
         "data-base-url": "/templates/search",

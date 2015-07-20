@@ -2,6 +2,24 @@
 
 ## Current
 
+## 1.0.3 (2015-07-20)
+
+* module `news-card`: added `min-height`
+* module `pagination`:
+  * prevent click on current page
+  * added `base_url` that will be used as link to first page
+* module `rheader`: added `rel="nofollow"` to menu button
+* module `sections-panel`: refresh page `title` on navigation
+* template `document`:
+  * async loading of `postit`
+  * added `data-pageid` to `bodyAttributes`
+* template `list-persons`: added `base_url` to `pagination` data
+* template `search`: added meta tag `robots`
+* template `single-news`: added `jecoute` component
+* template `subhome-news`: added `base_url` to `pagination` data
+* added ability to add meta tags to wrapper_prod
+* added `cookies.parisconnect` in `config.js`
+
 ## 1.0.2 (2015-06-25)
 
 * composant `table`: improved CSS

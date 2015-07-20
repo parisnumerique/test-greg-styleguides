@@ -27,9 +27,9 @@ For this example, we call it `my_contribution`. Please use a specific name, usin
 Now you can make your changes. Most of the time you want to modify files in the `src` directory.
 Do *not* call `npm run build`. The build will be updated by the maintainer of the repository when pushing a new version.
 
-Once your changes are made, commit them.
+Once your changes are made, describe them at the beginning of the `CHANGELOG.md` file, and commit them.
 
-    $ git add src/
+    $ git add CHANGELOG.md src/
     $ git commit -m "A short message explaining your changes"
 
 Then, push your new branch to the remote repository.
@@ -66,3 +66,42 @@ You can also delete your local branch, which is no longer useful:
     $ git branch -d my_contribution
 
 Thanks for your contribution!
+
+## Release a new version
+
+Create the release branch, `X.X.X` being your new version number
+
+    $ git checkout -b release-X.X.X develop
+
+Check that all changes from previous version are documented in `CHANGELOG.md`
+
+Bump the version number in `package.json`, `bower.json` and `src/javascript/main.js`
+
+Update the `CHANGELOG.md` to add the new version number above the last changes
+
+Build the styleguide:
+
+    $ npm run build
+
+Then add everything and commit (`X.X.X` being your new version number):
+
+    $ git add .
+    $ git commit -m "New build, bump version number to X.X.X"
+
+Merge it to master and tag it
+
+    $ git checkout master
+    $ git merge --no-ff release-X.X.X
+    $ git tag -a X.X.X
+
+Merge it to develop and delete the release branch
+
+    $ git checkout develop
+    $ git merge --no-ff release-X.X.X
+    $ git branch -d release-X.X.X
+
+Push it!
+
+    $ git push origin develop
+    $ git push origin master
+    $ git push origin --tags

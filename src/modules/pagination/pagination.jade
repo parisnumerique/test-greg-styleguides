@@ -1,27 +1,31 @@
 mixin pagination(data)
   nav.pagination
-    - current = parseInt(data.current) || 1
-    - total = parseInt(data.total) || 0
-    - prev = current - 1
-    - next = current + 1
-    - items_before = function(){if (current < 3){return 1;} else if (current > total - 1 && total > 3) {return 3;} else {return 2;}}
-    - items_after = function(){if (current < 3){return (current * -1) + 5;} else if (current > total - 2) {return total - current;} else {return 2;}}
+    - var current = parseInt(data.current) || 1
+    - var total = parseInt(data.total) || 0
+    - var prev = current - 1
+    - var next = current + 1
+    - var items_before = function(){if (current < 3){return 1;} else if (current > total - 1 && total > 3) {return 3;} else {return 2;}}
+    - var items_after = function(){if (current < 3){return (current * -1) + 5;} else if (current > total - 2) {return total - current;} else {return 2;}}
     ul
       if current !== 1
         li.previous
-          a(href=data.url.replace("${page}", prev) aria-label=data.text.prev data-page="prev")
+          - var href = prev === 1 ? data.base_url : data.url.replace("${page}", prev);
+          a(href=href aria-label=data.text.prev data-page="prev")
             span(aria-hidden='true') &lt;
         - item = current - items_before()
         while item < current
-          li.hidden-on-small: a(href=data.url.replace("${page}", item) data-page=item)= item
+          - var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+          li.hidden-on-small: a(href=href data-page=item)= item
           - item++
       li.current
-        a(href=data.url.replace("${page}", current) data-page=current)= current
+        - var href = current === 1 ? data.base_url : data.url.replace("${page}", current);
+        a(href=href data-page=current)= current
       if current !== total
         - item = current
         while item < total && item < current + items_after()
          - item++
-         li.hidden-on-small: a(href=data.url.replace("${page}", item) data-page=item)= item
+         - var href = item === 1 ? data.base_url : data.url.replace("${page}", item);
+         li.hidden-on-small: a(href=href data-page=item)= item
         li.next
           a(href=data.url.replace("${page}", next) aria-label=data.text.next data-page="next")
             span(aria-hidden='true') &gt;

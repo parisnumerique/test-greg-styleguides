@@ -77,10 +77,11 @@
       &,
       &:hover,
       &:focus {
-        z-index: 2;
         background: $color-secondary;
         color: $white;
         cursor: default;
+        pointer-events: none;
+        z-index: 2;
       }
     }
 
@@ -94,6 +95,7 @@
         background-color: transparentize($grayF2, 0.8);
         color: $gray66;
         cursor: default;
+        pointer-events: none;
       }
     }
   }
