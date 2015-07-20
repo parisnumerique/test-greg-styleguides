@@ -2,6 +2,8 @@
 
 ## Current
 
+* template `list-persons`: fixed front-end rendered pagination
+
 ## 1.0.3 (2015-07-20)
 
 * module `news-card`: added `min-height`
