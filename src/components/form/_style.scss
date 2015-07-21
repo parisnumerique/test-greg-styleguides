@@ -71,13 +71,17 @@
   // textarea
   .form-item-textarea {
     textarea {
-      height: 160px;
+      min-height: 160px;
       padding: 15px;
       width: 570px;
     }
 
     .form-item-label {
       max-width: 500px;
+    }
+
+    .form-item-help {
+      max-width: 570px;
     }
   }
 

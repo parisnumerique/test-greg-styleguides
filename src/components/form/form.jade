@@ -6,8 +6,6 @@ mixin form-title(data)
 mixin form-text(data)
   label.form-item-label(for=data.id)= data.label
   input(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
-  if data.help
-    p.form-item-help= data.help
 
 mixin form-email(data)
   +form-text(data)
@@ -17,6 +15,9 @@ mixin form-tel(data)
 
 mixin form-url(data)
   +form-text(data)
+
+mixin form-hidden(data)
+  input(type=data.type name=data.name id=data.id value=data.value)
 
 mixin form-select(data)
   label.form-item-label(for=data.id)= data.label
@@ -62,7 +63,7 @@ mixin form-matrix(data)
           - i++
 
 mixin form-captcha(data)
-  p CAPTCHA
+  div.g-recaptcha
 
 mixin form-buttons(data)
   each item in data.items
@@ -73,12 +74,15 @@ mixin form-buttons(data)
 
 mixin form(data)
   .component-form
-    each item in data.items
-      - item = JSON.parse(JSON.stringify(item || [])) // clone the data object
-      - item.modifiers = item.modifiers || []
-      - item.modifiers.push("form-item-" + item.type);
-      - if (["email", "tel", "url"].indexOf(item.type) !== -1) {item.modifiers.push("form-item-text");}
-      - if (item.required === true) {item.modifiers.push("form-item-required"); item.label += " *";}
-      - if (item.error === true) {item.modifiers.push("form-item-error");}
-      .form-item(class=item.modifiers)
-        +#{"form-" + item.type}(item)
+    form(action=data.action method=data.method || 'POST')
+      each item in data.items
+        - item = JSON.parse(JSON.stringify(item || [])) // clone the data object
+        - item.modifiers = item.modifiers || []
+        - item.modifiers.push("form-item-" + item.type);
+        - if (["email", "tel", "url"].indexOf(item.type) !== -1) {item.modifiers.push("form-item-text");}
+        - if (item.required === true) {item.modifiers.push("form-item-required"); item.label += " *";}
+        - if (item.error === true) {item.modifiers.push("form-item-error");}
+        .form-item(class=item.modifiers)
+          +#{"form-" + item.type}(item)
+          if item.help
+            p.form-item-help= item.help
