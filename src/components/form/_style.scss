@@ -23,28 +23,29 @@
   }
 
   // error
-  .form-item-error {
-    .form-item-label {
-      position: relative;
+  .form-item.error .form-item-label,
+  .form-item-matrix .matrix-item.error .matrix-item-text {
+    color: $color-primary;
+    position: relative;
 
-      &:after {
-        @extend %icon-font;
-        @extend %icon-alert;
-        color: $color-primary;
-        margin-left: 5px;
-      }
-
+    &:after {
+      @extend %icon-font;
+      @extend %icon-alert;
       color: $color-primary;
+      margin-left: 5px;
     }
   }
-  .form-item-text input:invalid,
-  .form-item-text.form-item-error input,
-  .form-item-textarea textarea:invalid,
-  .form-item-textarea.form-item-error textarea,
-  .form-item-select select:invalid,
-  .form-item-select.form-item-error select {
+  .form-item-text.form-item.error input,
+  .form-item-textarea.form-item.error textarea,
+  .form-item-select.form-item.error select {
     border-color: $color-primary;
-    box-shadow: none;
+  }
+  .form-item {
+    input:invalid,
+    textarea:invalid,
+    select:invalid {
+      box-shadow: none;
+    }
   }
 
 
@@ -118,6 +119,10 @@
     .form-item-label,
     .matrix-item-text {
       text-align: left;
+    }
+
+    .matrix-item.error {
+      background-color: transparentize($color-primary, 0.9);
     }
 
     table {
