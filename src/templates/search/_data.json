@@ -15,8 +15,13 @@
         "cnil": {
           "id": "notice_cnil",
           "modifiers": ["bottom", "transparent", "fixed", "closed"],
-          "closable": true,
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+          "closable": {
+            "href": "#",
+            "text": "Accepter",
+            "modifiers": ["action"],
+            "attributes": {"data-action": "close"}
+          },
+          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
         }
       },
       "rheader": {
@@ -201,8 +206,13 @@
         "cnil": {
           "id": "notice_cnil",
           "modifiers": ["bottom", "transparent", "fixed", "closed"],
-          "closable": true,
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+          "closable": {
+            "href": "#",
+            "text": "Accepter",
+            "modifiers": ["action"],
+            "attributes": {"data-action": "close"}
+          },
+          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
         }
       },
       "rheader": {
@@ -421,8 +431,13 @@
         "cnil": {
           "id": "notice_cnil",
           "modifiers": ["bottom", "transparent", "fixed", "closed"],
-          "closable": true,
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour vous proposer sed diam eget risus varius blandit sit amet non magna."
+          "closable": {
+            "href": "#",
+            "text": "Accepter",
+            "modifiers": ["action"],
+            "attributes": {"data-action": "close"}
+          },
+          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
         }
       },
       "rheader": {

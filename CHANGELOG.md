@@ -2,6 +2,9 @@
 
 ## Current
 
+* module `notice`: allow use of `button` instead of close
+* all templates: replace CNIL notice data
+* template `home`: added legal `notice` before the `footer`
 * template `list-persons`: fixed front-end rendered pagination
 
 ## 1.0.3 (2015-07-20)
