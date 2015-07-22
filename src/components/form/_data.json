@@ -52,6 +52,7 @@
           "id": "text6",
           "label": "Champ en erreur",
           "placeholder": "Ceci est un placeholder",
+          "required": true,
           "error": true
         },
         {
@@ -98,6 +99,7 @@
             {"value": 2, "text": "Valeur 2"},
             {"value": 3, "text": "Valeur 3"}
           ],
+          "required": true,
           "error": true
         },
         {
@@ -133,6 +135,7 @@
           "id": "textarea4",
           "label": "Zone de texte en erreur",
           "placeholder": "Placeholder",
+          "required": true,
           "error": true
         },
         {
@@ -143,12 +146,34 @@
           "type": "checkbox",
           "name": "checkbox1[]",
           "id": "checkbox1",
+          "label": "Case à cocher unique",
+          "items": [
+            {"value": 1, "text": "Intitulé"}
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "checkbox2[]",
+          "id": "checkbox2",
           "label": "Groupe de cases à cocher",
           "items": [
             {"value": 1, "text": "Choix 1"},
-            {"value": 2, "text": "Choix 2", "checked": true},
+            {"value": 2, "text": "Choix 2 avec un intitulé vraiment très très très très long pour voir le rendu quand il passe sur deux lignes.", "checked": true},
             {"value": 3, "text": "Choix 3"}
           ]
+        },
+        {
+          "type": "checkbox",
+          "name": "checkbox3[]",
+          "id": "checkbox3",
+          "label": "Groupe de cases à cocher en erreur",
+          "items": [
+            {"value": 1, "text": "Choix 1"},
+            {"value": 2, "text": "Choix 2"},
+            {"value": 3, "text": "Choix 3"}
+          ],
+          "required": true,
+          "error": true
         },
         {
           "type": "title",
@@ -164,6 +189,19 @@
             {"value": 2, "text": "Choix 2", "checked": true},
             {"value": 3, "text": "Choix 3"}
           ]
+        },
+        {
+          "type": "radio",
+          "name": "radio2",
+          "id": "radio2",
+          "label": "Groupe de boutons radio en erreur",
+          "items": [
+            {"value": 1, "text": "Choix 1"},
+            {"value": 2, "text": "Choix 2"},
+            {"value": 3, "text": "Choix 3"}
+          ],
+          "required": true,
+          "error": true
         },
         {
           "type": "title",
@@ -189,13 +227,33 @@
           ]
         },
         {
+          "type": "matrix",
+          "name": "matrix2",
+          "id": "matrix2",
+          "label": "Matrice avec des erreurs",
+          "multiple": true,
+          "required": true,
+          "options": [
+            {"value": 1, "text": "Un"},
+            {"value": 2, "text": "Deux"},
+            {"value": 3, "text": "Trois"},
+            {"value": 4, "text": "Quatre"}
+          ],
+          "items": [
+            {"name": "first", "text": "Première question", "error": true},
+            {"name": "second", "text": "Deuxième question", "checked": [1, 3, 4]},
+            {"name": "third", "text": "Troisième question", "checked": [2]},
+            {"name": "fourth", "text": "Quatrième question", "error": true}
+          ]
+        },
+        {
           "type": "title",
           "text": "Matrice de boutons radio"
         },
         {
           "type": "matrix",
-          "name": "matrix2",
-          "id": "matrix2",
+          "name": "matrix3",
+          "id": "matrix3",
           "label": "Label",
           "options": [
             {"value": 1, "text": "Un"},
@@ -208,6 +266,24 @@
             {"name": "second", "text": "Deuxième question", "checked": 1},
             {"name": "third", "text": "Troisième question", "checked": 2},
             {"name": "fourth", "text": "Quatrième question"}
+          ]
+        },{
+          "type": "matrix",
+          "name": "matrix4",
+          "id": "matrix4",
+          "label": "Matrice avec des erreurs",
+          "required": true,
+          "options": [
+            {"value": 1, "text": "Un"},
+            {"value": 2, "text": "Deux"},
+            {"value": 3, "text": "Trois"},
+            {"value": 4, "text": "Quatre"}
+          ],
+          "items": [
+            {"name": "first", "text": "Première question", "error": true},
+            {"name": "second", "text": "Deuxième question", "checked": 1},
+            {"name": "third", "text": "Troisième question", "checked": 2},
+            {"name": "fourth", "text": "Quatrième question", "error": true}
           ]
         },
         {
