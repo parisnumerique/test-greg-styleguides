@@ -2,6 +2,8 @@
 
 ## Current
 
+## 1.0.4 (2015-07-23)
+
 * module `notice`: allow use of `button` instead of close
 * all templates: replace CNIL notice data
 * template `home`: added legal `notice` before the `footer`

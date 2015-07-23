@@ -1,7 +1,12 @@
+include ../button/button
+
 mixin notice(data)
   .notice(class=data.modifiers id=data.id)
-    if data.closable
+    if data.closable === true
       .close
+    else if data.closable
+      .notice-button
+        +button(data.closable)
     if block
       p.notice-content
         block

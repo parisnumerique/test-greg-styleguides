@@ -2232,15 +2232,55 @@
         var buf = [];
         var jade_mixins = {};
         var jade_interp;
+        var locals_for_with = locals || {};
+        (function(modifiers) {}).call(this, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
         return buf.join("");
     };
+
+    // notice.jade:button compiled template
+    templatizer["notice"]["button"] = function tmpl_notice_button(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        modifiers = data.modifiers || [];
+        attributes = data.attributes || [];
+        if (data.href) {
+            if (data.icon) {
+                modifiers.push("icon");
+            }
+            buf.push("<a" + jade.attrs(jade.merge([ {
+                href: jade.escape(data.href),
+                title: jade.escape(data.title),
+                target: jade.escape(data.target),
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">");
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
+                buf.push('<i class="icon icon-marker"></i>');
+            } else if (data.icon) {
+                buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+            }
+            buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
+        } else {
+            buf.push("<button" + jade.attrs(jade.merge([ {
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</button>");
+        }
+        return buf.join("");
+    };
+
 
     // notice.jade:notice compiled template
     templatizer["notice"]["notice"] = function tmpl_notice_notice(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.attr("id", data.id, true, false) + jade.cls([ "notice", data.modifiers ], [ null, true ]) + ">");
-        if (data.closable) {
+        if (data.closable === true) {
             buf.push('<div class="close"></div>');
+        } else if (data.closable) {
+            buf.push('<div class="notice-button">');
+            buf.push(templatizer["notice"]["button"](data.closable));
+            buf.push("</div>");
         }
         if (block) {
             buf.push('<p class="notice-content">');
@@ -2654,12 +2694,50 @@
     };
 
 
+    // quick-access.jade:button compiled template
+    templatizer["quick-access"]["button"] = function tmpl_quick_access_button(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        modifiers = data.modifiers || [];
+        attributes = data.attributes || [];
+        if (data.href) {
+            if (data.icon) {
+                modifiers.push("icon");
+            }
+            buf.push("<a" + jade.attrs(jade.merge([ {
+                href: jade.escape(data.href),
+                title: jade.escape(data.title),
+                target: jade.escape(data.target),
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">");
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
+                buf.push('<i class="icon icon-marker"></i>');
+            } else if (data.icon) {
+                buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+            }
+            buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
+        } else {
+            buf.push("<button" + jade.attrs(jade.merge([ {
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</button>");
+        }
+        return buf.join("");
+    };
+
+
     // quick-access.jade:notice compiled template
     templatizer["quick-access"]["notice"] = function tmpl_quick_access_notice(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.attr("id", data.id, true, false) + jade.cls([ "notice", data.modifiers ], [ null, true ]) + ">");
-        if (data.closable) {
+        if (data.closable === true) {
             buf.push('<div class="close"></div>');
+        } else if (data.closable) {
+            buf.push('<div class="notice-button">');
+            buf.push(templatizer["quick-access"]["button"](data.closable));
+            buf.push("</div>");
         }
         if (block) {
             buf.push('<p class="notice-content">');
@@ -2868,12 +2946,50 @@
     };
 
 
+    // rheader.jade:button compiled template
+    templatizer["rheader"]["button"] = function tmpl_rheader_button(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        modifiers = data.modifiers || [];
+        attributes = data.attributes || [];
+        if (data.href) {
+            if (data.icon) {
+                modifiers.push("icon");
+            }
+            buf.push("<a" + jade.attrs(jade.merge([ {
+                href: jade.escape(data.href),
+                title: jade.escape(data.title),
+                target: jade.escape(data.target),
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">");
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
+                buf.push('<i class="icon icon-marker"></i>');
+            } else if (data.icon) {
+                buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+            }
+            buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
+        } else {
+            buf.push("<button" + jade.attrs(jade.merge([ {
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</button>");
+        }
+        return buf.join("");
+    };
+
+
     // rheader.jade:notice compiled template
     templatizer["rheader"]["notice"] = function tmpl_rheader_notice(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.attr("id", data.id, true, false) + jade.cls([ "notice", data.modifiers ], [ null, true ]) + ">");
-        if (data.closable) {
+        if (data.closable === true) {
             buf.push('<div class="close"></div>');
+        } else if (data.closable) {
+            buf.push('<div class="notice-button">');
+            buf.push(templatizer["rheader"]["button"](data.closable));
+            buf.push("</div>");
         }
         if (block) {
             buf.push('<p class="notice-content">');
