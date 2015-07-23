@@ -10,6 +10,7 @@ require('./lib/scroll');
 
 // load our components
 require('../components/accordion/script');
+require('../components/html/script');
 require('../components/jecoute/script');
 require('../components/news-push/script');
 require('../components/video/script');
@@ -42,5 +43,5 @@ require('./lib/cnil');
 require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "1.0.4";
+Paris.version = "1.0.5";
 Paris.templates = {};

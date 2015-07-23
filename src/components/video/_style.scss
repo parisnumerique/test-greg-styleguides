@@ -9,7 +9,7 @@
     padding: 20px;
     text-align: center;
 
-    a {color: $color-primary}
+    a:not(.button) {color: $color-primary}
   }
 
   .video-wrapper {
@@ -42,12 +42,10 @@
     }
   }
 
-  a {
+  a:not(.button) {
     color: $red1;
     text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
+    &:hover {text-decoration: none;}
   }
 
 }

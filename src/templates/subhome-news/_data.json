@@ -14,7 +14,7 @@
             "modifiers": ["action"],
             "attributes": {"data-action": "close"}
           },
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
         }
       },
       "rheader": {
@@ -229,7 +229,7 @@
           "modifiers": ["color-secondary-background"]
         },
         "cover": {
-          "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher cette vidéo.",
+          "placeholder": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>.<br /><br /><a href=\"#\" data-action=\"allow_cookies\" class=\"button action\">accepter</a>",
           "block": "<iframe id=\"dm_jukebox_iframe\" allowfullscreen=\"true\" allowtransparency=\"true\" style=\"overflow:hidden; margin:0; padding:0; width: 100%; height: 100%;\" marginwidth=\"0\" marginheight=\"0\" src=\"http://www.dailymotion.com/widget/jukebox?list[]=%2Fuser%2Fmairiedeparis%2F1&&autoplay=0&automute=0\" align=\"middle\" width=\"100%\" frameborder=\"0\"></iframe>"
         }
       },
@@ -611,7 +611,7 @@
             "modifiers": ["action"],
             "attributes": {"data-action": "close"}
           },
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
         }
       },
       "rheader": {
@@ -1124,7 +1124,7 @@
             "modifiers": ["action"],
             "attributes": {"data-action": "close"}
           },
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
         }
       },
       "rheader": {

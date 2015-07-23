@@ -2,6 +2,13 @@
 
 ## Current
 
+## 1.0.5 (2015-07-23)
+
+* component `html`: same behaviour as component `video` (do not load until cookies are accepted)
+* module `video-cover`: change cookie legal text, added `button` to accept
+* all templates: edited CNIL notice text
+* template `home`: optional legal `notice`
+
 ## 1.0.4 (2015-07-23)
 
 * module `notice`: allow use of `button` instead of close

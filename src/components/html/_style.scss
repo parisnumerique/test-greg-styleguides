@@ -5,4 +5,19 @@
   > * {
     max-width: 100%;
   }
+
+  .html-embed {display: none;}
+
+  .html-placeholder {
+    background: $grayF2;
+    color: $black;
+    padding: 20px;
+    text-align: center;
+
+    a:not(.button) {
+      color: $color-primary;
+      text-decoration: underline;
+      &:hover {text-decoration: none;}
+    }
+  }
 }
