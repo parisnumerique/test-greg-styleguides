@@ -188,15 +188,26 @@
     // html.jade:html compiled template
     templatizer["html"]["html"] = function tmpl_html_html(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push('<div class="component component-html">');
-        if (block) {
-            block && block(buf);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        buf.push('<div class="component component-html"><div class="html-wrapper">');
+        if (data.cookie === false) {
+            if (block) {
+                block && block(buf);
+            } else if (data.block) {
+                buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+            }
         } else {
-            buf.push("html");
+            if (data.placeholder) {
+                buf.push('<div class="html-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+            }
+            buf.push('<script type="text/html" class="html-embed">');
+            if (block) {
+                buf.push(null == (jade_interp = block) ? "" : jade_interp);
+            } else if (data.block) {
+                buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+            }
+            buf.push("</script>");
         }
-        buf.push("</div>");
+        buf.push("</div></div>");
         return buf.join("");
     };
 
