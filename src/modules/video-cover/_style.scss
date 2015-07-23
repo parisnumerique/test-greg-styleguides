@@ -43,7 +43,11 @@
       padding: 20px;
       text-align: center;
 
-      a {color: $color-primary}
+      a:not(.button) {color: $color-primary}
+
+      .button {
+        padding: 15px 20px;
+      }
     }
   }
 

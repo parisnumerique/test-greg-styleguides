@@ -14,7 +14,7 @@
             "modifiers": ["action"],
             "attributes": {"data-action": "close"}
           },
-          "block": "En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
+          "block": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>."
         },
         "legal": {
           "modifiers": ["white"],
