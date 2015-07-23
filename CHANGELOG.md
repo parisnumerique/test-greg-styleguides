@@ -2,6 +2,8 @@
 
 ## Current
 
+* template `home`: optional legal `notice`
+
 ## 1.0.4 (2015-07-23)
 
 * module `notice`: allow use of `button` instead of close
