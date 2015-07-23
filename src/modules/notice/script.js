@@ -19,7 +19,7 @@ Paris.notice = (function(){
     function init(){
       initOptions();
 
-      $close = $el.find('.close');
+      $close = $el.find('.close, .button[data-action="close"]');
 
       $close.on('click', onClickClose);
 

@@ -118,6 +118,11 @@
   }
 }
 
+.notice-button {
+  margin: 18px 20px;
+  float: right;
+}
+
 @include large-and-medium {
   .notice .close {
     right: 50px;

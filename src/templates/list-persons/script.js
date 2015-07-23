@@ -171,7 +171,8 @@ Paris.listPersons = (function(){
             "prev": Paris.i18n.t("pagination/prev"),
             "next": Paris.i18n.t("pagination/next")
           },
-          "url": "/page/${page}",
+          "base_url": "#",
+          "url": "#page-${page}",
           "current": data.page + 1,
           "total": data.nbPages
         };
