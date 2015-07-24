@@ -230,6 +230,26 @@
           "type": "matrix",
           "name": "matrix2",
           "id": "matrix2",
+          "label": "Matrice obligatoire",
+          "multiple": true,
+          "required": true,
+          "options": [
+            {"value": 1, "text": "Un"},
+            {"value": 2, "text": "Deux"},
+            {"value": 3, "text": "Trois"},
+            {"value": 4, "text": "Quatre"}
+          ],
+          "items": [
+            {"name": "first", "text": "Première question"},
+            {"name": "second", "text": "Deuxième question", "checked": [1, 3, 4]},
+            {"name": "third", "text": "Troisième question", "checked": [2]},
+            {"name": "fourth", "text": "Quatrième question"}
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "matrix3",
+          "id": "matrix3",
           "label": "Matrice avec des erreurs",
           "multiple": true,
           "required": true,
@@ -252,8 +272,8 @@
         },
         {
           "type": "matrix",
-          "name": "matrix3",
-          "id": "matrix3",
+          "name": "matrix4",
+          "id": "matrix4",
           "label": "Label",
           "options": [
             {"value": 1, "text": "Un"},
@@ -267,10 +287,30 @@
             {"name": "third", "text": "Troisième question", "checked": 2},
             {"name": "fourth", "text": "Quatrième question"}
           ]
-        },{
+        },
+        {
           "type": "matrix",
-          "name": "matrix4",
-          "id": "matrix4",
+          "name": "matrix5",
+          "id": "matrix5",
+          "label": "Matrice obligatoire",
+          "required": true,
+          "options": [
+            {"value": 1, "text": "Un"},
+            {"value": 2, "text": "Deux"},
+            {"value": 3, "text": "Trois"},
+            {"value": 4, "text": "Quatre"}
+          ],
+          "items": [
+            {"name": "first", "text": "Première question"},
+            {"name": "second", "text": "Deuxième question", "checked": 1},
+            {"name": "third", "text": "Troisième question", "checked": 2},
+            {"name": "fourth", "text": "Quatrième question"}
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "matrix6",
+          "id": "matrix6",
           "label": "Matrice avec des erreurs",
           "required": true,
           "options": [
