@@ -3,6 +3,7 @@
 ## Current
 
 * component `jecoute`: fixed bug when after floating element
+* component `news-push`: fixed link hover + optional link
 * module `news-card`: fixed border-radius + overflow hidden Chrome bug
 * template `document/postit`: DRY by reusing `document`
 

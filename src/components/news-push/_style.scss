@@ -64,6 +64,10 @@
     }
   }
 
+  .news-push-content-text {
+    &:hover .next {text-decoration: none;}
+  }
+
   .news-push-link {
     background: $grayF2;
     clear: both;
@@ -146,19 +150,6 @@
     .news-push-content {
       a {
         position: relative;
-        &.next:after {
-          content: " ";
-          width: 0%;
-          height: 1px;
-          background: $white;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          transition: .3s ease width ;
-        }
-        &.next:hover:after {
-          width: 100%;
-        }
       }
 
       & p:hover a.next:after {
