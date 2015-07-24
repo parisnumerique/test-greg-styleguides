@@ -8,9 +8,9 @@ Paris.document = (function(){
 
   var defaultOptions = {
     postitContentUrl: '/postit/${pageId}',
-    isUserSubscribedUrl: '/alerts/isUserSubscribed?idalertes=${alerteId}',
-    subscribeUserUrl: '/alerts/subscribeUser',//?idalertes=${alerteId}',
-    unsubscribeUserUrl: '/alerts/unsubscribeUser',//?idalertes=${alerteId}'
+    isUserSubscribedUrl: '/alerts/isUserSubscribed',
+    subscribeUserUrl: '/alerts/subscribeUser',
+    unsubscribeUserUrl: '/alerts/unsubscribeUser',
   };
 
   function document(selector, userOptions){
@@ -67,6 +67,7 @@ Paris.document = (function(){
       $.ajax({
         type: 'get',
         url: options.isUserSubscribedUrl.replace('${alerteId}', alerteId),
+        data: {idalertes: alerteId},
         success: function (subscribed) {
           switch (subscribed) {
             case false:
@@ -76,7 +77,7 @@ Paris.document = (function(){
               isSubscribed = true;
               break;
             default:
-              console.error('response to ' + options.isUserSubscribedUrl.replace('${alerteId}', alerteId) + 'is not recognized: ' + subscribed);
+              console.error('response to ' + options.isUserSubscribedUrl + '?idalertes=' + alerteId + 'is not recognized: ' + subscribed);
               return;
           }
           alerteElt.attr('href', 'javascript:void(0)');
@@ -86,17 +87,18 @@ Paris.document = (function(){
 
       function setupAlerteHandlers() {
         alerteElt.attr('title', isSubscribed ? 'Je me désabonne de l’alerte sur ce sujet' : 'Je m’abonne à l’alerte pour recevoir toutes les informations sur ce sujet');
-
+        alerteElt.toggleClass('active', isSubscribed);
         alerteElt.on('click', function onClick() {
-          $.post(
-            isSubscribed ? options.unsubscribeUserUrl :  options.subscribeUserUrl,
-            {idalertes: alerteId},
-            function (res) {
+          $.ajax({
+            type: 'get',
+            url: isSubscribed ? options.unsubscribeUserUrl :  options.subscribeUserUrl,
+            data: {idalertes: alerteId},
+            success: function (res) {
               isSubscribed = !isSubscribed;
               alerteElt.unbind('click');
               setupAlerteHandlers();
             }
-          );
+          });
         });
       }
 
