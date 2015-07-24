@@ -4,6 +4,7 @@
 
 * component `jecoute`: fixed bug when after floating element
 * module `news-card`: fixed border-radius + overflow hidden Chrome bug
+* template `document/postit`: DRY by reusing `document`
 
 ## 1.0.5 (2015-07-23)
 
