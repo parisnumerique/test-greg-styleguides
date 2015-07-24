@@ -8,11 +8,11 @@ html.no-js(lang="fr")
     else
       title= "Paris.fr"
 
-    if data.opengraph
+    if data && data.opengraph
       each og in data.opengraph
         meta&attributes(og)
 
-    if data.meta
+    if data && data.meta
       each meta in data.meta
         meta&attributes(meta)
 

@@ -1,8 +1,12 @@
 {
   "index": {
     "defaults": {
+      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher ce module.",
+      "block": "Contenu <strong>HTML</strong>"
     },
-    "with_block": {
+    "without_cookie": {
+      "cookie": false,
+      "placeholder": "Vous devez <a href=\"#\" data-action=\"allow_cookies\">accepter les cookies</a> et activer JavaScript pour afficher ce module.",
       "block": "Contenu <strong>HTML</strong>"
     }
   }
