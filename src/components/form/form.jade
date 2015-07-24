@@ -6,7 +6,7 @@ mixin form-title(data)
 
 mixin form-text(data)
   label.form-item-label(for=data.id)= data.label
-  input(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
+  input.form-field(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
 
 mixin form-email(data)
   +form-text(data)
@@ -19,19 +19,19 @@ mixin form-url(data)
 
 
 mixin form-hidden(data)
-  input(type=data.type name=data.name id=data.id value=data.value)
+  input.form-field(type=data.type name=data.name id=data.id value=data.value)
 
 
 mixin form-select(data)
   label.form-item-label(for=data.id)= data.label
-  select(name=data.name id=data.id required=data.required)
+  select.form-field(name=data.name id=data.id required=data.required)
     each item in data.items
       option(value=item.value)= item.text
 
 
 mixin form-textarea(data)
   label.form-item-label(for=data.id)= data.label
-  textarea(name=data.name id=data.id placeholder=data.placeholder rows=data.rows required=data.required)
+  textarea.form-field(name=data.name id=data.id placeholder=data.placeholder rows=data.rows required=data.required)
     = data.value
 
 
@@ -39,7 +39,7 @@ mixin form-checkbox(data)
   .form-item-label= data.label
   each item in data.items
     div: label
-      input(type=data.type name=data.name value=item.value checked=item.checked required=data.required)
+      input.form-field(type=data.type name=data.name value=item.value checked=item.checked)
       = item.text
 
 mixin form-radio(data)
@@ -61,7 +61,7 @@ mixin form-matrix(data)
         while i < data.options.length
           - if (data.multiple) {var checked = (item.checked || []).indexOf(data.options[i].value) !== -1; var requiredAttribute = {"data-grouprequired": data.required};} else {var checked = item.checked === data.options[i].value;var requiredAttribute = {"required": data.required};}
           td.matrix-item-option
-            input(type=type name=data.name+"["+item.name+"]"+(data.multiple ? "[]" : "") value=data.options[i].value checked=checked)&attributes(requiredAttribute)
+            input.form-field(type=type name=data.name+"["+item.name+"]"+(data.multiple ? "[]" : "") value=data.options[i].value checked=checked)&attributes(requiredAttribute)
           - i++
 
 
