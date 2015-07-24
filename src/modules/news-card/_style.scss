@@ -175,6 +175,7 @@ html.no-touch {
         height: 480px;
         margin-bottom: 0;
         overflow: hidden;
+        perspective: 1px; // fix border-radius + overflow hidden Chrome bug
         position: relative;
         transition: none;
         transform: none;

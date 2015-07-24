@@ -2,6 +2,9 @@
 
 ## Current
 
+* component `jecoute`: fixed bug when after floating element
+* module `news-card`: fixed border-radius + overflow hidden Chrome bug
+
 ## 1.0.5 (2015-07-23)
 
 * component `html`: same behaviour as component `video` (do not load until cookies are accepted)
