@@ -6,6 +6,7 @@
 * component `news-push`: fixed link hover + optional link
 * module `news-card`: fixed border-radius + overflow hidden Chrome bug
 * template `document/postit`: DRY by reusing `document`
+* better support when JS is disabled (using Modernizr `no-js` class)
 
 ## 1.0.5 (2015-07-23)
 

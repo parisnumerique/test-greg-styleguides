@@ -4,6 +4,7 @@
   text-align: center;
   text-decoration: none;
 
+  html.no-js &,
   html.no-touch & {
     &:hover {
       color: $white;
@@ -42,6 +43,7 @@
 
 .news-card-wrapper {
   html.touch &    {margin-bottom: 20px;}
+  html.no-js &,
   html.no-touch & {margin-bottom: 10px;}
   border-radius: 5px;
   transition: 0.2s ease transform;
@@ -68,6 +70,7 @@
 
 .news-card-content {
   html.touch &    {padding-bottom: 20px;}
+  html.no-js &,
   html.no-touch & {padding-bottom: 30px;}
   position: relative;
 
@@ -119,6 +122,7 @@
 
 .news-card-counters {display: none;}
 
+html.no-js,
 html.no-touch {
   .news-card-counters {
     display: block;
@@ -181,6 +185,7 @@ html.no-touch {
         transform: none;
       }
 
+      html.no-js &:hover,
       html.no-touch &:hover {
         .news-card-wrapper {
           transform: none;
@@ -236,6 +241,7 @@ html.no-touch {
         transform: translateY(0);
         transition: 0.3s ease transform;
         z-index: 1;
+        html.no-js &,
         html.no-touch & {
           &:before {background: none;}
         }
