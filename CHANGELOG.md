@@ -4,6 +4,7 @@
 
 * component `jecoute`: fixed bug when after floating element
 * component `news-push`: fixed link hover + optional link
+* module `document-heading`: improved active & hover states for icons
 * module `news-card`: fixed border-radius + overflow hidden Chrome bug
 * template `document/postit`: DRY by reusing `document`
 * better support when JS is disabled (using Modernizr `no-js` class)
