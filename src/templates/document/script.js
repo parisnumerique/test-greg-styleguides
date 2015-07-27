@@ -10,7 +10,7 @@ Paris.document = (function(){
     postitContentUrl: '/postit/${pageId}',
     isUserSubscribedUrl: '/alerts/isUserSubscribed',
     subscribeUserUrl: '/alerts/subscribeUser',
-    unsubscribeUserUrl: '/alerts/unsubscribeUser',
+    unsubscribeUserUrl: '/alerts/unsubscribeUser'
   };
 
   function document(selector, userOptions){
@@ -29,7 +29,7 @@ Paris.document = (function(){
 
       if (Cookies.get(Paris.config.cookies.parisconnect.name)) {
         loadPostit();
-        setupAlerteAjaxOperations();
+        setupAlertAjaxOperations();
       }
     }
 
@@ -53,21 +53,19 @@ Paris.document = (function(){
       $('.components').prepend(postit);
     }
 
-    function setupAlerteAjaxOperations() {
-      //init for alerte
-      var alerteElt = $('.document-heading-icons .icon-bell');
-      var alerteId = alerteElt.attr('href') && alerteElt.attr('href').split('/').pop();
+    function setupAlertAjaxOperations() {
+      // init for alert
+      var $alertIcon = $('.document-heading-icons .icon-bell');
+      var alertId = $alertIcon.attr('href') && $alertIcon.attr('href').split('/').pop();
 
-      if (!alerteId) {
-        return;
-      }
+      if (!alertId) {return;}
 
-      //get alerte current status
+      // get alert current status
       var isSubscribed;
       $.ajax({
         type: 'get',
-        url: options.isUserSubscribedUrl.replace('${alerteId}', alerteId),
-        data: {idalertes: alerteId},
+        url: options.isUserSubscribedUrl.replace('${alertId}', alertId),
+        data: {idalertes: alertId},
         success: function (subscribed) {
           switch (subscribed) {
             case false:
@@ -77,26 +75,26 @@ Paris.document = (function(){
               isSubscribed = true;
               break;
             default:
-              console.error('response to ' + options.isUserSubscribedUrl + '?idalertes=' + alerteId + 'is not recognized: ' + subscribed);
+              console.error('response to ' + options.isUserSubscribedUrl + '?idalertes=' + alertId + 'is not recognized: ' + subscribed);
               return;
           }
-          alerteElt.attr('href', 'javascript:void(0)');
-          setupAlerteHandlers();
+          $alertIcon.attr('href', 'javascript:void(0)');
+          setupAlertHandlers();
         }
       });
 
-      function setupAlerteHandlers() {
-        alerteElt.attr('title', isSubscribed ? 'Je me désabonne de l’alerte sur ce sujet' : 'Je m’abonne à l’alerte pour recevoir toutes les informations sur ce sujet');
-        alerteElt.toggleClass('active', isSubscribed);
-        alerteElt.on('click', function onClick() {
+      function setupAlertHandlers() {
+        $alertIcon.attr('title', isSubscribed ? Paris.i18n.t("alerts/unsubscribe") : Paris.i18n.t("alerts/subscribe"));
+        $alertIcon.toggleClass('active', isSubscribed);
+        $alertIcon.on('click', function onClick() {
           $.ajax({
             type: 'get',
             url: isSubscribed ? options.unsubscribeUserUrl :  options.subscribeUserUrl,
-            data: {idalertes: alerteId},
-            success: function (res) {
+            data: {idalertes: alertId},
+            success: function () {
               isSubscribed = !isSubscribed;
-              alerteElt.unbind('click');
-              setupAlerteHandlers();
+              $alertIcon.unbind('click');
+              setupAlertHandlers();
             }
           });
         });
