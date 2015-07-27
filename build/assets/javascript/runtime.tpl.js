@@ -337,7 +337,11 @@
         if (data.image.credit) {
             title.push("(" + data.image.credit + ")");
         }
-        buf.push("<a" + jade.attr("href", data.href, true, false) + ' class="news-push-image"><img' + jade.attr("src", data.image.src, true, false) + jade.attr("alt", data.image.alt, true, false) + jade.attr("title", title.join(" "), true, false) + '/></a><div class="news-push-content"><h3><span>' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</span></h3><p><a" + jade.attr("href", data.href, true, false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</a> <a" + jade.attr("href", data.href, true, false) + ' class="next">' + jade.escape(null == (jade_interp = data.follow) ? "" : jade_interp) + "</a></p></div></div><a" + jade.attr("href", data.link.href, true, false) + ' class="news-push-link"><span>' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</span></a></div>");
+        buf.push("<a" + jade.attr("href", data.href, true, false) + ' class="news-push-image"><img' + jade.attr("src", data.image.src, true, false) + jade.attr("alt", data.image.alt, true, false) + jade.attr("title", title.join(" "), true, false) + '/></a><div class="news-push-content"><h3><span>' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</span></h3><p class="news-push-content-text"><a' + jade.attr("href", data.href, true, false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</a> <a" + jade.attr("href", data.href, true, false) + ' class="next">' + jade.escape(null == (jade_interp = data.follow) ? "" : jade_interp) + "</a></p></div></div>");
+        if (data.link && data.link.href && data.link.text) {
+            buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' class="news-push-link"><span>' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</span></a>");
+        }
+        buf.push("</div>");
         return buf.join("");
     };
 
