@@ -1,7 +1,7 @@
 {
   "templates": [
     "document",
-    "document-postit",
+    "document/postit.html",
     "error",
     "faq",
     "generic",

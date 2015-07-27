@@ -9,9 +9,10 @@ mixin news-push(data)
         img(src=data.image.src alt=data.image.alt title=title.join(" "))
       .news-push-content
         h3: span= data.title
-        p
+        p.news-push-content-text
           a(href=data.href)= data.text
           = " "
           a.next(href=data.href)= data.follow
-    a.news-push-link(href=data.link.href)
-      span= data.link.text
+    if data.link && data.link.href && data.link.text
+      a.news-push-link(href=data.link.href)
+        span= data.link.text

@@ -2,6 +2,8 @@
 
 ## Current
 
+## 1.0.6 (2015-07-27)
+
 * component `jecoute`: fixed bug when after floating element
 * component `news-push`: fixed link hover + optional link
 * module `anchors-list` & `button-top`: a cookie can be used to disable scroll animation
