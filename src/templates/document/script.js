@@ -60,7 +60,7 @@ Paris.document = (function(){
       var isSubscribed;
       $.ajax({
         type: 'get',
-        url: options.isUserSubscribedUrl.replace('${alertId}', alertId),
+        url: options.isUserSubscribedUrl,
         data: {idalertes: alertId},
         success: function (subscribed) {
           switch (subscribed) {
