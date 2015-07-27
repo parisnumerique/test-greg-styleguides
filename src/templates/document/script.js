@@ -18,10 +18,6 @@ Paris.document = (function(){
       options = $.extend({}, defaultOptions, userOptions),
       pageId;
 
-    init();
-
-    return $el;
-
     function init(){
       initOptions();
 
@@ -102,6 +98,9 @@ Paris.document = (function(){
 
     }
 
+    init();
+
+    return $el;
   }
 
   return function(selector, userOptions){
