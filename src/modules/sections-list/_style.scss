@@ -31,6 +31,7 @@
     }
   }
 
+  html.no-js &,
   html.no-touch & {
     &:before {
       background: $red1;
@@ -100,6 +101,7 @@
       }
     }
 
+    html.no-js &,
     html.no-touch & {
       &:before {
         border-radius: 5px;
@@ -129,8 +131,11 @@
       display: none;
       padding: 30px $small-page-padding;
 
-      html.no-touch &:hover:after {
-        color: $grayF2;
+      html.no-js,
+      html.no-touch {
+        &:hover:after {
+          color: $grayF2;
+        }
       }
 
       &:after {

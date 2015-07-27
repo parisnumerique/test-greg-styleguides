@@ -64,13 +64,18 @@
    color: $gray99;
    text-decoration: none;
 
-   &.active {
-     color: $color-secondary;
+   &:hover {
+     color: $gray33;
    }
 
-   &:hover,
-   &.active:hover {
+   &.icon-bell.active {
+     color: $color-secondary;
+     &:hover {color: $color-secondary-variant;}
+   }
+
+   &.icon-favorites.active {
      color: $color-tertiary;
+     &:hover {color: $color-tertiary-variant;}
    }
 
    & + .icon {

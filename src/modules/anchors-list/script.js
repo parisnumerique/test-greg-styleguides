@@ -7,6 +7,7 @@ var each = require('lodash.foreach');
 var defer = require('lodash.defer');
 var slugify = require("underscore.string/slugify");
 var throttle = require('lodash.throttle');
+var Cookies = require('js-cookie');
 
 var Paris = window.Paris || {};
 
@@ -20,7 +21,8 @@ Paris.anchors = (function(){
     anchorsFavoritable: false,
     anchorsShareable: false,
     anchorTopBorder: 7, // border-top of the .anchor elements, in pixels
-    breakpoint: 'large'
+    breakpoint: 'large',
+    scrollDuration: 1500
   };
 
   function anchors(selector, userOptions){
@@ -58,6 +60,7 @@ Paris.anchors = (function(){
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
+      options.scrollDuration = Cookies.getJSON(Paris.config.cookies.publicdata.name).noscroll ? 0 : options.scrollDuration;
     }
 
     function onResize() {
@@ -170,7 +173,7 @@ Paris.anchors = (function(){
       $anchor
         .velocity("stop")
         .velocity("scroll", {
-          duration: 1500,
+          duration: options.scrollDuration,
           offset: $(options.headerSelector).height() * -1 + options.anchorTopBorder,
           complete: function(){
             if (Modernizr.history && window.location.hash !== anchor) {

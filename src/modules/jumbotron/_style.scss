@@ -52,15 +52,18 @@
   }
 }
 
-html.no-touch .jumbotron {
-  .jumbotron-wrapper:after {
-    transition: transform 1s ease;
-    transform: translateX(-20%);
-  }
-
-  &:hover {
+html.no-js,
+html.no-touch {
+  .jumbotron {
     .jumbotron-wrapper:after {
-      transform: translateX(0);
+      transition: transform 1s ease;
+      transform: translateX(-20%);
+    }
+
+    &:hover {
+      .jumbotron-wrapper:after {
+        transform: translateX(0);
+      }
     }
   }
 }

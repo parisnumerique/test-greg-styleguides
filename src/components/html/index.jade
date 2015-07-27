@@ -5,18 +5,16 @@ p Ce composant accepte un bloc (ou un paramètre <code>block</code>) contenant u
 
 h2 Standard
 .lsg-component(style="max-width: 500px")
-  +html(with_block)
+  +html(defaults)
 +code({language: "jade"}).
   include html
 
-  +html(#{JSON.stringify(with_block, null, 2)})
+  +html(#{JSON.stringify(defaults, null, 2)})
 
-h2 En passant sous forme de bloc
+h2 Sans prendre en compte le cookie
 .lsg-component(style="max-width: 500px")
-  +html
-    != 'Contenu <strong>HTML</strong>'
+  +html(without_cookie)
 +code({language: "jade"}).
   include html
 
-  +html
-    != 'Contenu &lt;strong&gt;HTML&lt;/strong&gt;'
+  +html(#{JSON.stringify(without_cookie, null, 2)})

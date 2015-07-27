@@ -32,6 +32,7 @@
   &:first-child:after {background-color: rgba($red1, 0.9);}
   &:last-child:after {background-color: rgba($color-secondary-variant, 0.9);}
 
+  html.no-js &,
   html.no-touch & {
     &:hover {
       &:after {background-color: rgba($yellow1, 1);}
