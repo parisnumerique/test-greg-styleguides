@@ -3,6 +3,7 @@ require('velocity-animate');
 
 var PubSub = require('pubsub-js');
 var throttle = require('lodash.throttle');
+var Cookies = require('js-cookie');
 
 var Paris = window.Paris || {};
 
@@ -10,6 +11,7 @@ Paris.buttonTop = (function(){
 
   function buttonTop(selector){
     var $el = $(selector);
+    var scrollDuration = Cookies.getJSON(Paris.config.cookies.publicdata.name).noscroll ? 0 : 1500;
 
     function init(){
       if (!$el.is(':visible')) {return;}
@@ -31,7 +33,7 @@ Paris.buttonTop = (function(){
       } else {
         // animated scroll
         $("html").velocity("scroll", {
-          duration: 1500,
+          duration: scrollDuration,
           offset: 0,
           mobileHA: false,
           complete: function(){
