@@ -47,6 +47,7 @@ Paris.document = (function(){
       data.block = data.contenu;
       var postit = Paris.templates.templatizer['postit']['postit'](data);
       $('.components').prepend(postit);
+      $('.anchors-list-items').prepend('<li class="anchors-list-item anchor-postit"><a href="#postit" class="anchors-list-link">Informations complémentaires</a><span class="anchors-list-progress" style="width: 0%;"></span></li>')
     }
 
     function setupAlertAjaxOperations() {

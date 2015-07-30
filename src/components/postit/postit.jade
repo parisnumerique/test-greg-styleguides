@@ -1,5 +1,7 @@
 mixin postit(data)
-  .component.component-postit(class=data ? data.modifiers : [])
+  .component.component-postit(class=data ? data.modifiers : [])#postit
+    h2.
+      Informations complémentaires
     if block
       block
     else if data.block
