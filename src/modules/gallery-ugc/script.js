@@ -8,37 +8,27 @@ Paris.galleryUgc = (function(){
   function galleryUgc(selector){
     var $el = $(selector),
       $hashtags,
-      $content,
+      $visibleContent,
+      $toBeVisibleContent,
       $data;
 
     function init(){
       $hashtags = $el.find('.gallery-hashtag');
-      $content = $el.find('.gallery-content');
+      $visibleContent = $el.find('.gallery-content').filter(':visible');
 
       $hashtags.on('click', onClickHashtag);
     }
 
     function onClickHashtag(e) {
       e.preventDefault();
-      var url = $(this).attr("href");
-      var ready = {
-        animation: $.Deferred(),
-        load: $.Deferred()
-      };
+      var hashtagId = $(this).attr("href");
 
       $hashtags.removeClass("current");
       $(this).addClass("current");
 
-      // Animate disappearance of the items
-      ready.animation = animateImages(0);
+      prepareNewContent(hashtagId);
 
-      // Load the HTML
-      // The server should detect that the request is AJAX
-      // and return only the needed fragment
-      ready.load = loadHTML(url);
-
-      // When the animation is finished and the content is loaded
-      $.when(ready.animation, ready.load).done(function(){
+      animateImages(0).then(function(){
         replaceContent();
         animateImages(1);
       });
@@ -47,7 +37,7 @@ Paris.galleryUgc = (function(){
     function animateImages(opacity) {
       var complete = $.Deferred();
 
-      $content.find('.gallery-image').each(function(index){
+      $visibleContent.find('.gallery-image').each(function(index){
         $(this).velocity({
           opacity: opacity
         }, {
@@ -65,21 +55,24 @@ Paris.galleryUgc = (function(){
       return complete;
     }
 
-    function loadHTML(url) {
-      var complete = $.Deferred();
-
-      $.get(url, function(data) {
-        $data = $(data).find('.gallery-content');
-        complete.resolve();
-      });
-
-      return complete;
+    function prepareNewContent(hashtagId) {
+      $toBeVisibleContent = $el.find('#' + hashtagId);
+      var images = $toBeVisibleContent.find('a.gallery-image');
+      if(images.first().css('background-image') === 'none') {
+        images.each(function (index, elt) {
+          var $elt = $(elt);
+          $elt.css({'background-image': $elt.data('background-image')});
+        });
+      }
     }
 
     function replaceContent() {
-      $content.html($data).find('.gallery-image').css({
+      $visibleContent.toggle();
+      $toBeVisibleContent.find('.gallery-image').css({
         opacity: 0
       });
+      $toBeVisibleContent.toggle();
+      $visibleContent = $toBeVisibleContent;
     }
 
     init();
