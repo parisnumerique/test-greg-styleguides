@@ -9,8 +9,7 @@ Paris.galleryUgc = (function(){
     var $el = $(selector),
       $hashtags,
       $visibleContent,
-      $toBeVisibleContent,
-      $data;
+      $toBeVisibleContent;
 
     function init(){
       $hashtags = $el.find('.gallery-hashtag');
@@ -21,7 +20,7 @@ Paris.galleryUgc = (function(){
 
     function onClickHashtag(e) {
       e.preventDefault();
-      var hashtagId = $(this).attr("href");
+      var hashtagId = $(this).attr("href").replace('#', '');
 
       $hashtags.removeClass("current");
       $(this).addClass("current");
@@ -56,12 +55,12 @@ Paris.galleryUgc = (function(){
     }
 
     function prepareNewContent(hashtagId) {
-      $toBeVisibleContent = $el.find('#' + hashtagId);
+      $toBeVisibleContent = $el.find('#gallery-ugc-' + hashtagId);
       var images = $toBeVisibleContent.find('a.gallery-image');
       if(images.first().css('background-image') === 'none') {
-        images.each(function (index, elt) {
-          var $elt = $(elt);
-          $elt.css({'background-image': $elt.data('background-image')});
+        images.each(function (index, image) {
+          var $image = $(image);
+          $image.css({'background-image': $image.data('background-image')});
         });
       }
     }
