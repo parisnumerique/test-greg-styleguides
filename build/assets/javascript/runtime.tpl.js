@@ -441,6 +441,9 @@
     templatizer["postit"]["postit"] = function tmpl_postit_postit(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.cls([ "component", "component-postit", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
+        if (data.title) {
+            buf.push('<h2 id="postit" class="anchor">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+        }
         if (block) {
             block && block(buf);
         } else if (data.block) {
@@ -1656,6 +1659,8 @@
         var buf = [];
         var jade_mixins = {};
         var jade_interp;
+        var locals_for_with = locals || {};
+        (function(backgroundImage) {}).call(this, "backgroundImage" in locals_for_with ? locals_for_with.backgroundImage : typeof backgroundImage !== "undefined" ? backgroundImage : undefined);
         return buf.join("");
     };
 
@@ -1668,88 +1673,72 @@
             if ("number" == typeof $obj.length) {
                 for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                     var hashtag = $obj[$index];
-                    buf.push("<a" + jade.attr("href", "" + hashtag.url + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : "" ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
+                    buf.push("<a" + jade.attr("href", "#" + hashtag.id + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
                 }
             } else {
                 var $l = 0;
                 for (var $index in $obj) {
                     $l++;
                     var hashtag = $obj[$index];
-                    buf.push("<a" + jade.attr("href", "" + hashtag.url + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : "" ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
+                    buf.push("<a" + jade.attr("href", "#" + hashtag.id + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
                 }
             }
         }).call(this);
-        buf.push('<div class="gallery-content">');
-        (function() {
-            var $obj = data.items;
-            if ("number" == typeof $obj.length) {
-                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                    var item = $obj[$index];
-                    buf.push('<a href="#" target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
-                }
-            } else {
-                var $l = 0;
-                for (var $index in $obj) {
-                    $l++;
-                    var item = $obj[$index];
-                    buf.push('<a href="#" target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
-                }
-            }
-        }).call(this);
-        buf.push("</div></div>");
-        return buf.join("");
-    };
-
-    // refresh.jade compiled template
-    templatizer["refresh"] = function tmpl_refresh(locals) {
-        var buf = [];
-        var jade_mixins = {};
-        var jade_interp;
-        var locals_for_with = locals || {};
-        (function(defaults) {
-            buf.push(templatizer["refresh"]["gallery-ugc"](defaults));
-        }).call(this, "defaults" in locals_for_with ? locals_for_with.defaults : typeof defaults !== "undefined" ? defaults : undefined);
-        return buf.join("");
-    };
-
-    // refresh.jade:gallery-ugc compiled template
-    templatizer["refresh"]["gallery-ugc"] = function tmpl_refresh_gallery_ugc(data) {
-        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push('<div class="gallery-ugc"><div class="gallery-title">' + jade.escape(null == (jade_interp = data.title + " :") ? "" : jade_interp) + "</div>");
         (function() {
             var $obj = data.hashtags;
             if ("number" == typeof $obj.length) {
                 for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                     var hashtag = $obj[$index];
-                    buf.push("<a" + jade.attr("href", "" + hashtag.url + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : "" ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
+                    buf.push("<div" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-content">');
+                    (function() {
+                        var $obj = hashtag.items;
+                        if ("number" == typeof $obj.length) {
+                            for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                var item = $obj[$index];
+                                backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                            }
+                        } else {
+                            var $l = 0;
+                            for (var $index in $obj) {
+                                $l++;
+                                var item = $obj[$index];
+                                backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                            }
+                        }
+                    }).call(this);
+                    buf.push("</div>");
                 }
             } else {
                 var $l = 0;
                 for (var $index in $obj) {
                     $l++;
                     var hashtag = $obj[$index];
-                    buf.push("<a" + jade.attr("href", "" + hashtag.url + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : "" ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
+                    buf.push("<div" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-content">');
+                    (function() {
+                        var $obj = hashtag.items;
+                        if ("number" == typeof $obj.length) {
+                            for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                var item = $obj[$index];
+                                backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                            }
+                        } else {
+                            var $l = 0;
+                            for (var $index in $obj) {
+                                $l++;
+                                var item = $obj[$index];
+                                backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                            }
+                        }
+                    }).call(this);
+                    buf.push("</div>");
                 }
             }
         }).call(this);
-        buf.push('<div class="gallery-content">');
-        (function() {
-            var $obj = data.items;
-            if ("number" == typeof $obj.length) {
-                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                    var item = $obj[$index];
-                    buf.push('<a href="#" target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
-                }
-            } else {
-                var $l = 0;
-                for (var $index in $obj) {
-                    $l++;
-                    var item = $obj[$index];
-                    buf.push('<a href="#" target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
-                }
-            }
-        }).call(this);
-        buf.push("</div></div>");
+        buf.push("</div>");
         return buf.join("");
     };
 

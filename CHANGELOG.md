@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.7 (not released yet)
+## 1.0.7 (2015-08-03)
 
 * component `postit`: added `title` to data
 * module `anchors-list`: add postit item dynamically
