@@ -36,6 +36,9 @@ Paris.i18n.locales = {
     "alerts": {
       "subscribe": "Je m’abonne à l’alerte pour recevoir toutes les informations sur ce sujet",
       "unsubscribe": "Je me désabonne de l’alerte sur ce sujet"
+    },
+    "postit": {
+      "default_title": "Informations complémentaires"
     }
   }
 };

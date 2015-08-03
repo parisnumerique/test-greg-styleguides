@@ -1,6 +1,11 @@
 # Changelog
 
-## Current
+## 1.0.7 (2015-08-03)
+
+* component `postit`: added `title` to data
+* module `anchors-list`: add postit item dynamically
+* module `gallery-ugc`: removed ajax loading
+* fixed bug with `Cookies.getJSON` when the cookie is not set
 
 ## 1.0.6 (2015-07-27)
 

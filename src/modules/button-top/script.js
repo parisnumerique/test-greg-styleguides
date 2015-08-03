@@ -11,7 +11,8 @@ Paris.buttonTop = (function(){
 
   function buttonTop(selector){
     var $el = $(selector);
-    var scrollDuration = Cookies.getJSON(Paris.config.cookies.publicdata.name).noscroll ? 0 : 1500;
+    var publicDataCookie = Cookies.getJSON(Paris.config.cookies.publicdata.name);
+    var scrollDuration = publicDataCookie && publicDataCookie.noscroll ? 0 : 1500;
 
     function init(){
       if (!$el.is(':visible')) {return;}

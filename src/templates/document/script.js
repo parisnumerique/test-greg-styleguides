@@ -15,12 +15,14 @@ Paris.document = (function(){
 
   function document(selector, userOptions){
     var $el = $(selector),
+      $anchors,
       options = $.extend({}, defaultOptions, userOptions),
       pageId;
 
     function init(){
       initOptions();
 
+      $anchors = $('.layout-aside .anchors-list');
       pageId = $('body').data('pageid');
 
       if (Cookies.get(Paris.config.cookies.parisconnect.name)) {
@@ -44,9 +46,15 @@ Paris.document = (function(){
     }
 
     function renderPostit(data){
-      data.block = data.contenu;
+      data.title = data.title || Paris.i18n.t("postit/default_title");
+      data.block = data.block || data.contenu;
       var postit = Paris.templates.templatizer['postit']['postit'](data);
       $('.components').prepend(postit);
+      $anchors.data('api').addItem({
+        id: "postit",
+        text: data.title,
+        modifiers: "anchor-postit"
+      });
     }
 
     function setupAlertAjaxOperations() {

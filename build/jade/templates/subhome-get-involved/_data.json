@@ -275,44 +275,78 @@
           "title": "Hashtags de la semaine",
           "hashtags": [
             {
-              "url": "../../modules/gallery-ugc/refresh.html",
+              "id": "automneaparis",
               "text": "#automneàparis",
-              "current": true
-            },{
-              "url": "../../modules/gallery-ugc/refresh.html",
-              "text": "#nuit_blanche"
-            }
-          ],
-          "items": [
-            {
-              "image": "../../modules/gallery-ugc/picture1.jpg",
-              "text": "@user",
-              "href": "#"
+              "current": true,
+              "items": [
+                {
+                  "image": "../../modules/gallery-ugc/picture1.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture2.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture3.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture4.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture5.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture6.jpg",
+                  "text": "@user",
+                  "href": "#"
+                }
+              ]
             },
             {
-              "image": "../../modules/gallery-ugc/picture2.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture3.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture4.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture5.jpg",
-              "text": "@user",
-              "href": "#"
-            },
-            {
-              "image": "../../modules/gallery-ugc/picture6.jpg",
-              "text": "@user",
-              "href": "#"
+              "id": "nuit_blanche",
+              "text": "#nuit_blanche",
+              "current": false,
+              "items": [
+                {
+                  "image": "../../modules/gallery-ugc/picture3.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture4.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture1.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture6.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture2.jpg",
+                  "text": "@user",
+                  "href": "#"
+                },
+                {
+                  "image": "../../modules/gallery-ugc/picture5.jpg",
+                  "text": "@user",
+                  "href": "#"
+                }
+              ]
             }
           ]
         }

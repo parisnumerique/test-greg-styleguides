@@ -157,6 +157,9 @@
     templatizer["postit"]["postit"] = function tmpl_postit_postit(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
         buf.push("<div" + jade.cls([ "component", "component-postit", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
+        if (data.title) {
+            buf.push('<h2 id="postit" class="anchor">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+        }
         if (block) {
             block && block(buf);
         } else if (data.block) {

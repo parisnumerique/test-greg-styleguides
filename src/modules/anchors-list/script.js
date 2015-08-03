@@ -27,8 +27,10 @@ Paris.anchors = (function(){
 
   function anchors(selector, userOptions){
     var $el = $(selector),
+        api = {},
         options = $.extend({}, defaultOptions, userOptions),
         $layoutContainer,
+        $itemsContainer,
         $anchors,
         items,
         headerHeight = 0;
@@ -37,6 +39,7 @@ Paris.anchors = (function(){
       initOptions();
 
       $layoutContainer = $('.layout-left-col');
+      $itemsContainer = $el.find('.anchors-list-items');
       $anchors = $layoutContainer.find(options.anchorsSelector);
 
       PubSub.subscribe('responsive.resize', onResize);
@@ -54,13 +57,16 @@ Paris.anchors = (function(){
       }, 1000);
 
       $el.on('click', '.anchors-list-link', onClickAnchorLink);
+
+      $el.data('api', api);
     }
 
     function initOptions() {
       $.each($el.data(), function(key, value){
         options[key] = value;
       });
-      options.scrollDuration = Cookies.getJSON(Paris.config.cookies.publicdata.name).noscroll ? 0 : options.scrollDuration;
+      var publicDataCookie = Cookies.getJSON(Paris.config.cookies.publicdata.name);
+      options.scrollDuration = publicDataCookie && publicDataCookie.noscroll ? 0 : options.scrollDuration;
     }
 
     function onResize() {
@@ -118,7 +124,7 @@ Paris.anchors = (function(){
       }
 
       defer(function () {
-        PubSub.publish('anchors:ready');
+        PubSub.publish('anchors.ready');
         fillBars();
       });
     }
@@ -215,6 +221,14 @@ Paris.anchors = (function(){
       parseItems();
       fillBars();
     }
+
+
+    // The API for external interaction
+
+    api.addItem = function(data){
+      $itemsContainer.prepend('<li class="anchors-list-item '+data.modifiers+'"><a href="#'+data.id+'" class="anchors-list-link">'+data.text+'</a><span class="anchors-list-progress" style="width: 0%;"></span></li>');
+      renderAnchors();
+    };
 
     init();
 
