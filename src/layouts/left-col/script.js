@@ -10,7 +10,7 @@ Paris.leftCol = (function(){
     var $el = $(selector);
 
     function init(){
-      PubSub.subscribe('anchors:ready', setAffix);
+      PubSub.subscribe('anchors.ready', setAffix);
 
       PubSub.subscribe('responsive.small.enable', setAffix);
       PubSub.subscribe('responsive.small.disable', unsetAffix);

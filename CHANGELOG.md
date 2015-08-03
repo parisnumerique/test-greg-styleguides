@@ -1,6 +1,10 @@
 # Changelog
 
-## Current
+## 1.0.7 (not released yet)
+
+* component `postit`: added `title` to data
+* module `anchors-list`: add postit item dynamically
+* fixed bug with `Cookies.getJSON` when the cookie is not set
 
 ## 1.0.6 (2015-07-27)
 
