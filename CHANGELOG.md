@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8 (not yet release)
+
+* component `postit`: added background color
+
 ## 1.0.7 (2015-08-03)
 
 * component `postit`: added `title` to data
