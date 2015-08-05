@@ -15,6 +15,18 @@
         "href": "#",
         "text": "Toute l'actualité logement"
       }
+    },
+    "without_link": {
+      "image": {
+        "src": "../../components/news-push/news-push.jpg",
+        "alt": "Conférence priorité logement",
+        "title": "Conférence priorité logement",
+        "credit": "Mairie de Paris / DICOM"
+      },
+      "title": "Actu",
+      "text": "Le pacte « Logement pour tous » Amplifier la construction de logements à Paris et favoriser l’émergence de formes d’habitat innovantes : tel est l’objectif de ce page…",
+      "follow": "Lire la suite",
+      "href": "#"
     }
   }
 }

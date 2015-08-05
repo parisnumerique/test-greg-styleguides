@@ -1,7 +1,8 @@
 {
   "name": "paris-styleguide",
-  "version": "1.0.5",
-  "description": "Paris.fr styleguide",
+  "version": "1.0.6",
+  "description": "Paris Living Style Guide",
+  "author": "Hans Lemuet <hans@etaminstudio.com>",
   "main": "index.js",
   "dependencies": {
     "cldr-data": "~26.0.10"
@@ -57,6 +58,6 @@
     "type": "git",
     "url": "git@git.etaminstudio.com:paris/livingstyleguide.git"
   },
-  "author": "",
-  "license": "ISC"
+  "private": true,
+  "license": "MIT"
 }

@@ -30,6 +30,9 @@ Paris.config = {
     },
     "parisconnect": {
       "name": "pcuid"
+    },
+    "publicdata": {
+      "name": "publicdata"
     }
   },
   captcha: {

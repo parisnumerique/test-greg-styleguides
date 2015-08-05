@@ -2,12 +2,18 @@
 
 ## Current
 
+## 1.0.6 (2015-07-27)
+
 * component `jecoute`: fixed bug when after floating element
 * component `news-push`: fixed link hover + optional link
+* module `anchors-list` & `button-top`: a cookie can be used to disable scroll animation
 * module `document-heading`: improved active & hover states for icons
 * module `news-card`: fixed border-radius + overflow hidden Chrome bug
+* template `document`: implemented alerts subscription
 * template `document/postit`: DRY by reusing `document`
 * better support when JS is disabled (using Modernizr `no-js` class)
+* added `alerts` in `locales.js`
+* added `publicdata` in `config.js`
 
 ## 1.0.5 (2015-07-23)
 
