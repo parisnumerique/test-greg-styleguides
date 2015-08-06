@@ -6,15 +6,17 @@ Paris.form = (function(){
 
   function form(selector){
     var $el = $(selector),
+      $form,
       $captcha,
       $currentField;
 
     function init(){
+      $form = $el.find('form');
       $captcha = $el.find('.form-item-captcha');
 
       $el.on('focus', '.form-field', onFieldFocus);
       $el.on('blur', '.form-field', onFieldBlur);
-      $el.on('submit', onSubmit);
+      $form.on('submit', onSubmit);
 
       renderCaptcha();
 
@@ -84,8 +86,33 @@ Paris.form = (function(){
       $currentField = null;
     }
 
-    function onSubmit(){
-      console.log("form submitted", $el.get(0).validity);
+    function onSubmit(e){
+      e.preventDefault();
+      console.log("form submitted", $el.get(0).validity, $form.validity);
+      if ($form.validity) {
+        saveData();
+      } else {
+        // invalid
+      }
+    }
+
+    function saveData() {
+      var data = $form.serializeArray();
+      $.ajax({
+        url: $form.attr('action'),
+        type: $form.attr('method') || 'POST',
+        data: data,
+        success: onDataSaved,
+        error: onDataError
+      });
+    }
+
+    function onDataSaved(data, status, xhr){
+      console.log('onDataSaved', data, status, xhr);
+    }
+
+    function onDataError(xhr, status, error){
+      console.log('onDataError', xhr, status, error);
     }
 
 

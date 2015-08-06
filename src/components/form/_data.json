@@ -3,6 +3,42 @@
     "defaults": {
       "items": [
         {
+          "type": "text",
+          "name": "text1",
+          "id": "text1",
+          "label": "Champ texte"
+        },
+        {
+          "type": "textarea",
+          "name": "textarea1",
+          "id": "textarea1",
+          "label": "Zone de texte",
+          "placeholder": "Placeholder"
+        },
+        {
+          "type": "checkbox",
+          "name": "checkbox1[]",
+          "id": "checkbox1",
+          "items": [
+            {"value": 1, "text": "Intitulé"}
+          ]
+        },
+        {
+          "type": "buttons",
+          "items": [
+            {
+              "text": "Valider",
+              "attributes": {
+                "type": "submit"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "full": {
+      "items": [
+        {
           "type": "title",
           "text": "Champs simples"
         },
