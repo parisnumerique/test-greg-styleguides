@@ -43,10 +43,12 @@
     top: 0;
     opacity: 0;
     transition-delay: 1s;
+    z-index: 1;
   }
 
   .answered .block-content-answer {
     opacity: 1;
+    z-index: 1;
   }
 
   .answered .block-content-question {

@@ -20,7 +20,7 @@ mixin block-content-jecoute(data)
                 .text= item.question.text
               .block-content-answer
                 .user= item.answer.user
-                .text= item.answer.text
+                .text!= item.answer.text
     if data.text
       .block-content-text= data.text
     - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
