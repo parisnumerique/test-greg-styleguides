@@ -7,6 +7,7 @@ require('./lib/i18n');
 require('./lib/requestanimationframe');
 require('./lib/responsive');
 require('./lib/scroll');
+require('./lib/url');
 
 // load our components
 require('../components/accordion/script');
