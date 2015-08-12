@@ -53,8 +53,8 @@ Paris.listPersons = (function(){
       helper = algoliaSearchHelper(algolia, Paris.config.algolia.indexes[options.index], options.algoliaHelperParams);
 
       // Add mandatory facet filters
-      if (options.addFacetFilter) {
-        $.each(options.addFacetFilter, function (index, facetFilter) {
+      if (options.addFacetFilterJson) {
+        $.each(options.addFacetFilterJson, function (index, facetFilter) {
           helper.addRefine(facetFilter.facetName, facetFilter.facetValue);
         });
       }
@@ -291,11 +291,7 @@ Paris.listPersons = (function(){
       return nbOfFacets > 1;
     }
 
-
-
-
     // The API for external interaction
-
     api.search = function(query){
       $searchFieldInput.val(query).trigger('input');
     };
@@ -314,5 +310,6 @@ Paris.listPersons = (function(){
 })();
 
 $(document).ready(function(){
+  $(".hidden-without-js").show();
   Paris.listPersons('body.list-persons');
 });
