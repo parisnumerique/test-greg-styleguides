@@ -29,6 +29,10 @@
     height: 130px;
     overflow: hidden;
     position: relative;
+
+    a {
+      border-bottom: 1px solid;
+    }
   }
 
   .block-content-question,
@@ -36,6 +40,10 @@
     height: 130px;
     transition: 1s ease opacity;
     opacity: 1;
+
+    .user {
+      font-weight: bold;
+    }
   }
 
   .block-content-answer {
@@ -53,10 +61,6 @@
 
   .answered .block-content-question {
     opacity: 0;
-
-    .user {
-      font-weight: bold;
-    }
   }
 
   .block-content-timer {
