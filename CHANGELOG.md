@@ -1,8 +1,9 @@
 # Changelog
 
-## 1.0.8 (not yet release)
+## 1.0.8 (not yet released)
 
 * component `postit`: added background color
+* module `block-content-jecoute`: text can now contain links
 
 ## 1.0.7 (2015-08-03)
 
