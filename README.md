@@ -51,6 +51,7 @@ This task will:
 ### Use the build in another project
 
 Run `npm link` in this folder
+
 Run `npm link paris-styleguide` in the other project
 
 You'll get the paris-styleguide project symbolically linked in the other project `node_modules`.
