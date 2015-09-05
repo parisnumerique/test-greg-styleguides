@@ -12,8 +12,8 @@ Paris.galleryUgc = (function(){
       $toBeVisibleContent;
 
     function init(){
-      $hashtags = $el.find('.gallery-hashtag');
-      $visibleContent = $el.find('.gallery-content').filter(':visible');
+      $hashtags = $el.find('.gallery-ugc-hashtag');
+      $visibleContent = $el.find('.gallery-ugc-content').filter(':visible');
 
       $hashtags.on('click', onClickHashtag);
     }
@@ -36,7 +36,7 @@ Paris.galleryUgc = (function(){
     function animateImages(opacity) {
       var complete = $.Deferred();
 
-      $visibleContent.find('.gallery-image').each(function(index){
+      $visibleContent.find('.gallery-ugc-image').each(function(index){
         $(this).velocity({
           opacity: opacity
         }, {
@@ -56,7 +56,7 @@ Paris.galleryUgc = (function(){
 
     function prepareNewContent(hashtagId) {
       $toBeVisibleContent = $el.find('#gallery-ugc-' + hashtagId);
-      var images = $toBeVisibleContent.find('a.gallery-image');
+      var images = $toBeVisibleContent.find('a.gallery-ugc-image');
       if(images.first().css('background-image') === 'none') {
         images.each(function (index, image) {
           var $image = $(image);
@@ -67,7 +67,7 @@ Paris.galleryUgc = (function(){
 
     function replaceContent() {
       $visibleContent.toggle();
-      $toBeVisibleContent.find('.gallery-image').css({
+      $toBeVisibleContent.find('.gallery-ugc-image').css({
         opacity: 0
       });
       $toBeVisibleContent.toggle();
