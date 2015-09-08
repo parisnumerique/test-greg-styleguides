@@ -10,6 +10,7 @@ require('./lib/scroll');
 
 // load our components
 require('../components/accordion/script');
+require('../components/form/script');
 require('../components/gallery/script');
 require('../components/html/script');
 require('../components/jecoute/script');

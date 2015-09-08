@@ -30,7 +30,8 @@
     z-index: -1;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &:after {
       width: 100%;
     }
