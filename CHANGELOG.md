@@ -2,6 +2,7 @@
 
 ## 1.0.8 (not yet released)
 
+* component `form` added
 * component `gallery` added
 * component `postit`: added background color
 * module `block-content-jecoute`: text can now contain links
