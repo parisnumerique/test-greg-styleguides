@@ -13,6 +13,7 @@
     "bootstrap": "^3.3.2",
     "browserify": "^9.0.3",
     "fastclick": "~1.0.6",
+    "flickity-imagesloaded": "^1.0.1",
     "globalize": "^1.0.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.1",
