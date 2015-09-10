@@ -5,6 +5,7 @@
 * component `gallery` added
 * component `postit`: added background color
 * module `block-content-jecoute`: text can now contain links
+* template `list-persons`: improved search javascript
 
 ## 1.0.7 (2015-08-03)
 

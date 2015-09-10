@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "algoliasearch": "~3.3.2",
+    "algoliasearch-helper": "^2.2.0",
     "bootstrap": "^3.3.2",
     "browserify": "^9.0.3",
     "fastclick": "~1.0.6",

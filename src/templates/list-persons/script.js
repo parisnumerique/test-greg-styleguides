@@ -5,7 +5,10 @@ var jade = require('jade');
 var values = require('lodash.values');
 var map = require('lodash.map');
 var sortBy = require('lodash.sortby');
+var forEach = require('lodash.foreach');
+var map = require('lodash.map');
 var algoliasearch = require('algoliasearch');
+var algoliaSearchHelper = require('algoliasearch-helper');
 
 var Paris = window.Paris || {};
 
@@ -20,10 +23,11 @@ Paris.listPersons = (function(){
       image: 'portrait',        // the field to use as image
       group: 'groupe_politique' // the field to use in the person-block text
     },
-    resultsPerPage: 8, // the number of results to display per page
+    resultsPerPage: 100, // the number of results to display per page
     facets: ["groupe_politique", "secteur"], // the available facets that will be displayed in the left column (should have been created on Algolia)
                        // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
-    addFacetFilter: null // the facetFilter you want to always add by default (useful for filtering results)
+    addFacetFilter: null, // the facetFilter you want to always add by default (useful for filtering results)
+    algoliaHelperParams: {facets: ['mandat'], disjunctiveFacets: ['groupe_politique', 'secteur']}
   };
 
   function listPersons(selector, userOptions){
@@ -37,26 +41,39 @@ Paris.listPersons = (function(){
       currentFacets = [],
       algolia,
       index,
-      currentPage = 0;
+      helper,
+      currentPage = 0,
+      isFiltered;
 
     function init(){
       initOptions();
 
       algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
       index = algolia.initIndex(Paris.config.algolia.indexes[options.index]);
+      helper = algoliaSearchHelper(algolia, Paris.config.algolia.indexes[options.index], options.algoliaHelperParams);
+
+      // Add mandatory facet filters
+      if (options.addFacetFilterJson) {
+        $.each(options.addFacetFilterJson, function (index, facetFilter) {
+          helper.addRefine(facetFilter.facetName, facetFilter.facetValue);
+        });
+      }
+
+      helper.on('result', onSearchResults);
 
       $searchFieldInput = $el.find('#search-person');
       $results = $el.find('#results');
       $pagination = $el.find('#pagination');
       $facetsContainer = $el.find('#facets');
 
-      $searchFieldInput.on('input', onInput);
+      $searchFieldInput.on('change', onInput);
+
       $facetsContainer.on('change', 'input[type=checkbox]', updateFacets);
       $pagination.on('click', 'a', onClickPagination);
 
-      // If the search field is not empty, trigger the search on page load
-      if ($searchFieldInput.val() != "") {
-        $searchFieldInput.trigger('input');
+      // If the search field is not empty or if there is more than one facet selected, trigger the search on page load
+      if ($searchFieldInput.val() != "" || _moreThanOneFacet()) {
+        updateFacets();
       }
 
       $el.data('api', api);
@@ -68,7 +85,7 @@ Paris.listPersons = (function(){
       });
     }
 
-    function onInput() {
+    function onInput(e) {
       currentPage = 0;
       var query = $searchFieldInput.val();
       launchSearch(query);
@@ -86,42 +103,35 @@ Paris.listPersons = (function(){
       if (typeof query === 'undefined') {
         query = $searchFieldInput.val();
       }
+      helper.setQuery(query);
 
-      var params = {
-        // Pagination params
-        page: currentPage,
-        hitsPerPage: options.resultsPerPage,
+      isFiltered = query ? true : false;
 
-        // Explicitly request necessary facets (as defined in options)
-        facets: options.facets.join(','),
-        facetFilters: [],
+      helper.setCurrentPage(currentPage);
 
-        // Explicitly request necessary attributes (as defined in options)
-        attributesToRetrieve: values(options.fields).join(',')
-      };
+      //add selected facets to algolia search
+      var helperState = JSON.parse(JSON.stringify(helper.getState()));
+      $.each(options.facets, function(index, facet) {
+        if (currentFacets[facet] && currentFacets[facet].length) {
+          isFiltered = true;
+        }
+        helperState.disjunctiveFacetsRefinements[facet] = currentFacets[facet];
+      });
+      helper.setState(helperState);
 
-      // If some facets filters are active, add them to the request
-      if (currentFacets.length !== 0) {
-        params.facetFilters = currentFacets;
+      helper.setQueryParameter('hitsPerPage', isFiltered ? options.resultsPerPage : 8);
+
+      //set query parameters
+      if(isFiltered) {
+        Paris.url.setQueryString(currentFacets);
+      } else {
+        Paris.url.setQueryString({page: currentPage});
       }
 
-      // Add mandatory facet filters
-      if (options.addFacetFilter !== null) {
-        params.facetFilters.push(options.addFacetFilter);
-      }
-
-      // Launch the search using Algolia
-      index.search(query, params, onSearchResults);
+      helper.search();
     }
 
-    function onSearchResults(err, data) {
-      if (err) {return;}
-
-      if (data.query !== $searchFieldInput.val()) {
-        // do not take out-dated answers into account
-        return;
-      }
-
+    function onSearchResults(data) {
       renderResults(data);
       renderFacets(data);
     }
@@ -165,14 +175,14 @@ Paris.listPersons = (function(){
     }
 
     function renderPagination(data){
-      if (data.nbPages > 1) {
+      if ((data.nbPages > 1) || !isFiltered) {
         var pagination_data = {
           "text": {
             "prev": Paris.i18n.t("pagination/prev"),
             "next": Paris.i18n.t("pagination/next")
           },
-          "base_url": "#",
-          "url": "#page-${page}",
+          "base_url": window.location.pathname,
+          "url": "?page=${page}",
           "current": data.page + 1,
           "total": data.nbPages
         };
@@ -198,53 +208,56 @@ Paris.listPersons = (function(){
     }
 
     function renderFacets(data) {
-
-      if (currentFacets.length === 0
-        && !$.isEmptyObject(options.facets)
-        && !$.isEmptyObject(data.facets)
-      ) {
-        $facetsContainer.empty();
-
-        $.each(options.facets, function(index, facet) {
-
-          var block_aside_checkboxes_data = {
-            title: Paris.i18n.t("search_results/facets/"+facet),
-            name: facet,
-            modifiers: facet === "secteur" ? ["two-cols"] : [],
-            items: []
-          };
-
-          if (facet === "secteur") {
-
-            var facetArray = map(data.facets[facet], function(number, name){ return {
-              value: name,
-              text: name.replace(" arrondissement", ""),
-              number: Paris.i18n.formatNumber(number)
-            }; });
-            block_aside_checkboxes_data.items = sortBy(facetArray, function(o){
-              return parseInt(o.value, 10);
-            });
-
-          } else {
-
-            $.each(data.facets[facet], function (name, number) {
-              block_aside_checkboxes_data.items.push({
-                value: name,
-                text: name,
-                number: Paris.i18n.formatNumber(number)
-              });
-            });
-
-          }
-
-          var facet_block = Paris.templates.templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
-          $facetsContainer.append(facet_block);
+      var allFacets = {};
+      $.each(['disjunctiveFacets', 'facets'], function (index, facetType) {
+        $.each(data[facetType], function (index, facet) {
+          allFacets[facet.name] = facet.data;
         });
-      }
+      });
+
+      $facetsContainer.empty();
+
+      $.each(options.facets, function(index, facet) {
+
+        var block_aside_checkboxes_data = {
+          title: Paris.i18n.t("search_results/facets/"+facet),
+          name: facet,
+          modifiers: facet === "secteur" ? ["two-cols"] : [],
+          items: []
+        };
+
+        if (facet === "secteur") {
+
+          var facetArray = map(allFacets[facet], function(number, name){ return {
+            value: name,
+            text: name.replace(" arrondissement", ""),
+            number: Paris.i18n.formatNumber(number),
+            checked: $.inArray(name, currentFacets[facet]) !== -1
+          }; });
+          block_aside_checkboxes_data.items = sortBy(facetArray, function(o){
+            return parseInt(o.value, 10);
+          });
+
+        } else {
+
+          $.each(allFacets[facet], function (name, number) {
+            block_aside_checkboxes_data.items.push({
+              value: name,
+              text: name,
+              number: Paris.i18n.formatNumber(number),
+              checked: $.inArray(name, currentFacets[facet]) !== -1
+            });
+          });
+
+        }
+
+        var facet_block = Paris.templates.templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
+        $facetsContainer.append(facet_block);
+      });
     }
 
     function updateFacets() {
-      currentFacets = [];
+      currentFacets = {};
       $.each(options.facets, function(index, facet) {
         var facetValues = [];
         var $select = $facetsContainer.find(".block-aside-select[name^='" + facet + "']");
@@ -253,25 +266,32 @@ Paris.listPersons = (function(){
         if ($select.is(':visible')) {
           if ($select.val() === null) {return;}
           $.each($select.val(), function(i, value){
-            facetValues.push($select.attr("name").replace("[]", "") + ":" + value);
+            facetValues.push(value);
           });
         } else {
           $checkboxes.each(function(){
             if ($(this).val() === null) {return;}
-            facetValues.push($(this).attr("name").replace("[]", "") + ":" + $(this).val());
+            facetValues.push($(this).val());
           });
         }
 
         if (facetValues.length > 0) {
-          currentFacets.push(facetValues);
+          currentFacets[facet] = facetValues;
         }
       });
       onInput();
     }
 
+    function _moreThanOneFacet() {
+      var queryObj = Paris.url.parseQueryString();
+      var nbOfFacets = 0;
+      $.each(options.facets, function (index, facetName) {
+        nbOfFacets += queryObj[facetName] ? queryObj[facetName].length : 0;
+      });
+      return nbOfFacets > 1;
+    }
 
     // The API for external interaction
-
     api.search = function(query){
       $searchFieldInput.val(query).trigger('input');
     };
@@ -290,5 +310,6 @@ Paris.listPersons = (function(){
 })();
 
 $(document).ready(function(){
+  $(".hidden-without-js").show();
   Paris.listPersons('body.list-persons');
 });
