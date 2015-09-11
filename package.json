@@ -1,6 +1,6 @@
 {
   "name": "paris-styleguide",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Paris Living Style Guide",
   "author": "Hans Lemuet <hans@etaminstudio.com>",
   "main": "index.js",
@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "algoliasearch": "~3.3.2",
+    "algoliasearch-helper": "^2.2.0",
     "bootstrap": "^3.3.2",
     "browserify": "^9.0.3",
     "fastclick": "~1.0.6",

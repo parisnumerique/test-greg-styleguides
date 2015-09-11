@@ -7,9 +7,12 @@ require('./lib/i18n');
 require('./lib/requestanimationframe');
 require('./lib/responsive');
 require('./lib/scroll');
+require('./lib/url');
 
 // load our components
 require('../components/accordion/script');
+require('../components/form/script');
+require('../components/gallery/script');
 require('../components/html/script');
 require('../components/jecoute/script');
 require('../components/news-push/script');
@@ -43,5 +46,5 @@ require('./lib/cnil');
 require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "1.0.7";
+Paris.version = "1.0.8";
 Paris.templates = {};

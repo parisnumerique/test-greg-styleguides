@@ -1,0 +1,162 @@
+.component-form {
+  clear: both;
+  max-width: 770px;
+
+  .form-item + .form-item {
+    margin-top: 20px;
+  }
+
+  .form-item-label {
+    color: $color-secondary;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    max-width: 320px;
+    transition: color 0.2s ease-in;
+  }
+
+  .form-item-help {
+    color: $gray4D;
+    font-size: 13px;
+    margin-top: 5px;
+    max-width: 385px;
+  }
+
+  // error
+  .form-item .form-item-label,
+  .form-item-matrix .matrix-item .matrix-item-text {
+    &:after {
+      @extend %icon-font;
+      @extend %icon-alert;
+      color: $color-primary;
+      margin-left: 5px;
+      opacity: 0;
+      position: absolute;
+      transform: translateX(5px);
+      transition: all 0.2s ease-in;
+    }
+  }
+  .form-item-matrix .matrix-item .matrix-item-text {
+    &:after {line-height: 23px;}
+  }
+
+  .form-item.error .form-item-label,
+  .form-item-matrix .matrix-item.error .matrix-item-text {
+    color: $color-primary;
+
+    &:after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .form-item-text.form-item.error input,
+  .form-item-textarea.form-item.error textarea,
+  .form-item-select.form-item.error select {
+    border-color: $color-primary;
+  }
+  .form-item {
+    input:invalid,
+    textarea:invalid,
+    select:invalid {
+      box-shadow: none;
+    }
+  }
+
+
+  // input & textarea
+  .form-item-text input,
+  .form-item-textarea textarea,
+  .form-item-select select {
+    background-color: $grayF2;
+    border: 2px solid $grayF2;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border 0.2s ease-in;
+
+    &:focus {
+      border-color: $color-secondary;
+    }
+  }
+
+  // input
+  .form-item-text input {
+    padding: 0 15px;
+    width: 385px;
+  }
+
+  // textarea
+  .form-item-textarea {
+    textarea {
+      min-height: 160px;
+      padding: 15px;
+      width: 570px;
+    }
+
+    .form-item-label {
+      max-width: 500px;
+    }
+
+    .form-item-help {
+      max-width: 570px;
+    }
+  }
+
+  // select
+  .form-item-select select {
+    cursor: pointer;
+    min-width: 100px;
+    padding: 10px;
+  }
+
+  // checkbox & radio
+  .form-item-checkbox,
+  .form-item-radio {
+    > div + div {
+      margin-top: 5px;
+    }
+
+    label {
+      cursor: pointer;
+    }
+
+    input {
+      cursor: pointer;
+      margin: 2px 10px 2px 0;
+    }
+  }
+
+  // matrix
+  .form-item-matrix {
+    .form-item-label {
+      max-width: none;
+    }
+
+    .form-item-label,
+    .matrix-item-text {
+      text-align: left;
+    }
+
+    .matrix-item.error {
+      background-color: transparentize($color-primary, 0.9);
+    }
+
+    table {
+      font-size: 14px;
+      line-height: 24px;
+      width: 100%;
+    }
+    th {
+      font-weight: 300;
+    }
+    td {
+      text-align: center;
+    }
+
+    input {
+      cursor: pointer;
+    }
+  }
+
+
+}

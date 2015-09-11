@@ -45,17 +45,17 @@ Paris.blockContentJecoute = (function(){
       }
 
       $next.find('.progress').velocity({
-          width: "100%"
+        width: "100%"
       }, {
-          duration: options.timing,
-          easing: 'linear',
-          complete: function() {
-            $next.addClass('answered')
-            setTimeout(function () {
-              $next.find('.progress').velocity({width: 0}, {duration: 0 });
-              $items.parent().append($next);
-            }, options.timing);
-          }
+        duration: options.timing,
+        easing: 'linear',
+        complete: function() {
+          $next.addClass('answered');
+          setTimeout(function () {
+            $next.find('.progress').velocity({width: 0}, {duration: 0});
+            $items.parent().append($next);
+          }, options.timing);
+        }
       });
     }
 

@@ -1,13 +1,12 @@
 mixin gallery-ugc(data)
   .gallery-ugc
-    .gallery-title= data.title + " :"
+    .gallery-ugc-title= data.title + " :"
     each hashtag in data.hashtags
-      a.gallery-hashtag(href="##{hashtag.id}" class=hashtag.current ? 'current' : null)= hashtag.text
+      a.gallery-ugc-hashtag(href="##{hashtag.id}" class=hashtag.current ? 'current' : null)= hashtag.text
     each hashtag in data.hashtags
-      .gallery-content(style=(hashtag.current ? '' : 'display: none;') id="gallery-ugc-#{hashtag.id}")
+      .gallery-ugc-content(style=(hashtag.current ? '' : 'display: none;') id="gallery-ugc-#{hashtag.id}")
         each item in hashtag.items
           - backgroundImage = hashtag.current ? ('background-image: url(' + item.image + ')') : ''
-          a.gallery-image(href="#{item.href}" target="_blank" style=backgroundImage data-background-image="url(#{item.image})")
+          a.gallery-ugc-image(href="#{item.href}" target="_blank" style=backgroundImage data-background-image="url(#{item.image})")
             .overlay
-              .gallery-text=item.text
-
+              .gallery-ugc-text=item.text

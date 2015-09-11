@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.8 (2015-09-10)
+
+* component `form` added
+* component `gallery` added
+* component `postit`: added background color
+* module `block-content-jecoute`: text can now contain links
+* template `list-persons`: improved search javascript
+
 ## 1.0.7 (2015-08-03)
 
 * component `postit`: added `title` to data

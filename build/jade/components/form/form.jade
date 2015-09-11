@@ -1,0 +1,93 @@
+include ../../modules/button/button
+
+mixin form-title(data)
+  h2= data.text
+
+
+mixin form-text(data)
+  label.form-item-label(for=data.id)= data.label
+  input.form-field(type=data.type name=data.name id=data.id placeholder=data.placeholder value=data.value required=data.required)
+
+mixin form-email(data)
+  +form-text(data)
+
+mixin form-tel(data)
+  +form-text(data)
+
+mixin form-url(data)
+  +form-text(data)
+
+
+mixin form-hidden(data)
+  input.form-field(type=data.type name=data.name id=data.id value=data.value)
+
+
+mixin form-select(data)
+  label.form-item-label(for=data.id)= data.label
+  select.form-field(name=data.name id=data.id required=data.required)
+    each item in data.items
+      option(value=item.value)= item.text
+
+
+mixin form-textarea(data)
+  label.form-item-label(for=data.id)= data.label
+  textarea.form-field(name=data.name id=data.id placeholder=data.placeholder rows=data.rows required=data.required)
+    = data.value
+
+
+mixin form-checkbox(data)
+  .form-item-label= data.label
+  each item in data.items
+    div: label
+      input.form-field(type=data.type name=data.name value=item.value checked=item.checked)
+      = item.text
+
+mixin form-radio(data)
+  +form-checkbox(data) // same code as the checkbox, except input type
+
+
+mixin form-matrix(data)
+  - var type = data.multiple ? 'checkbox' : 'radio';
+  table
+    tr
+      th: .form-item-label= data.label
+      each option in data.options
+        - var width = Math.round(70 / data.options.length);
+        th.matrix-option(style="width: "+width+"%")= option.text
+    each item in data.items
+      tr.matrix-item(class=item.error ? "error" : null)
+        th.matrix-item-text= item.text
+        - var i = 0
+        while i < data.options.length
+          - if (data.multiple) {var checked = (item.checked || []).indexOf(data.options[i].value) !== -1; var requiredAttribute = {"data-grouprequired": data.required};} else {var checked = item.checked === data.options[i].value;var requiredAttribute = {"required": data.required};}
+          td.matrix-item-option
+            input.form-field(type=type name=data.name+"["+item.name+"]"+(data.multiple ? "[]" : "") value=data.options[i].value checked=checked)&attributes(requiredAttribute)
+          - i++
+
+
+mixin form-captcha(data)
+  div.g-recaptcha
+
+
+mixin form-buttons(data)
+  each item in data.items
+    - button = JSON.parse(JSON.stringify(item || [])) // clone the data object
+    - button.modifiers = button.modifiers || []
+    - if (item.attributes && item.attributes.type === 'submit') {button.modifiers.push("action");}
+    +button(button)
+
+
+mixin form(data)
+  .component-form
+    form(action=data.action method=data.method || 'POST')
+      each item in data.items
+        - item = JSON.parse(JSON.stringify(item || [])) // clone the data object
+        - item.modifiers = item.modifiers || []
+        - item.modifiers.push("form-item-" + item.type);
+        - if (["email", "tel", "url"].indexOf(item.type) !== -1) {item.modifiers.push("form-item-text");}
+        - if (item.required === true) {item.modifiers.push("required"); item.label += " *";}
+        - if (item.error === true) {item.modifiers.push("error");}
+        .form-item(class=item.modifiers)
+          +#{"form-" + item.type}(item)
+          if item.help
+            p.form-item-help= item.help

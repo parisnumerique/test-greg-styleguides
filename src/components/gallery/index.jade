@@ -1,0 +1,18 @@
+include gallery
+include ../../helpers/code
+
+h2 Standard
+.lsg-component(style="max-width: 770px")
+  +gallery(defaults)
++code({language: "jade"}).
+  include component
+
+  +gallery(defaults)
+
+h2 Avec légendes
+.lsg-component(style="max-width: 770px")
+  +gallery(with_captions)
++code({language: "jade"}).
+  include component
+
+  +gallery(with_captions)
