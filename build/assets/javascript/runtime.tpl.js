@@ -177,6 +177,413 @@
         return buf.join("");
     };
 
+    // form.jade compiled template
+    templatizer["form"] = function tmpl_form(locals) {
+        var buf = [];
+        var jade_mixins = {};
+        var jade_interp;
+        var locals_for_with = locals || {};
+        (function(JSON, Math, button, modifiers) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "Math" in locals_for_with ? locals_for_with.Math : typeof Math !== "undefined" ? Math : undefined, "button" in locals_for_with ? locals_for_with.button : typeof button !== "undefined" ? button : undefined, "modifiers" in locals_for_with ? locals_for_with.modifiers : typeof modifiers !== "undefined" ? modifiers : undefined);
+        return buf.join("");
+    };
+
+    // form.jade:button compiled template
+    templatizer["form"]["button"] = function tmpl_form_button(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        modifiers = data.modifiers || [];
+        attributes = data.attributes || [];
+        if (data.href) {
+            if (data.icon) {
+                modifiers.push("icon");
+            }
+            buf.push("<a" + jade.attrs(jade.merge([ {
+                href: jade.escape(data.href),
+                title: jade.escape(data.title),
+                target: jade.escape(data.target),
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">");
+            if (modifiers && modifiers.indexOf("marker") !== -1) {
+                buf.push('<i class="icon icon-marker"></i>');
+            } else if (data.icon) {
+                buf.push("<i" + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+            }
+            buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
+        } else {
+            buf.push("<button" + jade.attrs(jade.merge([ {
+                "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                    return jade_interp[i] ? jade.escape(cls) : cls;
+                })))
+            }, attributes ]), false) + ">" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</button>");
+        }
+        return buf.join("");
+    };
+
+
+    // form.jade:form-title compiled template
+    templatizer["form"]["form-title"] = function tmpl_form_form_title(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<h2>" + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</h2>");
+        return buf.join("");
+    };
+
+
+    // form.jade:form-text compiled template
+    templatizer["form"]["form-text"] = function tmpl_form_form_text(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<label" + jade.attr("for", data.id, true, false) + ' class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + "</label><input" + jade.attr("type", data.type, true, false) + jade.attr("name", data.name, true, false) + jade.attr("id", data.id, true, false) + jade.attr("placeholder", data.placeholder, true, false) + jade.attr("value", data.value, true, false) + jade.attr("required", data.required, true, false) + ' class="form-field"/>');
+        return buf.join("");
+    };
+
+
+    // form.jade:form-email compiled template
+    templatizer["form"]["form-email"] = function tmpl_form_form_email(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push(templatizer["form"]["form-text"](data));
+        return buf.join("");
+    };
+
+
+    // form.jade:form-tel compiled template
+    templatizer["form"]["form-tel"] = function tmpl_form_form_tel(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push(templatizer["form"]["form-text"](data));
+        return buf.join("");
+    };
+
+
+    // form.jade:form-url compiled template
+    templatizer["form"]["form-url"] = function tmpl_form_form_url(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push(templatizer["form"]["form-text"](data));
+        return buf.join("");
+    };
+
+
+    // form.jade:form-hidden compiled template
+    templatizer["form"]["form-hidden"] = function tmpl_form_form_hidden(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<input" + jade.attr("type", data.type, true, false) + jade.attr("name", data.name, true, false) + jade.attr("id", data.id, true, false) + jade.attr("value", data.value, true, false) + ' class="form-field"/>');
+        return buf.join("");
+    };
+
+
+    // form.jade:form-select compiled template
+    templatizer["form"]["form-select"] = function tmpl_form_form_select(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<label" + jade.attr("for", data.id, true, false) + ' class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + "</label><select" + jade.attr("name", data.name, true, false) + jade.attr("id", data.id, true, false) + jade.attr("required", data.required, true, false) + ' class="form-field">');
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    buf.push("<option" + jade.attr("value", item.value, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</option>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    buf.push("<option" + jade.attr("value", item.value, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</option>");
+                }
+            }
+        }).call(this);
+        buf.push("</select>");
+        return buf.join("");
+    };
+
+
+    // form.jade:form-textarea compiled template
+    templatizer["form"]["form-textarea"] = function tmpl_form_form_textarea(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push("<label" + jade.attr("for", data.id, true, false) + ' class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + "</label><textarea" + jade.attr("name", data.name, true, false) + jade.attr("id", data.id, true, false) + jade.attr("placeholder", data.placeholder, true, false) + jade.attr("rows", data.rows, true, false) + jade.attr("required", data.required, true, false) + ' class="form-field">' + jade.escape(null == (jade_interp = data.value) ? "" : jade_interp) + "</textarea>");
+        return buf.join("");
+    };
+
+
+    // form.jade:form-checkbox compiled template
+    templatizer["form"]["form-checkbox"] = function tmpl_form_form_checkbox(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push('<div class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + "</div>");
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    buf.push("<div><label><input" + jade.attr("type", data.type, true, false) + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</label></div>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    buf.push("<div><label><input" + jade.attr("type", data.type, true, false) + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</label></div>");
+                }
+            }
+        }).call(this);
+        return buf.join("");
+    };
+
+
+    // form.jade:form-radio compiled template
+    templatizer["form"]["form-radio"] = function tmpl_form_form_radio(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push(templatizer["form"]["form-checkbox"].call({
+            block: function(buf) {
+                buf.push("// same code as the checkbox, except input type");
+            }
+        }, data));
+        return buf.join("");
+    };
+
+
+    // form.jade:form-matrix compiled template
+    templatizer["form"]["form-matrix"] = function tmpl_form_form_matrix(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        var type = data.multiple ? "checkbox" : "radio";
+        buf.push('<table><tr><th><div class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + "</div></th>");
+        (function() {
+            var $obj = data.options;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var option = $obj[$index];
+                    var width = Math.round(70 / data.options.length);
+                    buf.push("<th" + jade.attr("style", "width: " + width + "%", true, false) + ' class="matrix-option">' + jade.escape(null == (jade_interp = option.text) ? "" : jade_interp) + "</th>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var option = $obj[$index];
+                    var width = Math.round(70 / data.options.length);
+                    buf.push("<th" + jade.attr("style", "width: " + width + "%", true, false) + ' class="matrix-option">' + jade.escape(null == (jade_interp = option.text) ? "" : jade_interp) + "</th>");
+                }
+            }
+        }).call(this);
+        buf.push("</tr>");
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    buf.push("<tr" + jade.cls([ "matrix-item", item.error ? "error" : null ], [ null, true ]) + '><th class="matrix-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</th>");
+                    var i = 0;
+                    while (i < data.options.length) {
+                        if (data.multiple) {
+                            var checked = (item.checked || []).indexOf(data.options[i].value) !== -1;
+                            var requiredAttribute = {
+                                "data-grouprequired": data.required
+                            };
+                        } else {
+                            var checked = item.checked === data.options[i].value;
+                            var requiredAttribute = {
+                                required: data.required
+                            };
+                        }
+                        buf.push('<td class="matrix-item-option"><input' + jade.attrs(jade.merge([ {
+                            type: jade.escape(type),
+                            name: jade.escape(data.name + "[" + item.name + "]" + (data.multiple ? "[]" : "")),
+                            value: jade.escape(data.options[i].value),
+                            checked: jade.escape(checked),
+                            "class": "form-field"
+                        }, requiredAttribute ]), false) + "/></td>");
+                        i++;
+                    }
+                    buf.push("</tr>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    buf.push("<tr" + jade.cls([ "matrix-item", item.error ? "error" : null ], [ null, true ]) + '><th class="matrix-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</th>");
+                    var i = 0;
+                    while (i < data.options.length) {
+                        if (data.multiple) {
+                            var checked = (item.checked || []).indexOf(data.options[i].value) !== -1;
+                            var requiredAttribute = {
+                                "data-grouprequired": data.required
+                            };
+                        } else {
+                            var checked = item.checked === data.options[i].value;
+                            var requiredAttribute = {
+                                required: data.required
+                            };
+                        }
+                        buf.push('<td class="matrix-item-option"><input' + jade.attrs(jade.merge([ {
+                            type: jade.escape(type),
+                            name: jade.escape(data.name + "[" + item.name + "]" + (data.multiple ? "[]" : "")),
+                            value: jade.escape(data.options[i].value),
+                            checked: jade.escape(checked),
+                            "class": "form-field"
+                        }, requiredAttribute ]), false) + "/></td>");
+                        i++;
+                    }
+                    buf.push("</tr>");
+                }
+            }
+        }).call(this);
+        buf.push("</table>");
+        return buf.join("");
+    };
+
+
+    // form.jade:form-captcha compiled template
+    templatizer["form"]["form-captcha"] = function tmpl_form_form_captcha(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push('<div class="g-recaptcha"></div>');
+        return buf.join("");
+    };
+
+
+    // form.jade:form-buttons compiled template
+    templatizer["form"]["form-buttons"] = function tmpl_form_form_buttons(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    button = JSON.parse(JSON.stringify(item || []));
+                    button.modifiers = button.modifiers || [];
+                    if (item.attributes && item.attributes.type === "submit") {
+                        button.modifiers.push("action");
+                    }
+                    buf.push(templatizer["form"]["button"](button));
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    button = JSON.parse(JSON.stringify(item || []));
+                    button.modifiers = button.modifiers || [];
+                    if (item.attributes && item.attributes.type === "submit") {
+                        button.modifiers.push("action");
+                    }
+                    buf.push(templatizer["form"]["button"](button));
+                }
+            }
+        }).call(this);
+        return buf.join("");
+    };
+
+
+    // form.jade:form compiled template
+    templatizer["form"]["form"] = function tmpl_form_form(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push('<div class="component-form"><form' + jade.attr("action", data.action, true, false) + jade.attr("method", data.method || "POST", true, false) + ">");
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    item = JSON.parse(JSON.stringify(item || []));
+                    item.modifiers = item.modifiers || [];
+                    item.modifiers.push("form-item-" + item.type);
+                    if ([ "email", "tel", "url" ].indexOf(item.type) !== -1) {
+                        item.modifiers.push("form-item-text");
+                    }
+                    if (item.required === true) {
+                        item.modifiers.push("required");
+                        item.label += " *";
+                    }
+                    if (item.error === true) {
+                        item.modifiers.push("error");
+                    }
+                    buf.push("<div" + jade.cls([ "form-item", item.modifiers ], [ null, true ]) + ">");
+                    jade_mixins["form-" + item.type](item);
+                    if (item.help) {
+                        buf.push('<p class="form-item-help">' + jade.escape(null == (jade_interp = item.help) ? "" : jade_interp) + "</p>");
+                    }
+                    buf.push("</div>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    item = JSON.parse(JSON.stringify(item || []));
+                    item.modifiers = item.modifiers || [];
+                    item.modifiers.push("form-item-" + item.type);
+                    if ([ "email", "tel", "url" ].indexOf(item.type) !== -1) {
+                        item.modifiers.push("form-item-text");
+                    }
+                    if (item.required === true) {
+                        item.modifiers.push("required");
+                        item.label += " *";
+                    }
+                    if (item.error === true) {
+                        item.modifiers.push("error");
+                    }
+                    buf.push("<div" + jade.cls([ "form-item", item.modifiers ], [ null, true ]) + ">");
+                    jade_mixins["form-" + item.type](item);
+                    if (item.help) {
+                        buf.push('<p class="form-item-help">' + jade.escape(null == (jade_interp = item.help) ? "" : jade_interp) + "</p>");
+                    }
+                    buf.push("</div>");
+                }
+            }
+        }).call(this);
+        buf.push("</form></div>");
+        return buf.join("");
+    };
+
+    // gallery.jade compiled template
+    templatizer["gallery"] = function tmpl_gallery(locals) {
+        var buf = [];
+        var jade_mixins = {};
+        var jade_interp;
+        return buf.join("");
+    };
+
+    // gallery.jade:gallery compiled template
+    templatizer["gallery"]["gallery"] = function tmpl_gallery_gallery(data) {
+        var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+        buf.push('<div class="component component-gallery"><div class="gallery-wrapper">');
+        (function() {
+            var $obj = data.items;
+            if ("number" == typeof $obj.length) {
+                for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                    var item = $obj[$index];
+                    buf.push('<div class="gallery-cell"><img' + jade.attr("data-flickity-lazyload", item.src, true, false) + ' class="gallery-cell-image"/>');
+                    if (item.title || item.credit) {
+                        buf.push('<div class="gallery-caption">');
+                        if (item.title) {
+                            buf.push('<div class="gallery-title">' + (null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
+                        }
+                        if (item.credit) {
+                            buf.push('<div class="gallery-credit">' + (null == (jade_interp = item.credit) ? "" : jade_interp) + "</div>");
+                        }
+                        buf.push("</div>");
+                    }
+                    buf.push("</div>");
+                }
+            } else {
+                var $l = 0;
+                for (var $index in $obj) {
+                    $l++;
+                    var item = $obj[$index];
+                    buf.push('<div class="gallery-cell"><img' + jade.attr("data-flickity-lazyload", item.src, true, false) + ' class="gallery-cell-image"/>');
+                    if (item.title || item.credit) {
+                        buf.push('<div class="gallery-caption">');
+                        if (item.title) {
+                            buf.push('<div class="gallery-title">' + (null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
+                        }
+                        if (item.credit) {
+                            buf.push('<div class="gallery-credit">' + (null == (jade_interp = item.credit) ? "" : jade_interp) + "</div>");
+                        }
+                        buf.push("</div>");
+                    }
+                    buf.push("</div>");
+                }
+            }
+        }).call(this);
+        buf.push("</div></div>");
+        return buf.join("");
+    };
+
     // html.jade compiled template
     templatizer["html"] = function tmpl_html(locals) {
         var buf = [];
@@ -742,57 +1149,62 @@
         modifiers.push("block-aside-checkboxes");
         buf.push(templatizer["block-aside-checkboxes"]["block-aside"].call({
             block: function(buf) {
-                buf.push('<ul class="block-aside-items">');
-                (function() {
-                    var $obj = data.items;
-                    if ("number" == typeof $obj.length) {
-                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                            var item = $obj[$index];
-                            buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                if (!data.showCondition || data.showCondition === "hidden-on-small") {
+                    buf.push('<ul class="block-aside-items">');
+                    (function() {
+                        var $obj = data.items;
+                        if ("number" == typeof $obj.length) {
+                            for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                var item = $obj[$index];
+                                buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</div></label></li>");
                             }
-                            buf.push("</div></label></li>");
-                        }
-                    } else {
-                        var $l = 0;
-                        for (var $index in $obj) {
-                            $l++;
-                            var item = $obj[$index];
-                            buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        } else {
+                            var $l = 0;
+                            for (var $index in $obj) {
+                                $l++;
+                                var item = $obj[$index];
+                                buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</div></label></li>");
                             }
-                            buf.push("</div></label></li>");
                         }
-                    }
-                }).call(this);
-                buf.push('</ul><select multiple="multiple"' + jade.attr("name", "" + data.name + "[]", true, false) + ' class="block-aside-select">');
-                (function() {
-                    var $obj = data.items;
-                    if ("number" == typeof $obj.length) {
-                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                            var item = $obj[$index];
-                            buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                    }).call(this);
+                    buf.push("</ul>");
+                }
+                if (!data.showCondition || data.showCondition === "only-on-small") {
+                    buf.push('<select multiple="multiple"' + jade.attr("name", "" + data.name + "[]", true, false) + ' class="block-aside-select">');
+                    (function() {
+                        var $obj = data.items;
+                        if ("number" == typeof $obj.length) {
+                            for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                var item = $obj[$index];
+                                buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</option>");
                             }
-                            buf.push("</option>");
-                        }
-                    } else {
-                        var $l = 0;
-                        for (var $index in $obj) {
-                            $l++;
-                            var item = $obj[$index];
-                            buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        } else {
+                            var $l = 0;
+                            for (var $index in $obj) {
+                                $l++;
+                                var item = $obj[$index];
+                                buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</option>");
                             }
-                            buf.push("</option>");
                         }
-                    }
-                }).call(this);
-                buf.push("</select>");
+                    }).call(this);
+                    buf.push("</select>");
+                }
             }
         }, {
             title: data.title,
@@ -1107,14 +1519,14 @@
                         if ("number" == typeof $obj.length) {
                             for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                 var item = $obj[$index];
-                                buf.push('<div class="block-content-item"><div class="block-content-timer"><span class="start">' + jade.escape(null == (jade_interp = item.question.time) ? "" : jade_interp) + '</span><span class="end">' + jade.escape(null == (jade_interp = item.answer.time) ? "" : jade_interp) + '</span><div class="block-content-bar"><div class="progress"></div></div></div><div class="block-content-question-answer"><div class="block-content-question"><div class="user">' + jade.escape(null == (jade_interp = item.question.user) ? "" : jade_interp) + '</div><div class="text">' + jade.escape(null == (jade_interp = item.question.text) ? "" : jade_interp) + '</div></div><div class="block-content-answer"><div class="user">' + jade.escape(null == (jade_interp = item.answer.user) ? "" : jade_interp) + '</div><div class="text">' + jade.escape(null == (jade_interp = item.answer.text) ? "" : jade_interp) + "</div></div></div></div>");
+                                buf.push('<div class="block-content-item"><div class="block-content-timer"><span class="start">' + jade.escape(null == (jade_interp = item.question.time) ? "" : jade_interp) + '</span><span class="end">' + jade.escape(null == (jade_interp = item.answer.time) ? "" : jade_interp) + '</span><div class="block-content-bar"><div class="progress"></div></div></div><div class="block-content-question-answer"><div class="block-content-question"><div class="user">' + jade.escape(null == (jade_interp = item.question.user) ? "" : jade_interp) + '</div><div class="text">' + jade.escape(null == (jade_interp = item.question.text) ? "" : jade_interp) + '</div></div><div class="block-content-answer"><div class="user">' + jade.escape(null == (jade_interp = item.answer.user) ? "" : jade_interp) + '</div><div class="text">' + (null == (jade_interp = item.answer.text) ? "" : jade_interp) + "</div></div></div></div>");
                             }
                         } else {
                             var $l = 0;
                             for (var $index in $obj) {
                                 $l++;
                                 var item = $obj[$index];
-                                buf.push('<div class="block-content-item"><div class="block-content-timer"><span class="start">' + jade.escape(null == (jade_interp = item.question.time) ? "" : jade_interp) + '</span><span class="end">' + jade.escape(null == (jade_interp = item.answer.time) ? "" : jade_interp) + '</span><div class="block-content-bar"><div class="progress"></div></div></div><div class="block-content-question-answer"><div class="block-content-question"><div class="user">' + jade.escape(null == (jade_interp = item.question.user) ? "" : jade_interp) + '</div><div class="text">' + jade.escape(null == (jade_interp = item.question.text) ? "" : jade_interp) + '</div></div><div class="block-content-answer"><div class="user">' + jade.escape(null == (jade_interp = item.answer.user) ? "" : jade_interp) + '</div><div class="text">' + jade.escape(null == (jade_interp = item.answer.text) ? "" : jade_interp) + "</div></div></div></div>");
+                                buf.push('<div class="block-content-item"><div class="block-content-timer"><span class="start">' + jade.escape(null == (jade_interp = item.question.time) ? "" : jade_interp) + '</span><span class="end">' + jade.escape(null == (jade_interp = item.answer.time) ? "" : jade_interp) + '</span><div class="block-content-bar"><div class="progress"></div></div></div><div class="block-content-question-answer"><div class="block-content-question"><div class="user">' + jade.escape(null == (jade_interp = item.question.user) ? "" : jade_interp) + '</div><div class="text">' + jade.escape(null == (jade_interp = item.question.text) ? "" : jade_interp) + '</div></div><div class="block-content-answer"><div class="user">' + jade.escape(null == (jade_interp = item.answer.user) ? "" : jade_interp) + '</div><div class="text">' + (null == (jade_interp = item.answer.text) ? "" : jade_interp) + "</div></div></div></div>");
                             }
                         }
                     }).call(this);
@@ -1667,20 +2079,20 @@
     // gallery-ugc.jade:gallery-ugc compiled template
     templatizer["gallery-ugc"]["gallery-ugc"] = function tmpl_gallery_ugc_gallery_ugc(data) {
         var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-        buf.push('<div class="gallery-ugc"><div class="gallery-title">' + jade.escape(null == (jade_interp = data.title + " :") ? "" : jade_interp) + "</div>");
+        buf.push('<div class="gallery-ugc"><div class="gallery-ugc-title">' + jade.escape(null == (jade_interp = data.title + " :") ? "" : jade_interp) + "</div>");
         (function() {
             var $obj = data.hashtags;
             if ("number" == typeof $obj.length) {
                 for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                     var hashtag = $obj[$index];
-                    buf.push("<a" + jade.attr("href", "#" + hashtag.id + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
+                    buf.push("<a" + jade.attr("href", "#" + hashtag.id + "", true, false) + jade.cls([ "gallery-ugc-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
                 }
             } else {
                 var $l = 0;
                 for (var $index in $obj) {
                     $l++;
                     var hashtag = $obj[$index];
-                    buf.push("<a" + jade.attr("href", "#" + hashtag.id + "", true, false) + jade.cls([ "gallery-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
+                    buf.push("<a" + jade.attr("href", "#" + hashtag.id + "", true, false) + jade.cls([ "gallery-ugc-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</a>");
                 }
             }
         }).call(this);
@@ -1689,14 +2101,14 @@
             if ("number" == typeof $obj.length) {
                 for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                     var hashtag = $obj[$index];
-                    buf.push("<div" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-content">');
+                    buf.push("<div" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-ugc-content">');
                     (function() {
                         var $obj = hashtag.items;
                         if ("number" == typeof $obj.length) {
                             for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                 var item = $obj[$index];
                                 backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
-                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
                             }
                         } else {
                             var $l = 0;
@@ -1704,7 +2116,7 @@
                                 $l++;
                                 var item = $obj[$index];
                                 backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
-                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
                             }
                         }
                     }).call(this);
@@ -1715,14 +2127,14 @@
                 for (var $index in $obj) {
                     $l++;
                     var hashtag = $obj[$index];
-                    buf.push("<div" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-content">');
+                    buf.push("<div" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-ugc-content">');
                     (function() {
                         var $obj = hashtag.items;
                         if ("number" == typeof $obj.length) {
                             for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
                                 var item = $obj[$index];
                                 backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
-                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
                             }
                         } else {
                             var $l = 0;
@@ -1730,7 +2142,7 @@
                                 $l++;
                                 var item = $obj[$index];
                                 backgroundImage = hashtag.current ? "background-image: url(" + item.image + ")" : "";
-                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-image"><div class="overlay"><div class="gallery-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
+                                buf.push("<a" + jade.attr("href", "" + item.href + "", true, false) + ' target="_blank"' + jade.attr("style", backgroundImage, true, false) + jade.attr("data-background-image", "url(" + item.image + ")", true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a>");
                             }
                         }
                     }).call(this);
@@ -2538,7 +2950,8 @@
         if (data.around) {
             modifiers.push("with-around");
         }
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        var type = data.noForm ? "div" : "form";
+        buf.push("<" + type + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
@@ -2550,7 +2963,7 @@
             around.modifiers = [ "marker", "around" ];
             buf.push(templatizer["poll"]["button"](around));
         }
-        buf.push("</form>");
+        buf.push("</" + type + ">");
         return buf.join("");
     };
 
@@ -2798,7 +3211,8 @@
         if (data.around) {
             modifiers.push("with-around");
         }
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        var type = data.noForm ? "div" : "form";
+        buf.push("<" + type + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
@@ -2810,7 +3224,7 @@
             around.modifiers = [ "marker", "around" ];
             buf.push(templatizer["quick-access"]["button"](around));
         }
-        buf.push("</form>");
+        buf.push("</" + type + ">");
         return buf.join("");
     };
 
@@ -3050,7 +3464,8 @@
         if (data.around) {
             modifiers.push("with-around");
         }
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        var type = data.noForm ? "div" : "form";
+        buf.push("<" + type + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
@@ -3062,7 +3477,7 @@
             around.modifiers = [ "marker", "around" ];
             buf.push(templatizer["rheader"]["button"](around));
         }
-        buf.push("</form>");
+        buf.push("</" + type + ">");
         return buf.join("");
     };
 
@@ -3365,7 +3780,8 @@
         if (data.around) {
             modifiers.push("with-around");
         }
-        buf.push("<form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
+        var type = data.noForm ? "div" : "form";
+        buf.push("<" + type + jade.attr("action", data.action, true, false) + jade.attr("method", data.method ? data.method : "get", true, false) + ' autocomplete="off"' + jade.cls([ "search-field", modifiers ], [ null, true ]) + "><input" + jade.attr("id", data.input.id, true, false) + ' type="text" name="search"' + jade.attr("placeholder", data.input.placeholder, true, false) + jade.attr("title", data.input.placeholder, true, false) + jade.attr("value", data.input.value, true, false) + ' class="search-field-input"/><button type="submit" class="search-field-submit">');
         if (data.submit.icon) {
             buf.push("<span>" + jade.escape(null == (jade_interp = data.submit.text) ? "" : jade_interp) + '</span><i class="icon icon-search"></i>');
         } else {
@@ -3377,7 +3793,7 @@
             around.modifiers = [ "marker", "around" ];
             buf.push(templatizer["search-field"]["button"](around));
         }
-        buf.push("</form>");
+        buf.push("</" + type + ">");
         return buf.join("");
     };
 

@@ -6,6 +6,7 @@ include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
 include ../../modules/block-content/block-content
 include ../../modules/breadcrumbs/breadcrumbs
+include ../../modules/button/button
 include ../../modules/button-top/button-top
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
@@ -38,18 +39,39 @@ append content
           .aside-wrapper
             +block-aside({"modifiers": "hidden-on-small"})
               +share(data.aside.share)
-            +block-aside({})
-              +search-field(data.aside.search)
-            #facets
-              +block-aside-checkboxes(data.aside.politique)
-              +block-aside-checkboxes(data.aside.arrondissement)
-
+            div(class= "hidden-without-js" style="display: none")
+              each showCondition in ['hidden-on-small', 'only-on-small']
+                - var politique = JSON.parse(JSON.stringify(data.aside.politique));
+                - politique.showCondition = showCondition;
+                - var arrondissement = JSON.parse(JSON.stringify(data.aside.arrondissement));
+                - arrondissement.showCondition = showCondition;
+                form(class='#{showCondition}')
+                  +block-aside({})
+                    +search-field(data.aside.search)
+                  #facets
+                    +block-aside-checkboxes(politique)
+                    +block-aside-checkboxes(arrondissement)
+                  //- noscript
+                  //-   +block-aside({})
+                  //-     +button({"attributes": {"type": "submit", "id": "submit-button"}, "modifiers": ["action"], "text": "Rechercher"})
+            noscript
+              +block-aside({})
+                h2(class="block-aside-title")= "Recherches fréquentes"
+                ul
+                  each item in data.aside.politique.items
+                    li
+                      a(href="?groupe_politique[]=#{item.value}")= item.text
+                ul
+                  each item in data.aside.arrondissement.items
+                    li
+                      a(href="?secteur[]=#{item.value}")= item.text
         .layout-content
           #results
             each result in data.results
               +#{result.type}(result.data)
-          #pagination
-            +pagination(data.pagination)
+          if data.pagination
+            #pagination
+              +pagination(data.pagination)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
