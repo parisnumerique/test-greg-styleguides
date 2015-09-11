@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.8 (not yet released)
+## 1.0.8 (2015-09-10)
 
 * component `form` added
 * component `gallery` added

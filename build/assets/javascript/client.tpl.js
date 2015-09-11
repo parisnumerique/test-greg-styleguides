@@ -256,57 +256,62 @@
         modifiers.push("block-aside-checkboxes");
         buf.push(templatizer["block-aside-checkboxes"]["block-aside"].call({
             block: function(buf) {
-                buf.push('<ul class="block-aside-items">');
-                (function() {
-                    var $obj = data.items;
-                    if ("number" == typeof $obj.length) {
-                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                            var item = $obj[$index];
-                            buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                if (!data.showCondition || data.showCondition === "hidden-on-small") {
+                    buf.push('<ul class="block-aside-items">');
+                    (function() {
+                        var $obj = data.items;
+                        if ("number" == typeof $obj.length) {
+                            for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                var item = $obj[$index];
+                                buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</div></label></li>");
                             }
-                            buf.push("</div></label></li>");
-                        }
-                    } else {
-                        var $l = 0;
-                        for (var $index in $obj) {
-                            $l++;
-                            var item = $obj[$index];
-                            buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        } else {
+                            var $l = 0;
+                            for (var $index in $obj) {
+                                $l++;
+                                var item = $obj[$index];
+                                buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + '><label><input type="checkbox"' + jade.attr("name", "" + data.name + "[]", true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + '/><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</div></label></li>");
                             }
-                            buf.push("</div></label></li>");
                         }
-                    }
-                }).call(this);
-                buf.push('</ul><select multiple="multiple"' + jade.attr("name", "" + data.name + "[]", true, false) + ' class="block-aside-select">');
-                (function() {
-                    var $obj = data.items;
-                    if ("number" == typeof $obj.length) {
-                        for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
-                            var item = $obj[$index];
-                            buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                    }).call(this);
+                    buf.push("</ul>");
+                }
+                if (!data.showCondition || data.showCondition === "only-on-small") {
+                    buf.push('<select multiple="multiple"' + jade.attr("name", "" + data.name + "[]", true, false) + ' class="block-aside-select">');
+                    (function() {
+                        var $obj = data.items;
+                        if ("number" == typeof $obj.length) {
+                            for (var $index = 0, $l = $obj.length; $index < $l; $index++) {
+                                var item = $obj[$index];
+                                buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</option>");
                             }
-                            buf.push("</option>");
-                        }
-                    } else {
-                        var $l = 0;
-                        for (var $index in $obj) {
-                            $l++;
-                            var item = $obj[$index];
-                            buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                            if (item.number) {
-                                buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        } else {
+                            var $l = 0;
+                            for (var $index in $obj) {
+                                $l++;
+                                var item = $obj[$index];
+                                buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                                if (item.number) {
+                                    buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                                }
+                                buf.push("</option>");
                             }
-                            buf.push("</option>");
                         }
-                    }
-                }).call(this);
-                buf.push("</select>");
+                    }).call(this);
+                    buf.push("</select>");
+                }
             }
         }, {
             title: data.title,
