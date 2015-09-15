@@ -165,7 +165,7 @@ Paris.listPersons = (function(){
           person_block_data.text.push(hit[options.fields.group]);
           person_block_data.text = person_block_data.text.join(", ");
 
-          var person_block = Paris.templates.templatizer["person-block"]["person-block"](person_block_data);
+          var person_block = Paris.templates["person-block"]["person-block"](person_block_data);
 
           $results.append(person_block);
         });
@@ -186,7 +186,7 @@ Paris.listPersons = (function(){
           "current": data.page + 1,
           "total": data.nbPages
         };
-        var pagination = Paris.templates.templatizer["pagination"]["pagination"](pagination_data);
+        var pagination = Paris.templates["pagination"]["pagination"](pagination_data);
         $pagination.html(pagination);
       } else {
         $pagination.empty();
@@ -251,7 +251,7 @@ Paris.listPersons = (function(){
 
         }
 
-        var facet_block = Paris.templates.templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
+        var facet_block = Paris.templates["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
         $facetsContainer.append(facet_block);
       });
     }

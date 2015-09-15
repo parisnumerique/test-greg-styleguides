@@ -27,5 +27,6 @@ Thumbs.db
 node_modules
 tmp/*
 !tmp/.gitkeep
+src/javascript/client.tpl.js
 src/javascript/paris.js
 src/javascript/paris.js.map

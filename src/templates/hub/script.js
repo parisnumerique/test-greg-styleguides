@@ -104,20 +104,20 @@ Paris.hub = (function(){
     }
 
     function renderHubHeading(data){
-      var hubHeading = Paris.templates.templatizer["hub-heading"]["hub-heading"](data);
+      var hubHeading = Paris.templates["hub-heading"]["hub-heading"](data);
       $hubHeading.replaceWith(hubHeading);
       $hubHeading = $el.find('.hub-heading');
     }
 
     function renderBreadcrumbs(data){
-      var breadcrumbs = Paris.templates.templatizer["breadcrumbs"]["breadcrumbs"](data);
+      var breadcrumbs = Paris.templates["breadcrumbs"]["breadcrumbs"](data);
       $breadcrumbsParent.html(breadcrumbs);
     }
 
     function renderNews(data){
       $newsParent.find('.news-list').remove();
       if(data && data.items && data.items.length) {
-        var news = Paris.templates.templatizer["news-list"]["news-list"](data);
+        var news = Paris.templates["news-list"]["news-list"](data);
         $newsParent.closest('.layout-content').show();
         $newsParent.append(news);
       } else {

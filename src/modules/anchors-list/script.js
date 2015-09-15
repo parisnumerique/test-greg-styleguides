@@ -157,7 +157,7 @@ Paris.anchors = (function(){
           };
         });
 
-        var content = Paris.templates.templatizer.share.share({
+        var content = Paris.templates.share.share({
           items: items,
           modifiers: []
         });

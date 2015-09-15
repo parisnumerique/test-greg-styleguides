@@ -2,6 +2,7 @@
 
 ## 1.0.8 (not yet released)
 
+* update `templatizer` to 2.0.2
 * component `form` added
 * component `gallery` added
 * component `postit`: added background color

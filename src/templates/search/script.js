@@ -232,7 +232,7 @@ Paris.search = (function(){
     }
 
     function renderResults(data) {
-      var results = Paris.templates.templatizer["search-results-list"]["search-results-list"](data);
+      var results = Paris.templates["search-results-list"]["search-results-list"](data);
 
       if (data.page > 0) {
         $results.find('.search-results-list-more').remove();
@@ -270,7 +270,7 @@ Paris.search = (function(){
               });
             });
 
-            var facet_block = Paris.templates.templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
+            var facet_block = Paris.templates["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
             $facetsContainer.append(facet_block);
           });
         }
