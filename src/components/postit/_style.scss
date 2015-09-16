@@ -1,21 +1,24 @@
 .component-postit {
   @extend %component-text;
 
-  border-bottom: 7px solid $orange1;
+  background-color: transparentize($orange1, 0.85);
+  border-bottom: 6px solid $orange1;
   clear: both;
   margin-top: -50px;
-  padding: 10px 0 110px;
+  padding: 10px 20px 40px 0;
   position: relative;
 
   &:before {
-    background: $orange1;
+    background-color: transparentize($orange1, 0.85);
+    border-bottom: 6px solid $orange1;
+    border-left: 6px solid $orange1;
     content: " ";
     display: block;
-    height: 100%;
+    height: calc(100% + 6px);
     left: -50px;
     position: absolute;
     top: 0;
-    width: 6px;
+    width: 50px;
   }
 
   h2,

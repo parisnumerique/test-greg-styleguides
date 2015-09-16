@@ -34,5 +34,8 @@ Paris.config = {
     "publicdata": {
       "name": "publicdata"
     }
+  },
+  captcha: {
+    key: "6Lf2DQoTAAAAAKmk3wEFCZuK3FqG00SlQM3o6Yvp"
   }
 };

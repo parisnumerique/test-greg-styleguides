@@ -19,7 +19,9 @@
 }
 
 input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="tel"],
+input[type="url"] {
   border: none;
   border-radius: 5px;
   height: 45px;
