@@ -2,11 +2,13 @@
 
 ## 1.0.8 (not yet released)
 
+* prod wrapper: allow `meta` and `link` tags injection
 * update `templatizer` to 2.0.2
 * component `form` added
 * component `gallery` added
 * component `postit`: added background color
 * module `block-content-jecoute`: text can now contain links
+* module `block-aside-checkboxes`: replace checkbox input by `a` tag for SEO
 * template `list-persons`: improved search javascript
 
 ## 1.0.7 (2015-08-03)
