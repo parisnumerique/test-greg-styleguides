@@ -54,6 +54,13 @@
       padding: 10px 30px;
       text-align: left;
     }
+
+    a:not(.button) {
+      color: $red1;
+      text-decoration: underline;
+
+      &:hover {text-decoration: none;}
+    }
   }
 
   tbody {
