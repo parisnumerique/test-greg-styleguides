@@ -136,7 +136,7 @@ Paris.listPersons = (function(){
         urlQuery = $.extend({}, {search: query}, currentFacets);
       }
       else {
-        urlQuery = (currentPage !== 0) ? {page: currentPage} : {};
+        urlQuery = (currentPage > 0) ? {page: currentPage + 1} : {};
       }
       Paris.url.setQueryString(urlQuery);
 
@@ -252,7 +252,7 @@ Paris.listPersons = (function(){
             return parseInt(o.value, 10);
           });
         }
-        else {
+        else if (allFacets[facet]) {
           $.each(allFacets[facet], function(name, number) {
             block_aside_checkboxes_data.items.push({
               value: name,
