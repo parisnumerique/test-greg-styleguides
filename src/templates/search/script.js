@@ -53,7 +53,8 @@ Paris.search = (function(){
       $facetsContainer = $el.find('#facets');
 
       $searchFieldInput.on('input', onInput);
-      $facetsContainer.on('change', 'input[type=checkbox], select', updateFacets);
+      $facetsContainer.on('click', 'a', toggleFacet);
+      $facetsContainer.on('change', 'select', updateFacets);
       $el.on('click', '.search-results-list-more .button', onClickMore);
 
       $searchFieldInput.trigger('focus');
@@ -291,8 +292,11 @@ Paris.search = (function(){
             });
           }
         } else {
-          $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked").each(function(){
-            facetValues.push(facet + ":" + $(this).val());
+          // var $checkboxes = $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked");
+          var $checkboxes = $facetsContainer.find("a[data-name^='" + facet + "'].checked");
+          $checkboxes.each(function() {
+            // facetValues.push(facet + ":" + $(this).val());
+            facetValues.push(facet + ":" + $(this).data('value'));
           });
         }
         if (facetValues.length > 0) {
@@ -300,6 +304,13 @@ Paris.search = (function(){
         }
       });
       onInput();
+    }
+
+    function toggleFacet(event) {
+      if (event) {event.preventDefault();}
+
+      $(this).toggleClass('checked');
+      updateFacets();
     }
 
     function onClickMore(e){
