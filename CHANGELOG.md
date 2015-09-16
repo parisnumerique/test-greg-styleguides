@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.8 (not yet released)
+## 1.0.8 (2015-09-16)
 
 * prod wrapper: allow `meta` and `link` tags injection
 * update `templatizer` to 2.0.2
