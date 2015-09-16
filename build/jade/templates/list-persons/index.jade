@@ -43,13 +43,13 @@ append content
             #facets
               +block-aside-checkboxes(data.aside.politique)
               +block-aside-checkboxes(data.aside.arrondissement)
-
         .layout-content
           #results
             each result in data.results
               +#{result.type}(result.data)
-          #pagination
-            +pagination(data.pagination)
+          if data.pagination
+            #pagination
+              +pagination(data.pagination)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
