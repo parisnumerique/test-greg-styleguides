@@ -2,6 +2,7 @@
 
 ## 1.0.9 (coming soon)
 
+* component `form`: add missing .component class
 * component `table`: style `a` tags as in text component
 * template `list-person`:
   * fix js error on empty search
