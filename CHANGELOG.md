@@ -1,7 +1,9 @@
 # Changelog
 
-## 1.0.9 (coming soon)
+## 1.1.0 (coming soon)
 
+* remove template jade from build
+  * template js is still in the build
 * component `form`: add missing .component class
 * component `table`: style `a` tags as in text component
 * template `list-person`:
