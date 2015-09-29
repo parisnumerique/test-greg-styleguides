@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0 (2015-09-29)
+
+* remove template jade from build
+  * template js is still in the build
+* component `form`: add missing .component class
+* component `table`: style `a` tags as in text component
+* template `list-person`:
+  * fix js error on empty search
+  * correct page number in url query
+
 ## 1.0.8 (2015-09-16)
 
 * prod wrapper: allow `meta` and `link` tags injection
