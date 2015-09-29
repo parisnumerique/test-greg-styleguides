@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 (coming soon)
+## 1.1.0 (2015-09-29)
 
 * remove template jade from build
   * template js is still in the build
