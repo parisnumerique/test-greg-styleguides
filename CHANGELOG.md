@@ -7,6 +7,10 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.1.2 (2015-10-02)
+
+* same as 1.1.1, but with updated build
+
 ## 1.1.1 (2015-10-02)
 
 * module `block-aside-checkboxes`: fix checkbox visibility on Chrome
