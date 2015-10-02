@@ -10,6 +10,7 @@ Let's take the `x.β.α` version number:
 ## 1.1.1 (coming soon)
 
 * module `block-aside-checkboxes`: fix checkbox visibility on Chrome
+* component `gallery`: add `clear: both`;
 
 ## 1.1.0 (2015-09-29)
 
