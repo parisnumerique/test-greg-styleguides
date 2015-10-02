@@ -80,6 +80,7 @@
       border-top: none;
       border-right: none;
 
+      -webkit-backface-visibility: hidden;
       -webkit-transform: rotate(-45deg);
       -moz-transform: rotate(-45deg);
       -o-transform: rotate(-45deg);
