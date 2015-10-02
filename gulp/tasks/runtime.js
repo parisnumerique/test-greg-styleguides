@@ -7,10 +7,10 @@ var fs          = require('fs');
 gulp.task('build:runtime', ['templatize:runtime'], function () {
   // Standalone Browserify Builds
   // http://www.forbeslindesay.co.uk/post/46324645400/standalone-browserify-builds
-  browserify(config.tmp.output + '/runtime.tpl.unpkg.js', {standalone: 'Paris.bo_templates'})
+  browserify(config.tmp.output + '/runtime.tpl.unpkg.js', {standalone: 'Paris.templates'})
     .bundle()
     .pipe(fs.createWriteStream(config.tmp.output + '/runtime.tpl.js'));
-})
+});
 
 gulp.task('templatize:runtime', function (cb) {
   templatizer(
@@ -19,7 +19,7 @@ gulp.task('templatize:runtime', function (cb) {
       transformMixins: true,
       globOptions: { ignore: ['**/index.jade'] }
     }, cb);
-})
+});
 
 
 gulp.task('build:clients', function (cb) {
@@ -34,5 +34,5 @@ gulp.task('build:clients', function (cb) {
       transformMixins: true,
       globOptions: { ignore: ['**/index.jade'] }
     }, cb);
-})
+});
 

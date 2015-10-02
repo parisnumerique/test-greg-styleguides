@@ -1,5 +1,17 @@
 # Changelog
 
+## Versioning system
+
+Let's take the `x.β.α` version number:
+* `α` is for small fixes that don't involve any template update, mainly css evolution
+* `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
+* `x` is for major release involving a more careful integration of the styleguide
+
+## 1.1.1 (2015-10-02)
+
+* module `block-aside-checkboxes`: fix checkbox visibility on Chrome
+* component `gallery`: add `clear: both`;
+
 ## 1.1.0 (2015-09-29)
 
 * remove template jade from build
