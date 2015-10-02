@@ -15,23 +15,33 @@ var Paris = window.Paris || {};
 Paris.listPersons = (function(){
 
   var defaultOptions = {
-    index: 'persons', // the Algolia index to use (should be defined in config.js)
-    fields: { // matching the names of Algolia fields
-      link: 'url',              // the field to use as a link
-      title: 'prenom_nom',          // the field to use as the person-block title
-      text: 'mandat',            // the field to use as the person-block text
-      image: 'portrait',        // the field to use as image
-      group: 'groupe_politique' // the field to use in the person-block text
+    // the Algolia index to use (should be defined in config.js)
+    index: 'persons',
+    // matching the names of Algolia fields
+    fields: {
+      // the field to use as a link
+      link: 'url',
+      // the field to use as the person-block title
+      title: 'prenom_nom',
+      // the field to use as the person-block text
+      text: 'mandat',
+      // the field to use as image
+      image: 'portrait',
+      // the field to use in the person-block text
+      group: 'groupe_politique'
     },
-    resultsPerPage: 100, // the number of results to display per page
-    facets: ["groupe_politique", "secteur"], // the available facets that will be displayed in the left column (should have been created on Algolia)
-                       // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
-    addFacetFilter: null, // the facetFilter you want to always add by default (useful for filtering results)
+    // the number of results to display per page
+    resultsPerPage: 100,
+    // the available facets that will be displayed in the left column (should have been created on Algolia)
+    // you can set the name displayed in the left column in locales.js (key: $LOCALE/search_results/facets/$YOUR_FACET)
+    facets: ["groupe_politique", "secteur"],
+    // the facetFilter you want to always add by default (useful for filtering results)
+    addFacetFilterJson: null,
     algoliaHelperParams: {facets: ['mandat'], disjunctiveFacets: ['groupe_politique', 'secteur']}
   };
 
-  function listPersons(selector, userOptions){
-    var $el     = $(selector),
+  function listPersons(selector, userOptions) {
+    var $el = $(selector),
       options = $.extend({}, defaultOptions, userOptions),
       api = {},
       $searchFieldInput,
@@ -45,7 +55,7 @@ Paris.listPersons = (function(){
       currentPage = 0,
       isFiltered;
 
-    function init(){
+    function init() {
       initOptions();
 
       algolia = algoliasearch(Paris.config.algolia.id, Paris.config.algolia.api_key);
@@ -54,24 +64,27 @@ Paris.listPersons = (function(){
 
       // Add mandatory facet filters
       if (options.addFacetFilterJson) {
-        $.each(options.addFacetFilterJson, function (index, facetFilter) {
+        $.each(options.addFacetFilterJson, function(index, facetFilter) {
           helper.addRefine(facetFilter.facetName, facetFilter.facetValue);
         });
       }
 
       helper.on('result', onSearchResults);
+      // helper.on('error', onSearchError);
 
       $searchFieldInput = $el.find('#search-person');
       $results = $el.find('#results');
       $pagination = $el.find('#pagination');
       $facetsContainer = $el.find('#facets');
 
-      $searchFieldInput.on('change', onInput);
+      $searchFieldInput.on('input', onInput);
 
-      $facetsContainer.on('change', 'input[type=checkbox]', updateFacets);
+      $facetsContainer.on('click', 'a', toggleFacet);
+      $facetsContainer.on('change', 'select', updateFacets);
       $pagination.on('click', 'a', onClickPagination);
 
-      // If the search field is not empty or if there is more than one facet selected, trigger the search on page load
+      // If the search field is not empty or if there is more than one facet selected,
+      // update facets and launch search
       if ($searchFieldInput.val() != "" || _moreThanOneFacet()) {
         updateFacets();
       }
@@ -80,15 +93,14 @@ Paris.listPersons = (function(){
     }
 
     function initOptions() {
-      $.each($el.data(), function(key, value){
+      $.each($el.data(), function(key, value) {
         options[key] = value;
       });
     }
 
-    function onInput(e) {
+    function onInput() {
       currentPage = 0;
-      var query = $searchFieldInput.val();
-      launchSearch(query);
+      launchSearch();
     }
 
     function scrollToResultsTop() {
@@ -99,17 +111,14 @@ Paris.listPersons = (function(){
       });
     }
 
-    function launchSearch(query){
-      if (typeof query === 'undefined') {
-        query = $searchFieldInput.val();
-      }
-      helper.setQuery(query);
+    function launchSearch() {
+      var query = $searchFieldInput.val();
 
       isFiltered = query ? true : false;
-
+      helper.setQuery(query);
       helper.setCurrentPage(currentPage);
 
-      //add selected facets to algolia search
+      // add selected facets to algolia search
       var helperState = JSON.parse(JSON.stringify(helper.getState()));
       $.each(options.facets, function(index, facet) {
         if (currentFacets[facet] && currentFacets[facet].length) {
@@ -121,12 +130,15 @@ Paris.listPersons = (function(){
 
       helper.setQueryParameter('hitsPerPage', isFiltered ? options.resultsPerPage : 8);
 
-      //set query parameters
-      if(isFiltered) {
-        Paris.url.setQueryString(currentFacets);
-      } else {
-        Paris.url.setQueryString({page: currentPage});
+      // set url query parameters
+      var urlQuery;
+      if (isFiltered) {
+        urlQuery = $.extend({}, {search: query}, currentFacets);
       }
+      else {
+        urlQuery = (currentPage > 0) ? {page: currentPage + 1} : {};
+      }
+      Paris.url.setQueryString(urlQuery);
 
       helper.search();
     }
@@ -165,7 +177,7 @@ Paris.listPersons = (function(){
           person_block_data.text.push(hit[options.fields.group]);
           person_block_data.text = person_block_data.text.join(", ");
 
-          var person_block = Paris.templates.templatizer["person-block"]["person-block"](person_block_data);
+          var person_block = Paris.templates["person-block"]["person-block"](person_block_data);
 
           $results.append(person_block);
         });
@@ -174,7 +186,7 @@ Paris.listPersons = (function(){
       renderPagination(data);
     }
 
-    function renderPagination(data){
+    function renderPagination(data) {
       if ((data.nbPages > 1) || !isFiltered) {
         var pagination_data = {
           "text": {
@@ -186,14 +198,14 @@ Paris.listPersons = (function(){
           "current": data.page + 1,
           "total": data.nbPages
         };
-        var pagination = Paris.templates.templatizer["pagination"]["pagination"](pagination_data);
+        var pagination = Paris.templates["pagination"]["pagination"](pagination_data);
         $pagination.html(pagination);
       } else {
         $pagination.empty();
       }
     }
 
-    function onClickPagination(e){
+    function onClickPagination(e) {
       e.preventDefault();
       var page = $(this).data('page');
       if (page === "prev") {
@@ -209,8 +221,8 @@ Paris.listPersons = (function(){
 
     function renderFacets(data) {
       var allFacets = {};
-      $.each(['disjunctiveFacets', 'facets'], function (index, facetType) {
-        $.each(data[facetType], function (index, facet) {
+      $.each(['disjunctiveFacets', 'facets'], function(index, facetType) {
+        $.each(data[facetType], function(index, facet) {
           allFacets[facet.name] = facet.data;
         });
       });
@@ -227,20 +239,21 @@ Paris.listPersons = (function(){
         };
 
         if (facet === "secteur") {
-
-          var facetArray = map(allFacets[facet], function(number, name){ return {
-            value: name,
-            text: name.replace(" arrondissement", ""),
-            number: Paris.i18n.formatNumber(number),
-            checked: $.inArray(name, currentFacets[facet]) !== -1
-          }; });
-          block_aside_checkboxes_data.items = sortBy(facetArray, function(o){
-            return parseInt(o.value, 10);
+          var facetArray = map(allFacets[facet], function(number, name) {
+            return {
+              value: name,
+              text: name.replace(" arrondissement", ""),
+              number: Paris.i18n.formatNumber(number),
+              checked: $.inArray(name, currentFacets[facet]) !== -1
+            };
           });
 
-        } else {
-
-          $.each(allFacets[facet], function (name, number) {
+          block_aside_checkboxes_data.items = sortBy(facetArray, function(o) {
+            return parseInt(o.value, 10);
+          });
+        }
+        else if (allFacets[facet]) {
+          $.each(allFacets[facet], function(name, number) {
             block_aside_checkboxes_data.items.push({
               value: name,
               text: name,
@@ -248,30 +261,33 @@ Paris.listPersons = (function(){
               checked: $.inArray(name, currentFacets[facet]) !== -1
             });
           });
-
         }
 
-        var facet_block = Paris.templates.templatizer["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
+        var facet_block = Paris.templates["block-aside-checkboxes"]["block-aside-checkboxes"](block_aside_checkboxes_data);
         $facetsContainer.append(facet_block);
       });
     }
 
     function updateFacets() {
       currentFacets = {};
+
       $.each(options.facets, function(index, facet) {
         var facetValues = [];
         var $select = $facetsContainer.find(".block-aside-select[name^='" + facet + "']");
-        var $checkboxes = $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked");
+        // var $checkboxes = $facetsContainer.find("input[type=checkbox][name^='" + facet + "']:checked");
+        var $checkboxes = $facetsContainer.find("a[data-name^='" + facet + "'].checked");
 
         if ($select.is(':visible')) {
           if ($select.val() === null) {return;}
-          $.each($select.val(), function(i, value){
+          $.each($select.val(), function(i, value) {
             facetValues.push(value);
           });
         } else {
-          $checkboxes.each(function(){
-            if ($(this).val() === null) {return;}
-            facetValues.push($(this).val());
+          $checkboxes.each(function() {
+            // var value = $(this).val();
+            var value = $(this).data('value');
+            if (value === null) {return;}
+            facetValues.push(value);
           });
         }
 
@@ -279,20 +295,30 @@ Paris.listPersons = (function(){
           currentFacets[facet] = facetValues;
         }
       });
+
       onInput();
+    }
+
+    function toggleFacet(event) {
+      if (event) {event.preventDefault();}
+
+      $(this).toggleClass('checked');
+      updateFacets();
     }
 
     function _moreThanOneFacet() {
       var queryObj = Paris.url.parseQueryString();
       var nbOfFacets = 0;
-      $.each(options.facets, function (index, facetName) {
+
+      $.each(options.facets, function(index, facetName) {
         nbOfFacets += queryObj[facetName] ? queryObj[facetName].length : 0;
       });
+
       return nbOfFacets > 1;
     }
 
     // The API for external interaction
-    api.search = function(query){
+    api.search = function(query) {
       $searchFieldInput.val(query).trigger('input');
     };
 
@@ -301,8 +327,8 @@ Paris.listPersons = (function(){
     return $el;
   }
 
-  return function(selector, userOptions){
-    return $(selector).each(function(){
+  return function(selector, userOptions) {
+    return $(selector).each(function() {
       listPersons(this, userOptions);
     });
   };
@@ -310,6 +336,5 @@ Paris.listPersons = (function(){
 })();
 
 $(document).ready(function(){
-  $(".hidden-without-js").show();
   Paris.listPersons('body.list-persons');
 });

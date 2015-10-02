@@ -1,5 +1,12 @@
-h1 Paris Living Style Guide
-h2= title
+.lsg-toc
+  .lsg-col
+    h1 Paris Living Style Guide
+    h2= title
+  .lsg-col
+    div.dl-link
+      i(class="icon icon-file")
+      a(href="/dl/styleguide-latest.zip" target="_blank")
+        | Télécharger
 .lsg-toc
   .lsg-col
     h3 Base
@@ -10,21 +17,6 @@ h2= title
           li
             a(href="../base/#{index}.html")
               = file.title
-    h3 Modules
-      b éléments d'interface réutilisables
-    ul
-      - for module in public.modules._data.modules
-        li
-          a(href="../modules/#{module}")
-            = module
-  .lsg-col
-    h3 Composants rédactionnels
-      b éléments rédactionnels réutilisables
-    ul
-      - for component in public.components._data.components
-        li
-          a(href="../components/#{component}")
-            = component
     h3 Layouts
       b mises en page réutilisables
     ul
@@ -32,6 +24,24 @@ h2= title
         li
           a(href="../layouts/#{layout}")
             = layout
+    h3 Composants rédactionnels
+      b éléments rédactionnels réutilisables
+    ul
+      - for component in public.components._data.components
+        li
+          a(href="../components/#{component}")
+            = component
+  .lsg-col
+    h3 Modules
+      b éléments d'interface réutilisables
+    ul
+      - for module in public.modules._data.modules
+        li
+          a(href="../modules/#{module}")
+            = module
+h2 Exemples
+.lsg-toc
+  .lsg-col
     h3 Templates
       b gabarits de pages finalisés
     ul
@@ -39,3 +49,5 @@ h2= title
         li
           a(href="../templates/#{template}")
             = template.replace('.html', '')
+  .lsg-col
+

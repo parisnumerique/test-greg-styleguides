@@ -1,11 +1,36 @@
 # Changelog
 
-## 1.0.8 (2015-09-10)
+## Versioning system
 
+Let's take the `x.β.α` version number:
+* `α` is for small fixes that don't involve any template update, mainly css evolution
+* `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
+* `x` is for major release involving a more careful integration of the styleguide
+
+## 1.1.1 (2015-10-02)
+
+* module `block-aside-checkboxes`: fix checkbox visibility on Chrome
+* component `gallery`: add `clear: both`;
+
+## 1.1.0 (2015-09-29)
+
+* remove template jade from build
+  * template js is still in the build
+* component `form`: add missing .component class
+* component `table`: style `a` tags as in text component
+* template `list-person`:
+  * fix js error on empty search
+  * correct page number in url query
+
+## 1.0.8 (2015-09-16)
+
+* prod wrapper: allow `meta` and `link` tags injection
+* update `templatizer` to 2.0.2
 * component `form` added
 * component `gallery` added
 * component `postit`: added background color
 * module `block-content-jecoute`: text can now contain links
+* module `block-aside-checkboxes`: replace checkbox input by `a` tag for SEO
 * template `list-persons`: improved search javascript
 
 ## 1.0.7 (2015-08-03)

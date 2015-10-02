@@ -18,6 +18,12 @@ html
             li
               a(href="base/#{index}.html")
                 = file.title
+        h2 Layouts
+        ul
+          - for layout in public.layouts._data.layouts
+            li
+              a(href="layouts/#{layout}")
+                = layout
         h2 Modules
         ul
           - for module in public.modules._data.modules
@@ -30,12 +36,6 @@ html
             li
               a(href="components/#{component}")
                 = component
-        h2 Layouts
-        ul
-          - for layout in public.layouts._data.layouts
-            li
-              a(href="layouts/#{layout}")
-                = layout
         h2 Templates
         ul
           - for template in public.templates._data.templates

@@ -46,5 +46,5 @@ require('./lib/cnil');
 require('./lib/egg');
 
 var Paris = window.Paris || {};
-Paris.version = "1.0.8";
-Paris.templates = {};
+Paris.version = "1.1.1";
+Paris.templates = require('./client.tpl');

@@ -257,10 +257,10 @@ Paris.sectionsPanel = (function(){
       content += '</ul>';
 
       if (data.buttons && data.buttons.items && data.buttons.items.length) {
-        content += Paris.templates.templatizer["buttons"]["buttons"](data.buttons);
+        content += Paris.templates["buttons"]["buttons"](data.buttons);
       }
       if (data.more_links && data.more_links.items && data.more_links.items.length) {
-        content += Paris.templates.templatizer["links"]["links"](data.more_links);
+        content += Paris.templates["links"]["links"](data.more_links);
       }
 
       $contentWrapper.html(content).velocity({

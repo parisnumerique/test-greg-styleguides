@@ -46,7 +46,7 @@ This task will:
 * copy all webfont files to `./build/assets/fonts/`
 * optimize and copy all images (png, jpg, svg, gif) to `./build/assets/images/` while preserving the original tree structure
 * copy all jade and json files to `./build/jade/` while preserving the original tree structure
-* copy `./src/layouts/_wrapper_prod.jade` to `./build/jade/layouts/wrapper.jade` without modification
+* copy `./src/layouts/_wrapper.jade` to `./build/jade/layouts/wrapper.jade` without modification
 
 ### Use the build in another project
 

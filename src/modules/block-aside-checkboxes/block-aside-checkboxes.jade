@@ -4,21 +4,18 @@ mixin block-aside-checkboxes(data)
   - modifiers = data.modifiers || []
   - modifiers.push("block-aside-checkboxes")
   +block-aside({"title": data.title, "modifiers": modifiers})
-    if !data.showCondition || data.showCondition === 'hidden-on-small'
-      ul.block-aside-items
-        each item in data.items
-          li.block-aside-item(class=item.modifiers)
-            label
-              input(type="checkbox" name="#{data.name}[]" value=item.value checked=item.checked)
-              .block-aside-item-checkbox
-              .block-aside-item-text
-                = item.text
-                  if item.number
-                    |  (#{item.number})
-    if !data.showCondition || data.showCondition === 'only-on-small'
-      select.block-aside-select(multiple name="#{data.name}[]")
-        each item in data.items
-          option(value=item.value selected=item.checked)
-            = item.text
-            if item.number
-              |  (#{item.number})
+    ul.block-aside-items
+      each item in data.items
+        li.block-aside-item(class=item.modifiers)
+          a(href="?#{data.name}[]=#{item.value}" data-name="#{data.name}" data-value="#{item.value}" class={checked: item.checked})
+            .block-aside-item-checkbox
+            .block-aside-item-text
+              = item.text
+                if item.number
+                  |  (#{item.number})
+    select.block-aside-select(multiple name="#{data.name}[]")
+      each item in data.items
+        option(value=item.value selected=item.checked)
+          = item.text
+          if item.number
+            |  (#{item.number})
