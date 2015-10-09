@@ -1,5 +1,5 @@
 mixin pagination(data)
-  nav.pagination
+  nav.pagination(aria-label=data.text.label)
     - var current = parseInt(data.current) || 1
     - var total = parseInt(data.total) || 0
     - var prev = current - 1

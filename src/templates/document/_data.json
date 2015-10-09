@@ -617,6 +617,9 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
           "href": "#",
@@ -1232,6 +1235,9 @@
             "text": "Voir tous les réseaux sociaux"
           }
         }
+      },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
       },
       "footer": {
         "logo": {
