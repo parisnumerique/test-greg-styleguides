@@ -50,7 +50,7 @@ lsg.nav = function nav() {
     else {
       var href = "";
       href += window.location.origin;
-      href += $link.data('ish') ? "/ish/#" : "/";
+      href += $link.data('ish') ? "/ish/#" : "";
       href += $link.attr('href');
 
       window.location.href = href;

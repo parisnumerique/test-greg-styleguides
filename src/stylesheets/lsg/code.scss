@@ -1,5 +1,5 @@
 .lsg-toc {
-  @include layout(6 1/6 inside);
+  @include layout(6 1/6);
   @include container;
   padding-left: 15px;
   padding-right: 15px;
@@ -15,7 +15,7 @@
   a {
     color: #333;
     text-decoration: none;
-    &:hover { text-decoration: underline }
+    &:hover {text-decoration: underline}
   }
 }
 
@@ -26,10 +26,9 @@
 
       .lsg-toc-col {
         @include span(2 of 4);
-
-        &:last-child {
-          @include last;
-        }
+      }
+      .lsg-toc-col:last-child {
+        @include last;
       }
     }
   }
@@ -45,6 +44,9 @@
 
       .lsg-toc-col {
         @include span(2 of 4);
+      }
+      .lsg-toc-col:last-child {
+        @include last;
       }
     }
     .lsg-toc-examples {

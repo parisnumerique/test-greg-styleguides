@@ -77,8 +77,8 @@ lsg.ish = (function() {
         break;
       // full
       default:
+        sizeIframe(sw, !fullMode);
         fullMode = true;
-        sizeIframe(sw);
         break;
     }
 
@@ -272,7 +272,7 @@ lsg.ish = (function() {
 
   /* UTILS */
   function resetModes(size) {
-    fullMode = (size === 'full');
+    fullMode = false;
 
     if (discoMode) {
       clearInterval(discoMode);

@@ -8,21 +8,21 @@
         - for file, index in public.base._data
           if index != 'index'
             li
-              a(href="../base/#{index}.html")
+              a(href="/base/#{index}")
                 = file.title
       h3 Layouts
         small mises en page réutilisables
       ul
         - for layout in public.layouts._data.layouts
           li
-            a(href="../layouts/#{layout}")
+            a(href="/ish#layouts/#{layout}")
               = layout
       h3 Composants rédactionnels
         small éléments rédactionnels réutilisables
       ul
         - for component in public.components._data.components
           li
-            a(href="../components/#{component}")
+            a(href="/ish#components/#{component}")
               = component
     .lsg-toc-col
       h3 Modules
@@ -30,7 +30,7 @@
       ul
         - for module in public.modules._data.modules
           li
-            a(href="../modules/#{module}")
+            a(href="/ish#modules/#{module}")
               = module
   .lsg-toc-examples
     h2 Exemples
@@ -40,5 +40,5 @@
       ul
         - for template in public.templates._data.templates
           li
-            a(href="../templates/#{template}")
+            a(href="/ish#templates/#{template}")
               = template.replace('.html', '')

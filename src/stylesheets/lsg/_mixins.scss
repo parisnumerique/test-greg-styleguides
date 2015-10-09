@@ -5,7 +5,8 @@ $breakpoints: (
   small: 480px,
   medium: 720px,
   large: 960px,
-  wide: 1200px
+  wide: 1200px,
+  extra-wide: 2000px
 );
 @mixin breakpoint($name) {
   @if not map-has-key($breakpoints, $name) {

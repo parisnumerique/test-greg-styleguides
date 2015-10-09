@@ -175,6 +175,8 @@ nav.lsg-nav {
  * MAIN
  */
 main.lsg-main {
+  @include clearfix;
+
   height: 100%;
   margin-left: 0;
   margin-top: $lsg-header-height;
