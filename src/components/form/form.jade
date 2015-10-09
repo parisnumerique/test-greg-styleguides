@@ -31,7 +31,7 @@ mixin form-select(data)
 
 mixin form-textarea(data)
   label.form-item-label(for=data.id)= data.label
-  textarea.form-field(name=data.name id=data.id placeholder=data.placeholder rows=data.rows required=data.required)
+  textarea.form-field(name=data.name id=data.id placeholder=data.placeholder maxlength=data.maxlength rows=data.rows required=data.required)
     = data.value
 
 
@@ -79,7 +79,8 @@ mixin form-buttons(data)
 
 mixin form(data)
   .component.component-form
-    form(action=data.action method=data.method || 'POST')
+    - var idform = JSON.parse(JSON.stringify(data.items[0] || []))
+    form(method=data.method || 'POST' action='/formsresponses/send/'+idform.value class='formsresponses-form' id='form-'+idform.value data-thanks=idform.thanks)
       each item in data.items
         - item = JSON.parse(JSON.stringify(item || [])) // clone the data object
         - item.modifiers = item.modifiers || []

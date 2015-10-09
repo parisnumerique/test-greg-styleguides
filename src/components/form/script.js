@@ -3,14 +3,20 @@
 var Paris = window.Paris || {};
 
 Paris.form = (function(){
+  
+  var defaultOptions = {
+    thanks: "Merci, votre soumission a bien été transmise."
+  };
 
   function form(selector){
     var $el = $(selector),
+      options = defaultOptions,
       $form,
       $captcha,
       $currentField;
 
     function init(){
+      initOptions()
       $form = $el.find('form');
       $captcha = $el.find('.form-item-captcha');
 
@@ -24,6 +30,12 @@ Paris.form = (function(){
       //$el.find('.form-field').each(function(){
       //  checkValidity($(this));
       //});
+    }
+
+    function initOptions() {
+      $.each($el.data(), function(key, value){
+        options[key] = value;
+      });
     }
 
     function onFieldFocus(){
@@ -88,12 +100,16 @@ Paris.form = (function(){
 
     function onSubmit(e){
       e.preventDefault();
+      console.log($form);
       console.log("form submitted", $el.get(0).validity, $form.validity);
       if ($form.validity) {
         saveData();
       } else {
         // invalid
       }
+
+      // test : force save 
+      saveData();
     }
 
     function saveData() {
@@ -108,7 +124,8 @@ Paris.form = (function(){
     }
 
     function onDataSaved(data, status, xhr){
-      console.log('onDataSaved', data, status, xhr);
+      //console.log('onDataSaved', data, status, xhr);
+      $form.hide().after('<p>'+ options.thanks +'</p>');
     }
 
     function onDataError(xhr, status, error){
