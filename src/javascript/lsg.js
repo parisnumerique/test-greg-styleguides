@@ -2,75 +2,111 @@
 
 'use strict';
 
-var lsg = window.lsg = {};
+var lsg = window.lsg || {};
 
-
-lsg.nav = function(){
+lsg.nav = function nav() {
 
   // DOM
+  var $lsg = $('.lsg');
+  var $toggle = $('.lsg-nav-toggle');
   var $nav = $('.lsg-nav');
   var $navLinks = $nav.find('.lsg-nav-content a');
-  var $iframe = $('#sg-viewport');
-  var $toggle = $('.lsg-nav-toggle');
+  var $iframe = $('#ish-viewport');
 
-  var toggleNav = function () {
-    $nav.toggleClass('lsg-nav-open');
+  var openMenu = function openMenu() {
+    if ($toggle.hasClass('lsg-nav-sticky')) return;
+
+    $lsg.addClass('lsg-nav-open');
   };
 
-  var openeMenu = function () {
-    $nav.addClass('lsg-nav-open');
+  var closeMenu = function closeMenu() {
+    if ($toggle.hasClass('lsg-nav-sticky')) return;
+
+    $lsg.removeClass('lsg-nav-open');
   };
 
-  var closeMenu = function () {
-    $nav.removeClass('lsg-nav-open');
+  var toggleStickyMenu = function toggleStickyMenu() {
+    $toggle.toggleClass('lsg-nav-sticky');
   };
 
-  var openLink = function(url){
-    $iframe.attr('src', url);
-    closeMenu();
-  };
-
-  $navLinks.on('click', function(e){
+  var openLink = function openLink(e) {
     e.preventDefault();
-    $navLinks.removeClass('is-current');
-    $(this).addClass('is-current');
-    openLink($(this).attr('href'));
+    var $link = $(this);
+
+    if ($iframe.length && $link.data('ish')) {
+      $navLinks.removeClass('is-current');
+      $link.addClass('is-current');
+      $iframe.attr('src', $link.attr('href'));
+
+      var hashes = window.location.hash.split('#');
+      if (hashes[1]) {
+        hashes[1] = $link.attr('href');
+        window.location.hash = hashes.join('#');
+      }
+      else {
+        window.location.hash += '#'+$link.attr('href');
+      }
+    }
+    else {
+      var href = "";
+      href += window.location.origin;
+      href += $link.data('ish') ? "/ish/#" : "/";
+      href += $link.attr('href');
+
+      window.location.href = href;
+    }
+  };
+
+  // events
+  $navLinks.on({
+    click: openLink
   });
-  $toggle.on("mouseenter", openeMenu);
-  $nav.on("mouseleave", closeMenu);
+
+  $toggle.on({
+    mouseenter: openMenu,
+    mouseleave: closeMenu,
+    click: toggleStickyMenu
+  });
+
+  $nav.on({
+    mouseleave: closeMenu,
+    mouseenter: openMenu,
+    transitionend: function() {
+      if (lsg.ish) lsg.ish.resizeWindow();
+    }
+  });
 };
 
-lsg.highlight = function () {
-  var modules = $(".lsg-module, .lsg-component");
+
+lsg.location = function location($iframe) {
+  var hashes = window.location.hash.split('#');
+
+  if (hashes[1]) {
+    $iframe.attr('src', hashes[1]);
+  }
+  else {
+    window.location.href = window.location.origin;
+  }
+
+  lsg.ish.init(window);
+};
+
+
+lsg.highlight = function highlight($modules) {
   var tpl = $('<pre class="prism language-markup"><code></code></pre>');
 
-  modules.each(function(i, module) {
-    var $module = $(module);
+  $modules.each(function() {
+    var $module = $(this);
     var node = tpl.clone();
     var code = $.trim($module.html());
-    node.find('code').text(html_beautify(code));
+
+    node.find('code').text(window.html_beautify(code));
     $module.next('.language-jade').after(node);
   });
 
-  if(window.Prism) {
-    Prism.highlightAll();
+  if (window.Prism) {
+    window.Prism.highlightAll();
   }
-};
-
-lsg.location = function() {
-  var $sgViewport = $('#sg-viewport');
-  if(document.location.hash){
-    $sgViewport.attr('src', document.location.hash.slice(1));
-  }
-  else {
-    $sgViewport.attr('src', 'base/index.html');
-  }
-
-  $sgViewport.on('load', function () {
-    var src = this.contentDocument.location.pathname;
-    if(src === '/base/index.html') { return ;}
-    document.location.hash = src;
-  });
 };
 
 
@@ -78,13 +114,19 @@ lsg.location = function() {
  * Initialization
  */
 
-lsg.init = function () {
+lsg.init = function init() {
 
   if ($('body').hasClass('lsg')) {
     lsg.nav();
-    lsg.location();
   }
-  lsg.highlight();
+  var $iframe = $('#ish-viewport');
+  if ($iframe.length) {
+    lsg.location($iframe);
+  }
+  var $modules = $(".lsg-module, .lsg-component");
+  if ($modules.length) {
+    lsg.highlight($modules);
+  }
 };
 
 document.addEventListener("DOMContentLoaded", lsg.init);
