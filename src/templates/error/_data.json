@@ -20,7 +20,8 @@
       "heading": {
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "background": "../../modules/error-heading/animation.gif",
         "title": "Erreur 404 : page non trouvée",

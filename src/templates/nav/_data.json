@@ -8,7 +8,8 @@
         "logo": {
           "href": "../home/",
           "text": "Paris",
-          "h1": true
+          "h1": true,
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
           {"href": "#fr", "lang": "fr", "text": "français", "current": true},

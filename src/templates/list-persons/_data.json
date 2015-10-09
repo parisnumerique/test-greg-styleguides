@@ -21,7 +21,8 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
           {"href": "#fr", "lang": "fr", "text": "français", "current": true},
@@ -439,7 +440,8 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
           {"href": "#fr", "lang": "fr", "text": "français", "current": true},
