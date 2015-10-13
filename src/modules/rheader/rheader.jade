@@ -29,18 +29,19 @@ mixin rheader(data)
             span.rheader-button-text= data.buttons.around.text
       a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target rel="nofollow")
         span.rheader-button-text= data.buttons.menu.text
-      ul.rheader-nav#navigation
-        each item in data.items
-          - tag = item.current ? "strong" : "span"
-          li.rheader-nav-item(class=item.modifiers class=(item.current ? "current" : null))
-            a(href=item.href target=item.target aria-label=(item.hover ? item.text + " " + item.hover : null))
-              if item.icon
-                i.rheader-nav-item-icon(class="icon-#{item.icon}" aria-hidden="true")
-              if item.hover
-                #{tag}.rheader-nav-item-front: span.rheader-nav-item-text= item.text
-                #{tag}.rheader-nav-item-back: span.rheader-nav-item-hover= item.hover
-              else
-                #{tag}.rheader-nav-item-text= item.text
+      nav.rheader-nav#navigation(aria-label=data.navigation_label tabindex="-1" role="navigation")
+        ul
+          each item in data.items
+            - tag = item.current ? "strong" : "span"
+            li.rheader-nav-item(class=item.modifiers class=(item.current ? "current" : null))
+              a(href=item.href target=item.target aria-label=(item.hover ? item.text + " " + item.hover : null))
+                if item.icon
+                  i.rheader-nav-item-icon(class="icon-#{item.icon}" aria-hidden="true")
+                if item.hover
+                  #{tag}.rheader-nav-item-front: span.rheader-nav-item-text= item.text
+                  #{tag}.rheader-nav-item-back: span.rheader-nav-item-hover= item.hover
+                else
+                  #{tag}.rheader-nav-item-text= item.text
     if data.modifiers && data.modifiers.indexOf("standalone") !== -1
       +rheader-mobile-nav(data)
   if data.quick_access

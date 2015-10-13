@@ -27,6 +27,7 @@
           "text": "Menu"
         }
       },
+      "navigation_label": "navigation principale",
       "items": [
         {"href": "#", "text": "Services et infos pratiques"},
         {"href": "#", "text": "Actualités"},

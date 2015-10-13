@@ -52,6 +52,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news/", "text": "Actualités", "current": true},

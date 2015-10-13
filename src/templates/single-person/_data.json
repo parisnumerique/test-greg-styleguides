@@ -52,11 +52,12 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
-          {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
+          {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {"href": "../subhome-municipality/", "text": "Municipalité", "current": true},
           {
             "href": "../subhome-get-involved/",
             "text": "Participez !",
@@ -498,11 +499,12 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
-          {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
+          {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news/", "text": "Actualités"},
           {"href": "#", "text": "Entreprises"},
-          {"href": "../subhome-municipality/", "text": "Municipalité"},
+          {"href": "../subhome-municipality/", "text": "Municipalité", "current": true},
           {
             "href": "../subhome-get-involved/",
             "text": "Participez !",

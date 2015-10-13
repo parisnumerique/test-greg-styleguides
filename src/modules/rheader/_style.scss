@@ -316,11 +316,12 @@ body.rheader-mobile-nav-open {
       bottom: 0;
       display: block;
       overflow: auto;
-      padding: 0;
       position: absolute;
       top: $rheader-height-small;
       width: 100%;
       -webkit-overflow-scrolling: touch;
+
+      > ul {padding: 0;}
     }
     .rheader-nav-item {
       border-top: 1px solid transparentize($white, 0.8);
@@ -508,6 +509,8 @@ body.rheader-mobile-nav-open {
     display: inline-block;
     padding: 0 0 0 25px;
     vertical-align: top;
+
+    > ul {display: inline-block;}
   }
 
   .rheader-nav-item {
