@@ -67,6 +67,8 @@ Paris.rheader = (function(){
 
       // Search
       $buttonSearch.on('click', onClickButtonSearch);
+      // also open search from skip-links
+      $('.skip-links a[href="#search"]').on('click', onClickButtonSearch);
     }
 
     function initOptions() {

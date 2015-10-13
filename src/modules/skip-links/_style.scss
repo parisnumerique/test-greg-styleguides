@@ -1,0 +1,31 @@
+.skip-links {
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  > li {
+    position: absolute;
+    width: 100%;
+  }
+
+  a {
+    background-color: $white;
+    color: $color-primary;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    left: -9999px;
+    text-decoration: none;
+
+    &:focus {
+      left: 0;
+      outline-color: $color-secondary;
+    }
+  }
+}

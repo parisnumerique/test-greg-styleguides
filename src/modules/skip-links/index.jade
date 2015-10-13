@@ -1,0 +1,10 @@
+include skip-links
+include ../../helpers/code
+
+h2 Standard
+.lsg-module
+  +skip-links(defaults)
++code({language: "jade"}).
+  include skip-links
+
+  +skip-links(#{JSON.stringify(defaults, null, 2)})

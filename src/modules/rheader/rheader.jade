@@ -29,7 +29,7 @@ mixin rheader(data)
             span.rheader-button-text= data.buttons.around.text
       a.rheader-button.rheader-button-menu#nav-toggle(href=data.buttons.menu.href target=data.buttons.menu.target rel="nofollow")
         span.rheader-button-text= data.buttons.menu.text
-      ul.rheader-nav
+      ul.rheader-nav#navigation
         each item in data.items
           - tag = item.current ? "strong" : "span"
           li.rheader-nav-item(class=item.modifiers class=(item.current ? "current" : null))

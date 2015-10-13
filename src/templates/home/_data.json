@@ -21,6 +21,13 @@
           "block": "Le site Paris.fr est un site d’information, placé sous la responsabilité de la Direction de l’Information et de la Communication de la Mairie de Paris.<br /><a href=\"#\">En savoir plus sur vos données personnelles</a>"
         }
       },
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notice": {
         "id": "notice_home_top",
         "modifiers": ["top", "blue", "buildings", "center-text", "closed"],

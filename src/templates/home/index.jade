@@ -4,6 +4,7 @@ include ../../modules/button-top/button-top
 include ../../modules/footer/footer
 include ../../modules/notice/notice
 include ../../modules/rheader/rheader
+include ../../modules/skip-links/skip-links
 
 // Blocks are reorderable parts of the template
 include blocks/get-involved
@@ -14,6 +15,10 @@ include blocks/quick-access
 include blocks/que-faire
 include blocks/sections
 include blocks/stay-connected
+
+append header
+  if data.skip_links
+    +skip-links(data.skip_links)
 
 append header
   if data.notice
