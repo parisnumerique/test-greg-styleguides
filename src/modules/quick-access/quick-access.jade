@@ -30,6 +30,8 @@ mixin quick-access(data)
         - button = JSON.parse(JSON.stringify(data.results.button)) // clone the data object
         - button.modifiers = ["action", "tertiary", "quick-access-results-more"] // overwrite the modifiers
         +button(button)
-    .quick-access-close-search: i.icon-close
+    button.quick-access-close-search(type="button")
+      if data.search.close_label
+        .hidden-accessibly= data.search.close_label
     if data.notice
       +notice(data.notice)

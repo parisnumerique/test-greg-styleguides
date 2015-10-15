@@ -12,33 +12,33 @@ h2 Standard
 
 h2 Fermable
 .lsg-module
-  +notice({"id": "my_notice", "closable": true, "block": "Texte de la notice"})
+  +notice({"id": "my_notice", "closable": true, "close_label": "Fermer le bandeau", "block": "Texte de la notice"})
 +code.
   include notice
-  +notice({"id": "my_notice", "closable": true, "block": "Texte de la notice"})
+  +notice({"id": "my_notice", "closable": true, "close_label": "Fermer le bandeau", "block": "Texte de la notice"})
 
 .lsg-module
-  +notice({"modifiers": ["blue"], "closable": true})
+  +notice({"modifiers": ["blue"], "closable": true, "close_label": "Fermer le bandeau"})
     | Texte de la notice
 +code.
   include notice
-  +notice({"modifiers": ["blue"], "closable": true})
+  +notice({"modifiers": ["blue"], "closable": true, "close_label": "Fermer le bandeau"})
 
 .lsg-module
-  +notice({"modifiers": ["white"], "closable": true})
+  +notice({"modifiers": ["white"], "closable": true, "close_label": "Fermer le bandeau"})
     | Texte de la notice
 +code.
   include notice
-  +notice({"modifiers": ["white"], "closable": true})
+  +notice({"modifiers": ["white"], "closable": true, "close_label": "Fermer le bandeau"})
 
 h2 Fermé par défaut
 p Pour ouvrir cette notice, publier l'évènement <code>notice.open</code> avec l'<code>id</code> de la notice en <code>data</code> :
 p: code Paris.events.publish('notice.open', {id: "openable_notice"});
 .lsg-module
-  +notice({"modifiers": ["blue", "closed"], "closable": true, "id": "openable_notice"})
+  +notice({"modifiers": ["blue", "closed"], "closable": true, "close_label": "Fermer le bandeau", "id": "openable_notice"})
 +code.
   include notice
-  +notice({"modifiers": ["blue", "closed"], "closable": true, "id": "openable_notice"})
+  +notice({"modifiers": ["blue", "closed"], "closable": true, "close_label": "Fermer le bandeau", "id": "openable_notice"})
 
 h2 Contenant un lien
 .lsg-module

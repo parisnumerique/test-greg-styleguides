@@ -156,6 +156,10 @@ Paris.rheader = (function(){
 
     function activeSearchButton(toggle){
       $buttonSearch.toggleClass('active', toggle);
+      if (!toggle && !$el.hasClass('extended')) {
+        // give the focus back to the button when closing (for accessibility)
+        $buttonSearch.focus();
+      }
     }
 
     function toggleMenu() {
