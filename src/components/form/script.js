@@ -3,20 +3,21 @@
 var Paris = window.Paris || {};
 
 Paris.form = (function(){
-  
+
   var defaultOptions = {
-    thanks: "Merci, votre soumission a bien été transmise."
+    thanks: ""
   };
 
-  function form(selector){
+  function form(selector, userOptions){
     var $el = $(selector),
-      options = defaultOptions,
+      options = $.extend({}, defaultOptions, userOptions),
       $form,
       $captcha,
       $currentField;
 
     function init(){
-      initOptions()
+      initOptions();
+
       $form = $el.find('form');
       $captcha = $el.find('.form-item-captcha');
 
@@ -57,13 +58,20 @@ Paris.form = (function(){
 
     function checkValidity($field){
       if ($field) {
-        var valid = isValid($field);
+        var valid = isFieldValid($field);
         var $formItem = $field.closest('.form-item, .matrix-item');
         $formItem.toggleClass('valid', valid).toggleClass('error', !valid);
       }
     }
 
-    function isValid($field){
+    function disableButtons(){
+      $el.find('.button[type="submit"]').attr('disabled', true);
+    }
+    function enableButtons(){
+      $el.find('.button[type="submit"]').removeAttr('disabled');
+    }
+
+    function isFieldValid($field){
       if ($field) {
         var validity = false;
 
@@ -100,20 +108,18 @@ Paris.form = (function(){
 
     function onSubmit(e){
       e.preventDefault();
-      console.log($form);
-      console.log("form submitted", $el.get(0).validity, $form.validity);
-      if ($form.validity) {
+
+      if ($form.get(0).checkValidity()) {
         saveData();
       } else {
         // invalid
+        console.log("form invalid");
       }
-
-      // test : force save 
-      saveData();
     }
 
     function saveData() {
       var data = $form.serializeArray();
+      disableButtons();
       $.ajax({
         url: $form.attr('action'),
         type: $form.attr('method') || 'POST',
@@ -124,14 +130,33 @@ Paris.form = (function(){
     }
 
     function onDataSaved(data, status, xhr){
-      //console.log('onDataSaved', data, status, xhr);
-      $form.hide().after('<p>'+ options.thanks +'</p>');
+      if (data.status === 'error') {
+        onDataError(xhr, 'error');
+        return;
+      }
+
+      $el.append('<p class="form-success">'+ options.thanks +'</p>');
     }
 
     function onDataError(xhr, status, error){
-      console.log('onDataError', xhr, status, error);
-    }
+      enableButtons();
+      try {
+        var data = $.parseJSON(xhr.responseText);
+      } catch (e if e instanceof SyntaxError) {
+        console.log('error response should be JSON');
+        return;
+      }
 
+      // reset
+      $el.find('.form-item, .matrix-item').removeClass('error');
+      $el.find('.form-item-help.error').remove();
+
+      $.each(data.errors, function(field, message){
+        var $formItem = $el.find('.form-field[name="'+field+'"]').closest('.form-item, .matrix-item');
+        $formItem.removeClass('valid').addClass('error');
+        $formItem.append('<p class="form-item-help error">'+message+'</p>');
+      });
+    }
 
     function renderCaptcha(){
       if ($captcha.length) {
@@ -145,9 +170,9 @@ Paris.form = (function(){
     return $el;
   }
 
-  return function(selector){
+  return function(selector, userOptions){
     return $(selector).each(function(){
-      form(this);
+      form(this, userOptions);
     });
   };
 
