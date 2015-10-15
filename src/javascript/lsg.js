@@ -33,7 +33,7 @@ lsg.nav = function nav() {
     e.preventDefault();
     var $link = $(this);
 
-    if ($iframe.length && $link.data('ish')) {
+    if ($iframe.length) {
       $navLinks.removeClass('is-current');
       $link.addClass('is-current');
       $iframe.attr('src', $link.attr('href'));
@@ -50,7 +50,7 @@ lsg.nav = function nav() {
     else {
       var href = "";
       href += window.location.origin;
-      href += $link.data('ish') ? "/ish/#" : "";
+      href += "/ish/#";
       href += $link.attr('href');
 
       window.location.href = href;

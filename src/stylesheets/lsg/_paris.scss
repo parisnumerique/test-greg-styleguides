@@ -1,0 +1,125 @@
+.lsg-content-wrapper {
+  @include layout(6 2/6);
+  @include container;
+
+  padding: 1em gutter();
+
+  > h2 {color: #888;}
+  > * + h2 {margin-top: 50px;}
+
+  h3 {
+    small {
+      color: #999;
+      display: block;
+      font-size: 100%;
+      font-weight: 300;
+    }
+  }
+}
+
+/**
+ * TOC
+ */
+.lsg-toc-summary,
+.lsg-toc-examples {
+  @include span(1 of 1);
+
+  .lsg-toc-col {
+    @include span(1 of 1);
+
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+  }
+}
+
+@include susy-breakpoint($bp-small) {
+  .lsg-toc-summary {
+    .lsg-toc-col {
+      @include span(2 of 4);
+
+      &:last-child {
+        @include last;
+      }
+    }
+  }
+}
+
+@include susy-breakpoint($bp-medium) {
+  .lsg-toc-summary {
+    @include span(4 of 6);
+  }
+  .lsg-toc-examples {
+    @include span(2 of 6 last);
+  }
+}
+
+
+/**
+ * COLORS
+ */
+.lsg-colors-col {
+  @include span(1 of 1);
+}
+
+.lsg-colors-table {
+  table-layout: fixed;
+
+  thead th,
+  td {
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+
+.lsg-color-dot:before {
+  content: "●";
+  font-size: 30px;
+  display: block;
+}
+
+@include susy-breakpoint($bp-large) {
+  .lsg-colors-col {
+    @include gallery(3 of 6);
+  }
+}
+
+@include susy-breakpoint($bp-extra-wide) {
+  .lsg-colors-col {
+    @include gallery(2 of 6);
+  }
+}
+
+/**
+ * ICONS
+ */
+.lsg-icons {
+  th {
+    font-size: 22px;
+    padding: 5px 10px 5px 0;
+  }
+}
+
+// CODE
+pre.prism[class*="language-"] {
+  clear: both;
+  font-size: 14px;
+  margin: 50px 0 0;
+  padding: 20px 0px 0px 0 !important;
+
+  & + pre.prism[class*="language-"] {
+    margin-top: 20px !important;
+  }
+
+  > code[data-language] {
+    overflow: auto;
+    padding: 0 0 20px 15px;
+  }
+}
+
+pre.language-markup > code[data-language]::before {
+  content: "html";
+}
+

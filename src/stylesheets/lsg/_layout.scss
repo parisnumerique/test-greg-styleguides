@@ -104,6 +104,10 @@ header.lsg-header {
     .lsg-header-dl-text {
       display: none;
       margin-left: 1em;
+
+      @include susy-breakpoint($bp-small) {
+        display: inline;
+      }
     }
   }
 }
@@ -125,6 +129,12 @@ nav.lsg-nav {
 
   .lsg-nav-open & {
     margin-left: 0;
+  }
+
+  @include susy-breakpoint($bp-medium) {
+    @include span($lsg-nav-width static isolate);
+    position: fixed;
+    top: $lsg-header-height;
   }
 
   .lsg-nav-content {
@@ -175,33 +185,16 @@ nav.lsg-nav {
  * MAIN
  */
 main.lsg-main {
-  @include clearfix;
+  @include span(1);
 
   height: 100%;
-  margin-left: 0;
   margin-top: $lsg-header-height;
   position: relative;
-  transition: 0.2s ease-in-out;
-  transition-property: margin-left;
-}
+  transition: padding-left 0.2s ease-in-out;
 
-/**
- * BREAKPOINTS
- */
-@include breakpoint(small) {
-  .lsg-header-dl-text {
-    display: inline !important;
-  }
-}
-
-@include breakpoint(medium) {
-  nav.lsg-nav {
-    @include span($lsg-nav-width static isolate);
-    position: fixed;
-    top: $lsg-header-height;
-  }
-
-  .lsg-nav-open main.lsg-main {
-    margin-left: span($lsg-nav-width static wide);
+  .lsg-nav-open & {
+    @include susy-breakpoint($bp-medium) {
+      padding-left: span($lsg-nav-width static wide);
+    }
   }
 }
