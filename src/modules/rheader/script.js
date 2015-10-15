@@ -109,9 +109,12 @@ Paris.rheader = (function(){
     function extend() {
       if ($mainSearch.length === 0 || !$('body').hasClass(options.extendOnTemplate)) {return;}
       $el.addClass('extended');
+      // prevent focus on hidden buttons when using keyboard navigation (for accessibility)
+      $el.find('.rheader-wrapper > .rheader-button').attr('tabindex', '-1');
     }
     function unextend() {
       $el.removeClass('extended');
+      $el.find('.rheader-wrapper > .rheader-button').removeAttr('tabindex');
     }
 
 
