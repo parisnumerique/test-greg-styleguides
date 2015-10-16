@@ -83,6 +83,7 @@ lsg.location = function location($iframe) {
 
   if (hashes[1]) {
     $iframe.attr('src', hashes[1]);
+    $('.lsg-nav a[href="'+hashes[1]+'"]').addClass('is-current');
   }
   else {
     window.location.href = window.location.origin;
@@ -101,7 +102,7 @@ lsg.highlight = function highlight($modules) {
     var code = $.trim($module.html());
 
     node.find('code').text(window.html_beautify(code));
-    $module.next('.language-jade').after(node);
+    $module.next('pre.prism[class*="language-"]').after(node);
   });
 
   if (window.Prism) {
@@ -123,7 +124,7 @@ lsg.init = function init() {
   if ($iframe.length) {
     lsg.location($iframe);
   }
-  var $modules = $(".lsg-module, .lsg-component");
+  var $modules = $(".lsg-elem, .lsg-module, .lsg-component");
   if ($modules.length) {
     lsg.highlight($modules);
   }

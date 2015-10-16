@@ -2,19 +2,7 @@
   @include layout(6 2/6);
   @include container;
 
-  padding: 1em gutter();
-
-  > h2 {color: #888;}
-  > * + h2 {margin-top: 50px;}
-
-  h3 {
-    small {
-      color: #999;
-      display: block;
-      font-size: 100%;
-      font-weight: 300;
-    }
-  }
+  padding: 10px gutter();
 }
 
 /**
@@ -26,6 +14,15 @@
 
   .lsg-toc-col {
     @include span(1 of 1);
+
+    h3 {
+      small {
+        color: #999;
+        display: block;
+        font-size: 100%;
+        font-weight: 300;
+      }
+    }
 
     a {
       color: #333;
@@ -55,7 +52,6 @@
     @include span(2 of 6 last);
   }
 }
-
 
 /**
  * COLORS
@@ -102,24 +98,39 @@
   }
 }
 
-// CODE
+/**
+ * ELEMENTS
+ */
+h2.lsg-example-title {
+  color: #888;
+  margin-top: 50px;
+}
+
 pre.prism[class*="language-"] {
+  border-top-right-radius: 0;
   clear: both;
   font-size: 14px;
-  margin: 50px 0 0;
-  padding: 20px 0px 0px 0 !important;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  padding-top: 20px;
 
   & + pre.prism[class*="language-"] {
-    margin-top: 20px !important;
+    margin-top: 20px;
   }
 
   > code[data-language] {
     overflow: auto;
-    padding: 0 0 20px 15px;
+    padding: 1em;
+    padding-top: 0;
+
+    &::before {
+      right: -1px;
+      z-index: 1000;
+    }
+  }
+
+  &.language-markup > code[data-language]::before {
+    content: "html";
   }
 }
-
-pre.language-markup > code[data-language]::before {
-  content: "html";
-}
-

@@ -1,0 +1,20 @@
+include ./code
+
+h1.lsg-elem-title= type
+
+if description
+  p.lsg-elem-desc!= description
+
+each ex in examples
+  if ex.title
+    h2.lsg-example-title= ex.title
+
+  if ex.description
+    p.lsg-example-description!= ex.description
+
+  .lsg-elem
+    +#{type}(ex.data)
+  +code("jade").
+    include #{type}
+
+    +#{type}(#{JSON.stringify(ex.data, null, 2)})
