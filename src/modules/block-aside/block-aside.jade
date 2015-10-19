@@ -3,9 +3,7 @@ mixin block-aside(data)
     if data.title
       h3.block-aside-title(id=data.title_id)= data.title
     .block-aside-content
+      if data.block
+        != data.block
       if block
         block
-      else if data.block
-        != data.block
-      else
-        | content
