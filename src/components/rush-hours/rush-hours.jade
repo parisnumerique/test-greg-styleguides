@@ -1,0 +1,16 @@
+mixin rush-hours(data)
+  .component.component-rush-hours
+    h2= data.title
+    table(summary=data.summary)
+      if data.caption
+        caption= data.caption
+      tr
+        th
+        for slot in data.timeslots
+          th(scope='col')= slot
+      if data.items
+        for item in data.items
+          tr
+            th= item.title
+            for traffic in item.traffic
+              td= traffic
