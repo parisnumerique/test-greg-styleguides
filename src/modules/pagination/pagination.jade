@@ -20,7 +20,7 @@ mixin pagination(data)
       li.current
         - var href = current === 1 ? data.base_url : data.url.replace("${page}", current);
         a(href=href data-page=current)= current
-      if current !== total
+      if current !== total && total > 1
         - item = current
         while item < total && item < current + items_after()
          - item++
