@@ -1,4 +1,4 @@
-.component-table {
+.component-rush-hours {
   clear: both;
 
   caption {
@@ -18,7 +18,7 @@
 
   tr > th,
   tr > td {
-    border-left: 1px solid transparentize($grayCC, 0.5);
+    border-left: 1px solid $grayCC;
     padding: 15px 5px;
 
     &:first-child {border-left: none;}
@@ -63,12 +63,6 @@
     }
   }
 
-  &.header-primary-color {
-    tr > th {
-      background-color: $color-primary;
-    }
-  }
-
   tbody {
     tr:nth-child(even) {background-color: $grayF2;}
     tr:nth-child(odd) {background-color: $grayEE;}
@@ -82,7 +76,7 @@
 }
 
 @include medium-and-small {
-  .component-table {
+  .component-rush-hours {
     overflow-x: auto;
     position: relative;
     width: 100%;
@@ -90,7 +84,7 @@
 }
 
 @include large {
-  .component-table {
+  .component-rush-hours {
     table {
       width: 100%;
     }

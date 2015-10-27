@@ -2,6 +2,7 @@
   "templates": [
     "document",
     "document/postit.html",
+    "equipment",
     "error",
     "faq",
     "generic",

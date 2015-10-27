@@ -71,9 +71,26 @@
     list-style-type: disc;
   }
 
+  ul.list-cols {
+    line-height: 25px;
+    list-style-type: none;
+    columns: 3;
+
+    li {
+      border-bottom: 1px solid $grayEE;
+      margin: 0;
+      padding: 10px 0;
+    }
+  }
+
   a:not(.button) {
     text-decoration: underline;
     &:hover {text-decoration: none;}
+  }
+
+  em.light {
+    color: $gray99;
+    font-style: normal;
   }
 
 }
