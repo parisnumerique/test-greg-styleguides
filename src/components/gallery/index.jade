@@ -7,12 +7,12 @@ h2 Standard
 +code({language: "jade"}).
   include component
 
-  +gallery(defaults)
+  +gallery(#{JSON.stringify(defaults, null, 2)})
 
-h2 Avec légendes
+h2 Avec légendes et crédit
 .lsg-component(style="max-width: 770px")
   +gallery(with_captions)
 +code({language: "jade"}).
   include component
 
-  +gallery(with_captions)
+  +gallery(#{JSON.stringify(with_captions, null, 2)})

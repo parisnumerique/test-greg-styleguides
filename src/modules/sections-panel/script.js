@@ -129,7 +129,7 @@ Paris.sectionsPanel = (function(){
         title: $currentNavItemsLink.text()
       });
 
-      $('title').text($currentNavItemsLink.data('pageTitle'));
+      $('title').text($currentNavItemsLink.data('pageTitle') + " - Paris.fr");
 
       if (Modernizr.history) {
         history.replaceState({}, $currentNavItemsLink.text(), $currentNavItemsLink.attr("href"));
@@ -204,7 +204,7 @@ Paris.sectionsPanel = (function(){
       });
 
 
-      $('title').text($currentSubnavSectionsLink.data('pageTitle'));
+      $('title').text($currentSubnavSectionsLink.data('pageTitle') + " - Paris.fr");
 
       if (Modernizr.history) {
         history.replaceState({}, currentTitle, $currentSubnavSectionsLink.attr("href"));
