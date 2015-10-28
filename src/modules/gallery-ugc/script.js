@@ -14,21 +14,26 @@ Paris.galleryUgc = (function(){
     function init(){
       $hashtags = $el.find('.gallery-ugc-hashtag');
       $visibleContent = $el.find('.gallery-ugc-content').filter(':visible');
-      $el.find("a.gallery-ugc-image").error(function () {
-        console.error('couldn\'t load image')
-        $(this).hide();
-      });
+      //$el.find("a.gallery-ugc-image").error(function () {
+      //  console.error('couldn\'t load image');
+      //  $(this).hide();
+      //});
+
+      updateHashtagTitles();
+
       $hashtags.on('click', onClickHashtag);
     }
 
     function onClickHashtag(e) {
       e.preventDefault();
-      var hashtagId = $(this).attr("href").replace('#', '');
+      var hashtagId = $(this).data("hashtag");
 
       $hashtags.removeClass("current");
       $(this).addClass("current");
 
-      prepareNewContent(hashtagId);
+      updateHashtagTitles();
+
+      $toBeVisibleContent = $el.find('#gallery-ugc-' + hashtagId);
 
       animateImages(0).then(function(){
         replaceContent();
@@ -36,10 +41,18 @@ Paris.galleryUgc = (function(){
       });
     }
 
+    function updateHashtagTitles() {
+      $hashtags.each(function(){
+        var $this = $(this);
+        var current = $this.hasClass('current');
+        $this.attr('title', $this.text() + ' – ' + (current ? Paris.i18n.t("active") : Paris.i18n.t("inactive")));
+      });
+    }
+
     function animateImages(opacity) {
       var complete = $.Deferred();
 
-      $visibleContent.find('.gallery-ugc-image').each(function(index){
+      $visibleContent.find('.gallery-ugc-item').each(function(index){
         $(this).velocity({
           opacity: opacity
         }, {
@@ -57,23 +70,13 @@ Paris.galleryUgc = (function(){
       return complete;
     }
 
-    function prepareNewContent(hashtagId) {
-      $toBeVisibleContent = $el.find('#gallery-ugc-' + hashtagId);
-      var images = $toBeVisibleContent.find('a.gallery-ugc-image');
-      if(images.first().css('background-image') === 'none') {
-        images.each(function (index, image) {
-          var $image = $(image);
-          $image.css({'background-image': $image.data('background-image')});
-        });
-      }
-    }
-
     function replaceContent() {
-      $visibleContent.toggle();
-      $toBeVisibleContent.find('.gallery-ugc-image').css({
+      $visibleContent.hide();
+      $toBeVisibleContent.find('.gallery-ugc-item').css({
         opacity: 0
       });
-      $toBeVisibleContent.toggle();
+      $toBeVisibleContent.show();
+      $toBeVisibleContent.find('.gallery-ugc-item').first().focus();
       $visibleContent = $toBeVisibleContent;
     }
 

@@ -47,6 +47,8 @@ Paris.i18n.locales = {
     },
     "postit": {
       "default_title": "Informations complémentaires"
-    }
+    },
+    "active": "actif",
+    "inactive": "inactif"
   }
 };

@@ -10,7 +10,7 @@
       },
       "link": {
         "href": "#",
-        "text": "Autres newsletters et alertes"
+        "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
       }
     },
     "with_form": {
@@ -31,7 +31,7 @@
       },
       "link": {
         "href": "#",
-        "text": "Autres newsletters et alertes"
+        "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
       },
       "thanks": "Merci, vous allez recevoir un courriel de confirmation."
     }
