@@ -1,3 +1,8 @@
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+
 .news-item {
   border-bottom: 1px solid $grayEE;
   color: $gray4D;
@@ -8,8 +13,8 @@
   transition: background 0.15s ease;
   position: relative;
 
-  &:first-child,
-  &:nth-child(2) {
+  .news-list-item:first-child &,
+  .news-list-item:nth-child(2) & {
     border-top: 1px solid $grayEE;
   }
 
@@ -61,9 +66,8 @@
       margin-top: 6px;
     }
 
-    .counter-value {
-      font-weight: 700;
-    }
+    .counter-value {font-weight: 700;}
+    .counter-label {@include hidden-accessibly;}
 
     .facebook-counter:after {
       content: " ";
@@ -119,23 +123,23 @@
   .news-list {
     @include container;
 
-    .news-card {
+    .news-list-card-item {
       @include span(4 of 12);
     }
 
-    .news-item {
+    .news-list-item {
       @include span(8);
     }
 
     // mode gallery
     &.gallery {
-      .news-card {
+      .news-list-card-item {
         &:nth-child(3n) {
           @include last;
         }
       }
 
-      .news-item {
+      .news-list-item {
         &:nth-child(2n) {
           @include last;
         }
@@ -144,7 +148,7 @@
 
     // mode large-first-child
     &.large-first-child {
-      .news-card {
+      .news-list-card-item {
         &:nth-child(3),
         &:nth-child(5) {
           @include last;

@@ -152,9 +152,8 @@ html.no-touch {
       border-radius: 0 5px 5px 0;
     }
 
-    .counter-value {
-      font-weight: 700;
-    }
+    .counter-value {font-weight: 700;}
+    .counter-label {@include hidden-accessibly;}
     .icon {
       padding-right: 7px;
     }

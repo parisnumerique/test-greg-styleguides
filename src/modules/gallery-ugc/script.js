@@ -14,10 +14,6 @@ Paris.galleryUgc = (function(){
     function init(){
       $hashtags = $el.find('.gallery-ugc-hashtag');
       $visibleContent = $el.find('.gallery-ugc-content').filter(':visible');
-      //$el.find("a.gallery-ugc-image").error(function () {
-      //  console.error('couldn\'t load image');
-      //  $(this).hide();
-      //});
 
       updateHashtagTitles();
 

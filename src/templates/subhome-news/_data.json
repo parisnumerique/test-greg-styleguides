@@ -126,8 +126,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -136,8 +136,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -146,8 +146,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -156,8 +156,8 @@
               "category": "Culture et patrimoine",
               "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -166,8 +166,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -186,8 +186,8 @@
               "category": "International",
               "title": "Visite de John Kerry à l'Hôtel de Ville de Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -196,8 +196,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -206,8 +206,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -216,8 +216,8 @@
               "category": "Culture et patrimoine",
               "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -226,8 +226,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -269,8 +269,8 @@
               "category": "Logement",
               "title": "Expulsions : début de la trêve hivernale",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -279,8 +279,8 @@
               "category": "Logement",
               "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -289,8 +289,8 @@
               "category": "Logement",
               "title": "Le point sur les nouveaux logements à Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -299,8 +299,8 @@
               "category": "Culture et patrimoine",
               "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -309,8 +309,8 @@
               "category": "Environnement",
               "title": "Donec sed odio dui",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -319,8 +319,8 @@
               "category": "Culture et patrimoine",
               "title": "Maecenas sed diam eget risus varius blandit sit amet non magna",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -329,8 +329,8 @@
               "category": "Mobilité",
               "title": "Sed posuere consectetur est at lobortis",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -339,8 +339,8 @@
               "category": "International",
               "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -349,8 +349,8 @@
               "category": "Culture et patrimoine",
               "title": "Aenean lacinia bibendum nulla sed consectetur",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -359,8 +359,8 @@
               "category": "Environnement",
               "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -776,8 +776,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -786,8 +786,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -796,8 +796,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -806,8 +806,8 @@
               "category": "Culture et patrimoine",
               "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -816,8 +816,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -835,8 +835,8 @@
               "category": "Logement",
               "title": "Expulsions : début de la trêve hivernale",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -845,8 +845,8 @@
               "category": "Logement",
               "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -855,8 +855,8 @@
               "category": "Logement",
               "title": "Le point sur les nouveaux logements à Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -865,8 +865,8 @@
               "category": "Culture et patrimoine",
               "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -875,8 +875,8 @@
               "category": "Environnement",
               "title": "Donec sed odio dui",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -885,8 +885,8 @@
               "category": "Culture et patrimoine",
               "title": "Maecenas sed diam eget risus varius blandit sit amet non magna",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -895,8 +895,8 @@
               "category": "Mobilité",
               "title": "Sed posuere consectetur est at lobortis",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -905,8 +905,8 @@
               "category": "International",
               "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -915,8 +915,8 @@
               "category": "Culture et patrimoine",
               "title": "Aenean lacinia bibendum nulla sed consectetur",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -925,8 +925,8 @@
               "category": "Environnement",
               "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -1344,8 +1344,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1354,8 +1354,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1364,8 +1364,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1374,8 +1374,8 @@
               "category": "Culture et patrimoine",
               "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1384,8 +1384,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -1403,8 +1403,8 @@
               "category": "Logement",
               "title": "Expulsions : début de la trêve hivernale",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1413,8 +1413,8 @@
               "category": "Logement",
               "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1423,8 +1423,8 @@
               "category": "Logement",
               "title": "Le point sur les nouveaux logements à Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1433,8 +1433,8 @@
               "category": "Culture et patrimoine",
               "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1443,8 +1443,8 @@
               "category": "Environnement",
               "title": "Donec sed odio dui",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1453,8 +1453,8 @@
               "category": "Culture et patrimoine",
               "title": "Maecenas sed diam eget risus varius blandit sit amet non magna",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1463,8 +1463,8 @@
               "category": "Mobilité",
               "title": "Sed posuere consectetur est at lobortis",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1473,8 +1473,8 @@
               "category": "International",
               "title": "Cras justo odio, dapibus ac facilisis in, egestas eget quam",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1483,8 +1483,8 @@
               "category": "Culture et patrimoine",
               "title": "Aenean lacinia bibendum nulla sed consectetur",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1493,8 +1493,8 @@
               "category": "Environnement",
               "title": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
