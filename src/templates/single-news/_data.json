@@ -144,17 +144,20 @@
             {
               "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
               "icon": "facebook",
-              "title": "Partager sur Facebook"
+              "text": "Partager sur Facebook",
+              "title": "Partager sur Facebook - nouvelle fenêtre"
             },
             {
               "href": "https://twitter.com/intent/tweet?text=Ça glisse sur la patinoire de l’hôtel de ville http://www.paris.fr",
               "icon": "twitter",
-              "title": "Partager sur Twitter"
+              "text": "Partager sur Twitter",
+              "title": "Partager sur Twitter - nouvelle fenêtre"
             },
             {
               "href": "mailto:?subject=Ça glisse sur la patinoire de l’hôtel de ville&body=http://www.paris.fr",
               "icon": "mail",
-              "title": "Partager par courriel"
+              "text": "Partager par courriel",
+              "title": "Partager par courriel - nouvelle fenêtre"
             }
           ]
         }
@@ -178,7 +181,8 @@
                     {
                       "href": "https://twitter.com/home?status=Il n’y a pas d’âge minimal pour l’accès à la patinoire. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -190,7 +194,8 @@
                     {
                       "href": "https://twitter.com/home?status=Des moniteurs diplômés sont là pour s’adapter aux différents publics. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -202,7 +207,8 @@
                     {
                       "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -235,7 +241,8 @@
                     {
                       "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -260,7 +267,8 @@
                 {
                   "href": "https://twitter.com/intent/tweet?text=Maecenas sed diam eget risus varius blandit sit amet non magna. http://www.paris.fr",
                   "icon": "twitter",
-                  "title": "Partager sur Twitter"
+                  "text": "Partager sur Twitter",
+                  "title": "Partager sur Twitter - nouvelle fenêtre"
                 }
               ]
             }

@@ -128,17 +128,20 @@
             {
               "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
               "icon": "facebook",
-              "title": "Partager sur Facebook"
+              "text": "Partager sur Facebook",
+              "title": "Partager sur Facebook - nouvelle fenêtre"
             },
             {
               "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
               "icon": "twitter",
-              "title": "Partager sur Twitter"
+              "text": "Partager sur Twitter",
+              "title": "Partager sur Twitter - nouvelle fenêtre"
             },
             {
               "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
               "icon": "mail",
-              "title": "Partager par courriel"
+              "text": "Partager par courriel",
+              "title": "Partager par courriel - nouvelle fenêtre"
             }
           ]
         },
@@ -560,17 +563,20 @@
             {
               "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
               "icon": "facebook",
-              "title": "Partager sur Facebook"
+              "text": "Partager sur Facebook",
+              "title": "Partager sur Facebook - nouvelle fenêtre"
             },
             {
               "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
               "icon": "twitter",
-              "title": "Partager sur Twitter"
+              "text": "Partager sur Twitter",
+              "title": "Partager sur Twitter - nouvelle fenêtre"
             },
             {
               "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
               "icon": "mail",
-              "title": "Partager par courriel"
+              "text": "Partager par courriel",
+              "title": "Partager par courriel - nouvelle fenêtre"
             }
           ]
         },
