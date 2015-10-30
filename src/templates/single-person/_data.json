@@ -289,6 +289,7 @@
               {
                 "href": "#",
                 "text": "Consulter la feuille de route",
+                "filetype": "PDF",
                 "filesize": "2Mo",
                 "modifiers": ["links-item-pdf"]
               }
@@ -740,6 +741,7 @@
               {
                 "href": "#",
                 "text": "Consulter la feuille de route",
+                "filetype": "PDF",
                 "filesize": "2Mo",
                 "modifiers": ["links-item-pdf"]
               }

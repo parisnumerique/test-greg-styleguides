@@ -262,14 +262,14 @@
           "type": "table",
           "data": {
             "summary": "Sommaire du tableau (pour l'accessibilité)",
-            "caption": "Légende du tableau (pour l'accessibilité)",
-            "block": "<tbody><tr><th class=\"emphasis\">Combien de personnes à loger ?</th><th>Logement A</th><th>Logement B</th><th>Logement C</th><th>Logement D</th></tr><tr><td class=\"emphasis\">1 personne</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">2 personnes sans personne à charge / jeunes ménages exclus</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage*</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">4 personnes ou 1 personne seule avec 2 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">5 personnes ou 1 personne seule avec 3 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">6 personnes ou 1 personne seule avec 4 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr class=\"info\"><td class=\"emphasis\">par personne supplémentaire</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr></tbody><tfoot><tr><td colspan=\"5\">* jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.</td></tr></tfoot>"
+            "caption": "plafonds de ressources par type de logement et nombre de personnes à charges",
+            "block": "<tbody><tr><th class=\"emphasis\">Combien de personnes à loger ?</th><th>Logement A</th><th>Logement B</th><th>Logement C</th><th>Logement D</th></tr><tr><td class=\"emphasis\">1 personne</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">2 personnes sans personne à charge / jeunes ménages exclus</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage<a href=\"#note-1\" aria-describedby=\"note-1\">*</a></td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">4 personnes ou 1 personne seule avec 2 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">5 personnes ou 1 personne seule avec 3 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">6 personnes ou 1 personne seule avec 4 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr class=\"info\"><td class=\"emphasis\">par personne supplémentaire</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr></tbody>"
           }
         },
         {
           "type": "text",
           "data": {
-            "block": "<p>Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.</p>"
+            "block": "<p id=\"note-1\" tabindex=\"-1\">* jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.</p><p>Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.</p>"
           }
         },
         {
@@ -291,6 +291,7 @@
               {
                 "href": "#",
                 "text": "Logement social à Paris : mode d'emploi",
+                "filetype": "PDF",
                 "filesize": "2,4 Mo",
                 "modifiers": ["links-item-pdf"]
               },
@@ -315,8 +316,7 @@
           "type": "news-push",
           "data": {
             "image": {
-              "src": "../../components/news-push/news-push.jpg",
-              "alt": "Conférence priorité logement"
+              "src": "../../components/news-push/news-push.jpg"
             },
             "title": "Actu",
             "text": "30 % de logements sociaux en 2030 : c'est l'un des objectifs ambitieux que la Maire de Paris s'est fixée pour améliorer… ",
@@ -404,8 +404,7 @@
           "type": "news-push",
           "data": {
             "image": {
-              "src": "../../components/news-push/news-push.jpg",
-              "alt": "Conférence priorité logement"
+              "src": "../../components/news-push/news-push.jpg"
             },
             "title": "Actu",
             "text": "Adapter les logements au handicap: Pour réaliser des logements accessibles, adaptables, et/ou adaptés aux différents types de handicap…",
@@ -431,6 +430,7 @@
               {
                 "href": "#",
                 "text": "Accession à la propriété : prêt 0% Paris Logement",
+                "filetype": "PDF",
                 "filesize": "8,1 Mo",
                 "modifiers": ["links-item-pdf"]
               },
@@ -453,8 +453,7 @@
           "type": "news-push",
           "data": {
             "image": {
-              "src": "../../components/news-push/news-push.jpg",
-              "alt": "Conférence priorité logement"
+              "src": "../../components/news-push/news-push.jpg"
             },
             "title": "Actu",
             "text": "Le pacte « Logement pour tous »Amplifier la construction de logements à Paris et favoriser l’émergence de formes d’habitat innovantes : tel est l’objectif de ce page…",
@@ -890,14 +889,14 @@
           "type": "table",
           "data": {
             "summary": "Sommaire du tableau (pour l'accessibilité)",
-            "caption": "Légende du tableau (pour l'accessibilité)",
-            "block": "<tbody><tr><th class=\"emphasis\">Combien de personnes à loger ?</th><th>Logement A</th><th>Logement B</th><th>Logement C</th><th>Logement D</th></tr><tr><td class=\"emphasis\">1 personne</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">2 personnes sans personne à charge / jeunes ménages exclus</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage*</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">4 personnes ou 1 personne seule avec 2 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">5 personnes ou 1 personne seule avec 3 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">6 personnes ou 1 personne seule avec 4 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr class=\"info\"><td class=\"emphasis\">par personne supplémentaire</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr></tbody><tfoot><tr><td colspan=\"5\">* jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.</td></tr></tfoot>"
+            "caption": "plafonds de ressources par type de logement et nombre de personnes à charges",
+            "block": "<tbody><tr><th class=\"emphasis\">Combien de personnes à loger ?</th><th>Logement A</th><th>Logement B</th><th>Logement C</th><th>Logement D</th></tr><tr><td class=\"emphasis\">1 personne</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">2 personnes sans personne à charge / jeunes ménages exclus</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">3 personnes ou 1 personne seule avec 1 personne à charge ou jeune ménage<a href=\"#note-1\" aria-describedby=\"note-1\">*</a></td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">4 personnes ou 1 personne seule avec 2 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">5 personnes ou 1 personne seule avec 3 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr><td class=\"emphasis\">6 personnes ou 1 personne seule avec 4 personnes à charge</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr><tr class=\"info\"><td class=\"emphasis\">par personne supplémentaire</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td><td>12&nbsp;662&nbsp;€</td></tr></tbody>"
           }
         },
         {
           "type": "text",
           "data": {
-            "block": "<p>Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.</p>"
+            "block": "<p id=\"note-1\" tabindex=\"-1\">* jeune ménage = couple marié, concubins ou pacsés, sans personne à charge, dont la somme des âges des deux conjoints est inférieure ou égale à 55 ans.</p><p>Exemple : votre foyer est composé de 3 personnes et ses ressources sont de 41 000 € par an, votre situation vous permet de demander un logement social à Paris. Si vous pouviez obtenir un logement, ce serait un logement de type B.</p>"
           }
         },
         {
@@ -919,6 +918,7 @@
               {
                 "href": "#",
                 "text": "Logement social à Paris : mode d'emploi",
+                "filetype": "PDF",
                 "filesize": "2,4 Mo",
                 "modifiers": ["links-item-pdf"]
               },
@@ -943,8 +943,7 @@
           "type": "news-push",
           "data": {
             "image": {
-              "src": "../../components/news-push/news-push.jpg",
-              "alt": "Conférence priorité logement"
+              "src": "../../components/news-push/news-push.jpg"
             },
             "title": "Actu",
             "text": "30 % de logements sociaux en 2030 : c'est l'un des objectifs ambitieux que la Maire de Paris s'est fixée pour améliorer… ",
@@ -1032,8 +1031,7 @@
           "type": "news-push",
           "data": {
             "image": {
-              "src": "../../components/news-push/news-push.jpg",
-              "alt": "Conférence priorité logement"
+              "src": "../../components/news-push/news-push.jpg"
             },
             "title": "Actu",
             "text": "Adapter les logements au handicap: Pour réaliser des logements accessibles, adaptables, et/ou adaptés aux différents types de handicap…",
@@ -1059,6 +1057,7 @@
               {
                 "href": "#",
                 "text": "Accession à la propriété : prêt 0% Paris Logement",
+                "filetype": "PDF",
                 "filesize": "8,1 Mo",
                 "modifiers": ["links-item-pdf"]
               },
@@ -1081,8 +1080,7 @@
           "type": "news-push",
           "data": {
             "image": {
-              "src": "../../components/news-push/news-push.jpg",
-              "alt": "Conférence priorité logement"
+              "src": "../../components/news-push/news-push.jpg"
             },
             "title": "Actu",
             "text": "Le pacte « Logement pour tous »Amplifier la construction de logements à Paris et favoriser l’émergence de formes d’habitat innovantes : tel est l’objectif de ce page…",

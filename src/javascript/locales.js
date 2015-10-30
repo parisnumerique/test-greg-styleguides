@@ -49,6 +49,7 @@ Paris.i18n.locales = {
       "default_title": "Informations complémentaires"
     },
     "active": "actif",
-    "inactive": "inactif"
+    "inactive": "inactif",
+    "new_window": "nouvelle fenêtre"
   }
 };

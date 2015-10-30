@@ -1,7 +1,7 @@
 mixin jecoute(data)
   .component.component-jecoute(data-thanks=data.thanks)
     .jecoute-title
-      p= data.title
+      h2= data.title
     .jecoute-content
       p.jecoute-text= data.text
       form.jecoute-form(method="post")&attributes(data.form)
