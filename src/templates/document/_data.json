@@ -142,7 +142,7 @@
             "data-anchors-favoritable": "true",
             "data-anchors-shareable": "true"
           },
-          "title": "Sommaire",
+          "title": "Sommaire de la page",
           "items": [
             {
               "href": "#est-ce-que-j-y-ai-droit",
@@ -792,7 +792,7 @@
             "data-anchors-favoritable": "true",
             "data-anchors-shareable": "true"
           },
-          "title": "Sommaire",
+          "title": "Sommaire de la page",
           "items": [
             {"href": "#est-ce-que-j-y-ai-droit", "text": "Est-ce que j’y ai droit ?"},
             {"href": "#constituer-un-dossier", "text": "Constituer un dossier"},
