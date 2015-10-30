@@ -17,3 +17,11 @@ h2 Champs pré-remplis
 
   +jecoute(#{JSON.stringify(values, null, 2)})
 
+h2 PARhISTOIRE
+.lsg-component
+  +jecoute(parhistoire)
++code({language: "jade"}).
+  include jecoute
+
+  +jecoute(#{JSON.stringify(parhistoire, null, 2)})
+

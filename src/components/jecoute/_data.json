@@ -35,6 +35,44 @@
       },
       "button": "Valider",
       "thanks": "Merci, votre question a bien été transmise."
+    },
+    "parhistoire": {
+      "title": "PARhISTOIRE",
+      "text": "Vous avez une question à poser relative à l'histoire et au patrimoine parisiens ? C’est à vous !",
+      "form": {
+        "action": "#",
+        "method": "post",
+        "enctype": "multipart/form-data"
+      },
+      "textarea": {
+        "placeholder": "Quelle information sur l'histoire et le patrimoine parisiens cherchez vous ?"
+      },
+      "email": {
+        "placeholder": "Renseignez votre adresse email"
+      },
+      "upload": {
+        "button": {
+          "icon": "dl",
+          "text": "Joindre des fichiers"
+        },
+        "title": "Poids total maximum",
+        "size": "10Mo",
+        "link": {
+          "href": "#",
+          "text": "types de fichiers autorisés",
+          "target": "_blank"
+        }
+      },
+      "policy": {
+        "text": "En cochant cette case, j'accepte ",
+        "link": {
+          "href": "#",
+          "text": "la charte de Parhistoire",
+          "target": "_blank"
+        }
+      },
+      "button": "Valider",
+      "thanks": "Merci, votre question a bien été transmise."
     }
   }
 }

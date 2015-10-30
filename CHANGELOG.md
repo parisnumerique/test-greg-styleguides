@@ -10,7 +10,8 @@ Let's take the `x.β.α` version number:
 ## Next release
 
 * templates `document`, `single-news` and `single-person` have been merged into `generic`
-* icon `.icon-file` renamed `.icon-dl` and add `.icon-file` `.icon-text`
+* icon `.icon-file` renamed `.icon-dl` and added `.icon-file` `.icon-text`
+* component `jecoute`: added `upload` and `policy` feature
 
 ## 1.1.2 (2015-10-02)
 

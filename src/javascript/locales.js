@@ -33,6 +33,12 @@ Paris.i18n.locales = {
       "prev": "Page précédente",
       "next": "Page suivante"
     },
+    "jecoute": {
+      "error": {
+        "policy": "Veuillez accepter la charte.",
+        "file_size": "Le poids total des pièces jointes est trop élevé."
+      }
+    },
     "alerts": {
       "subscribe": "Je m’abonne à l’alerte pour recevoir toutes les informations sur ce sujet",
       "unsubscribe": "Je me désabonne de l’alerte sur ce sujet"
