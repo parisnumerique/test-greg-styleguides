@@ -17,7 +17,8 @@
         {"src": "3.jpg", "title": "Mail de Bièvre"},
         {"src": "4.jpg", "title": "Parc Kellermann"},
         {"src": "5.jpg", "title": "Darses du bassin de la Villette"},
-        {"src": "6.jpg", "title": "Square Georges Caïn"}
+        {"src": "6.jpg", "title": "Square Georges Caïn"},
+        {"src": "7.jpg", "title": "Photo cassée", "alt": "Superbe vu que tu ne vois pas"}
       ]
     }
   }

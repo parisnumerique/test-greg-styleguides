@@ -1,6 +1,7 @@
 {
   "index": {
     "defaults": {
+      "accessibility_label": "retour en haut de la page"
     }
   }
 }

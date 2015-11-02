@@ -1,8 +1,8 @@
 mixin anchors-list(data)
   - data = data || {}
-  .anchors-list&attributes(data.attributes || {})
+  nav.anchors-list(aria-label=data.title)&attributes(data.attributes || {})
     if data.title
-      h3.anchors-list-title
+      div.anchors-list-title(aria-hidden="true")
         span= data.title
     if data.items && data.items.length
       ul.anchors-list-items
