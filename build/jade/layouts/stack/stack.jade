@@ -2,4 +2,7 @@ extends ../wrapper
 
 append main
   .layout-stack
-    block content
+    block header
+    main.layout-main(role="main" tabindex="-1" id="content")
+      block content
+    block footer

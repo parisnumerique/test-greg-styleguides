@@ -9,6 +9,9 @@ Let's take the `x.β.α` version number:
 
 ## Next release
 
+## 1.1.3 (2015-11-02)
+
+* multiple accessibility improvements
 * templates `document`, `single-news` and `single-person` have been merged into `generic`
 * icon `.icon-file` renamed `.icon-dl` and added `.icon-file` `.icon-text`
 * component `jecoute`: added `upload` and `policy` feature

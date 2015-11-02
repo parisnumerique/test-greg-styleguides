@@ -6,7 +6,8 @@
           "type": "text",
           "name": "text1",
           "id": "text1",
-          "label": "Champ texte"
+          "label": "Champ texte",
+          "help": "Ceci est une information supplémentaire pour expliquer comment ça marche."
         },
         {
           "type": "textarea",
@@ -34,7 +35,8 @@
             }
           ]
         }
-      ]
+      ],
+      "thanks": "Merci, vos informations ont bien été transmises."
     },
     "full": {
       "items": [
@@ -390,7 +392,8 @@
             }
           ]
         }
-      ]
+      ],
+      "thanks": "Merci, vos informations ont bien été transmises."
     }
   }
 }

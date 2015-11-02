@@ -5,4 +5,5 @@ mixin share(data)
         each item in data.items
           li.share-item
             a(href=item.href title=item.title target="_blank")
-              i.share-icon(class="icon-#{item.icon}")
+              i.share-icon(class="icon-#{item.icon}" aria-hidden="true")
+              span.hidden-accessibly= item.text
