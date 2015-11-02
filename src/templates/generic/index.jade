@@ -40,7 +40,7 @@ append content
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
-// Main content (always used)
+//- Main content (always used)
 append content
   .layout-content.layout-adjacent-before(class=mainContentModifiers)
     .layout-left-col
@@ -63,7 +63,7 @@ append content
           each component in data.components
             +#{component.type}(component.data)
 
-// Related news (used for news, person)
+//- Related news (used for news, person)
 append content
   if data.related
     .layout-content
@@ -71,7 +71,7 @@ append content
         +heading(data.related.heading)
         +news-list(data.related.news)
 
-// Most shared news (used for news)
+//- Most shared news (used for news)
 append content
   if data.most_shared
     .layout-content.layout-separate-after
@@ -79,14 +79,14 @@ append content
         +heading(data.most_shared.heading)
         +news-list(data.most_shared.news)
 
-// Cross content (used for document, generic)
+//- Cross content (used for document, generic)
 append content
   if data.cross_content && data.cross_content.items && data.cross_content.items.length === 3
     .layout-content.layout-adjacent-before
       div
         +cross-content(data.cross_content)
 
-// Poll (optionally used for document)
+//- Poll (optionally used for document)
 append content
   if data.poll
     .layout-content.layout-adjacent-before
