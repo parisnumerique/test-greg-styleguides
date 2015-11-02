@@ -8,6 +8,10 @@ Paris.i18n.locales = {
       "twitter": "Partager sur Twitter",
       "mail": "Partager par email"
     },
+    "favorites": {
+      "add": "ajouter aux favoris",
+      "remove": "enlever des favoris"
+    },
     "search_results": {
       "search": "Recherche",
       "title": {
