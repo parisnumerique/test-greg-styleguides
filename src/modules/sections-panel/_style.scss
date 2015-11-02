@@ -60,6 +60,7 @@ $sections-panel-subnav-offset: 200px;
     text-decoration: none;
 
     &:hover,
+    &:focus,
     &.current {
       color: $color-secondary;
     }
@@ -97,7 +98,7 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-back {
-  display: none;
+  //display: none;
 }
 
 .sections-panel-subnav-default {
@@ -147,6 +148,7 @@ $sections-panel-subnav-offset: 200px;
     text-decoration: none;
 
     &:hover,
+    &:focus,
     &.current {
       color: $color-secondary;
     }

@@ -39,6 +39,7 @@ module.exports = {
       'person-block',
       'postit',
       'search-results-list',
+      'sections-panel',
       'share'
     ]
   },
