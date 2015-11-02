@@ -43,21 +43,21 @@
           "href": "tel:+33145398929"
         },
         {
-          "title": "Twitter",
+          "title": "Compte Twitter",
           "icon": "twitter",
           "modifiers": ["social-twitter"],
           "text": "@BrunoJulliard",
           "href": "http://twitter.com/BrunoJulliard"
         },
         {
-          "title": "Facebook",
+          "title": "Compte Facebook",
           "icon": "facebook",
           "modifiers": ["social-facebook"],
           "text": "Facebook",
           "href": "https://www.facebook.com/pages/Bruno-Julliard/203706546958"
         },
         {
-          "title": "Instagram",
+          "title": "Compte Instagram",
           "icon": "instagram",
           "modifiers": ["social-instagram"],
           "text": "Instagram",

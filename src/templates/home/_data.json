@@ -21,23 +21,32 @@
           "block": "Le site Paris.fr est un site d’information, placé sous la responsabilité de la Direction de l’Information et de la Communication de la Mairie de Paris.<br /><a href=\"#\">En savoir plus sur vos données personnelles</a>"
         }
       },
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notice": {
         "id": "notice_home_top",
         "modifiers": ["top", "blue", "buildings", "center-text", "closed"],
         "closable": true,
-        "block": "<a href=\"#\">Visiting Paris ? Plan your trip</a>"
+        "close_label": "Fermer le bandeau",
+        "block": "<a href=\"#\" lang=\"en\">Visiting Paris ? Plan your trip</a>"
       },
       "rheader": {
         "modifiers": ["extended"],
         "logo": {
           "href": "../home/",
           "text": "Paris",
-          "h1": true
+          "h1": true,
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -55,6 +64,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news/", "text": "Actualités"},
@@ -97,14 +107,15 @@
                 "id": "main-search"
               },
               "submit": {
-                "text": "Rechercher",
+                "text": "Valider la recherche sur le site",
                 "icon": true
               },
               "around": {
                 "href": "http://meslieux.paris.fr",
                 "text": "Autour de moi",
                 "target": "_blank"
-              }
+              },
+              "close_label": "Fermer le moteur de recherche"
             },
             "items": [
               {
@@ -267,8 +278,8 @@
                   "category": "Mobilité",
                   "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
                   "counters": {
-                    "facebook": 5,
-                    "twitter": 12
+                    "facebook": [5, "j'aime"],
+                    "twitter": [12, "retweets"]
                   }
                 },
                 {
@@ -277,8 +288,8 @@
                   "category": "Culture et patrimoine",
                   "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
                   "counters": {
-                    "facebook": 5,
-                    "twitter": 12
+                    "facebook": [5, "j'aime"],
+                    "twitter": [12, "retweets"]
                   }
                 },
                 {
@@ -287,8 +298,8 @@
                   "category": "Environnement",
                   "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
                   "counters": {
-                    "facebook": 5,
-                    "twitter": 12
+                    "facebook": [5, "j'aime"],
+                    "twitter": [12, "retweets"]
                   }
                 }
               ]
@@ -449,7 +460,7 @@
               },
               "link": {
                 "href": "#",
-                "text": "Autres newsletters et alertes"
+                "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
               }
             },
             "jecoute": {
@@ -505,6 +516,7 @@
                 {
                   "icon": "twitter",
                   "count": "219 000",
+                  "unit": "abonnés",
                   "link": {
                     "href": "#",
                     "text": "Twitter",
@@ -514,6 +526,7 @@
                 {
                   "icon": "facebook",
                   "count": "2 508 576",
+                  "unit": "abonnés",
                   "link": {
                     "href": "#",
                     "text": "Facebook",
@@ -523,6 +536,7 @@
                 {
                   "icon": "instagram",
                   "count": "16 449",
+                  "unit": "abonnés",
                   "link": {
                     "href": "#",
                     "text": "Instagram",
@@ -532,6 +546,7 @@
                 {
                   "icon": "dailymotion",
                   "count": "5 442",
+                  "unit": "abonnés",
                   "link": {
                     "href": "#",
                     "text": "Dailymotion",
@@ -559,22 +574,24 @@
               "modifiers": ["white"]
             },
             "img": {
-              "src": "../../modules/municipal-team/image.jpg",
-              "alt": "La Maire et ses adjoints"
+              "src": "../../modules/municipal-team/image.jpg"
             },
             "intro": "Maecenas sed diam eget risus varius blandit sit amet non magna.",
             "text": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
           }
         }
       ],
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

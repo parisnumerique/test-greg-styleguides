@@ -9,14 +9,15 @@
           "placeholder": "Rechercher un service, une information..."
         },
         "submit": {
-          "text": "Rechercher",
+          "text": "Valider la recherche sur le site",
           "icon": true
         },
         "around": {
           "href": "http://meslieux.paris.fr",
           "text": "Autour de moi",
           "target": "_blank"
-        }
+        },
+        "close_label": "Fermer le moteur de recherche"
       },
       "items": [
         {
@@ -83,14 +84,15 @@
           "placeholder": "Rechercher un service, une information..."
         },
         "submit": {
-          "text": "Rechercher",
+          "text": "Valider la recherche sur le site",
           "icon": true
         },
         "around": {
           "href": "http://meslieux.paris.fr",
           "text": "Autour de moi",
           "target": "_blank"
-        }
+        },
+        "close_label": "Fermer le moteur de recherche"
       },
       "items": [
         {
@@ -147,14 +149,15 @@
           "placeholder": "Rechercher un service, une information..."
         },
         "submit": {
-          "text": "Rechercher",
+          "text": "Valider la recherche sur le site",
           "icon": true
         },
         "around": {
           "href": "http://meslieux.paris.fr",
           "text": "Autour de moi",
           "target": "_blank"
-        }
+        },
+        "close_label": "Fermer le moteur de recherche"
       },
       "items": [
         {
@@ -210,14 +213,15 @@
           "placeholder": "Rechercher un service, une information..."
         },
         "submit": {
-          "text": "Rechercher",
+          "text": "Valider la recherche sur le site",
           "icon": true
         },
         "around": {
           "href": "http://meslieux.paris.fr",
           "text": "Autour de moi",
           "target": "_blank"
-        }
+        },
+        "close_label": "Fermer le moteur de recherche"
       },
       "items": [
         {

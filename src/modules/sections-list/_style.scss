@@ -1,4 +1,6 @@
 .sections-list {
+  list-style: none;
+  padding: 0;
 }
 
 .sections-list-button {
@@ -111,11 +113,11 @@
 }
 
 @include large {
-  .sections-list-button {@include gallery(4);}
+  .sections-list-item {@include gallery(4);}
 }
 
 @include medium {
-  .sections-list-button {@include gallery(4 of 12);}
+  .sections-list-item {@include gallery(4 of 12);}
 }
 
 @include small {

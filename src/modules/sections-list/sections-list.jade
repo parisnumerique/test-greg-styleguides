@@ -1,7 +1,8 @@
 mixin sections-list(data)
-  .sections-list
+  ul.sections-list
     each item in data.items
-      a.sections-list-button(href=item.href class=item.modifiers)
-        if (item.title)
-          strong.sections-list-button-title= item.title
-        div.sections-list-button-text!= item.text
+      li.sections-list-item
+        a.sections-list-button(href=item.href class=item.modifiers)
+          if (item.title)
+            strong.sections-list-button-title= item.title
+          div.sections-list-button-text!= item.text

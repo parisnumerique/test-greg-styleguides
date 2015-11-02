@@ -1,0 +1,11 @@
+{
+  "index": {
+    "defaults": {
+      "items": [
+        {"href": "#content", "text": "Aller au contenu"},
+        {"href": "#navigation", "text": "Aller à la navigation"},
+        {"href": "#search", "text": "Aller à la recherche"}
+      ]
+    }
+  }
+}

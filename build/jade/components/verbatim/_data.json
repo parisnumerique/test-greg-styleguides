@@ -9,7 +9,8 @@
           {
             "href": "https://twitter.com/intent/tweet?text=Maecenas sed diam eget risus varius blandit sit amet non magna. http://www.paris.fr",
             "icon": "twitter",
-            "title": "Partager sur Twitter"
+            "text": "Partager sur Twitter",
+            "title": "Partager sur Twitter - nouvelle fenêtre"
           }
         ]
       }

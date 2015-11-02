@@ -2,6 +2,9 @@
   max-width: 360px;
 
   .block-content-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
   }
 
@@ -10,8 +13,12 @@
     width: 50%;
     margin-bottom: 20px;
 
-    &:hover .block-content-link {
-      border-color: transparent;
+    a {
+      display: block;
+
+      &:hover .block-content-link {
+        border-color: transparent;
+      }
     }
   }
 
@@ -23,6 +30,10 @@
 
   .block-content-count {
     font-weight: 700;
+  }
+
+  .block-content-unit {
+    @include hidden-accessibly;
   }
 
   .block-content-link {

@@ -3,6 +3,13 @@
     "data": {
       "title": "Vos élus",
       "bodyModifiers": ["fixed-nav", "list-persons"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -21,12 +28,13 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -44,6 +52,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
           {"href": "../subhome-news/", "text": "Actualités"},
@@ -69,14 +78,15 @@
               "placeholder": "Rechercher un service, une information..."
             },
             "submit": {
-              "text": "Rechercher",
+              "text": "Valider la recherche sur le site",
               "icon": true
             },
             "around": {
               "href": "http://meslieux.paris.fr",
               "text": "Autour de moi",
               "target": "_blank"
-            }
+            },
+            "close_label": "Fermer le moteur de recherche"
           },
           "results": {
             "button": {
@@ -118,17 +128,20 @@
             {
               "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
               "icon": "facebook",
-              "title": "Partager sur Facebook"
+              "text": "Partager sur Facebook",
+              "title": "Partager sur Facebook - nouvelle fenêtre"
             },
             {
               "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
               "icon": "twitter",
-              "title": "Partager sur Twitter"
+              "text": "Partager sur Twitter",
+              "title": "Partager sur Twitter - nouvelle fenêtre"
             },
             {
               "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
               "icon": "mail",
-              "title": "Partager par courriel"
+              "text": "Partager par courriel",
+              "title": "Partager par courriel - nouvelle fenêtre"
             }
           ]
         },
@@ -305,8 +318,10 @@
       ],
       "pagination": {
         "text": {
+          "label": "Pagination des résultats",
           "prev": "Page précédente",
-          "next": "Page suivante"
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
         },
         "base_url": "../list-persons",
         "url": "#page-${page}",
@@ -329,7 +344,7 @@
           },
           "link": {
             "href": "#",
-            "text": "Autres newsletters et alertes"
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
           }
         },
         "jecoute": {
@@ -348,6 +363,7 @@
             {
               "icon": "twitter",
               "count": "219 000",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Twitter",
@@ -357,6 +373,7 @@
             {
               "icon": "facebook",
               "count": "2 508 576",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Facebook",
@@ -366,6 +383,7 @@
             {
               "icon": "instagram",
               "count": "16 449",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -375,6 +393,7 @@
             {
               "icon": "dailymotion",
               "count": "5 442",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Dailymotion",
@@ -388,14 +407,17 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -412,6 +434,13 @@
       "title": "Adjoints à la Maire",
       "bodyModifiers": ["fixed-nav", "list-persons"],
       "bodyAttributes": {"data-add-facet-filter": "mandat:Adjoint au Maire"},
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -430,12 +459,13 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -453,6 +483,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
           {"href": "../subhome-news/", "text": "Actualités"},
@@ -478,14 +509,15 @@
               "placeholder": "Rechercher un service, une information..."
             },
             "submit": {
-              "text": "Rechercher",
+              "text": "Valider la recherche sur le site",
               "icon": true
             },
             "around": {
               "href": "http://meslieux.paris.fr",
               "text": "Autour de moi",
               "target": "_blank"
-            }
+            },
+            "close_label": "Fermer le moteur de recherche"
           },
           "results": {
             "button": {
@@ -531,17 +563,20 @@
             {
               "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
               "icon": "facebook",
-              "title": "Partager sur Facebook"
+              "text": "Partager sur Facebook",
+              "title": "Partager sur Facebook - nouvelle fenêtre"
             },
             {
               "href": "https://twitter.com/intent/tweet?text=Texte du tweet http://www.paris.fr",
               "icon": "twitter",
-              "title": "Partager sur Twitter"
+              "text": "Partager sur Twitter",
+              "title": "Partager sur Twitter - nouvelle fenêtre"
             },
             {
               "href": "mailto:?subject=Titre de la page&body=http://www.paris.fr",
               "icon": "mail",
-              "title": "Partager par courriel"
+              "text": "Partager par courriel",
+              "title": "Partager par courriel - nouvelle fenêtre"
             }
           ]
         },
@@ -684,8 +719,10 @@
       ],
       "pagination": {
         "text": {
+          "label": "Pagination des résultats",
           "prev": "Page précédente",
-          "next": "Page suivante"
+          "next": "Page suivante",
+          "link_title": "Aller à la page ${page}"
         },
         "base_url": "../list-persons",
         "url": "#page-${page}",
@@ -708,7 +745,7 @@
           },
           "link": {
             "href": "#",
-            "text": "Autres newsletters et alertes"
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
           }
         },
         "jecoute": {
@@ -727,6 +764,7 @@
             {
               "icon": "twitter",
               "count": "219 000",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Twitter",
@@ -736,6 +774,7 @@
             {
               "icon": "facebook",
               "count": "2 508 576",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Facebook",
@@ -745,6 +784,7 @@
             {
               "icon": "instagram",
               "count": "16 449",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -754,6 +794,7 @@
             {
               "icon": "dailymotion",
               "count": "5 442",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Dailymotion",
@@ -767,14 +808,17 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

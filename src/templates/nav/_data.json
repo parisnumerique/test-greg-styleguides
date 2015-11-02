@@ -8,12 +8,13 @@
         "logo": {
           "href": "../home/",
           "text": "Paris",
-          "h1": true
+          "h1": true,
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -31,6 +32,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news/", "text": "Actualités"},

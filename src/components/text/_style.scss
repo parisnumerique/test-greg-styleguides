@@ -101,10 +101,13 @@
   }
 
   .icon-anchor {
+    background: $white;
+    border: 0;
     color: $grayCC;
     font-size: 20px;
     line-height: 1;
-    padding-left: 10px;
+    margin-left: 10px;
+    padding: 0;
 
     &.active {
       color: $color-secondary;
@@ -115,6 +118,8 @@
       color: $color-tertiary;
       cursor: pointer;
     }
+
+    &:focus {outline: 1px dotted $gray99;}
   }
 
   &.intro-primary {

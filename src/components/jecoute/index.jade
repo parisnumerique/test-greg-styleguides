@@ -17,3 +17,11 @@ h2 Champs pré-remplis
 
   +jecoute(#{JSON.stringify(values, null, 2)})
 
+h2 Avec ajout de fichiers
+.lsg-component
+  +jecoute(with_files)
++code({language: "jade"}).
+  include jecoute
+
+  +jecoute(#{JSON.stringify(with_files, null, 2)})
+

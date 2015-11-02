@@ -3,7 +3,7 @@ include ../../modules/button/button
 mixin buttons(data)
   .component.component-buttons
     if data.title
-      .buttons-title= data.title
+      h2.buttons-title= data.title
     ul.buttons-items
       each item in data.items
         li

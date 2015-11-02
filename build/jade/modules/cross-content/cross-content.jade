@@ -2,7 +2,7 @@ mixin cross-content(data)
   .cross-content
     each item in data.items
       a.cross-content-item(href=item.href class=item.modifiers style='background-image: url(#{item.background});')
-        .cross-content-title= item.title
+        h2.cross-content-title= item.title
         if item.icon
           i.cross-content-icon(class="icon-#{item.icon}")
-        .cross-content-text= item.text
+        p.cross-content-text= item.text

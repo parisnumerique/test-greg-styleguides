@@ -9,15 +9,17 @@
 }
 
 .gallery-ugc-hashtag {
+  background-color: transparent;
+  border: 0;
   border-bottom: 1px solid transparent;
   font-size: 15px;
   font-weight: 500;
-  margin: 0 10px;
-  padding-bottom: 2px;
-  margin-bottom:-2px;
+  margin: 0 10px -2px;
+  padding: 0 0 2px;
   text-decoration: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $gray33;
   }
 
@@ -26,7 +28,10 @@
     border-color: $red1;
     color: $red1;
     cursor: default;
-    pointer-events: none;
+  }
+
+  &:focus {
+    background-color: $grayEE;
   }
 }
 
@@ -36,6 +41,14 @@
 
 .gallery-ugc-content {
   margin-top: 20px;
+  padding: 0;
+}
+
+.gallery-ugc-item {
+  display: block;
+  margin-bottom: gutter() * 1.8;
+  overflow: hidden;
+  position: relative;
 }
 
 .gallery-ugc-image {
@@ -44,9 +57,7 @@
   background-size: cover;
   cursor: pointer;
   display: block;
-  margin-bottom: gutter() * 1.8;
-  overflow: hidden;
-  position: relative;
+  height: 100%;
 
   .gallery-ugc-text {
     color: white;
@@ -57,13 +68,14 @@
     transition: bottom 0.3s ease-in-out;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     > .overlay {
-      width:100%;
-      height:100%;
-      position:absolute;
       background-color: transparentize($black, 0.5);
+      height: 100%;
+      position: absolute;
       transition: background-color 0.2s ease-in-out;
+      width: 100%;
     }
 
     .gallery-ugc-text {
@@ -79,7 +91,7 @@
     @include container(720px);
   }
 
-  .gallery-ugc-image {
+  .gallery-ugc-item {
     @include gallery(4 of 12);
     height: 230px;
   }

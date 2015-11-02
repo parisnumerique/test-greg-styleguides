@@ -13,10 +13,15 @@ include ../../modules/hub-heading/hub-heading
 include ../../modules/news-list/news-list
 include ../../modules/notice/notice
 include ../../modules/rheader/rheader
+include ../../modules/skip-links/skip-links
 
 include ../../components/components
 
-append content
+append header
+  if data.skip_links
+    +skip-links(data.skip_links)
+
+append header
   +rheader(data.rheader)
 
 append content
@@ -52,13 +57,13 @@ append content
         .layout-content
           +block-content-social(data.connected.social)
 
-append content
+append footer
   .layout-content.layout-adjacent-before
     +footer(data.footer)
 
-append content
-  +button-top
+append footer
+  +button-top(data.button_top)
 
-append content
+append footer
   if data.notices && data.notices.cnil
     +notice(data.notices.cnil)

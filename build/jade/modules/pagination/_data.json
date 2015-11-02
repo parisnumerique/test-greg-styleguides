@@ -2,8 +2,10 @@
   "index": {
     "defaults": {
       "text": {
+        "label": "Pagination des résultats",
         "prev": "Page précédente",
-        "next": "Page suivante"
+        "next": "Page suivante",
+        "link_title": "Aller à la page ${page}"
       },
       "base_url": "/",
       "url": "/page/${page}",
@@ -12,8 +14,10 @@
     },
     "first": {
       "text": {
+        "label": "Pagination des résultats",
         "prev": "Page précédente",
-        "next": "Page suivante"
+        "next": "Page suivante",
+        "link_title": "Aller à la page ${page}"
       },
       "base_url": "/",
       "url": "/page/${page}",
@@ -22,8 +26,10 @@
     },
     "second": {
       "text": {
+        "label": "Pagination des résultats",
         "prev": "Page précédente",
-        "next": "Page suivante"
+        "next": "Page suivante",
+        "link_title": "Aller à la page ${page}"
       },
       "base_url": "/",
       "url": "/page/${page}",
@@ -32,8 +38,10 @@
     },
     "penultimate": {
       "text": {
+        "label": "Pagination des résultats",
         "prev": "Page précédente",
-        "next": "Page suivante"
+        "next": "Page suivante",
+        "link_title": "Aller à la page ${page}"
       },
       "base_url": "/",
       "url": "/page/${page}",
@@ -42,8 +50,10 @@
     },
     "last": {
       "text": {
+        "label": "Pagination des résultats",
         "prev": "Page précédente",
-        "next": "Page suivante"
+        "next": "Page suivante",
+        "link_title": "Aller à la page ${page}"
       },
       "base_url": "/",
       "url": "/page/${page}",

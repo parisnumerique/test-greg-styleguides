@@ -50,7 +50,7 @@
       @extend %icon-pdf;
     }
     &.links-item-file:before {
-      @extend %icon-file;
+      @extend %icon-dl;
     }
 
     &.links-primary {
@@ -59,16 +59,14 @@
         color: $color-primary;
       }
 
-      .links-item-filesize,
-      .links-item-target {
+      .links-item-attributes {
         color: $color-primary;
       }
     }
 
   }
 
-  .links-item-filesize,
-  .links-item-target {
+  .links-item-attributes {
     color: $gray66;
     display: inline-block;
     font-size: 14px;
@@ -76,6 +74,10 @@
     text-decoration: none;
     &:before {content: "(";}
     &:after {content: ")";}
+
+    > * + * {margin-left: 5px;}
+    > *:after {content: ", ";}
+    > *:last-child:after {content: "";}
   }
 
 }

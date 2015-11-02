@@ -3,7 +3,6 @@
     "defaults": {
       "image": {
         "src": "../../components/news-push/news-push.jpg",
-        "alt": "Conférence priorité logement",
         "title": "Conférence priorité logement",
         "credit": "Mairie de Paris / DICOM"
       },
@@ -19,7 +18,6 @@
     "without_link": {
       "image": {
         "src": "../../components/news-push/news-push.jpg",
-        "alt": "Conférence priorité logement",
         "title": "Conférence priorité logement",
         "credit": "Mairie de Paris / DICOM"
       },

@@ -6,8 +6,8 @@
       "category": "Catégorie",
       "title": "Titre",
       "counters": {
-        "facebook": 5,
-        "twitter": 12
+        "facebook": [5, "j'aime"],
+        "twitter": [12, "retweets"]
       }
     },
     "long_data": {
@@ -16,8 +16,8 @@
       "category": "Longue catégorie avec de nombreux mots",
       "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra nisi fermentum nulla consequat",
       "counters": {
-        "facebook": 12345,
-        "twitter": 67890
+        "facebook": [12345, "j'aime"],
+        "twitter": [67890, "retweets"]
       }
     },
     "large": {
@@ -27,8 +27,8 @@
       "category": "Catégorie",
       "title": "Titre",
       "counters": {
-        "facebook": 5,
-        "twitter": 12
+        "facebook": [5, "j'aime"],
+        "twitter": [12, "retweets"]
       }
     },
     "no_image": {
@@ -37,8 +37,8 @@
       "category": "Catégorie",
       "title": "Titre",
       "counters": {
-        "facebook": 5,
-        "twitter": 12
+        "facebook": [5, "j'aime"],
+        "twitter": [12, "retweets"]
       }
     }
   }

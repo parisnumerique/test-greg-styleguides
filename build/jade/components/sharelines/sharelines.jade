@@ -2,7 +2,7 @@ include ../../modules/share/share
 
 mixin sharelines(data)
   .component.component-sharelines
-    .sharelines-title= data.title
+    h2.sharelines-title= data.title
     ul.sharelines-items
       each item in data.items
         li.sharelines-item

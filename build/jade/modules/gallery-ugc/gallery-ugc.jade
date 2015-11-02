@@ -2,11 +2,11 @@ mixin gallery-ugc(data)
   .gallery-ugc
     .gallery-ugc-title= data.title + " :"
     each hashtag in data.hashtags
-      a.gallery-ugc-hashtag(href="##{hashtag.id}" class=hashtag.current ? 'current' : null)= hashtag.text
+      button.gallery-ugc-hashtag(type="button" title=hashtag.text data-hashtag=hashtag.id class=hashtag.current ? 'current' : null)= hashtag.text
     each hashtag in data.hashtags
-      .gallery-ugc-content(style=(hashtag.current ? '' : 'display: none;') id="gallery-ugc-#{hashtag.id}")
+      ul.gallery-ugc-content(style=(hashtag.current ? '' : 'display: none;') id="gallery-ugc-#{hashtag.id}")
         each item in hashtag.items
-          - backgroundImage = hashtag.current ? ('background-image: url(' + item.image + ')') : ''
-          a.gallery-ugc-image(href="#{item.href}" target="_blank" style=backgroundImage data-background-image="url(#{item.image})")
-            .overlay
-              .gallery-ugc-text=item.text
+          li.gallery-ugc-item
+            a.gallery-ugc-image(href=item.href target="_blank" style="background-image: url(#{item.image});" title=item.title)
+              .overlay
+                .gallery-ugc-text=item.text
