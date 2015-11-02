@@ -31,5 +31,5 @@ mixin jecoute(data)
                 em= policy.text
                 a(href=policy.link.href target=policy.link.target)
                   = policy.link.text
-        button.button(type="submit" class="secondary action")= data.button
+        button.button(type="submit" class="secondary action" title=data.button_title)= data.button
       p.jecoute-message
