@@ -1,6 +1,7 @@
 {
   "index": {
     "defaults": {
+      "title": "Sommaire de la page",
       "items": [
         {"href": "#", "text": "Est-ce que j’y ai droit ?"},
         {"href": "#", "text": "Constituer un dossier"},

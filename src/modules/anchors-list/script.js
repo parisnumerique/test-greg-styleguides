@@ -153,7 +153,8 @@ Paris.anchors = (function(){
           return {
             "href": $anchorInList.data('share-' + type),
             "icon": type,
-            "title": Paris.i18n.t("share/" + type)
+            "text": Paris.i18n.t("share/" + type),
+            "title": Paris.i18n.t("share/" + type) + ' - ' + Paris.i18n.t("new_window")
           };
         });
 

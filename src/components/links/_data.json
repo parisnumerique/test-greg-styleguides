@@ -6,6 +6,7 @@
         {
           "href": "#",
           "text": "Lien vers un fichier PDF",
+          "filetype": "PDF",
           "filesize": "2,4 Mo",
           "modifiers": ["links-item-pdf"]
         },
@@ -32,6 +33,7 @@
         {
           "href": "#",
           "text": "Lien vers un fichier PDF",
+          "filetype": "PDF",
           "filesize": "2,4 Mo",
           "modifiers": ["links-item-pdf"]
         },

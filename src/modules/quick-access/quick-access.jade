@@ -4,7 +4,7 @@ include ../notice/notice
 include ../search-field/search-field
 
 mixin quick-access(data)
-  .quick-access(class=data.modifiers)
+  .quick-access(class=data.modifiers id=data.id)
     if data.background
       if data.background.image
         .quick-access-background(style="background-image: url(#{data.background.image});")
@@ -13,7 +13,7 @@ mixin quick-access(data)
           each source in data.background.video.sources
             source&attributes(source)
     .quick-access-wrapper.layout-wrapper
-      .quick-access-search
+      .quick-access-search(role="search")
         +search-field(data.search)
       if data.heading
         +heading(data.heading)
@@ -30,6 +30,8 @@ mixin quick-access(data)
         - button = JSON.parse(JSON.stringify(data.results.button)) // clone the data object
         - button.modifiers = ["action", "tertiary", "quick-access-results-more"] // overwrite the modifiers
         +button(button)
-    .quick-access-close-search: i.icon-close
+    button.quick-access-close-search(type="button")
+      if data.search.close_label
+        .hidden-accessibly= data.search.close_label
     if data.notice
       +notice(data.notice)

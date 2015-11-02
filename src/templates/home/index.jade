@@ -4,8 +4,9 @@ include ../../modules/button-top/button-top
 include ../../modules/footer/footer
 include ../../modules/notice/notice
 include ../../modules/rheader/rheader
+include ../../modules/skip-links/skip-links
 
-// Blocks are reorderable parts of the template
+//- Blocks are reorderable parts of the template
 include blocks/get-involved
 include blocks/jumbotron
 include blocks/municipal-team
@@ -15,11 +16,15 @@ include blocks/que-faire
 include blocks/sections
 include blocks/stay-connected
 
-append content
+append header
+  if data.skip_links
+    +skip-links(data.skip_links)
+
+append header
   if data.notice
     +notice(data.notice)
 
-append content
+append header
   +rheader(data.rheader)
 
 append content
@@ -33,13 +38,13 @@ append content
     .layout-content.layout-adjacent-before
       +notice(data.notices.legal)
 
-append content
+append footer
   .layout-content.layout-adjacent-before
     +footer(data.footer)
 
-append content
-  +button-top
+append footer
+  +button-top(data.button_top)
 
-append content
+append footer
   if data.notices && data.notices.cnil
     +notice(data.notices.cnil)

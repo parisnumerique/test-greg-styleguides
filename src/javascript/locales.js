@@ -30,8 +30,10 @@ Paris.i18n.locales = {
       "button_view": "Voir la fiche"
     },
     "pagination": {
+      "label": "Pagination des résultats",
       "prev": "Page précédente",
-      "next": "Page suivante"
+      "next": "Page suivante",
+      "link_title": "Aller à la page ${page}"
     },
     "jecoute": {
       "error": {
@@ -45,6 +47,9 @@ Paris.i18n.locales = {
     },
     "postit": {
       "default_title": "Informations complémentaires"
-    }
+    },
+    "active": "actif",
+    "inactive": "inactif",
+    "new_window": "nouvelle fenêtre"
   }
 };

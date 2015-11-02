@@ -3,6 +3,13 @@
     "data": {
       "title": "Services et infos pratiques",
       "bodyModifiers": ["fixed-nav", "hub"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -21,12 +28,13 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -44,6 +52,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
           {"href": "../subhome-news/", "text": "Actualités"},
@@ -69,14 +78,15 @@
               "placeholder": "Rechercher un service, une information..."
             },
             "submit": {
-              "text": "Rechercher",
+              "text": "Valider la recherche sur le site",
               "icon": true
             },
             "around": {
               "href": "http://meslieux.paris.fr",
               "text": "Autour de moi",
               "target": "_blank"
-            }
+            },
+            "close_label": "Fermer le moteur de recherche"
           },
           "results": {
             "button": {
@@ -288,8 +298,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -298,8 +308,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -308,8 +318,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -347,7 +357,7 @@
           },
           "link": {
             "href": "#",
-            "text": "Autres newsletters et alertes"
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
           }
         },
         "jecoute": {
@@ -366,6 +376,7 @@
             {
               "icon": "twitter",
               "count": "219 000",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Twitter",
@@ -375,6 +386,7 @@
             {
               "icon": "facebook",
               "count": "2 508 576",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Facebook",
@@ -384,6 +396,7 @@
             {
               "icon": "instagram",
               "count": "16 449",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -393,6 +406,7 @@
             {
               "icon": "dailymotion",
               "count": "5 442",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Dailymotion",
@@ -406,14 +420,17 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -429,6 +446,13 @@
     "data": {
       "title": "Culture et patrimoine",
       "bodyModifiers": ["fixed-nav", "hub"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -447,12 +471,13 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -470,6 +495,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
           {"href": "../subhome-news/", "text": "Actualités"},
@@ -495,14 +521,15 @@
               "placeholder": "Rechercher un service, une information..."
             },
             "submit": {
-              "text": "Rechercher",
+              "text": "Valider la recherche sur le site",
               "icon": true
             },
             "around": {
               "href": "http://meslieux.paris.fr",
               "text": "Autour de moi",
               "target": "_blank"
-            }
+            },
+            "close_label": "Fermer le moteur de recherche"
           },
           "results": {
             "button": {
@@ -718,8 +745,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -728,8 +755,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -738,8 +765,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -783,7 +810,7 @@
           },
           "link": {
             "href": "#",
-            "text": "Autres newsletters et alertes"
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
           }
         },
         "jecoute": {
@@ -802,6 +829,7 @@
             {
               "icon": "twitter",
               "count": "219 000",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Twitter",
@@ -811,6 +839,7 @@
             {
               "icon": "facebook",
               "count": "2 508 576",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Facebook",
@@ -820,6 +849,7 @@
             {
               "icon": "instagram",
               "count": "16 449",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -829,6 +859,7 @@
             {
               "icon": "dailymotion",
               "count": "5 442",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Dailymotion",
@@ -842,14 +873,17 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},
@@ -865,6 +899,13 @@
     "data": {
       "title": "Musées et expos",
       "bodyModifiers": ["fixed-nav", "hub"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -883,12 +924,13 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -906,6 +948,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques", "current": true},
           {"href": "../subhome-news/", "text": "Actualités"},
@@ -931,14 +974,15 @@
               "placeholder": "Rechercher un service, une information..."
             },
             "submit": {
-              "text": "Rechercher",
+              "text": "Valider la recherche sur le site",
               "icon": true
             },
             "around": {
               "href": "http://meslieux.paris.fr",
               "text": "Autour de moi",
               "target": "_blank"
-            }
+            },
+            "close_label": "Fermer le moteur de recherche"
           },
           "results": {
             "button": {
@@ -1198,6 +1242,7 @@
               {
                 "href": "#",
                 "text": "Lien vers un fichier PDF",
+                "filetype": "PDF",
                 "filesize": "2,4 Mo",
                 "modifiers": ["links-item-pdf"]
               },
@@ -1238,8 +1283,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1248,8 +1293,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -1258,8 +1303,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -1303,7 +1348,7 @@
           },
           "link": {
             "href": "#",
-            "text": "Autres newsletters et alertes"
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
           }
         },
         "jecoute": {
@@ -1322,6 +1367,7 @@
             {
               "icon": "twitter",
               "count": "219 000",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Twitter",
@@ -1331,6 +1377,7 @@
             {
               "icon": "facebook",
               "count": "2 508 576",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Facebook",
@@ -1340,6 +1387,7 @@
             {
               "icon": "instagram",
               "count": "16 449",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -1349,6 +1397,7 @@
             {
               "icon": "dailymotion",
               "count": "5 442",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Dailymotion",
@@ -1362,14 +1411,17 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

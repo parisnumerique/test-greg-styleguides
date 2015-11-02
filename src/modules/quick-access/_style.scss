@@ -204,6 +204,17 @@
 
 
   .quick-access-close-search {
+    &:before {
+      @extend %icon-font;
+      @extend %icon-close;
+      font-size: 1.1em;
+      height: 50px;
+      left: -8px;
+      position: relative;
+      top: -4px;
+      width: 50px;
+    }
+
     border: 1px solid $gray99;
     border-radius: 50%;
     color: $gray66;
