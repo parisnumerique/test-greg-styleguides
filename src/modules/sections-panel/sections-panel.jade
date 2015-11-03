@@ -58,7 +58,7 @@ mixin sections-panel-content(data)
   if data.accessibility_text
     p.hidden-accessibly= data.accessibility_text
   if data.intro
-    .sections-panel-intro= data.intro
+    p.sections-panel-intro= data.intro
   if data.items && data.items.length
     ul.sections-panel-content-items
       each item in data.items
@@ -67,6 +67,10 @@ mixin sections-panel-content(data)
             .sections-panel-content-item-title= item.title
             .sections-panel-content-item-text= item.text
   if data.buttons && data.buttons.items && data.buttons.items.length
-    +buttons(data.buttons)
+    - var buttons = JSON.parse(JSON.stringify(data.buttons)) // clone the data object
+    - buttons.title_tag = 'h3'
+    +buttons(buttons)
   if data.more_links && data.more_links.items && data.more_links.items.length
-    +links(data.more_links)
+    - var more_links = JSON.parse(JSON.stringify(data.more_links)) // clone the data object
+    - more_links.title_tag = 'h3'
+    +links(more_links)
