@@ -11,9 +11,9 @@ mixin place(data)
         ul.place-items
           each item in data.items
             li.place-item
-              i.icon(class="icon-#{item.icon}")
+              i.icon(class="icon-#{item.icon}" aria-hidden="true")
               = item.text
     if data.button
-      - button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+      - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
       - button.modifiers = ["marker"] // overwrite the modifiers
       +button(button)

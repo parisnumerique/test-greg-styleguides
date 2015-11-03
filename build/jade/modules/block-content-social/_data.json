@@ -7,6 +7,7 @@
         {
           "icon": "twitter",
           "count": "219 000",
+          "unit": "abonnés",
           "link": {
             "href": "#",
             "text": "Twitter",
@@ -16,6 +17,7 @@
         {
           "icon": "facebook",
           "count": "2 508 576",
+          "unit": "abonnés",
           "link": {
             "href": "#",
             "text": "Facebook",
@@ -25,6 +27,7 @@
         {
           "icon": "instagram",
           "count": "16 449",
+          "unit": "abonnés",
           "link": {
             "href": "#",
             "text": "Instagram",
@@ -34,6 +37,7 @@
         {
           "icon": "dailymotion",
           "count": "5 442",
+          "unit": "abonnés",
           "link": {
             "href": "#",
             "text": "Dailymotion",

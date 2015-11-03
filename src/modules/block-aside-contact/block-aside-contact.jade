@@ -1,7 +1,7 @@
 include ../block-aside/block-aside
 
 mixin block-aside-contact(data)
-  - block_modifiers = data.modifiers || []
+  - var block_modifiers = data.modifiers || []
   - block_modifiers.push("block-aside-contact")
   +block-aside({"title": data.title, "modifiers": block_modifiers})
     ul.block-aside-items
@@ -15,11 +15,13 @@ mixin block-aside-contact(data)
             if item.href
               a(href=item.href class=item.hcard_properties)
                 if item.icon
-                  i.icon(class="icon-#{item.icon}" title=item.title)
+                  i.icon(class="icon-#{item.icon}" aria-hidden="true")
+                  span.hidden-accessibly= item.title + " :"
                 = item.text
             else
               if item.icon
-                i.icon(class="icon-#{item.icon}" title=item.title)
+                i.icon(class="icon-#{item.icon}" aria-hidden="true")
+                span.hidden-accessibly= item.title + " :"
               span(class=item.hcard_properties)
                 = item.text
         else
@@ -27,9 +29,9 @@ mixin block-aside-contact(data)
             if item.href
               a(href=item.href)
                 if item.icon
-                  i.icon(class="icon-#{item.icon}")
+                  i.icon(class="icon-#{item.icon}" aria-hidden="true")
                 = item.text
             else
               if item.icon
-                i.icon(class="icon-#{item.icon}")
+                i.icon(class="icon-#{item.icon}" aria-hidden="true")
               = item.text

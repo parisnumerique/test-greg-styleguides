@@ -1,7 +1,7 @@
 mixin block-content(data)
-  - attributes = data.attributes || {}
+  - var attributes = data.attributes || {}
   .block-content(class=data.modifiers)&attributes(attributes)
-    h2.block-content-title= data.title
+    h3.block-content-title= data.title
     .block-content-content
       if block
         block

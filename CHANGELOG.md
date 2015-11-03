@@ -9,6 +9,17 @@ Let's take the `x.β.α` version number:
 
 ## Next release
 
+## 1.1.4 (2015-11-03)
+
+* accessibility improvements
+* component `jecoute` and module `poll`: use `button` module
+* component `form` improved for release
+* template `subhome-news`: bugs fixed in `news-list` and header
+* improved Jade syntax in multiple files (always use `var`)
+
+## 1.1.3 (2015-11-02)
+
+* multiple accessibility improvements
 * templates `document`, `single-news` and `single-person` have been merged into `generic`
 * icon `.icon-file` renamed `.icon-dl` and added `.icon-file` `.icon-text`
 * component `jecoute`: added `upload` and `policy` feature

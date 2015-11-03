@@ -119,7 +119,6 @@ Paris.form = (function(){
 
     function saveData() {
       var data = $form.serializeArray();
-      disableButtons();
       $.ajax({
         url: $form.attr('action'),
         type: $form.attr('method') || 'POST',
@@ -134,28 +133,30 @@ Paris.form = (function(){
         onDataError(xhr, 'error');
         return;
       }
-
+      disableButtons();
+      $('.form-error-message').remove();
       $el.append('<p class="form-success">'+ options.thanks +'</p>');
     }
 
     function onDataError(xhr, status, error){
       enableButtons();
-      try {
-        var data = $.parseJSON(xhr.responseText);
-      } catch (e if e instanceof SyntaxError) {
-        console.log('error response should be JSON');
-        return;
-      }
+      // try {
+      //   var data = $.parseJSON(xhr.responseText);
+      // } catch (e if e instanceof SyntaxError) {
+      //   console.log('error response should be JSON');
+      //   return;
+      // }
 
       // reset
       $el.find('.form-item, .matrix-item').removeClass('error');
       $el.find('.form-item-help.error').remove();
 
-      $.each(data.errors, function(field, message){
-        var $formItem = $el.find('.form-field[name="'+field+'"]').closest('.form-item, .matrix-item');
-        $formItem.removeClass('valid').addClass('error');
-        $formItem.append('<p class="form-item-help error">'+message+'</p>');
-      });
+      // $.each(data.errors, function(field, message){
+      //   var $formItem = $el.find('.form-field[name="'+field+'"]').closest('.form-item, .matrix-item');
+      //   $formItem.removeClass('valid').addClass('error');
+      //   $formItem.append('<p class="form-item-help error">'+message+'</p>');
+      // });
+      $el.append('<p class="form-item-help form-error-message">Erreur sur le formulaire</p>');
     }
 
     function renderCaptcha(){

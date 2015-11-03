@@ -31,7 +31,7 @@ mixin form-select(data)
 
 mixin form-textarea(data)
   label.form-item-label(for=data.id)= data.label
-  textarea.form-field(name=data.name id=data.id placeholder=data.placeholder rows=data.rows required=data.required)
+  textarea.form-field(name=data.name id=data.id placeholder=data.placeholder maxlength=data.maxlength rows=data.rows required=data.required)
     = data.value
 
 
@@ -39,6 +39,7 @@ mixin form-checkbox(data)
   .form-item-label= data.label
   each item in data.items
     div: label
+      input.form-field(type="hidden" name=data.name value="")
       input.form-field(type=data.type name=data.name value=item.value checked=item.checked)
       = item.text
 
@@ -56,7 +57,9 @@ mixin form-matrix(data)
         th.matrix-option(style="width: "+width+"%")= option.text
     each item in data.items
       tr.matrix-item(class=item.error ? "error" : null)
-        th.matrix-item-text= item.text
+        th.matrix-item-text
+          = item.text
+          input.form-field(type="hidden" name=data.name+"["+item.name+"]" value="")
         - var i = 0
         while i < data.options.length
           - if (data.multiple) {var checked = (item.checked || []).indexOf(data.options[i].value) !== -1; var requiredAttribute = {"data-grouprequired": data.required};} else {var checked = item.checked === data.options[i].value;var requiredAttribute = {"required": data.required};}
@@ -71,14 +74,14 @@ mixin form-captcha(data)
 
 mixin form-buttons(data)
   each item in data.items
-    - button = JSON.parse(JSON.stringify(item || [])) // clone the data object
+    - var button = JSON.parse(JSON.stringify(item || [])) // clone the data object
     - button.modifiers = button.modifiers || []
     - if (item.attributes && item.attributes.type === 'submit') {button.modifiers.push("action");}
     +button(button)
 
 
 mixin form(data)
-  .component.component-form
+  .component.component-form(data-thanks=data.thanks)
     form(action=data.action method=data.method || 'POST')
       each item in data.items
         - item = JSON.parse(JSON.stringify(item || [])) // clone the data object

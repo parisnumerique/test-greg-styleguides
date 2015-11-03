@@ -4,7 +4,7 @@ html.no-js(lang="fr")
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
 
-    - data = data || {}
+    - var data = data || {}
 
     if data.title
       title= data.title + " – Paris.fr"
@@ -13,7 +13,7 @@ html.no-js(lang="fr")
 
     link(href="../../stylesheets/print.css" type="text/css" media="print" rel="stylesheet")
 
-    - css = data && data.theme ? "paris-"+data.theme+".css" : "paris.css"
+    - var css = data && data.theme ? "paris-"+data.theme+".css" : "paris.css"
     <!--[if !IE]>-->
     link#theme(href="../../stylesheets/#{css}" type="text/css" media="screen" rel="stylesheet")
     <!--<![endif]-->
@@ -41,8 +41,8 @@ html.no-js(lang="fr")
       each link in data.linkTags
         link&attributes(link)
 
-  - bodyModifiers = data.bodyModifiers || []
-  - bodyAttributes = data.bodyAttributes || {}
+  - var bodyModifiers = data.bodyModifiers || []
+  - var bodyAttributes = data.bodyAttributes || {}
 
   body(class=bodyModifiers)&attributes(bodyAttributes)
     if data.notices && data.notices.old_browsers

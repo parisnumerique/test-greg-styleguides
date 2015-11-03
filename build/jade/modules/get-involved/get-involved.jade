@@ -4,10 +4,11 @@ mixin get-involved(data)
   .get-involved
     .layout-wrapper
       +heading(data.heading)
-      .get-involved-content
+      ul.get-involved-items
         each item in data.items
-          - title = [item.image.title]
+          - var title = [item.image.title]
           - if (item.image.credit) {title.push("(" + item.image.credit + ")")}
           - title = title.join(" ")
-          a.get-involved-card(href=item.href style="background-image: url(#{item.image.src});" title=title class=item.modifiers)
-            div.get-involved-text= item.text
+          li.get-involved-item
+            a.get-involved-card(href=item.href style="background-image: url(#{item.image.src});" title=title class=item.modifiers)
+              div.get-involved-text= item.text
