@@ -16,8 +16,10 @@
         "placeholder": "Votre adresse e-mail",
         "title": "Renseignez votre adresse e-mail (type xxx@xxx.xx) - obligatoire"
       },
-      "button": "Valider",
-      "button_title": "Valider votre question à Paris j'écoute",
+      "button": {
+        "text": "Valider",
+        "title": "Valider votre question à Paris j'écoute"
+      },
       "thanks": "Merci, votre question a bien été transmise."
     },
     "values": {
@@ -38,8 +40,10 @@
         "title": "Renseignez votre adresse e-mail (type xxx@xxx.xx) - obligatoire",
         "value": "john.doe@gmail.com"
       },
-      "button": "Valider",
-      "button_title": "Valider votre question à Paris j'écoute",
+      "button": {
+        "text": "Valider",
+        "title": "Valider votre question à Paris j'écoute"
+      },
       "thanks": "Merci, votre question a bien été transmise."
     },
     "with_files": {
@@ -79,8 +83,10 @@
           "target": "_blank"
         }
       },
-      "button": "Valider",
-      "button_title": "Valider votre question à Parhistoire",
+      "button": {
+        "text": "Valider",
+        "title": "Valider votre question à Parhistoire"
+      },
       "thanks": "Merci, votre question a bien été transmise."
     }
   }

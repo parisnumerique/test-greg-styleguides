@@ -74,7 +74,7 @@ mixin form-captcha(data)
 
 mixin form-buttons(data)
   each item in data.items
-    - button = JSON.parse(JSON.stringify(item || [])) // clone the data object
+    - var button = JSON.parse(JSON.stringify(item || [])) // clone the data object
     - button.modifiers = button.modifiers || []
     - if (item.attributes && item.attributes.type === 'submit') {button.modifiers.push("action");}
     +button(button)
