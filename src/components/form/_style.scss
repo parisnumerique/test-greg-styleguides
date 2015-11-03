@@ -27,6 +27,11 @@
     }
   }
 
+  .form-message {
+    &.error {color: $color-primary;}
+    &.success {color: $green1;}
+  }
+
   // error
   .form-item .form-item-label,
   .form-item-matrix .matrix-item .matrix-item-text {
