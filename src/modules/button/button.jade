@@ -1,6 +1,6 @@
 mixin button(data)
-  - modifiers = data.modifiers || []
-  - attributes = data.attributes || []
+  - var modifiers = data.modifiers || []
+  - var attributes = data.attributes || []
   if data.href
     if data.icon
       - modifiers.push("icon")
@@ -11,5 +11,5 @@ mixin button(data)
         i.icon(class="icon-#{data.icon}")
       span.button-text= data.text
   else
-    button.button(class=modifiers)&attributes(attributes)
+    button.button(class=modifiers title=data.title)&attributes(attributes)
       = data.text
