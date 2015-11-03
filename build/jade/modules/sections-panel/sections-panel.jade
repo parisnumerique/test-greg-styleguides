@@ -4,13 +4,13 @@ include ../../components/buttons/buttons
 include ../../components/links/links
 
 mixin sections-panel(data)
-  - has_current_item = false
-  - has_content = typeof data.content !== 'undefined'
+  - var has_current_item = false
+  - var has_content = typeof data.content !== 'undefined'
   each item in data.nav.items
     - if (item.current === true) {current_item = item; has_current_item = true;}
   .sections-panel(class=(has_content ? "has-content" : ""))
     if data.nav
-      - nav_classes = []
+      - var nav_classes = []
       - if (has_current_item) {nav_classes.push('has-current-item');}
       - if (has_content) {nav_classes.push('closed');}
       .sections-panel-nav(class=nav_classes)
@@ -20,7 +20,7 @@ mixin sections-panel(data)
               li.sections-panel-nav-item
                 a(href=item.href data-subnav-section=item.slug data-background=item.background data-page-title=item.pageTitle class=(item.current ? "current" : ""))= item.text
         if data.nav.more
-          - more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
+          - var more = JSON.parse(JSON.stringify(data.nav.more)) // clone the data object
           - more.modifiers = ["action", "white", "small", "sections-panel-nav-more"]
           +button(more)
       .sections-panel-subnav#sections-panel-subnav(class=(has_current_item ? "has-current-item" : ""))

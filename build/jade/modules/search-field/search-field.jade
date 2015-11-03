@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin search-field(data)
-  - modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - if (data.around) {modifiers.push("with-around");}
   form.search-field(class=modifiers action=data.action method=data.method ? data.method : "get" autocomplete="off")
     input.search-field-input(id=data.input.id type="text" name="search" placeholder=data.input.placeholder title=data.input.placeholder value=data.input.value)
@@ -12,6 +12,6 @@ mixin search-field(data)
       else
         = data.submit.text
     if data.around
-      - around = JSON.parse(JSON.stringify(data.around)) // clone the data object
+      - var around = JSON.parse(JSON.stringify(data.around)) // clone the data object
       - around.modifiers = ["marker", "around"] // overwrite the modifiers
       +button(around)
