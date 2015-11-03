@@ -140,6 +140,8 @@ Paris.form = (function(){
 
     function onDataError(xhr, status, error){
       enableButtons();
+      var data = $.parseJSON(xhr.responseText);
+
       // try {
       //   var data = $.parseJSON(xhr.responseText);
       // } catch (e if e instanceof SyntaxError) {
@@ -156,7 +158,8 @@ Paris.form = (function(){
       //   $formItem.removeClass('valid').addClass('error');
       //   $formItem.append('<p class="form-item-help error">'+message+'</p>');
       // });
-      $el.append('<p class="form-item-help form-error-message">Erreur sur le formulaire</p>');
+      $('.form-error-message').remove();
+      $el.append('<p class="form-item-help form-error-message">Erreur sur le formulaire: '+data.message+'</p>');
     }
 
     function renderCaptcha(){
