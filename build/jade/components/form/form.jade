@@ -46,6 +46,15 @@ mixin form-checkbox(data)
 mixin form-radio(data)
   +form-checkbox(data) // same code as the checkbox, except input type
 
+mixin form-cgu(data)
+  .form-item-label= data.label
+  each item in data.items
+    div: label
+      input.form-field(type="hidden" name=data.name value="")
+      input.form-field(type="checkbox" name=data.name value=item.value checked=item.checked)
+      a(href=data.href target="_blank")
+        = item.text
+
 
 mixin form-matrix(data)
   - var type = data.multiple ? 'checkbox' : 'radio';

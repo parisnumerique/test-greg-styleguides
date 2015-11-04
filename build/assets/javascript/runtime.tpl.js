@@ -573,6 +573,30 @@ templatizer["form"]["form-radio"] = function tmpl_form_form_radio(data) {
 };
 
 
+// form.jade:form-cgu compiled template
+templatizer["form"]["form-cgu"] = function tmpl_form_form_cgu(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    buf.push('<div class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + "</div>");
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var item = $$obj[$index];
+                buf.push('<div><label><input type="hidden"' + jade.attr("name", data.name, true, false) + ' value="" class="form-field"/><input type="checkbox"' + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/><a' + jade.attr("href", data.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></label></div>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var item = $$obj[$index];
+                buf.push('<div><label><input type="hidden"' + jade.attr("name", data.name, true, false) + ' value="" class="form-field"/><input type="checkbox"' + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/><a' + jade.attr("href", data.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></label></div>");
+            }
+        }
+    }).call(this);
+    return buf.join("");
+};
+
+
 // form.jade:form-matrix compiled template
 templatizer["form"]["form-matrix"] = function tmpl_form_form_matrix(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
@@ -2510,10 +2534,11 @@ templatizer["get-involved-list"]["intro-text"] = function tmpl_get_involved_list
 // get-involved-list.jade:get-involved-item compiled template
 templatizer["get-involved-list"]["get-involved-item"] = function tmpl_get_involved_list_get_involved_item(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<div" + jade.cls([ "get-involved-item", data.modifiers ], [ null, true ]) + '><div class="get-involved-item-category">' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</div><div class="get-involved-item-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
-    data.button.modifiers = [ "action", "get-involved-item-button" ];
-    buf.push(templatizer["get-involved-list"]["button"](data.button));
-    buf.push("</div>");
+    buf.push("<li" + jade.cls([ "get-involved-list-item", data.modifiers ], [ null, true ]) + '><div class="get-involved-list-item-category">' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</div><div class="get-involved-list-item-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</div>");
+    var button = JSON.parse(JSON.stringify(data.button));
+    button.modifiers = [ "action", "get-involved-list-item-button" ];
+    buf.push(templatizer["get-involved-list"]["button"](button));
+    buf.push("</li>");
     return buf.join("");
 };
 
@@ -2535,7 +2560,7 @@ templatizer["get-involved-list"]["get-involved-list"] = function tmpl_get_involv
             if ("number" == typeof $$obj.length) {
                 for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
                     var item = $$obj[$index];
-                    buf.push('<div class="get-involved-nav-item"><div class="get-involved-item-title">' + (null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
+                    buf.push('<div class="get-involved-nav-item"><div class="get-involved-list-item-title">' + (null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
                     var button = JSON.parse(JSON.stringify(item.button));
                     button.modifiers = [ "action" ];
                     buf.push(templatizer["get-involved-list"]["button"](button));
@@ -2546,7 +2571,7 @@ templatizer["get-involved-list"]["get-involved-list"] = function tmpl_get_involv
                 for (var $index in $$obj) {
                     $$l++;
                     var item = $$obj[$index];
-                    buf.push('<div class="get-involved-nav-item"><div class="get-involved-item-title">' + (null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
+                    buf.push('<div class="get-involved-nav-item"><div class="get-involved-list-item-title">' + (null == (jade_interp = item.title) ? "" : jade_interp) + "</div>");
                     var button = JSON.parse(JSON.stringify(item.button));
                     button.modifiers = [ "action" ];
                     buf.push(templatizer["get-involved-list"]["button"](button));
@@ -2556,7 +2581,7 @@ templatizer["get-involved-list"]["get-involved-list"] = function tmpl_get_involv
         }).call(this);
         buf.push("</div>");
     }
-    buf.push('<div class="get-involved-items">');
+    buf.push('<ul class="get-involved-list-items">');
     (function() {
         var $$obj = data.items;
         if ("number" == typeof $$obj.length) {
@@ -2573,7 +2598,7 @@ templatizer["get-involved-list"]["get-involved-list"] = function tmpl_get_involv
             }
         }
     }).call(this);
-    buf.push("</div></div>");
+    buf.push("</ul></div>");
     return buf.join("");
 };
 
@@ -2701,7 +2726,13 @@ templatizer["jumbotron"] = function tmpl_jumbotron(locals) {
 // jumbotron.jade:jumbotron compiled template
 templatizer["jumbotron"]["jumbotron"] = function tmpl_jumbotron_jumbotron(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<a" + jade.attr("href", data.href, true, false) + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + ' class="jumbotron"><div class="jumbotron-wrapper"><div class="layout-wrapper jumbotron-content layout-outside"><h2 class="jumbotron-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h2><div class="jumbotron-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div></div></div></a>");
+    buf.push("<a" + jade.attr("href", data.href, true, false) + jade.attr("style", "background-image: url(" + data.image + ");", true, false) + jade.attr("id", data.id, true, false) + ' class="jumbotron"><div' + jade.cls([ "jumbotron-wrapper", data.modifiers ], [ null, true ]) + '><div class="layout-wrapper jumbotron-content layout-outside"><h2 class="jumbotron-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h2><div class="jumbotron-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
+    if (block) {
+        buf.push('<div class="jumbotron-block">');
+        block && block(buf);
+        buf.push("</div>");
+    }
+    buf.push("</div></div></a>");
     return buf.join("");
 };
 

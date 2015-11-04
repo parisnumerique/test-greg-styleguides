@@ -7,7 +7,12 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
-## Next release
+## 1.1.5 (2015-11-04)
+
+* module `get-involved-list`: fixed collision with get-involved
+* module `jumbotron`:
+  * added `no-overlay` modifier to remove overlay
+  * added conditional `block`
 
 ## 1.1.4 (2015-11-03)
 

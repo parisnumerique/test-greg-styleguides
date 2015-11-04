@@ -1,6 +1,8 @@
 {
   "index": {
     "defaults": {
+      "action": "",
+      "method": "POST",
       "items": [
         {
           "type": "text",
