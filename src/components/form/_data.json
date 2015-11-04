@@ -1,8 +1,8 @@
 {
   "index": {
     "defaults": {
-      "action": "error.json",
-      "method": "GET",
+      "action": "",
+      "method": "POST",
       "items": [
         {
           "type": "text",
