@@ -9,6 +9,12 @@ Let's take the `x.β.α` version number:
 
 ## Next release
 
+## 1.1.5 (coming soon)
+
+* module `jumbotron`:
+  * added `no-overlay` modifier to remove overlay
+  * added conditional `block`
+
 ## 1.1.4 (2015-11-03)
 
 * accessibility improvements

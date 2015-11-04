@@ -16,3 +16,11 @@ h2 Test avec image claire
   include jumbotron
 
   +jumbotron(#{JSON.stringify(with_image_white, null, 2)})
+
+h2 Sans dégradé de couleur
+.lsg-module
+  +jumbotron(with_no_overlay)
++code({language: "jade"}).
+  include jumbotron
+
+  +jumbotron(#{JSON.stringify(with_no_overlay, null, 2)})
