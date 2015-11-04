@@ -11,6 +11,14 @@
       "image": "image-white.jpg",
       "title": "Titre",
       "text": "Texte"
+    },
+    "with_no_overlay": {
+      "id": "no-overlay",
+      "href": "#",
+      "image": "image.jpg",
+      "modifiers": ["no-overlay"],
+      "title": "Titre",
+      "text": "Texte"
     }
   }
 }
