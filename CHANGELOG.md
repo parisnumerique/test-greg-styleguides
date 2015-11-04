@@ -11,6 +11,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.1.5 (coming soon)
 
+* module `get-involved-list`: fixed collision with get-involved
 * module `jumbotron`:
   * added `no-overlay` modifier to remove overlay
   * added conditional `block`
