@@ -44,12 +44,13 @@ mixin sections-panel(data)
                       .sections-panel-subnav-item-title= subitem.title
                       .sections-panel-subnav-item-text= subitem.text
         a.sections-panel-back.sections-panel-subnav-back(href=data.base)
+          span.accessibility_label
     .sections-panel-content#sections-panel-content
       .sections-panel-content-wrapper
         if has_content
           +sections-panel-content(data.content)
       a.sections-panel-back.sections-panel-content-back(href=current_item ? current_item.href : "")
-        span.hidden-accessibly Fermer
+        span.accessibility_label
 
 
 mixin sections-panel-content(data)

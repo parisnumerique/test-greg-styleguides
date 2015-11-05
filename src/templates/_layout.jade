@@ -4,7 +4,7 @@ html.no-js(lang="fr")
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
 
-    - var data = data || {}
+    - data = data || {}
 
     if data.title
       title= data.title + " – Paris.fr"
@@ -41,8 +41,8 @@ html.no-js(lang="fr")
       each link in data.linkTags
         link&attributes(link)
 
-  - var bodyModifiers = data.bodyModifiers || []
-  - var bodyAttributes = data.bodyAttributes || {}
+  - bodyModifiers = data.bodyModifiers || []
+  - bodyAttributes = data.bodyAttributes || {}
 
   body(class=bodyModifiers)&attributes(bodyAttributes)
     if data.notices && data.notices.old_browsers

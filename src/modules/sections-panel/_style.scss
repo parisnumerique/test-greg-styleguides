@@ -97,10 +97,6 @@ $sections-panel-subnav-offset: 200px;
   }
 }
 
-.sections-panel-back {
-  //display: none;
-}
-
 .sections-panel-subnav-default {
 
   h2 {
@@ -262,6 +258,9 @@ $sections-panel-subnav-offset: 200px;
       @extend %icon-arrow-left;
     }
     &:hover {color: $black;}
+    .accessibility_label {
+      @include hidden-accessibly;
+    }
   }
 
   .sections-panel-subnav.has-current-item {
@@ -320,6 +319,16 @@ $sections-panel-subnav-offset: 200px;
 
   .sections-panel-intro {
     max-width: 550px;
+  }
+
+  .sections-panel-back {
+    position: relative;
+    left: -9999px;
+    top: 10px;
+
+    &:focus {
+      left: 0;
+    }
   }
 
   .sections-panel-nav {

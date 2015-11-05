@@ -25,7 +25,8 @@ Paris.sectionsPanel = (function(){
       $nav, $subnav, $content,
       $navItems, $navItemsLinks, $navMore,
       $subnavSections, $subnavSectionsLinks, $subnavDefault,
-      $contentWrapper, $contentBack,
+      $contentWrapper,
+      $backButtons,
       root,
       currentLevel = "nav",
       heights = {};
@@ -45,7 +46,8 @@ Paris.sectionsPanel = (function(){
 
       $content = $el.find('.sections-panel-content');
       $contentWrapper = $content.find('.sections-panel-content-wrapper');
-      $contentBack = $content.find('.sections-panel-content-back');
+
+      $backButtons = $el.find('.sections-panel-back');
 
       PubSub.subscribe('responsive.resize', setHeight);
       PubSub.subscribe('responsive.' + options.breakpoint + '.enable', enableSmall);
@@ -61,8 +63,6 @@ Paris.sectionsPanel = (function(){
       // Keyboard navigation
       $(document).keydown(onKeyDown);
       $(document).keyup(onKeyUp);
-
-      addAccessibilityButtons();
 
       $el.data('api', api);
     }
@@ -101,11 +101,13 @@ Paris.sectionsPanel = (function(){
     function enableSmall() {
       $navItemsLinks.off('click', onClickNavLink);
       $subnavSectionsLinks.off('click', onClickSubnavLink);
+      $backButtons.off('click', onClickBack);
     }
 
     function disableSmall() {
       $navItemsLinks.on('click', onClickNavLink);
       $subnavSectionsLinks.on('click', onClickSubnavLink);
+      $backButtons.on('click', onClickBack);
     }
 
     function onClickNavLink(e) {
@@ -139,6 +141,8 @@ Paris.sectionsPanel = (function(){
         image: $currentNavItemsLink.data('background'),
         title: $currentNavItemsLink.text()
       });
+
+      $backButtons.filter('.sections-panel-subnav-back').find('.accessibility_label').text(Paris.i18n.t("close_nav", [$currentNavItemsLink.text()]));
 
       $('title').text($currentNavItemsLink.data('pageTitle') + " - Paris.fr");
 
@@ -203,8 +207,8 @@ Paris.sectionsPanel = (function(){
 
       var $currentNavItemsLink = $navItemsLinks.filter('.current');
       var $currentSubnavSectionsLink = $subnavSectionsLinks.filter('.current');
-      $contentBack.attr('href', $currentNavItemsLink.attr('href'));
       var currentTitle = $currentSubnavSectionsLink.find('.sections-panel-subnav-item-title').text();
+      $backButtons.filter('.sections-panel-content-back').attr('href', $currentNavItemsLink.attr('href')).find('.accessibility_label').text(Paris.i18n.t("close_nav", [currentTitle]));
       PubSub.publish("sections-panel:change", {
         image: $currentSubnavSectionsLink.data('background'),
         title: currentTitle,
@@ -214,7 +218,6 @@ Paris.sectionsPanel = (function(){
           text: $currentNavItemsLink.text()
         }
       });
-
 
       $('title').text($currentSubnavSectionsLink.data('pageTitle') + " - Paris.fr");
 
@@ -264,6 +267,15 @@ Paris.sectionsPanel = (function(){
       }));
     }
 
+    function onClickBack(e){
+      e.preventDefault();
+      if (currentLevel === 'subnav') {
+        closeSubnavSection();
+      } else if (currentLevel === 'content') {
+        closeContent();
+      }
+    }
+
     function onKeyDown(e) {
       // only if the current element has the focus
       var hasFocus = $(':focus').closest($el).length === 1;
@@ -302,7 +314,7 @@ Paris.sectionsPanel = (function(){
           if (currentLevel === "nav") {
             $currentLinkList = $nav.find('a');
           } else if (currentLevel === "subnav") {
-            $currentLinkList = $currentLink.closest('.sections-panel-subnav-section').find('a');
+            $currentLinkList = $subnav.find('.sections-panel-subnav-section:visible').find('a').add('.sections-panel-subnav-back');
           } else if (currentLevel === "content") {
             $currentLinkList = $currentLink.closest('.sections-panel-content').find('a');
           }
@@ -316,19 +328,6 @@ Paris.sectionsPanel = (function(){
           $el.find('a:focus').click();
           break;
       }
-    }
-
-    function addAccessibilityButtons(){
-    //  $subnavSections.each(function(){
-    //    var $this = $(this);
-    //    var text = Paris.i18n.t("close_nav", [$this.find('.sections-panel-subnav-title').text()]);
-    //    $this.append('<button type="button" class="button close">' + text + '</button>');
-    //  });
-    //  $subnavSections.each(function(){
-    //    var $this = $(this);
-    //    var text = Paris.i18n.t("close_nav", [$this.find('.sections-panel-subnav-title').text()]);
-    //    $this.append('<button type="button" class="button close">' + text + '</button>');
-    //  });
     }
 
 

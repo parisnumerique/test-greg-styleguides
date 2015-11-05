@@ -40,7 +40,6 @@ module.exports = {
       'postit',
       'search-results-list',
       'sections-panel',
-      'sections-panel-content',
       'share'
     ]
   },
