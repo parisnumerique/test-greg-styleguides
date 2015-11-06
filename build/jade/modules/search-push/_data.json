@@ -1,10 +1,11 @@
 {
   "index": {
     "defaults": {
-      "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+      "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
       "button": {
         "href": "#",
-        "text": "Rechercher"
+        "text": "Rechercher",
+        "title": "Rechercher sur le site"
       }
     }
   }

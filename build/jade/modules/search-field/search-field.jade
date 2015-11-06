@@ -5,7 +5,7 @@ mixin search-field(data)
   - if (data.around) {modifiers.push("with-around");}
   form.search-field(class=modifiers action=data.action method=data.method ? data.method : "get" autocomplete="off")
     input.search-field-input(id=data.input.id type="text" name="search" placeholder=data.input.placeholder title=data.input.placeholder value=data.input.value)
-    button.search-field-submit(type="submit")
+    button.search-field-submit(type="submit" title=data.submit.title)
       if data.submit.icon
         span= data.submit.text
         i.icon.icon-search(aria-hidden="true")
