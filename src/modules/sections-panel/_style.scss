@@ -188,7 +188,8 @@ $sections-panel-subnav-offset: 200px;
 }
 
 .sections-panel-content-wrapper {
-  > * + *,
+  .sections-panel-intro + .sections-panel-content-items,
+  .component,
   .component + .component {
     @extend %sections-panel-separator;
   }
@@ -322,8 +323,10 @@ $sections-panel-subnav-offset: 200px;
   }
 
   .sections-panel-back {
-    position: relative;
+    color: $black;
     left: -9999px;
+    position: relative;
+    text-decoration: none;
     top: 10px;
 
     &:focus {
