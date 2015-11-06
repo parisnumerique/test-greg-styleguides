@@ -12,18 +12,14 @@
         {
           "href": "#",
           "image": {
-            "src": "hands.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
+            "src": "hands.png"
           },
           "text": "Votez pour le budget participatif"
         },
         {
           "href": "#",
           "image": {
-            "src": "cards.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
+            "src": "cards.png"
           },
           "text": "E-pétition, prenez la main"
         }
@@ -42,18 +38,14 @@
           "modifiers": ["dark"],
           "href": "#",
           "image": {
-            "src": "hands-dark.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
+            "src": "hands-dark.png"
           },
           "text": "Votez pour le budget participatif"
         },
         {
           "href": "#",
           "image": {
-            "src": "cards.png",
-            "title": "Titre",
-            "credit": "Mairie de Paris / DICOM"
+            "src": "cards.png"
           },
           "text": "E-pétition, prenez la main"
         }
