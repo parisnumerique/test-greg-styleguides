@@ -18,12 +18,17 @@ mixin get-involved-list(data)
       +heading(data.heading)
     if data.nav
       .get-involved-nav
-        each item in data.nav.items
-          .get-involved-nav-item
-            .get-involved-list-item-title!= item.title
-            - var button = JSON.parse(JSON.stringify(item.button)) // clone the data object
-            - button.modifiers = ["action"] // overwrite the modifiers
-            +button(button)
+        if data.nav.title
+          h3.hidden-accessibly= data.nav.title
+        ul.get-involved-nav-items
+          each item in data.nav.items
+            li.get-involved-nav-item
+              .get-involved-list-item-title!= item.title
+              - var button = JSON.parse(JSON.stringify(item.button)) // clone the data object
+              - button.modifiers = ["action"] // overwrite the modifiers
+              +button(button)
+    if data.items_title
+      h3.hidden-accessibly= data.items_title
     ul.get-involved-list-items
       each item in data.items
         +get-involved-item(item)

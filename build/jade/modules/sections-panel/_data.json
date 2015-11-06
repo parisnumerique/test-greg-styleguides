@@ -11,6 +11,7 @@
             "slug": "culture-patrimoine",
             "subnav": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Culture et patrimoine\".",
               "items": [
                 {
                   "href": "./content.html",
@@ -64,6 +65,7 @@
             "slug": "deplacements-stationnement",
             "subnav": {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat. Morbi molestie interdum dignissim. Quisque justo lectus, dictum quis semper sed, mattis vel metus. Fusce nec orci et enim mattis sagittis eleifend eget odio. Nunc posuere lacinia lacinia.",
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Déplacements et stationnement\".",
               "items": [
                 {
                   "href": "./content.html",
@@ -86,49 +88,73 @@
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Éducation",
-            "slug": "education"
+            "slug": "education",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Éducation\"."
+            }
           },
           {
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Emploi",
-            "slug": "emploi"
+            "slug": "emploi",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Emploi\"."
+            }
           },
           {
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Espaces verts et environnement",
-            "slug": "espaces-verts-environnement"
+            "slug": "espaces-verts-environnement",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Espaces verts et environnement\"."
+            }
           },
           {
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Logement",
-            "slug": "logement"
+            "slug": "logement",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Logement\"."
+            }
           },
           {
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Solidarités",
-            "slug": "solidarites"
+            "slug": "solidarites",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Solidarités\"."
+            }
           },
           {
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Sports et loisirs",
-            "slug": "sports-loisirs"
+            "slug": "sports-loisirs",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Sports et loisirs\"."
+            }
           },
           {
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Urbanisme",
-            "slug": "urbanisme"
+            "slug": "urbanisme",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Urbanisme\"."
+            }
           },
           {
             "href": "#",
             "background": "../modules/hub-heading/hub-heading.png",
             "text": "Aides, allocations et démarches",
-            "slug": "aides-allocations-demarches"
+            "slug": "aides-allocations-demarches",
+            "subnav": {
+              "accessibility_text": "Pour fermer ce menu, utiliser la touche échap ou le bouton \"fermer le menu Aides, allocations et démarches\"."
+            }
           }
         ],
         "more": {

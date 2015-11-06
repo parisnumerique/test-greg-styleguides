@@ -396,10 +396,11 @@
         }
       },
       "search_push": {
-        "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
         "button": {
           "href": "../search",
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
         }
       },
       "get_involved": {
@@ -962,10 +963,11 @@
         }
       },
       "search_push": {
-        "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
         "button": {
           "href": "../search",
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
         }
       },
       "get_involved": {
@@ -1471,10 +1473,11 @@
         }
       },
       "search_push": {
-        "text": "Vous n’avez pas trouvé ce que vous cherchez ?",
+        "title": "Vous n’avez pas trouvé ce que vous cherchez ?",
         "button": {
           "href": "../search",
-          "text": "Rechercher"
+          "text": "Rechercher",
+          "title": "Rechercher sur le site"
         }
       },
       "get_involved": {
