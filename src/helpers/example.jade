@@ -7,12 +7,10 @@ mixin example(ex)
   if ex.description
     p.lsg-example-description!= ex.description
 
-  if ex.attrs
-    .lsg-elem&attributes(ex.attrs)
-      +#{type}(ex.data)
-  else
-    .lsg-elem
-      +#{type}(ex.data)
+  - ex.attrs = ex.attrs || {}
+
+  .lsg-elem&attributes(ex.attrs)
+    +#{type}(ex.data)
 
   +code("jade").
     include #{type}

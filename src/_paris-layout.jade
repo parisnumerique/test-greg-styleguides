@@ -8,10 +8,14 @@ html.no-js(lang="fr")
     link(href="/stylesheets/lsg.css" type="text/css" rel="stylesheet")
     link(href="/stylesheets/prism.css" type="text/css" rel="stylesheet")
 
-    link(href="/stylesheets/paris.css" type="text/css" rel="stylesheet")
+    - var css = cssTheme ? "paris-"+cssTheme+".css" : "paris.css"
+    link#theme(href="/stylesheets/#{css}" type="text/css" rel="stylesheet")
+
     script(src="/javascript/modernizr.custom.js")
 
-  body
+  - bodyAttributes = bodyAttributes || {}
+
+  body&attributes(bodyAttributes)
     .lsg-content-wrapper
       block main
 

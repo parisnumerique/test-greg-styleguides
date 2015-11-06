@@ -2,6 +2,7 @@
   "index": {
     "type": "error-heading",
     "description": "",
+    "cssTheme": "minitel",
     "examples": [{
       "title": "Standard",
       "description": "",
