@@ -1,6 +1,11 @@
 {
   "index": {
-    "defaults": {
-    }
+    "type": "",
+    "description": "",
+    "examples": [{
+      "title": "",
+      "description": "",
+      "data": {}
+    }]
   }
 }

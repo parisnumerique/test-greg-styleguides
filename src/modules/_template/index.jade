@@ -1,3 +1,17 @@
 include my-module
 
 include ../../helpers/preview
+
+//- for examples with block
+append elements
+  h2.lsg-example-title Title
+
+  .lsg-elem
+    +my-module({"title": "Example"})
+      p Block
+
+  +code("jade").
+    include my-module
+
+    +my-module(#{JSON.stringify({"title": "Example"})})
+      p Block
