@@ -33,7 +33,8 @@
         "placeholder": "Rechercher un nom..."
       },
       "submit": {
-        "text": "Ok"
+        "text": "Ok",
+        "title": "Valider la recherche par nom"
       }
     }
   }

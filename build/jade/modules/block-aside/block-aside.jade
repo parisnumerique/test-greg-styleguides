@@ -1,7 +1,7 @@
 mixin block-aside(data)
   .block-aside(class=data.modifiers)
     if data.title
-      h2.block-aside-title= data.title
+      h3.block-aside-title(id=data.title_id)= data.title
     .block-aside-content
       if block
         block
