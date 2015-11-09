@@ -2,9 +2,12 @@
   "index": {
     "type": "",
     "description": "",
+    "cssTheme": "",
+    "bodyAttributes": {},
     "examples": [{
       "title": "",
       "description": "",
+      "attrs": {},
       "data": {}
     }]
   }
