@@ -7,6 +7,12 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.2.0 (2015-11-10)
+
+* new UI for the styleguide documentation
+* module `get-involved`: removed `title` from item
+* component `video`: added `title`
+
 ## 1.1.6 (2015-11-06)
 
 * accessibility improvements (mainly on `sections-panel` module)
