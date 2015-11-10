@@ -12,6 +12,7 @@
     "algoliasearch": "~3.3.2",
     "algoliasearch-helper": "^2.2.0",
     "bootstrap": "^3.3.2",
+    "breakpoint-sass": "^2.6.1",
     "browserify": "^9.0.3",
     "fastclick": "~1.0.6",
     "flickity-imagesloaded": "^1.0.1",

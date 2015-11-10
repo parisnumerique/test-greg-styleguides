@@ -48,6 +48,7 @@ module.exports = {
     output: buildOutput,
     assets: {
       css: join(buildOutput, 'assets', 'stylesheets'),
+      cssExpanded: join(buildOutput, 'assets', 'stylesheets', 'expanded'),
       javascript: join(buildOutput, 'assets', 'javascript'),
       fonts: join(buildOutput, 'assets', 'fonts'),
       images: join(buildOutput, 'assets', 'images'),
