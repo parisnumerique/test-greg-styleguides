@@ -1,5 +1,75 @@
 # Changelog
 
+## Versioning system
+
+Let's take the `x.β.α` version number:
+* `α` is for small fixes that don't involve any template update, mainly css evolution
+* `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
+* `x` is for major release involving a more careful integration of the styleguide
+
+## 1.2.0 (2015-11-10)
+
+* new UI for the styleguide documentation
+* module `get-involved`: removed `title` from item
+* component `video`: added `title`
+
+## 1.1.6 (2015-11-06)
+
+* accessibility improvements (mainly on `sections-panel` module)
+* upgraded harp to 0.19
+
+## 1.1.5 (2015-11-04)
+
+* module `get-involved-list`: fixed collision with get-involved
+* module `jumbotron`:
+  * added `no-overlay` modifier to remove overlay
+  * added conditional `block`
+
+## 1.1.4 (2015-11-03)
+
+* accessibility improvements
+* component `jecoute` and module `poll`: use `button` module
+* component `form` improved for release
+* template `subhome-news`: bugs fixed in `news-list` and header
+* improved Jade syntax in multiple files (always use `var`)
+
+## 1.1.3 (2015-11-02)
+
+* multiple accessibility improvements
+* templates `document`, `single-news` and `single-person` have been merged into `generic`
+* icon `.icon-file` renamed `.icon-dl` and added `.icon-file` `.icon-text`
+* component `jecoute`: added `upload` and `policy` feature
+
+## 1.1.2 (2015-10-02)
+
+* same as 1.1.1, but with updated build
+
+## 1.1.1 (2015-10-02)
+
+* module `block-aside-checkboxes`: fix checkbox visibility on Chrome
+* component `gallery`: add `clear: both`;
+
+## 1.1.0 (2015-09-29)
+
+* remove template jade from build
+  * template js is still in the build
+* component `form`: add missing .component class
+* component `table`: style `a` tags as in text component
+* template `list-person`:
+  * fix js error on empty search
+  * correct page number in url query
+
+## 1.0.8 (2015-09-16)
+
+* prod wrapper: allow `meta` and `link` tags injection
+* update `templatizer` to 2.0.2
+* component `form` added
+* component `gallery` added
+* component `postit`: added background color
+* module `block-content-jecoute`: text can now contain links
+* module `block-aside-checkboxes`: replace checkbox input by `a` tag for SEO
+* template `list-persons`: improved search javascript
+
 ## 1.0.7 (2015-08-03)
 
 * component `postit`: added `title` to data
@@ -147,7 +217,11 @@
 * component `jecoute`: fixed input placeholder
 * module `news-card`: fixed display without image
 * module `rheader`: look for buttons with `data-action="open-search"`
-* module `search-push`: override modifiers, added `data-action`, improved CSS
+* module `search-push`:
+  * override modifiers
+  * added `data-action`
+  * added `aria-controls` to search button
+  * improved CSS
 * template `subhome-news`: modified `search_push.button` data
 
 ## 0.13.3 (2015-06-19)

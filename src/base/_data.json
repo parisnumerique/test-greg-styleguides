@@ -1,7 +1,4 @@
 {
-  "index": {
-    "title": "Sommaire"
-  },
   "colors": {
     "title": "Couleurs"
   },
@@ -33,11 +30,13 @@
       "dailymotion",
       "facebook",
       "favorites",
-      "file",
       "instagram",
+      "dl",
       "link",
       "mail",
       "marker",
+      "file",
+      "text",
       "pdf",
       "play",
       "profile",

@@ -3,8 +3,18 @@
   border-top: none;
   clear: both;
 
-  .jecoute-title {
+  p em,
+  .jecoute-message {
+    color: $color-secondary;
+    font-style: normal;
+    font-weight: 500;
+  }
 
+  .text-error {
+    color: $color-primary;
+  }
+
+  .jecoute-title {
     html.flexbox & {
       display: flex;
       justify-content: flex-start;
@@ -26,7 +36,7 @@
       }
     }
 
-    > p {
+    > h2 {
       color: $color-secondary;
       font-size: 17px;
       font-weight: 500;
@@ -54,6 +64,19 @@
     display: block;
     max-width:570px;
 
+    p {
+      color: $gray4D;
+      font-size: 15px;
+      line-height: 22px;
+
+      a:not(.button) {
+        color: $color-secondary;
+        text-decoration: underline;
+
+        &:hover { text-decoration: none; }
+      }
+    }
+
     > textarea,
     > input {
       border: none;
@@ -80,6 +103,89 @@
     > input {
       padding: 10px 20px;
     }
+
+    > .jecoute-upload {
+
+      > label {
+
+        input[type="file"] {
+          left: -9999px;
+          position: absolute;
+        }
+      }
+
+      output {
+        display: block;
+
+        .output-items, .output-item {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .output-items {
+          padding-left: 30px;
+        }
+
+        .output-item {
+          color: $gray33;
+          display: block;
+          font-size: 16px;
+          line-height: 25px;
+
+          &:before {
+            @extend %icon-font;
+            @extend %icon-text;
+
+            float: left;
+            font-size: 1.3em;
+            line-height: inherit;
+            padding-right: 15px;
+            pointer-events: none;
+          }
+
+          i {
+            color: $gray66;
+            font-size: 14px;
+            margin-left: 10px;
+          }
+
+          .output-item-remove {
+            border: 1px solid;
+            border-radius: 50%;
+            color: $gray66;
+            cursor: pointer;
+            margin-left: 15px;
+            vertical-align: middle;
+
+            &:hover {
+              color: $gray33;
+              transition: color 0.35s ease;
+            }
+          }
+        }
+      }
+    }
+
+    > .jecoute-policy {
+
+      label {
+        cursor: pointer;
+
+        input {
+          cursor: pointer;
+          margin: 2px 10px 2px 0;
+        }
+
+        span {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .jecoute-message {
+    display: none;
   }
 
   @include large-and-medium {

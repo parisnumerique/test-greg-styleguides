@@ -8,6 +8,10 @@ Paris.i18n.locales = {
       "twitter": "Partager sur Twitter",
       "mail": "Partager par email"
     },
+    "favorites": {
+      "add": "ajouter aux favoris",
+      "remove": "enlever des favoris"
+    },
     "search_results": {
       "search": "Recherche",
       "title": {
@@ -30,8 +34,16 @@ Paris.i18n.locales = {
       "button_view": "Voir la fiche"
     },
     "pagination": {
+      "label": "Pagination des résultats",
       "prev": "Page précédente",
-      "next": "Page suivante"
+      "next": "Page suivante",
+      "link_title": "Aller à la page ${page}"
+    },
+    "jecoute": {
+      "error": {
+        "policy": "Veuillez accepter la charte.",
+        "file_size": "Le poids total des pièces jointes est trop élevé."
+      }
     },
     "alerts": {
       "subscribe": "Je m’abonne à l’alerte pour recevoir toutes les informations sur ce sujet",
@@ -39,6 +51,10 @@ Paris.i18n.locales = {
     },
     "postit": {
       "default_title": "Informations complémentaires"
-    }
+    },
+    "active": "actif",
+    "inactive": "inactif",
+    "new_window": "nouvelle fenêtre",
+    "close_nav": "fermer le menu \"{0}\""
   }
 };

@@ -1,3 +1,19 @@
-include component
+include my-component
 
-+component(defaults)
+include ../../helpers/preview
+
+//- for examples with block
+append elements
+  h2.lsg-example-title Title
+
+  p.lsg-elem-desc Description
+
+  .lsg-elem
+    +my-component({"title": "Example"})
+      p Block
+
+  +code("jade").
+    include my-component
+
+    +my-component(#{JSON.stringify({"title": "Example"})})
+      p Block

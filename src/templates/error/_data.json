@@ -20,7 +20,8 @@
       "heading": {
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "background": "../../modules/error-heading/animation.gif",
         "title": "Erreur 404 : page non trouvée",
@@ -131,7 +132,7 @@
           },
           "link": {
             "href": "#",
-            "text": "Autres newsletters et alertes"
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
           }
         },
         "jecoute": {
@@ -150,6 +151,7 @@
             {
               "icon": "twitter",
               "count": "219 000",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Twitter",
@@ -159,6 +161,7 @@
             {
               "icon": "facebook",
               "count": "2 508 576",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Facebook",
@@ -168,6 +171,7 @@
             {
               "icon": "instagram",
               "count": "16 449",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -177,6 +181,7 @@
             {
               "icon": "dailymotion",
               "count": "5 442",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Dailymotion",
@@ -190,14 +195,17 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

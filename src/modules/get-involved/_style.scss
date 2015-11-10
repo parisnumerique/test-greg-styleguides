@@ -1,7 +1,16 @@
 .get-involved {
 }
 
-.get-involved-content {
+.get-involved-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.get-involved-item {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 .get-involved-card {
@@ -10,15 +19,9 @@
   background-size: cover;
   border-radius: 5px;
   display: block;
-  height: 200px;
+  height: 220px;
   text-decoration: none;
   transition: opacity 0.35s ease;
-
-  @include small {
-    & + .get-involved-card {
-      margin-top: 20px;
-    }
-  }
 
   &:hover {
     opacity: 0.8;
@@ -38,34 +41,6 @@
   }
 }
 
-@include large-and-medium {
-  .get-involved-content {
-    @include container;
-  }
-
-  .get-involved-card {
-    @include span(8);
-
-    &:last-child {
-      @include last;
-    }
-  }
-}
-
-@include large-and-medium {
-  .get-involved-content {
-    @include container;
-  }
-
-  .get-involved-card {
-    @include span(8);
-
-    &:last-child {
-      @include last;
-    }
-  }
-}
-
 .get-involved-text {
   color: $color-secondary-variant;
   font-size: 20px;
@@ -73,4 +48,32 @@
   margin: 0;
   padding: 25px;
   transition: color 0.35s ease;
+}
+
+@include small {
+  .get-involved-item + .get-involved-item {
+    margin-top: 20px;
+  }
+}
+
+@include large-and-medium {
+  .get-involved-items {
+    @include container;
+  }
+
+  .get-involved-item {
+    @include span(8);
+    &:last-child {@include last;}
+  }
+}
+
+@include large-and-medium {
+  .get-involved-items {
+    @include container;
+  }
+
+  .get-involved-item {
+    @include span(8);
+    &:last-child {@include last;}
+  }
 }

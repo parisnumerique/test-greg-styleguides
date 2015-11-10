@@ -6,7 +6,8 @@
 
   html.no-js &,
   html.no-touch & {
-    &:hover {
+    &:hover,
+    &:focus {
       color: $white;
 
       .news-card-wrapper {
@@ -131,7 +132,7 @@ html.no-touch {
     position: absolute;
     bottom: -20px;
     transform: scaleY(0);
-    transition: .15s ease all;
+    transition: all .15s ease;
     width: 100%;
   }
 
@@ -151,9 +152,8 @@ html.no-touch {
       border-radius: 0 5px 5px 0;
     }
 
-    .counter-value {
-      font-weight: 700;
-    }
+    .counter-value {font-weight: 700;}
+    .counter-label {@include hidden-accessibly;}
     .icon {
       padding-right: 7px;
     }
@@ -186,13 +186,15 @@ html.no-touch {
       }
 
       html.no-js &:hover,
-      html.no-touch &:hover {
+      html.no-js &:focus,
+      html.no-touch &:hover,
+      html.no-touch &:focus {
         .news-card-wrapper {
           transform: none;
         }
 
         .news-card-image {
-          transition: transform 10s linear;
+          transition: transform 5s linear;
           transform: translateX(20%);
 
           &:after {

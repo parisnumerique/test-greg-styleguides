@@ -48,7 +48,7 @@ Paris.document = (function(){
     function renderPostit(data){
       data.title = data.title || Paris.i18n.t("postit/default_title");
       data.block = data.block || data.contenu;
-      var postit = Paris.templates.templatizer['postit']['postit'](data);
+      var postit = Paris.templates['postit']['postit'](data);
       $('.components').prepend(postit);
       $anchors.data('api').addItem({
         id: "postit",

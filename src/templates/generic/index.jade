@@ -1,6 +1,8 @@
 extends ../../layouts/stack/stack
 
 include ../../modules/anchors-list/anchors-list
+include ../../modules/block-aside-contact/block-aside-contact
+include ../../modules/block-aside/block-aside
 include ../../modules/block-content-jecoute/block-content-jecoute
 include ../../modules/block-content-newsletter/block-content-newsletter
 include ../../modules/block-content-social/block-content-social
@@ -12,12 +14,21 @@ include ../../modules/cross-content/cross-content
 include ../../modules/document-heading/document-heading
 include ../../modules/footer/footer
 include ../../modules/heading/heading
+include ../../modules/last-update/last-update
+include ../../modules/news-list/news-list
 include ../../modules/notice/notice
+include ../../modules/poll/poll
 include ../../modules/rheader/rheader
+include ../../modules/share/share
+include ../../modules/skip-links/skip-links
 
 include ../../components/components
 
-append content
+append header
+  if data.skip_links
+    +skip-links(data.skip_links)
+
+append header
   +rheader(data.rheader)
 
 append content
@@ -29,23 +40,57 @@ append content
     .layout-wrapper
       +breadcrumbs(data.breadcrumbs)
 
+//- Main content (always used)
 append content
-  .layout-content.layout-adjacent-before
+  .layout-content.layout-adjacent-before(class=mainContentModifiers)
     .layout-left-col
       .layout-wrapper
         aside.layout-aside
           .aside-wrapper
-            +anchors-list(data.aside.anchors_list)
+            if data.aside.anchors_list
+              +anchors-list(data.aside.anchors_list)
+            if data.aside.picture
+              +block-aside(data.aside.picture)
+            if data.aside.permanence
+              +block-aside(data.aside.permanence)
+            if data.aside.contact
+              +block-aside-contact(data.aside.contact)
+            if data.aside.share
+              +share(data.aside.share)
         .layout-content.components
+          - if (data.last_update) {data.components.push({"type": "last-update", "data": data.last_update});}
           - if (data.jecoute) {data.components.push({"type": "jecoute", "data": data.jecoute});}
           each component in data.components
             +#{component.type}(component.data)
 
+//- Related news (used for news, person)
+append content
+  if data.related
+    .layout-content
+      .layout-wrapper
+        +heading(data.related.heading)
+        +news-list(data.related.news)
+
+//- Most shared news (used for news)
+append content
+  if data.most_shared
+    .layout-content.layout-separate-after
+      .layout-wrapper
+        +heading(data.most_shared.heading)
+        +news-list(data.most_shared.news)
+
+//- Cross content (used for document, generic)
 append content
   if data.cross_content && data.cross_content.items && data.cross_content.items.length === 3
     .layout-content.layout-adjacent-before
       div
         +cross-content(data.cross_content)
+
+//- Poll (optionally used for document)
+append content
+  if data.poll
+    .layout-content.layout-adjacent-before
+      +poll(data.poll)
 
 append content
   .layout-content.color-secondary-background.layout-separate-after
@@ -59,13 +104,13 @@ append content
         .layout-content
           +block-content-social(data.connected.social)
 
-append content
+append footer
   .layout-content.layout-adjacent-before
     +footer(data.footer)
 
-append content
-  +button-top
+append footer
+  +button-top(data.button_top)
 
-append content
+append footer
   if data.notices && data.notices.cnil
     +notice(data.notices.cnil)

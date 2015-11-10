@@ -3,7 +3,8 @@
   margin-bottom: 90px; // absolute link = 50px + classic 40px
   position: relative;
 
-  h3 {
+  .news-push-title {
+    font-size: 1.17em;
     font-weight: 300;
     text-transform: uppercase;
     margin: 8px 0 32px;
@@ -104,6 +105,7 @@
         @extend %icon-arrow-light-right;
         font-size: 17px;
         padding-left: 8px;
+        speak: none;
         vertical-align: middle;
       }
     }

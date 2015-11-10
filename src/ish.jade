@@ -1,0 +1,29 @@
+.ish-header(role='banner')
+  .ish-controls
+    form.ish-current-size
+      | Size
+      input.ish-input(type='text', value='', data-unit='px')
+      | px /
+      input.ish-input(type='text', value='', data-unit='em')
+      | em
+    ul.ish-size-options
+      li
+        a(href="#", data-size="s") S
+      li
+        a(href='#', data-size="m") M
+      li
+        a(href='#', data-size="l") L
+      li
+        a(href='#', data-size="full") Full
+      li
+        a(href='#', data-size="random") Random
+      li
+        a(href='#', data-size="disco") Disco
+      li
+        a(href='#', data-size="hay") Hay!
+
+#ish-vp-wrap
+  #ish-cover
+  #ish-container
+    iframe#ish-viewport(src='', sandbox='allow-same-origin allow-scripts allow-forms')
+    #ish-rightpull

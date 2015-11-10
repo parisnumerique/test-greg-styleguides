@@ -1,11 +1,6 @@
 include button-top
-include ../../helpers/code
 
-h2 Standard
-p (voir en bas à gauche de l'écran)
-.lsg-module
-  +button-top(defaults)
-+code({language: "jade"}).
-  include button-top
+include ../../helpers/preview
 
-  +button-top(#{JSON.stringify(defaults, null, 2)})
+append elements
+	div(style="height: 1000px")

@@ -1,18 +1,18 @@
 .block-content {
   max-width: 600px;
 
+  a:not(.button) {
+    color: inherit;
+    border-color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
   &.color-secondary-background {
     color: $white;
-
-    a:not(.button) {
-      color: $white;
-      border-color: $white;
-      text-decoration: none;
-
-      &:hover {
-        border-color: transparent;
-      }
-    }
   }
 
   .block-content-title {
@@ -27,6 +27,11 @@
   .block-content-content {
     padding: 0;
     overflow: hidden;
+  }
+
+  .block-content-text {
+    margin: 0 0 15px;
+    max-width: 360px;
   }
 
 }

@@ -3,22 +3,17 @@ html.no-js(lang="fr")
   head
     meta(charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
-    if data && data.title
+
+    - data = data || {}
+
+    if data.title
       title= data.title + " – Paris.fr"
     else
       title= "Paris.fr"
 
-    if data && data.opengraph
-      each og in data.opengraph
-        meta&attributes(og)
-
-    if data && data.meta
-      each meta in data.meta
-        meta&attributes(meta)
-
     link(href="../../stylesheets/print.css" type="text/css" media="print" rel="stylesheet")
 
-    - css = data && data.theme ? "paris-"+data.theme+".css" : "paris.css"
+    - var css = data && data.theme ? "paris-"+data.theme+".css" : "paris.css"
     <!--[if !IE]>-->
     link#theme(href="../../stylesheets/#{css}" type="text/css" media="screen" rel="stylesheet")
     <!--<![endif]-->
@@ -37,9 +32,18 @@ html.no-js(lang="fr")
     link(rel="icon" href="../../favicon.png")
     meta(name="msapplication-TileColor" content="#dd275c")
     meta(name="msapplication-TileImage" content="../../tileicon.png")
-  - data = data || {}
+
+    if data.metaTags
+      each meta in data.metaTags
+        meta&attributes(meta)
+
+    if data.linkTags
+      each link in data.linkTags
+        link&attributes(link)
+
   - bodyModifiers = data.bodyModifiers || []
   - bodyAttributes = data.bodyAttributes || {}
+
   body(class=bodyModifiers)&attributes(bodyAttributes)
     if data.notices && data.notices.old_browsers
       <!--[if lt IE 9]>
@@ -52,3 +56,10 @@ html.no-js(lang="fr")
     script
       include ../javascript/config.js
     script(src="../../javascript/paris.js")
+    if data.additionalScripts
+      each script in data.additionalScripts
+        if script.src
+          script(src=script.src)
+        else if script.inline
+          script
+            != script.inline

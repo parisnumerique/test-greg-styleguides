@@ -3,6 +3,13 @@
     "data": {
       "title": "Ça glisse sur la patinoire de l’hôtel de ville",
       "bodyModifiers": ["fixed-nav"],
+      "skip_links": {
+        "items": [
+          {"href": "#content", "text": "Aller au contenu"},
+          {"href": "#navigation", "text": "Aller à la navigation"},
+          {"href": "#search", "text": "Aller à la recherche"}
+        ]
+      },
       "notices": {
         "old_browsers": "Votre navigateur est périmé. Il contient des failles de sécurité et pourrait ne pas afficher certaines fonctionnalités des sites internet récents. <a href=\"http://browsehappy.com\" target=\"_blank\">Découvrez comment mettre votre navigateur à jour</a>",
         "cnil": {
@@ -21,12 +28,13 @@
         "modifiers": ["fixed"],
         "logo": {
           "href": "../home/",
-          "text": "Paris"
+          "text": "Paris",
+          "title": "Retour à l’accueil – Paris"
         },
         "locales": [
-          {"href": "#fr", "text": "fr", "current": true},
-          {"href": "#en", "text": "en"},
-          {"href": "#es", "text": "es"}
+          {"href": "#fr", "lang": "fr", "text": "français", "current": true},
+          {"href": "#en", "lang": "en", "text": "English"},
+          {"href": "#es", "lang": "es", "text": "español"}
         ],
         "buttons": {
           "search": {
@@ -44,6 +52,7 @@
             "text": "Menu"
           }
         },
+        "navigation_label": "navigation principale",
         "items": [
           {"href": "../hub/", "text": "Services et infos pratiques"},
           {"href": "../subhome-news/", "text": "Actualités", "current": true},
@@ -69,14 +78,15 @@
               "placeholder": "Rechercher un service, une information..."
             },
             "submit": {
-              "text": "Rechercher",
+              "text": "Valider la recherche sur le site",
               "icon": true
             },
             "around": {
               "href": "http://meslieux.paris.fr",
               "text": "Autour de moi",
               "target": "_blank"
-            }
+            },
+            "close_label": "Fermer le moteur de recherche"
           },
           "results": {
             "button": {
@@ -116,7 +126,7 @@
       },
       "aside": {
         "anchors_list": {
-          "title": "Sommaire",
+          "title": "Sommaire de la page",
           "items": [
             {
               "href": "#deux-pistes-sont-proposees",
@@ -134,17 +144,20 @@
             {
               "href": "https://www.facebook.com/sharer/sharer.php?u=http://www.paris.fr",
               "icon": "facebook",
-              "title": "Partager sur Facebook"
+              "text": "Partager sur Facebook",
+              "title": "Partager sur Facebook - nouvelle fenêtre"
             },
             {
               "href": "https://twitter.com/intent/tweet?text=Ça glisse sur la patinoire de l’hôtel de ville http://www.paris.fr",
               "icon": "twitter",
-              "title": "Partager sur Twitter"
+              "text": "Partager sur Twitter",
+              "title": "Partager sur Twitter - nouvelle fenêtre"
             },
             {
               "href": "mailto:?subject=Ça glisse sur la patinoire de l’hôtel de ville&body=http://www.paris.fr",
               "icon": "mail",
-              "title": "Partager par courriel"
+              "text": "Partager par courriel",
+              "title": "Partager par courriel - nouvelle fenêtre"
             }
           ]
         }
@@ -168,7 +181,8 @@
                     {
                       "href": "https://twitter.com/home?status=Il n’y a pas d’âge minimal pour l’accès à la patinoire. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -180,7 +194,8 @@
                     {
                       "href": "https://twitter.com/home?status=Des moniteurs diplômés sont là pour s’adapter aux différents publics. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -192,7 +207,8 @@
                     {
                       "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -209,6 +225,7 @@
         {
           "type": "video",
           "data": {
+            "title": "Venez patiner devant l'Hôtel de Ville !",
             "placeholder": "Le site Paris.fr utilise des cookies pour le fonctionnement des boutons de partage sur les réseaux sociaux et la mesure d’audience des vidéos et des pages de Paris.fr. En poursuivant votre navigation sur ce site, vous acceptez leur utilisation. Pour mieux comprendre notre politique de protection de votre vie privée, rendez-vous <a href=\"#\">ici</a>.<br /><br /><a href=\"#\" data-action=\"allow_cookies\" class=\"button action\">accepter</a>",
             "block": "<iframe frameborder=\"0\" width=\"480\" height=\"270\" src=\"//www.dailymotion.com/embed/video/xn4p8l\" allowfullscreen></iframe><br /><a href=\"http://www.dailymotion.com/video/xn4p8l_venez-patiner-devant-l-hotel-de-ville_people\" target=\"_blank\">Venez patiner devant l&#039;H&ocirc;tel de Ville!</a> <i>par <a href=\"http://www.dailymotion.com/mairiedeparis\" target=\"_blank\">mairiedeparis</a></i>"
           }
@@ -225,7 +242,8 @@
                     {
                       "href": "https://twitter.com/home?status=L’accès à la patinoire est gratuit pour les personnes équipées de leurs patins. http://www.paris.fr/",
                       "icon": "twitter",
-                      "title": "Partager sur Twitter"
+                      "text": "Partager sur Twitter",
+                      "title": "Partager sur Twitter - nouvelle fenêtre"
                     }
                   ]
                 }
@@ -250,7 +268,8 @@
                 {
                   "href": "https://twitter.com/intent/tweet?text=Maecenas sed diam eget risus varius blandit sit amet non magna. http://www.paris.fr",
                   "icon": "twitter",
-                  "title": "Partager sur Twitter"
+                  "text": "Partager sur Twitter",
+                  "title": "Partager sur Twitter - nouvelle fenêtre"
                 }
               ]
             }
@@ -291,8 +310,8 @@
               "category": "Mobilité",
               "title": "Découvrez les neuf Autolib' customisées qui vont sillonner Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -301,8 +320,8 @@
               "category": "Culture et patrimoine",
               "title": "Le 1er étage de la Tour Eiffel se refait une jeunesse",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -311,8 +330,8 @@
               "category": "Environnement",
               "title": "Vers un plan parisien de lutte contre le gaspillage alimentaire",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -330,8 +349,8 @@
               "category": "Logement",
               "title": "Expulsions : début de la trêve hivernale",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -340,8 +359,8 @@
               "category": "Logement",
               "title": "Une nouvelle vie pour d’anciens bureaux de la rue Bleue",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -350,8 +369,8 @@
               "category": "Logement",
               "title": "Le point sur les nouveaux logements à Paris",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             },
             {
@@ -360,8 +379,8 @@
               "category": "Culture et patrimoine",
               "title": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
               "counters": {
-                "facebook": 5,
-                "twitter": 12
+                "facebook": [5, "j'aime"],
+                "twitter": [12, "retweets"]
               }
             }
           ]
@@ -383,7 +402,7 @@
           },
           "link": {
             "href": "#",
-            "text": "Autres newsletters et alertes"
+            "text": "Autres <span lang=\"en\">newsletters</span> et alertes"
           }
         },
         "jecoute": {
@@ -402,6 +421,7 @@
             {
               "icon": "twitter",
               "count": "219 000",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Twitter",
@@ -411,6 +431,7 @@
             {
               "icon": "facebook",
               "count": "2 508 576",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Facebook",
@@ -420,6 +441,7 @@
             {
               "icon": "instagram",
               "count": "16 449",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -429,6 +451,7 @@
             {
               "icon": "dailymotion",
               "count": "5 442",
+              "unit": "abonnés",
               "link": {
                 "href": "#",
                 "text": "Dailymotion",
@@ -442,14 +465,17 @@
           }
         }
       },
+      "button_top": {
+        "accessibility_label": "retour en haut de la page"
+      },
       "footer": {
         "logo": {
-          "href": "#",
+          "href": "../home",
           "src": "../../modules/footer/mairie-de-paris.png",
-          "alt": "Logo de la Mairie de Paris"
+          "alt": "retour à l'accueil – Paris"
         },
         "items": [
-          {"href": "#", "text": "Visit Paris", "target": "_blank", "modifiers": ["strong"]},
+          {"href": "#", "text": "Visit Paris", "lang": "en", "target": "_blank", "modifiers": ["strong"]},
           {"href": "#", "text": "FAQ"},
           {"href": "#", "text": "Newsletter"},
           {"href": "#", "text": "Contact"},

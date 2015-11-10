@@ -3,15 +3,15 @@ include ../button/button
 mixin notice(data)
   .notice(class=data.modifiers id=data.id)
     if data.closable === true
-      .close
+      button.close(type="button")
+        if data.close_label
+          .hidden-accessibly= data.close_label
     else if data.closable
       .notice-button
         +button(data.closable)
-    if block
-      p.notice-content
-        block
-    else if data.block
-      p.notice-content
+
+    p.notice-content
+      if data.block
         != data.block
-    else
-      p.notice-content notice
+      if block
+        block

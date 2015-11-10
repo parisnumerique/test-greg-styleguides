@@ -7,7 +7,6 @@ var path       = require('path');
 var source     = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify     = require('gulp-uglify');
-var insert     = require('gulp-insert');
 var watchify   = require('watchify');
 var fs         = require('fs');
 
@@ -35,7 +34,6 @@ function watch() {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sourcemaps.write('./'))
-    .pipe(insert.append('\n\n' + fs.readFileSync(config.tmp.output + '/client.tpl.js')))
     .pipe(gulp.dest(path.join(config.harp.input, 'javascript')));
 }
 
@@ -53,7 +51,6 @@ function bundle(output) {
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
     .pipe(source(config.js.output))
     .pipe(buffer())
-    .pipe(insert.append('\n\n' + fs.readFileSync(config.tmp.output + '/client.tpl.js')))
     .pipe(uglify())
     .pipe(gulp.dest(output)) ;
 }

@@ -30,10 +30,16 @@
     z-index: -1;
   }
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &[disabled] {
     &:after {
       width: 100%;
     }
+  }
+
+  &[disabled] {
+    opacity: 0.5;
   }
 
   // modifiers
