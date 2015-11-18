@@ -108,6 +108,10 @@ lsg.highlight = function highlight($modules) {
   if (window.Prism) {
     window.Prism.highlightAll();
   }
+
+  // set code display
+  var show = $(parent.document.body).find('#code-toggle').hasClass('active');
+  $('pre.prism').toggle(show);
 };
 
 
