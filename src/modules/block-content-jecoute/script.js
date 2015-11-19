@@ -59,8 +59,6 @@ Paris.blockContentJecoute = (function(){
       });
     }
 
-    
-
     init();
 
     return $el;
@@ -74,17 +72,6 @@ Paris.blockContentJecoute = (function(){
 
 })();
 
-$(document).ready(function(){
-
-  function linkify(text) {
-      var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-      return text.replace(urlRegex, function(url) {
-          return '<a href="' + url + '">' + url + '</a>';
-      });
-  }
-  $('.block-content-answer .text p').each(function(){
-    $(this).replaceWith(linkify($(this).text())); 
-  });
-
+$(document).ready(function() {
   Paris.blockContentJecoute('.block-content-jecoute');
 });
