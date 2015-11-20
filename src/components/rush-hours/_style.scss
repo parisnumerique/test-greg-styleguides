@@ -1,6 +1,22 @@
 .component-rush-hours {
   clear: both;
 
+  h2 {
+    border-top: 7px solid $grayF2;
+    color: $gray1A;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 40px;
+    padding-top: 40px;
+  }
+  @include small {
+    h2 {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+
   caption {
     caption-side: top;
     color: $gray33;
