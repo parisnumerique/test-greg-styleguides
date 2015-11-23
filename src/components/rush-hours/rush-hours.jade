@@ -13,4 +13,11 @@ mixin rush-hours(data)
           tr
             th= item.title
             for traffic in item.traffic
-              td= traffic
+              td(class="traffic-#{traffic}")
+                - var icon = 0
+                  while icon < traffic
+                    i.rush-hours-traffic-icon(aria-hidden="true")
+                    - icon++
+                
+              //td= traffic
+                

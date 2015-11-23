@@ -10,6 +10,7 @@ Let's take the `x.β.α` version number:
 ## 1.3.0 (to be released)
 
 * component `card` added
+* component `rush-hours` added
 * module `button` : add button `small`
 * template `equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
