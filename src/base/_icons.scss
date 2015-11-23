@@ -1,11 +1,11 @@
 /* Font icons */
 @font-face {
   font-family: 'paris-icons';
-  src:url('../fonts/paris-icons.eot?-pleu1o');
-  src:url('../fonts/paris-icons.eot?#iefix-pleu1o') format('embedded-opentype'),
-    url('../fonts/paris-icons.woff?-pleu1o') format('woff'),
-    url('../fonts/paris-icons.ttf?-pleu1o') format('truetype'),
-    url('../fonts/paris-icons.svg?-pleu1o#icomoon') format('svg');
+  src:url('../fonts/paris-icons.eot?53kcur');
+  src:url('../fonts/paris-icons.eot?#iefix53kcur') format('embedded-opentype'),
+    url('../fonts/paris-icons.woff?53kcur') format('woff'),
+    url('../fonts/paris-icons.ttf?53kcur') format('truetype'),
+    url('../fonts/paris-icons.svg?53kcur#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,81 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+%icon-atelier-beaux-arts,
+.icon-atelier-beaux-arts:before {
+	content: "\e902";
+}
+
+%icon-bibliotheque,
+.icon-bibliotheque:before {
+	content: "\e903";
+}
+
+%icon-centre-animation,
+.icon-centre-animation:before {
+	content: "\e904";
+}
+
+%icon-conservatoire,
+.icon-conservatoire:before {
+	content: "\e905";
+}
+
+%icon-handicap,
+.icon-handicap:before {
+	content: "\e906";
+}
+
+%icon-icon-logo-paris,
+.icon-icon-logo-paris:before {
+	content: "\e907";
+}
+
+%icon-mairie,
+.icon-mairie:before {
+	content: "\e908";
+}
+
+%icon-maison-des-assoc,
+.icon-maison-des-assoc:before {
+	content: "\e909";
+}
+
+%icon-marche,
+.icon-marche:before {
+	content: "\e90a";
+}
+
+%icon-musee,
+.icon-musee:before {
+	content: "\e90b";
+}
+
+%icon-nonvoyant,
+.icon-nonvoyant:before {
+	content: "\e90c";
+}
+
+%icon-parc-jardin,
+.icon-parc-jardin:before {
+	content: "\e90d";
+}
+
+%icon-pause,
+.icon-pause:before {
+	content: "\e90e";
+}
+
+%icon-piscine,
+.icon-piscine:before {
+	content: "\e90f";
+}
+
+%icon-sourd,
+.icon-sourd:before {
+	content: "\e910";
 }
 
 %icon-alert,
