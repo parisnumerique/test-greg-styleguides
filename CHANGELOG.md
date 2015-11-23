@@ -7,16 +7,19 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
-## 1.2.3 (to be released)
+## 1.3.0 (to be released)
 
 * component `card` added
+* module `button` : add button `small`
+* template `equipment` added (based on `generic`)
+* template `faq` is now based on `generic`
+* template `generic`: `aside` data is now an array (same behavior as `components`)
 
 ## 1.2.2 (2015-11-24)
 
 * component `form`: added `noscript` reCaptcha
 * template `generic`: now accepts a `notice` above content
 * upgraded harp to 0.20
-* module `button` : add button `small`
 
 ## 1.2.1 (2015-11-19)
 
