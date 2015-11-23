@@ -15,6 +15,6 @@ mixin opening-hours(data)
     ul.opening-hours-buttons
       each button in data.buttons
         - button = JSON.parse(JSON.stringify(button)) // clone the data object
-        - button.modifiers = ["action", "secondary"] // overwrite the modifiers
+        - button.modifiers = ["action", "secondary", "small"] // overwrite the modifiers
         li
           +button(button)

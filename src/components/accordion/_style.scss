@@ -131,6 +131,9 @@
         overflow-x: auto;
         position: relative;
         width: 100%;
+        td {
+          padding-bottom: 5px;
+        }
       }
     }
   }
@@ -141,6 +144,9 @@
     .accordion-content-wrapper {
       table {
         width: 100%;
+        td {
+          padding-bottom: 5px;
+        }
       }
     }
   }
