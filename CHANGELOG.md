@@ -10,9 +10,13 @@ Let's take the `x.β.α` version number:
 ## 1.2.2 (to be released)
 
 * component `card` added
-* template `generic`: now accepts a `notice` above content
-* upgraded harp to 0.20
 * module `button` : add button `small`
+* template `equipment` added (based on `generic`)
+* template `faq` is now based on `generic`
+* template `generic`:
+  * now accepts a `notice` above content
+  * `aside` data is now an array (same behavior as `components`)
+* upgraded harp to 0.20
 
 ## 1.2.1 (2015-11-19)
 
