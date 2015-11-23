@@ -250,7 +250,7 @@
         {
           "type": "text",
           "data": {
-            "block": "<h2>Activités [LOGO]</h2>"
+            "block": "<h2>Activités <a href=\"#\" target=\"_blank\"><img src=\"logo-que-faire.png\" alt=\"Que Faire à Paris\" /></a></h2>"
           }
         },
         {

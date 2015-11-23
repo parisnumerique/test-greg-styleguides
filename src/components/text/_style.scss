@@ -22,7 +22,7 @@
       max-height: 60px;
       position: relative;
       top: 5px;
-      vertical-align: top;
+      vertical-align: bottom;
     }
   }
   @include small {
@@ -109,6 +109,10 @@
   h2 {
     border-top: 7px solid $grayF2;
     color: $gray1A;
+  }
+  &:first-child h2 {
+    border-top: none;
+    padding-top: 0;
   }
 
   a:not(.button) {

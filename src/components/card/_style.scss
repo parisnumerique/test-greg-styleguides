@@ -9,6 +9,16 @@
     min-height: 220px;
     position: relative;
     text-decoration: none;
+    transition: background 0.35s ease;
+
+    &:hover {
+      background-color: $grayEE;
+
+      .card-image {
+        //opacity: 0.8;
+        &:after {opacity: 0;}
+      }
+    }
   }
 
   .card-image {
@@ -18,14 +28,27 @@
     height: 100%;
     left: 0;
     max-width: 400px;
+    //opacity: 1;
+    overflow: hidden;
     position: absolute;
     top: 0;
+    //transition: opacity 0.35s ease;
     width: 45%;
+
+    &:after {
+      background: $black;
+      content: "";
+      display: block;
+      height: 100%;
+      opacity: 0.1;
+      transition: opacity 0.35s ease;
+      width: 150%;
+    }
   }
 
   .card-content {
-    padding: 20px;
     margin-left: 45%;
+    padding: 20px;
     width: 55%;
   }
 
@@ -37,12 +60,11 @@
 
   .card-title {
     font-size: 17px;
+    margin-top: 10px;
     max-width: 320px;
   }
 
   .card-text {
-    bottom: 20px;
     font-size: 15px;
-    position: absolute;
   }
 }
