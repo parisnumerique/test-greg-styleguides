@@ -1,0 +1,48 @@
+.component-card {
+  clear: both;
+
+  > a {
+    background-color: $grayF2;
+    border-radius: 5px;
+    color: $gray33;
+    display: block;
+    min-height: 220px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .card-image {
+    background: center center no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    height: 100%;
+    left: 0;
+    max-width: 400px;
+    position: absolute;
+    top: 0;
+    width: 45%;
+  }
+
+  .card-content {
+    padding: 20px;
+    margin-left: 45%;
+    width: 55%;
+  }
+
+  .card-category {
+    color: $color-secondary;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .card-title {
+    font-size: 17px;
+    max-width: 320px;
+  }
+
+  .card-text {
+    bottom: 20px;
+    font-size: 15px;
+    position: absolute;
+  }
+}
