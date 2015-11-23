@@ -27,48 +27,38 @@
   }
 
   table {
-    width: 770px;
+    width: 625px;
 
     p {margin: 0;}
   }
 
+
   tr > th,
   tr > td {
-    border-left: 1px solid $grayCC;
-    padding: 15px 5px;
+    border: none;
 
     &:first-child {border-left: none;}
   }
 
   tr > th {
-    background-color: $color-secondary-variant;
-    color: white;
+    background-color: white;
+    color: $gray33;
     font-size: 15px;
     font-weight: 500;
-    text-align: center;
-
-    &.emphasis {
-      border: none;
-      font-size: 18px;
-      font-weight: 300;
-      padding: 28px 30px;
-      text-align: left;
-    }
+    text-align: left;
   }
 
   tr > td {
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
     color: $gray33;
     font-size: 14px;
     font-weight: 300;
+    padding-rigth: 6px;
     text-align: center;
 
-    &.emphasis {
-      border: none;
-      color: $color-secondary-variant;
-      font-size: 15px;
-      font-weight: 500;
-      padding: 10px 30px;
-      text-align: left;
+    &:last-child {
+      border-right: none;
     }
 
     a:not(.button) {
@@ -80,14 +70,41 @@
   }
 
   tbody {
-    tr:nth-child(even) {background-color: $grayF2;}
-    tr:nth-child(odd) {background-color: $grayEE;}
+    tr {background-color : $grayF2;}
     tr.info {background-color: $light-blue;}
+    tr:first-child {background-color: white;}
+    tr:last-child > td {border-bottom: none;}
+    tr:first-child > th:first-child {width:16%;}
+    tr:first-child > th {
+      padding: 15px 0;
+      text-align: center;
+      width: 21%;
+    }
   }
 
   tfoot {
     tr {background-color: transparent;}
     tr > td {text-align: left;}
+  }
+}
+
+// traffic
+.traffic-0 {background-color: $grayF2;}
+.traffic-1 {background-color: $rush-hours-green;}
+.traffic-2 {background-color: $rush-hours-yellow;}
+.traffic-3 {background-color: $rush-hours-red;}
+
+.rush-hours-traffic-icon {
+  color: black;
+  font-size: 32px;
+  letter-spacing: -6px;
+  opacity: 0.2;
+  pointer-events: none;
+  text-align: center;
+
+  &:before {
+    @extend %icon-font;
+    @extend %icon-avatar;
   }
 }
 
