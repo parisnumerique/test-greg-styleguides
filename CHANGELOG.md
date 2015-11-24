@@ -13,7 +13,7 @@ Let's take the `x.β.α` version number:
 * component `rush-hours` added
 * module `button` : add button `small`
 * module `block-aside-acces` : added
-* template `equipment` added (based on `generic`)
+* template `single-equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
 * template `generic`:
   * now accepts a `notice` above content

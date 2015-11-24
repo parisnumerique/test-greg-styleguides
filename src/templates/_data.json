@@ -2,7 +2,6 @@
   "templates": [
     "document",
     "document/postit.html",
-    "equipment",
     "error",
     "faq",
     "generic",
@@ -18,6 +17,7 @@
     "search",
     "search/no-result.html",
     "search/results.html",
+    "single-equipment",
     "single-news",
     "single-person",
     "single-person/small-portrait.html",
