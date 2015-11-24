@@ -50,8 +50,8 @@
       @extend %icon-font;
       @extend %icon-alert;
       font-size: 1.8em;
-      padding: 0 15px 0 0;
-      vertical-align: sub;
+      padding: 0 15px 2px 0;
+      vertical-align: middle;
     }
   }
 
@@ -141,4 +141,3 @@
     width: $large-grid-width;
   }
 }
-
