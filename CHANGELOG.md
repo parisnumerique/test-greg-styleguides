@@ -9,6 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.2.2 (to be released)
 
+* component `form`: added `noscript` reCaptcha
 * template `generic`: now accepts a `notice` above content
 * upgraded harp to 0.20
 
