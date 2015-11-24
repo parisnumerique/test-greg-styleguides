@@ -27,7 +27,7 @@
   }
 
   table {
-    width: 625px;
+    max-width: 625px;
 
     p {margin: 0;}
   }
@@ -54,7 +54,7 @@
     color: $gray33;
     font-size: 14px;
     font-weight: 300;
-    padding-rigth: 6px;
+    padding-right: 6px;
     text-align: center;
 
     &:last-child {
@@ -67,6 +67,12 @@
 
       &:hover {text-decoration: none;}
     }
+
+    // traffic
+    &.traffic-0 {background-color: $grayF2;}
+    &.traffic-1 {background-color: $rush-hours-green;}
+    &.traffic-2 {background-color: $rush-hours-yellow;}
+    &.traffic-3 {background-color: $rush-hours-red;}
   }
 
   tbody {
@@ -87,12 +93,6 @@
     tr > td {text-align: left;}
   }
 }
-
-// traffic
-.traffic-0 {background-color: $grayF2;}
-.traffic-1 {background-color: $rush-hours-green;}
-.traffic-2 {background-color: $rush-hours-yellow;}
-.traffic-3 {background-color: $rush-hours-red;}
 
 .rush-hours-traffic-icon {
   color: black;

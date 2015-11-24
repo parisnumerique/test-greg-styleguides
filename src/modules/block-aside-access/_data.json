@@ -1,11 +1,11 @@
 {
   "index": {
-    "type": "block-aside-acces",
+    "type": "block-aside-access",
     "description": "Ce module sera généralement utilisé dans la colonne de gauche/droite d'une page.<br>Il permet de préciser des informations d'accès et de mobilité.",
     "examples": [{
       "title": "Standard",
       "data": {
-        "title": "Standart titre et texte",
+        "title": "Standard titre et texte",
         "text": "Espace dont l'accessibilité est limitée à certaines zones pour les personnes : "
       }
     }, {
