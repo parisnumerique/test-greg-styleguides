@@ -15,15 +15,15 @@
         "text": "Espace dont l'accessibilité est limitée à certaines zones pour les personnes : ",
         "items": [
           {
-            "icon": "handicap",
+            "icon": "handicap-mobility",
             "text": "à mobilité réduite"
           },
           {
-            "icon": "nonvoyant",
+            "icon": "handicap-visually-impaired",
             "text": "non ou mal voyantes"
           },
           {
-            "icon": "sourd",
+            "icon": "handicap-hearing-impair",
             "text": "sourdes ou malentendantes"
           }
         ]

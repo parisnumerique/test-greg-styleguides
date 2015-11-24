@@ -167,6 +167,53 @@
           }
         },
         {
+          "type": "block-aside-acces",
+          "data": {
+            "title": "Accès",
+            "items": [
+              {
+                "icon": "subway",
+                "modifiers": ["acces-icon"],
+                "title": "Métro",
+                "text": "Porte de Vanves, ligne 13"
+              },
+              {
+                "icon": "bus",
+                "modifiers": ["acces-icon"],
+                "title": "Bus",
+                "text": "Station n°T3"
+              },
+              {
+                "icon": "bicycle",
+                "modifiers": ["acces-icon"],
+                "title": "Vélib'",
+                "text": ["Station N°14023", "76 Station N°14106", "face 58 avenue Marc Sangnier", "Station N° 14122", "1 rue du colonel Monteil"]
+              }
+            ]
+          }
+        },
+        {
+          "type": "block-aside-acces",
+          "data": {
+            "title": "Accessibilité",
+            "text": "Espace dont l'accessibilité est limitée à certaines zones pour les personnes : ",
+            "items": [
+              {
+                "icon": "handicap-mobility",
+                "text": "à mobilité réduite"
+              },
+              {
+                "icon": "handicap-visually-impaired",
+                "text": "non ou mal voyantes"
+              },
+              {
+                "icon": "handicap-hearing-impair",
+                "text": "sourdes ou malentendantes"
+              }
+            ]
+          }
+        },
+        {
           "type": "block-aside-contact",
           "data": {
             "title": "Contact",
