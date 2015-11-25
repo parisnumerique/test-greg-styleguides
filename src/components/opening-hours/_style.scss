@@ -84,6 +84,22 @@
   }
 }
 
+@include small {
+  .component-opening-hours {
+
+    .opening-hours-buttons {
+      li {
+        display: inline-block;
+        + li {
+          display: block;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
 @include medium-and-small {
   .component-opening-hours {
     overflow-x: auto;
