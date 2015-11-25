@@ -76,7 +76,6 @@
   }
 
   tbody {
-    tr {background-color : $grayF2;}
     tr.info {background-color: $light-blue;}
     tr:first-child {background-color: white;}
     tr:last-child > td {border-bottom: none;}
@@ -115,10 +114,6 @@
     position: relative;
     width: 100%;
 
-    tr > td {
-      height: 44px;
-    }
-
     tr > th {
       padding-right: 10px;
     }
@@ -130,8 +125,26 @@
 @include small {
   .component-rush-hours {
 
+    table {
+      max-width: 350px;
+    }
+
     tr > th {
       padding-right: 0;
+    }
+
+    tr:nth-child(5n+1) {
+      display:block;
+      padding-top: 35px;
+
+      > th {
+        font-weight : 700;
+      }
+    }
+
+    tr > td {
+      height: 44px;
+      width: 50%;
     }
 
     tbody {
