@@ -20,6 +20,7 @@ Let's take the `x.β.α` version number:
 * template `single-equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
+* accessibility: improved modules `document-heading`, `rheader`, `sections-panel`
 
 ## 1.2.2 (2015-11-24)
 
