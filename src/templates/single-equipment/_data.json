@@ -211,11 +211,7 @@
           }
         },
         {
-<<<<<<< HEAD
-          "type": "block-aside-acces",
-=======
           "type": "block-aside-access",
->>>>>>> 5d1566164c068c8285e5031858be840c05e1b35b
           "data": {
             "title": "Accessibilité",
             "text": "Espace dont l'accessibilité est limitée à certaines zones pour les personnes : ",

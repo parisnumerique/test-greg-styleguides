@@ -2,11 +2,7 @@
   "modules": [
     "anchors-list",
     "block-aside",
-<<<<<<< HEAD
-    "block-aside-acces",
-=======
     "block-aside-access",
->>>>>>> 5d1566164c068c8285e5031858be840c05e1b35b
     "block-aside-checkboxes",
     "block-aside-contact",
     "block-aside-links",
