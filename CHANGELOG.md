@@ -7,6 +7,20 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.3.0 (to be released)
+
+* all components now accept `modifiers`
+* component `card` added
+* component `rush-hours` added
+* module `block-aside-access` added
+* module `block-aside-contact`: added minimap
+* module `button`: add button `small`
+* module `notice`: improved text wrapping on small screens
+* layout `left-col`: fix affix bug when there is no `anchors-list`
+* template `single-equipment` added (based on `generic`)
+* template `faq` is now based on `generic`
+* template `generic`: `aside` data is now an array (same behavior as `components`)
+
 ## 1.2.2 (2015-11-24)
 
 * component `form`: added `noscript` reCaptcha
