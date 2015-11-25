@@ -101,6 +101,7 @@
   opacity: 0.2;
   pointer-events: none;
   text-align: center;
+  vertical-align: middle;
 
   &:before {
     @extend %icon-font;
@@ -113,6 +114,31 @@
     overflow-x: auto;
     position: relative;
     width: 100%;
+
+    tr > td {
+      height: 44px;
+    }
+
+    tr > th {
+      padding-right: 10px;
+    }
+
+    tr:first-child > th:first-child {padding: 0;}
+  }
+}
+
+@include small {
+  .component-rush-hours {
+
+    tr > th {
+      padding-right: 0;
+    }
+
+    tbody {
+      tr:first-child > th {
+        text-align: left;
+      }
+    }
   }
 }
 
