@@ -11,9 +11,10 @@ Let's take the `x.β.α` version number:
 
 * component `card` added
 * component `rush-hours` added
-* module `button` : add button `small`
 * module `block-aside-access` added
 * module `block-aside-contact`: added minimap
+* module `button`: add button `small`
+* module `notice`: improved text wrapping on small screens
 * template `single-equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
