@@ -1,7 +1,7 @@
 include ../../modules/button/button
 
 mixin opening-hours(data)
-  .component.component-opening-hours
+  .component.component-opening-hours(class=data.modifiers)
     h2= data.title
     p.opening-hours-text= data.text
     table(summary=data.summary)
