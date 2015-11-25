@@ -9,6 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.3.0 (to be released)
 
+* all components now accept `modifiers`
 * component `card` added
 * component `rush-hours` added
 * module `block-aside-access` added

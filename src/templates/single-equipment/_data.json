@@ -308,7 +308,7 @@
         {
           "type": "table",
           "data": {
-            "modifiers": ["header-primary-color"],
+            "modifiers": ["header-primary-color", "small-margin-top"],
             "block": "<tbody><tr><th scope=\"col\">Entrées</th><th scope=\"col\">Plein tarif</th><th scope=\"col\">Tarif réduit*</th></tr><tr><td>Entrée à l'unité</td><td>3,00 €</td><td>1,70 €</td></tr><tr><td>Carte de 10 entrées</td><td>24,00 €</td><td>14,00 €</td></tr><tr><td>Abonnement de 3 mois</td><td>37,00 €</td><td>19,00 €</td></tr></tbody>"
           }
         },
@@ -373,6 +373,7 @@
         {
           "type": "gallery",
           "data": {
+            "modifiers": ["small-margin-top"],
             "items": [
               {"src": "../../components/gallery/1.jpg"},
               {"src": "../../components/gallery/2.jpg"},
@@ -405,6 +406,7 @@
         {
           "type": "faq",
           "data": {
+            "modifiers": ["small-margin-top"],
             "items": [
               {
                 "title": "Maecenas sed diam eget risus varius blandit sit amet non magna ?",
