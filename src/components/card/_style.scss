@@ -25,15 +25,7 @@
     background: center center no-repeat;
     background-size: cover;
     border-radius: 5px;
-    height: 100%;
-    left: 0;
-    max-width: 400px;
-    //opacity: 1;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    //transition: opacity 0.35s ease;
-    width: 45%;
 
     &:after {
       background: $black;
@@ -42,14 +34,12 @@
       height: 100%;
       opacity: 0.1;
       transition: opacity 0.35s ease;
-      width: 150%;
+      width: 100%;
     }
   }
 
   .card-content {
-    margin-left: 45%;
     padding: 20px;
-    width: 55%;
   }
 
   .card-category {
@@ -66,5 +56,33 @@
 
   .card-text {
     font-size: 15px;
+  }
+}
+
+@include small {
+  .component-card {
+    .card-image {
+      height: 150px;
+      height: 30vh;
+      width: 100%;
+    }
+  }
+}
+
+@include large-and-medium {
+  .component-card {
+    .card-image {
+      height: 100%;
+      left: 0;
+      max-width: 400px;
+      position: absolute;
+      top: 0;
+      width: 45%;
+    }
+
+    .card-content {
+      margin-left: 45%;
+      width: 55%;
+    }
   }
 }
