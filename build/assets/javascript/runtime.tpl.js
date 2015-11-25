@@ -692,7 +692,7 @@ templatizer["form"]["form-matrix"] = function tmpl_form_form_matrix(data) {
 // form.jade:form-captcha compiled template
 templatizer["form"]["form-captcha"] = function tmpl_form_form_captcha(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push('<div class="g-recaptcha"></div>');
+    buf.push('<div class="g-recaptcha"></div><noscript><div style="width: 302px; height: 482px;"><div style="width: 302px; height: 422px;"><div style="width: 302px; height: 422px; position: relative;"><iframe src="https://www.google.com/recaptcha/api/fallback?k=6LdKnQ8TAAAAAFEvA3kXmpPPp_xPHx6pKJoTc2HT" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe></div><div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;"><textarea id="g-recaptcha-response" name="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;" class="g-recaptcha-response"></textarea></div></div></div></noscript>');
     return buf.join("");
 };
 

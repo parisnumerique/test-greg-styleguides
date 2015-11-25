@@ -11,13 +11,18 @@ Let's take the `x.β.α` version number:
 
 * component `card` added
 * component `rush-hours` added
-* module `button` : add button `small`
-* module `block-aside-acces` : added
+* module `block-aside-access` added
+* module `block-aside-contact`: added minimap
+* module `button`: add button `small`
+* module `notice`: improved text wrapping on small screens
 * template `single-equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
-* template `generic`:
-  * now accepts a `notice` above content
-  * `aside` data is now an array (same behavior as `components`)
+* template `generic`: `aside` data is now an array (same behavior as `components`)
+
+## 1.2.2 (2015-11-24)
+
+* component `form`: added `noscript` reCaptcha
+* template `generic`: now accepts a `notice` above content
 * upgraded harp to 0.20
 
 ## 1.2.1 (2015-11-19)
