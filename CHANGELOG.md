@@ -15,6 +15,7 @@ Let's take the `x.β.α` version number:
 * module `block-aside-contact`: added minimap
 * module `button`: add button `small`
 * module `notice`: improved text wrapping on small screens
+* layout `left-col`: fix affix bug when there is no `anchors-list`
 * template `single-equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
