@@ -242,4 +242,30 @@
       line-height: 45px;
     }
   }
+
+  .quick-access-pause {
+    &:before {
+      @extend %icon-font;
+      @extend %icon-pause;
+      font-size: 1em;
+      position: relative;
+    }
+
+    background-color: transparent;
+    border: none;
+    bottom: 35px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    opacity: 0.7;
+    position: absolute;
+    right: 40px;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+
+    &:hover, &:active, &:focus {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
 }

@@ -17,6 +17,32 @@
   }
 }
 
+.poll-pause {
+  &:before {
+    @extend %icon-font;
+    @extend %icon-pause;
+    font-size: 1em;
+    position: relative;
+  }
+
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  opacity: 0.6;
+  position: absolute;
+  right: 16px;
+  transition: opacity 0.3s ease;
+  top: 25px;
+  z-index: 1;
+
+  &:hover, &:active, &:focus {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
 .poll-wrapper {
   position: relative;
   padding: 35px $small-page-padding;

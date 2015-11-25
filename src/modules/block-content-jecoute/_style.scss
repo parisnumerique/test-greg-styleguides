@@ -91,6 +91,33 @@
       }
     }
   }
+
+  .block-content-jecoute-pause {
+    &:before {
+      @extend %icon-font;
+      @extend %icon-pause;
+      font-size: 1em;
+      position: relative;
+    }
+
+    background-color: transparent;
+    border: none;
+    color: gray99;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.3s ease;
+    top: 11px;
+    z-index: 1;
+    padding-right: 0;
+
+    &:hover, &:active, &:focus {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+  }
 }
 
 .blocks-content-vertical .block-content-jecoute {
