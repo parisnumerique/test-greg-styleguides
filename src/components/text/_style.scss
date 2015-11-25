@@ -174,10 +174,18 @@
   }
 }
 
-@include large-and-medium {
+@include medium-and-small {
   .component-text {
-    .anchor {
-      padding-right: 100px;
+    ul.list-cols {
+      columns: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .component-text {
+    ul.list-cols {
+      columns: 1;
     }
   }
 }
