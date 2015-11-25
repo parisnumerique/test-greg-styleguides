@@ -96,8 +96,28 @@
         "text": "Piscine Didot",
         "icons": [
           {
-            "name": "favorites",
-            "url": "#"
+            "icon": {
+              "default": "favorites-outline",
+              "hover": "favorites",
+              "active": "favorites"
+            },
+            "url": "#",
+            "label": {
+              "default": "Ajouter aux favoris",
+              "off": "Enlever des favoris"
+            }
+          },
+          {
+            "icon": {
+              "default": "bell-outline",
+              "hover": "bell",
+              "active": "bell"
+            },
+            "url": "#",
+            "label": {
+              "default": "S'inscrire aux alertes",
+              "off": "Se désinscrire des alertes"
+            }
           }
         ],
         "tags" : [

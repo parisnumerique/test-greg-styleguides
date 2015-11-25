@@ -59,30 +59,23 @@
 .document-heading-icons {
  font-size: 24px;
  line-height: 36px;
+}
 
- .icon {
-   color: $gray99;
-   cursor: pointer;
-   text-decoration: none;
+.document-heading-icon {
+  color: $gray99;
+  cursor: pointer;
+  text-decoration: none;
 
-   &:hover {
-     color: $gray33;
-   }
+  &:hover {
+    color: $gray33;
+  }
 
-   &.icon-bell.active {
-     color: $color-secondary;
-     &:hover {color: $color-secondary-variant;}
-   }
+  &.active .icon-bell {color: $color-secondary;}
+  &.active .icon-favorites {color: $color-tertiary;}
 
-   &.icon-favorites.active {
-     color: $color-tertiary;
-     &:hover {color: $color-tertiary-variant;}
-   }
-
-   & + .icon {
-     margin-left: 15px;
-   }
- }
+  & + .document-heading-icon {
+    margin-left: 15px;
+  }
 }
 
 @include small {

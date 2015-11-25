@@ -10,12 +10,28 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "href": "#"
+            "icon": {
+              "default": "favorites-outline",
+              "hover": "favorites",
+              "active": "favorites"
+            },
+            "url": "#",
+            "label": {
+              "default": "Ajouter aux favoris",
+              "off": "Enlever des favoris"
+            }
           },
           {
-            "name": "bell",
-            "href": "#"
+            "icon": {
+              "default": "bell-outline",
+              "hover": "bell",
+              "active": "bell"
+            },
+            "url": "#",
+            "label": {
+              "default": "S'inscrire aux alertes",
+              "off": "Se désinscrire des alertes"
+            }
           }
         ]
       }
@@ -27,14 +43,28 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "href": "#"
+            "icon": {
+              "default": "favorites-outline",
+              "hover": "favorites",
+              "active": "favorites"
+            },
+            "url": "#",
+            "label": {
+              "default": "Ajouter aux favoris",
+              "off": "Enlever des favoris"
+            }
           },
           {
-            "name": "bell",
-            "href": "#",
-            "modifiers": ["active"],
-            "title": "Vous êtes abonné(e)"
+            "icon": {
+              "default": "bell-outline",
+              "hover": "bell",
+              "active": "bell"
+            },
+            "url": "#",
+            "label": {
+              "default": "S'inscrire aux alertes",
+              "off": "Se désinscrire des alertes"
+            }
           }
         ]
       }
@@ -46,12 +76,28 @@
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
         "icons" : [
           {
-            "name": "favorites",
-            "href": "#"
+            "icon": {
+              "default": "favorites-outline",
+              "hover": "favorites",
+              "active": "favorites"
+            },
+            "url": "#",
+            "label": {
+              "default": "Ajouter aux favoris",
+              "off": "Enlever des favoris"
+            }
           },
           {
-            "name": "bell",
-            "href": "#"
+            "icon": {
+              "default": "bell-outline",
+              "hover": "bell",
+              "active": "bell"
+            },
+            "url": "#",
+            "label": {
+              "default": "S'inscrire aux alertes",
+              "off": "Se désinscrire des alertes"
+            }
           }
         ]
       }

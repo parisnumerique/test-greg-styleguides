@@ -9,9 +9,9 @@ mixin document-heading(data)
           h1.document-heading-title!= data.text
           if data.icons
             .document-heading-icons
-              each icon in data.icons
-                - var modifiers = JSON.parse(JSON.stringify(icon.modifiers || [])) // clone the data object
-                - modifiers.push("icon-" + icon.name)
-                a.icon(href=icon.href title=icon.title target=icon.target class=modifiers role="button")
+              each item in data.icons
+                a.document-heading-icon(href=item.href title=item.label.default target=item.target class=item.modifiers role="button" data-icon-default="icon-#{item.icon.default}" data-icon-hover="icon-#{item.icon.hover}" data-icon-active="icon-#{item.icon.active}")
+                  span.icon(class="icon-#{item.icon.default}")
+                  span.hidden-accessibly(data-reverse=item.label.off)= item.label.default
           if data.tags
             +tags(data.tags)
