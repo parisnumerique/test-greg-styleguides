@@ -98,23 +98,7 @@
       },
       "heading": {
         "image": "heading.jpg",
-        "text": "Vos élus",
-        "icons" : [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          }
-        ]
+        "text": "Vos élus"
       },
       "breadcrumbs": {
         "items": [
@@ -542,23 +526,7 @@
       },
       "heading": {
         "image": "heading.jpg",
-        "text": "Adjoints à la Maire",
-        "icons" : [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          }
-        ]
+        "text": "Adjoints à la Maire"
       },
       "breadcrumbs": {
         "items": [

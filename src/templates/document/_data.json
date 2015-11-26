@@ -105,20 +105,6 @@
         "icons" : [
           {
             "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          },
-          {
-            "action": {
               "type": "alert",
               "id": 1
             },
@@ -160,10 +146,6 @@
         {
           "type": "anchors-list",
           "data": {
-            "attributes": {
-              "data-anchors-favoritable": "true",
-              "data-anchors-shareable": "true"
-            },
             "title": "Sommaire de la page",
             "items": [
               {
@@ -788,20 +770,6 @@
         "icons" : [
           {
             "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          },
-          {
-            "action": {
               "type": "alert",
               "id": 1
             },
@@ -843,10 +811,6 @@
         {
           "type": "anchors-list",
           "data": {
-            "attributes": {
-              "data-anchors-favoritable": "true",
-              "data-anchors-shareable": "true"
-            },
             "title": "Sommaire de la page",
             "items": [
               {

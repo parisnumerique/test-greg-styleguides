@@ -98,23 +98,7 @@
       },
       "heading": {
         "image": "../../modules/document-heading/document-heading.png",
-        "text": "Titre de la page type",
-        "icons": [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          }
-        ]
+        "text": "Titre de la page type"
       },
       "breadcrumbs": {
         "items": [

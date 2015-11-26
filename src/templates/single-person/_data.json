@@ -99,22 +99,6 @@
       "heading": {
         "image": "heading.jpg",
         "text": "Bruno Julliard",
-        "icons" : [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          }
-        ],
         "tags" : [
           {
             "text": "Adjoint"
@@ -511,22 +495,6 @@
       "heading": {
         "image": "heading-generic.jpg",
         "text": "Bruno Julliard",
-        "icons" : [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          }
-        ],
         "tags" : [
           {
             "text": "Adjoint"

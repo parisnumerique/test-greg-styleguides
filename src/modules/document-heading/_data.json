@@ -11,20 +11,6 @@
         "icons" : [
           {
             "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          },
-          {
-            "action": {
               "type": "alert",
               "id": 1
             },
@@ -49,20 +35,6 @@
           {
             "active": true,
             "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          },
-          {
-            "action": {
               "type": "alert",
               "id": 1
             },
@@ -84,20 +56,6 @@
         "image": "./document-heading.png",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas porttitor purus vitae volutpat.",
         "icons" : [
-          {
-            "action": {
-              "type": "favorite",
-              "id": 1
-            },
-            "icon": [
-              "favorites-outline",
-              "favorites"
-            ],
-            "label": [
-              "Ajouter aux favoris",
-              "Enlever des favoris"
-            ]
-          },
           {
             "action": {
               "type": "alert",

@@ -22,6 +22,8 @@ Let's take the `x.β.α` version number:
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
 * accessibility: improved modules `document-heading`, `rheader`, `sections-panel`
+* DEPRECATED: removed favorite icon from `document-heading` (affects all templates based on `generic`)
+* DEPRECATED: removed `share` from anchors (in component `text`)
 
 ## 1.2.2 (2015-11-24)
 
