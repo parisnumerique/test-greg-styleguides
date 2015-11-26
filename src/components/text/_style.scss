@@ -129,26 +129,8 @@
     position: relative;
   }
 
-  .icon-anchor {
-    background: $white;
-    border: 0;
-    color: $grayCC;
-    font-size: 20px;
-    line-height: 1;
+  .icon-switch {
     margin-left: 10px;
-    padding: 0;
-
-    &.active {
-      color: $color-secondary;
-    }
-
-    &:hover,
-    &.active:hover {
-      color: $color-tertiary;
-      cursor: pointer;
-    }
-
-    &:focus {outline: 1px dotted $gray99;}
   }
 
   &.intro-primary {

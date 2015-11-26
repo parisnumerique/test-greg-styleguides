@@ -1,4 +1,5 @@
 include ../../modules/tags/tags
+include ../../modules/icon-switch/icon-switch
 
 mixin document-heading(data)
   .document-heading
@@ -9,9 +10,7 @@ mixin document-heading(data)
           h1.document-heading-title!= data.text
           if data.icons
             .document-heading-icons
-              each item in data.icons
-                a.document-heading-icon(href=item.href title=item.label.default target=item.target class=item.modifiers role="button" data-icon-default="icon-#{item.icon.default}" data-icon-hover="icon-#{item.icon.hover}" data-icon-active="icon-#{item.icon.active}")
-                  span.icon(class="icon-#{item.icon.default}")
-                  span.hidden-accessibly(data-reverse=item.label.off)= item.label.default
+              each icon in data.icons
+                +icon-switch(icon)
           if data.tags
             +tags(data.tags)

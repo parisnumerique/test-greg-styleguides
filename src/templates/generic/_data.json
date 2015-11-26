@@ -101,16 +101,18 @@
         "text": "Titre de la page type",
         "icons": [
           {
-            "icon": {
-              "default": "favorites-outline",
-              "hover": "favorites",
-              "active": "favorites"
+            "action": {
+              "type": "favorite",
+              "id": 1
             },
-            "url": "#",
-            "label": {
-              "default": "Ajouter aux favoris",
-              "off": "Enlever des favoris"
-            }
+            "icon": [
+              "favorites-outline",
+              "favorites"
+            ],
+            "label": [
+              "Ajouter aux favoris",
+              "Enlever des favoris"
+            ]
           }
         ]
       },

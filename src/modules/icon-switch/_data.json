@@ -1,0 +1,27 @@
+{
+  "index": {
+    "type": "icon-switch",
+    "description": "Ce module permet d'utiliser une icône comme un switch on / off, et de connecter des actions à celui-ci.",
+    "cssTheme": "",
+    "bodyAttributes": {},
+    "examples": [{
+      "title": "Standard",
+      "description": "",
+      "attrs": {},
+      "data": {
+        "action": {
+          "type": "favorite",
+          "id": 1
+        },
+        "icon": [
+          "favorites-outline",
+          "favorites"
+        ],
+        "label": [
+          "Ajouter aux favoris",
+          "Enlever des favoris"
+        ]
+      }
+    }]
+  }
+}

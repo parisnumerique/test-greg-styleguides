@@ -136,8 +136,20 @@ Paris.anchors = (function(){
         // Do not display favorite when in postit
         if ($anchor.data('in-postit')) {return;}
 
-        // TODO: handle click on button, then change text (use favorites/remove)
-        var content = '<button type="button" class="icon icon-anchor icon-favorites"><span class="hidden-accessibly">' + Paris.i18n.t("favorites/add") + '</span></button>';
+        var content = Paris.templates['icon-switch']['icon-switch']({
+          "action": {
+            "type": "favorite",
+            "id": 1
+          },
+          "icon": [
+            "favorites-outline",
+            "favorites"
+          ],
+          "label": [
+            Paris.i18n.t("favorites/add"),
+            Paris.i18n.t("favorites/remove")
+          ]
+        });
         $anchor.append(content);
       });
     }

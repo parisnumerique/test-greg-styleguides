@@ -104,28 +104,32 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "icon": {
-              "default": "favorites-outline",
-              "hover": "favorites",
-              "active": "favorites"
+            "action": {
+              "type": "favorite",
+              "id": 1
             },
-            "url": "#",
-            "label": {
-              "default": "Ajouter aux favoris",
-              "off": "Enlever des favoris"
-            }
+            "icon": [
+              "favorites-outline",
+              "favorites"
+            ],
+            "label": [
+              "Ajouter aux favoris",
+              "Enlever des favoris"
+            ]
           },
           {
-            "icon": {
-              "default": "bell-outline",
-              "hover": "bell",
-              "active": "bell"
+            "action": {
+              "type": "alert",
+              "id": 1
             },
-            "url": "#",
-            "label": {
-              "default": "S'inscrire aux alertes",
-              "off": "Se désinscrire des alertes"
-            }
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       },
@@ -783,28 +787,32 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "icon": {
-              "default": "favorites-outline",
-              "hover": "favorites",
-              "active": "favorites"
+            "action": {
+              "type": "favorite",
+              "id": 1
             },
-            "url": "#",
-            "label": {
-              "default": "Ajouter aux favoris",
-              "off": "Enlever des favoris"
-            }
+            "icon": [
+              "favorites-outline",
+              "favorites"
+            ],
+            "label": [
+              "Ajouter aux favoris",
+              "Enlever des favoris"
+            ]
           },
           {
-            "icon": {
-              "default": "bell-outline",
-              "hover": "bell",
-              "active": "bell"
+            "action": {
+              "type": "alert",
+              "id": 1
             },
-            "url": "#",
-            "label": {
-              "default": "S'inscrire aux alertes",
-              "off": "Se désinscrire des alertes"
-            }
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       },

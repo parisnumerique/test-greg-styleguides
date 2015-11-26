@@ -56,28 +56,6 @@
   margin-right: 25px;
 }
 
-.document-heading-icons {
- font-size: 24px;
- line-height: 36px;
-}
-
-.document-heading-icon {
-  color: $gray99;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    color: $gray33;
-  }
-
-  &.active .icon-bell {color: $color-secondary;}
-  &.active .icon-favorites {color: $color-tertiary;}
-
-  & + .document-heading-icon {
-    margin-left: 15px;
-  }
-}
-
 @include small {
   .document-heading-content {
     width: 100%;
@@ -143,7 +121,9 @@
 
   .document-heading-icons {
     float: left;
-    line-height: 40px;
+    line-height: 1;
+    position: relative;
+    top: 6px;
   }
 
 }

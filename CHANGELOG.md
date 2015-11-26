@@ -15,6 +15,7 @@ Let's take the `x.β.α` version number:
 * module `block-aside-access` added
 * module `block-aside-contact`: added minimap
 * module `button`: add button `small`
+* module `icon-switch` added
 * module `notice`: improved text wrapping on small screens
 * layout `left-col`: fix affix bug when there is no `anchors-list`
 * template `single-equipment` added (based on `generic`)
