@@ -12,7 +12,8 @@
           {
             "action": {
               "type": "alert",
-              "id": 1
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
             },
             "icon": [
               "bell-outline",
@@ -36,7 +37,8 @@
             "active": true,
             "action": {
               "type": "alert",
-              "id": 1
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
             },
             "icon": [
               "bell-outline",
@@ -59,7 +61,8 @@
           {
             "action": {
               "type": "alert",
-              "id": 1
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
             },
             "icon": [
               "bell-outline",

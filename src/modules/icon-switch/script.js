@@ -8,9 +8,11 @@ var Paris = window.Paris || {};
 Paris.iconSwitch = (function(){
 
   var defaultOptions = {
-    isUserSubscribedUrl: '/alerts/isUserSubscribed',
-    subscribeUserUrl: '/alerts/subscribeUser',
-    unsubscribeUserUrl: '/alerts/unsubscribeUser'
+    alertsApi: {
+      isUserSubscribedUrl: '/alerts/isUserSubscribed',
+      subscribeUserUrl: '/alerts/subscribeUser',
+      unsubscribeUserUrl: '/alerts/unsubscribeUser'
+    }
   };
 
   function iconSwitch(selector, userOptions){
@@ -24,11 +26,37 @@ Paris.iconSwitch = (function(){
       $on = $el.find('.icon-switch-on');
       $off = $el.find('.icon-switch-off');
 
-      $el.on('click', onClick);
+      var actionOnClick;
+      switch (options.action) {
+        case 'alert':
+          if (Cookies.get(Paris.config.cookies.parisconnect.name)) {
+            setupAlertAjaxOperations();
+          }
+          actionOnClick = function(e){
+            if (!Cookies.get(Paris.config.cookies.parisconnect.name)) {
+              window.open($el.data('action-fallback-link'));
+              return;
+            }
+            onClick(e);
+          };
+          break;
 
-      if (Cookies.get(Paris.config.cookies.parisconnect.name)) {
-        setupAlertAjaxOperations();
+        case 'favorite':
+          // TODO implement favorite action
+          actionOnClick = function(e){
+            onClick(e);
+          };
+          break;
+
+        case 'pause':
+          // TODO implement pause action
+          actionOnClick = function(e){
+            onClick(e);
+          };
+          break;
       }
+
+      $el.on('click', actionOnClick);
     }
 
     function initOptions() {
@@ -40,6 +68,7 @@ Paris.iconSwitch = (function(){
     function onClick(e){
       e.preventDefault();
       e.stopPropagation();
+
       $el.toggleClass('active');
 
       if ($el.hasClass('active')) {
@@ -51,8 +80,8 @@ Paris.iconSwitch = (function(){
 
     function setupAlertAjaxOperations() {
       // init for alert
-      var $alertIcon = $('.document-heading-icons .icon-bell');
-      var alertId = $alertIcon.attr('href') && $alertIcon.attr('href').split('/').pop();
+      var $alertIconSwitch = $('.document-heading-icons .icon-switch[data-action="alert"]');
+      var alertId = $alertIconSwitch.data('action-id');
 
       if (!alertId) {return;}
 
@@ -60,7 +89,7 @@ Paris.iconSwitch = (function(){
       var isSubscribed;
       $.ajax({
         type: 'get',
-        url: options.isUserSubscribedUrl,
+        url: options.alertsApi.isUserSubscribedUrl,
         data: {idalertes: alertId},
         success: function (subscribed) {
           switch (subscribed) {
@@ -71,25 +100,23 @@ Paris.iconSwitch = (function(){
               isSubscribed = true;
               break;
             default:
-              console.error('response to ' + options.isUserSubscribedUrl + '?idalertes=' + alertId + 'is not recognized: ' + subscribed);
+              console.error('response to ' + options.alertsApi.isUserSubscribedUrl + '?idalertes=' + alertId + 'is not recognized: ' + subscribed);
               return;
           }
-          $alertIcon.attr('href', 'javascript:void(0)');
           setupAlertHandlers();
         }
       });
 
       function setupAlertHandlers() {
-        $alertIcon.attr('title', isSubscribed ? Paris.i18n.t("alerts/unsubscribe") : Paris.i18n.t("alerts/subscribe"));
-        $alertIcon.toggleClass('active', isSubscribed);
-        $alertIcon.on('click', function onClick() {
+        $alertIconSwitch.toggleClass('active', isSubscribed);
+        $alertIconSwitch.on('click', function onClick() {
           $.ajax({
             type: 'get',
-            url: isSubscribed ? options.unsubscribeUserUrl :  options.subscribeUserUrl,
+            url: isSubscribed ? options.alertsApi.unsubscribeUserUrl : options.alertsApi.subscribeUserUrl,
             data: {idalertes: alertId},
             success: function () {
               isSubscribed = !isSubscribed;
-              $alertIcon.unbind('click');
+              $alertIconSwitch.unbind('click');
               setupAlertHandlers();
             }
           });
