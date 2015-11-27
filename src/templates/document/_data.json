@@ -104,12 +104,19 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "url": "#"
-          },
-          {
-            "name": "bell",
-            "url": "#"
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       },
@@ -140,10 +147,6 @@
         {
           "type": "anchors-list",
           "data": {
-            "attributes": {
-              "data-anchors-favoritable": "true",
-              "data-anchors-shareable": "true"
-            },
             "title": "Sommaire de la page",
             "items": [
               {
@@ -767,12 +770,19 @@
         "text": "Demander un logement",
         "icons" : [
           {
-            "name": "favorites",
-            "url": "#"
-          },
-          {
-            "name": "bell",
-            "url": "#"
+            "action": {
+              "type": "alert",
+              "id": 1,
+              "fallback_link": "https://connect.paris.fr/alertes"
+            },
+            "icon": [
+              "bell-outline",
+              "bell"
+            ],
+            "label": [
+              "S'inscrire aux alertes",
+              "Se désinscrire des alertes"
+            ]
           }
         ]
       },
@@ -803,10 +813,6 @@
         {
           "type": "anchors-list",
           "data": {
-            "attributes": {
-              "data-anchors-favoritable": "true",
-              "data-anchors-shareable": "true"
-            },
             "title": "Sommaire de la page",
             "items": [
               {

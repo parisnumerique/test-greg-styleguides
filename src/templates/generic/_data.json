@@ -98,13 +98,7 @@
       },
       "heading": {
         "image": "../../modules/document-heading/document-heading.png",
-        "text": "Titre de la page type",
-        "icons": [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ]
+        "text": "Titre de la page type"
       },
       "breadcrumbs": {
         "items": [

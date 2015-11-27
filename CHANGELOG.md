@@ -15,12 +15,15 @@ Let's take the `x.β.α` version number:
 * module `block-aside-access` added
 * module `block-aside-contact`: added minimap
 * module `button`: add button `small`
+* module `icon-switch` added
 * module `notice`: improved text wrapping on small screens
 * layout `left-col`: fix affix bug when there is no `anchors-list`
 * template `single-equipment` added (based on `generic`)
 * template `faq` is now based on `generic`
 * template `generic`: `aside` data is now an array (same behavior as `components`)
 * accessibility: improved modules `document-heading`, `rheader`, `sections-panel`
+* DEPRECATED: removed favorite icon from `document-heading` (affects all templates based on `generic`)
+* DEPRECATED: removed `share` from anchors (in component `text`)
 
 ## 1.2.2 (2015-11-24)
 

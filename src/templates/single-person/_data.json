@@ -99,12 +99,6 @@
       "heading": {
         "image": "heading.jpg",
         "text": "Bruno Julliard",
-        "icons" : [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ],
         "tags" : [
           {
             "text": "Adjoint"
@@ -501,12 +495,6 @@
       "heading": {
         "image": "heading-generic.jpg",
         "text": "Bruno Julliard",
-        "icons" : [
-          {
-            "name": "favorites",
-            "url": "#"
-          }
-        ],
         "tags" : [
           {
             "text": "Adjoint"
