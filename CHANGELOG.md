@@ -7,7 +7,7 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
-## 1.3.0 (to be released)
+## 1.3.0 (2015-11-27)
 
 * all components now accept `modifiers`
 * component `card` added
