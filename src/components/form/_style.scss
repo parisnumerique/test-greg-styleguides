@@ -136,6 +136,17 @@
     }
   }
 
+  .form-item-cgu label {
+    color:#000;
+    font-weight:700;
+    font-size:14px;
+  }
+
+  .form-item-cgu label a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+
   // matrix
   .form-item-matrix {
     .form-item-label {
