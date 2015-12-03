@@ -135,16 +135,10 @@
       margin: 2px 10px 2px 0;
     }
   }
-
-  .form-item-cgu label {
-    color:#000;
-    font-weight:700;
-    font-size:14px;
-  }
-
-  .form-item-cgu label a {
-    color: #337ab7;
-    text-decoration: none;
+  .form-item-cgu label a:not(.button) {
+    color: $red1;
+    text-decoration: underline;
+    &:hover {text-decoration: none;}
   }
 
   // matrix
