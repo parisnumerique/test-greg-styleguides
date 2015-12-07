@@ -11,6 +11,7 @@ require('./lib/url');
 
 // load our components
 require('../components/accordion/script');
+require('../components/districts/script');
 require('../components/form/script');
 require('../components/gallery/script');
 require('../components/html/script');

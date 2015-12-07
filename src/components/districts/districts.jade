@@ -1,14 +1,27 @@
-mixin districts(data)
-  - var uuid = Math.random().toString(36).substr(2, 5)
-  .component.component-districts(role='tablist' aria-multiselectable='true' class=data.modifiers)
-    each item, index in data.items
-      - var slug = item.slug || uuid + "-" + index
-      .districts-item.panel
-        div(role='tab' id='h-#{slug}')
-          a.districts-item-title(href='##{slug}' aria-controls='##{slug}')
-            = item.title
-            span.icon.icon-arrow-top
-        .districts-item-content(role='tabpanel' aria-labelledby='h-#{slug}' id="#{slug}")
-          .districts-content-wrapper
-            != item.content
+include ../../modules/button/button
 
+mixin districts(data)
+  .component.component-districts
+    p=data.title
+    each item, index in data.items
+      - var uuid = Math.random().toString(36).substr(2, 5)
+      - var slug = item.slug || uuid + "-" + index
+      - var button = JSON.parse(JSON.stringify(item || [])) // clone the data object
+      - var isEmptyContent = typeof item.content === 'undefined' || !item.content.length
+
+      - button.modifiers = button.modifiers || []
+      - button.attributes = button.attributes || {}
+
+      - button.modifiers.push("districts-item stateful ")
+      - button.attributes["area-hidden"]="true"
+      - button.attributes["data-slug"]=slug
+      - button.attributes["data-content"]=item.content
+
+      if isEmptyContent
+        - button.attributes["disabled"]="disabled"
+      +button(button)
+    .distincts-content-wrapper
+      .distincts-item-title
+        '20e arrondissemnet de Paris'
+      .distincts-item-content
+        '20e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'

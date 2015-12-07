@@ -1,54 +1,131 @@
 {
   "index": {
     "type": "districts",
-    "description": "",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "examples": [{
       "title": "Standard",
       "description": "",
       "data": {
+        "title": "Séléctionnez un arrondissement :",
         "items": [
           {
-            "title": "Texte simple",
-            "content": "Ceci est un texte simple."
+            "href": "#",
+            "text": "1e",
+            "title": "1e",
+            "content": "1e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
           },
           {
-            "title": "Texte mis en forme",
-            "content": "Ceci est un texte en <strong>gras</strong> et en <em>italique</em>, avec un <a href=\"#\">lien</a>."
+            "href": "#",
+            "text": "2e",
+            "title": "2e",
+            "content": ""
           },
           {
-            "title": "Listes",
-            "content": "<ul><li>Élément de liste</li><li>Élément de liste</li><li>Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ul><ol><li>Élément de liste numérotée</li><li>Élément de liste numérotée</li><li>Élément de liste numérotée long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;<a href=\"#\">lien d'exemple</a> dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</li></ol>"
+            "href": "#",
+            "text": "3e",
+            "title": "3e",
+            "content": ""
           },
           {
-            "title": "Texte long (plusieurs paragraphes) accompagné d'un titre plutôt long lui aussi",
-            "content": "<p>Incenderat autem audaces usque ad insaniam homines ad haec, quae nefariis egere conatibus, Luscus quidam curator urbis subito visus: eosque ut heiulans baiolorum praecentor ad expediendum quod orsi sunt incitans vocibus crebris. qui haut longe postea ideo vivus exustus est.</p><p>Orientis vero limes in longum protentus et rectum ab Euphratis fluminis ripis ad usque supercilia porrigitur Nili, laeva Saracenis conterminans gentibus, dextra pelagi fragoribus patens, quam plagam Nicator Seleucus occupatam auxit magnum in modum, cum post Alexandri Macedonis obitum successorio iure teneret regna Persidis, efficaciae inpetrabilis rex, ut indicat cognomentum.</p>"
-          }
-        ]
-      }
-    }, {
-      "title": "Définir les slugs manuellement",
-      "description": "Par défaut, le composant génère des slugs uniques pour chaque item de chaque instance. Il est en revanche possible de définir manuellement ces slugs si besoin.",
-      "data": {
-        "items": [
-          {
-            "title": "Titre 1",
-            "slug": "titre1",
-            "content": "Contenu 1"
+            "href": "#",
+            "text": "4e",
+            "title": "4e"
           },
           {
-            "title": "Titre 2",
-            "slug": "titre2",
-            "content": "Contenu 2"
+            "href": "#",
+            "text": "5e",
+            "title": "5e",
+            "content": "5e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
           },
           {
-            "title": "Titre 3",
-            "slug": "titre3",
-            "content": "Contenu 3"
+            "href": "#",
+            "text": "6e",
+            "title": "6e",
+            "content": "6e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
           },
           {
-            "title": "Titre 4",
-            "slug": "titre4",
-            "content": "Contenu 4"
+            "href": "#",
+            "text": "7e",
+            "title": "7e",
+            "content": "7e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "8e",
+            "title": "8e",
+            "content": "8e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "9e",
+            "title": "9e",
+            "content": "9e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "10e",
+            "title": "10e",
+            "content": "10e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "11e",
+            "title": "11e",
+            "content": "11e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "12e",
+            "title": "12e",
+            "content": "12e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "13e",
+            "title": "13e",
+            "content": "13e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "14e",
+            "title": "14e",
+            "content": "14e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "15e",
+            "title": "15e",
+            "content": "15e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "16e",
+            "title": "16e",
+            "content": "16e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "17e",
+            "title": "17e",
+            "content": "17e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "18e",
+            "title": "18e",
+            "content": "18e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "19e",
+            "title": "19e",
+            "content": "19e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "href": "#",
+            "text": "20e",
+            "title": "20e",
+            "content": "20e - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
           }
         ]
       }
