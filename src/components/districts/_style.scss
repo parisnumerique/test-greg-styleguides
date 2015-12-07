@@ -1,0 +1,153 @@
+.component-districts {
+  clear: both;
+
+  .districts-item {
+    background-color: $grayF2;
+    border-radius: 4px;
+    position: relative;
+    transition: background 0.3s ease;
+
+    & + .districts-item {
+      margin-top: 7px;
+    }
+
+    &:hover {
+      background-color: $grayEE;
+    }
+  }
+
+  .icon-arrow-top {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    transition: .3s ease transform;
+    &:before{
+      color: $color-secondary;
+      font-size: 20px;
+    }
+  }
+
+  .collapsed .icon-arrow-top {
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+
+  .districts-item-title {
+    color: $color-secondary;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    outline: 0;
+    padding: 20px 40px 20px 12px;
+    text-decoration: none;
+  }
+
+  .districts-item-content {
+    padding: 0 12px;
+  }
+
+  .districts-content-wrapper {
+    color: $gray33;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    padding-bottom: 12px;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    a:not(.button) {
+      color: $red1;
+      text-decoration: underline;
+      &:hover {text-decoration: none;}
+    }
+
+    ul, ol, p {
+      color: $gray33;
+      margin: 0 0 20px;
+      padding: 0;
+    }
+
+    ul, ol {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      list-style-position: inside;
+
+      li + li {
+        margin-top: 10px;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    table {
+      width: 746px;
+    }
+  }
+
+  .collapse {
+    display: none;
+    visibility: hidden;
+  }
+
+  .collapse.in {
+    display: block;
+    visibility: visible;
+  }
+
+  tr.collapse.in {
+    display: table-row;
+  }
+
+  tbody.collapse.in {
+    display: table-row-group;
+  }
+
+  .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-duration: .35s;
+         -o-transition-duration: .35s;
+            transition-duration: .35s;
+    -webkit-transition-property: height, visibility;
+         -o-transition-property: height, visibility;
+            transition-property: height, visibility;
+  }
+}
+
+@include medium-and-small {
+  .component-districts {
+    .districts-content-wrapper {
+      table {
+        overflow-x: auto;
+        position: relative;
+        width: 100%;
+        td {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  .component-districts {
+    .districts-content-wrapper {
+      table {
+        width: 100%;
+        td {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
