@@ -23,6 +23,8 @@
 
 
     @media (max-width: 450px) {
-
+        .disabled {
+            display: none;
+        }
     }
 }
