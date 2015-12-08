@@ -10,10 +10,6 @@ Paris.districts = (function() {
     var $el = $(selector),
         $contentWrapper = $('.distincts-content-wrapper');
 
-    function loadContent(sel, content) {
-      $(sel).html(content);
-    }
-
     function init() {
 
       $el.on('click', '.districts-item', function() {
@@ -21,12 +17,10 @@ Paris.districts = (function() {
             title = $this.data('district') + "e arrondissement de Paris",
             content = $this.data('content');
 
-        loadContent('.distincts-item-title',title);
-        loadContent('.distincts-item-content',content);
-
+        $('.distincts-item-title').html(title);
+        $('.distincts-item-content').html(content);
         $contentWrapper.slideDown('slow');
       });
-
 
       $(document).mouseup(function (e) {
         var $districtsItem = $('.districts-item');
@@ -53,4 +47,3 @@ Paris.districts = (function() {
 $(document).ready(function() {
   Paris.districts('.component-districts');
 });
-
