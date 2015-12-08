@@ -4,53 +4,55 @@ var PubSub = require('pubsub-js');
 
 var Paris = window.Paris || {};
 
-Paris.districts = (function(){
+Paris.districts = (function() {
 
-  function districts(selector){
+  function districts(selector) {
     var $el = $(selector),
+        $contentWrapper = $('.distincts-content-wrapper'),
+        $itemsWrapper = $('.distincts-items-wrapper'),
         api = {};
 
-    function init(){
-      $el.find('.districts-item-content')
-        .addClass('collapse')
-        .data('toggle', false);
-      $el.find('.districts-item-title')
-        .addClass('collapsed')
-        .attr('data-toggle', 'collapse')
-        .collapse();
-      $el.on('shown.bs.collapse hidden.bs.collapse', function(){
-        PubSub.publish('districts:change');
-      });
-
-      $el.data('api', api);
+    function loadContent(sel, content) {
+      $(sel).html(content);
     }
 
+    function init() {
 
-    // The API for external interaction
+      $el.on('click', '.districts-item', function() {
+        var $this = $(this),
+            title = $this.data('district') + "e arrondissement de Paris",
+            content = $this.data('content');
 
-    api.openItem = function openItem(sel) {
-      $el.find(sel).collapse('show');
-    };
+        loadContent('.distincts-item-title',title);
+        loadContent('.distincts-item-content',content);
 
-    api.closeAll = function closeAll() {
-      var els = $el.find('.districts-item-content');
-      els.collapse('hide');
-    };
+        $contentWrapper.show('slow');
+      });
+
+
+      $(document).mouseup(function (e) {
+        var $districtsItem = $('.districts-item');
+        if (!$districtsItem.is(e.target) && $districtsItem.has(e.target).length === 0) {
+            $contentWrapper.hide('slow');
+        }
+      });
+
+    }
 
     init();
 
     return $el;
   }
 
-  return function(selector){
-    return $(selector).each(function(){
+  return function(selector) {
+    return $(selector).each(function() {
       districts(this);
     });
   };
 
 })();
 
-$(document).ready(function(){
+$(document).ready(function() {
   Paris.districts('.component-districts');
 });
 
