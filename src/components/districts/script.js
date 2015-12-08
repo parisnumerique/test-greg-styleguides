@@ -8,9 +8,7 @@ Paris.districts = (function() {
 
   function districts(selector) {
     var $el = $(selector),
-        $contentWrapper = $('.distincts-content-wrapper'),
-        $itemsWrapper = $('.distincts-items-wrapper'),
-        api = {};
+        $contentWrapper = $('.distincts-content-wrapper');
 
     function loadContent(sel, content) {
       $(sel).html(content);
@@ -26,14 +24,14 @@ Paris.districts = (function() {
         loadContent('.distincts-item-title',title);
         loadContent('.distincts-item-content',content);
 
-        $contentWrapper.show('slow');
+        $contentWrapper.slideDown('slow');
       });
 
 
       $(document).mouseup(function (e) {
         var $districtsItem = $('.districts-item');
         if (!$districtsItem.is(e.target) && $districtsItem.has(e.target).length === 0) {
-            $contentWrapper.hide('slow');
+            $contentWrapper.slideUp('slow');
         }
       });
 
