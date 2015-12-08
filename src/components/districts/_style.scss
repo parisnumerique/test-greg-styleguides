@@ -4,9 +4,6 @@
     $item-size: 60px !default;
     $default-margin: 3px !default;
 
-
-    $mobile-item-size: 50px !default;
-
     .distincts-items-wrapper {
         display: -webkit-box;
         display: -moz-box;
@@ -25,6 +22,7 @@
         height: $item-size;
         margin: $default-margin;
         align-self: auto;
+        line-height: $item-size / 2;
     }
 
     .distincts-content-wrapper {
@@ -34,13 +32,11 @@
         border-radius: 5px;
         margin: 10px 0;
 
-
         .distincts-item-title {
             color: $color-secondary;
             font-weight: 400;
         }
     }
-
 
     @media (max-width: 450px) {
         .districts-item {
