@@ -1,20 +1,16 @@
 .component-districts {
 
     $items-count: 20 !default;
-    $item-size: 60px !default;
+    $item-size: 72px !default;
+    $mobile-item-size: 50px !default;
     $default-margin: 3px !default;
 
     .districts-item {
         width: $item-size;
         height: $item-size;
         margin: $default-margin;
-        line-height: $item-size / 2;
-
-        &.active {
-            &:after {
-                width: 100%;
-            }
-        }
+        line-height: 41px;
+        font-size: 16px;
     }
 
     .districts-content-wrapper {
@@ -31,7 +27,16 @@
 
     @media (max-width: 450px) {
         .districts-item {
+            width: $mobile-item-size;
+            height: $mobile-item-size;
             background-color: $grayF2;
+            line-height: 20px;
+            .button-text {
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
         }
         .disabled {
             display: none;

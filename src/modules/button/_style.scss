@@ -71,6 +71,7 @@
     color: $color-secondary;
     padding: 15px;
     &:after {background-color: $color-secondary;}
+
     &:hover, &:focus, &.active {
       color: $white;
       &:after {

@@ -8,8 +8,8 @@ Paris.districts = (function() {
 
   function districts(selector) {
     var $el = $(selector),
-        $contentWrapper = $('.districts-content-wrapper'),
-        $districtsItem = $('.districts-item');
+        $districtsItem = $('.districts-item'),
+        $selectedItem = $districtsItem.first();
 
     function setItemTitle(item) {
       var title = item.data('district') + "e arrondissement de Paris";
@@ -21,38 +21,31 @@ Paris.districts = (function() {
       $('.districts-item-content').html(content);
     }
 
-    function selectDefault() {
-      var $defaultItem = $districtsItem.first();
-
-      $defaultItem.addClass('active');
-      setItemTitle($defaultItem);
-      setItemContent($defaultItem);
+    function selectItem($item) {
+      $item.addClass('active');
+      setItemTitle($item);
+      setItemContent($item);
     }
 
     function init() {
-      selectDefault();
+
+      selectItem($selectedItem);
 
       $el.on('click', '.districts-item', function() {
-        var $this = $(this);
-
+        $selectedItem = $(this);
         $districtsItem.removeClass('active');
-
-        setItemTitle($this);
-        setItemContent($this);
-        // $contentWrapper.slideDown('slow');
+        selectItem($selectedItem);
       });
 
       $(document).mouseup(function (e) {
         if (!$districtsItem.is(e.target) && $districtsItem.has(e.target).length === 0) {
-            // $contentWrapper.slideUp('slow');
-            selectDefault();
+          $selectedItem.addClass('active');
         }
       });
 
     }
 
     init();
-
     return $el;
   }
 
