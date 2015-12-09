@@ -3,7 +3,7 @@ include ../../modules/button/button
 mixin districts(data)
   .component.component-districts
     h3=data.title
-    .distincts-items-wrapper
+    .districts-items-wrapper
       each item in data.items
         - var uuid = Math.random().toString(36).substr(2, 5)
         - var slug = item.slug || uuid + "-" + item.id
@@ -14,13 +14,14 @@ mixin districts(data)
         - button.attributes = button.attributes || {}
 
         - button.modifiers.push("districts-item stateful ")
-        - button.attributes["data-slug"]=slug
-        - button.attributes["data-district"]=item.id
-        - button.attributes["data-content"]=item.content
+        - button.attributes["data-slug"] = slug
+        - button.attributes["data-district"] = item.id
+        - button.attributes["data-content"] = item.content
 
         if isEmptyContent
           - button.attributes["disabled"]="disabled"
         +button(button)
-    .distincts-content-wrapper
-      h3.distincts-item-title
-      .distincts-item-content
+      - var defaultItem = data.items[0]
+    .districts-content-wrapper
+      h3.districts-item-title=defaultItem.title
+      .districts-item-content=defaultItem.content

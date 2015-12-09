@@ -4,35 +4,26 @@
     $item-size: 60px !default;
     $default-margin: 3px !default;
 
-    .distincts-items-wrapper {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -moz-box-wrap: wrap;
-            flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-between;
-        align-items: stretch;
-    }
     .districts-item {
         width: $item-size;
         height: $item-size;
         margin: $default-margin;
-        align-self: auto;
         line-height: $item-size / 2;
+
+        &.active {
+            &:after {
+                width: 100%;
+            }
+        }
     }
 
-    .distincts-content-wrapper {
-        display: none;
+    .districts-content-wrapper {
         background-color: $grayF2;
         padding: 10px 10px 18.7px;
         border-radius: 5px;
         margin: 10px 0;
 
-        .distincts-item-title {
+        .districts-item-title {
             color: $color-secondary;
             font-weight: 400;
         }
