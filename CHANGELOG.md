@@ -7,6 +7,17 @@ Let's take the `x.β.α` version number:
 * `β` is for versions that need template update for static (html) use of the styleguide and addition of new elements
 * `x` is for major release involving a more careful integration of the styleguide
 
+## 1.3.1 (2015-12-09)
+
+* use new git worflow: see `CONTRIBUTING.md`
+* module `button`:
+  * added stateful button
+  * allow to disable `<a>` tag buttons
+  * more detailed documentation
+* module `form`: style `cgu` link
+* template `list-person`: fix js error on pagination rendering
+* template `subhome-news`: allow to deactivate some modules
+
 ## 1.3.0 (2015-11-27)
 
 * all components now accept `modifiers`
