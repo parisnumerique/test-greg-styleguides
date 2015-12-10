@@ -5,8 +5,6 @@ mixin districts(data)
     h3=data.title
     .districts-items-wrapper
       each item in data.items
-        - var uuid = Math.random().toString(36).substr(2, 5)
-        - var slug = item.slug || uuid + "-" + item.id
         - var button = JSON.parse(JSON.stringify(item || [])) // clone the data object
         - var isEmptyContent = typeof item.content === 'undefined' || !item.content.length
 
@@ -14,8 +12,7 @@ mixin districts(data)
         - button.attributes = button.attributes || {}
 
         - button.modifiers.push("districts-item stateful ")
-        - button.attributes["data-slug"] = slug
-        - button.attributes["data-district"] = item.id
+        - button.attributes["data-title"] = item.title
         - button.attributes["data-content"] = item.content
 
         if isEmptyContent

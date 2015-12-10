@@ -11,20 +11,10 @@ Paris.districts = (function() {
         $districtsItem = $('.districts-item'),
         $selectedItem = $districtsItem.first();
 
-    function setItemTitle(item) {
-      var title = item.data('district') + "e arrondissement de Paris";
-      $('.districts-item-title').html(title);
-    }
-
-    function setItemContent(item) {
-      var content = item.data('content');
-      $('.districts-item-content').html(content);
-    }
-
     function selectItem($item) {
       $item.addClass('active');
-      setItemTitle($item);
-      setItemContent($item);
+      $('.districts-item-title').html($item.data('title'));
+      $('.districts-item-content').html($item.data('content'));
     }
 
     function init() {
