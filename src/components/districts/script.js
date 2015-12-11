@@ -8,20 +8,24 @@ Paris.districts = (function() {
 
   function districts(selector) {
     var $el = $(selector),
-        $districtsItem = $('.districts-item'),
+        $districtsItem = $el.find('.districts-item'),
         $selectedItem = $districtsItem.first();
 
     function selectItem($item) {
       $item.addClass('active');
-      $('.districts-item-title').html($item.data('title'));
-      $('.districts-item-content').html($item.data('content'));
+
+      $el.find('.districts-item-title')
+        .html($item.data('title'));
+      $el.find('.districts-item-content')
+        .html($item.data('content'));
     }
 
     function init() {
 
       selectItem($selectedItem);
 
-      $el.on('click', '.districts-item', function() {
+      $el.on('click', '.districts-item', function(e) {
+        e.preventDefault();
         $selectedItem = $(this);
         $districtsItem.removeClass('active');
         selectItem($selectedItem);

@@ -2,7 +2,7 @@ include ../../modules/button/button
 
 mixin districts(data)
   .component.component-districts
-    h3=data.title
+    h3= data.title
     .districts-items-wrapper
       each item in data.items
         - var button = JSON.parse(JSON.stringify(item || [])) // clone the data object
@@ -20,5 +20,5 @@ mixin districts(data)
         +button(button)
       - var defaultItem = data.items[0]
     .districts-content-wrapper
-      h3.districts-item-title=defaultItem.title
-      .districts-item-content=defaultItem.content
+      h3.districts-item-title!= defaultItem.title
+      .districts-item-content!= defaultItem.content
