@@ -5,6 +5,14 @@
     $mobile-item-size: 50px !default;
     $default-margin: 3px !default;
 
+    .districts-heading,
+    .districts-item-title {
+        color: $color-secondary;
+        font-weight: 400;
+        font-size: 16px;;
+        margin: 16px 0;
+    }
+
     .districts-item {
         width: $item-size;
         height: $item-size;
@@ -18,11 +26,6 @@
         padding: 10px 10px 18.7px;
         border-radius: 5px;
         margin: 10px 0;
-
-        .districts-item-title {
-            color: $color-secondary;
-            font-weight: 400;
-        }
     }
 
     @media (max-width: 450px) {
