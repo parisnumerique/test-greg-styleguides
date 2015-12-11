@@ -4,14 +4,18 @@ mixin districts(data)
   .component.component-districts
     .districts-heading= data.title
     .districts-items-wrapper
-      each item in data.items
+      each item, index in data.items
         - var button = JSON.parse(JSON.stringify(item || [])) // clone the data object
         - var isEmptyContent = typeof item.content === 'undefined' || !item.content.length
 
         - button.modifiers = button.modifiers || []
         - button.attributes = button.attributes || {}
 
-        - button.modifiers.push("districts-item stateful ")
+        - button.modifiers.push("districts-item stateful")
+
+        if index === 0
+          - button.modifiers.push("active")
+
         - button.attributes["data-title"] = item.title
         - button.attributes["data-content"] = item.content
 

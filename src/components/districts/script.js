@@ -22,8 +22,6 @@ Paris.districts = (function() {
 
     function init() {
 
-      selectItem($selectedItem);
-
       $el.on('click', '.districts-item', function(e) {
         e.preventDefault();
         $selectedItem = $(this);
