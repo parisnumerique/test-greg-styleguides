@@ -1,26 +1,38 @@
 include ../../modules/button/button
 
 mixin districts(data)
+  - var activeIndex;
+  - var uuid = Math.random().toString(36).substr(2, 5)
   .component.component-districts
-    .districts-heading= data.title
+    h4.districts-heading= data.title
     ul.districts-items-wrapper(role='tablist')
       each item, index in data.items
         - item = JSON.parse(JSON.stringify(item || {})); // clone the data object
-          // var isEmptyContent = typeof item.content === 'undefined' || !item.content.length
         - item.modifiers = item.modifiers || [];
-        - item.modifiers.push("districts-item", "stateful");
-
-          // item.attributes["data-title"] = item.title
-          // item.attributes["data-content"] = item.content
-
+        - item.modifiers.push("stateful");
         - item.attributes = item.attributes || {};
-        - var isActiveSet = false;
+        - item.attributes.type = 'button';
         - if (!item.enabled) { item.attributes.disabled = "disabled"; }
-        - else if (!isActiveSet) { isActiveSet = true; item.modifiers.push("active"); }
-        li(role='tab' aria-controls='#{item.text}')
+        - else if (!activeIndex) { activeIndex = index; item.modifiers.push("active"); }
+        - var slug = uuid + "-" + index;
+        - var attributes = {};
+        - attributes['id'] = 'h-' + slug;
+        - attributes['roles'] = 'tab';
+        - attributes['aria-controls'] = '#' + slug;
+        - attributes['aria-selected'] = (index === activeIndex) ? 'true' : 'false';
+        - attributes['class'] = 'districts-item';
+        li&attributes(attributes)
           +button(item)
+
     each item, index in data.items
       if item.enabled
-        .districts-content-wrapper(role='tabpanel')
+        - var slug = uuid + "-" + index;
+        - var attributes = {};
+        - attributes['id'] = slug;
+        - attributes['roles'] = 'tabpanel';
+        - attributes['aria-labelledby'] = 'h-' + slug;
+        - attributes['aria-hidden'] = (index === activeIndex) ? 'false' : 'true';
+        - attributes['class'] = { active: index === activeIndex };
+        .districts-panel&attributes(attributes)
           .districts-item-title= item.title
           .districts-item-content!= item.content

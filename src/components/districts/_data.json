@@ -9,7 +9,7 @@
         "title": "Séléctionnez un arrondissement :",
         "items": [
           {
-            "enabled": true,
+            "enabled": false,
             "text": "1e",
             "title": "1e arrondissement de Paris",
             "content": "1e - Lorem ipsum dolors sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
@@ -24,7 +24,7 @@
             "enabled": true,
             "text": "3e",
             "title": "3e arrondissement de Paris",
-            "content": ""
+            "content": "3e - Lorem ipsum dolors sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
           },
           {
             "enabled": false,

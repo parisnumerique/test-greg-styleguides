@@ -5,37 +5,41 @@ var Paris = window.Paris || {};
 Paris.districts = (function() {
 
   function districts(selector) {
-    var $el = $(selector),
-        $districtsItem = $el.find('.districts-item'),
-        $selectedItem = $districtsItem.first();
+    var $el = $(selector);
+    var $districtsItems = $el.find('.districts-item');
+    var $districtsPanels = $el.find('.districts-panel');
 
     function selectItem($item) {
-      $item.addClass('active');
+      // clear active
+      $districtsItems
+        .attr('aria-selected', 'false')
+        .find('.button').removeClass('active');
+      $districtsPanels
+        .attr('aria-hidden', 'true')
+        .removeClass('active');
 
-      $el.find('.districts-item-title')
-        .html($item.data('title'));
-      $el.find('.districts-item-content')
-        .html($item.data('content'));
+      // set new active
+      var $districtsItem = $item.parents('.districts-item');
+      var districtId = $districtsItem.attr('aria-controls');
+      $item.addClass('active');
+      $districtsItem.attr('aria-selected', 'true');
+      $(districtId).attr('aria-hidden', 'false').addClass('active');
     }
 
     function init() {
+      // focus => change district on tab
+      // click => assure it triggers on touch
+      $('.districts-items-wrapper').on('click focus', '.button', function(e) {
+        var $item = $(this);
+        // avoid double action
+        if (e.type === 'click' && $item.hasClass('active')) return;
 
-      $el.on('click', '.districts-item', function(e) {
-        e.preventDefault();
-        $selectedItem = $(this);
-        $districtsItem.removeClass('active');
-        selectItem($selectedItem);
+        selectItem($item);
       });
-
-      $(document).mouseup(function (e) {
-        if (!$districtsItem.is(e.target) && $districtsItem.has(e.target).length === 0) {
-          $selectedItem.addClass('active');
-        }
-      });
-
     }
 
     init();
+
     return $el;
   }
 
