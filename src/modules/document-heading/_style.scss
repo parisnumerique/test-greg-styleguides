@@ -69,22 +69,6 @@
   }
 }
 
-.document-heading-credit {
-  color: $gray99;
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 50px;
-
-  &:before {
-    content: "— ";
-  }
-
-  .component + &,
-  & + .component {
-    margin-top: 50px;
-  }
-}
-
 @include medium-and-small {
   .document-heading-content-wrapper {
     padding-left: 25px;

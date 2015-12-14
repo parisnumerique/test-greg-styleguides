@@ -57,13 +57,10 @@ append content
               +#{module.type}(module.data)
         .layout-content.components
           - if (data.last_update) {data.components.push({"type": "last-update", "data": data.last_update});}
-          - if (data.document_heading_credit) {data.components.push({"type": "document-heading-credit", "data": data.document_heading_credit})}
+          - if (data.heading_credit) {data.components.push({"type": "last-update", "data": data.heading_credit});}
           - if (data.jecoute) {data.components.push({"type": "jecoute", "data": data.jecoute});}
           each component in data.components
-            if component.type === "document-heading-credit"
-              .document-heading-credit= data.document_heading_credit.text
-            else
-              +#{component.type}(component.data)
+            +#{component.type}(component.data)
 
 //- Related news (used for news, person)
 append content
