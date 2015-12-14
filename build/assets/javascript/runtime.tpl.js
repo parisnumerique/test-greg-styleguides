@@ -395,6 +395,171 @@ templatizer["card"]["card"] = function tmpl_card_card(data) {
     return buf.join("");
 };
 
+// districts.jade compiled template
+templatizer["districts"] = function tmpl_districts(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(JSON, Math) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined, "Math" in locals_for_with ? locals_for_with.Math : typeof Math !== "undefined" ? Math : undefined);
+    return buf.join("");
+};
+
+// districts.jade:button compiled template
+templatizer["districts"]["button"] = function tmpl_districts_button(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    var data = JSON.parse(JSON.stringify(data || {}));
+    var attributes = data.attributes || {};
+    var modifiers = data.modifiers || [];
+    if (data.icon) {
+        modifiers.push("icon");
+    }
+    if (data.href) {
+        if (attributes.disabled) {
+            delete attributes.disabled;
+            modifiers.push("disabled");
+        }
+        buf.push("<a" + jade.attrs(jade.merge([ {
+            href: jade.escape(data.href),
+            title: jade.escape(data.title),
+            target: jade.escape(data.target),
+            "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                return jade_interp[i] ? jade.escape(cls) : cls;
+            })))
+        }, attributes ]), false) + ">");
+        if (modifiers && modifiers.indexOf("marker") !== -1) {
+            buf.push('<i aria-hidden="true" class="icon icon-marker"></i>');
+        } else if (data.icon) {
+            buf.push('<i aria-hidden="true"' + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+        }
+        buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></a>");
+    } else {
+        buf.push("<button" + jade.attrs(jade.merge([ {
+            title: jade.escape(data.title),
+            "class": (jade_interp = [ null, true ], jade.joinClasses([ "button", modifiers ].map(jade.joinClasses).map(function(cls, i) {
+                return jade_interp[i] ? jade.escape(cls) : cls;
+            })))
+        }, attributes ]), false) + ">");
+        if (modifiers && modifiers.indexOf("marker") !== -1) {
+            buf.push('<i aria-hidden="true" class="icon icon-marker"></i>');
+        } else if (data.icon) {
+            buf.push('<i aria-hidden="true"' + jade.cls([ "icon", "icon-" + data.icon + "" ], [ null, true ]) + "></i>");
+        }
+        buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></button>");
+    }
+    return buf.join("");
+};
+
+
+// districts.jade:districts compiled template
+templatizer["districts"]["districts"] = function tmpl_districts_districts(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    var activeIndex;
+    var uuid = Math.random().toString(36).substr(2, 5);
+    buf.push('<div class="component component-districts"><h4 class="districts-heading">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h4><ul role="tablist" class="districts-items-wrapper">');
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
+                var item = $$obj[index];
+                item = JSON.parse(JSON.stringify(item || {}));
+                item.modifiers = item.modifiers || [];
+                item.modifiers.push("stateful");
+                item.attributes = item.attributes || {};
+                item.attributes.type = "button";
+                if (!item.enabled) {
+                    item.attributes.disabled = "disabled";
+                } else if (!activeIndex) {
+                    activeIndex = index;
+                    item.modifiers.push("active");
+                }
+                var slug = uuid + "-" + index;
+                var attributes = {};
+                attributes["id"] = "h-" + slug;
+                attributes["roles"] = "tab";
+                attributes["aria-controls"] = "#" + slug;
+                attributes["aria-selected"] = index === activeIndex ? "true" : "false";
+                attributes["class"] = "districts-item";
+                buf.push("<li" + jade.attrs(jade.merge([ attributes ]), false) + ">");
+                buf.push(templatizer["districts"]["button"](item));
+                buf.push("</li>");
+            }
+        } else {
+            var $$l = 0;
+            for (var index in $$obj) {
+                $$l++;
+                var item = $$obj[index];
+                item = JSON.parse(JSON.stringify(item || {}));
+                item.modifiers = item.modifiers || [];
+                item.modifiers.push("stateful");
+                item.attributes = item.attributes || {};
+                item.attributes.type = "button";
+                if (!item.enabled) {
+                    item.attributes.disabled = "disabled";
+                } else if (!activeIndex) {
+                    activeIndex = index;
+                    item.modifiers.push("active");
+                }
+                var slug = uuid + "-" + index;
+                var attributes = {};
+                attributes["id"] = "h-" + slug;
+                attributes["roles"] = "tab";
+                attributes["aria-controls"] = "#" + slug;
+                attributes["aria-selected"] = index === activeIndex ? "true" : "false";
+                attributes["class"] = "districts-item";
+                buf.push("<li" + jade.attrs(jade.merge([ attributes ]), false) + ">");
+                buf.push(templatizer["districts"]["button"](item));
+                buf.push("</li>");
+            }
+        }
+    }).call(this);
+    buf.push("</ul>");
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var index = 0, $$l = $$obj.length; index < $$l; index++) {
+                var item = $$obj[index];
+                if (item.enabled) {
+                    var slug = uuid + "-" + index;
+                    var attributes = {};
+                    attributes["id"] = slug;
+                    attributes["roles"] = "tabpanel";
+                    attributes["aria-labelledby"] = "h-" + slug;
+                    attributes["aria-hidden"] = index === activeIndex ? "false" : "true";
+                    attributes["class"] = {
+                        active: index === activeIndex
+                    };
+                    buf.push("<div" + jade.attrs(jade.merge([ {
+                        "class": "districts-panel"
+                    }, attributes ]), false) + '><div class="districts-item-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + '</div><div class="districts-item-content">' + (null == (jade_interp = item.content) ? "" : jade_interp) + "</div></div>");
+                }
+            }
+        } else {
+            var $$l = 0;
+            for (var index in $$obj) {
+                $$l++;
+                var item = $$obj[index];
+                if (item.enabled) {
+                    var slug = uuid + "-" + index;
+                    var attributes = {};
+                    attributes["id"] = slug;
+                    attributes["roles"] = "tabpanel";
+                    attributes["aria-labelledby"] = "h-" + slug;
+                    attributes["aria-hidden"] = index === activeIndex ? "false" : "true";
+                    attributes["class"] = {
+                        active: index === activeIndex
+                    };
+                    buf.push("<div" + jade.attrs(jade.merge([ {
+                        "class": "districts-panel"
+                    }, attributes ]), false) + '><div class="districts-item-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + '</div><div class="districts-item-content">' + (null == (jade_interp = item.content) ? "" : jade_interp) + "</div></div>");
+                }
+            }
+        }
+    }).call(this);
+    buf.push("</div>");
+    return buf.join("");
+};
+
 // faq.jade compiled template
 templatizer["faq"] = function tmpl_faq(locals) {
     var buf = [];
