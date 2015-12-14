@@ -9,6 +9,8 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.3.2 (2015-12-14)
+
 * new component `districts`
 * component `text`: change `h3` font-size to 27px
 * template `generic`: added `heading_credit` as another `last-update` module
