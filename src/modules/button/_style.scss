@@ -70,12 +70,12 @@
     background-color: $color-tertiary;
     color: $color-secondary;
     padding: 15px;
+    outline: 0;
     &:after {background-color: $color-secondary;}
+
     &:hover, &:focus, &.active {
       color: $white;
-      &:after {
-        width: 100%;
-      }
+      &:after {width: 100%;}
     }
     &[disabled], &.disabled {
       background-color: transparent;
