@@ -22,9 +22,9 @@
     margin-top: 5px;
     max-width: 385px;
 
-    &.error {
-      color: $color-primary;
-    }
+    &.error { color: $color-primary; }
+
+    td { text-align: left !important;  }
   }
 
   .form-message {

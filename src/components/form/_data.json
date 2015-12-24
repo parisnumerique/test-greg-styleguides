@@ -25,7 +25,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox1[]",
+            "name": "checkbox1",
             "id": "checkbox1",
             "items": [
               {"value": 1, "text": "Intitulé"}
@@ -198,7 +198,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox1[]",
+            "name": "checkbox1",
             "id": "checkbox1",
             "label": "Case à cocher unique",
             "items": [
@@ -207,7 +207,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox2[]",
+            "name": "checkbox2",
             "id": "checkbox2",
             "label": "Groupe de cases à cocher",
             "items": [
@@ -218,7 +218,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox3[]",
+            "name": "checkbox3",
             "id": "checkbox3",
             "label": "Groupe de cases à cocher en erreur",
             "items": [
@@ -389,11 +389,11 @@
             "name": "cgu",
             "id": "cgu1",
             "label": "Conditions générales d'utilisation",
-            "link": "cgu",
-            "href": "#",
-            "items": [
-              {"value": 1, "text": "Merci d'accepter les "}
-            ]
+            "text": "Merci d'accepter les ",
+            "link": {
+              "href": "#",
+              "text": "CGU"
+            }
           },
           {
             "type": "title",

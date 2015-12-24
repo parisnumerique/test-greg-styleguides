@@ -21,7 +21,8 @@ Paris.form = (function(){
       $form = $el.find('form');
       $captcha = $el.find('.form-item-captcha');
 
-      $el.on('focus', '.form-field', onFieldFocus);
+      // N.B.: 'focus' event doesn't trigger on checkbox/radio in firefox for OS X
+      $el.on('focus click', '.form-field', onFieldFocus);
       $el.on('blur', '.form-field', onFieldBlur);
       $form.on('submit', onSubmit);
 
@@ -39,30 +40,6 @@ Paris.form = (function(){
       });
     }
 
-    function onFieldFocus(){
-      $currentField = $(this);
-
-      switch ($currentField.attr('type') || $currentField.prop('tagName').toLowerCase()){
-        case 'checkbox':
-        case 'radio':
-        case 'select':
-          var event = 'change';
-          break;
-
-        default:
-          var event = 'input';
-      }
-
-      $currentField.on(event, onCurrentFieldInput);
-    }
-
-    function checkValidity($field){
-      if ($field) {
-        var valid = isFieldValid($field);
-        var $formItem = $field.closest('.form-item, .matrix-item');
-        $formItem.toggleClass('valid', valid).toggleClass('error', !valid);
-      }
-    }
 
     function disableButtons(){
       $el.find('.button[type="submit"]').attr('disabled', true);
@@ -71,38 +48,75 @@ Paris.form = (function(){
       $el.find('.button[type="submit"]').removeAttr('disabled');
     }
 
-    function isFieldValid($field){
-      if ($field) {
-        var validity = false;
+    function checkValidity($field) {
+      if (!$field) { return; }
 
-        if ($field.attr('type') === "checkbox") {
-          var $formItem = $field.closest('.form-item');
-          if (!$formItem.hasClass("required")) {return true;}
-          var $matrixItem = $field.closest('.matrix-item');
-          if ($matrixItem.length) {
-            var $checkboxes = $matrixItem.find('input[type="checkbox"]');
-          } else {
-            var $checkboxes = $formItem.find('input[type="checkbox"]');
-          }
-          $checkboxes.each(function(){
-            if ($(this).is(':checked')) {validity = true;}
-          });
-          return validity;
+      var valid = isFieldValid($field);
+      var $formItem = $field.closest('.form-item, .matrix-item');
+      $formItem.toggleClass('valid', valid).toggleClass('error', !valid);
+
+      return valid;
+    }
+
+    function isFieldValid($field) {
+      if (!$field) { return false; }
+
+      var validity = false;
+
+      if ($field.attr('type') === "checkbox") {
+        var $formItem = $field.closest('.form-item');
+        if (!$formItem.hasClass("required")) { return true; }
+
+        var $checkboxes;
+        var $matrixItem = $field.closest('.matrix-item');
+        if ($matrixItem.length) {
+          $checkboxes = $matrixItem.find('input[type="checkbox"]');
         } else {
-          validity = $field.get(0).validity;
-          return validity.valid;
+          $checkboxes = $formItem.find('input[type="checkbox"]');
         }
+        $checkboxes.each(function(){
+          if ($(this).is(':checked')) { validity = true; }
+        });
 
+        return validity;
+      } else {
+        validity = $field.get(0).validity;
+        return validity.valid;
       }
     }
 
-    function onCurrentFieldInput(){
+    function onCurrentFieldInput(e){
       checkValidity($currentField);
+    }
+
+    function onFieldFocus(e){
+      $currentField = $(this);
+
+      var event;
+      switch ($currentField.attr('type') || $currentField.prop('tagName').toLowerCase()){
+        case 'checkbox':
+        case 'radio':
+        case 'select':
+          event = 'change';
+          break;
+
+        default:
+          event = 'input';
+      }
+
+      // make sure to have only one event bound
+      // as onFieldFocus can be triggered more than once in a row
+      $currentField.off(event).on(event, onCurrentFieldInput);
     }
 
     function onFieldBlur(){
       onCurrentFieldInput();
-      $currentField.off('keypress', onCurrentFieldInput);
+
+      var fieldEvents = $._data($currentField.get(0), 'events');
+      $.each(fieldEvents, function(key, value) {
+        $currentField.off(key);
+      });
+
       $currentField = null;
     }
 
@@ -119,9 +133,11 @@ Paris.form = (function(){
 
     function saveData() {
       var data = $form.serializeArray();
+
       $.ajax({
         url: $form.attr('action'),
         type: $form.attr('method') || 'POST',
+        dataType: 'json',
         data: data,
         success: onDataSaved,
         error: onDataError
@@ -133,6 +149,7 @@ Paris.form = (function(){
         onDataError(xhr, 'error');
         return;
       }
+
       disableButtons();
       resetErrors();
       $el.append('<p class="form-message success">'+ options.thanks +'</p>');
@@ -140,24 +157,29 @@ Paris.form = (function(){
 
     function onDataError(xhr, status, error){
       enableButtons();
-      try {
-        var data = $.parseJSON(xhr.responseText);
-      } catch (e) {
-        if(e.constructor == SyntaxError) {
-          console.log('error response should be JSON');
-        }
+      resetErrors();
+
+      var data = xhr.responseJSON;
+
+      // unknown error
+      if (typeof data === 'undefined') {
+        $el.append('<p class="form-message error">'+ options.error +'</p>');
         return;
       }
-
-      resetErrors();
 
       // add error messages
       $el.append('<p class="form-message error">'+data.message+'</p>');
       $.each(data.errors, function(field, message){
-        var $formField = $el.find('.form-field[name="'+field+'"]');
+        var $formField = $el.find('.form-field[name="'+field+'"], .form-field[name^="'+field+'["]');
         var $formItem = $formField.closest('.form-item, .matrix-item');
         $formItem.removeClass('valid').addClass('error');
-        $('<p class="form-item-help error">'+message+'</p>').insertAfter($formField);
+
+        if ($formItem.hasClass('matrix-item')) {
+          $('<tr class="form-item-help error"><td colspan="0">'+message+'</td></tr>').insertAfter($formItem);
+        }
+        else {
+          $('<p class="form-item-help error">'+message+'</p>').appendTo($formItem);
+        }
       });
     }
 
