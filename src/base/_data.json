@@ -1,6 +1,68 @@
 {
   "colors": {
-    "title": "Couleurs"
+    "title": "Couleurs",
+    "colors": [
+      {
+        "title": "Principales",
+        "items": [
+          {"var": "$color-primary", "hex": "#DF225A", "rgb": "223, 034, 090"},
+          {"var": "$color-primary-variant", "hex": "#AF2258", "rgb": "175, 034, 088"},
+          {"var": "$color-secondary", "hex": "#0C518A", "rgb": "012, 081, 138"},
+          {"var": "$color-secondary-variant", "hex": "#0A4770", "rgb": "010, 071, 112"},
+          {"var": "$color-tertiary", "hex": "#F8E273", "rgb": "248, 226, 115"}
+        ]
+      },
+      {
+        "title": "Autres",
+        "items": [
+          {"var": "$light-blue", "hex": "#D1E0E5", "rgb": "209, 224, 229"},
+          {"var": "$green1", "hex": "#43B57E", "rgb": "067, 181, 126"},
+          {"var": "$yellow1", "hex": "#FAE46A", "rgb": "250, 228, 106"},
+          {"var": "$orange1", "hex": "#F77F68", "rgb": "247, 127, 104"},
+          {"var": "$red1", "hex": "#DD275C", "rgb": "221, 039, 092"},
+          {"var": "$red2", "hex": "#A51B50", "rgb": "165, 027, 080"},
+          {"var": "$red3", "hex": "#BF2257", "rgb": "165, 027, 080"}
+        ]
+      },
+      {
+        "title": "Nuances de gris",
+        "items": [
+          {"var": "$black", "hex": "#000", "rgb": "0, 0, 0"},
+          {"var": "$gray1A", "hex": "#1A1A1A", "rgb": "026, 026, 026"},
+          {"var": "$gray33", "hex": "#333", "rgb": "051, 051, 051"},
+          {"var": "$gray4D", "hex": "#4D4D4D", "rgb": "077, 077, 077"},
+          {"var": "$gray66", "hex": "#666", "rgb": "102, 102, 102"},
+          {"var": "$gray99", "hex": "#999", "rgb": "153, 153, 153"},
+          {"var": "$grayCC", "hex": "#CCC", "rgb": "204, 204, 204"},
+          {"var": "$grayEE", "hex": "#EEE", "rgb": "238, 238, 238"},
+          {"var": "$grayF2", "hex": "#F2F2F2", "rgb": "242, 242, 242"},
+          {"var": "$white", "hex": "#FFF", "rgb": "255, 255, 255"}
+        ]
+      },
+      {
+        "title": "Que Faire",
+        "items": [
+          {"var": "$que-faire-red", "hex": "#F95053", "rgb": "249, 080, 083"}
+        ]
+      },
+      {
+        "title": "Notices",
+        "items": [
+          {"var": "$notice-blue", "hex": "#A6CCDD", "rgb": "166, 204, 221"},
+          {"var": "$notice-orange", "hex": "#F77F68", "rgb": "247, 127, 104"}
+        ]
+      },
+      {
+        "title": "Participez",
+        "items": [
+          {"var": "$get-involved-yellow", "hex": "#F8C244", "rgb": "248, 194, 068"},
+          {"var": "$get-involved-red", "hex": "#E95757", "rgb": "233, 087, 087"},
+          {"var": "$get-involved-green", "hex": "#42A769", "rgb": "066, 167, 105"},
+          {"var": "$get-involved-blue1", "hex": "#3EC2DE", "rgb": "062, 194, 222"},
+          {"var": "$get-involved-blue2", "hex": "#D7EDF2", "rgb": "215, 237, 242"}
+        ]
+      }
+    ]
   },
   "fonts": {
     "title": "Typographie"
