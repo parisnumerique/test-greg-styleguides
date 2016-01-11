@@ -3,6 +3,17 @@
   "version": "1.3.2",
   "description": "Paris Living Style Guide",
   "author": "Hans Lemuet <hans@etaminstudio.com>",
+  "contributors": [
+    {"name": "Adrien Nicod"},
+    {"name": "Guillaume Casalis"},
+    {"name": "Jonathan Blanchet"},
+    {"name": "Jonathan Loss"},
+    {"name": "Julien Verkest"},
+    {"name": "Lilit Randé"},
+    {"name": "Olivier Bayle"},
+    {"name": "Stéphane Legouffe"},
+    {"name": "Valentin Cassat"}
+  ],
   "main": "index.js",
   "dependencies": {
     "cldr-data": "~26.0.10"
