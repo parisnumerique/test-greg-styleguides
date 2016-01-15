@@ -9,10 +9,15 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.3.4 (coming soon)
+
+* new component `frame`
+* component `text`: remove default `text` content
+
 ## 1.3.3 (2016-01-12)
 
-* form carte citoyenne component
-* retrait point diaporama
+* component `form`: add `citoyenne` input
+* component `gallery`: remove dots
 
 ## 1.3.2 (2015-12-14)
 

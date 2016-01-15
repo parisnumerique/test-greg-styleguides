@@ -1,3 +1,38 @@
 include frame
 
 include ../../helpers/preview
+
+append elements
+  h2.lsg-example-title En passant sous forme de bloc
+
+  .lsg-elem
+    +frame({})
+      h3 Titre de niveau 3
+      p
+        | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
+        a(href='#') lien d'exemple
+        |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
+      ul
+        li Élément de liste
+        li Élément de liste
+        li
+          | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+          a(href='#') lien d'exemple
+          |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
+
+  +code("jade").
+    include frame
+
+    +frame({})
+      h3 Titre de niveau 3
+      p
+        | Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent&nbsp;
+        a(href='#') lien d'exemple
+        |  vel libero magna. Morbi viverra quam orci, ultrices dapibus sem aliquam ut
+      ul
+        li Élément de liste
+        li Élément de liste
+        li
+          | Élément de liste long. Nullam quis risus eget urna mollis ornare vel eu leo. Lorem ipsum&nbsp;
+          a(href='#') lien d'exemple
+          |  dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.
