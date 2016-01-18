@@ -5632,85 +5632,21 @@ body.rheader-mobile-nav-open {
   .component-form .form-item-matrix input {
     cursor: pointer; }
 
-.component-frame h1, .component-frame h2, .component-frame h3, .component-frame h4, .component-frame p {
-  margin: 0;
-  padding: 0; }
-
-.component-frame ul, .component-frame ol, .component-frame p {
-  color: #333;
-  margin: 20px;
-  padding: 0; }
-
-.component-frame p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 30px; }
-  .component-frame p:last-child {
-    margin-bottom: 0; }
-
-.component-frame ul, .component-frame ol {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  list-style-position: inside; }
-  .component-frame ul li + li, .component-frame ol li + li {
-    margin-top: 10px; }
-
-.component-frame ul {
-  list-style-type: disc; }
-
-.component-frame ul.list-cols {
-  line-height: 25px;
-  list-style-type: none;
-  -webkit-columns: 3;
-     -moz-columns: 3;
-          columns: 3; }
-  .component-frame ul.list-cols li {
-    border-bottom: 1px solid #2dfffe;
-    margin: 0;
-    padding: 10px 0; }
-
-.component-frame a:not(.button) {
-  text-decoration: underline; }
-  .component-frame a:not(.button):hover {
-    text-decoration: none; }
-
-.component-frame em.light {
-  color: #999;
-  font-style: normal; }
-
 .component-frame {
   clear: both; }
-  .component-frame h2 {
-    font-weight: 600;
-    font-size: 18px; }
-  .component-frame h3 {
-    font-weight: 600;
-    font-size: 18px; }
-  .component-frame h4 {
-    font-weight: 600;
-    font-size: 18px; }
-  .component-frame h5 {
-    font-weight: 600;
-    font-size: 18px; }
-  .component-frame h6 {
-    font-weight: 600;
-    font-size: 18px; }
   .component-frame a:not(.button) {
     color: #DD275C; }
-  .component-frame .anchor {
-    clear: both;
-    position: relative; }
   .component-frame fieldset {
     border: 5px solid #fd28fc;
-    padding: 15px; }
+    margin: 0;
+    padding: 30px; }
     .component-frame fieldset legend {
       color: #fd28fc;
-      display: inline-block;
       padding: 0 20px;
       font-size: 16px;
       font-weight: 400;
-      margin-left: 50px;
+      margin-left: 20px;
+      margin-bottom: 0;
       width: auto; }
   @media (max-width: 1159px) {
     .component-frame .component-frame ul.list-cols {
@@ -6611,21 +6547,21 @@ http://flickity.metafizzy.co
   .component-table table {
     width: 100%; } }
 
-.component-postit h1, .component-text h1, .component-postit h2, .component-text h2, .component-postit h3, .component-text h3, .component-postit h4, .component-text h4, .component-postit ul, .component-text ul, .component-postit ol, .component-text ol, .component-postit p, .component-text p {
+.component-frame h1, .component-postit h1, .component-text h1, .component-frame h2, .component-postit h2, .component-text h2, .component-frame h3, .component-postit h3, .component-text h3, .component-frame h4, .component-postit h4, .component-text h4, .component-frame ul, .component-postit ul, .component-text ul, .component-frame ol, .component-postit ol, .component-text ol, .component-frame p, .component-postit p, .component-text p {
   margin: 0;
   padding: 0; }
 
-.component-postit h1, .component-text h1 {
+.component-frame h1, .component-postit h1, .component-text h1 {
   font-size: 44px;
   font-weight: 700; }
 
-.component-postit h2, .component-text h2 {
+.component-frame h2, .component-postit h2, .component-text h2 {
   font-size: 34px;
   font-weight: 700;
   line-height: 42px;
   margin-bottom: 20px;
   padding-top: 40px; }
-  .component-postit h2 img, .component-text h2 img {
+  .component-frame h2 img, .component-postit h2 img, .component-text h2 img {
     margin: 0 10px;
     max-height: 60px;
     position: relative;
@@ -6633,64 +6569,64 @@ http://flickity.metafizzy.co
     vertical-align: bottom; }
 
 @media (max-width: 767px) {
-  .component-postit h2, .component-text h2 {
+  .component-frame h2, .component-postit h2, .component-text h2 {
     font-size: 30px;
     line-height: 38px; } }
 
-.component-postit h3, .component-text h3 {
+.component-frame h3, .component-postit h3, .component-text h3 {
   color: #1A1A1A;
   font-size: 27px;
   font-weight: 500;
   line-height: 30px;
   margin-bottom: 20px; }
 
-.component-postit h4, .component-text h4 {
+.component-frame h4, .component-postit h4, .component-text h4 {
   color: #0924fa;
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
   margin-bottom: 10px; }
 
-.component-postit ul, .component-text ul, .component-postit ol, .component-text ol, .component-postit p, .component-text p {
+.component-frame ul, .component-postit ul, .component-text ul, .component-frame ol, .component-postit ol, .component-text ol, .component-frame p, .component-postit p, .component-text p {
   color: #333;
   margin: 0 0 20px;
   padding: 0; }
 
-.component-postit p, .component-text p {
+.component-frame p, .component-postit p, .component-text p {
   font-size: 18px;
   font-weight: 300;
   line-height: 30px; }
-  .component-postit p:last-child, .component-text p:last-child {
+  .component-frame p:last-child, .component-postit p:last-child, .component-text p:last-child {
     margin-bottom: 0; }
 
-.component-postit ul, .component-text ul, .component-postit ol, .component-text ol {
+.component-frame ul, .component-postit ul, .component-text ul, .component-frame ol, .component-postit ol, .component-text ol {
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
   list-style-position: inside; }
-  .component-postit ul li + li, .component-text ul li + li, .component-postit ol li + li, .component-text ol li + li {
+  .component-frame ul li + li, .component-postit ul li + li, .component-text ul li + li, .component-frame ol li + li, .component-postit ol li + li, .component-text ol li + li {
     margin-top: 10px; }
 
-.component-postit ul, .component-text ul {
+.component-frame ul, .component-postit ul, .component-text ul {
   list-style-type: disc; }
 
-.component-postit ul.list-cols, .component-text ul.list-cols {
+.component-frame ul.list-cols, .component-postit ul.list-cols, .component-text ul.list-cols {
   line-height: 25px;
   list-style-type: none;
   -webkit-columns: 3;
      -moz-columns: 3;
           columns: 3; }
-  .component-postit ul.list-cols li, .component-text ul.list-cols li {
+  .component-frame ul.list-cols li, .component-postit ul.list-cols li, .component-text ul.list-cols li {
     border-bottom: 1px solid #2dfffe;
     margin: 0;
     padding: 10px 0; }
 
-.component-postit a:not(.button), .component-text a:not(.button) {
+.component-frame a:not(.button), .component-postit a:not(.button), .component-text a:not(.button) {
   text-decoration: underline; }
-  .component-postit a:not(.button):hover, .component-text a:not(.button):hover {
+  .component-frame a:not(.button):hover, .component-postit a:not(.button):hover, .component-text a:not(.button):hover {
     text-decoration: none; }
 
-.component-postit em.light, .component-text em.light {
+.component-frame em.light, .component-postit em.light, .component-text em.light {
   color: #999;
   font-style: normal; }
 
