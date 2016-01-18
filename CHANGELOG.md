@@ -9,7 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
-## 1.3.4 (coming soon)
+## 1.3.4 (2016-01-18)
 
 * new component `frame`
 * component `text`: remove default `text` content

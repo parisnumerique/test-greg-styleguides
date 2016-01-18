@@ -1,5 +1,10 @@
 mixin frame(data)
-    .component.component-frame(class=data ? data.modifiers : [])
-        fieldset
-            legend= data.title
-            div!=  data.content
+  .component.component-frame(class=data ? data.modifiers : [])
+    fieldset
+      if data.title
+        legend= data.title
+      div
+        if block
+          block
+        else if data.content
+          != data.content
