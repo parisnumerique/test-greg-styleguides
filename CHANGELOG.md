@@ -9,6 +9,8 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* module `pagination`: fixed CSS bug on small screens
+
 ## 1.3.4 (2016-01-18)
 
 * new component `frame`

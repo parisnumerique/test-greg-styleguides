@@ -99,4 +99,13 @@
       }
     }
   }
+
+  @include small {
+    > ul > li.current {
+      > a,
+      > span {
+        margin-left: 0;
+      }
+    }
+  }
 }
