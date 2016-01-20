@@ -75,7 +75,6 @@
 
   // input & textarea
   .form-item-text input,
-  .form-item-citoyenne input,
   .form-item-textarea textarea,
   .form-item-select select {
     background-color: $grayF2;
@@ -90,8 +89,7 @@
   }
 
   // input
-  .form-item-text input,
-  .form-item-citoyenne input {
+  .form-item-text input {
     padding: 0 15px;
     width: 385px;
   }
