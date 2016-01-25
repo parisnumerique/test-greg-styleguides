@@ -25,7 +25,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox1[]",
+            "name": "checkbox1",
             "id": "checkbox1",
             "items": [
               {"value": 1, "text": "Intitulé"}
@@ -116,10 +116,12 @@
             "label": "Numéro de téléphone"
           },
           {
-            "type": "citoyenne",
-            "name": "citoyenne1",
-            "id": "citoyenne1",
-            "label": "Carte citoyenne"
+            "type": "citizen",
+            "name": "citizen1",
+            "id": "citizen1",
+            "label": "Carte citoyenne",
+            "placeholder": "numéro de carte citoyenne",
+            "help": "Ce champ est utilisé pour entrer un numéro de carte validé par un web service."
           },
           {
             "type": "url",
@@ -198,7 +200,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox1[]",
+            "name": "checkbox1",
             "id": "checkbox1",
             "label": "Case à cocher unique",
             "items": [
@@ -207,7 +209,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox2[]",
+            "name": "checkbox2",
             "id": "checkbox2",
             "label": "Groupe de cases à cocher",
             "items": [
@@ -218,7 +220,7 @@
           },
           {
             "type": "checkbox",
-            "name": "checkbox3[]",
+            "name": "checkbox3",
             "id": "checkbox3",
             "label": "Groupe de cases à cocher en erreur",
             "items": [
@@ -389,11 +391,11 @@
             "name": "cgu",
             "id": "cgu1",
             "label": "Conditions générales d'utilisation",
-            "link": "cgu",
-            "href": "#",
-            "items": [
-              {"value": 1, "text": "Merci d'accepter les "}
-            ]
+            "text": "Merci d'accepter les ",
+            "link": {
+              "href": "#",
+              "text": "CGU"
+            }
           },
           {
             "type": "title",

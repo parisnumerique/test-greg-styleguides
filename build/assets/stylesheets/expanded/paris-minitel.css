@@ -3318,6 +3318,11 @@ html.no-touch .news-card-counter {
     cursor: default;
     pointer-events: none; }
 
+@media (max-width: 767px) {
+  .pagination > ul > li.current > a,
+  .pagination > ul > li.current > span {
+    margin-left: 0; } }
+
 .person-block {
   background-color: #F2F2F2;
   border-radius: 5px;
@@ -5531,6 +5536,8 @@ body.rheader-mobile-nav-open {
     max-width: 385px; }
     .component-form .form-item-help.error {
       color: #fd28fc; }
+    .component-form .form-item-help td {
+      text-align: left !important; }
   .component-form .form-message.error {
     color: #fd28fc; }
   .component-form .form-message.success {
@@ -5566,7 +5573,6 @@ body.rheader-mobile-nav-open {
   .component-form .form-item select:invalid {
     box-shadow: none; }
   .component-form .form-item-text input,
-  .component-form .form-item-citoyenne input,
   .component-form .form-item-textarea textarea,
   .component-form .form-item-select select {
     background-color: #F2F2F2;
@@ -5576,12 +5582,10 @@ body.rheader-mobile-nav-open {
     -webkit-transition: border 0.2s ease-in;
             transition: border 0.2s ease-in; }
     .component-form .form-item-text input:focus,
-    .component-form .form-item-citoyenne input:focus,
     .component-form .form-item-textarea textarea:focus,
     .component-form .form-item-select select:focus {
       border-color: #0924fa; }
-  .component-form .form-item-text input,
-  .component-form .form-item-citoyenne input {
+  .component-form .form-item-text input {
     padding: 0 15px;
     width: 385px; }
   .component-form .form-item-textarea textarea {
