@@ -693,17 +693,18 @@ templatizer["form"]["form-tel"] = function tmpl_form_form_tel(data) {
 };
 
 
-// form.jade:form-citoyenne compiled template
-templatizer["form"]["form-citoyenne"] = function tmpl_form_form_citoyenne(data) {
+// form.jade:form-url compiled template
+templatizer["form"]["form-url"] = function tmpl_form_form_url(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<label" + jade.attr("for", data.id, true, false) + ' class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + '</label><input type="text"' + jade.attr("name", data.name, true, false) + jade.attr("id", data.id, true, false) + jade.attr("placeholder", data.placeholder, true, false) + jade.attr("value", data.value, true, false) + jade.attr("required", data.required, true, false) + ' class="form-field"/>');
+    buf.push(templatizer["form"]["form-text"](data));
     return buf.join("");
 };
 
 
-// form.jade:form-url compiled template
-templatizer["form"]["form-url"] = function tmpl_form_form_url(data) {
+// form.jade:form-citizen compiled template
+templatizer["form"]["form-citizen"] = function tmpl_form_form_citizen(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    data.type = "text";
     buf.push(templatizer["form"]["form-text"](data));
     return buf.join("");
 };
@@ -759,14 +760,14 @@ templatizer["form"]["form-checkbox"] = function tmpl_form_form_checkbox(data) {
         if ("number" == typeof $$obj.length) {
             for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
                 var item = $$obj[$index];
-                buf.push('<div><label><input type="hidden"' + jade.attr("name", data.name, true, false) + ' value="" class="form-field"/><input' + jade.attr("type", data.type, true, false) + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</label></div>");
+                buf.push("<div><label><input" + jade.attr("type", data.type, true, false) + jade.attr("name", data.name + (data.type === "checkbox" ? "[]" : ""), true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</label></div>");
             }
         } else {
             var $$l = 0;
             for (var $index in $$obj) {
                 $$l++;
                 var item = $$obj[$index];
-                buf.push('<div><label><input type="hidden"' + jade.attr("name", data.name, true, false) + ' value="" class="form-field"/><input' + jade.attr("type", data.type, true, false) + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</label></div>");
+                buf.push("<div><label><input" + jade.attr("type", data.type, true, false) + jade.attr("name", data.name + (data.type === "checkbox" ? "[]" : ""), true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</label></div>");
             }
         }
     }).call(this);
@@ -777,11 +778,7 @@ templatizer["form"]["form-checkbox"] = function tmpl_form_form_checkbox(data) {
 // form.jade:form-radio compiled template
 templatizer["form"]["form-radio"] = function tmpl_form_form_radio(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push(templatizer["form"]["form-checkbox"].call({
-        block: function(buf) {
-            buf.push("// same code as the checkbox, except input type");
-        }
-    }, data));
+    buf.push(templatizer["form"]["form-checkbox"](data));
     return buf.join("");
 };
 
@@ -789,23 +786,7 @@ templatizer["form"]["form-radio"] = function tmpl_form_form_radio(data) {
 // form.jade:form-cgu compiled template
 templatizer["form"]["form-cgu"] = function tmpl_form_form_cgu(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push('<div class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + "</div>");
-    (function() {
-        var $$obj = data.items;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var item = $$obj[$index];
-                buf.push('<div><label><input type="hidden"' + jade.attr("name", data.name, true, false) + ' value="" class="form-field"/><input type="checkbox"' + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "<a" + jade.attr("href", data.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = data.link) ? "" : jade_interp) + "</a></label></div>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var item = $$obj[$index];
-                buf.push('<div><label><input type="hidden"' + jade.attr("name", data.name, true, false) + ' value="" class="form-field"/><input type="checkbox"' + jade.attr("name", data.name, true, false) + jade.attr("value", item.value, true, false) + jade.attr("checked", item.checked, true, false) + ' class="form-field"/>' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "<a" + jade.attr("href", data.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = data.link) ? "" : jade_interp) + "</a></label></div>");
-            }
-        }
-    }).call(this);
+    buf.push('<div class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + '</div><div><label><input type="checkbox"' + jade.attr("name", data.name, true, false) + ' value="true" required="required" class="form-field"/>' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "<a" + jade.attr("href", data.link.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></label></div>");
     return buf.join("");
 };
 
@@ -945,7 +926,7 @@ templatizer["form"]["form-buttons"] = function tmpl_form_form_buttons(data) {
 // form.jade:form compiled template
 templatizer["form"]["form"] = function tmpl_form_form(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<div" + jade.attr("data-thanks", data.thanks, true, false) + jade.cls([ "component", "component-form", data.modifiers ], [ null, null, true ]) + "><form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method || "POST", true, false) + ">");
+    buf.push("<div" + jade.attr("data-thanks", data.thanks, true, false) + jade.attr("data-error", data.error, true, false) + jade.cls([ "component", "component-form", data.modifiers ], [ null, null, true ]) + "><form" + jade.attr("action", data.action, true, false) + jade.attr("method", data.method || "POST", true, false) + ">");
     (function() {
         var $$obj = data.items;
         if ("number" == typeof $$obj.length) {
@@ -954,7 +935,7 @@ templatizer["form"]["form"] = function tmpl_form_form(data) {
                 item = JSON.parse(JSON.stringify(item || []));
                 item.modifiers = item.modifiers || [];
                 item.modifiers.push("form-item-" + item.type);
-                if ([ "email", "tel", "citoyenne", "url" ].indexOf(item.type) !== -1) {
+                if ([ "email", "tel", "citizen", "url" ].indexOf(item.type) !== -1) {
                     item.modifiers.push("form-item-text");
                 }
                 if (item.required === true) {
@@ -979,7 +960,7 @@ templatizer["form"]["form"] = function tmpl_form_form(data) {
                 item = JSON.parse(JSON.stringify(item || []));
                 item.modifiers = item.modifiers || [];
                 item.modifiers.push("form-item-" + item.type);
-                if ([ "email", "tel", "citoyenne", "url" ].indexOf(item.type) !== -1) {
+                if ([ "email", "tel", "citizen", "url" ].indexOf(item.type) !== -1) {
                     item.modifiers.push("form-item-text");
                 }
                 if (item.required === true) {
