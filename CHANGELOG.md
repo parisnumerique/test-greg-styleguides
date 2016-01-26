@@ -9,6 +9,9 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.3.6 (2016-01-26)
+* component  `jecoute`: handle API error
+
 ## 1.3.5 (2016-01-25)
 
 * component  `form`: better submitted data format
