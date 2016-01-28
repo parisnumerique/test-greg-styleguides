@@ -328,6 +328,7 @@ img, video {
 .block-content-question,
 .block-content-answer {
   -webkit-transform: none !important;
+      -ms-transform: none !important;
           transform: none !important; }
 
 canvas {
