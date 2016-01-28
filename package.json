@@ -13,7 +13,7 @@
     {"name": "Olivier Bayle"},
     {"name": "Stéphane Legouffe"},
     {"name": "Valentin Cassat"},
-    {"name": "SNVT"}	
+    {"name": "SNVT"}
   ],
   "main": "index.js",
   "dependencies": {

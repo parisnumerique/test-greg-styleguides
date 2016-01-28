@@ -9,12 +9,17 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.3.7 (2016-01-28)
+
+* component `jecoute`: display previous error
+
 ## 1.3.6 (2016-01-26)
-* component  `jecoute`: handle API error
+
+* component `jecoute`: handle API error
 
 ## 1.3.5 (2016-01-25)
 
-* component  `form`: better submitted data format
+* component `form`: better submitted data format
 * module `pagination`: fixed CSS bug on small screens
 
 ## 1.3.4 (2016-01-18)

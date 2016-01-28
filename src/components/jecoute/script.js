@@ -58,31 +58,26 @@ Paris.jecoute = (function(){
     }
 
     function onFileUpload(e) {
-		
-		
-		var allowedExtension=['jpg','jpeg','png','gif','bmp',
-		'doc','xls','ods','odt','pdf','txt','csv',
-		'zip','rar','ppt','xpptx','pptx'];
-		
+
+      var allowedExtension = ['jpg','jpeg','png','gif','bmp', 'doc','xls','ods',
+      'odt','pdf','txt','csv','zip','rar','ppt','xpptx','pptx'];
 
       for (var i = 0, f; f = e.target.files[i]; i++) {
-		  
-		var extension=f.name.split('.').pop();
-		if (allowedExtension.indexOf(extension)==-1) {
-			alert('Le type de fichier .'+extension+' est interdit !');
-		}
-		else {		
-			var html = '';
-			html += '<li class="output-item">';
-			// html += f.name;
-			html += (f.name.length > 40) ? f.name.substr(0, 19) + ' ... ' + f.name.substr(f.name.length-18, f.name.length) : f.name;
-			html += '<i>(' + humanSize(f.size) + ')</i>';
-			html += '<span class="output-item-remove icon-close-rounded"></span>';
-			html += '</li>';
-	
-			$output.find('.output-items').append(html);
-			files.push(f);
-		}
+        var extension = f.name.split('.').pop();
+        if (allowedExtension.indexOf(extension) === -1) {
+          alert('Le type de fichier .' + extension + ' est interdit !');
+        }
+        else {
+          var html = '';
+          html += '<li class="output-item">';
+          html += (f.name.length > 40) ? f.name.substr(0, 19) + ' ... ' + f.name.substr(f.name.length-18, f.name.length) : f.name;
+          html += '<i>(' + humanSize(f.size) + ')</i>';
+          html += '<span class="output-item-remove icon-close-rounded"></span>';
+          html += '</li>';
+
+          $output.find('.output-items').append(html);
+          files.push(f);
+        }
       }
 
       $output.find('.output-item-remove').on('click', removeUploadedFile);
@@ -144,7 +139,7 @@ Paris.jecoute = (function(){
         type: $form.attr('method'),
         data: data,
         success: onQuestionSaved,
-		error:onQuestionError
+        error: onQuestionError
       };
 
       if (files.length) {
@@ -159,13 +154,12 @@ Paris.jecoute = (function(){
       $form.hide();
       $message.text(options.thanks).show();
     }
-	
-	
-	function onQuestionError( jqXHR, status, err) {
-		$form.hide();
-		$message.text(options.error).show();
-	}
-	
+
+    function onQuestionError(jqXHR, status, err) {
+      console.error(err);
+      showError(options.error);
+    }
+
 
     /////////////
     // HELPERS //
@@ -174,8 +168,9 @@ Paris.jecoute = (function(){
     function showError(msg) {
       $message.text(msg).addClass('text-error').show();
       window.setTimeout(function() {
+        $formElements.attr('disabled', false);
         $message.show().removeClass('text-error').text('');
-      }, 5000);
+      }, 7000);
     }
 
     function isBiggerSize(maxSize) {
