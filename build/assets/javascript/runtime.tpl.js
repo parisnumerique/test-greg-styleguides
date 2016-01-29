@@ -786,7 +786,11 @@ templatizer["form"]["form-radio"] = function tmpl_form_form_radio(data) {
 // form.jade:form-cgu compiled template
 templatizer["form"]["form-cgu"] = function tmpl_form_form_cgu(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push('<div class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + '</div><div><label><input type="checkbox"' + jade.attr("name", data.name, true, false) + ' value="true" required="required" class="form-field"/>' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "<a" + jade.attr("href", data.link.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></label></div>");
+    buf.push('<div class="form-item-label">' + jade.escape(null == (jade_interp = data.label) ? "" : jade_interp) + '</div><div><label><input type="checkbox"' + jade.attr("name", data.name, true, false) + ' value="true" required="required" class="form-field"/>' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "&nbsp;");
+    if (data.link) {
+        buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' target="_blank">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a>");
+    }
+    buf.push("</label></div>");
     return buf.join("");
 };
 
@@ -983,6 +987,31 @@ templatizer["form"]["form"] = function tmpl_form_form(data) {
     return buf.join("");
 };
 
+// frame.jade compiled template
+templatizer["frame"] = function tmpl_frame(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// frame.jade:frame compiled template
+templatizer["frame"]["frame"] = function tmpl_frame_frame(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    buf.push("<div" + jade.cls([ "component", "component-frame", data ? data.modifiers : [] ], [ null, null, true ]) + "><fieldset>");
+    if (data.title) {
+        buf.push("<legend>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</legend>");
+    }
+    buf.push("<div>");
+    if (block) {
+        block && block(buf);
+    } else if (data.content) {
+        buf.push(null == (jade_interp = data.content) ? "" : jade_interp);
+    }
+    buf.push("</div></fieldset></div>");
+    return buf.join("");
+};
+
 // gallery.jade compiled template
 templatizer["gallery"] = function tmpl_gallery(locals) {
     var buf = [];
@@ -1034,31 +1063,6 @@ templatizer["gallery"]["gallery"] = function tmpl_gallery_gallery(data) {
         }
     }).call(this);
     buf.push("</div></div>");
-    return buf.join("");
-};
-
-// frame.jade compiled template
-templatizer["frame"] = function tmpl_frame(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// frame.jade:frame compiled template
-templatizer["frame"]["frame"] = function tmpl_frame_frame(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<div" + jade.cls([ "component", "component-frame", data ? data.modifiers : [] ], [ null, null, true ]) + "><fieldset>");
-    if (data.title) {
-        buf.push("<legend>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</legend>");
-    }
-    buf.push("<div>");
-    if (block) {
-        block && block(buf);
-    } else if (data.content) {
-        buf.push(null == (jade_interp = data.content) ? "" : jade_interp);
-    }
-    buf.push("</div></fieldset></div>");
     return buf.join("");
 };
 
@@ -1778,27 +1782,6 @@ templatizer["sharelines"]["sharelines"] = function tmpl_sharelines_sharelines(da
     return buf.join("");
 };
 
-// text.jade compiled template
-templatizer["text"] = function tmpl_text(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// text.jade:text compiled template
-templatizer["text"]["text"] = function tmpl_text_text(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<div" + jade.cls([ "component", "component-text", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
-    if (block) {
-        block && block(buf);
-    } else if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
 // table.jade compiled template
 templatizer["table"] = function tmpl_table(locals) {
     var buf = [];
@@ -1820,6 +1803,27 @@ templatizer["table"]["table"] = function tmpl_table_table(data) {
         buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
     }
     buf.push("</table></div>");
+    return buf.join("");
+};
+
+// text.jade compiled template
+templatizer["text"] = function tmpl_text(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// text.jade:text compiled template
+templatizer["text"]["text"] = function tmpl_text_text(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    buf.push("<div" + jade.cls([ "component", "component-text", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
+    if (block) {
+        block && block(buf);
+    } else if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    }
+    buf.push("</div>");
     return buf.join("");
 };
 
@@ -1873,6 +1877,44 @@ templatizer["verbatim"]["verbatim"] = function tmpl_verbatim_verbatim(data) {
     return buf.join("");
 };
 
+// video.jade compiled template
+templatizer["video"] = function tmpl_video(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// video.jade:video compiled template
+templatizer["video"]["video"] = function tmpl_video_video(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
+    buf.push("<div" + jade.cls([ "component", "component-video", data.modifiers ], [ null, null, true ]) + ">");
+    if (data.title) {
+        buf.push('<h3 class="video-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    }
+    buf.push('<div class="video-wrapper">');
+    if (data.cookie === false) {
+        if (block) {
+            buf.push(null == (jade_interp = block) ? "" : jade_interp);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        }
+    } else {
+        if (data.placeholder) {
+            buf.push('<div class="video-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+        }
+        buf.push('<script type="text/html" class="video-embed">');
+        if (block) {
+            buf.push(null == (jade_interp = block) ? "" : jade_interp);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        }
+        buf.push("</script>");
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
 // anchors-list.jade compiled template
 templatizer["anchors-list"] = function tmpl_anchors_list(locals) {
     var buf = [];
@@ -1919,44 +1961,6 @@ templatizer["anchors-list"]["anchors-list"] = function tmpl_anchors_list_anchors
         buf.push("</ul>");
     }
     buf.push("</nav>");
-    return buf.join("");
-};
-
-// video.jade compiled template
-templatizer["video"] = function tmpl_video(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// video.jade:video compiled template
-templatizer["video"]["video"] = function tmpl_video_video(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [];
-    buf.push("<div" + jade.cls([ "component", "component-video", data.modifiers ], [ null, null, true ]) + ">");
-    if (data.title) {
-        buf.push('<h3 class="video-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
-    }
-    buf.push('<div class="video-wrapper">');
-    if (data.cookie === false) {
-        if (block) {
-            buf.push(null == (jade_interp = block) ? "" : jade_interp);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-        }
-    } else {
-        if (data.placeholder) {
-            buf.push('<div class="video-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
-        }
-        buf.push('<script type="text/html" class="video-embed">');
-        if (block) {
-            buf.push(null == (jade_interp = block) ? "" : jade_interp);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-        }
-        buf.push("</script>");
-    }
-    buf.push("</div></div>");
     return buf.join("");
 };
 
