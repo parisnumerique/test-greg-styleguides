@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.3.8 (2016-01-29)
+
+* component `form`: add &nbsp; in cgu label
+
 ## 1.3.7 (2016-01-28)
 
 * component `jecoute`: display previous error
