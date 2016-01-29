@@ -57,8 +57,10 @@ mixin form-cgu(data)
   div: label
     input.form-field(type="checkbox" name=data.name value="true" required)
     = data.text
-    a(href=data.link.href target="_blank")
-      = data.link.text
+    | &nbsp;
+    if data.link
+      a(href=data.link.href target="_blank")
+        = data.link.text
 
 
 mixin form-matrix(data)
