@@ -26,6 +26,7 @@ Paris.quickAccess = (function(){
       $results,
       $around,
       $more,
+      $pause,
       $close,
       algolia,
       index;
@@ -44,6 +45,7 @@ Paris.quickAccess = (function(){
       $results = $el.find('.quick-access-results ul');
       $around = $el.find('.button.around');
       $more = $el.find('.quick-access-results-more');
+      $pause = $el.find('.quick-access-video-pause');
       $close = $el.find('.quick-access-close-search');
 
       $searchFieldInput
@@ -55,6 +57,7 @@ Paris.quickAccess = (function(){
         });
 
       $more.on('click', onClickMore);
+      $pause.on('click', onClickPause);
       $close.on('click', onClickClose);
 
       if ($el.hasClass('searching')) {
@@ -171,6 +174,13 @@ Paris.quickAccess = (function(){
     function onClickMore(e){
       e.preventDefault();
       $searchField.submit();
+    }
+
+    function onClickPause(e){
+      e.preventDefault();
+      $(this).toggleClass('paused');
+      var video = $el.find('.quick-access-video').get(0);
+      video.paused ? video.play() : video.pause();
     }
 
     function onClickClose(e){

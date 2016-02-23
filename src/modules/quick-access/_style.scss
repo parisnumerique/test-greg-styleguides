@@ -243,14 +243,7 @@
     }
   }
 
-  .quick-access-pause {
-    &:before {
-      @extend %icon-font;
-      @extend %icon-pause;
-      font-size: 1em;
-      position: relative;
-    }
-
+  .quick-access-video-pause {
     background-color: transparent;
     border: none;
     bottom: 35px;
@@ -258,10 +251,24 @@
     cursor: pointer;
     font-size: 30px;
     opacity: 0.7;
+    padding: 0;
     position: absolute;
     right: 40px;
     transition: opacity 0.3s ease;
     z-index: 1;
+
+    &:before {
+      @extend %icon-font;
+      @extend %icon-pause;
+      font-size: 1em;
+      position: relative;
+    }
+
+    &.paused {
+      &:before {
+        @extend %icon-play;
+      }
+    }
 
     &:hover, &:active, &:focus {
       opacity: 1;

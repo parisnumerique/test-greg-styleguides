@@ -12,6 +12,7 @@ mixin quick-access(data)
         video.quick-access-video(autoplay=true, loop=true, muted='muted', poster=data.background.image)
           each source in data.background.video.sources
             source&attributes(source)
+        button.quick-access-video-pause(type="button" title=data.background.video.pause_label)
     .quick-access-wrapper.layout-wrapper
       .quick-access-search(role="search")
         +search-field(data.search)
@@ -30,10 +31,9 @@ mixin quick-access(data)
         - var button = JSON.parse(JSON.stringify(data.results.button)) // clone the data object
         - button.modifiers = ["action", "tertiary", "quick-access-results-more"] // overwrite the modifiers
         +button(button)
-    button.quick-access-pause(type="button")  
     button.quick-access-close-search(type="button")
       if data.search.close_label
         .hidden-accessibly= data.search.close_label
     if data.notice
       +notice(data.notice)
-    
+
