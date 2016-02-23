@@ -246,14 +246,14 @@
   .quick-access-video-pause {
     background-color: transparent;
     border: none;
-    bottom: 35px;
     color: white;
     cursor: pointer;
     font-size: 30px;
     opacity: 0.7;
     padding: 0;
     position: absolute;
-    right: 40px;
+    right: 25px;
+    top: -50px; // by default, hide outside of screen
     transition: opacity 0.3s ease;
     z-index: 1;
 
@@ -268,6 +268,13 @@
       &:before {
         @extend %icon-play;
       }
+    }
+
+    // display when the poll is hovered
+    // or when the button has focus
+    .quick-access:hover &,
+    &:focus {
+      top: 25px;
     }
 
     &:hover, &:active, &:focus {
