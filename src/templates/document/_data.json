@@ -569,7 +569,8 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
-        }
+        },
+        "pause_label": "Mettre en pause l'animation"
       },
       "connected": {
         "heading": {
@@ -1226,7 +1227,8 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
-        }
+        },
+        "pause_label": "Mettre en pause l'animation"
       },
       "connected": {
         "heading": {
