@@ -4,6 +4,7 @@ include ../search-field/search-field
 mixin poll(data)
   .poll
     .poll-wrapper
+      button.poll-pause(type="button" title=data.pause_label)
       if data.heading
         h2.poll-heading
           = data.heading
@@ -26,4 +27,3 @@ mixin poll(data)
       if data.more
         .poll-more
           a(href=data.more.href)= data.more.text
-    button.poll-pause(type="button")  

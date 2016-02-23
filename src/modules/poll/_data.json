@@ -35,7 +35,8 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
-        }
+        },
+        "pause_label": "Mettre en pause l'animation"
       }
     }, {
       "title": "Choix binaire",
@@ -60,7 +61,8 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
-        }
+        },
+        "pause_label": "Mettre en pause l'animation"
       }
     }, {
       "title": "Réponse libre",
@@ -83,7 +85,8 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
-        }
+        },
+        "pause_label": "Mettre en pause l'animation"
       }
     }]
   }
