@@ -243,43 +243,26 @@
     }
   }
 
-  .quick-access-video-pause {
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 30px;
-    opacity: 0.7;
-    padding: 0;
+  .icon-switch[data-action=pause] {
     position: absolute;
     right: 25px;
-    top: -50px; // by default, hide outside of screen
-    transition: opacity 0.3s ease;
+    top: 25px;
     z-index: 1;
 
-    &:before {
-      @extend %icon-font;
-      @extend %icon-pause;
-      font-size: 1em;
-      position: relative;
-    }
+    > button {
+      opacity: 0.4;
+      transition: opacity 200ms ease;
+      transform: translateY(-50px); // by default, hide outside of screen
 
-    &.paused {
-      &:before {
-        @extend %icon-play;
-      }
+      &:hover, &:focus {opacity: 1;}
+      .icon {color: $white;}
     }
 
     // display when the poll is hovered
     // or when the button has focus
-    .quick-access:hover &,
-    &:focus {
-      top: 25px;
-    }
-
-    &:hover, &:active, &:focus {
-      opacity: 1;
-      transition: opacity 0.3s ease;
+    .quick-access:hover & > button,
+    > button:focus {
+      transform: translateY(0);
     }
   }
 }

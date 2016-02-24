@@ -31,7 +31,7 @@ Paris.poll = (function(){
       $optionsButtons = $options.find('.button');
       $form = $el.find('.poll-form');
       $input = $el.find('.poll-input');
-      $pause = $el.find('.poll-pause');
+      $pause = $el.find('.icon-switch[data-action=pause]');
 
       if (!options.mobileMediaQuery.matches) {
         // node garden not on mobile
@@ -174,7 +174,6 @@ Paris.poll = (function(){
 
     function onClickPause(e) {
       e.preventDefault();
-      $(this).toggleClass('paused');
       isPaused = !isPaused;
     }
 

@@ -45,7 +45,7 @@ Paris.quickAccess = (function(){
       $results = $el.find('.quick-access-results ul');
       $around = $el.find('.button.around');
       $more = $el.find('.quick-access-results-more');
-      $pause = $el.find('.quick-access-video-pause');
+      $pause = $el.find('.icon-switch[data-action=pause]');
       $close = $el.find('.quick-access-close-search');
 
       $searchFieldInput
@@ -178,7 +178,6 @@ Paris.quickAccess = (function(){
 
     function onClickPause(e){
       e.preventDefault();
-      $(this).toggleClass('paused');
       var video = $el.find('.quick-access-video').get(0);
       video.paused ? video.play() : video.pause();
     }

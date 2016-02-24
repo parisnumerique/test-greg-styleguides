@@ -36,7 +36,12 @@
           "href": "#",
           "text": "Accéder à l’espace participatif"
         },
-        "pause_label": "Mettre en pause l'animation"
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
+        }
       }
     }, {
       "title": "Choix binaire",
@@ -62,7 +67,12 @@
           "href": "#",
           "text": "Accéder à l’espace participatif"
         },
-        "pause_label": "Mettre en pause l'animation"
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
+        }
       }
     }, {
       "title": "Réponse libre",
@@ -86,7 +96,12 @@
           "href": "#",
           "text": "Accéder à l’espace participatif"
         },
-        "pause_label": "Mettre en pause l'animation"
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
+        }
       }
     }]
   }

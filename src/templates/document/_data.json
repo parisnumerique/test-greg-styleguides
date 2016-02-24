@@ -570,7 +570,12 @@
           "href": "#",
           "text": "Accéder à l’espace participatif"
         },
-        "pause_label": "Mettre en pause l'animation"
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
+        }
       },
       "connected": {
         "heading": {
@@ -1228,7 +1233,12 @@
           "href": "#",
           "text": "Accéder à l’espace participatif"
         },
-        "pause_label": "Mettre en pause l'animation"
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
+        }
       },
       "connected": {
         "heading": {

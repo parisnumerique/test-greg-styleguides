@@ -81,7 +81,12 @@
               {"src": "//zippy.gfycat.com/PartialMadeupGorilla.webm", "type": "video/webm"},
               {"src": "//zippy.gfycat.com/PartialMadeupGorilla.mp4", "type": "video/mp4"}
             ],
-            "pause_label": "Mettre en pause la vidéo"
+            "pause": {
+              "label": [
+                "Mettre en pause la vidéo",
+                "Relancer la vidéo"
+              ]
+            }
           }
         },
         "heading": {

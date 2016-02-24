@@ -49,7 +49,12 @@
           "href": "#",
           "text": "Posez votre question !"
         },
-        "pause_label": "Arrêter le défilement"
+        "pause": {
+          "label": [
+            "Mettre en pause le défilement",
+            "Relancer le défilement"
+          ]
+        }
       }
     }, {
       "title": "Texte simple",
