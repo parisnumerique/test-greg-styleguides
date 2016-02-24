@@ -49,7 +49,6 @@ Paris.iconSwitch = (function(){
           break;
 
         case 'pause':
-          // TODO implement pause action
           actionOnClick = function(e){
             onClick(e);
           };

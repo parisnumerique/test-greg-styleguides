@@ -45,7 +45,7 @@ Paris.quickAccess = (function(){
       $results = $el.find('.quick-access-results ul');
       $around = $el.find('.button.around');
       $more = $el.find('.quick-access-results-more');
-      $pause = $el.find('.icon-switch[data-action=pause]');
+      $pause = $el.find('.icon-switch-pause');
       $close = $el.find('.quick-access-close-search');
 
       $searchFieldInput

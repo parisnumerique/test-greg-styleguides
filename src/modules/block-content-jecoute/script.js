@@ -21,7 +21,7 @@ Paris.blockContentJecoute = (function(){
       initOptions();
 
       $items = $el.find('.block-content-item');
-      $pause = $el.find('.icon-switch[data-action="pause"]');
+      $pause = $el.find('.icon-switch-pause');
 
       if ($items.length === 0) {return;}
       $pause.on('click', onClickPause);

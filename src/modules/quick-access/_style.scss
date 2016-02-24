@@ -5,6 +5,30 @@
   .quick-access-wrapper {
     margin: 0 auto;
   }
+
+  .icon-switch-pause {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1;
+
+    > button {
+      opacity: 0.4;
+      transition: opacity 200ms ease;
+      position: relative;
+      top: 30px; // by default, hide outside of screen
+
+      &:hover, &:focus {opacity: 1;}
+      .icon {color: $white;}
+    }
+  }
+
+  // display when the poll is hovered
+  // or when the button has focus
+  &:hover .icon-switch-pause > button,
+  .icon-switch-pause > button:focus {
+    top: 0;
+  }
 }
 
 .quick-access-background {
@@ -109,29 +133,6 @@
 
     .notice {
       z-index: 1;
-    }
-
-    .icon-switch[data-action=pause] {
-      position: absolute;
-      right: 25px;
-      top: 25px;
-      z-index: 1;
-
-      > button {
-        opacity: 0.4;
-        transition: opacity 200ms ease;
-        transform: translateY(-50px); // by default, hide outside of screen
-
-        &:hover, &:focus {opacity: 1;}
-        .icon {color: $white;}
-      }
-
-      // display when the poll is hovered
-      // or when the button has focus
-      .quick-access:hover & > button,
-      > button:focus {
-        transform: translateY(0);
-      }
     }
   }
 
