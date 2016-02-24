@@ -15,13 +15,14 @@
   }
 
   .block-content-item {
-    transition: 2s ease opacity;
     width: 100%;
     opacity: 0;
     position: absolute;
     top: 0;
+
     &.visible {
       opacity: 1;
+      transition: opacity 1s ease;
     }
   }
 
@@ -41,7 +42,7 @@
   .block-content-question,
   .block-content-answer {
     height: 130px;
-    transition: 1s ease opacity;
+    transition: opacity 400ms ease;
     opacity: 1;
 
     .user {
@@ -53,7 +54,7 @@
     position: absolute;
     top: 0;
     opacity: 0;
-    transition-delay: 1s;
+    transition-delay: 500ms;
     z-index: 1;
   }
 
@@ -93,13 +94,6 @@
   }
 
   .block-content-jecoute-pause {
-    &:before {
-      @extend %icon-font;
-      @extend %icon-pause;
-      font-size: 1em;
-      position: relative;
-    }
-
     background-color: transparent;
     border: none;
     color: gray99;
@@ -107,11 +101,22 @@
     font-size: 20px;
     opacity: 0.4;
     position: absolute;
-    right: 0;
+    right: -30px;
     transition: opacity 0.3s ease;
-    top: 11px;
+    top: 10px;
     z-index: 1;
     padding-right: 0;
+
+    &:before {
+      @extend %icon-font;
+      @extend %icon-pause;
+      font-size: 24px;
+      position: relative;
+    }
+
+    &.paused:before {
+      @extend %icon-play;
+    }
 
     &:hover, &:active, &:focus {
       opacity: 1;

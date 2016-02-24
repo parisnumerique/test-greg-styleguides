@@ -14,6 +14,7 @@ mixin block-content-jecoute(data)
               span.end= item.answer.time
               .block-content-bar
                 .progress
+              button.block-content-jecoute-pause(type="button" title=data.pause_label)
             .block-content-question-answer
               .block-content-question
                 .user= item.question.user
@@ -21,7 +22,6 @@ mixin block-content-jecoute(data)
               .block-content-answer
                 .user= item.answer.user
                 .text!= item.answer.text
-        button.block-content-jecoute-pause(type="button")        
     if data.text
       p.block-content-text= data.text
     - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object

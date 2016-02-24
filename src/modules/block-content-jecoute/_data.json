@@ -48,7 +48,8 @@
         "button": {
           "href": "#",
           "text": "Posez votre question !"
-        }
+        },
+        "pause_label": "Arrêter le défilement"
       }
     }, {
       "title": "Texte simple",

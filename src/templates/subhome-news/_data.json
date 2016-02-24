@@ -575,7 +575,8 @@
           "button": {
             "href": "#",
             "text": "Posez votre question !"
-          }
+          },
+          "pause_label": "Arrêter le défilement"
         },
         "social": {
           "title": "Restez connecté",
@@ -1142,7 +1143,8 @@
           "button": {
             "href": "#",
             "text": "Posez votre question !"
-          }
+          },
+          "pause_label": "Arrêter le défilement"
         },
         "social": {
           "title": "Restez connecté",
@@ -1652,7 +1654,8 @@
           "button": {
             "href": "#",
             "text": "Posez votre question !"
-          }
+          },
+          "pause_label": "Arrêter le défilement"
         },
         "social": {
           "title": "Restez connecté",
