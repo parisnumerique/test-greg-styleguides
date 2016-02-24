@@ -16,20 +16,20 @@
     top: 0;
     z-index: 0;
   }
-}
 
-.icon-switch[data-action=pause] {
-  position: absolute;
-  right: 25px;
-  top: 25px;
-  z-index: 1;
+  .icon-switch[data-action=pause] {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1;
 
-  > button {
-    opacity: 0.4;
-    transition: opacity 200ms ease;
+    > button {
+      opacity: 0.4;
+      transition: opacity 200ms ease;
 
-    &:hover, &:focus {opacity: 1;}
-    .icon {color: $white;}
+      &:hover, &:focus {opacity: 1;}
+      .icon {color: $white;}
+    }
   }
 }
 
