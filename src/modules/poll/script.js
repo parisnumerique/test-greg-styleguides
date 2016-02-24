@@ -17,10 +17,11 @@ Paris.poll = (function(){
     var $el     = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
         $title, $options, $optionsButtons,
-        $form, $input,
+        $form, $input, $pause,
         $canvas, canvas, ctx, color, dots, mousePosition = {}, offset,
         animFrame,
-        isInViewport = true;
+        isInViewport = true,
+        isPaused = false;
 
     function init(){
       initOptions();
@@ -30,6 +31,7 @@ Paris.poll = (function(){
       $optionsButtons = $options.find('.button');
       $form = $el.find('.poll-form');
       $input = $el.find('.poll-input');
+      $pause = $el.find('.icon-switch[data-action=pause]');
 
       if (!options.mobileMediaQuery.matches) {
         // node garden not on mobile
@@ -39,6 +41,7 @@ Paris.poll = (function(){
       $el.on('mouseenter mousemove mouseleave', onMouseEvents);
       $optionsButtons.on('click', onClickOption);
       $form.on('submit', onSubmitForm);
+      $pause.on('click', onClickPause);
 
       PubSub.subscribe('scroll.document', onScroll);
     }
@@ -132,16 +135,18 @@ Paris.poll = (function(){
     };
 
     function createDots(){
-      if (isInViewport) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for(var i = 0; i < dots.nb; i++){
-          dots.array.push(new Dot());
-          var dot = dots.array[i];
-          dot.create();
-        }
+      if (!isPaused) {
+        if (isInViewport) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          for(var i = 0; i < dots.nb; i++){
+            dots.array.push(new Dot());
+            var dot = dots.array[i];
+            dot.create();
+          }
 
-        dot.line();
-        dot.animate();
+          dot.line();
+          dot.animate();
+        }
       }
 
       window.requestAnimationFrame(createDots);
@@ -165,6 +170,11 @@ Paris.poll = (function(){
     function onSubmitForm(e) {
       e.preventDefault();
       saveReply($input.val());
+    }
+
+    function onClickPause(e) {
+      e.preventDefault();
+      isPaused = !isPaused;
     }
 
     function saveReply(reply) {

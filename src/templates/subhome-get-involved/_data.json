@@ -422,6 +422,12 @@
           "button": {
             "href": "#",
             "text": "Posez votre question !"
+          },
+          "pause": {
+            "label": [
+              "Mettre en pause le défilement",
+              "Relancer le défilement"
+            ]
           }
         },
         "social": {

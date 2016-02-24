@@ -15,13 +15,14 @@
   }
 
   .block-content-item {
-    transition: 2s ease opacity;
     width: 100%;
     opacity: 0;
     position: absolute;
     top: 0;
+
     &.visible {
       opacity: 1;
+      transition: opacity 1s ease;
     }
   }
 
@@ -41,7 +42,7 @@
   .block-content-question,
   .block-content-answer {
     height: 130px;
-    transition: 1s ease opacity;
+    transition: opacity 400ms ease;
     opacity: 1;
 
     .user {
@@ -53,7 +54,7 @@
     position: absolute;
     top: 0;
     opacity: 0;
-    transition-delay: 1s;
+    transition-delay: 500ms;
     z-index: 1;
   }
 
@@ -89,6 +90,21 @@
         background-color: $color-tertiary;
         border-radius: 2px;
       }
+    }
+  }
+
+  .icon-switch[data-action=pause] {
+    left: 82%;
+    position: absolute;
+    top: 86px;
+    z-index: 1;
+
+    > button {
+      opacity: 0.4;
+      transition: opacity 200ms ease;
+
+      &:hover, &:focus {opacity: 1;}
+      .icon {color: $white;}
     }
   }
 }

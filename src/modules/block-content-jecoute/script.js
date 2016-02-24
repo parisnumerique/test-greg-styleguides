@@ -12,17 +12,21 @@ Paris.blockContentJecoute = (function(){
   function blockContentJecoute(selector, userOptions){
     var $el     = $(selector),
         options = $.extend({}, defaultOptions, userOptions),
-        $items;
+        $items,
+        $pause,
+        isPaused = false,
+        timeoutNext;
 
     function init(){
       initOptions();
 
       $items = $el.find('.block-content-item');
+      $pause = $el.find('.icon-switch[data-action="pause"]');
 
       if ($items.length === 0) {return;}
+      $pause.on('click', onClickPause);
 
-      setInterval(changeVisibleItem, options.timing*2);
-      changeVisibleItem();
+      iterate();
     }
 
     function initOptions() {
@@ -31,8 +35,12 @@ Paris.blockContentJecoute = (function(){
       });
     }
 
-    function changeVisibleItem() {
-      var $current = $items.filter('.visible') || $items.first();
+    function getCurrent() {
+      return $items.filter('.visible') || $items.first();
+    }
+
+    function iterate() {
+      var $current = getCurrent();
       var $next = $current.next('.block-content-item');
 
       $items.removeClass('answered');
@@ -45,18 +53,48 @@ Paris.blockContentJecoute = (function(){
       }
 
       $next.find('.progress').velocity({
-        width: "100%"
+        width: ["100%", 0]
       }, {
         duration: options.timing,
         easing: 'linear',
-        complete: function() {
-          $next.addClass('answered');
-          setTimeout(function () {
-            $next.find('.progress').velocity({width: 0}, {duration: 0});
-            $items.parent().append($next);
-          }, options.timing);
-        }
+        complete: answer
       });
+    }
+
+    function next() {
+      $items.parent().append(getCurrent());
+      iterate();
+    }
+
+    function answer() {
+      getCurrent().addClass('answered');
+      timeoutNext = setTimeout(next, options.timing);
+    }
+
+    function onClickPause(e) {
+      e.preventDefault();
+
+      var $current = getCurrent();
+
+      if (isPaused) {
+        // resume
+        if ($current.hasClass('answered')) {
+          next();
+        } else {
+          $current.find('.progress').velocity({
+            width: "100%"
+          }, {
+            duration: 200,
+            complete: answer
+          });
+        }
+      } else {
+        // pause
+        $current.find('.progress').velocity('stop');
+        clearTimeout(timeoutNext);
+      }
+
+      isPaused = !isPaused;
     }
 
     init();

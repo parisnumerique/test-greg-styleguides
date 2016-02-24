@@ -4,6 +4,7 @@
   background-position: 50% 50%;
   color: white;
   height: 100%;
+  overflow: hidden;
   position: relative;
   text-align: center;
   width: 100%;
@@ -14,6 +15,21 @@
     position: absolute;
     top: 0;
     z-index: 0;
+  }
+}
+
+.icon-switch[data-action=pause] {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  z-index: 1;
+
+  > button {
+    opacity: 0.4;
+    transition: opacity 200ms ease;
+
+    &:hover, &:focus {opacity: 1;}
+    .icon {color: $white;}
   }
 }
 

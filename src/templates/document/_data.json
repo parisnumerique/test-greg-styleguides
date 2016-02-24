@@ -569,6 +569,12 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
+        },
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
         }
       },
       "connected": {
@@ -1226,6 +1232,12 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
+        },
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
         }
       },
       "connected": {

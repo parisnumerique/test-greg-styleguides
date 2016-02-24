@@ -58,7 +58,7 @@
     "templatizer": "^2.0.2",
     "through2": "~0.6.3",
     "underscore.string": "~3.0.3",
-    "velocity-animate": "~1.2.2",
+    "velocity-animate": "^1.2.3",
     "vinyl": "~0.4.6",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",

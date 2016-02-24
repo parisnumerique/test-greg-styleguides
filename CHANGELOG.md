@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* module `block-content-jecoute`: added pause button
+* module `quick-access`: added pause button for background video
+* module `poll`: added pause button for background animation
+
 ## 1.3.8 (2016-01-29)
 
 * component `form`: add &nbsp; in cgu label
