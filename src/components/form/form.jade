@@ -53,6 +53,7 @@ mixin form-radio(data)
 
 
 mixin form-cgu(data)
+  - data.label += " *";
   .form-item-label= data.label
   div: label
     input.form-field(type="checkbox" name=data.name value="true" required)
