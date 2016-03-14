@@ -96,7 +96,7 @@
   .icon-switch-pause {
     left: 82%;
     position: absolute;
-    top: 86px;
+    top: 65px;
     z-index: 1;
 
     > button {
@@ -114,6 +114,10 @@
     position: absolute;
     bottom: 20px;
     @include medium {bottom: 0;}
+  }
+
+  .icon-switch-pause {
+    top: 86px;
   }
 }
 

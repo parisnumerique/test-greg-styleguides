@@ -13,7 +13,8 @@
     z-index: 1;
 
     > button {
-      opacity: 0.4;
+      opacity: 0.8;
+      text-shadow: 0 0 2px transparentize($black, 0.3);
       transition: opacity 200ms ease;
       position: relative;
       top: 30px; // by default, hide outside of screen
