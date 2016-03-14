@@ -1,9 +1,14 @@
 include ../button/button
+include ../icon-switch/icon-switch
 include ../search-field/search-field
 
 mixin poll(data)
   .poll
     .poll-wrapper
+      - var pause = JSON.parse(JSON.stringify(data.pause || []))
+      - pause.action = {"type": "pause"}
+      - pause.icon = ["pause", "play"]
+      +icon-switch(pause)
       if data.heading
         h2.poll-heading
           = data.heading

@@ -1,5 +1,6 @@
 include ../button/button
 include ../heading/heading
+include ../icon-switch/icon-switch
 include ../notice/notice
 include ../search-field/search-field
 
@@ -12,6 +13,10 @@ mixin quick-access(data)
         video.quick-access-video(autoplay=true, loop=true, muted='muted', poster=data.background.image)
           each source in data.background.video.sources
             source&attributes(source)
+        - var pause = JSON.parse(JSON.stringify(data.background.video.pause || []))
+        - pause.action = {"type": "pause"}
+        - pause.icon = ["pause", "play"]
+        +icon-switch(pause)
     .quick-access-wrapper.layout-wrapper
       .quick-access-search(role="search")
         +search-field(data.search)

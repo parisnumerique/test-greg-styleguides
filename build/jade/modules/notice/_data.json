@@ -35,6 +35,17 @@
         }
       }
     }, {
+      "description": "Et les textes longs ne dépassent pas.",
+      "data": {
+        "block": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "closable": {
+          "href": "#",
+          "text": "Accepter",
+          "modifiers": ["action"],
+          "attributes": {"data-action": "close"}
+        }
+      }
+    }, {
       "title": "Avec le texte centré",
       "data": {
         "block": "Texte de la notice",
@@ -70,6 +81,12 @@
       "data": {
         "block": "Texte de la notice",
         "modifiers": ["white"]
+      }
+    }, {
+      "description": "gris",
+      "data": {
+        "block": "Texte de la notice",
+        "modifiers": ["grey"]
       }
     }, {
       "description": "transparent, peut être associé à une des couleurs ci-dessus",

@@ -1095,14 +1095,14 @@ th {
     position: relative;
     min-height: 150px; }
   .block-content-jecoute .block-content-item {
-    -webkit-transition: 2s ease opacity;
-            transition: 2s ease opacity;
     width: 100%;
     opacity: 0;
     position: absolute;
     top: 0; }
     .block-content-jecoute .block-content-item.visible {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transition: opacity 1s ease;
+              transition: opacity 1s ease; }
   .block-content-jecoute .block-content-question-answer {
     height: 130px;
     overflow: hidden;
@@ -1114,8 +1114,8 @@ th {
   .block-content-jecoute .block-content-question,
   .block-content-jecoute .block-content-answer {
     height: 130px;
-    -webkit-transition: 1s ease opacity;
-            transition: 1s ease opacity;
+    -webkit-transition: opacity 400ms ease;
+            transition: opacity 400ms ease;
     opacity: 1; }
     .block-content-jecoute .block-content-question .user,
     .block-content-jecoute .block-content-answer .user {
@@ -1124,8 +1124,8 @@ th {
     position: absolute;
     top: 0;
     opacity: 0;
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
     z-index: 1; }
   .block-content-jecoute .answered .block-content-answer {
     opacity: 1;
@@ -1154,6 +1154,19 @@ th {
         height: 3px;
         background-color: #F8E273;
         border-radius: 2px; }
+  .block-content-jecoute .icon-switch-pause {
+    left: 82%;
+    position: absolute;
+    top: 65px;
+    z-index: 1; }
+    .block-content-jecoute .icon-switch-pause > button {
+      opacity: 0.4;
+      -webkit-transition: opacity 200ms ease;
+              transition: opacity 200ms ease; }
+      .block-content-jecoute .icon-switch-pause > button:hover, .block-content-jecoute .icon-switch-pause > button:focus {
+        opacity: 1; }
+      .block-content-jecoute .icon-switch-pause > button .icon {
+        color: #FFF; }
 
 .blocks-content-vertical .block-content-jecoute .block-content-items + .block-content-button {
   position: absolute;
@@ -1161,6 +1174,9 @@ th {
   @media (min-width: 768px) and (max-width: 1159px) {
     .blocks-content-vertical .block-content-jecoute .block-content-items + .block-content-button {
       bottom: 0; } }
+
+.blocks-content-vertical .block-content-jecoute .icon-switch-pause {
+  top: 86px; }
 
 @media (min-width: 768px) and (max-width: 1159px) {
   .block-content-jecoute .block-content-items {
@@ -2248,7 +2264,8 @@ th {
       line-height: 84px; } }
 
 .icon-switch {
-  display: inline-block; }
+  display: inline-block;
+  overflow: hidden; }
   .icon-switch .icon-switch-off {
     display: none; }
     .icon-switch .icon-switch-off .icon {
@@ -3134,9 +3151,10 @@ html.no-touch .news-card-counter {
     cursor: pointer;
     display: block;
     padding: 0;
-    position: absolute;
-    right: 20px;
-    top: 18px; }
+    padding-left: 10px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 18px; }
     .notice .close:before {
       border: 2px solid;
       border-radius: 50%;
@@ -3168,8 +3186,12 @@ html.no-touch .news-card-counter {
     background-color: white; }
     .notice.white.transparent {
       background-color: rgba(255, 255, 255, 0.8); }
-    .notice.white, .notice.white a {
-      color: #000; }
+  .notice.grey {
+    background-color: #EEE; }
+    .notice.grey.transparent {
+      background-color: rgba(238, 238, 238, 0.8); }
+  .notice.white, .notice.white a, .notice.grey, .notice.grey a {
+    color: #000; }
   .notice.buildings {
     background-image: url(../modules/notice/notice-back-image.png);
     background-position: 50% 100%;
@@ -3198,8 +3220,6 @@ html.no-touch .news-card-counter {
   line-height: 20px;
   margin: 0 20px;
   padding: 20px 0; }
-  .close + .notice-content {
-    padding-right: 40px; }
   .notice-content a {
     color: white;
     text-transform: uppercase;
@@ -3220,9 +3240,7 @@ html.no-touch .news-card-counter {
 
 @media (min-width: 768px) {
   .notice .close {
-    right: 50px; }
-  .notice-content {
-    padding-right: 80px; } }
+    margin-right: 50px; } }
 
 @media (min-width: 1160px) {
   .notice-content {
@@ -3383,6 +3401,7 @@ html.no-touch .news-card-counter {
   background-position: 50% 50%;
   color: white;
   height: 100%;
+  overflow: hidden;
   position: relative;
   text-align: center;
   width: 100%; }
@@ -3392,6 +3411,24 @@ html.no-touch .news-card-counter {
     position: absolute;
     top: 0;
     z-index: 0; }
+  .poll .icon-switch-pause {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1; }
+    .poll .icon-switch-pause > button {
+      opacity: 0.4;
+      -webkit-transition: opacity 200ms ease;
+              transition: opacity 200ms ease;
+      position: relative;
+      top: 30px; }
+      .poll .icon-switch-pause > button:hover, .poll .icon-switch-pause > button:focus {
+        opacity: 1; }
+      .poll .icon-switch-pause > button .icon {
+        color: #FFF; }
+  .poll:hover .icon-switch-pause > button,
+  .poll .icon-switch-pause > button:focus {
+    top: 0; }
 
 .poll-wrapper {
   position: relative;
@@ -3600,6 +3637,25 @@ html.no-touch .news-card-counter {
   width: 100%; }
   .quick-access .quick-access-wrapper {
     margin: 0 auto; }
+  .quick-access .icon-switch-pause {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1; }
+    .quick-access .icon-switch-pause > button {
+      opacity: 0.8;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+      -webkit-transition: opacity 200ms ease;
+              transition: opacity 200ms ease;
+      position: relative;
+      top: 30px; }
+      .quick-access .icon-switch-pause > button:hover, .quick-access .icon-switch-pause > button:focus {
+        opacity: 1; }
+      .quick-access .icon-switch-pause > button .icon {
+        color: #FFF; }
+  .quick-access:hover .icon-switch-pause > button,
+  .quick-access .icon-switch-pause > button:focus {
+    top: 0; }
 
 .quick-access-background {
   background-position: center center;
