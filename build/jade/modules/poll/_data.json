@@ -35,6 +35,12 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
+        },
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
         }
       }
     }, {
@@ -60,6 +66,12 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
+        },
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
         }
       }
     }, {
@@ -83,6 +95,12 @@
         "more": {
           "href": "#",
           "text": "Accéder à l’espace participatif"
+        },
+        "pause": {
+          "label": [
+            "Mettre en pause l'animation",
+            "Relancer l'animation"
+          ]
         }
       }
     }]

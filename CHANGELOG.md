@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+
+## 1.3.9 (2016-03-14)
+
+* module `notice`: add grey background and fix center
 * module `block-content-jecoute`: added pause button
 * module `quick-access`: added pause button for background video
 * module `poll`: added pause button for background animation
