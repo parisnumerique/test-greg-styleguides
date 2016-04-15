@@ -1,6 +1,10 @@
 {
   "name": "Paris",
+<<<<<<< HEAD
   "version": "1.3.9",
+=======
+  "version": "1.3.7",
+>>>>>>> [ceritek] Qualification navigation 3975
   "menu": [],
   "index": {
     "title": "Sommaire"
