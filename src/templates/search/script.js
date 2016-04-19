@@ -125,7 +125,10 @@ Paris.search = (function(){
         facets: options.facets.join(','),
 
         // Explicitly request necessary attributes (as defined in options)
-        attributesToRetrieve: values(options.fields).join(',')
+        attributesToRetrieve: values(options.fields).join(','),
+
+        // On ne veut pas l'espace PRO dans les résultats des recherches
+        filters: "(NOT onglet:PRO)"
       };
 
       // If some facets filters are active, add them to the request
