@@ -4,16 +4,36 @@
   "description": "Paris Living Style Guide",
   "author": "Hans Lemuet <hans@etaminstudio.com>",
   "contributors": [
-    {"name": "Adrien Nicod"},
-    {"name": "Guillaume Casalis"},
-    {"name": "Jonathan Blanchet"},
-    {"name": "Jonathan Loss"},
-    {"name": "Julien Verkest"},
-    {"name": "Lilit Randé"},
-    {"name": "Olivier Bayle"},
-    {"name": "Stéphane Legouffe"},
-    {"name": "Valentin Cassat"},
-    {"name": "SNVT"}
+    {
+      "name": "Adrien Nicod"
+    },
+    {
+      "name": "Guillaume Casalis"
+    },
+    {
+      "name": "Jonathan Blanchet"
+    },
+    {
+      "name": "Jonathan Loss"
+    },
+    {
+      "name": "Julien Verkest"
+    },
+    {
+      "name": "Lilit Randé"
+    },
+    {
+      "name": "Olivier Bayle"
+    },
+    {
+      "name": "Stéphane Legouffe"
+    },
+    {
+      "name": "Valentin Cassat"
+    },
+    {
+      "name": "SNVT"
+    }
   ],
   "main": "index.js",
   "dependencies": {
@@ -28,7 +48,7 @@
     "browserify": "^9.0.3",
     "fastclick": "~1.0.6",
     "flickity-imagesloaded": "^1.0.1",
-    "globalize": "^1.0.0",
+    "globalize": "~1.0.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-clean": "^0.3.1",
