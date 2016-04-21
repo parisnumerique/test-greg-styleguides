@@ -10,6 +10,10 @@ Let's take the `x.β.α` version number:
 ## x.β.α (coming soon)
 
 
+## 1.3.10 (2016-04-21)
+
+* script `3975.js`: qualification navigation 3975
+
 ## 1.3.9 (2016-03-14)
 
 * module `notice`: add grey background and fix center
