@@ -10,6 +10,10 @@ Let's take the `x.β.α` version number:
 ## x.β.α (coming soon)
 
 
+## 1.3.11 (2016-05-12)
+
+* module `quick-access`: remove onglet:Professionnels from search
+
 ## 1.3.10 (2016-04-21)
 
 * script `3975.js`: qualification navigation 3975

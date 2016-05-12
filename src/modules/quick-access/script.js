@@ -135,7 +135,7 @@ Paris.quickAccess = (function(){
       var val = $searchFieldInput.val();
       if (val !== "") {
         index.search(val, {
-          filters: "(NOT onglet:Professionels)",
+          filters: "(NOT onglet:Professionnels)",
           hitsPerPage: options.hitsPerPage
         }, onSearchResults);
       } else {
