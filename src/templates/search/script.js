@@ -128,7 +128,7 @@ Paris.search = (function(){
         attributesToRetrieve: values(options.fields).join(','),
 
         // On ne veut pas l'espace PRO dans les résultats des recherches
-        filters: "(NOT onglet:PRO)"
+        filters: "(NOT onglet:Professionnels)"
       };
 
       // If some facets filters are active, add them to the request

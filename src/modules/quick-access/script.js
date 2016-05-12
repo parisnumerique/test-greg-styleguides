@@ -135,8 +135,7 @@ Paris.quickAccess = (function(){
       var val = $searchFieldInput.val();
       if (val !== "") {
         index.search(val, {
-          //facetFilters: [["onglet:Services et infos pratiques","onglet:Actualités","onglet:Equipements","onglet:Municipalité","onglet:Fiche élu","onglet:Participez","onglet:FAQ"]],
-          filters: "(NOT onglet:PRO)",
+          filters: "(NOT onglet:Professionels)",
           hitsPerPage: options.hitsPerPage
         }, onSearchResults);
       } else {
