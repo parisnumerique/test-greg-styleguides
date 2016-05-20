@@ -10,7 +10,7 @@ Let's take the `x.β.α` version number:
 ## x.β.α (coming soon)
 
 
-## 1.3.12 (coming soon)
+## 1.3.12 (2016-05-20)
 
 * module `quick-access`: allow onglet:Professionnels from search
 
