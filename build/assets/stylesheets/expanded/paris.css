@@ -1257,6 +1257,87 @@ th {
   .block-content-social .block-content-count {
     font-size: 20px; } }
 
+.block-content-tweet {
+  font-size: 14px;
+  max-width: 360px;
+  position: relative;
+  overflow: hidden; }
+  .block-content-tweet .block-content-content {
+    overflow: visible !important; }
+  .block-content-tweet .block-content-text {
+    margin-bottom: 15px;
+    max-width: 360px; }
+  .block-content-tweet .block-content-items {
+    position: relative;
+    min-height: 150px; }
+  .block-content-tweet .block-content-item {
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0; }
+    .block-content-tweet .block-content-item.visible {
+      opacity: 1;
+      pointer-events: auto;
+      -webkit-transition: opacity 1s ease;
+              transition: opacity 1s ease; }
+    .block-content-tweet .block-content-item .user {
+      font-weight: bold; }
+    .block-content-tweet .block-content-item .text a {
+      color: #F8E273 !important; }
+      .block-content-tweet .block-content-item .text a:hover {
+        border-bottom: 1px solid #F8E273; }
+  .block-content-tweet .block-content-links {
+    width: 100%;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    overflow: auto;
+    zoom: 1; }
+    .block-content-tweet .block-content-links-time {
+      display: inline-block;
+      float: left; }
+    .block-content-tweet .block-content-links-actions {
+      display: inline-block;
+      float: right;
+      text-align: right; }
+      .block-content-tweet .block-content-links-actions a {
+        margin-left: 6px; }
+    .block-content-tweet .block-content-links a {
+      border-bottom: 1px solid; }
+  .block-content-tweet .icon-switch-pause {
+    right: 0;
+    position: absolute;
+    top: 50px;
+    z-index: 1; }
+    .block-content-tweet .icon-switch-pause > button {
+      opacity: 0.4;
+      -webkit-transition: opacity 200ms ease;
+              transition: opacity 200ms ease; }
+      .block-content-tweet .icon-switch-pause > button:hover, .block-content-tweet .icon-switch-pause > button:focus {
+        opacity: 1; }
+      .block-content-tweet .icon-switch-pause > button .icon {
+        color: #FFF; }
+
+.blocks-content-vertical .block-content-tweet .block-content-items + .block-content-button {
+  position: absolute;
+  bottom: 20px; }
+  @media (min-width: 768px) and (max-width: 1159px) {
+    .blocks-content-vertical .block-content-tweet .block-content-items + .block-content-button {
+      bottom: 0; } }
+
+.blocks-content-vertical .block-content-tweet .icon-switch-pause {
+  top: 40px; }
+
+@media (min-width: 768px) and (max-width: 1159px) {
+  .block-content-tweet .block-content-items {
+    min-height: 165px; }
+  .block-content-tweet .block-content-links-actions a {
+    margin-left: 12px; } }
+
+@media (max-width: 767px) {
+  .blocks-content-vertical .block-content-tweet.block-content {
+    padding-bottom: 50px; } }
+
 .block-content {
   max-width: 600px; }
   .block-content a:not(.button) {
