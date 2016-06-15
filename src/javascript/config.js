@@ -33,6 +33,10 @@ Paris.config = {
     },
     "publicdata": {
       "name": "publicdata"
+    },
+    "le3975": {
+      "host": "CTK_HOST-COOKIE",
+      "wssoId": "CTK_AGENTID-COOKIE"
     }
   },
   "captcha": {

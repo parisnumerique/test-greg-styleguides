@@ -25,6 +25,7 @@ require('../layouts/left-col/script');
 // load our modules
 require('../modules/anchors-list/script');
 require('../modules/block-content-jecoute/script');
+require('../modules/block-content-tweet/script');
 require('../modules/block-content-newsletter/script');
 require('../modules/button-top/script');
 require('../modules/gallery-ugc/script');

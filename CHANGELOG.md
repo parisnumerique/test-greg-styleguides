@@ -9,6 +9,7 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* added module `block-content-tweet`
 
 ## 1.3.12 (2016-05-20)
 
