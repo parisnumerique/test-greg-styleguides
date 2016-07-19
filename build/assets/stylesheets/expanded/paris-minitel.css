@@ -147,6 +147,162 @@ input:focus, textarea:focus {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-alert:before {
+  content: ""; }
+
+.icon-arrow-bottom:before {
+  content: ""; }
+
+.icon-arrow-left:before {
+  content: ""; }
+
+.icon-arrow-light-bottom:before {
+  content: ""; }
+
+.icon-arrow-light-left:before {
+  content: ""; }
+
+.icon-arrow-light-right:before {
+  content: ""; }
+
+.icon-arrow-light-top:before {
+  content: ""; }
+
+.icon-arrow-right:before {
+  content: ""; }
+
+.icon-arrow-small-bottom:before {
+  content: ""; }
+
+.icon-arrow-small-left:before {
+  content: ""; }
+
+.icon-arrow-small-right:before {
+  content: ""; }
+
+.icon-arrow-small-top:before {
+  content: ""; }
+
+.icon-arrow-top:before {
+  content: ""; }
+
+.icon-art-studio:before {
+  content: ""; }
+
+.icon-association-house:before {
+  content: ""; }
+
+.icon-avatar:before {
+  content: ""; }
+
+.icon-bell-outline:before {
+  content: ""; }
+
+.icon-bell:before {
+  content: ""; }
+
+.icon-bicycle:before {
+  content: ""; }
+
+.icon-bus:before {
+  content: ""; }
+
+.icon-city-hall:before {
+  content: ""; }
+
+.icon-close-rounded:before {
+  content: ""; }
+
+.icon-close:before {
+  content: ""; }
+
+.icon-conservatoire:before {
+  content: ""; }
+
+.icon-cultural:before {
+  content: ""; }
+
+.icon-dailymotion:before {
+  content: ""; }
+
+.icon-dl:before {
+  content: ""; }
+
+.icon-facebook:before {
+  content: ""; }
+
+.icon-favorites-outline:before {
+  content: ""; }
+
+.icon-favorites:before {
+  content: ""; }
+
+.icon-file:before {
+  content: ""; }
+
+.icon-handicap-hearing-impair:before {
+  content: ""; }
+
+.icon-handicap-mobility:before {
+  content: ""; }
+
+.icon-handicap-visually-impaired:before {
+  content: ""; }
+
+.icon-instagram:before {
+  content: ""; }
+
+.icon-librairy:before {
+  content: ""; }
+
+.icon-link:before {
+  content: ""; }
+
+.icon-mail:before {
+  content: ""; }
+
+.icon-marker:before {
+  content: ""; }
+
+.icon-market:before {
+  content: ""; }
+
+.icon-museum:before {
+  content: ""; }
+
+.icon-nf:before {
+  content: ""; }
+
+.icon-park:before {
+  content: ""; }
+
+.icon-pause:before {
+  content: ""; }
+
+.icon-pdf:before {
+  content: ""; }
+
+.icon-play:before {
+  content: ""; }
+
+.icon-profile:before {
+  content: ""; }
+
+.icon-search:before {
+  content: ""; }
+
+.icon-subway:before {
+  content: ""; }
+
+.icon-swimming-pool:before {
+  content: ""; }
+
+.icon-text:before {
+  content: ""; }
+
+.icon-twitter:before {
+  content: ""; }
+
 .hidden-accessibly {
   position: absolute !important;
   height: 1px;
@@ -5044,7 +5200,7 @@ body.rheader-mobile-nav-open {
   color: #CCC;
   display: inline-block;
   text-decoration: none; }
-  .share a:hover, .share a:focus {
+  .share a:hover {
     color: #666; }
 
 .share.circles .share-item + .share-item {
@@ -5062,7 +5218,7 @@ body.rheader-mobile-nav-open {
   -webkit-transition: all 0.1s ease;
           transition: all 0.1s ease;
   width: 40px; }
-  .share.circles a:hover, .share.circles a:focus {
+  .share.circles a:hover {
     background-color: #0A4770;
     border-color: #0A4770;
     color: #FFF; }
@@ -5076,7 +5232,7 @@ body.rheader-mobile-nav-open {
 .component-text .share .share-item a {
   color: #CCC;
   text-decoration: none; }
-  .component-text .share .share-item a:hover, .component-text .share .share-item a:focus {
+  .component-text .share .share-item a:hover {
     color: #666; }
 
 @media (min-width: 1160px) {
