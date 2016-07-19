@@ -88,6 +88,6 @@ $icons: (
   @include icon-font;
 }
 
-@each $name in $icons {
-  .icon-#{$name}:before {content: map-get($icons, $name);}
+@each $name, $content in $icons {
+  .icon-#{$name}:before {content: $content;}
 }

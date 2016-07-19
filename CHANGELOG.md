@@ -9,6 +9,8 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* fix `icons` (broken by 1.4.1)
+
 ## 1.4.1 (2016-07-19)
 
 * `icons`: updated Sass syntax to use mixin instead of @extend (for compatibility)
