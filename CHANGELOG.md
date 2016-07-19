@@ -9,6 +9,8 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+* module `sections-list`: add colors and fix alignment
+
 ## 1.4.0 (2016-06-15)
 
 * added module `block-content-tweet`
