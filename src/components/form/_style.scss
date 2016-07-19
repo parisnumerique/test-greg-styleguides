@@ -36,8 +36,7 @@
   .form-item .form-item-label,
   .form-item-matrix .matrix-item .matrix-item-text {
     &:after {
-      @extend %icon-font;
-      @extend %icon-alert;
+      @include icon(alert);
       color: $color-primary;
       margin-left: 5px;
       opacity: 0;

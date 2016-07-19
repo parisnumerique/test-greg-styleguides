@@ -101,8 +101,7 @@
       transition: left 0.35s ease;
 
       &:after {
-        @extend %icon-font;
-        @extend %icon-arrow-light-right;
+        @include icon(arrow-light-right);
         font-size: 17px;
         padding-left: 8px;
         speak: none;

@@ -9,8 +9,7 @@
   width: 100%;
 
   &:after {
-    @extend %icon-font;
-    @extend %icon-search;
+    @include icon(search);
     bottom: -38px;
     font-size: 13em;
     opacity: 0.16;

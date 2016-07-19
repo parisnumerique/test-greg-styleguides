@@ -41,8 +41,7 @@
     }
 
     &:before {
-      @extend %icon-font;
-      @extend %icon-link;
+      @include icon(link);
       float: left;
       font-size: 1.5em;
       padding: 13px 20px 0 0;
@@ -51,10 +50,10 @@
 
     // modifiers
     &.links-item-pdf:before {
-      @extend %icon-pdf;
+      @include icon(pdf);
     }
     &.links-item-file:before {
-      @extend %icon-dl;
+      @include icon(dl);
     }
 
     &.links-primary {

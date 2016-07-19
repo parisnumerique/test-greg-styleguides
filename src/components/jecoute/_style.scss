@@ -138,9 +138,7 @@
           line-height: 25px;
 
           &:before {
-            @extend %icon-font;
-            @extend %icon-text;
-
+            @include icon(text);
             float: left;
             font-size: 1.3em;
             line-height: inherit;

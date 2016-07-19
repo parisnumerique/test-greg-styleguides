@@ -11,6 +11,7 @@ Let's take the `x.β.α` version number:
 
 ## 1.4.1 (2016-07-19)
 
+* `icons`: updated Sass syntax to use mixin instead of @extend (for compatibility)
 * module `sections-list`: add colors and fix alignment
 
 ## 1.4.0 (2016-06-15)

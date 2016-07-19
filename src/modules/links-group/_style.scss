@@ -108,8 +108,7 @@
   font-size: 18px;
 
   &:before {
-    @extend %icon-font;
-    @extend %icon-arrow-right;
+    @include icon(arrow-right);
   }
 }
 

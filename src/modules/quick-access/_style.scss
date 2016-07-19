@@ -231,8 +231,7 @@
 
   .quick-access-close-search {
     &:before {
-      @extend %icon-font;
-      @extend %icon-close;
+      @include icon(close);
       font-size: 1.07em;
       height: 50px;
       left: -8px;

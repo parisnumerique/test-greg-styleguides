@@ -72,8 +72,7 @@ $sections-panel-subnav-offset: 200px;
     }
 
     &:after {
-      @extend %icon-font;
-      @extend %icon-arrow-right;
+      @include icon(arrow-right);
       display: block;
       line-height: 20px;
       position: absolute;
@@ -255,8 +254,7 @@ $sections-panel-subnav-offset: 200px;
     top: 0;
     width: 30px;
     &:before {
-      @extend %icon-font;
-      @extend %icon-arrow-left;
+      @include icon(arrow-left);
     }
     &:hover {color: $black;}
     .accessibility_label {

@@ -17,8 +17,7 @@
   margin-right: 10px;
 
   & + .breadcrumbs-item:before {
-    @extend %icon-font;
-    @extend %icon-arrow-light-right;
+    @include icon(arrow-light-right);
     font-size: 17px;
     margin-right: 10px;
     position: relative;

@@ -22,8 +22,7 @@
 
   .close {
     &:before {
-      @extend %icon-font;
-      @extend %icon-close-rounded;
+      @include icon(close-rounded);
       border: 2px solid;
       border-radius: 50%;
       font-size: 1.8em;
@@ -48,8 +47,7 @@
 
   &.alert {
     .notice-content:before {
-      @extend %icon-font;
-      @extend %icon-alert;
+      @include icon(alert);
       font-size: 1.8em;
       padding: 0 15px 2px 0;
       vertical-align: middle;

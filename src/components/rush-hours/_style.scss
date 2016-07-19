@@ -103,8 +103,7 @@
   vertical-align: middle;
 
   &:before {
-    @extend %icon-font;
-    @extend %icon-avatar;
+    @include icon(avatar);
   }
 }
 
