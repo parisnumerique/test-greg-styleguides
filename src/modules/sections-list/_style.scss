@@ -4,19 +4,21 @@
 }
 
 .sections-list-button {
-  background-color: $grayF2;
   border: none;
   cursor: pointer;
   display: block;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 7px 20px 12px;
+  padding: 8px 20px 8px;
   position: relative;
   text-align: left;
   text-decoration: none;
   vertical-align: middle;
   white-space: normal;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   /* modifier "more" */
   &.more {
@@ -36,7 +38,6 @@
   html.no-js &,
   html.no-touch & {
     &:before {
-      background: $red1;
       bottom: 0px;
       content: "";
       display: block;
@@ -50,16 +51,109 @@
     }
 
     &:hover {
-      .sections-list-button-title,
-      .sections-list-button-text {
-        color: $grayF2;
-      }
+
       &:before {
         width: 100%;
       }
     }
   }
 
+}
+
+/* Home categories colors */
+.sections-list-item {
+
+  .sections-list-button {
+    background-color: transparentize($home-cat-blue2, 0.3);
+
+    html.no-js &,
+    html.no-touch & {
+      &:before {
+        background-color: $home-cat-blue2;
+      }
+    }
+
+    .sections-list-button-text {
+      color: $gray4D;
+    }
+  }
+  
+  &:nth-child(1),
+  &:nth-child(7),
+  &:nth-child(10) {
+
+    .sections-list-button {
+      background-color: transparentize($home-cat-red, 0.3);
+
+      html.no-js &,
+      html.no-touch & {
+        &:before {
+          background-color: $home-cat-red;
+        }
+      }
+
+      .sections-list-button-text {
+        color: $white;
+      }
+
+    }
+  }  
+  
+  &:nth-child(2),
+  &:nth-child(11),
+  &:nth-child(13) {
+    
+    .sections-list-button {
+      background-color: transparentize($home-cat-blue1, 0.3);
+
+      html.no-js &,
+      html.no-touch & {
+        &:before {
+          background-color: $home-cat-blue1;
+        }
+      }
+
+      .sections-list-button-text {
+        color: $white;
+      }
+    }
+  }
+  
+  &:nth-child(3),
+  &:nth-child(9),
+  &:nth-child(15) {
+    
+    .sections-list-button {
+      background-color: transparentize($home-cat-green, 0.3);
+
+      html.no-js &,
+      html.no-touch & {
+        &:before {
+          background-color: $home-cat-green;
+        }
+      }
+
+      .sections-list-button-text {
+        color: $white;
+      }
+    }
+  }
+  
+  &:nth-child(5),
+  &:nth-child(8),
+  &:nth-child(14) {
+    
+    .sections-list-button {
+      background-color: transparentize($home-cat-yellow, 0.3);
+
+      html.no-js &,
+      html.no-touch & {
+        &:before {
+          background-color: $home-cat-yellow;
+        }
+      }
+    }
+  }
 }
 
 .sections-list-button-title,
@@ -69,14 +163,14 @@
 }
 
 .sections-list-button-title {
-  color: $color-secondary;
-  display: table-cell;
+  color: $gray33;
+  display: block;
   font-size: 15px;
   font-weight: 700;
-  height: 50px;
   line-height: 17px;
   vertical-align: middle;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .sections-list-button-text {
