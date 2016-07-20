@@ -58,7 +58,7 @@
     color: $gray4D;
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 22px;
+    line-height: 2.2rem;
     margin-bottom: 25px;
     max-width: 570px;
     position: relative;
@@ -71,7 +71,7 @@
     p {
       color: $gray4D;
       font-size: 1.5rem;
-      line-height: 22px;
+      line-height: 2.2rem;
 
       a:not(.button) {
         color: $color-secondary;
@@ -135,7 +135,7 @@
           color: $gray33;
           display: block;
           font-size: 1.6rem;
-          line-height: 25px;
+          line-height: 2.5rem;
 
           &:before {
             @include icon(text);

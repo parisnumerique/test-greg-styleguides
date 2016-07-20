@@ -13,7 +13,7 @@
       font-size: 1.4rem;
       font-weight: 500;
       height: 40px;
-      line-height: 40px;
+      line-height: 4rem;
     }
 
     .search-field-input[type="text"] {
@@ -35,7 +35,7 @@
   display: block;
   float: left;
   height: 60px;
-  line-height: 60px;
+  line-height: 6rem;
 }
 
 .search-field-input[type="text"] {
@@ -81,7 +81,7 @@
   .search-field-input[type="text"],
   .search-field-submit {
     height: 80px;
-    line-height: 80px;
+    line-height: 8rem;
   }
 
   .search-field-input[type="text"] {

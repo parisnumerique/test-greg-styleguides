@@ -37,7 +37,7 @@
     display: block;
     font-size: 1.6rem;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 2rem;
     outline: 0;
     padding: 20px 40px 20px 12px;
     text-decoration: none;
@@ -51,7 +51,7 @@
     color: $gray33;
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 2.4rem;
     padding-bottom: 12px;
 
     > :last-child {
@@ -73,7 +73,7 @@
     ul, ol {
       font-size: 1.6rem;
       font-weight: 300;
-      line-height: 24px;
+      line-height: 2.4rem;
       list-style-position: inside;
 
       li + li {

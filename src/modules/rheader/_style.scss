@@ -69,7 +69,7 @@
 .rheader-locales {
   display: none;
   font-size: 1.2rem;
-  line-height: 28px;
+  line-height: 2.8rem;
   padding: 0;
   text-align: left;
   text-transform: uppercase;
@@ -329,7 +329,7 @@ body.rheader-mobile-nav-open {
 
       a {
         display: block;
-        line-height: 50px;
+        line-height: 5rem;
         padding: 0 20px;
       }
 
@@ -341,7 +341,7 @@ body.rheader-mobile-nav-open {
         border-top: 0;
         text-align: center;
 
-        a {line-height: 80px;}
+        a {line-height: 8rem;}
       }
 
       &.around {
@@ -667,7 +667,7 @@ body.rheader-mobile-nav-open {
   }
 
   .rheader-locales {
-    line-height: 24px;
+    line-height: 2.4rem;
   }
 
   .rheader-nav-item {
