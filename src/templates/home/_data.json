@@ -182,72 +182,77 @@
                 {
                   "href": "../hub/subnav-open.html",
                   "title": "Aides & démarches",
-                  "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Culture & patrimoine",
-                  "text": "Sed posuere consectetur est at lobortis."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Déplacements & stationnement",
-                  "text": "Donec id elit non mi porta gravida at eget metus."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Emploi & formations",
-                  "text": "Sed posuere consectetur est at lobortis."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Environnement & espaces verts",
-                  "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Famille & éducation",
-                  "text": "Donec ullamcorper nulla non metus auctor fringilla."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Innovation",
-                  "text": "Cras mattis consectetur purus sit amet fermentum."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Logement",
-                  "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Santé",
-                  "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Social & solidarités",
-                  "text": "Maecenas sed diam eget risus varius blandit sit amet."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Sports & loisirs",
-                  "text": "Cras mattis consectetur purus sit amet fermentum."
-                },
-                {
-                  "href": "../hub/subnav-open.html",
-                  "title": "Urbanisme",
-                  "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+                  "text": "Etat civil, toutes les aides, services sociaux, médiateur, élections..."
                 },
                 {
                   "href": "../hub/subnav-open.html",
                   "title": "Associations",
-                  "text": "Sed posuere consectetur est at lobortis."
+                  "text": "Annuaire des associations, aides, bénévolat, Simpa..."
                 },
                 {
-                  "href": "../faq/",
-                  "text": "Vous cherchez autre chose&nbsp;?",
-                  "modifiers": ["more"]
+                  "href": "../hub/subnav-open.html",
+                  "title": "Culture & patrimoine",
+                  "text": "Musées, bibliothèques, conservatoires, archives, ateliers des beaux arts..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Déplacements & stationnement",
+                  "text": "Stationnement résidentiel, transports en commun, vélo, trafic, taxis..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Emploi & formations",
+                  "text": "Concours de la ville, formations, cours municipaux, aides à l'emploi..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Environnement & espaces verts",
+                  "text": "Parcs et jardins, déchets, propreté, lutte contre la pollution"
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Famille & éducation",
+                  "text": "Petite enfance, école, cantine, centres de loisirs, Facil' Familles..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Innovation et recherche",
+                  "text": "Applications, wi-fi, open data, startup..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Logement",
+                  "text": "Logement social, aides pour se loger, travaux, rénovation..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Prévention et sécurité",
+                  "text": "Lutte contre les incivilités, prévention des risques majeurs..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Santé",
+                  "text": "Centres de santé, PMI, hôpitaux, pharmacies de garde, dépistage, vaccinations..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Social & solidarités",
+                  "text": "Handicap, seniors, personnes en difficulté..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Sports & loisirs",
+                  "text": "Piscines, tennis, gymnases, centres d'animation"
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Travaux et aménagements",
+                  "text": "Aménagements, chantiers, voirie..."
+                },
+                {
+                  "href": "../hub/subnav-open.html",
+                  "title": "Urbanisme et architecture",
+                  "text": "Projets urbains, P.L.U., demandes d'autorisations..."
                 },
                 {
                   "href": "../hub/",

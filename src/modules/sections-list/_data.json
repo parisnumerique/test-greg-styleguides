@@ -81,6 +81,11 @@
             "href": "#",
             "title": "Urbanisme et architecture",
             "text": "Projets urbains, P.L.U., demandes d'autorisations..."
+          },
+          {
+            "href": "#",
+            "text": "Découvrez tous les services de la ville",
+            "modifiers": ["more", "only-on-small"]
           }
         ]
       }
