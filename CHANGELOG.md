@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.4.3 (2016-07-20)
+
+* module `sections-list`: improved rendering
+
 ## 1.4.2 (2016-07-19)
 
 * fix `icons` (broken by 1.4.1)

@@ -4658,7 +4658,7 @@ body.rheader-mobile-nav-open {
   display: block;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 8px 20px 8px;
+  padding: 8px 20px;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -4703,53 +4703,6 @@ body.rheader-mobile-nav-open {
   html.no-touch .sections-list-button:hover:before {
     width: 100%; }
 
-/* Home categories colors */
-.sections-list-item .sections-list-button {
-  background-color: rgba(215, 237, 242, 0.7); }
-  html.no-js .sections-list-item .sections-list-button:before,
-  html.no-touch .sections-list-item .sections-list-button:before {
-    background-color: #D7EDF2; }
-  .sections-list-item .sections-list-button .sections-list-button-text {
-    color: #4D4D4D; }
-
-.sections-list-item:nth-child(1) .sections-list-button, .sections-list-item:nth-child(7) .sections-list-button, .sections-list-item:nth-child(10) .sections-list-button {
-  background-color: rgba(233, 87, 86, 0.7); }
-  html.no-js .sections-list-item:nth-child(1) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(1) .sections-list-button:before, html.no-js .sections-list-item:nth-child(7) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(7) .sections-list-button:before, html.no-js .sections-list-item:nth-child(10) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(10) .sections-list-button:before {
-    background-color: #E95756; }
-  .sections-list-item:nth-child(1) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(7) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(10) .sections-list-button .sections-list-button-text {
-    color: #FFF; }
-
-.sections-list-item:nth-child(2) .sections-list-button, .sections-list-item:nth-child(11) .sections-list-button, .sections-list-item:nth-child(13) .sections-list-button {
-  background-color: rgba(62, 194, 222, 0.7); }
-  html.no-js .sections-list-item:nth-child(2) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(2) .sections-list-button:before, html.no-js .sections-list-item:nth-child(11) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(11) .sections-list-button:before, html.no-js .sections-list-item:nth-child(13) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(13) .sections-list-button:before {
-    background-color: #3EC2DE; }
-  .sections-list-item:nth-child(2) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(11) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(13) .sections-list-button .sections-list-button-text {
-    color: #FFF; }
-
-.sections-list-item:nth-child(3) .sections-list-button, .sections-list-item:nth-child(9) .sections-list-button, .sections-list-item:nth-child(15) .sections-list-button {
-  background-color: rgba(66, 167, 105, 0.7); }
-  html.no-js .sections-list-item:nth-child(3) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(3) .sections-list-button:before, html.no-js .sections-list-item:nth-child(9) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(9) .sections-list-button:before, html.no-js .sections-list-item:nth-child(15) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(15) .sections-list-button:before {
-    background-color: #42A769; }
-  .sections-list-item:nth-child(3) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(9) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(15) .sections-list-button .sections-list-button-text {
-    color: #FFF; }
-
-.sections-list-item:nth-child(5) .sections-list-button, .sections-list-item:nth-child(8) .sections-list-button, .sections-list-item:nth-child(14) .sections-list-button {
-  background-color: rgba(248, 194, 67, 0.7); }
-  html.no-js .sections-list-item:nth-child(5) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(5) .sections-list-button:before, html.no-js .sections-list-item:nth-child(8) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(8) .sections-list-button:before, html.no-js .sections-list-item:nth-child(14) .sections-list-button:before,
-  html.no-touch .sections-list-item:nth-child(14) .sections-list-button:before {
-    background-color: #F8C243; }
-
 .sections-list-button-title,
 .sections-list-button-text {
   -webkit-transition: 0.2s ease-in-out color;
@@ -4764,13 +4717,14 @@ body.rheader-mobile-nav-open {
   line-height: 17px;
   vertical-align: middle;
   width: 100%;
-  margin-bottom: 10px; }
+  margin-bottom: 5px; }
 
 .sections-list-button-text {
   color: #4D4D4D;
   font-size: 14px;
   font-weight: 300;
-  line-height: 18px; }
+  line-height: 18px;
+  min-height: 60px; }
 
 @media (min-width: 768px) {
   .sections-list {
@@ -4791,7 +4745,49 @@ body.rheader-mobile-nav-open {
         display: none; }
     html.no-js .sections-list-button:before,
     html.no-touch .sections-list-button:before {
-      border-radius: 5px; } }
+      border-radius: 5px; }
+  /* Home categories colors */
+  .sections-list-item .sections-list-button {
+    background-color: rgba(215, 237, 242, 0.7); }
+    html.no-js .sections-list-item .sections-list-button:before,
+    html.no-touch .sections-list-item .sections-list-button:before {
+      background-color: #D7EDF2; }
+    .sections-list-item .sections-list-button .sections-list-button-text {
+      color: #4D4D4D; }
+  .sections-list-item:nth-child(1) .sections-list-button, .sections-list-item:nth-child(7) .sections-list-button, .sections-list-item:nth-child(10) .sections-list-button {
+    background-color: rgba(233, 87, 86, 0.7); }
+    html.no-js .sections-list-item:nth-child(1) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(1) .sections-list-button:before, html.no-js .sections-list-item:nth-child(7) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(7) .sections-list-button:before, html.no-js .sections-list-item:nth-child(10) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(10) .sections-list-button:before {
+      background-color: #E95756; }
+    .sections-list-item:nth-child(1) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(7) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(10) .sections-list-button .sections-list-button-text {
+      color: #FFF; }
+  .sections-list-item:nth-child(2) .sections-list-button, .sections-list-item:nth-child(11) .sections-list-button, .sections-list-item:nth-child(13) .sections-list-button {
+    background-color: rgba(62, 194, 222, 0.7); }
+    html.no-js .sections-list-item:nth-child(2) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(2) .sections-list-button:before, html.no-js .sections-list-item:nth-child(11) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(11) .sections-list-button:before, html.no-js .sections-list-item:nth-child(13) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(13) .sections-list-button:before {
+      background-color: #3EC2DE; }
+    .sections-list-item:nth-child(2) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(11) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(13) .sections-list-button .sections-list-button-text {
+      color: #FFF; }
+  .sections-list-item:nth-child(3) .sections-list-button, .sections-list-item:nth-child(9) .sections-list-button, .sections-list-item:nth-child(15) .sections-list-button {
+    background-color: rgba(66, 167, 105, 0.7); }
+    html.no-js .sections-list-item:nth-child(3) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(3) .sections-list-button:before, html.no-js .sections-list-item:nth-child(9) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(9) .sections-list-button:before, html.no-js .sections-list-item:nth-child(15) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(15) .sections-list-button:before {
+      background-color: #42A769; }
+    .sections-list-item:nth-child(3) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(9) .sections-list-button .sections-list-button-text, .sections-list-item:nth-child(15) .sections-list-button .sections-list-button-text {
+      color: #FFF; }
+  .sections-list-item:nth-child(5) .sections-list-button, .sections-list-item:nth-child(8) .sections-list-button, .sections-list-item:nth-child(14) .sections-list-button {
+    background-color: rgba(248, 194, 67, 0.7); }
+    html.no-js .sections-list-item:nth-child(5) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(5) .sections-list-button:before, html.no-js .sections-list-item:nth-child(8) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(8) .sections-list-button:before, html.no-js .sections-list-item:nth-child(14) .sections-list-button:before,
+    html.no-touch .sections-list-item:nth-child(14) .sections-list-button:before {
+      background-color: #F8C243; } }
 
 @media (min-width: 1160px) {
   .sections-list-item {
