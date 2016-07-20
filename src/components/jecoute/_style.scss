@@ -42,7 +42,7 @@
 
     > h2 {
       color: $color-secondary;
-      font-size: 17px;
+      font-size: 1.7rem;
       font-weight: 500;
       margin: 0;
       padding: 0 16px;
@@ -56,7 +56,7 @@
 
   .jecoute-text {
     color: $gray4D;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 22px;
     margin-bottom: 25px;
@@ -70,7 +70,7 @@
 
     p {
       color: $gray4D;
-      font-size: 15px;
+      font-size: 1.5rem;
       line-height: 22px;
 
       a:not(.button) {
@@ -134,7 +134,7 @@
         .output-item {
           color: $gray33;
           display: block;
-          font-size: 16px;
+          font-size: 1.6rem;
           line-height: 25px;
 
           &:before {
@@ -148,7 +148,7 @@
 
           i {
             color: $gray66;
-            font-size: 14px;
+            font-size: 1.4rem;
             margin-left: 10px;
           }
 

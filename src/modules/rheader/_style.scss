@@ -68,7 +68,7 @@
 
 .rheader-locales {
   display: none;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 28px;
   padding: 0;
   text-align: left;
@@ -109,7 +109,7 @@
 .rheader-button-text {display: none;}
 
 .rheader-button-search {
-  font-size: 20px;
+  font-size: 2rem;
   left: 0;
 }
 
@@ -182,7 +182,7 @@ body.rheader-mobile-nav-open {
   transition: background-color 0.3s ease;
 
   a {
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 500;
     text-transform: uppercase;
 
@@ -238,7 +238,7 @@ body.rheader-mobile-nav-open {
 .rheader-nav-item-icon,
 .rheader-button-icon {
   display: inline-block;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .rheader-mobile-nav {
@@ -488,7 +488,7 @@ body.rheader-mobile-nav-open {
     > .rheader-button {
       border-right: 1px solid $red2;
       display: inline-block;
-      font-size: 26px;
+      font-size: 2.6rem;
       height: $rheader-height-large;
       line-height: $rheader-height-large;
       position: static;
@@ -496,7 +496,7 @@ body.rheader-mobile-nav-open {
       vertical-align: top;
       width: $rheader-height-large + 1px;
 
-      .rheader-button-icon {font-size: 28px;}
+      .rheader-button-icon {font-size: 2.8rem;}
     }
 
     > .rheader-button-menu {display: none;}

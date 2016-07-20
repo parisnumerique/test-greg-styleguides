@@ -28,7 +28,7 @@ $municipal-team-breakpoint: 905px;
 }
 
 .municipal-team-intro {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 22px;
   vertical-align: top;
@@ -40,7 +40,7 @@ $municipal-team-breakpoint: 905px;
 }
 
 .municipal-team-text {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 22px;
 
   @media (min-width: $municipal-team-breakpoint) {
@@ -57,11 +57,11 @@ $municipal-team-breakpoint: 905px;
 
 @include large-and-medium {
   .municipal-team-intro {
-    font-size: 22px;
+    font-size: 2.2rem;
     line-height: 26px;
   }
   .municipal-team-text {
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 24px;
   }
 }
