@@ -9,7 +9,7 @@
   display: block;
   margin-bottom: 20px;
   overflow: hidden;
-  padding: 8px 20px 8px;
+  padding: 8px 20px;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -170,7 +170,7 @@
   line-height: 17px;
   vertical-align: middle;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .sections-list-button-text {
@@ -178,6 +178,7 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 18px;
+  min-height: 60px;
 }
 
 @include large-and-medium {
