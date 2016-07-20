@@ -10,72 +10,82 @@
           {
             "href": "#",
             "title": "Aides & démarches",
-            "text": "Nullam id dolor id nibh ultricies vehicula ut id elit."
-          },
-          {
-            "href": "#",
-            "title": "Culture & patrimoine",
-            "text": "Sed posuere consectetur est at lobortis."
-          },
-          {
-            "href": "#",
-            "title": "Déplacements & stationnement",
-            "text": "Donec id elit non mi porta gravida at eget metus."
-          },
-          {
-            "href": "#",
-            "title": "Emploi & formations",
-            "text": "Sed posuere consectetur est at lobortis."
-          },
-          {
-            "href": "#",
-            "title": "Environnement & espaces verts",
-            "text": "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-          },
-          {
-            "href": "#",
-            "title": "Famille & éducation",
-            "text": "Donec ullamcorper nulla non metus auctor fringilla."
-          },
-          {
-            "href": "#",
-            "title": "Innovation",
-            "text": "Cras mattis consectetur purus sit amet fermentum."
-          },
-          {
-            "href": "#",
-            "title": "Logement",
-            "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
-          },
-          {
-            "href": "#",
-            "title": "Santé",
-            "text": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          },
-          {
-            "href": "#",
-            "title": "Social & solidarités",
-            "text": "Maecenas sed diam eget risus varius blandit sit amet."
-          },
-          {
-            "href": "#",
-            "title": "Sports & loisirs",
-            "text": "Cras mattis consectetur purus sit amet fermentum."
-          },
-          {
-            "href": "#",
-            "title": "Urbanisme",
-            "text": "Nullam quis risus eget urna mollis ornare vel eu leo."
+            "text": "Etat civil, toutes les aides, services sociaux, médiateur, élections..."
           },
           {
             "href": "#",
             "title": "Associations",
-            "text": "Sed posuere consectetur est at lobortis."
+            "text": "Annuaire des associations, aides, bénévolat, Simpa..."
           },
           {
             "href": "#",
-            "text": "Vous cherchez autre chose&nbsp;?",
-            "modifiers": ["more"]
+            "title": "Culture & patrimoine",
+            "text": "Musées, bibliothèques, conservatoires, archives, ateliers des beaux arts..."
+          },
+          {
+            "href": "#",
+            "title": "Déplacements & stationnement",
+            "text": "Stationnement résidentiel, transports en commun, vélo, trafic, taxis..."
+          },
+          {
+            "href": "#",
+            "title": "Emploi & formations",
+            "text": "Concours de la ville, formations, cours municipaux, aides à l'emploi..."
+          },
+          {
+            "href": "#",
+            "title": "Environnement & espaces verts",
+            "text": "Parcs et jardins, déchets, propreté, lutte contre la pollution"
+          },
+          {
+            "href": "#",
+            "title": "Famille & éducation",
+            "text": "Petite enfance, école, cantine, centres de loisirs, Facil' Familles..."
+          },
+          {
+            "href": "#",
+            "title": "Innovation et recherche",
+            "text": "Applications, wi-fi, open data, startup..."
+          },
+          {
+            "href": "#",
+            "title": "Logement",
+            "text": "Logement social, aides pour se loger, travaux, rénovation..."
+          },
+          {
+            "href": "#",
+            "title": "Prévention et sécurité",
+            "text": "Lutte contre les incivilités, prévention des risques majeurs..."
+          },
+          {
+            "href": "#",
+            "title": "Santé",
+            "text": "Centres de santé, PMI, hôpitaux, pharmacies de garde, dépistage, vaccinations..."
+          },
+          {
+            "href": "#",
+            "title": "Social & solidarités",
+            "text": "Handicap, seniors, personnes en difficulté..."
+          },
+          {
+            "href": "#",
+            "title": "Sports & loisirs",
+            "text": "Piscines, tennis, gymnases, centres d'animation"
+          },
+          {
+            "href": "#",
+            "title": "Travaux et aménagements",
+            "text": "Aménagements, chantiers, voirie..."
+          },
+          {
+            "href": "#",
+            "title": "Urbanisme et architecture",
+            "text": "Projets urbains, P.L.U., demandes d'autorisations..."
+          },
+          {
+            "href": "#",
+            "text": "Découvrez tous les services de la ville",
+            "modifiers": ["more", "only-on-small"]
           }
         ]
       }

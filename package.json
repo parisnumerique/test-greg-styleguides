@@ -1,6 +1,6 @@
 {
   "name": "paris-styleguide",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Paris Living Style Guide",
   "author": "Hans Lemuet <hans@etaminstudio.com>",
   "contributors": [
@@ -15,6 +15,9 @@
     },
     {
       "name": "Jonathan Loss"
+    },
+    {
+      "name": "Julie Arrigoni"
     },
     {
       "name": "Julien Verkest"
