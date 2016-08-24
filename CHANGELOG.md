@@ -9,6 +9,10 @@ Let's take the `x.β.α` version number:
 
 ## x.β.α (coming soon)
 
+## 1.4.4 (2016-08-24)
+
+* accessibility: use `rem` instead of `px` for font units
+
 ## 1.4.3 (2016-07-20)
 
 * module `sections-list`: improved rendering
