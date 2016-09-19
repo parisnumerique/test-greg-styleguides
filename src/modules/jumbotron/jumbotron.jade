@@ -8,9 +8,8 @@ mixin jumbotron(data)
         #{tag}.jumbotron-title= data.title
         .jumbotron-text= data.text
         if data.button
-          .jumbotron-button
-            - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
-            +button(button)
+          - var button = JSON.parse(JSON.stringify(data.button)) // clone the data object
+          +button(button)
         if block
           .jumbotron-block
             block
