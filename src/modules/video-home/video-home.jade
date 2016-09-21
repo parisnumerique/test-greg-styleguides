@@ -4,6 +4,6 @@ mixin video-home(data)
       li.video-home-list-item(class=item.modifiers)
         a.video-home-item(href=item.href)
           .video-home-wrapper
-            img.video-home-image(src='url(#{item.image});')
+            img.video-home-image(src=item.image)
             .video-home-content
-              .video-home-title= item.title
+              .video-home-title= item.text

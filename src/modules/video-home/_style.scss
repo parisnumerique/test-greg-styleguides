@@ -1,6 +1,7 @@
 .video-home{
   align-items: center;
   display: flex;
+  height: 100%;
   list-style: none;
   max-width: 1100px;
   margin-left: auto;
@@ -8,9 +9,26 @@
   overflow: hidden;
   padding: 25px;
 }
+.video-home-item{
+  text-decoration: none;
+}
+
+.video-home-wrapper {
+  position: relative;
+}
 
 .video-home-image{
-  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+.video-home-content{
+  text-align: left;
+  .video-home-title{
+    color: $white;
+    font-weight: 700;
+    margin-top: 15px;
+  }
 }
 
 @include large-and-medium {
@@ -26,11 +44,10 @@
           }
 
           .video-home-content {
-            bottom: 0;
-            padding: 20px;
-            position: absolute;
-            text-align: left;
-            z-index: 1;
+            .video-home-title{
+              font-size: 1.7rem;
+              line-height: 1.9rem;
+            }
           }
         }
       }
@@ -45,11 +62,12 @@
             }
 
             .video-home-content {
-              bottom: 0;
-              padding: 20px;
-              position: absolute;
               text-align: left;
-              z-index: 1;
+              .video-home-title{
+                font-size: 2.2rem;
+                line-height: 2.4rem;
+                max-width: 350px;
+              }
             }
           }
         }
