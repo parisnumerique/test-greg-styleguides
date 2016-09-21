@@ -1,0 +1,12 @@
+{
+  "index": {
+    "type": "video-home",
+    "description": "",
+    "examples": [{
+      "title": "3 actualités",
+      "description": "",
+      "data": {
+      }
+    }]
+  }
+}
