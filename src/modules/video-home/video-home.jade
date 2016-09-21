@@ -1,2 +1,9 @@
 mixin video-home(data)
-  h2 HELLO
+  ul.video-home(class=data.modifiers)
+    each item in data.items
+      li.video-home-list-item(class=item.modifiers)
+        a.video-home-item(href=item.href)
+          .video-home-wrapper
+            img.video-home-image(src='url(#{item.image});')
+            .video-home-content
+              .video-home-title= item.title
