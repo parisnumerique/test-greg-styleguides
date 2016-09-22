@@ -29,9 +29,12 @@
 
 .video-home-content{
   text-align: left;
-  .video-home-title{
+  .video-home-title, .video-home-duration{
     color: $white;
     font-weight: 700;
+  }  
+  .video-home-duration{
+    margin-top:5px;
   }
 }
 
@@ -51,6 +54,11 @@
             .video-home-title{
               font-size: 1.7rem;
               line-height: 1.9rem;
+            }
+            .video-home-duration{
+              font-weight: 500;
+              font-size: 1.1rem;
+              letter-spacing: 0.15rem;
             }
           }
         }
@@ -72,12 +80,17 @@
                 line-height: 2.4rem;
                 max-width: 350px;
               }
+              .video-home-duration{
+                font-weight: 500;
+                font-size: 1.4rem;
+                letter-spacing: 0.15rem;
+              }
             }
           }
         }
 
-        &:last-child{
-          margin-right: 0;
-        }
-    }
+      &:last-child{
+        margin-right: 0;
+      }
+  }
 }
