@@ -64,8 +64,9 @@
   position: absolute;
   width: 25px;
 }
-.rheader-logo-nef-svg path {
-  fill: $color-secondary;
+.rheader-logo-nef-svg {
+  width: 100%;
+  path {fill: $color-secondary;}
 }
 
 .rheader-logo-paris {

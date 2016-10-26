@@ -46,11 +46,7 @@
   }
 
   .rheader-logo-mairie {
-    background: $white center center no-repeat;
-    border-bottom: 10px solid;
-    height: 120px;
-    left: 230px;
-    position: absolute;
+    left: 250px;
     width: 160px;
   }
 
@@ -63,7 +59,7 @@
       &:after {
         bottom: 5px;
         height: auto;
-        left: 210px;
+        left: 220px;
         top: 5px;
       }
     }
@@ -79,36 +75,10 @@
       left: 40px;
     }
 
-    &.logo-square {
-      .rheader-logo-mairie {
-        background-size: 75%;
-        height: 135px;
-        width: 125px;
-      }
-    }
-
     &.logo-rectangle {
       .rheader-logo-mairie {
-        background-size: 80%;
-        height: 100px;
         width: 170px;
       }
-    }
-
-    &.arrondissement-9 .rheader-logo-mairie {
-      background-size: 100%;
-      height: 110px;
-      width: 170px;
-    }
-    &.arrondissement-13 .rheader-logo-mairie {
-      background-size: 100%;
-      height: 110px;
-      width: 134px;
-    }
-    &.arrondissement-20 .rheader-logo-mairie {
-      background-size: 100%;
-      height: 110px;
-      width: 140px;
     }
   }
 

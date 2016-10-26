@@ -10,6 +10,41 @@
   .rheader-logo-nef {width: 40px;}
   .rheader-logo-paris {width: 170px;}
 
+  .rheader-logo-mairie {
+    background: $white center center no-repeat;
+    border-bottom: 10px solid;
+    height: 90px;
+    left: 210px;
+    position: absolute;
+    width: 160px;
+  }
+
+  .rheader.arrondissement {
+    .rheader-logo {width: 300px;}
+    .rheader-logo-nef {width: 30px;}
+    .rheader-logo-paris {
+      left: 50px;
+      right: auto;
+      width: 140px;
+    }
+
+    &.logo-square {
+      .rheader-logo-mairie {
+        background-size: 75%;
+        height: 90px;
+        width: 125px;
+      }
+    }
+
+    &.logo-rectangle {
+      .rheader-logo-mairie {
+        background-size: 80%;
+        height: 90px;
+        width: 160px;
+      }
+    }
+  }
+
   .rheader-wrapper {
     > .rheader-button {
       height: $rheader-height-medium;
