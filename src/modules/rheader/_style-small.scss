@@ -1,0 +1,22 @@
+@media (max-width: $rheader-small-max) {
+  .rheader {
+    transition: transform 0.2s ease;
+
+    .rheader-logo {
+      transition: opacity 0.2s ease;
+    }
+
+    &.folded {
+      transition-delay: 0.5s;
+      transform: translateY(-$rheader-height-small + 8px);
+      .rheader-logo {
+        opacity: 0;
+        transition-delay: 0.5s;
+      }
+
+      .rheader-button {
+        pointer-events: none;
+      }
+    }
+  }
+}

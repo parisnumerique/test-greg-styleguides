@@ -1,0 +1,201 @@
+@media (min-width: $rheader-large-min) {
+  .rheader {
+    overflow: hidden;
+    text-align: right;
+
+    &.extended {
+      &,
+      .rheader-nav-item {
+        height: $rheader-height-large-extended;
+      }
+
+      .rheader-logo {
+        height: $rheader-height-large + 9px;
+      }
+
+      .rheader-logo,
+      .rheader-locales {
+        transform: translateY(10px);
+      }
+
+      .rheader-nav-item a {
+        height: $rheader-height-large-extended;
+        line-height: $rheader-height-large-extended;
+      }
+
+      .rheader-wrapper > .rheader-button {
+        border-left: 1px solid transparent;
+        transform: translateY($rheader-height-large-extended);
+      }
+    }
+  }
+
+  .rheader,
+  .rheader-logo {
+    height: $rheader-height-large;
+    transition: height 0.2s ease;
+  }
+
+  .rheader-nav-item {
+    height: $rheader-height-large;
+    transition: background-color 0.3s ease, height 0.2s ease;
+  }
+
+  .rheader-logo,
+  .rheader-locales {
+    transition: transform 0.2s ease;
+  }
+
+  .rheader-logo {
+    left: 15px;
+    position: absolute;
+    width: 185px;
+  }
+  .rheader-logo-nef {
+    width: 33px;
+  }
+  .rheader-logo-paris {
+    width: 140px;
+  }
+
+  .rheader-locales {
+    display: block;
+    left: 60px;
+    position: absolute;
+    top: 0;
+    width: 140px;
+  }
+
+  .rheader-wrapper {
+    > .rheader-button {
+      border-right: 1px solid $red2;
+      display: inline-block;
+      font-size: 2.6rem;
+      height: $rheader-height-large;
+      line-height: $rheader-height-large;
+      position: static;
+      transition: background-color 0.3s ease, transform 0.4s ease, border 0.4s ease 0.2s;
+      vertical-align: top;
+      width: $rheader-height-large + 1px;
+
+      .rheader-button-icon {font-size: 2.8rem;}
+    }
+
+    > .rheader-button-menu {display: none;}
+    > .rheader-button-search {
+      border-left: 1px solid $red2;
+    }
+  }
+
+  .rheader-nav {
+    display: inline-block;
+    padding: 0 0 0 25px;
+    vertical-align: top;
+
+    > ul {display: inline-block;}
+  }
+
+  .rheader-nav-item {
+    display: inline-block;
+    vertical-align: top;
+
+    & + .rheader-nav-item {
+      margin-left: 20px;
+    }
+
+    a {
+      display: inline-block;
+      height: $rheader-height-large;
+      line-height: $rheader-height-large;
+      transition: height 0.2s ease, line-height 0.2s ease;
+    }
+
+    // modifiers
+    &.get-involved {
+      margin-left: 22px;
+      perspective: 1000px;
+
+      &:hover a,
+      & a:focus,
+      &.current a {
+        background-color: $color-tertiary;
+      }
+
+      a {
+        padding: 0 20px;
+        position: relative;
+        transition: background-color 0.3s ease;
+        width: 140px;
+      }
+
+      .rheader-nav-item-front,
+      .rheader-nav-item-back {
+        backface-visibility: hidden;
+        display: inline-block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        transition: transform 0.5s ease;
+        vertical-align: top;
+      }
+
+      .rheader-nav-item-front,
+      &:hover .rheader-nav-item-back,
+      & a:focus .rheader-nav-item-back,
+      &.current .rheader-nav-item-back {
+        transform: rotateY(0deg);
+      }
+      .rheader-nav-item-back,
+      &:hover .rheader-nav-item-front,
+      & a:focus .rheader-nav-item-front,
+      &.current .rheader-nav-item-front {
+        transform: rotateY(180deg);
+      }
+    }
+
+    &.account {
+      margin-left: 0;
+      a {padding: 0 20px;}
+
+      .rheader-nav-item-text {display: none;}
+      .rheader-nav-item-text:after {display: none;}
+      .rheader-nav-item-icon {margin-right: 0;}
+    }
+  }
+
+  .rheader-nav-item-icon {
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+    vertical-align: baseline;
+  }
+
+  html.no-js,
+  html.no-touch {
+    .rheader-nav-item-text {
+      position: relative;
+
+      &:after {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0%;
+        position: absolute;
+        left: 0px;
+        bottom: -4px;
+        background-color: $white;
+        transition: width 0.3s ease;
+      }
+    }
+
+    .rheader-nav-item.current .rheader-nav-item-text:after,
+    .rheader-nav-item:hover .rheader-nav-item-text:after {
+      width: 100%;
+    }
+
+    .rheader-nav-item {
+
+    }
+  }
+}

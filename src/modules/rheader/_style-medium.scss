@@ -1,0 +1,44 @@
+@media (min-width: $rheader-medium-min) and (max-width: $rheader-medium-max) {
+  .rheader,
+  .rheader-logo {
+    height: $rheader-height-medium;
+  }
+
+  .rheader-logo {
+    width: 238px;
+  }
+  .rheader-logo-nef {width: 40px;}
+  .rheader-logo-paris {width: 170px;}
+
+  .rheader-wrapper {
+    > .rheader-button {
+      height: $rheader-height-medium;
+      line-height: $rheader-height-medium;
+      width: $rheader-height-medium + 1px;
+    }
+  }
+  .rheader-button-search {
+    border-right: 1px solid $red2;
+  }
+  .rheader-button-menu {
+    border-left: 1px solid $red2;
+    transition: border 0.2s;
+
+    .rheader-button-text {
+      left: ($rheader-height-medium - 20px) / 2;
+      top: $rheader-height-medium / 2;
+    }
+  }
+
+  .rheader-nav {
+    display: none;
+  }
+
+  .rheader-mobile-nav {
+    .rheader-nav {top: $rheader-height-medium;}
+    .rheader-locales {
+      line-height: $rheader-height-medium;
+      margin-right: $rheader-height-medium + 10px;
+    }
+  }
+}

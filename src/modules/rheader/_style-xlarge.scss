@@ -1,0 +1,65 @@
+@media (min-width: $rheader-large-max) {
+
+  .rheader.extended {
+    .rheader-logo {
+      height: $rheader-height-large;
+    }
+  }
+
+  $rheader-nef-border-offset: 68px;
+  $rheader-logo-width: 285px;
+  $rheader-logo-paris-width: 180px;
+  $rheader-logo-offset: $large-grid-width / 2 + $offset-heading + $rheader-nef-border-offset;
+  $rheader-locales-offset: $rheader-logo-offset - $rheader-logo-width + $rheader-logo-paris-width;
+
+  .rheader-logo {
+    border-bottom: 0;
+    left: 30px; /* fallback for browsers not supporting calc */
+    left: calc(50% - #{$rheader-logo-offset});
+    width: $rheader-logo-width;
+  }
+
+  .rheader-logo-nef {
+    width: 42px;
+
+    .rheader.arrondissement & {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      background-color: $color-tertiary;
+      content: "";
+      display: block;
+      height: 100%;
+      left: $rheader-nef-border-offset;
+      position: absolute;
+      top: 0;
+      width: 6px;
+    }
+  }
+
+  .rheader-logo-paris {
+    width: $rheader-logo-paris-width;
+  }
+
+  .rheader-locales {
+    left: 134px; /* fallback for browsers not supporting calc */
+    left: calc(50% - #{$rheader-locales-offset});
+    width: $rheader-logo-paris-width;
+  }
+
+  .rheader-locales {
+    line-height: 2.4rem;
+  }
+
+  .rheader-nav-item {
+
+    &.account {
+      .rheader-nav-item-text {display: inline;}
+      .rheader-nav-item-icon {margin-right: 5px;}
+    }
+  }
+
+}
