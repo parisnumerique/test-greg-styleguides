@@ -280,6 +280,12 @@ body.rheader-mobile-nav-open {
   padding-top: $rheader-height-small;
 }
 
+.rheader.arrondissement {
+  .rheader-logo {
+    overflow: visible;
+  }
+}
+
 @import "_style-small";
 @import "_style-small-medium";
 @import "_style-medium";

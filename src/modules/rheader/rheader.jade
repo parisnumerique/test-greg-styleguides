@@ -11,13 +11,13 @@ mixin rheader(data)
     - districtsConfig[2] =  {modifiers: ["green",      "text-white",  "logo-square"]}
     - districtsConfig[3] =  {modifiers: ["green",      "text-white"]}
     - districtsConfig[4] =  {modifiers: ["yellow",     "text-blue",   "logo-square"]}
-    - districtsConfig[5] =  {modifiers: ["dark-blue",  "text-white"]}
+    - districtsConfig[5] =  {modifiers: ["dark-blue",  "text-white",  "logo-rectangle"]}
     - districtsConfig[6] =  {modifiers: ["dark-blue",  "text-white",  "logo-square"]}
     - districtsConfig[7] =  {modifiers: ["light-blue", "text-red",    "logo-square"]}
     - districtsConfig[8] =  {modifiers: ["dark-blue",  "text-white",  "logo-square"]}
-    - districtsConfig[9] =  {modifiers: ["dark-blue",  "text-white"]}
-    - districtsConfig[10] = {modifiers: ["light-blue", "text-red"]}
-    - districtsConfig[11] = {modifiers: ["yellow",     "text-red"]}
+    - districtsConfig[9] =  {modifiers: ["dark-blue",  "text-white",  "logo-rectangle"]}
+    - districtsConfig[10] = {modifiers: ["light-blue", "text-red",    "logo-rectangle"]}
+    - districtsConfig[11] = {modifiers: ["yellow",     "text-red",    "logo-rectangle"]}
     - districtsConfig[12] = {modifiers: ["salmon",     "text-white",  "logo-square"]}
     - districtsConfig[13] = {modifiers: ["salmon",     "text-white"]}
     - districtsConfig[14] = {modifiers: ["light-blue", "text-red"]}
@@ -41,7 +41,7 @@ mixin rheader(data)
             include paris.svg
             .hidden-accessibly= data.logo.text
         if data.arrondissement
-          .rheader-logo-mairie: img(src="../../modules/rheader/images/mairie-#{data.arrondissement}.jpg")
+          .rheader-logo-mairie(style="background-image: url(../../modules/rheader/images/mairie-#{data.arrondissement}.jpg)")
       if data.locales
         ul.rheader-locales
           each locale in data.locales

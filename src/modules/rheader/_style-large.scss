@@ -30,6 +30,10 @@
     }
   }
 
+  .rheader.arrondissement {
+    overflow: visible;
+  }
+
   .rheader,
   .rheader-logo {
     height: $rheader-height-large;

@@ -22,12 +22,6 @@
   .rheader-logo-nef {
     width: 42px;
 
-    .rheader.arrondissement & {
-      &:after {
-        display: none;
-      }
-    }
-
     &:after {
       background-color: $color-tertiary;
       content: "";
@@ -47,11 +41,75 @@
   .rheader-locales {
     left: 134px; /* fallback for browsers not supporting calc */
     left: calc(50% - #{$rheader-locales-offset});
+    line-height: 2.4rem;
     width: $rheader-logo-paris-width;
   }
 
-  .rheader-locales {
-    line-height: 2.4rem;
+  .rheader-logo-mairie {
+    background: $white center center no-repeat;
+    border-bottom: 10px solid;
+    height: 120px;
+    left: 230px;
+    position: absolute;
+    width: 160px;
+  }
+
+  .rheader.arrondissement {
+    .rheader-logo {
+      left: 20px;
+    }
+
+    .rheader-logo-nef {
+      &:after {
+        bottom: 5px;
+        height: auto;
+        left: 210px;
+        top: 5px;
+      }
+    }
+
+    .rheader-logo-paris {
+      left: 65px;
+      right: auto;
+      width: 125px;
+    }
+
+    .rheader-locales {
+      text-align: right;
+      left: 40px;
+    }
+
+    &.logo-square {
+      .rheader-logo-mairie {
+        background-size: 75%;
+        height: 135px;
+        width: 125px;
+      }
+    }
+
+    &.logo-rectangle {
+      .rheader-logo-mairie {
+        background-size: 80%;
+        height: 100px;
+        width: 170px;
+      }
+    }
+
+    &.arrondissement-9 .rheader-logo-mairie {
+      background-size: 100%;
+      height: 110px;
+      width: 170px;
+    }
+    &.arrondissement-13 .rheader-logo-mairie {
+      background-size: 100%;
+      height: 110px;
+      width: 134px;
+    }
+    &.arrondissement-20 .rheader-logo-mairie {
+      background-size: 100%;
+      height: 110px;
+      width: 140px;
+    }
   }
 
   .rheader-nav-item {
