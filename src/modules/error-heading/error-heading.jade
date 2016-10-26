@@ -3,7 +3,7 @@ include ../../modules/button/button
 mixin error-heading(data)
   .error-heading(class=data.modifiers)
     .error-heading-wrapper.layout-wrapper(style= data.background ? "background-image: url(#{data.background})" : "")
-      a.error-heading-logo#logo(href=data.logo.href title=data.logo.title)
+      a.error-heading-logo(href=data.logo.href title=data.logo.title)
         .error-heading-logo-nef
         .error-heading-logo-paris= data.logo.text
       .error-heading-content

@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_mixins";
 
 .rheader {
   background-color: $color-primary;
@@ -6,6 +7,16 @@
   position: relative;
   width: 100%;
   z-index: 300;
+  // arrondissements modifiers
+  @include rheader-modifier-background-color('light-blue', $light-blue);
+  @include rheader-modifier-background-color('green', $green1);
+  @include rheader-modifier-background-color('yellow', $yellow1);
+  @include rheader-modifier-background-color('dark-blue', $color-secondary);
+  @include rheader-modifier-background-color('salmon', $salmon);
+
+  @include rheader-modifier-text-color('blue', $color-secondary);
+  @include rheader-modifier-text-color('white', $white);
+  @include rheader-modifier-text-color('red', $red3);
 
   &.fixed {
     left: 0;
@@ -46,24 +57,33 @@
 }
 
 .rheader-logo-nef {
-  background: url('../modules/rheader/nef.svg') center center no-repeat;
-  background-size: contain;
   display: block;
   height: 100%;
   left: 0;
+  padding: 22px 0;
   position: absolute;
   width: 25px;
 }
+.rheader-logo-nef-svg path {
+  fill: $color-secondary;
+}
 
 .rheader-logo-paris {
-  background: url('../modules/rheader/paris.svg') center center no-repeat;
-  background-size: contain;
   display: block;
   height: 100%;
   position: absolute;
   right: 0;
   text-indent: -9999px;
   width: 106px;
+}
+.rheader-logo-paris-svg {
+  display: block;
+  margin-top: 24px;
+  width: 100%;
+
+  path {
+    fill: $white;
+  }
 }
 
 .rheader-locales {
@@ -468,11 +488,9 @@ body.rheader-mobile-nav-open {
     width: 185px;
   }
   .rheader-logo-nef {
-    background-position: 50% 60%;
     width: 33px;
   }
   .rheader-logo-paris {
-    background-position: 50% 60%;
     width: 140px;
   }
 
@@ -602,7 +620,7 @@ body.rheader-mobile-nav-open {
         position: absolute;
         left: 0px;
         bottom: -4px;
-        background: $white;
+        background-color: $white;
         transition: width 0.3s ease;
       }
     }
@@ -641,8 +659,13 @@ body.rheader-mobile-nav-open {
   }
 
   .rheader-logo-nef {
-    background-position: 50% 54%;
     width: 42px;
+
+    .rheader.arrondissement & {
+      &:after {
+        display: none;
+      }
+    }
 
     &:after {
       background-color: $color-tertiary;
@@ -651,12 +674,12 @@ body.rheader-mobile-nav-open {
       height: 100%;
       left: $rheader-nef-border-offset;
       position: absolute;
+      top: 0;
       width: 6px;
     }
   }
 
   .rheader-logo-paris {
-    background-position: 50% 54%;
     width: $rheader-logo-paris-width;
   }
 

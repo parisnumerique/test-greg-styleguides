@@ -2,6 +2,7 @@ var gulp   = require('gulp');
 var config = require('../config');
 var path   = require('path');
 var rename = require('gulp-rename');
+var replace = require('gulp-replace');
 
 
 gulp.task('build:jade:copy', function () {
@@ -23,6 +24,11 @@ gulp.task('build:jade:copy', function () {
       '!src/layouts/_layout*.jade',
       'src/layouts/**/*.json'
     ], { base: './src/' })
+
+    // Fix path to included svg
+    .pipe(replace('include nef.svg', 'include ../../../assets/images/modules/rheader/nef.svg'))
+    .pipe(replace('include paris.svg', 'include ../../../assets/images/modules/rheader/paris.svg'))
+
     .pipe(gulp.dest(path.join(config.build.output, 'jade')));
 });
 

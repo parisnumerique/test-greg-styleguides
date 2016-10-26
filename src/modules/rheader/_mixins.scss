@@ -1,0 +1,55 @@
+@mixin rheader-modifier-background-color($name, $color) {
+  &.#{$name} {
+    &,
+    .rheader-logo,
+    .rheader-button-menu,
+    .rheader-mobile-nav {
+      background-color: $color;
+    }
+
+    .rheader-wrapper > .rheader-button,
+    .rheader-button-menu,
+    .rheader-button-search {
+      border-color: darken($color, 10%);
+    }
+
+    .rheader-wrapper > .rheader-button:hover,
+    .rheader-wrapper > .rheader-button.active {
+      background-color: darken($color, 10%);
+    }
+  }
+}
+
+@mixin rheader-modifier-text-color($name, $color) {
+  &.text-#{$name} {
+    a {color: $color;}
+
+    .rheader-logo-nef-svg,
+    .rheader-logo-paris-svg {
+      path {fill: $color;}
+    }
+
+    .rheader-locales a {
+      color: transparentize($color, 0.4);
+      strong {color: $color;}
+    }
+
+    .rheader-button-text {
+      &, &:before, &:after {background-color: $color;}
+    }
+
+    .rheader-nav-item.account a {color: $white;}
+  }
+
+  @media (min-width: $rheader-large-min) {
+    @at-root html.no-js, html.no-touch {
+      .rheader.text-#{$name} {
+        .rheader-nav-item:not(.get-involved) {
+          .rheader-nav-item-text:after {
+            background-color: $color;
+          }
+        }
+      }
+    }
+  }
+}

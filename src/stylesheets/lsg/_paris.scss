@@ -134,3 +134,8 @@ pre.prism[class*="language-"] {
     content: "html";
   }
 }
+
+// Prevent the rheader from being fixed
+.lsg-elem:not(.lsg-fixed-rheader) .rheader.fixed {
+  position: relative;
+}
