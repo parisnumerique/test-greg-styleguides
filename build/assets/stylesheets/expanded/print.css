@@ -277,7 +277,8 @@ a:visited {
 img, video {
   max-width: 100%; }
 
-#logo {
+.rheader-logo,
+.error-heading-logo {
   display: none; }
 
 .rheader .title {

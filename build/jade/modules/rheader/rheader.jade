@@ -1,14 +1,47 @@
 include ../quick-access/quick-access
 
 mixin rheader(data)
+  - data = JSON.parse(JSON.stringify(data)) // clone the data object
+  - data.modifiers = data.modifiers || []
+  if data.arrondissement
+    - data.modifiers.push("arrondissement")
+    - data.modifiers.push("arrondissement-" + data.arrondissement)
+    - var districtsConfig = {};
+    - districtsConfig[1] =  {modifiers: ["light-blue", "text-red",    "logo-square"]}
+    - districtsConfig[2] =  {modifiers: ["green",      "text-white",  "logo-square"]}
+    - districtsConfig[3] =  {modifiers: ["green",      "text-white"]}
+    - districtsConfig[4] =  {modifiers: ["yellow",     "text-blue",   "logo-square"]}
+    - districtsConfig[5] =  {modifiers: ["dark-blue",  "text-white",  "logo-rectangle"]}
+    - districtsConfig[6] =  {modifiers: ["dark-blue",  "text-white",  "logo-square"]}
+    - districtsConfig[7] =  {modifiers: ["light-blue", "text-red",    "logo-square"]}
+    - districtsConfig[8] =  {modifiers: ["dark-blue",  "text-white",  "logo-square"]}
+    - districtsConfig[9] =  {modifiers: ["dark-blue",  "text-white",  "logo-rectangle"]}
+    - districtsConfig[10] = {modifiers: ["light-blue", "text-red",    "logo-rectangle"]}
+    - districtsConfig[11] = {modifiers: ["yellow",     "text-red",    "logo-rectangle"]}
+    - districtsConfig[12] = {modifiers: ["salmon",     "text-white",  "logo-square"]}
+    - districtsConfig[13] = {modifiers: ["salmon",     "text-white"]}
+    - districtsConfig[14] = {modifiers: ["light-blue", "text-red"]}
+    - districtsConfig[15] = {modifiers: ["dark-blue",  "text-white",  "logo-square"]}
+    - districtsConfig[16] = {modifiers: ["dark-blue",  "text-white"]}
+    - districtsConfig[17] = {modifiers: ["light-blue", "text-blue"]}
+    - districtsConfig[18] = {modifiers: ["salmon",     "text-white",  "logo-square"]}
+    - districtsConfig[19] = {modifiers: ["light-blue", "text-blue",   "logo-square"]}
+    - districtsConfig[20] = {modifiers: ["salmon",     "text-white",  "logo-square"]}
+    - data.modifiers = data.modifiers.concat(districtsConfig[data.arrondissement].modifiers)
   header.rheader(class=data.modifiers role="banner")
     .rheader-wrapper
-      a.rheader-logo#logo(href=data.logo.href title=data.logo.title)
-        .rheader-logo-nef
+      a.rheader-logo(href=data.logo.href title=data.logo.title)
+        .rheader-logo-nef: include ../../../assets/images/modules/rheader/nef.svg
         if data.logo.h1
-          h1.rheader-logo-paris= data.logo.text
+          h1.rheader-logo-paris
+            include ../../../assets/images/modules/rheader/paris.svg
+            .hidden-accessibly= data.logo.text
         else
-          .rheader-logo-paris= data.logo.text
+          .rheader-logo-paris
+            include ../../../assets/images/modules/rheader/paris.svg
+            .hidden-accessibly= data.logo.text
+        if data.arrondissement
+          .rheader-logo-mairie(style="background-image: url(../../modules/rheader/images/mairie-#{data.arrondissement}.jpg)")
       if data.locales
         ul.rheader-locales
           each locale in data.locales

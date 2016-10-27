@@ -3923,6 +3923,130 @@ html.no-touch .news-card-counter {
   position: relative;
   width: 100%;
   z-index: 300; }
+  .rheader.light-blue,
+  .rheader.light-blue .rheader-logo,
+  .rheader.light-blue .rheader-button-menu,
+  .rheader.light-blue .rheader-mobile-nav {
+    background-color: #D1E0E5; }
+  .rheader.light-blue .rheader-logo-mairie {
+    border-color: #D1E0E5; }
+  .rheader.light-blue .rheader-wrapper > .rheader-button,
+  .rheader.light-blue .rheader-button-menu,
+  .rheader.light-blue .rheader-button-search {
+    border-color: #b0cad3; }
+  .rheader.light-blue .rheader-wrapper > .rheader-button:hover,
+  .rheader.light-blue .rheader-wrapper > .rheader-button.active {
+    background-color: #b0cad3; }
+  .rheader.green,
+  .rheader.green .rheader-logo,
+  .rheader.green .rheader-button-menu,
+  .rheader.green .rheader-mobile-nav {
+    background-color: #43B57E; }
+  .rheader.green .rheader-logo-mairie {
+    border-color: #43B57E; }
+  .rheader.green .rheader-wrapper > .rheader-button,
+  .rheader.green .rheader-button-menu,
+  .rheader.green .rheader-button-search {
+    border-color: #359064; }
+  .rheader.green .rheader-wrapper > .rheader-button:hover,
+  .rheader.green .rheader-wrapper > .rheader-button.active {
+    background-color: #359064; }
+  .rheader.yellow,
+  .rheader.yellow .rheader-logo,
+  .rheader.yellow .rheader-button-menu,
+  .rheader.yellow .rheader-mobile-nav {
+    background-color: #FAE46A; }
+  .rheader.yellow .rheader-logo-mairie {
+    border-color: #FAE46A; }
+  .rheader.yellow .rheader-wrapper > .rheader-button,
+  .rheader.yellow .rheader-button-menu,
+  .rheader.yellow .rheader-button-search {
+    border-color: #f8db39; }
+  .rheader.yellow .rheader-wrapper > .rheader-button:hover,
+  .rheader.yellow .rheader-wrapper > .rheader-button.active {
+    background-color: #f8db39; }
+  .rheader.dark-blue,
+  .rheader.dark-blue .rheader-logo,
+  .rheader.dark-blue .rheader-button-menu,
+  .rheader.dark-blue .rheader-mobile-nav {
+    background-color: #0C518A; }
+  .rheader.dark-blue .rheader-logo-mairie {
+    border-color: #0C518A; }
+  .rheader.dark-blue .rheader-wrapper > .rheader-button,
+  .rheader.dark-blue .rheader-button-menu,
+  .rheader.dark-blue .rheader-button-search {
+    border-color: #08355b; }
+  .rheader.dark-blue .rheader-wrapper > .rheader-button:hover,
+  .rheader.dark-blue .rheader-wrapper > .rheader-button.active {
+    background-color: #08355b; }
+  .rheader.salmon,
+  .rheader.salmon .rheader-logo,
+  .rheader.salmon .rheader-button-menu,
+  .rheader.salmon .rheader-mobile-nav {
+    background-color: #E75054; }
+  .rheader.salmon .rheader-logo-mairie {
+    border-color: #E75054; }
+  .rheader.salmon .rheader-wrapper > .rheader-button,
+  .rheader.salmon .rheader-button-menu,
+  .rheader.salmon .rheader-button-search {
+    border-color: #e12328; }
+  .rheader.salmon .rheader-wrapper > .rheader-button:hover,
+  .rheader.salmon .rheader-wrapper > .rheader-button.active {
+    background-color: #e12328; }
+  .rheader.text-blue a {
+    color: #0C518A; }
+  .rheader.text-blue .rheader-logo-nef-svg path,
+  .rheader.text-blue .rheader-logo-paris-svg path {
+    fill: #0C518A; }
+  .rheader.text-blue .rheader-logo-nef:after {
+    background-color: #0C518A; }
+  .rheader.text-blue .rheader-locales a {
+    color: rgba(12, 81, 138, 0.6); }
+    .rheader.text-blue .rheader-locales a strong {
+      color: #0C518A; }
+  .rheader.text-blue .rheader-button-text, .rheader.text-blue .rheader-button-text:before, .rheader.text-blue .rheader-button-text:after {
+    background-color: #0C518A; }
+  .rheader.text-blue .rheader-nav-item.account a {
+    color: #FFF; }
+  @media (min-width: 1161px) {
+    html.no-js .rheader.text-blue .rheader-nav-item:not(.get-involved) .rheader-nav-item-text:after, html.no-touch .rheader.text-blue .rheader-nav-item:not(.get-involved) .rheader-nav-item-text:after {
+      background-color: #0C518A; } }
+  .rheader.text-white a {
+    color: #FFF; }
+  .rheader.text-white .rheader-logo-nef-svg path,
+  .rheader.text-white .rheader-logo-paris-svg path {
+    fill: #FFF; }
+  .rheader.text-white .rheader-logo-nef:after {
+    background-color: #FFF; }
+  .rheader.text-white .rheader-locales a {
+    color: rgba(255, 255, 255, 0.6); }
+    .rheader.text-white .rheader-locales a strong {
+      color: #FFF; }
+  .rheader.text-white .rheader-button-text, .rheader.text-white .rheader-button-text:before, .rheader.text-white .rheader-button-text:after {
+    background-color: #FFF; }
+  .rheader.text-white .rheader-nav-item.account a {
+    color: #FFF; }
+  @media (min-width: 1161px) {
+    html.no-js .rheader.text-white .rheader-nav-item:not(.get-involved) .rheader-nav-item-text:after, html.no-touch .rheader.text-white .rheader-nav-item:not(.get-involved) .rheader-nav-item-text:after {
+      background-color: #FFF; } }
+  .rheader.text-red a {
+    color: #BF2257; }
+  .rheader.text-red .rheader-logo-nef-svg path,
+  .rheader.text-red .rheader-logo-paris-svg path {
+    fill: #BF2257; }
+  .rheader.text-red .rheader-logo-nef:after {
+    background-color: #BF2257; }
+  .rheader.text-red .rheader-locales a {
+    color: rgba(191, 34, 87, 0.6); }
+    .rheader.text-red .rheader-locales a strong {
+      color: #BF2257; }
+  .rheader.text-red .rheader-button-text, .rheader.text-red .rheader-button-text:before, .rheader.text-red .rheader-button-text:after {
+    background-color: #BF2257; }
+  .rheader.text-red .rheader-nav-item.account a {
+    color: #FFF; }
+  @media (min-width: 1161px) {
+    html.no-js .rheader.text-red .rheader-nav-item:not(.get-involved) .rheader-nav-item-text:after, html.no-touch .rheader.text-red .rheader-nav-item:not(.get-involved) .rheader-nav-item-text:after {
+      background-color: #BF2257; } }
   .rheader.fixed {
     left: 0;
     position: fixed;
@@ -3951,23 +4075,32 @@ html.no-touch .news-card-counter {
   z-index: 10; }
 
 .rheader-logo-nef {
-  background: url("../modules/rheader/nef.svg") center center no-repeat;
-  background-size: contain;
   display: block;
   height: 100%;
   left: 0;
+  padding: 22px 0;
   position: absolute;
   width: 25px; }
 
+.rheader-logo-nef-svg {
+  width: 100%; }
+  .rheader-logo-nef-svg path {
+    fill: #0C518A; }
+
 .rheader-logo-paris {
-  background: url("../modules/rheader/paris.svg") center center no-repeat;
-  background-size: contain;
   display: block;
   height: 100%;
   position: absolute;
   right: 0;
   text-indent: -9999px;
   width: 106px; }
+
+.rheader-logo-paris-svg {
+  display: block;
+  margin-top: 24px;
+  width: 100%; }
+  .rheader-logo-paris-svg path {
+    fill: #FFF; }
 
 .rheader-locales {
   display: none;
@@ -4131,6 +4264,9 @@ body.rheader-mobile-nav-open {
 .rheader.fixed + .layout-main > .layout-content:first-child {
   padding-top: 60px; }
 
+.rheader.arrondissement .rheader-logo {
+  overflow: visible; }
+
 @media (max-width: 600px) {
   .rheader {
     -webkit-transition: -webkit-transform 0.2s ease;
@@ -4222,6 +4358,29 @@ body.rheader-mobile-nav-open {
     width: 40px; }
   .rheader-logo-paris {
     width: 170px; }
+  .rheader-logo-mairie {
+    background: #FFF center center no-repeat;
+    border-bottom: 10px solid;
+    height: 90px;
+    left: 210px;
+    position: absolute;
+    width: 160px; }
+  .rheader.arrondissement .rheader-logo {
+    width: 300px; }
+  .rheader.arrondissement .rheader-logo-nef {
+    width: 30px; }
+  .rheader.arrondissement .rheader-logo-paris {
+    left: 50px;
+    right: auto;
+    width: 140px; }
+  .rheader.arrondissement.logo-square .rheader-logo-mairie {
+    background-size: 75%;
+    height: 90px;
+    width: 125px; }
+  .rheader.arrondissement.logo-rectangle .rheader-logo-mairie {
+    background-size: 80%;
+    height: 90px;
+    width: 160px; }
   .rheader-wrapper > .rheader-button {
     height: 80px;
     line-height: 80px;
@@ -4263,6 +4422,8 @@ body.rheader-mobile-nav-open {
       border-left: 1px solid transparent;
       -webkit-transform: translateY(100px);
               transform: translateY(100px); }
+  .rheader.arrondissement {
+    overflow: visible; }
   .rheader,
   .rheader-logo {
     height: 80px;
@@ -4281,16 +4442,49 @@ body.rheader-mobile-nav-open {
     position: absolute;
     width: 185px; }
   .rheader-logo-nef {
-    background-position: 50% 60%;
     width: 33px; }
   .rheader-logo-paris {
-    background-position: 50% 60%;
     width: 140px; }
   .rheader-locales {
     display: block;
     left: 60px;
     position: absolute;
     top: 0;
+    width: 140px; }
+  .rheader-logo-mairie {
+    background: #FFF center center no-repeat;
+    border-bottom: 10px solid;
+    height: 120px;
+    left: 190px;
+    position: absolute;
+    width: 160px; }
+  .rheader.arrondissement .rheader-logo {
+    width: 170px; }
+  .rheader.arrondissement .rheader-logo-nef {
+    width: 30px; }
+  .rheader.arrondissement .rheader-logo-paris {
+    width: 125px; }
+  .rheader.arrondissement .rheader-logo-paris-svg {
+    margin-top: 22px; }
+  .rheader.arrondissement.logo-square .rheader-logo-mairie {
+    background-size: 75%;
+    height: 135px;
+    width: 125px; }
+  .rheader.arrondissement.logo-rectangle .rheader-logo-mairie {
+    background-size: 80%;
+    height: 100px;
+    width: 160px; }
+  .rheader.arrondissement.arrondissement-9 .rheader-logo-mairie {
+    background-size: 100%;
+    height: 110px;
+    width: 170px; }
+  .rheader.arrondissement.arrondissement-13 .rheader-logo-mairie {
+    background-size: 100%;
+    height: 110px;
+    width: 134px; }
+  .rheader.arrondissement.arrondissement-20 .rheader-logo-mairie {
+    background-size: 100%;
+    height: 110px;
     width: 140px; }
   .rheader-wrapper > .rheader-button {
     border-right: 1px solid #A51B50;
@@ -4391,7 +4585,7 @@ body.rheader-mobile-nav-open {
       position: absolute;
       left: 0px;
       bottom: -4px;
-      background: #FFF;
+      background-color: #FFF;
       -webkit-transition: width 0.3s ease;
               transition: width 0.3s ease; }
   html.no-js .rheader-nav-item.current .rheader-nav-item-text:after,
@@ -4410,7 +4604,6 @@ body.rheader-mobile-nav-open {
     left: calc(50% - 650px);
     width: 285px; }
   .rheader-logo-nef {
-    background-position: 50% 54%;
     width: 42px; }
     .rheader-logo-nef:after {
       background-color: #F8E273;
@@ -4419,17 +4612,35 @@ body.rheader-mobile-nav-open {
       height: 100%;
       left: 68px;
       position: absolute;
+      top: 0;
       width: 6px; }
   .rheader-logo-paris {
-    background-position: 50% 54%;
     width: 180px; }
   .rheader-locales {
     left: 134px;
     /* fallback for browsers not supporting calc */
     left: calc(50% - 545px);
+    line-height: 2.4rem;
     width: 180px; }
-  .rheader-locales {
-    line-height: 2.4rem; }
+  .rheader-logo-mairie {
+    left: 250px;
+    width: 160px; }
+  .rheader.arrondissement .rheader-logo {
+    left: 20px; }
+  .rheader.arrondissement .rheader-logo-nef:after {
+    bottom: 5px;
+    height: auto;
+    left: 220px;
+    top: 5px; }
+  .rheader.arrondissement .rheader-logo-paris {
+    left: 65px;
+    right: auto;
+    width: 125px; }
+  .rheader.arrondissement .rheader-locales {
+    text-align: right;
+    left: 40px; }
+  .rheader.arrondissement.logo-rectangle .rheader-logo-mairie {
+    width: 170px; }
   .rheader-nav-item.account .rheader-nav-item-text {
     display: inline; }
   .rheader-nav-item.account .rheader-nav-item-icon {
