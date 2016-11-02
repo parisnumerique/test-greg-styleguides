@@ -176,7 +176,7 @@
     &:hover {background: $color-primary;}
 
     .rheader-button-text {
-      background-color: transparent;
+      background-color: transparent !important;
 
       &:before {
         transform: translateY(0px) rotate(45deg);
