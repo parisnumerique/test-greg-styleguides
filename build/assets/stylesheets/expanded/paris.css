@@ -4004,7 +4004,7 @@ html.no-touch .news-card-counter {
     color: rgba(12, 81, 138, 0.6); }
     .rheader.text-blue .rheader-locales a strong {
       color: #0C518A; }
-  .rheader.text-blue .rheader-button-text, .rheader.text-blue .rheader-button-text:before, .rheader.text-blue .rheader-button-text:after {
+  .rheader.text-blue .rheader-button-menu .rheader-button-text, .rheader.text-blue .rheader-button-menu .rheader-button-text:before, .rheader.text-blue .rheader-button-menu .rheader-button-text:after {
     background-color: #0C518A; }
   .rheader.text-blue .rheader-nav-item.account a {
     color: #FFF; }
@@ -4022,7 +4022,7 @@ html.no-touch .news-card-counter {
     color: rgba(255, 255, 255, 0.6); }
     .rheader.text-white .rheader-locales a strong {
       color: #FFF; }
-  .rheader.text-white .rheader-button-text, .rheader.text-white .rheader-button-text:before, .rheader.text-white .rheader-button-text:after {
+  .rheader.text-white .rheader-button-menu .rheader-button-text, .rheader.text-white .rheader-button-menu .rheader-button-text:before, .rheader.text-white .rheader-button-menu .rheader-button-text:after {
     background-color: #FFF; }
   .rheader.text-white .rheader-nav-item.account a {
     color: #FFF; }
@@ -4040,7 +4040,7 @@ html.no-touch .news-card-counter {
     color: rgba(191, 34, 87, 0.6); }
     .rheader.text-red .rheader-locales a strong {
       color: #BF2257; }
-  .rheader.text-red .rheader-button-text, .rheader.text-red .rheader-button-text:before, .rheader.text-red .rheader-button-text:after {
+  .rheader.text-red .rheader-button-menu .rheader-button-text, .rheader.text-red .rheader-button-menu .rheader-button-text:before, .rheader.text-red .rheader-button-menu .rheader-button-text:after {
     background-color: #BF2257; }
   .rheader.text-red .rheader-nav-item.account a {
     color: #FFF; }
@@ -4186,7 +4186,7 @@ html.no-touch .news-card-counter {
   body.rheader-mobile-nav-open .rheader-button-menu:hover {
     background: #DF225A; }
   body.rheader-mobile-nav-open .rheader-button-menu .rheader-button-text {
-    background-color: transparent; }
+    background-color: transparent !important; }
     body.rheader-mobile-nav-open .rheader-button-menu .rheader-button-text:before {
       -webkit-transform: translateY(0px) rotate(45deg);
               transform: translateY(0px) rotate(45deg); }
@@ -4381,6 +4381,9 @@ body.rheader-mobile-nav-open {
     background-size: 80%;
     height: 90px;
     width: 160px; }
+  .rheader.arrondissement.arrondissement-11 .rheader-logo-mairie {
+    background-size: cover;
+    height: 90px; }
   .rheader-wrapper > .rheader-button {
     height: 80px;
     line-height: 80px;
@@ -4478,6 +4481,9 @@ body.rheader-mobile-nav-open {
     background-size: 100%;
     height: 110px;
     width: 170px; }
+  .rheader.arrondissement.arrondissement-11 .rheader-logo-mairie {
+    background-size: cover;
+    height: 89px; }
   .rheader.arrondissement.arrondissement-13 .rheader-logo-mairie {
     background-size: 100%;
     height: 110px;
