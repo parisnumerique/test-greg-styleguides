@@ -10,6 +10,8 @@ mixin video-home(data)
       li.video-home-list-item(class=item.modifiers)
         a.video-home-item(href=item.href)
           .video-home-wrapper
+            .video-home-embed
+              != item.embed_html
             .video-home-image(style=item.image && 'background-image: url(#{item.image});')
               span
             .video-home-content
