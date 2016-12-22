@@ -11,6 +11,7 @@ mixin video-home(data)
         a.video-home-item(href=item.href)
           .video-home-wrapper
             .video-home-image(style=item.image && 'background-image: url(#{item.image});')
+              span
             .video-home-content
               .video-home-title= item.text
               .video-home-duration= item.duration
