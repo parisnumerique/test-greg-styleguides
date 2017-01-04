@@ -5,7 +5,8 @@ var Paris = window.Paris || {};
 Paris.blockContentNewsletter = (function(){
 
   var defaultOptions = {
-    thanks: "Votre inscription a bien été prise en compte."
+    thanks: "Votre inscription a bien été prise en compte.",
+    failed:"Votre inscriptiuon a échouée. Veuillez ré-essayer plus tard."
   };
 
   function blockContentNewsletter(selector, userOptions){
@@ -40,14 +41,17 @@ Paris.blockContentNewsletter = (function(){
     }
 
     function saveForm(data) {
-      // TODO: save data and add onFormSaved as the callback
-      // for now, we simulate the behaviour with setTimeout
-      console.log(data);
-      setTimeout(onFormSaved, 1000);
+      $.post( "/newsletter", data)
+        .done(function() {
+          onFormSaved(options.thanks);
+        })
+        .fail(function() {
+          onFormSaved(options.failed);
+      });
     }
 
-    function onFormSaved() {
-      $form.hide().after('<p>'+ options.thanks +'</p>');
+    function onFormSaved(text) {
+      $form.hide().after('<p>'+ text +'</p>');
     }
 
     init();
