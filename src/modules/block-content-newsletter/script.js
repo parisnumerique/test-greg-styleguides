@@ -41,6 +41,7 @@ Paris.blockContentNewsletter = (function(){
     }
 
     function saveForm(data) {
+/*
       $.post( "newsletter/subscribe", data)
         .done(function() {
           onFormSaved(options.thanks);
@@ -48,6 +49,16 @@ Paris.blockContentNewsletter = (function(){
         .fail(function() {
           onFormSaved(options.failed);
       });
+*/
+      var ajaxOptions = {
+        url: $form.attr('action'),
+        type: $form.attr('method'),
+        data: data,
+        success: onFormSaved(options.thanks),
+        error: onFormSaved(options.failed)
+      };
+
+      $.ajax(ajaxOptions);
     }
 
     function onFormSaved(text) {
