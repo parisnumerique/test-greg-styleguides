@@ -6,7 +6,7 @@ Paris.blockContentNewsletter = (function(){
 
   var defaultOptions = {
     thanks: "Votre inscription a bien été prise en compte.",
-    failed:"Votre inscriptiuon a échouée. Veuillez ré-essayer plus tard."
+    failed:"Votre inscription a échoué. Veuillez ré-essayer plus tard."
   };
 
   function blockContentNewsletter(selector, userOptions){
@@ -41,7 +41,7 @@ Paris.blockContentNewsletter = (function(){
     }
 
     function saveForm(data) {
-      $.post( "/newsletter", data)
+      $.post( "/subscribe", data)
         .done(function() {
           onFormSaved(options.thanks);
         })
