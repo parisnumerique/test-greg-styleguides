@@ -5,7 +5,7 @@ var Paris = window.Paris || {};
 Paris.blockContentNewsletter = (function(){
 
   var defaultOptions = {
-    thanks: ""
+    thanks: "Votre inscription a bien été prise en compte."
   };
 
   function blockContentNewsletter(selector, userOptions){
@@ -42,6 +42,7 @@ Paris.blockContentNewsletter = (function(){
     function saveForm(data) {
       // TODO: save data and add onFormSaved as the callback
       // for now, we simulate the behaviour with setTimeout
+      console.log(data);
       setTimeout(onFormSaved, 1000);
     }
 
