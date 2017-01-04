@@ -34,8 +34,8 @@ Paris.blockContentNewsletter = (function(){
     }
 
     function onSubmitForm(e) {
-      $formElements.attr('disabled', 'disabled');
       saveForm($(this).serializeArray());
+      $formElements.attr('disabled', 'disabled');
       e.preventDefault();
     }
 
