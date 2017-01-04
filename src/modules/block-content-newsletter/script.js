@@ -41,7 +41,7 @@ Paris.blockContentNewsletter = (function(){
     }
 
     function saveForm(data) {
-      $.post( "/subscribe", data)
+      $.post( "newsletter/subscribe", data)
         .done(function() {
           onFormSaved(options.thanks);
         })
