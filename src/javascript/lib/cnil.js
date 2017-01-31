@@ -3,9 +3,6 @@
 var PubSub = require('pubsub-js');
 var Cookies = require('js-cookie');
 
-//debug cookies
-console.log(Paris);
-
 PubSub.subscribe('cookies.allow', function(){
   Cookies.set(Paris.config.cookies.cnil.name, Paris.config.cookies.cnil.value, {
     expires: Paris.config.cookies.cnil.expires
