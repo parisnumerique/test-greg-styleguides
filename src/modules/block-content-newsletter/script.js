@@ -35,12 +35,12 @@ Paris.blockContentNewsletter = (function(){
     }
 
     function onSubmitForm(e) {
-      saveForm($(this).serializeArray());
+      saveForm($(this));
       $formElements.attr('disabled', 'disabled');
       e.preventDefault();
     }
 
-    function saveForm(data) {
+    function saveForm() {
 /*
       $.post( "newsletter/subscribe", data)
         .done(function() {
@@ -53,12 +53,16 @@ Paris.blockContentNewsletter = (function(){
       var ajaxOptions = {
         url: $form.attr('action'),
         type: $form.attr('method'),
-        data: data,
-        success: onFormSaved(options.thanks),
-        error: onFormSaved(options.failed)
+        data: {email:$form.email.val()}
       };
 
-      $.ajax(ajaxOptions);
+      $.ajax(ajaxOptions)
+        .done(function() {
+          onFormSaved(options.thanks);
+        })
+        .fail(function() {
+          onFormSaved(options.failed);
+    });
     }
 
     function onFormSaved(text) {
