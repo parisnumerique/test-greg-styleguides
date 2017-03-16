@@ -41,7 +41,7 @@ mixin rheader(data)
             include ../../../assets/images/modules/rheader/paris.svg
             .hidden-accessibly= data.logo.text
         if data.arrondissement
-          .rheader-logo-mairie(style="background-image: url(../../modules/rheader/images/mairie-#{data.arrondissement}.jpg)")
+          .rheader-logo-mairie(style="background-image: url(/modules/rheader/images/mairie-#{data.arrondissement}.jpg)")
       if data.locales
         ul.rheader-locales
           each locale in data.locales
