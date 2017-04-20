@@ -380,21 +380,6 @@ templatizer["buttons"]["buttons"] = function tmpl_buttons_buttons(data) {
     return buf.join("");
 };
 
-// card.jade compiled template
-templatizer["card"] = function tmpl_card(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// card.jade:card compiled template
-templatizer["card"]["card"] = function tmpl_card_card(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-card", data.modifiers ], [ null, null, true ]) + "><a" + jade.attr("href", data.href, true, false) + "><div" + jade.attr("style", "background-image: url(" + data.image.src + ")", true, false) + ' class="card-image"></div><div class="card-content"><div class="card-category">' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</div><h3 class="card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h3><div class="card-text">' + (null == (jade_interp = data.text) ? "" : jade_interp) + "</div></div></a></div>");
-    return buf.join("");
-};
-
 // districts.jade compiled template
 templatizer["districts"] = function tmpl_districts(locals) {
     var buf = [];
@@ -557,6 +542,21 @@ templatizer["districts"]["districts"] = function tmpl_districts_districts(data) 
         }
     }).call(this);
     buf.push("</div>");
+    return buf.join("");
+};
+
+// card.jade compiled template
+templatizer["card"] = function tmpl_card(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// card.jade:card compiled template
+templatizer["card"]["card"] = function tmpl_card_card(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-card", data.modifiers ], [ null, null, true ]) + "><a" + jade.attr("href", data.href, true, false) + "><div" + jade.attr("style", "background-image: url(" + data.image.src + ")", true, false) + ' class="card-image"></div><div class="card-content"><div class="card-category">' + jade.escape(null == (jade_interp = data.category) ? "" : jade_interp) + '</div><h3 class="card-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h3><div class="card-text">' + (null == (jade_interp = data.text) ? "" : jade_interp) + "</div></div></a></div>");
     return buf.join("");
 };
 
@@ -1807,27 +1807,6 @@ templatizer["table"]["table"] = function tmpl_table_table(data) {
     return buf.join("");
 };
 
-// text.jade compiled template
-templatizer["text"] = function tmpl_text(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// text.jade:text compiled template
-templatizer["text"]["text"] = function tmpl_text_text(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-text", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
-    if (block) {
-        block && block(buf);
-    } else if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    buf.push("</div>");
-    return buf.join("");
-};
-
 // verbatim.jade compiled template
 templatizer["verbatim"] = function tmpl_verbatim(locals) {
     var buf = [];
@@ -1878,41 +1857,24 @@ templatizer["verbatim"]["verbatim"] = function tmpl_verbatim_verbatim(data) {
     return buf.join("");
 };
 
-// video.jade compiled template
-templatizer["video"] = function tmpl_video(locals) {
+// text.jade compiled template
+templatizer["text"] = function tmpl_text(locals) {
     var buf = [];
     var jade_mixins = {};
     var jade_interp;
     return buf.join("");
 };
 
-// video.jade:video compiled template
-templatizer["video"]["video"] = function tmpl_video_video(data) {
+// text.jade:text compiled template
+templatizer["text"]["text"] = function tmpl_text_text(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-video", data.modifiers ], [ null, null, true ]) + ">");
-    if (data.title) {
-        buf.push('<h3 class="video-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    buf.push("<div" + jade.cls([ "component", "component-text", data ? data.modifiers : [] ], [ null, null, true ]) + ">");
+    if (block) {
+        block && block(buf);
+    } else if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
     }
-    buf.push('<div class="video-wrapper">');
-    if (data.cookie === false) {
-        if (block) {
-            buf.push(null == (jade_interp = block) ? "" : jade_interp);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-        }
-    } else {
-        if (data.placeholder) {
-            buf.push('<div class="video-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
-        }
-        buf.push('<script type="text/html" class="video-embed">');
-        if (block) {
-            buf.push(null == (jade_interp = block) ? "" : jade_interp);
-        } else if (data.block) {
-            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-        }
-        buf.push("</script>");
-    }
-    buf.push("</div></div>");
+    buf.push("</div>");
     return buf.join("");
 };
 
@@ -1962,6 +1924,44 @@ templatizer["anchors-list"]["anchors-list"] = function tmpl_anchors_list_anchors
         buf.push("</ul>");
     }
     buf.push("</nav>");
+    return buf.join("");
+};
+
+// video.jade compiled template
+templatizer["video"] = function tmpl_video(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// video.jade:video compiled template
+templatizer["video"]["video"] = function tmpl_video_video(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-video", data.modifiers ], [ null, null, true ]) + ">");
+    if (data.title) {
+        buf.push('<h3 class="video-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    }
+    buf.push('<div class="video-wrapper">');
+    if (data.cookie === false) {
+        if (block) {
+            buf.push(null == (jade_interp = block) ? "" : jade_interp);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        }
+    } else {
+        if (data.placeholder) {
+            buf.push('<div class="video-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + "</div>");
+        }
+        buf.push('<script type="text/html" class="video-embed">');
+        if (block) {
+            buf.push(null == (jade_interp = block) ? "" : jade_interp);
+        } else if (data.block) {
+            buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+        }
+        buf.push("</script>");
+    }
+    buf.push("</div></div>");
     return buf.join("");
 };
 
@@ -2757,7 +2757,7 @@ templatizer["block-content-social"]["block-content-social"] = function tmpl_bloc
                 if ("number" == typeof $$obj.length) {
                     for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
                         var item = $$obj[$index];
-                        if (item.link.href) {
+                        if (item.link.href != "") {
                             buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>" + jade.escape(null == (jade_interp = item.count) ? "" : jade_interp) + '<span class="block-content-unit">' + jade.escape(null == (jade_interp = " " + item.unit) ? "" : jade_interp) + '</span></div><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></a></li>");
                         }
                     }
@@ -2766,7 +2766,7 @@ templatizer["block-content-social"]["block-content-social"] = function tmpl_bloc
                     for (var $index in $$obj) {
                         $$l++;
                         var item = $$obj[$index];
-                        if (item.link.href) {
+                        if (item.link.href != "") {
                             buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>" + jade.escape(null == (jade_interp = item.count) ? "" : jade_interp) + '<span class="block-content-unit">' + jade.escape(null == (jade_interp = " " + item.unit) ? "" : jade_interp) + '</span></div><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></a></li>");
                         }
                     }
@@ -3012,6 +3012,46 @@ templatizer["button"]["button"] = function tmpl_button_button(data) {
         }
         buf.push('<span class="button-text">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</span></button>");
     }
+    return buf.join("");
+};
+
+// cross-content.jade compiled template
+templatizer["cross-content"] = function tmpl_cross_content(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// cross-content.jade:cross-content compiled template
+templatizer["cross-content"]["cross-content"] = function tmpl_cross_content_cross_content(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="cross-content">');
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var item = $$obj[$index];
+                buf.push("<a" + jade.attr("href", item.href, true, false) + jade.attr("style", "background-image: url(" + item.background + ");", true, false) + jade.cls([ "cross-content-item", item.modifiers ], [ null, true ]) + '><h2 class="cross-content-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h2>");
+                if (item.icon) {
+                    buf.push("<i" + jade.cls([ "cross-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
+                }
+                buf.push('<p class="cross-content-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p></a>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var item = $$obj[$index];
+                buf.push("<a" + jade.attr("href", item.href, true, false) + jade.attr("style", "background-image: url(" + item.background + ");", true, false) + jade.cls([ "cross-content-item", item.modifiers ], [ null, true ]) + '><h2 class="cross-content-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h2>");
+                if (item.icon) {
+                    buf.push("<i" + jade.cls([ "cross-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
+                }
+                buf.push('<p class="cross-content-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p></a>");
+            }
+        }
+    }).call(this);
+    buf.push("</div>");
     return buf.join("");
 };
 
@@ -3302,46 +3342,6 @@ templatizer["gallery-ugc"]["gallery-ugc"] = function tmpl_gallery_ugc_gallery_ug
     return buf.join("");
 };
 
-// cross-content.jade compiled template
-templatizer["cross-content"] = function tmpl_cross_content(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// cross-content.jade:cross-content compiled template
-templatizer["cross-content"]["cross-content"] = function tmpl_cross_content_cross_content(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="cross-content">');
-    (function() {
-        var $$obj = data.items;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var item = $$obj[$index];
-                buf.push("<a" + jade.attr("href", item.href, true, false) + jade.attr("style", "background-image: url(" + item.background + ");", true, false) + jade.cls([ "cross-content-item", item.modifiers ], [ null, true ]) + '><h2 class="cross-content-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h2>");
-                if (item.icon) {
-                    buf.push("<i" + jade.cls([ "cross-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
-                }
-                buf.push('<p class="cross-content-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p></a>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var item = $$obj[$index];
-                buf.push("<a" + jade.attr("href", item.href, true, false) + jade.attr("style", "background-image: url(" + item.background + ");", true, false) + jade.cls([ "cross-content-item", item.modifiers ], [ null, true ]) + '><h2 class="cross-content-title">' + jade.escape(null == (jade_interp = item.title) ? "" : jade_interp) + "</h2>");
-                if (item.icon) {
-                    buf.push("<i" + jade.cls([ "cross-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + "></i>");
-                }
-                buf.push('<p class="cross-content-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</p></a>");
-            }
-        }
-    }).call(this);
-    buf.push("</div>");
-    return buf.join("");
-};
-
 // get-involved-list.jade compiled template
 templatizer["get-involved-list"] = function tmpl_get_involved_list(locals) {
     var buf = [];
@@ -3539,6 +3539,48 @@ templatizer["get-involved"]["get-involved"] = function tmpl_get_involved_get_inv
         }
     }).call(this);
     buf.push("</ul></div></div>");
+    return buf.join("");
+};
+
+// heading.jade compiled template
+templatizer["heading"] = function tmpl_heading(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// heading.jade:heading compiled template
+templatizer["heading"]["heading"] = function tmpl_heading_heading(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + '><h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
+    if (data.link) {
+        buf.push('<div class="heading-links"><a' + jade.attr("href", data.link.href, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
+    }
+    buf.push("</div>");
+    return buf.join("");
+};
+
+// hub-heading.jade compiled template
+templatizer["hub-heading"] = function tmpl_hub_heading(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// hub-heading.jade:hub-heading compiled template
+templatizer["hub-heading"]["hub-heading"] = function tmpl_hub_heading_hub_heading(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.attr("style", data.image && "background-image:url('" + data.image + "')", true, false) + jade.cls([ "hub-heading", data.modifiers ], [ null, true ]) + '><div class="hub-heading-wrapper layout-wrapper"><div class="hub-heading-content">');
+    if (block) {
+        block && block(buf);
+    } else if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    } else if (data.text) {
+        buf.push("<h1>" + (null == (jade_interp = data.text) ? "" : jade_interp) + "</h1>");
+    }
+    buf.push("</div></div></div>");
     return buf.join("");
 };
 
@@ -3969,29 +4011,6 @@ templatizer["notice"]["notice"] = function tmpl_notice_notice(data) {
     return buf.join("");
 };
 
-// hub-heading.jade compiled template
-templatizer["hub-heading"] = function tmpl_hub_heading(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// hub-heading.jade:hub-heading compiled template
-templatizer["hub-heading"]["hub-heading"] = function tmpl_hub_heading_hub_heading(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.attr("style", data.image && "background-image:url('" + data.image + "')", true, false) + jade.cls([ "hub-heading", data.modifiers ], [ null, true ]) + '><div class="hub-heading-wrapper layout-wrapper"><div class="hub-heading-content">');
-    if (block) {
-        block && block(buf);
-    } else if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    } else if (data.text) {
-        buf.push("<h1>" + (null == (jade_interp = data.text) ? "" : jade_interp) + "</h1>");
-    }
-    buf.push("</div></div></div>");
-    return buf.join("");
-};
-
 // pagination.jade compiled template
 templatizer["pagination"] = function tmpl_pagination(locals) {
     var buf = [];
@@ -4054,25 +4073,6 @@ templatizer["pagination"]["pagination"] = function tmpl_pagination_pagination(da
         buf.push('<li class="next"><a' + jade.attr("href", data.url.replace("${page}", next), true, false) + jade.attr("aria-label", data.text.next, true, false) + ' data-page="next"' + jade.attr("title", link_title.replace("${page}", next), true, false) + '><span aria-hidden="true">&gt;</span></a></li>');
     }
     buf.push("</ul></nav>");
-    return buf.join("");
-};
-
-// heading.jade compiled template
-templatizer["heading"] = function tmpl_heading(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// heading.jade:heading compiled template
-templatizer["heading"]["heading"] = function tmpl_heading_heading(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "heading", data.modifiers ], [ null, true ]) + '><h2 class="heading-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h2>");
-    if (data.link) {
-        buf.push('<div class="heading-links"><a' + jade.attr("href", data.link.href, true, false) + ">" + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a></div>");
-    }
-    buf.push("</div>");
     return buf.join("");
 };
 
