@@ -6,7 +6,7 @@ mixin block-content-social(data)
   +block-content({"title": data.title, "modifiers": modifiers})
     ul.block-content-items
       each item in data.items
-        if item.link.href
+        if item.link.href!=""
           li.block-content-item
               a(href=item.link.href target=item.link.target)
                 .block-content-count
