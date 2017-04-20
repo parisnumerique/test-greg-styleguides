@@ -1,6 +1,20 @@
 .block-content-social {
   max-width: 360px;
 
+  .icon-PARIS {
+    display: block;
+    width: 100%;
+    height: 36px;
+   }
+
+  .STORE {
+    background: url(/modules/block-content-social/paris_neuf_by_fluicity-app_store.png) no-repeat;
+   }
+
+  .Play {
+    background: url(/modules/block-content-social/paris_neuf_by_fluicity-google_play.png) no-repeat;
+   }
+
   .block-content-items {
     list-style: none;
     margin: 0;
@@ -51,3 +65,6 @@
     }
   }
 }
+
+
+
