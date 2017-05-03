@@ -70,6 +70,7 @@
   "icons": {
     "title": "Icônes",
     "icons": [
+      "apple",
       "alert",
       "arrow-bottom",
       "arrow-left",
@@ -101,6 +102,7 @@
       "favorites",
       "favorites-outline",
       "file",
+      "google-play",
       "handicap-hearing-impair",
       "handicap-mobility",
       "handicap-visually-impaired",

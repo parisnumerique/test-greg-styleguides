@@ -55,6 +55,10 @@
     display: inline-block;
     font-size: 1.3rem;
     font-weight: 300;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    vertical-align: top;
+
   }
 }
 
@@ -63,7 +67,44 @@
     .block-content-count{
       font-size: 2rem;
     }
+
+    .icon-apple+.block-content-link,
+    .icon-google-play+.block-content-link{
+      border-bottom: none;
+      height: 3.9rem;
+      line-height: 2.2rem;
+      max-width: 10rem;
+      position: relative;
+    }
+
+    .icon-apple+.block-content-link:before,
+    .icon-google-play+.block-content-link:before{
+      background: #fff;
+      top: 22px;
+      content: "";
+      left: 0;
+      height: 0.1rem;
+      position: absolute;
+      width: 9rem;
+    }
+
+    .icon-apple+.block-content-link:after,
+    .icon-google-play+.block-content-link:after{
+      background: #fff;
+      bottom: -6px;
+      content: "";
+      left: 0;
+      height: 0.1rem;
+      position: absolute;
+      width: 7.5rem;
+    }
+
+    .icon-apple+.block-content-link:after{
+      width: 7rem;
+    }
+
   }
+
 }
 
 
