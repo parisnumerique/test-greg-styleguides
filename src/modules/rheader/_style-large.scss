@@ -70,14 +70,15 @@
     width: 140px;
   }
 
-  .rheader-logo-mairie {
-    background: $white center center no-repeat;
-    border-bottom: 10px solid;
-    height: 120px;
-    left: 190px;
-    position: absolute;
-    width: 160px;
-  }
+  // .rheader-logo-mairie {
+  //   background: $white center center no-repeat;
+  //   background-size: 80%;
+  //   border-bottom: 10px solid;
+  //   height: 90px;
+  //   left: 190px;
+  //   position: absolute;
+  //   width: 140px;
+  // }
 
   .rheader.arrondissement {
     .rheader-logo {width: 170px;}
@@ -85,41 +86,6 @@
     .rheader-logo-paris {width: 125px;}
     .rheader-logo-paris-svg {margin-top: 22px;}
 
-    &.logo-square {
-      .rheader-logo-mairie {
-        background-size: 75%;
-        height: 135px;
-        width: 125px;
-      }
-    }
-
-    &.logo-rectangle {
-      .rheader-logo-mairie {
-        background-size: 80%;
-        height: 100px;
-        width: 160px;
-      }
-    }
-
-    &.arrondissement-9 .rheader-logo-mairie {
-      background-size: 100%;
-      height: 110px;
-      width: 170px;
-    }
-    &.arrondissement-11 .rheader-logo-mairie {
-      background-size: cover;
-      height: 89px;
-    }
-    &.arrondissement-13 .rheader-logo-mairie {
-      background-size: 100%;
-      height: 110px;
-      width: 134px;
-    }
-    &.arrondissement-20 .rheader-logo-mairie {
-      background-size: 100%;
-      height: 110px;
-      width: 140px;
-    }
   }
 
   .rheader-wrapper {

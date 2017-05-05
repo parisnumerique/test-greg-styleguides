@@ -6,6 +6,35 @@
       transition: opacity 0.2s ease;
     }
 
+    &.arrondissement {
+      .rheader-logo{
+        left: 50%;
+        transform: translateX(-100%);
+        margin: inherit;
+      }
+
+      .rheader-logo-nef {padding: 13px 0;}
+      .rheader-logo-paris-svg {margin-top: 13px;}
+      .rheader-logo-mairie{
+        border-bottom: none;
+        height: 60px;
+        left: 160px;
+        width: 100px;
+      }
+      
+      &.logo-rectangle .rheader-logo-mairie,
+      &.logo-square .rheader-logo-mairie{
+        height: 60px;
+        width: 90px;
+      }
+
+      &.arrondissement-3 .rheader-logo-mairie {
+        background-size: 80%;
+        width: 90px;
+      }
+
+    }
+
     &.folded {
       transition-delay: 0.5s;
       transform: translateY(-$rheader-height-small + 8px);

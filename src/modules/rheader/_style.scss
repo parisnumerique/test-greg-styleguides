@@ -77,6 +77,80 @@
   text-indent: -9999px;
   width: 106px;
 }
+
+
+.rheader-logo-mairie {
+  background: $white center center no-repeat;
+  background-size: 80%;
+  border-bottom: 10px solid;
+  height: 90px;
+  left: 190px;
+  position: absolute;
+  width: 140px;
+}
+
+.rheader.arrondissement{
+  .rheader-logo {
+    border-bottom: none;
+  }
+
+  &.logo-square {
+    .rheader-logo-mairie {
+      background-size: 60%;
+      height: 90px;
+      width: 100px;
+    }
+  }
+
+  &.logo-rectangle {
+    .rheader-logo-mairie {
+      background-size: 80%;
+      height: 90px;
+      width: 140px;
+    }
+  }
+
+  &.arrondissement-1 .rheader-logo-mairie {
+    background-size: 75%;
+  }
+
+  &.arrondissement-3 .rheader-logo-mairie {
+    background-size: 80%;
+    width: 120px;
+  }
+
+  &.arrondissement-8 .rheader-logo-mairie {
+    background-color: #1e63a4;
+    background-size: 60%;
+  }
+
+  &.arrondissement-9 .rheader-logo-mairie {
+    background-size: 85%;
+  }
+
+  &.arrondissement-11 .rheader-logo-mairie {
+    background-color: #e2273c;
+    background-size: 100%;
+  }
+
+  &.arrondissement-13 .rheader-logo-mairie {
+    background-color: #dc0351;
+  } 
+
+  &.arrondissement-15 .rheader-logo-mairie {
+    background-size: 75%;
+  }
+
+  &.arrondissement-19 .rheader-logo-mairie {
+    background-size: 75%;
+  }  
+
+  &.arrondissement-20 .rheader-logo-mairie {
+    background-color: #cc0033;
+    background-size: 90%;
+  }
+}
+
 .rheader-logo-paris-svg {
   display: block;
   margin-top: 24px;

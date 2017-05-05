@@ -27,27 +27,6 @@
       right: auto;
       width: 140px;
     }
-
-    &.logo-square {
-      .rheader-logo-mairie {
-        background-size: 75%;
-        height: 90px;
-        width: 125px;
-      }
-    }
-
-    &.logo-rectangle {
-      .rheader-logo-mairie {
-        background-size: 80%;
-        height: 90px;
-        width: 160px;
-      }
-    }
-
-    &.arrondissement-11 .rheader-logo-mairie {
-      background-size: cover;
-      height: 90px;
-    }
   }
 
   .rheader-wrapper {
