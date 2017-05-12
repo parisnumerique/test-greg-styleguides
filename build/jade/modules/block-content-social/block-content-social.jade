@@ -11,8 +11,6 @@ mixin block-content-social(data)
               a(href=item.link.href target=item.link.target)
                 .block-content-count
                   i.block-content-icon(class="icon-#{item.icon}" aria-hidden="true")
-                  = item.count
-                  span.block-content-unit= " " + item.unit
-                .block-content-link= item.link.text
+                  .block-content-link= item.link.text
     if data.link
       a.block-content-link(href=data.link.href)= data.link.text

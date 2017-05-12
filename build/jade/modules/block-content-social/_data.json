@@ -48,6 +48,22 @@
               "text": "Dailymotion",
               "target": "_blank"
             }
+          },
+          {
+            "icon": "apple",
+            "link": {
+              "href": "#",
+              "text": "Paris Neuf sur l'App Store",
+              "target": "_blank"
+            }
+          },
+           {
+            "icon": "google-play",
+            "link": {
+              "href": "#",
+              "text": "Paris Neuf sur Google Play",
+              "target": "_blank"
+            }
           }
         ],
         "link": {
