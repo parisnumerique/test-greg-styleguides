@@ -217,8 +217,8 @@ Paris.listPersons = (function(){
       } else {
         currentPage = parseInt(page, 10) - 1;
       }
-      launchSearch();
-      scrollToResultsTop();
+      //launchSearch();
+      //scrollToResultsTop();
     }
 
     function renderFacets(data) {
