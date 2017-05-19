@@ -208,7 +208,7 @@ Paris.listPersons = (function(){
     }
 
     function onClickPagination(e) {
-      e.preventDefault();
+      //e.preventDefault();
       var page = $(this).data('page');
       if (page === "prev") {
         currentPage -= 1;
