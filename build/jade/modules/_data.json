@@ -49,6 +49,7 @@
     "table-of-contents",
     "tags",
     "video-cover",
-    "video-home"
+    "video-home",
+    "block-content-html"
   ]
 }
