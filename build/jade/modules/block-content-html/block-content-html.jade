@@ -1,0 +1,7 @@
+include ../../modules/block-content/block-content
+
+mixin block-content-html(data)
+  - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
+  - modifiers.push("block-content-newsletter")
+  +block-content({})
+    div= data.block
