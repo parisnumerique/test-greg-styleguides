@@ -4,5 +4,4 @@ mixin block-content-html(data)
   - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-newsletter")
   +block-content({"title": data.title, "modifiers": modifiers})
-    script.html-embed(type="text/html")
-      != data.block
+    != data.block
