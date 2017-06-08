@@ -4,13 +4,33 @@ mixin block-content-social(data)
   - var modifiers = JSON.parse(JSON.stringify(data.modifiers || [])) // clone the data object
   - modifiers.push("block-content-social")
   +block-content({"title": data.title, "modifiers": modifiers})
-    ul.block-content-items
-      each item in data.items
-        if item.link.href!=""
-          li.block-content-item
-              a(href=item.link.href target=item.link.target)
-                .block-content-count
-                  i.block-content-icon(class="icon-#{item.icon}" aria-hidden="true")
-                  .block-content-link= item.link.text
-    if data.link
-      a.block-content-link(href=data.link.href)= data.link.text
+      if data.modifiers && data.modifiers.indexOf("color-secondary-background") !== -1
+        if data.modifiers.indexOf("clear") !== -1
+            ul.block-content-items.float
+              each item in data.items
+                if item.icon
+                  if item.link.href!=""
+                    li.block-content-item.clear
+                      a(href=item.link.href target=item.link.target)
+                        .block-content-count
+                          i.block-content-icon(class="icon-#{item.icon}" aria-hidden="true")
+                          .block-content-link= item.link.text       
+            ul.block-content-items.float
+              each item in data.items
+                if item.image
+                  if item.link.href!=""
+                    li.block-content-item.clear
+                      a(href=item.link.href target=item.link.target)
+                        .block-content-item-image(style="background-image: url(/modules/block-content-social/images/#{item.image}.png);")
+        else
+          ul.block-content-items
+            each item in data.items
+              if item.link.href!=""
+                li.block-content-item
+                  a(href=item.link.href target=item.link.target)
+                    .block-content-count
+                      i.block-content-icon(class="icon-#{item.icon}" aria-hidden="true")
+                      .block-content-link= item.link.text
+
+      if data.link
+        a.block-content-link(href=data.link.href)= data.link.text

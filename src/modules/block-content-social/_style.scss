@@ -7,25 +7,41 @@
     height: 36px;
    }
 
-  .STORE {
-    background: url(/modules/block-content-social/paris_neuf_by_fluicity-app_store.png) no-repeat;
-   }
+  // .STORE {
+  //   background: url(/modules/block-content-social/paris_neuf_by_fluicity-app_store.png) no-repeat;
+  //  }
 
-  .Play {
-    background: url(/modules/block-content-social/paris_neuf_by_fluicity-google_play.png) no-repeat;
-   }
+  // .Play {
+  //   background: url(/modules/block-content-social/paris_neuf_by_fluicity-google_play.png) no-repeat;
+  //  }
 
   .block-content-items {
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+  
+    &.float{
+      float: left;
+      width: 50%;
+    }
+
   }
 
   .block-content-item {
     float: left;
     width: 50%;
     margin-bottom: 20px;
+
+    .block-content-item-image{
+      height: 43px;
+      width: 180px;
+    }
+
+    &.clear{
+      float: none;
+    }
+
 
     a {
       display: block;

@@ -48,9 +48,33 @@
               "text": "Dailymotion",
               "target": "_blank"
             }
+          }
+        ],
+        "link": {
+          "href": "#",
+          "text": "Voir tous les réseaux sociaux"
+        }
+      }
+    },
+    {
+      "title": "Promotion d'une application",
+      "description": "",
+      "data": {
+        "modifiers": ["color-secondary-background", "clear"],
+        "title": "Restez connecté",
+        "items": [
+          {
+            "icon": "twitter",
+            "count": "219 000",
+            "unit": "abonnés",
+            "link": {
+              "href": "#",
+              "text": "Twitter",
+              "target": "_blank"
+            }
           },
           {
-            "icon": "apple",
+            "image": "apple",
             "link": {
               "href": "#",
               "text": "Paris Neuf sur l'App Store",
@@ -58,18 +82,34 @@
             }
           },
            {
-            "icon": "google-play",
+            "image": "play",
             "link": {
               "href": "#",
               "text": "Paris Neuf sur Google Play",
               "target": "_blank"
             }
+          },
+          {
+            "icon": "facebook",
+            "count": "2 508 576",
+            "unit": "abonnés",
+            "link": {
+              "href": "#",
+              "text": "Facebook",
+              "target": "_blank"
+            }
+          },
+          {
+            "icon": "instagram",
+            "count": "16 449",
+            "unit": "abonnés",
+            "link": {
+              "href": "#",
+              "text": "Instagram",
+              "target": "_blank"
+            }
           }
-        ],
-        "link": {
-          "href": "#",
-          "text": "Voir tous les réseaux sociaux"
-        }
+        ]
       }
     }]
   }
