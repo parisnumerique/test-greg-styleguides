@@ -1202,19 +1202,23 @@ body {
     display: block;
     width: 100%;
     height: 36px; }
-  .block-content-social .STORE {
-    background: url(/modules/block-content-social/paris_neuf_by_fluicity-app_store.png) no-repeat; }
-  .block-content-social .Play {
-    background: url(/modules/block-content-social/paris_neuf_by_fluicity-google_play.png) no-repeat; }
   .block-content-social .block-content-items {
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden; }
+    .block-content-social .block-content-items.float {
+      float: left;
+      width: 50%; }
   .block-content-social .block-content-item {
     float: left;
     width: 50%;
     margin-bottom: 20px; }
+    .block-content-social .block-content-item .block-content-item-image {
+      height: 43px;
+      width: 180px; }
+    .block-content-social .block-content-item.clear {
+      float: none; }
     .block-content-social .block-content-item a {
       display: block; }
       .block-content-social .block-content-item a:hover .block-content-link {
