@@ -2,7 +2,7 @@ include ../../components/buttons/buttons
 
 mixin person-block(data)
   .person-block
-    .person-block-portrait: span(style="background-image: url(#{data.image});")
+    .person-block-portrait: span(style="background-image: url('#{data.image}');")
     .person-block-content
       h3.person-block-title
         a(href=data.href)= data.title
