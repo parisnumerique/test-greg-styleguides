@@ -3,7 +3,7 @@ include ../block-aside/block-aside
 mixin block-aside-checkboxes(data)
   - var modifiers = data.modifiers || []
   - modifiers.push("block-aside-checkboxes")
-  if data.name!='Arrondissement'
+  if data.title!='Arrondissement'
     +block-aside({"title": data.title, "title_id": "filter-#{data.name}", "modifiers": modifiers})
       ul.block-aside-items
         each item in data.items
