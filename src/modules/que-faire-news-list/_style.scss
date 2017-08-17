@@ -20,6 +20,7 @@
     position: relative;
     top: 18px;
     z-index: 10;
+    cursor:pointer;
   }
   .que-faire-header-title{
     border-left:1px solid;
@@ -29,7 +30,7 @@
     margin-left: 40px;
     top: 18px;
     position: relative;
-    
+
     .header-title{
       color: $white;
       font-size: 1.8rem;
@@ -78,7 +79,7 @@
 @media (max-width:550px) {
   .que-faire-news-list-header{
     text-align: center;
-    
+
     .que-faire-header-logo{
       display: block;
       float: inherit;
@@ -93,7 +94,7 @@
        padding:25px 0 15px;
        text-align: center;
        top:inherit;
-       
+
       .header-title{
         margin: 0 auto;
         max-width:75%;
@@ -108,7 +109,7 @@
     margin: 0;
     max-width: 100%;
     width: 100%;
-   
+
     .que-faire-header-title{
       .header-title{
         font-size: 1.6rem;
@@ -128,7 +129,7 @@
       }
     }
   }
- 
+
   .que-faire-news-list-header{
     .que-faire-header-logo{
       height: 139px;
