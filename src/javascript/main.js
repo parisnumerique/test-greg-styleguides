@@ -39,6 +39,7 @@ require('../modules/sections-panel/script');
 require('../modules/share/script');
 require('../modules/video-cover/script');
 require('../modules/video-home/script');
+require('../modules/que-faire-news-list/script');
 
 // load our templates
 require('../templates/document/script');
