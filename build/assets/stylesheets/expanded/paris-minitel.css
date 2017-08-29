@@ -1234,7 +1234,8 @@ body {
     */
     font-size: 5.4rem;
     text-align: center;
-    vertical-align: -2px; }
+    vertical-align: -2px;
+    color: #0C518A; }
   .block-content-social .block-content-count {
     font-weight: 700; }
   .block-content-social .block-content-unit {
