@@ -291,6 +291,27 @@ templatizer["accordion"]["accordion"] = function tmpl_accordion_accordion(data) 
     return buf.join("");
 };
 
+// audio.jade compiled template
+templatizer["audio"] = function tmpl_audio(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// audio.jade:image compiled template
+templatizer["audio"]["image"] = function tmpl_audio_image(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-audio", data.modifiers ], [ null, null, true ]) + ">");
+    var title = [ data.title ];
+    if (data.credit) {
+        title.push("(" + data.credit + ")");
+    }
+    title = title.join(" ");
+    buf.push("<audio><source" + jade.attr("src", data.src, true, false) + "/></audio></div>");
+    return buf.join("");
+};
+
 // buttons.jade compiled template
 templatizer["buttons"] = function tmpl_buttons(locals) {
     var buf = [];
@@ -6162,42 +6183,6 @@ templatizer["tags"]["tags"] = function tmpl_tags_tags(data) {
     return buf.join("");
 };
 
-// video-home-news.jade compiled template
-templatizer["video-home-news"] = function tmpl_video_home_news(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// video-home-news.jade:video-home-news compiled template
-templatizer["video-home-news"]["video-home-news"] = function tmpl_video_home_news_video_home_news(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="video-home-modal"><div class="video-home-modal-content"><div class="video-home-modal-header"><span class="video-home-close"></span></div><div class="video-home-modal-body"></div></div></div><div class="video-home-placeholder">' + (null == (jade_interp = data.placeholder) ? "" : jade_interp) + '</div><ul class="video-home-news"><li' + jade.cls([ "video-home-list-item", data.items[0].modifiers ], [ null, true ]) + "><a" + jade.attr("href", data.items[0].href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = data.items[0].embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", data.items[0].image && "background-image: url(" + data.items[0].image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = data.items[0].text) ? "" : jade_interp) + '<div class="video-home-duration">' + jade.escape(null == (jade_interp = data.items[0].duration) ? "" : jade_interp) + '</div></div></div></div></a><li class="video-home-list-wrapper">');
-    (function() {
-        var $$obj = data.items;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var item = $$obj[$index];
-                if (item.modifiers && item.modifiers.indexOf("small") != -1) {
-                    buf.push("<div" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '<div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></div></a></div>");
-                }
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var item = $$obj[$index];
-                if (item.modifiers && item.modifiers.indexOf("small") != -1) {
-                    buf.push("<div" + jade.cls([ "video-home-list-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ' class="video-home-item"><div class="video-home-wrapper"><div class="video-home-embed">' + (null == (jade_interp = item.embed_html) ? "" : jade_interp) + "</div><div" + jade.attr("style", item.image && "background-image: url(" + item.image + ");", true, false) + ' class="video-home-image"></div><div class="video-home-content"><div class="video-home-title">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + '<div class="video-home-duration">' + jade.escape(null == (jade_interp = item.duration) ? "" : jade_interp) + "</div></div></div></div></a></div>");
-                }
-            }
-        }
-    }).call(this);
-    buf.push("</li></li></ul>");
-    return buf.join("");
-};
-
 // video-cover.jade compiled template
 templatizer["video-cover"] = function tmpl_video_cover(locals) {
     var buf = [];
@@ -6352,6 +6337,132 @@ templatizer["video-home"]["video-home"] = function tmpl_video_home_video_home(da
         }
     }).call(this);
     buf.push("</ul>");
+    return buf.join("");
+};
+
+// block-content-social.jade compiled template
+templatizer["block-content-social"] = function tmpl_block_content_social(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    var locals_for_with = locals || {};
+    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
+    return buf.join("");
+};
+
+// block-content-social.jade:block-content compiled template
+templatizer["block-content-social"]["block-content"] = function tmpl_block_content_social_block_content(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var attributes = data.attributes || {};
+    buf.push("<div" + jade.attrs(jade.merge([ {
+        "class": (jade_interp = [ null, true ], jade.joinClasses([ "block-content", data.modifiers ].map(jade.joinClasses).map(function(cls, i) {
+            return jade_interp[i] ? jade.escape(cls) : cls;
+        })))
+    }, attributes ]), false) + '><h3 class="block-content-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h3><div class="block-content-content">');
+    if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    }
+    if (block) {
+        block && block(buf);
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
+
+// block-content-social.jade:block-content-social compiled template
+templatizer["block-content-social"]["block-content-social"] = function tmpl_block_content_social_block_content_social(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
+    modifiers.push("block-content-social");
+    buf.push(templatizer["block-content-social"]["block-content"].call({
+        block: function(buf) {
+            if (data.modifiers && data.modifiers.indexOf("color-secondary-background") !== -1) {
+                if (data.modifiers.indexOf("clear") !== -1) {
+                    buf.push('<ul class="block-content-items float">');
+                    (function() {
+                        var $$obj = data.items;
+                        if ("number" == typeof $$obj.length) {
+                            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                                var item = $$obj[$index];
+                                if (item.icon) {
+                                    if (item.link.href != "") {
+                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
+                                    }
+                                }
+                            }
+                        } else {
+                            var $$l = 0;
+                            for (var $index in $$obj) {
+                                $$l++;
+                                var item = $$obj[$index];
+                                if (item.icon) {
+                                    if (item.link.href != "") {
+                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
+                                    }
+                                }
+                            }
+                        }
+                    }).call(this);
+                    buf.push('</ul><ul class="block-content-items float">');
+                    (function() {
+                        var $$obj = data.items;
+                        if ("number" == typeof $$obj.length) {
+                            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                                var item = $$obj[$index];
+                                if (item.image) {
+                                    if (item.link.href != "") {
+                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + "><div" + jade.attr("style", "background-image: url(/modules/block-content-social/images/" + item.image + ".png);", true, false) + ' class="block-content-item-image"></div></a></li>');
+                                    }
+                                }
+                            }
+                        } else {
+                            var $$l = 0;
+                            for (var $index in $$obj) {
+                                $$l++;
+                                var item = $$obj[$index];
+                                if (item.image) {
+                                    if (item.link.href != "") {
+                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + "><div" + jade.attr("style", "background-image: url(/modules/block-content-social/images/" + item.image + ".png);", true, false) + ' class="block-content-item-image"></div></a></li>');
+                                    }
+                                }
+                            }
+                        }
+                    }).call(this);
+                    buf.push("</ul>");
+                } else {
+                    buf.push('<ul class="block-content-items">');
+                    (function() {
+                        var $$obj = data.items;
+                        if ("number" == typeof $$obj.length) {
+                            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                                var item = $$obj[$index];
+                                if (item.link.href != "") {
+                                    buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
+                                }
+                            }
+                        } else {
+                            var $$l = 0;
+                            for (var $index in $$obj) {
+                                $$l++;
+                                var item = $$obj[$index];
+                                if (item.link.href != "") {
+                                    buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
+                                }
+                            }
+                        }
+                    }).call(this);
+                    buf.push("</ul>");
+                }
+            }
+            if (data.link) {
+                buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' class="block-content-link">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a>");
+            }
+        }
+    }, {
+        title: data.title,
+        modifiers: modifiers
+    }));
     return buf.join("");
 };
 
@@ -6921,132 +7032,6 @@ templatizer["rheader"]["rheader-mobile-nav"] = function tmpl_rheader_rheader_mob
         }
     }).call(this);
     buf.push("</ul></div>");
-    return buf.join("");
-};
-
-// block-content-social.jade compiled template
-templatizer["block-content-social"] = function tmpl_block_content_social(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    var locals_for_with = locals || {};
-    (function(JSON) {}).call(this, "JSON" in locals_for_with ? locals_for_with.JSON : typeof JSON !== "undefined" ? JSON : undefined);
-    return buf.join("");
-};
-
-// block-content-social.jade:block-content compiled template
-templatizer["block-content-social"]["block-content"] = function tmpl_block_content_social_block_content(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var attributes = data.attributes || {};
-    buf.push("<div" + jade.attrs(jade.merge([ {
-        "class": (jade_interp = [ null, true ], jade.joinClasses([ "block-content", data.modifiers ].map(jade.joinClasses).map(function(cls, i) {
-            return jade_interp[i] ? jade.escape(cls) : cls;
-        })))
-    }, attributes ]), false) + '><h3 class="block-content-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + '</h3><div class="block-content-content">');
-    if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    if (block) {
-        block && block(buf);
-    }
-    buf.push("</div></div>");
-    return buf.join("");
-};
-
-
-// block-content-social.jade:block-content-social compiled template
-templatizer["block-content-social"]["block-content-social"] = function tmpl_block_content_social_block_content_social(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var modifiers = JSON.parse(JSON.stringify(data.modifiers || []));
-    modifiers.push("block-content-social");
-    buf.push(templatizer["block-content-social"]["block-content"].call({
-        block: function(buf) {
-            if (data.modifiers && data.modifiers.indexOf("color-secondary-background") !== -1) {
-                if (data.modifiers.indexOf("clear") !== -1) {
-                    buf.push('<ul class="block-content-items float">');
-                    (function() {
-                        var $$obj = data.items;
-                        if ("number" == typeof $$obj.length) {
-                            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                                var item = $$obj[$index];
-                                if (item.icon) {
-                                    if (item.link.href != "") {
-                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
-                                    }
-                                }
-                            }
-                        } else {
-                            var $$l = 0;
-                            for (var $index in $$obj) {
-                                $$l++;
-                                var item = $$obj[$index];
-                                if (item.icon) {
-                                    if (item.link.href != "") {
-                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
-                                    }
-                                }
-                            }
-                        }
-                    }).call(this);
-                    buf.push('</ul><ul class="block-content-items float">');
-                    (function() {
-                        var $$obj = data.items;
-                        if ("number" == typeof $$obj.length) {
-                            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                                var item = $$obj[$index];
-                                if (item.image) {
-                                    if (item.link.href != "") {
-                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + "><div" + jade.attr("style", "background-image: url(/modules/block-content-social/images/" + item.image + ".png);", true, false) + ' class="block-content-item-image"></div></a></li>');
-                                    }
-                                }
-                            }
-                        } else {
-                            var $$l = 0;
-                            for (var $index in $$obj) {
-                                $$l++;
-                                var item = $$obj[$index];
-                                if (item.image) {
-                                    if (item.link.href != "") {
-                                        buf.push('<li class="block-content-item clear"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + "><div" + jade.attr("style", "background-image: url(/modules/block-content-social/images/" + item.image + ".png);", true, false) + ' class="block-content-item-image"></div></a></li>');
-                                    }
-                                }
-                            }
-                        }
-                    }).call(this);
-                    buf.push("</ul>");
-                } else {
-                    buf.push('<ul class="block-content-items">');
-                    (function() {
-                        var $$obj = data.items;
-                        if ("number" == typeof $$obj.length) {
-                            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                                var item = $$obj[$index];
-                                if (item.link.href != "") {
-                                    buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
-                                }
-                            }
-                        } else {
-                            var $$l = 0;
-                            for (var $index in $$obj) {
-                                $$l++;
-                                var item = $$obj[$index];
-                                if (item.link.href != "") {
-                                    buf.push('<li class="block-content-item"><a' + jade.attr("href", item.link.href, true, false) + jade.attr("target", item.link.target, true, false) + '><div class="block-content-count"><i aria-hidden="true"' + jade.cls([ "block-content-icon", "icon-" + item.icon + "" ], [ null, true ]) + '></i><div class="block-content-link">' + jade.escape(null == (jade_interp = item.link.text) ? "" : jade_interp) + "</div></div></a></li>");
-                                }
-                            }
-                        }
-                    }).call(this);
-                    buf.push("</ul>");
-                }
-            }
-            if (data.link) {
-                buf.push("<a" + jade.attr("href", data.link.href, true, false) + ' class="block-content-link">' + jade.escape(null == (jade_interp = data.link.text) ? "" : jade_interp) + "</a>");
-            }
-        }
-    }, {
-        title: data.title,
-        modifiers: modifiers
-    }));
     return buf.join("");
 };
 
