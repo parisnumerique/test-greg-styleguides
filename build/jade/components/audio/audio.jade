@@ -1,0 +1,7 @@
+mixin image(data)
+  .component.component-audio(class=data.modifiers)
+    - var title = [data.title]
+    - if (data.credit) {title.push("(" + data.credit + ")")}
+    - title = title.join(" ")
+    audio
+      source(src=data.src)
