@@ -1,6 +1,7 @@
 {
   "components": [
     "accordion",
+    "audio",
     "buttons",
     "card",
     "districts",
