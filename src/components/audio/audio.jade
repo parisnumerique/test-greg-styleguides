@@ -5,8 +5,8 @@ mixin audio(data)
       code audio
       | .
       if data.mp3.src
-        source(src=data.mp3.src type="mp3")
+        source(src=data.mp3.src type="audio/mp3")
       if data.ogg.src
-        source(src=data.ogg.src type="ogg")
+        source(src=data.ogg.src type="audio/ogg")
       if data.wav.src
-        source(src=data.wav.src type="wav")
+        source(src=data.wav.src type="audio/wav")
