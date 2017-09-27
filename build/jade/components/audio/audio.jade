@@ -1,9 +1,12 @@
 mixin audio(data)
   .component.component-audio
-    - var title = [data.title]
-    - title = title.join(" ")
     audio(controls='controls')
       | Votre navigateur ne prend pas en charge l'élément
       code audio
       | .
-      source(src=data.src type=data.type)
+      if data.mp3.src
+        source(src=data.mp3.src type="mp3")
+      if data.ogg.src
+        source(src=data.ogg.src type="ogg")
+      if data.wav.src
+        source(src=data.wav.src type="wav")
