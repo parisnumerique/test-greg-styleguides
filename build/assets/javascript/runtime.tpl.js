@@ -312,6 +312,9 @@ templatizer["audio"]["audio"] = function tmpl_audio_audio(data) {
     if (data.wav.src) {
         buf.push("<source" + jade.attr("src", data.wav.src, true, false) + ' type="audio/wav"/>');
     }
+    if (data.mp4.src) {
+        buf.push("<source" + jade.attr("src", data.mp4.src, true, false) + ' type="audio/mp4"/>');
+    }
     buf.push("</audio></div>");
     return buf.join("");
 };
@@ -3153,38 +3156,6 @@ templatizer["document-heading"]["document-heading"] = function tmpl_document_hea
     return buf.join("");
 };
 
-// footer.jade compiled template
-templatizer["footer"] = function tmpl_footer(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// footer.jade:footer compiled template
-templatizer["footer"]["footer"] = function tmpl_footer_footer(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<footer role="contentinfo" class="footer"><div class="layout-wrapper footer-wrapper"><a' + jade.attr("href", data.logo.href, true, false) + ' class="footer-logo"><img' + jade.attr("src", data.logo.src, true, false) + jade.attr("alt", data.logo.alt, true, false) + '/></a><ul class="footer-links">');
-    (function() {
-        var $$obj = data.items;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var item = $$obj[$index];
-                buf.push("<li" + jade.cls([ item.modifiers ], [ true ]) + "><a" + jade.attr("href", item.href, true, false) + jade.attr("target", item.target, true, false) + jade.attr("lang", item.lang, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var item = $$obj[$index];
-                buf.push("<li" + jade.cls([ item.modifiers ], [ true ]) + "><a" + jade.attr("href", item.href, true, false) + jade.attr("target", item.target, true, false) + jade.attr("lang", item.lang, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
-            }
-        }
-    }).call(this);
-    buf.push("</ul></div></footer>");
-    return buf.join("");
-};
-
 // error-heading.jade compiled template
 templatizer["error-heading"] = function tmpl_error_heading(locals) {
     var buf = [];
@@ -3258,6 +3229,38 @@ templatizer["error-heading"]["error-heading"] = function tmpl_error_heading_erro
         buf.push(templatizer["error-heading"]["button"](button));
     }
     buf.push("</div></div></div>");
+    return buf.join("");
+};
+
+// footer.jade compiled template
+templatizer["footer"] = function tmpl_footer(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// footer.jade:footer compiled template
+templatizer["footer"]["footer"] = function tmpl_footer_footer(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<footer role="contentinfo" class="footer"><div class="layout-wrapper footer-wrapper"><a' + jade.attr("href", data.logo.href, true, false) + ' class="footer-logo"><img' + jade.attr("src", data.logo.src, true, false) + jade.attr("alt", data.logo.alt, true, false) + '/></a><ul class="footer-links">');
+    (function() {
+        var $$obj = data.items;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var item = $$obj[$index];
+                buf.push("<li" + jade.cls([ item.modifiers ], [ true ]) + "><a" + jade.attr("href", item.href, true, false) + jade.attr("target", item.target, true, false) + jade.attr("lang", item.lang, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var item = $$obj[$index];
+                buf.push("<li" + jade.cls([ item.modifiers ], [ true ]) + "><a" + jade.attr("href", item.href, true, false) + jade.attr("target", item.target, true, false) + jade.attr("lang", item.lang, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+            }
+        }
+    }).call(this);
+    buf.push("</ul></div></footer>");
     return buf.join("");
 };
 
