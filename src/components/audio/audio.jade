@@ -1,10 +1,14 @@
 mixin audio(data)
-  .component.component-audio(class=data.modifiers)
-    - var title = [data.title]
-    - if (data.credit) {title.push("(" + data.credit + ")")}
-    - title = title.join(" ")
+  .component.component-audio
     audio(controls='controls')
       | Votre navigateur ne prend pas en charge l'élément
       code audio
       | .
-      source(src=data.src type=data.type)
+      if data.mp3.src
+        source(src=data.mp3.src type="audio/mp3")
+      if data.ogg.src
+        source(src=data.ogg.src type="audio/ogg")
+      if data.wav.src
+        source(src=data.wav.src type="audio/wav")
+      if data.mp4.src
+        source(src=data.mp4.src type="audio/mp4")
