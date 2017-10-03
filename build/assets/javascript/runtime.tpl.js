@@ -1740,9 +1740,6 @@ templatizer["rush-hours"]["rush-hours-td"] = function tmpl_rush_hours_rush_hours
     return buf.join("");
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // postit.jade compiled template
 templatizer["postit"] = function tmpl_postit(locals) {
     var buf = [];
@@ -1769,9 +1766,6 @@ templatizer["postit"]["postit"] = function tmpl_postit_postit(data) {
     return buf.join("");
 };
 
->>>>>>> develop
-=======
->>>>>>> develop
 // sharelines.jade compiled template
 templatizer["sharelines"] = function tmpl_sharelines(locals) {
     var buf = [];
