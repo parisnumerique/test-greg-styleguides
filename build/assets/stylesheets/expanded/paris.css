@@ -315,6 +315,9 @@ input:focus, textarea:focus {
 .icon-twitter:before {
   content: ""; }
 
+.icon-youtube:before {
+  content: ""; }
+
 .hidden-accessibly {
   position: absolute !important;
   height: 1px;
