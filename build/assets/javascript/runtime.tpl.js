@@ -291,34 +291,6 @@ templatizer["accordion"]["accordion"] = function tmpl_accordion_accordion(data) 
     return buf.join("");
 };
 
-// audio.jade compiled template
-templatizer["audio"] = function tmpl_audio(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// audio.jade:audio compiled template
-templatizer["audio"]["audio"] = function tmpl_audio_audio(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="component component-audio"><audio controls="controls">Votre navigateur ne prend pas en charge l\'élément<code>audio</code>.');
-    if (data.mp3.src) {
-        buf.push("<source" + jade.attr("src", data.mp3.src, true, false) + ' type="audio/mp3"/>');
-    }
-    if (data.ogg.src) {
-        buf.push("<source" + jade.attr("src", data.ogg.src, true, false) + ' type="audio/ogg"/>');
-    }
-    if (data.wav.src) {
-        buf.push("<source" + jade.attr("src", data.wav.src, true, false) + ' type="audio/wav"/>');
-    }
-    if (data.mp4.src) {
-        buf.push("<source" + jade.attr("src", data.mp4.src, true, false) + ' type="audio/mp4"/>');
-    }
-    buf.push("</audio></div>");
-    return buf.join("");
-};
-
 // buttons.jade compiled template
 templatizer["buttons"] = function tmpl_buttons(locals) {
     var buf = [];
@@ -1013,6 +985,34 @@ templatizer["form"]["form"] = function tmpl_form_form(data) {
         }
     }).call(this);
     buf.push("</form></div>");
+    return buf.join("");
+};
+
+// audio.jade compiled template
+templatizer["audio"] = function tmpl_audio(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// audio.jade:audio compiled template
+templatizer["audio"]["audio"] = function tmpl_audio_audio(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="component component-audio"><audio controls="controls">Votre navigateur ne prend pas en charge l\'élément<code>audio</code>.');
+    if (data.mp3.src) {
+        buf.push("<source" + jade.attr("src", data.mp3.src, true, false) + ' type="audio/mp3"/>');
+    }
+    if (data.ogg.src) {
+        buf.push("<source" + jade.attr("src", data.ogg.src, true, false) + ' type="audio/ogg"/>');
+    }
+    if (data.wav.src) {
+        buf.push("<source" + jade.attr("src", data.wav.src, true, false) + ' type="audio/wav"/>');
+    }
+    if (data.mp4.src) {
+        buf.push("<source" + jade.attr("src", data.mp4.src, true, false) + ' type="audio/mp4"/>');
+    }
+    buf.push("</audio></div>");
     return buf.join("");
 };
 
@@ -3264,6 +3264,88 @@ templatizer["footer"]["footer"] = function tmpl_footer_footer(data) {
     return buf.join("");
 };
 
+// gallery-ugc.jade compiled template
+templatizer["gallery-ugc"] = function tmpl_gallery_ugc(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// gallery-ugc.jade:gallery-ugc compiled template
+templatizer["gallery-ugc"]["gallery-ugc"] = function tmpl_gallery_ugc_gallery_ugc(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="gallery-ugc"><div class="gallery-ugc-title">' + jade.escape(null == (jade_interp = data.title + " :") ? "" : jade_interp) + "</div>");
+    (function() {
+        var $$obj = data.hashtags;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var hashtag = $$obj[$index];
+                buf.push('<button type="button"' + jade.attr("title", hashtag.text, true, false) + jade.attr("data-hashtag", hashtag.id, true, false) + jade.cls([ "gallery-ugc-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</button>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var hashtag = $$obj[$index];
+                buf.push('<button type="button"' + jade.attr("title", hashtag.text, true, false) + jade.attr("data-hashtag", hashtag.id, true, false) + jade.cls([ "gallery-ugc-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</button>");
+            }
+        }
+    }).call(this);
+    (function() {
+        var $$obj = data.hashtags;
+        if ("number" == typeof $$obj.length) {
+            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                var hashtag = $$obj[$index];
+                buf.push("<ul" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-ugc-content">');
+                (function() {
+                    var $$obj = hashtag.items;
+                    if ("number" == typeof $$obj.length) {
+                        for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                            var item = $$obj[$index];
+                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
+                        }
+                    } else {
+                        var $$l = 0;
+                        for (var $index in $$obj) {
+                            $$l++;
+                            var item = $$obj[$index];
+                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
+                        }
+                    }
+                }).call(this);
+                buf.push("</ul>");
+            }
+        } else {
+            var $$l = 0;
+            for (var $index in $$obj) {
+                $$l++;
+                var hashtag = $$obj[$index];
+                buf.push("<ul" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-ugc-content">');
+                (function() {
+                    var $$obj = hashtag.items;
+                    if ("number" == typeof $$obj.length) {
+                        for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                            var item = $$obj[$index];
+                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
+                        }
+                    } else {
+                        var $$l = 0;
+                        for (var $index in $$obj) {
+                            $$l++;
+                            var item = $$obj[$index];
+                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
+                        }
+                    }
+                }).call(this);
+                buf.push("</ul>");
+            }
+        }
+    }).call(this);
+    buf.push("</div>");
+    return buf.join("");
+};
+
 // get-involved-list.jade compiled template
 templatizer["get-involved-list"] = function tmpl_get_involved_list(locals) {
     var buf = [];
@@ -3415,88 +3497,6 @@ templatizer["get-involved-list"]["get-involved-list"] = function tmpl_get_involv
         }
     }).call(this);
     buf.push("</ul></div>");
-    return buf.join("");
-};
-
-// gallery-ugc.jade compiled template
-templatizer["gallery-ugc"] = function tmpl_gallery_ugc(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// gallery-ugc.jade:gallery-ugc compiled template
-templatizer["gallery-ugc"]["gallery-ugc"] = function tmpl_gallery_ugc_gallery_ugc(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="gallery-ugc"><div class="gallery-ugc-title">' + jade.escape(null == (jade_interp = data.title + " :") ? "" : jade_interp) + "</div>");
-    (function() {
-        var $$obj = data.hashtags;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var hashtag = $$obj[$index];
-                buf.push('<button type="button"' + jade.attr("title", hashtag.text, true, false) + jade.attr("data-hashtag", hashtag.id, true, false) + jade.cls([ "gallery-ugc-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</button>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var hashtag = $$obj[$index];
-                buf.push('<button type="button"' + jade.attr("title", hashtag.text, true, false) + jade.attr("data-hashtag", hashtag.id, true, false) + jade.cls([ "gallery-ugc-hashtag", hashtag.current ? "current" : null ], [ null, true ]) + ">" + jade.escape(null == (jade_interp = hashtag.text) ? "" : jade_interp) + "</button>");
-            }
-        }
-    }).call(this);
-    (function() {
-        var $$obj = data.hashtags;
-        if ("number" == typeof $$obj.length) {
-            for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                var hashtag = $$obj[$index];
-                buf.push("<ul" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-ugc-content">');
-                (function() {
-                    var $$obj = hashtag.items;
-                    if ("number" == typeof $$obj.length) {
-                        for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                            var item = $$obj[$index];
-                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
-                        }
-                    } else {
-                        var $$l = 0;
-                        for (var $index in $$obj) {
-                            $$l++;
-                            var item = $$obj[$index];
-                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
-                        }
-                    }
-                }).call(this);
-                buf.push("</ul>");
-            }
-        } else {
-            var $$l = 0;
-            for (var $index in $$obj) {
-                $$l++;
-                var hashtag = $$obj[$index];
-                buf.push("<ul" + jade.attr("style", hashtag.current ? "" : "display: none;", true, false) + jade.attr("id", "gallery-ugc-" + hashtag.id + "", true, false) + ' class="gallery-ugc-content">');
-                (function() {
-                    var $$obj = hashtag.items;
-                    if ("number" == typeof $$obj.length) {
-                        for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                            var item = $$obj[$index];
-                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
-                        }
-                    } else {
-                        var $$l = 0;
-                        for (var $index in $$obj) {
-                            $$l++;
-                            var item = $$obj[$index];
-                            buf.push('<li class="gallery-ugc-item"><a' + jade.attr("href", item.href, true, false) + ' target="_blank"' + jade.attr("style", "background-image: url(" + item.image + ");", true, false) + jade.attr("title", item.title, true, false) + ' class="gallery-ugc-image"><div class="overlay"><div class="gallery-ugc-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</div></div></a></li>");
-                        }
-                    }
-                }).call(this);
-                buf.push("</ul>");
-            }
-        }
-    }).call(this);
-    buf.push("</div>");
     return buf.join("");
 };
 

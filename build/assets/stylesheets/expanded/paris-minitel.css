@@ -4112,16 +4112,16 @@ html.touch .que-faire-news-list-item .news-card-wrapper {
   .rheader.green .rheader-logo,
   .rheader.green .rheader-button-menu,
   .rheader.green .rheader-mobile-nav {
-    background-color: #43B57E; }
+    background-color: #34A874; }
   .rheader.green .rheader-logo-mairie {
-    border-color: #43B57E; }
+    border-color: #34A874; }
   .rheader.green .rheader-wrapper > .rheader-button,
   .rheader.green .rheader-button-menu,
   .rheader.green .rheader-button-search {
-    border-color: #359064; }
+    border-color: #288159; }
   .rheader.green .rheader-wrapper > .rheader-button:hover,
   .rheader.green .rheader-wrapper > .rheader-button.active {
-    background-color: #359064; }
+    background-color: #288159; }
   .rheader.yellow,
   .rheader.yellow .rheader-logo,
   .rheader.yellow .rheader-button-menu,
@@ -4427,8 +4427,8 @@ body.rheader-mobile-nav-open {
 .rheader-nav-item {
   transition: background-color 0.3s ease; }
   .rheader-nav-item a {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: bold;
     text-transform: uppercase; }
     .rheader-nav-item a strong {
       font-weight: normal; }

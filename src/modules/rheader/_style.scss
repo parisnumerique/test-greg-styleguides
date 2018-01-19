@@ -9,7 +9,7 @@
   z-index: 300;
   // arrondissements modifiers
   @include rheader-modifier-background-color('light-blue', $light-blue);
-  @include rheader-modifier-background-color('green', $green1);
+  @include rheader-modifier-background-color('green', $green2);
   @include rheader-modifier-background-color('yellow', $yellow1);
   @include rheader-modifier-background-color('dark-blue', $color-secondary);
   @include rheader-modifier-background-color('salmon', $salmon);
@@ -277,8 +277,8 @@ body.rheader-mobile-nav-open {
   transition: background-color 0.3s ease;
 
   a {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: bold;
     text-transform: uppercase;
 
     strong {font-weight: normal;}
