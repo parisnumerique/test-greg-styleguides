@@ -17,6 +17,9 @@ mixin form-tel(data)
 mixin form-url(data)
   +form-text(data)
 
+mixin form-date(data)
+  +form-text(data)
+
 mixin form-citizen(data)
   - data.type = 'text';
   +form-text(data)
