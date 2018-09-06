@@ -2621,7 +2621,7 @@ html.no-touch .jumbotron:not(.no-overlay):not(.home):hover .jumbotron-wrapper:af
     background-size: cover;
     color: #FFF;
     display: table;
-    height: 320px;
+    height: 175px;
     position: relative;
     text-align: center; }
     .links-group-header a:hover:after {
