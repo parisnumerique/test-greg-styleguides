@@ -254,6 +254,34 @@ var templatizer = {};
 
 templatizer["images"] = {};
 
+// audio.jade compiled template
+templatizer["audio"] = function tmpl_audio(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// audio.jade:audio compiled template
+templatizer["audio"]["audio"] = function tmpl_audio_audio(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push('<div class="component component-audio"><audio controls="controls">Votre navigateur ne prend pas en charge l\'élément<code>audio</code>.');
+    if (data.mp3.src) {
+        buf.push("<source" + jade.attr("src", data.mp3.src, true, false) + ' type="audio/mp3"/>');
+    }
+    if (data.ogg.src) {
+        buf.push("<source" + jade.attr("src", data.ogg.src, true, false) + ' type="audio/ogg"/>');
+    }
+    if (data.wav.src) {
+        buf.push("<source" + jade.attr("src", data.wav.src, true, false) + ' type="audio/wav"/>');
+    }
+    if (data.mp4.src) {
+        buf.push("<source" + jade.attr("src", data.mp4.src, true, false) + ' type="audio/mp4"/>');
+    }
+    buf.push("</audio></div>");
+    return buf.join("");
+};
+
 // accordion.jade compiled template
 templatizer["accordion"] = function tmpl_accordion(locals) {
     var buf = [];
@@ -288,34 +316,6 @@ templatizer["accordion"]["accordion"] = function tmpl_accordion_accordion(data) 
         }
     }).call(this);
     buf.push("</div>");
-    return buf.join("");
-};
-
-// audio.jade compiled template
-templatizer["audio"] = function tmpl_audio(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// audio.jade:audio compiled template
-templatizer["audio"]["audio"] = function tmpl_audio_audio(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push('<div class="component component-audio"><audio controls="controls">Votre navigateur ne prend pas en charge l\'élément<code>audio</code>.');
-    if (data.mp3.src) {
-        buf.push("<source" + jade.attr("src", data.mp3.src, true, false) + ' type="audio/mp3"/>');
-    }
-    if (data.ogg.src) {
-        buf.push("<source" + jade.attr("src", data.ogg.src, true, false) + ' type="audio/ogg"/>');
-    }
-    if (data.wav.src) {
-        buf.push("<source" + jade.attr("src", data.wav.src, true, false) + ' type="audio/wav"/>');
-    }
-    if (data.mp4.src) {
-        buf.push("<source" + jade.attr("src", data.mp4.src, true, false) + ' type="audio/mp4"/>');
-    }
-    buf.push("</audio></div>");
     return buf.join("");
 };
 
@@ -630,6 +630,31 @@ templatizer["faq"]["accordion"] = function tmpl_faq_accordion(data) {
 templatizer["faq"]["faq"] = function tmpl_faq_faq(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
     buf.push(templatizer["faq"]["accordion"](data));
+    return buf.join("");
+};
+
+// frame.jade compiled template
+templatizer["frame"] = function tmpl_frame(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// frame.jade:frame compiled template
+templatizer["frame"]["frame"] = function tmpl_frame_frame(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "component", "component-frame", data ? data.modifiers : [] ], [ null, null, true ]) + "><fieldset>");
+    if (data.title) {
+        buf.push("<legend>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</legend>");
+    }
+    buf.push("<div>");
+    if (block) {
+        block && block(buf);
+    } else if (data.content) {
+        buf.push(null == (jade_interp = data.content) ? "" : jade_interp);
+    }
+    buf.push("</div></fieldset></div>");
     return buf.join("");
 };
 
@@ -1013,31 +1038,6 @@ templatizer["form"]["form"] = function tmpl_form_form(data) {
         }
     }).call(this);
     buf.push("</form></div>");
-    return buf.join("");
-};
-
-// frame.jade compiled template
-templatizer["frame"] = function tmpl_frame(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// frame.jade:frame compiled template
-templatizer["frame"]["frame"] = function tmpl_frame_frame(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "component", "component-frame", data ? data.modifiers : [] ], [ null, null, true ]) + "><fieldset>");
-    if (data.title) {
-        buf.push("<legend>" + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</legend>");
-    }
-    buf.push("<div>");
-    if (block) {
-        block && block(buf);
-    } else if (data.content) {
-        buf.push(null == (jade_interp = data.content) ? "" : jade_interp);
-    }
-    buf.push("</div></fieldset></div>");
     return buf.join("");
 };
 

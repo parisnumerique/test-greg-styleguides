@@ -4482,7 +4482,7 @@ body.rheader-mobile-nav-open {
   display: none; }
 
 .rheader.fixed + .layout-main > .layout-content:first-child {
-  padding-top: 60px; }
+  padding-top: 0px; }
 
 .rheader.arrondissement .rheader-logo {
   overflow: visible; }
@@ -4843,7 +4843,7 @@ body.rheader-mobile-nav-open {
 @media (max-width: 600px) {
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
-    padding-top: 60px; } }
+    padding-top: 0px; } }
 
 @media (min-width: 1161px) {
   .rheader.fixed.extended + .layout-main > .layout-content:first-child,
@@ -4856,7 +4856,7 @@ body.rheader-mobile-nav-open {
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
     background-color: #fd28fc;
-    padding-top: 80px; }
+    padding-top: 0px; }
   .rheader + .quick-access {
     margin-top: 80px; } }
 

@@ -352,7 +352,7 @@ body.rheader-mobile-nav-open {
 }
 
 .rheader.fixed + .layout-main > .layout-content:first-child {
-  padding-top: $rheader-height-small;
+  padding-top: 0px;
 }
 
 .rheader.arrondissement {
@@ -372,7 +372,7 @@ body.rheader-mobile-nav-open {
 @media (max-width: $rheader-small-max) {
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
-    padding-top: $rheader-height-small;
+    padding-top: 0px;
   }
 }
 
@@ -390,7 +390,7 @@ body.rheader-mobile-nav-open {
   .rheader.fixed + .layout-main > .layout-content:first-child,
   .rheader + .quick-access + .layout-main > .layout-content:first-child {
     background-color: $color-primary; // to prevent a white area below header (edge case)
-    padding-top: $rheader-height-medium;
+    padding-top: 0px;
   }
   .rheader + .quick-access {
     margin-top: $rheader-height-medium;
