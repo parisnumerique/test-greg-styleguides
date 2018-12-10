@@ -379,10 +379,10 @@ body.rheader-mobile-nav-open {
 @media (min-width: $rheader-large-min) {
   .rheader.fixed.extended + .layout-main > .layout-content:first-child,
   .rheader.extended + .quick-access + .layout-main > .layout-content:first-child {
-    padding-top: $rheader-height-medium + 20px;
+    padding-top: 0px;
   }
   .rheader.extended + .quick-access {
-    margin-top: $rheader-height-medium + 20px;
+    margin-top: 0px;
   }
 }
 
