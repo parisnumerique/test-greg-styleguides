@@ -2167,104 +2167,6 @@ templatizer["block-aside-access"]["block-aside-access"] = function tmpl_block_as
     return buf.join("");
 };
 
-// block-aside-checkboxes.jade compiled template
-templatizer["block-aside-checkboxes"] = function tmpl_block_aside_checkboxes(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// block-aside-checkboxes.jade:block-aside compiled template
-templatizer["block-aside-checkboxes"]["block-aside"] = function tmpl_block_aside_checkboxes_block_aside(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "block-aside", data.modifiers ], [ null, true ]) + ">");
-    if (data.title && data.title != "Arrondissement") {
-        buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-aside-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
-    }
-    buf.push('<div class="block-aside-content">');
-    if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    if (block) {
-        block && block(buf);
-    }
-    buf.push("</div></div>");
-    return buf.join("");
-};
-
-
-// block-aside-checkboxes.jade:block-aside-checkboxes compiled template
-templatizer["block-aside-checkboxes"]["block-aside-checkboxes"] = function tmpl_block_aside_checkboxes_block_aside_checkboxes(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var modifiers = data.modifiers || [];
-    modifiers.push("block-aside-checkboxes");
-    buf.push(templatizer["block-aside-checkboxes"]["block-aside"].call({
-        block: function(buf) {
-            buf.push('<ul class="block-aside-items">');
-            (function() {
-                var $$obj = data.items;
-                if ("number" == typeof $$obj.length) {
-                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                        var item = $$obj[$index];
-                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", "?" + data.name + "[]=" + item.value + "", true, false) + jade.attr("data-name", "" + data.name + "", true, false) + jade.attr("data-value", "" + item.value + "", true, false) + jade.cls([ {
-                            checked: item.checked
-                        } ], [ true ]) + '><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                        if (item.number) {
-                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
-                        }
-                        buf.push("</div></a></li>");
-                    }
-                } else {
-                    var $$l = 0;
-                    for (var $index in $$obj) {
-                        $$l++;
-                        var item = $$obj[$index];
-                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", "?" + data.name + "[]=" + item.value + "", true, false) + jade.attr("data-name", "" + data.name + "", true, false) + jade.attr("data-value", "" + item.value + "", true, false) + jade.cls([ {
-                            checked: item.checked
-                        } ], [ true ]) + '><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                        if (item.number) {
-                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
-                        }
-                        buf.push("</div></a></li>");
-                    }
-                }
-            }).call(this);
-            buf.push('</ul><select multiple="multiple"' + jade.attr("name", "" + data.name + "[]", true, false) + ' class="block-aside-select">');
-            (function() {
-                var $$obj = data.items;
-                if ("number" == typeof $$obj.length) {
-                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                        var item = $$obj[$index];
-                        buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                        if (item.number) {
-                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
-                        }
-                        buf.push("</option>");
-                    }
-                } else {
-                    var $$l = 0;
-                    for (var $index in $$obj) {
-                        $$l++;
-                        var item = $$obj[$index];
-                        buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
-                        if (item.number) {
-                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
-                        }
-                        buf.push("</option>");
-                    }
-                }
-            }).call(this);
-            buf.push("</select>");
-        }
-    }, {
-        title: data.title,
-        title_id: "filter-#{data.name}",
-        modifiers: modifiers
-    }));
-    return buf.join("");
-};
-
 // block-aside-contact.jade compiled template
 templatizer["block-aside-contact"] = function tmpl_block_aside_contact(locals) {
     var buf = [];
@@ -2404,6 +2306,104 @@ templatizer["block-aside-contact"]["block-aside-contact"] = function tmpl_block_
     }, {
         title: data.title,
         modifiers: block_modifiers
+    }));
+    return buf.join("");
+};
+
+// block-aside-checkboxes.jade compiled template
+templatizer["block-aside-checkboxes"] = function tmpl_block_aside_checkboxes(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// block-aside-checkboxes.jade:block-aside compiled template
+templatizer["block-aside-checkboxes"]["block-aside"] = function tmpl_block_aside_checkboxes_block_aside(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "block-aside", data.modifiers ], [ null, true ]) + ">");
+    if (data.title && data.title != "Arrondissement") {
+        buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-aside-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    }
+    buf.push('<div class="block-aside-content">');
+    if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    }
+    if (block) {
+        block && block(buf);
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
+
+// block-aside-checkboxes.jade:block-aside-checkboxes compiled template
+templatizer["block-aside-checkboxes"]["block-aside-checkboxes"] = function tmpl_block_aside_checkboxes_block_aside_checkboxes(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var modifiers = data.modifiers || [];
+    modifiers.push("block-aside-checkboxes");
+    buf.push(templatizer["block-aside-checkboxes"]["block-aside"].call({
+        block: function(buf) {
+            buf.push('<ul class="block-aside-items">');
+            (function() {
+                var $$obj = data.items;
+                if ("number" == typeof $$obj.length) {
+                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                        var item = $$obj[$index];
+                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", "?" + data.name + "[]=" + item.value + "", true, false) + jade.attr("data-name", "" + data.name + "", true, false) + jade.attr("data-value", "" + item.value + "", true, false) + jade.cls([ {
+                            checked: item.checked
+                        } ], [ true ]) + '><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                        if (item.number) {
+                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        }
+                        buf.push("</div></a></li>");
+                    }
+                } else {
+                    var $$l = 0;
+                    for (var $index in $$obj) {
+                        $$l++;
+                        var item = $$obj[$index];
+                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", "?" + data.name + "[]=" + item.value + "", true, false) + jade.attr("data-name", "" + data.name + "", true, false) + jade.attr("data-value", "" + item.value + "", true, false) + jade.cls([ {
+                            checked: item.checked
+                        } ], [ true ]) + '><div class="block-aside-item-checkbox"></div><div class="block-aside-item-text">' + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                        if (item.number) {
+                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        }
+                        buf.push("</div></a></li>");
+                    }
+                }
+            }).call(this);
+            buf.push('</ul><select multiple="multiple"' + jade.attr("name", "" + data.name + "[]", true, false) + ' class="block-aside-select">');
+            (function() {
+                var $$obj = data.items;
+                if ("number" == typeof $$obj.length) {
+                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                        var item = $$obj[$index];
+                        buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                        if (item.number) {
+                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        }
+                        buf.push("</option>");
+                    }
+                } else {
+                    var $$l = 0;
+                    for (var $index in $$obj) {
+                        $$l++;
+                        var item = $$obj[$index];
+                        buf.push("<option" + jade.attr("value", item.value, true, false) + jade.attr("selected", item.checked, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp));
+                        if (item.number) {
+                            buf.push(" (" + jade.escape((jade_interp = item.number) == null ? "" : jade_interp) + ")");
+                        }
+                        buf.push("</option>");
+                    }
+                }
+            }).call(this);
+            buf.push("</select>");
+        }
+    }, {
+        title: data.title,
+        title_id: "filter-#{data.name}",
+        modifiers: modifiers
     }));
     return buf.join("");
 };
