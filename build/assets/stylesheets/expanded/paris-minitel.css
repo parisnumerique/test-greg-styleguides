@@ -4681,9 +4681,9 @@ body.rheader-mobile-nav-open {
   .rheader.arrondissement .rheader-logo {
     width: 170px; }
   .rheader.arrondissement .rheader-logo-nef {
-    width: 30px; }
+    width: 45px; }
   .rheader.arrondissement .rheader-logo-paris {
-    width: 125px; }
+    width: 200px; }
   .rheader.arrondissement .rheader-logo-paris-svg {
     margin-top: 22px; }
   .rheader-wrapper > .rheader-button {
@@ -4829,9 +4829,9 @@ body.rheader-mobile-nav-open {
     left: 220px;
     top: 5px; }
   .rheader.arrondissement .rheader-logo-paris {
-    left: 65px;
+    left: 50px;
     right: auto;
-    width: 125px; }
+    width: 200px; }
   .rheader.arrondissement .rheader-locales {
     text-align: right;
     left: 40px; }
