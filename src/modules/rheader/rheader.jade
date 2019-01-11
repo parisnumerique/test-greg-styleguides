@@ -42,15 +42,6 @@ mixin rheader(data)
             .hidden-accessibly= data.logo.text
         if data.arrondissement
           .rheader-logo-mairie(style="background-image: url(/modules/rheader/images/mairie-#{data.arrondissement}.jpg)")
-      if data.locales
-        ul.rheader-locales
-          each locale in data.locales
-            li
-              a(href=locale.href lang=locale.lang title=locale.text class=(locale.current ? 'current' : null) target=locale.target)
-                if locale.current
-                  strong= locale.lang
-                else
-                  = locale.lang
       if data.buttons.search
         a.rheader-button.rheader-button-search(href=data.buttons.search.href title=data.buttons.search.text target=data.buttons.search.target aria-controls="rheader-search" role="button" class=data.buttons.search.current ? 'active' : null)
           if data.buttons.search.icon
