@@ -4143,9 +4143,9 @@ html.touch .que-faire-news-list-item .news-card-wrapper {
     color: #0C518A; }
   .rheader.text-blue .rheader-logo-nef-svg path,
   .rheader.text-blue .rheader-logo-paris-svg path {
-    fill: #0C518A; }
+    fill: #071F32; }
   .rheader.text-blue .rheader-logo-nef:after {
-    background-color: #0C518A; }
+    background-color: #071F32; }
   .rheader.text-blue .rheader-locales a {
     color: rgba(12, 81, 138, 0.6); }
     .rheader.text-blue .rheader-locales a strong {
@@ -4201,6 +4201,7 @@ html.touch .que-faire-news-list-item .news-card-wrapper {
     color: #FFF;
     text-decoration: none; }
   .rheader ul, .rheader ol {
+    display: none;
     list-style: none;
     margin: 0; }
   .rheader h1 {
