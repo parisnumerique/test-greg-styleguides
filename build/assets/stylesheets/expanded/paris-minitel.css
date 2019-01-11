@@ -4263,6 +4263,7 @@ html.touch .que-faire-news-list-item .news-card-wrapper {
   height: 100%;
   position: absolute;
   right: 0;
+  left: 50px;
   text-indent: -9999px;
   width: 106px; }
 
