@@ -229,7 +229,7 @@ textarea {
   color: #DF225A; }
 
 .color-secondary {
-  color: #0C518A; }
+  color: #071F32; }
 
 .color-tertiary {
   color: #F8E273; }
@@ -238,7 +238,7 @@ textarea {
   background-color: #DF225A; }
 
 .color-secondary-background {
-  background-color: #0C518A; }
+  background-color: #071F32; }
 
 .color-tertiary-background {
   background-color: #F8E273; }
@@ -272,10 +272,10 @@ h3 {
   color: #e0bd0b; }
 
 a {
-  color: #0C518A; }
+  color: #071F32; }
 
 a:visited {
-  color: #0a4373; }
+  color: #04111c; }
 
 img, video {
   max-width: 100%; }

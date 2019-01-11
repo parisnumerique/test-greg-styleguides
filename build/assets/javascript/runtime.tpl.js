@@ -2408,6 +2408,66 @@ templatizer["block-aside-contact"]["block-aside-contact"] = function tmpl_block_
     return buf.join("");
 };
 
+// block-aside-links.jade compiled template
+templatizer["block-aside-links"] = function tmpl_block_aside_links(locals) {
+    var buf = [];
+    var jade_mixins = {};
+    var jade_interp;
+    return buf.join("");
+};
+
+// block-aside-links.jade:block-aside compiled template
+templatizer["block-aside-links"]["block-aside"] = function tmpl_block_aside_links_block_aside(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    buf.push("<div" + jade.cls([ "block-aside", data.modifiers ], [ null, true ]) + ">");
+    if (data.title && data.title != "Arrondissement") {
+        buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-aside-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
+    }
+    buf.push('<div class="block-aside-content">');
+    if (data.block) {
+        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
+    }
+    if (block) {
+        block && block(buf);
+    }
+    buf.push("</div></div>");
+    return buf.join("");
+};
+
+
+// block-aside-links.jade:block-aside-links compiled template
+templatizer["block-aside-links"]["block-aside-links"] = function tmpl_block_aside_links_block_aside_links(data) {
+    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
+    var modifiers = data.modifiers || [];
+    modifiers.push("block-aside-links");
+    buf.push(templatizer["block-aside-links"]["block-aside"].call({
+        block: function(buf) {
+            buf.push('<ul class="block-aside-items">');
+            (function() {
+                var $$obj = data.items;
+                if ("number" == typeof $$obj.length) {
+                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
+                        var item = $$obj[$index];
+                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+                    }
+                } else {
+                    var $$l = 0;
+                    for (var $index in $$obj) {
+                        $$l++;
+                        var item = $$obj[$index];
+                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
+                    }
+                }
+            }).call(this);
+            buf.push("</ul>");
+        }
+    }, {
+        title: data.title,
+        modifiers: modifiers
+    }));
+    return buf.join("");
+};
+
 // block-aside.jade compiled template
 templatizer["block-aside"] = function tmpl_block_aside(locals) {
     var buf = [];
@@ -3652,66 +3712,6 @@ templatizer["last-update"] = function tmpl_last_update(locals) {
 templatizer["last-update"]["last-update"] = function tmpl_last_update_last_update(data) {
     var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
     buf.push('<div class="last-update">' + jade.escape(null == (jade_interp = data.text) ? "" : jade_interp) + "</div>");
-    return buf.join("");
-};
-
-// block-aside-links.jade compiled template
-templatizer["block-aside-links"] = function tmpl_block_aside_links(locals) {
-    var buf = [];
-    var jade_mixins = {};
-    var jade_interp;
-    return buf.join("");
-};
-
-// block-aside-links.jade:block-aside compiled template
-templatizer["block-aside-links"]["block-aside"] = function tmpl_block_aside_links_block_aside(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    buf.push("<div" + jade.cls([ "block-aside", data.modifiers ], [ null, true ]) + ">");
-    if (data.title && data.title != "Arrondissement") {
-        buf.push("<h3" + jade.attr("id", data.title_id, true, false) + ' class="block-aside-title">' + jade.escape(null == (jade_interp = data.title) ? "" : jade_interp) + "</h3>");
-    }
-    buf.push('<div class="block-aside-content">');
-    if (data.block) {
-        buf.push(null == (jade_interp = data.block) ? "" : jade_interp);
-    }
-    if (block) {
-        block && block(buf);
-    }
-    buf.push("</div></div>");
-    return buf.join("");
-};
-
-
-// block-aside-links.jade:block-aside-links compiled template
-templatizer["block-aside-links"]["block-aside-links"] = function tmpl_block_aside_links_block_aside_links(data) {
-    var block = this && this.block, attributes = this && this.attributes || {}, buf = [], jade_interp;
-    var modifiers = data.modifiers || [];
-    modifiers.push("block-aside-links");
-    buf.push(templatizer["block-aside-links"]["block-aside"].call({
-        block: function(buf) {
-            buf.push('<ul class="block-aside-items">');
-            (function() {
-                var $$obj = data.items;
-                if ("number" == typeof $$obj.length) {
-                    for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                        var item = $$obj[$index];
-                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
-                    }
-                } else {
-                    var $$l = 0;
-                    for (var $index in $$obj) {
-                        $$l++;
-                        var item = $$obj[$index];
-                        buf.push("<li" + jade.cls([ "block-aside-item", item.modifiers ], [ null, true ]) + "><a" + jade.attr("href", item.href, true, false) + ">" + jade.escape(null == (jade_interp = item.text) ? "" : jade_interp) + "</a></li>");
-                    }
-                }
-            }).call(this);
-            buf.push("</ul>");
-        }
-    }, {
-        title: data.title,
-        modifiers: modifiers
-    }));
     return buf.join("");
 };
 
@@ -6858,48 +6858,16 @@ templatizer["rheader"]["rheader"] = function tmpl_rheader_rheader(data) {
         };
         data.modifiers = data.modifiers.concat(districtsConfig[data.arrondissement].modifiers);
     }
-    buf.push('<header role="banner"' + jade.cls([ "rheader", data.modifiers ], [ null, true ]) + '><div class="rheader-wrapper"><a' + jade.attr("href", data.logo.href, true, false) + jade.attr("title", data.logo.title, true, false) + ' class="rheader-logo"><div class="rheader-logo-nef"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.1 35.1" style="enable-background:new 0 0 41.1 35.1;">\n<style type="text/css">\n\t.st0{fill:#071F32;}\n</style>\n<path class="st0" d="M37.8,20.8c-0.1,0-0.2,0.1-0.4,0.5c-3.5,7.6-9.8,11.2-16.6,11.2C7.3,32.6,4.2,21.5,4.1,21.2l6.9,1.3\n\tc0,0.1,2.7,6.1,9.6,6.1c7.3,0,12.4-7.3,12.4-14.9c0-6.8-2.9-10.7-7-13.7L7.3,8.6C7.1,8.7,7.1,9,7.3,9c10.3,2.4,12.1,9.8,11.6,14\n\tc-0.1,0.6,0.3,0.5,0.7-0.7c1.4-4.2,0.4-10.3-5.2-13.7c0,0,10.4-5.2,10.4-5.2c1.2,1,5.3,3.7,5.3,10.3c0,6.5-3.8,12.5-9.6,12.5\n\tc-5.8,0-7.8-5.9-7.8-6L0.4,17.6C0.2,17.5,0,17.7,0,17.9C1.1,27.3,8.6,35,19.5,35c9.1,0,15.2-5,17.8-12C38,21.4,37.9,20.8,37.8,20.8"\n\t/>\n</svg>\n</div>');
+    buf.push('<header role="banner"' + jade.cls([ "rheader", data.modifiers ], [ null, true ]) + '><div class="rheader-wrapper"><a' + jade.attr("href", data.logo.href, true, false) + jade.attr("title", data.logo.title, true, false) + ' class="rheader-logo"><div class="rheader-logo-nef"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.1 35.1" style="enable-background:new 0 0 41.1 35.1;">\n<path d="M37.8,20.8c-0.1,0-0.2,0.1-0.4,0.5c-3.5,7.6-9.8,11.2-16.6,11.2C7.3,32.6,4.2,21.5,4.1,21.2l6.9,1.3\n\tc0,0.1,2.7,6.1,9.6,6.1c7.3,0,12.4-7.3,12.4-14.9c0-6.8-2.9-10.7-7-13.7L7.3,8.6C7.1,8.7,7.1,9,7.3,9c10.3,2.4,12.1,9.8,11.6,14\n\tc-0.1,0.6,0.3,0.5,0.7-0.7c1.4-4.2,0.4-10.3-5.2-13.7c0,0,10.4-5.2,10.4-5.2c1.2,1,5.3,3.7,5.3,10.3c0,6.5-3.8,12.5-9.6,12.5\n\tc-5.8,0-7.8-5.9-7.8-6L0.4,17.6C0.2,17.5,0,17.7,0,17.9C1.1,27.3,8.6,35,19.5,35c9.1,0,15.2-5,17.8-12C38,21.4,37.9,20.8,37.8,20.8"\n\t/>\n</svg>\n</div>');
     if (data.logo.h1) {
-        buf.push('<h1 class="rheader-logo-paris"><svg class="rheader-logo-paris-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.3 35.2">\n<style type="text/css">\n\t.st0{fill:#071F32;}\n\t.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#071F32;}\n</style>\n<path class="st0" d="M15.8,14.1c0,4.1-3.3,7.4-7.6,7.4H5v6.8H0V6.7h8.2C12.5,6.7,15.8,10,15.8,14.1 M10.8,14.1\n\tc0-1.6-1.1-2.8-2.6-2.8H5v5.6h3.3C9.7,16.9,10.8,15.7,10.8,14.1"/>\n<rect x="61.1" y="6.7" class="st0" width="5" height="21.7"/>\n<path class="st0" d="M44.7,21.5v6.8h-5V6.7h8.7c4.1,0,7.4,3.3,7.4,7.4c0,2.7-1.5,5.3-3.9,6.4l4.6,7.8h-5.3l-3.9-6.8H44.7z\n\t M44.7,17.2h3.7c1.4,0,2.5-1.3,2.5-2.9s-1.1-2.9-2.5-2.9h-3.7V17.2z"/>\n<path class="st1" d="M22.3,24.5c1.2,0.3,2.5,0.5,3.9,0.5c1.3,0,2.6-0.2,3.9-0.5l1.2,3.8h5.4L29.3,6.7H23l-7.4,21.7h5.4L22.3,24.5z\n\t M23.6,20.4c0.8,0.2,1.7,0.3,2.6,0.3s1.7-0.1,2.6-0.3l-2.6-8L23.6,20.4z"/>\n<path class="st0" d="M78.6,11.1c2.2,0,3,1.2,3.8,2.2l4.1-2.2c-0.7-1.4-2.7-4.9-7.9-4.9c-3.7,0-7.3,2.3-7.3,6.6\n\tc0,5.1,4.9,6.1,6.4,6.6c1.5,0.5,4.5,0.9,4.5,2.8c0,1.3-1.3,1.8-3.1,1.8c-2,0-3.5-1.1-4.5-2.7l-4.2,2.2c0.3,0.9,2.8,5.4,8.7,5.4\n\tc4.6,0,8-2.4,8-6.7c0-3.3-1.8-5.2-6.1-6.5c-3.4-1-4.7-1.6-4.7-3C76.3,11.7,77.3,11.1,78.6,11.1"/>\n</svg>\n<div class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</div></h1>");
+        buf.push('<h1 class="rheader-logo-paris"><svg class="rheader-logo-paris-svg" xmlns="http://www.w3.org/2000/svg" width="179.3" height="35.2" viewBox="0 0 179.3 35.2">\n<path d="M15.8,14.1c0,4.1-3.3,7.4-7.6,7.4H5v6.8H0V6.7h8.2C12.5,6.7,15.8,10,15.8,14.1 M10.8,14.1\n\tc0-1.6-1.1-2.8-2.6-2.8H5v5.6h3.3C9.7,16.9,10.8,15.7,10.8,14.1"/>\n<rect x="61.1" y="6.7" width="5" height="21.7"/>\n<path d="M44.7,21.5v6.8h-5V6.7h8.7c4.1,0,7.4,3.3,7.4,7.4c0,2.7-1.5,5.3-3.9,6.4l4.6,7.8h-5.3l-3.9-6.8H44.7z\n\t M44.7,17.2h3.7c1.4,0,2.5-1.3,2.5-2.9s-1.1-2.9-2.5-2.9h-3.7V17.2z"/>\n<path d="M22.3,24.5c1.2,0.3,2.5,0.5,3.9,0.5c1.3,0,2.6-0.2,3.9-0.5l1.2,3.8h5.4L29.3,6.7H23l-7.4,21.7h5.4L22.3,24.5z\n\t M23.6,20.4c0.8,0.2,1.7,0.3,2.6,0.3s1.7-0.1,2.6-0.3l-2.6-8L23.6,20.4z"/>\n<path d="M78.6,11.1c2.2,0,3,1.2,3.8,2.2l4.1-2.2c-0.7-1.4-2.7-4.9-7.9-4.9c-3.7,0-7.3,2.3-7.3,6.6\n\tc0,5.1,4.9,6.1,6.4,6.6c1.5,0.5,4.5,0.9,4.5,2.8c0,1.3-1.3,1.8-3.1,1.8c-2,0-3.5-1.1-4.5-2.7l-4.2,2.2c0.3,0.9,2.8,5.4,8.7,5.4\n\tc4.6,0,8-2.4,8-6.7c0-3.3-1.8-5.2-6.1-6.5c-3.4-1-4.7-1.6-4.7-3C76.3,11.7,77.3,11.1,78.6,11.1"/>\n</svg>\n<div class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</div></h1>");
     } else {
-        buf.push('<div class="rheader-logo-paris"><svg class="rheader-logo-paris-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.3 35.2">\n<style type="text/css">\n\t.st0{fill:#071F32;}\n\t.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#071F32;}\n</style>\n<path class="st0" d="M15.8,14.1c0,4.1-3.3,7.4-7.6,7.4H5v6.8H0V6.7h8.2C12.5,6.7,15.8,10,15.8,14.1 M10.8,14.1\n\tc0-1.6-1.1-2.8-2.6-2.8H5v5.6h3.3C9.7,16.9,10.8,15.7,10.8,14.1"/>\n<rect x="61.1" y="6.7" class="st0" width="5" height="21.7"/>\n<path class="st0" d="M44.7,21.5v6.8h-5V6.7h8.7c4.1,0,7.4,3.3,7.4,7.4c0,2.7-1.5,5.3-3.9,6.4l4.6,7.8h-5.3l-3.9-6.8H44.7z\n\t M44.7,17.2h3.7c1.4,0,2.5-1.3,2.5-2.9s-1.1-2.9-2.5-2.9h-3.7V17.2z"/>\n<path class="st1" d="M22.3,24.5c1.2,0.3,2.5,0.5,3.9,0.5c1.3,0,2.6-0.2,3.9-0.5l1.2,3.8h5.4L29.3,6.7H23l-7.4,21.7h5.4L22.3,24.5z\n\t M23.6,20.4c0.8,0.2,1.7,0.3,2.6,0.3s1.7-0.1,2.6-0.3l-2.6-8L23.6,20.4z"/>\n<path class="st0" d="M78.6,11.1c2.2,0,3,1.2,3.8,2.2l4.1-2.2c-0.7-1.4-2.7-4.9-7.9-4.9c-3.7,0-7.3,2.3-7.3,6.6\n\tc0,5.1,4.9,6.1,6.4,6.6c1.5,0.5,4.5,0.9,4.5,2.8c0,1.3-1.3,1.8-3.1,1.8c-2,0-3.5-1.1-4.5-2.7l-4.2,2.2c0.3,0.9,2.8,5.4,8.7,5.4\n\tc4.6,0,8-2.4,8-6.7c0-3.3-1.8-5.2-6.1-6.5c-3.4-1-4.7-1.6-4.7-3C76.3,11.7,77.3,11.1,78.6,11.1"/>\n</svg>\n<div class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</div></div>");
+        buf.push('<div class="rheader-logo-paris"><svg class="rheader-logo-paris-svg" xmlns="http://www.w3.org/2000/svg" width="179.3" height="35.2" viewBox="0 0 179.3 35.2">\n<path d="M15.8,14.1c0,4.1-3.3,7.4-7.6,7.4H5v6.8H0V6.7h8.2C12.5,6.7,15.8,10,15.8,14.1 M10.8,14.1\n\tc0-1.6-1.1-2.8-2.6-2.8H5v5.6h3.3C9.7,16.9,10.8,15.7,10.8,14.1"/>\n<rect x="61.1" y="6.7" width="5" height="21.7"/>\n<path d="M44.7,21.5v6.8h-5V6.7h8.7c4.1,0,7.4,3.3,7.4,7.4c0,2.7-1.5,5.3-3.9,6.4l4.6,7.8h-5.3l-3.9-6.8H44.7z\n\t M44.7,17.2h3.7c1.4,0,2.5-1.3,2.5-2.9s-1.1-2.9-2.5-2.9h-3.7V17.2z"/>\n<path d="M22.3,24.5c1.2,0.3,2.5,0.5,3.9,0.5c1.3,0,2.6-0.2,3.9-0.5l1.2,3.8h5.4L29.3,6.7H23l-7.4,21.7h5.4L22.3,24.5z\n\t M23.6,20.4c0.8,0.2,1.7,0.3,2.6,0.3s1.7-0.1,2.6-0.3l-2.6-8L23.6,20.4z"/>\n<path d="M78.6,11.1c2.2,0,3,1.2,3.8,2.2l4.1-2.2c-0.7-1.4-2.7-4.9-7.9-4.9c-3.7,0-7.3,2.3-7.3,6.6\n\tc0,5.1,4.9,6.1,6.4,6.6c1.5,0.5,4.5,0.9,4.5,2.8c0,1.3-1.3,1.8-3.1,1.8c-2,0-3.5-1.1-4.5-2.7l-4.2,2.2c0.3,0.9,2.8,5.4,8.7,5.4\n\tc4.6,0,8-2.4,8-6.7c0-3.3-1.8-5.2-6.1-6.5c-3.4-1-4.7-1.6-4.7-3C76.3,11.7,77.3,11.1,78.6,11.1"/>\n</svg>\n<div class="hidden-accessibly">' + jade.escape(null == (jade_interp = data.logo.text) ? "" : jade_interp) + "</div></div>");
     }
     if (data.arrondissement) {
         buf.push("<div" + jade.attr("style", "background-image: url(/modules/rheader/images/mairie-" + data.arrondissement + ".jpg)", true, false) + ' class="rheader-logo-mairie"></div>');
     }
     buf.push("</a>");
-    if (data.locales) {
-        buf.push('<ul class="rheader-locales">');
-        (function() {
-            var $$obj = data.locales;
-            if ("number" == typeof $$obj.length) {
-                for (var $index = 0, $$l = $$obj.length; $index < $$l; $index++) {
-                    var locale = $$obj[$index];
-                    buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.attr("lang", locale.lang, true, false) + jade.attr("title", locale.text, true, false) + jade.attr("target", locale.target, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">");
-                    if (locale.current) {
-                        buf.push("<strong>" + jade.escape(null == (jade_interp = locale.lang) ? "" : jade_interp) + "</strong>");
-                    } else {
-                        buf.push(jade.escape(null == (jade_interp = locale.lang) ? "" : jade_interp));
-                    }
-                    buf.push("</a></li>");
-                }
-            } else {
-                var $$l = 0;
-                for (var $index in $$obj) {
-                    $$l++;
-                    var locale = $$obj[$index];
-                    buf.push("<li><a" + jade.attr("href", locale.href, true, false) + jade.attr("lang", locale.lang, true, false) + jade.attr("title", locale.text, true, false) + jade.attr("target", locale.target, true, false) + jade.cls([ locale.current ? "current" : null ], [ true ]) + ">");
-                    if (locale.current) {
-                        buf.push("<strong>" + jade.escape(null == (jade_interp = locale.lang) ? "" : jade_interp) + "</strong>");
-                    } else {
-                        buf.push(jade.escape(null == (jade_interp = locale.lang) ? "" : jade_interp));
-                    }
-                    buf.push("</a></li>");
-                }
-            }
-        }).call(this);
-        buf.push("</ul>");
-    }
     if (data.buttons.search) {
         buf.push("<a" + jade.attr("href", data.buttons.search.href, true, false) + jade.attr("title", data.buttons.search.text, true, false) + jade.attr("target", data.buttons.search.target, true, false) + ' aria-controls="rheader-search" role="button"' + jade.cls([ "rheader-button", "rheader-button-search", data.buttons.search.current ? "active" : null ], [ null, null, true ]) + ">");
         if (data.buttons.search.icon) {
