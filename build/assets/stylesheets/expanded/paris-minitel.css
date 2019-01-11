@@ -4263,7 +4263,7 @@ html.touch .que-faire-news-list-item .news-card-wrapper {
   height: 100%;
   position: absolute;
   right: 0;
-  left: 40px;
+  left: 42px;
   text-indent: -9999px;
   width: 170px; }
 
@@ -4684,7 +4684,8 @@ body.rheader-mobile-nav-open {
   .rheader.arrondissement .rheader-logo-nef {
     width: 45px; }
   .rheader.arrondissement .rheader-logo-paris {
-    width: 200px; }
+    width: 200px;
+    left: 50px; }
   .rheader.arrondissement .rheader-logo-paris-svg {
     margin-top: 22px; }
   .rheader-wrapper > .rheader-button {
