@@ -1836,18 +1836,18 @@ th {
 .footer {
   font-size: 1.3rem;
   font-weight: 300;
-  background-color: #EEE; }
+  background-color: #071F32; }
 
 .footer-wrapper {
   padding: 29px 0 21px; }
 
 .footer-logo {
-  display: block;
-  margin: 0 0 20px;
-  text-align: center; }
-  .footer-logo img {
-    display: inline-block;
-    height: 20px; }
+  background: url("../modules/footer/logo-paris.svg") center center no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 20px;
+  text-indent: -9999px;
+  width: 76px; }
 
 .footer-links {
   line-height: 2rem;
@@ -1855,16 +1855,15 @@ th {
   margin: 0;
   padding: 0; }
   .footer-links a {
-    color: #333;
+    color: #FFF;
     text-decoration: none; }
     .footer-links a:hover {
-      border-bottom: 1px solid #333;
-      color: #000; }
+      border-bottom: 1px solid #FFF;
+      color: #FFF; }
   .footer-links li.strong a {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #FFF;
     font-size: 1.4rem;
-    font-weight: 500;
-    text-transform: uppercase; }
+    font-weight: 500; }
     .footer-links li.strong a:hover {
       border-bottom-width: 2px; }
 
@@ -1881,7 +1880,7 @@ th {
     float: left;
     margin: 0 50px 0 0; }
   .footer-links {
-    margin-left: 230px; }
+    margin-left: 180px; }
     .footer-links > li {
       display: inline-block;
       margin-right: 20px;
