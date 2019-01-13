@@ -21,17 +21,17 @@
 
   .rheader-logo-nef {
     width: 42px;
-
-    &:after {
-      background-color: $color-tertiary;
-      content: "";
-      display: block;
-      height: 100%;
-      left: $rheader-nef-border-offset;
-      position: absolute;
-      top: 0;
-      width: 6px;
-    }
+    // 
+    // &:after {
+    //   background-color: $color-tertiary;
+    //   content: "";
+    //   display: block;
+    //   height: 100%;
+    //   left: $rheader-nef-border-offset;
+    //   position: absolute;
+    //   top: 0;
+    //   width: 6px;
+    // }
   }
 
   .rheader-logo-paris {
