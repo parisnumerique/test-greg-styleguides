@@ -81,7 +81,7 @@
     "susy": "~2.2.2",
     "templatizer": "^2.0.2",
     "through2": "~0.6.3",
-    "underscore.string": "~3.0.3",
+    "underscore.string": "~3.3.5",
     "velocity-animate": "^1.2.3",
     "vinyl": "~0.4.6",
     "vinyl-buffer": "^1.0.0",
